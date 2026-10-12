@@ -6,6 +6,7 @@ Repositorio de trabajo de George Palacios para producción de videos de YouTube 
 
 | Archivo | Para qué sirve |
 |---|---|
+| `canal-biblico/001-david-y-goliat/` | Canal nuevo (separado de Goods Uncovered): historias bíblicas cinematográficas con IA. Episodio 1 completo: ficha y publicación, guion con timecodes, personajes y locaciones con seeds, 64 prompts para Higgsfield y guion limpio para ElevenLabs. |
 | `PROMPT-MAESTRO-VIDEOS.md` | Prompt maestro reutilizable. Se pega en cualquier sesión nueva de Claude y convierte la sesión en arquitecto de guion + director visual. Incluye brief, comandos de seguimiento y notas de monetización. |
 
 ## Flujo de trabajo
