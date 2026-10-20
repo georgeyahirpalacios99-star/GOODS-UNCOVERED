@@ -33,10 +33,12 @@ Flow le pone **su propia voz** al personaje y no va a sonar igual que la de Elev
 ## 1. BLOQUES FIJOS PARA PEGAR
 
 ### Bloque PRESENTADOR (al final de cada prompt P)
+Presentador: **Jonas**. Set de este video: mirador frente al monte Ararat (ver `04-JONAS-SET.md`).
 ```
-Same character from reference image: identical face, hair, beard and outfit.
-Dim investigation room, cork board with pinned photos and red string, warm desk lamp
-on the left, filing cabinet on the right. Seated at a wooden desk.
+Same character from reference image (Jonas): identical face, tousled light-brown hair,
+green eyes, short stubble beard, olive linen button shirt open over olive t-shirt.
+Standing on a rocky overlook in eastern Turkey at golden hour, snow-capped Mount Ararat
+softly out of focus behind him, wind gently moving his hair and shirt.
 Acting: serious, calm and masculine presence. Deep, low, slow voice in Spanish.
 Steady direct eye contact with the lens, minimal head movement, shoulders still,
 no smiling unless specified, natural slow blinking. Controlled, confident body language.
