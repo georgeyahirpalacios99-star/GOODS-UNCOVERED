@@ -1,0 +1,6 @@
+# Material descargado (pesado): no va al repo, se entrega como zip
+videos/*/material/**/*.jpg
+videos/*/material/**/*.jpeg
+videos/*/material/**/*.png
+videos/*/material/**/*.mp4
+videos/*/*.zip
