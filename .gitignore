@@ -5,3 +5,6 @@ videos/*/material/**/*.png
 videos/*/material/**/*.mp4
 videos/*/*.zip
 videos/*/demo/
+videos/*/partes/**/*.mp4
+videos/*/partes/**/*.jpeg
+videos/*/partes/**/*.jpg
