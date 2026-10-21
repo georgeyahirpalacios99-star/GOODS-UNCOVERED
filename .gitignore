@@ -10,3 +10,5 @@ videos/*/partes/**/*.jpeg
 videos/*/partes/**/*.jpg
 videos/*/partes/**/*.mov
 videos/*/partes/**/*.zip
+videos/*/material/**/*.JPG
+videos/*/material/**/*.mp4
