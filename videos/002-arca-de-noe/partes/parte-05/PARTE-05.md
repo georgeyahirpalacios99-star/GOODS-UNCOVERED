@@ -22,14 +22,14 @@ Los tiempos son aproximados: en CapCut ajústalos a tu audio.
 | 3 | 0:05-0:07 | "started rushing around the room," | 🖼️ IMG-35 continúa (anima el recorrido) | — | Pasos rápidos |
 | 4 | 0:07-0:11 | "and, to everyone's astonishment, began taking off his clothes." | 🖼️ **IMG-36** colegas sorprendidos; Smith se quita el saco | — | Murmullo + *record scratch* corto |
 | 5 | 0:11-0:15 | "Weeks later, he presented his translation" | ✨ **MG-32** DECEMBER 3, 1872 | `TXT-december-1872` | Murmullo de sala |
-| 6 | 0:15-0:20 | "to an audience that included the British prime minister and the Archbishop of Canterbury." | 🖼️ **IMG-37** auditorio victoriano lleno · 📷 **R27/R28** retratos reales (ver nota) | `TXT-prime-minister-archbishop` | Aplausos suaves |
+| 6 | 0:15-0:20 | "to an audience that included the British prime minister and the Archbishop of Canterbury." | 🖼️ **IMG-37** auditorio victoriano lleno | `TXT-prime-minister-archbishop` | Aplausos suaves |
 | 7 | 0:20-0:24 | "Today that tablet is known as Tablet Eleven of the Epic of Gilgamesh." | 📷 **R22** la Tablilla del Diluvio, otro ángulo (Parte 4) | `TXT-tablet-eleven` | — |
 | 8 | 0:24-0:27 | "And the hero of the flood is named Utnapishtim." | 🖼️ **IMG-38** retrato de Utnapishtim | `TXT-utnapishtim` | Viento |
 | 9 | 0:27-0:30 | "But it's not the only one. There's a Babylonian version, the story of Atrahasis." | 🖼️ **IMG-39** escriba babilonio escribiendo en barro | `TXT-atrahasis` | Estilete en barro |
 | 10 | 0:30-0:34 | "And a Sumerian one, even older, the story of Ziusudra." | 🖼️ **IMG-40** ciudad sumeria con zigurat al atardecer | `TXT-ziusudra` | — |
 | 11 | 0:34-0:41 | "Same pattern, different name." | ✨ **MG-33** ZIUSUDRA → ATRAHASIS → UTNAPISHTIM → NOAH | `TXT-same-pattern` | *Click* por nombre |
 | 12 | 0:41-0:44 | "And in 2014, the British Museum unveiled another tablet." | 📷 **R19** fachada del Museo Británico (Parte 4) | — | — |
-| 13 | 0:44-0:47 | "It was translated by the expert Irving Finkel." | 🖼️ **IMG-41** experto con lupa sobre la tablilla · 📷 **R29** foto real de Finkel (ver nota) | `TXT-irving-finkel` | — |
+| 13 | 0:44-0:47 | "It was translated by the expert Irving Finkel." | 🖼️ **IMG-41** experto con lupa sobre la tablilla | `TXT-irving-finkel` | — |
 | 14 | 0:47-0:53 | "It's Babylonian, from around 1750 BC, and it has something no other tablet has: instructions for building the ark." | ✨ **MG-34** THE ARK TABLET · c. 1750 BC | `TXT-ark-tablet-1750bc` | *Hit* en "instructions" |
 | 15 | 0:53-0:56 | "And the ark wasn't long. It was round." | ✨ **MG-35** el rectángulo de Génesis contra el círculo, a escala | `TXT-it-was-round` | *Boom* en "round" |
 | 16 | 0:56-1:00 | "A coracle, a type of circular boat used on the rivers of Mesopotamia," | 🖼️ **IMG-42** coracle redondo en el río Éufrates | — | Agua de río |
@@ -168,7 +168,10 @@ Animate the image: the column of people walks slowly toward the city, dust blows
 
 ## 📷 MATERIAL REAL
 - **Reutiliza de la Parte 4:** `R21` y `R22` (la Tablilla del Diluvio real) y `R19` (Museo Británico).
-- **Nuevos de esta parte:** ver la sección de material nuevo al final.
+- **Opcional (descarga manual):** Wikimedia bloqueó mis descargas por exceso de peticiones. Si quieres sumar fotos reales, búscalas en Wikimedia Commons y usa solo las de licencia *Public domain*, *CC0*, *CC BY* o *CC BY-SA*:
+  - Retrato de **William Gladstone** (el primer ministro de 1872): https://commons.wikimedia.org/w/index.php?search=William+Gladstone+portrait&title=Special:MediaSearch&type=image
+  - **Tablilla de Atrahasis**, Museo Británico: https://commons.wikimedia.org/w/index.php?search=Atrahasis+tablet&title=Special:MediaSearch&type=image
+  - **Irving Finkel**: https://commons.wikimedia.org/w/index.php?search=Irving+Finkel&title=Special:MediaSearch&type=image
 
 ## 🔤 PNG TRANSPARENTES (16 + AI recreation)
 `TXT-the-story-goes` · `TXT-december-1872` · `TXT-prime-minister-archbishop` · `TXT-tablet-eleven` · `TXT-utnapishtim` · `TXT-atrahasis` · `TXT-ziusudra` · `TXT-same-pattern` · `TXT-ark-tablet-1750bc` · `TXT-irving-finkel` · `TXT-it-was-round` · `TXT-70-meters` · `TXT-two-by-two` · `TXT-babylonian-exile` · `TXT-older-than-the-bible` · `TXT-did-something-happen` · `TXT-ai-recreation`
