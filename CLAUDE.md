@@ -11,8 +11,7 @@ Cuando George envía el texto de una parte, entregar:
 2. Prompts de imagen realistas + prompt de animación para Flow (copiar y pegar).
 3. Motion graphics renderizados con ffmpeg (fondo #0f0d0a con viñeta, ámbar #E8A33D, rojo #D7263D solo para tachado/clasificado, títulos en Liberation Serif Bold).
 4. Material real con licencia libre (Ken Burns, etiqueta de fuente) y su crédito.
-6. **Pre-montaje** `PARTE-XX-PREMONTAJE.mp4`: motion graphics + material real ya en orden y con su duración, y tarjetas "CORTE X · PEGA AQUÍ TU CLIP DE FLOW" donde va cada toma IA o de Jonas. Máximo ~6 imágenes IA por parte.
-7. Todo en un solo zip `PARTE-XX-COMPLETA.zip` con la guía PDF.
+6. Todo en un solo zip `PARTE-XX-COMPLETA.zip` con la guía PDF (sin pre-montaje: a George no le sirvió). Máximo ~6 imágenes IA por parte; los prompts también van en el chat, listos para copiar.
 5. **Todo texto en pantalla también como PNG transparente 1920x1080** (títulos, citas bíblicas, cifras, etiquetas) para ponerlo como capa en CapCut. Usar `tools/png_title.sh` para títulos con cita y `tools/png_label.sh` para cifras y etiquetas.
 
 ## Reglas
