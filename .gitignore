@@ -12,3 +12,6 @@ videos/*/partes/**/*.mov
 videos/*/partes/**/*.zip
 videos/*/material/**/*.JPG
 videos/*/material/**/*.mp4
+recursos/*.mov
+recursos/*.mp4
+recursos/*.webm
