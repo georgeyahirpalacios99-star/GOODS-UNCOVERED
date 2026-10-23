@@ -6,6 +6,7 @@ Repositorio de trabajo de George Palacios para producción de videos de YouTube 
 
 | Archivo | Para qué sirve |
 |---|---|
+| `que-pasaria-si/001-mexico-conquista/` | **Proyecto activo.** Serie "¿Qué pasaría si…?" de historia latinoamericana, estilo monitos. Video largo de 9:03: ficha y publicación, guion para tu voz, 124 prompts para Flow y el Short de prueba. |
 | `ESTILOS-Y-GANCHOS-VISUALES.md` | Análisis de 2 referencias (stickman y cómic histórico), 3 bloques de estilo (A, B y el híbrido C recomendado), kit de 8 ganchos visuales con prompts listos y fórmula de gancho de 10 segundos. |
 | `GUIA-FLOW-NANO-BANANA-LITE.md` | Guía de Google Flow + Nano Banana 2 Lite: límites, bloques fijos de estilo/personaje/sin texto, plantilla de prompt, 8 prompts del gancho de Amazon, animación con Veo y solución de problemas. |
 | `crooked-clay/001-eiffel-tower/` | **Canal principal.** Crooked Clay (inglés): documentales animados de estafas y fraudes reales en estilo plastilina. Episodio 1 completo: ficha y cambios del canal, guion de 10:00 en inglés, personajes, 79 prompts para Higgsfield y guion para ElevenLabs. |
