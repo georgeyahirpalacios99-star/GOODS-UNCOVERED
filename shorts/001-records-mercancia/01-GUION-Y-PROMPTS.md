@@ -49,7 +49,7 @@ Vertical 9:16 photo. Extreme close-up of a small pile of deep red saffron thread
 
 **03 · Petróleo**
 ```
-Vertical 9:16 photo. A gigantic oil tanker ship seen from water level at dusk, its massive dark hull towering over the frame, glowing orange refinery lights on the horizon. Subject centered in the middle third of the frame, dark sky above and dark water below. Documentary realism, shot on 35mm film, heavy grain, deep steel blue shadows and warm rust orange highlights. No letters, no numbers, no words, no labels and no logos anywhere in the image.
+Vertical 9:16 photo. A gigantic oil tanker ship seen from water level at dusk, its massive dark hull towering over the frame, glowing orange refinery lights on the horizon. The hull is plain and blank. Subject centered in the middle third of the frame, dark sky above and dark water below. Documentary realism, shot on 35mm film, heavy grain, deep steel blue shadows and warm rust orange highlights. No letters, no numbers, no words, no labels and no logos anywhere in the image.
 ```
 
 **04 · Miel**
@@ -74,12 +74,12 @@ Vertical 9:16 photo. A single perfect round cantaloupe melon with a T-shaped ste
 
 **08 · Zapatos falsos**
 ```
-Vertical 9:16 photo. A customs inspection table piled with hundreds of seized counterfeit sneakers in open cardboard boxes, gloved hands of an inspector holding one shoe up to the light. Subject centered in the middle third of the frame, empty dark space above and below. Documentary realism, shot on 35mm film, heavy grain, deep steel blue shadows and warm rust orange highlights. No letters, no numbers, no words, no labels and no logos anywhere in the image.
+Vertical 9:16 photo. A customs inspection table piled with hundreds of seized counterfeit sneakers in open cardboard boxes, gloved hands of an inspector holding one shoe up to the light. All shoes and boxes are plain with blank surfaces. Subject centered in the middle third of the frame, empty dark space above and below. Documentary realism, shot on 35mm film, heavy grain, deep steel blue shadows and warm rust orange highlights. No letters, no numbers, no words, no labels and no logos anywhere in the image.
 ```
 
 **09 · Cierre**
 ```
-Vertical 9:16 photo. Endless rows of stacked shipping containers in a port at night, one container door slightly open with warm light spilling out, mysterious mood. Subject centered in the middle third of the frame, empty dark space above and below. Documentary realism, shot on 35mm film, heavy grain, deep steel blue shadows and warm rust orange highlights. No letters, no numbers, no words, no labels and no logos anywhere in the image.
+Vertical 9:16 photo. Endless rows of stacked shipping containers in a port at night, one container door slightly open with warm light spilling out, mysterious mood. All containers are plain and blank. Subject centered in the middle third of the frame, empty dark space above and below. Documentary realism, shot on 35mm film, heavy grain, deep steel blue shadows and warm rust orange highlights. No letters, no numbers, no words, no labels and no logos anywhere in the image.
 ```
 
 ---
