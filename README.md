@@ -6,6 +6,8 @@ Repositorio de trabajo de George Palacios para producción de videos de YouTube 
 
 | Archivo | Para qué sirve |
 |---|---|
+| `motor-shorts/` | **Editor automático de Shorts.** Voz + imágenes + `short.json` → MP4 9:16 con cortes en cada pausa, zoom, contador, respuesta en caja, subtítulos y música. Reemplaza CapCut. |
+| `shorts/001-records-mercancia/` | Short 1 de Goods Uncovered, formato récords: guion para ElevenLabs, 9 prompts para Flow en 9:16, fuentes y publicación. |
 | `que-pasaria-si/001-mexico-conquista/` | **Proyecto activo.** Serie "¿Qué pasaría si…?" de historia latinoamericana, estilo monitos. Video largo de 9:03: ficha y publicación, guion para tu voz, 124 prompts para Flow y el Short de prueba. |
 | `ESTILOS-Y-GANCHOS-VISUALES.md` | Análisis de 2 referencias (stickman y cómic histórico), 3 bloques de estilo (A, B y el híbrido C recomendado), kit de 8 ganchos visuales con prompts listos y fórmula de gancho de 10 segundos. |
 | `GUIA-FLOW-NANO-BANANA-LITE.md` | Guía de Google Flow + Nano Banana 2 Lite: límites, bloques fijos de estilo/personaje/sin texto, plantilla de prompt, 8 prompts del gancho de Amazon, animación con Veo y solución de problemas. |
