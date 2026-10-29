@@ -69,7 +69,7 @@ Nota: en limón México es **1.er productor** y 2.º exportador. Por eso la fras
 | Campo | Valor |
 |---|---|
 | Título | Lo que el mundo le compra a México 🇲🇽 |
-| Descripción | 8 cosas que el mundo compra todos los días y vienen de México. ¿Qué país quieres que sigue? 👇 #shorts #mexico #datoscuriosos #curiosidades #goodsuncovered |
+| Descripción | 8 cosas que el mundo compra todos los días y vienen de México. ¿Qué país quieres que siga? 👇 #shorts #mexico #datoscuriosos #curiosidades #goodsuncovered |
 | Portada | Cuadro del #1 con "4 DE CADA 10" visible |
 | Lista | Lo que el mundo le compra a… |
 | Comentario fijado | ¿Qué país sigue? Escríbelo 👇 |
