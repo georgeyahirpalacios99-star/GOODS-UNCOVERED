@@ -63,6 +63,16 @@ function strokeText(txt, x, y, font, fill, stroke = ALQUITRAN, sw = 14) {
 
 // ---------- fondo ----------
 function cover(img, k, dir) {
+  if (img.width / img.height > .8) {
+    // Imagen horizontal: fondo desenfocado y la imagen completa al centro, para no estirarla
+    const bs = Math.max(W / img.width, H / img.height) * 1.1;
+    ctx.save(); ctx.filter = 'blur(40px) brightness(.55)';
+    ctx.drawImage(img, (W - img.width * bs) / 2, (H - img.height * bs) / 2, img.width * bs, img.height * bs);
+    ctx.restore();
+    const fs = W / img.width * (1.02 + .08 * k), fw = img.width * fs, fh = img.height * fs;
+    ctx.drawImage(img, (W - fw) / 2 + dir * (k - .5) * 20, (H - fh) / 2, fw, fh);
+    return;
+  }
   const sc = Math.max(W / img.width, H / img.height) * (1.06 + .1 * k);
   const w = img.width * sc, h = img.height * sc;
   const dx = (W - w) / 2 + dir * (k - .5) * 40, dy = (H - h) / 2;
