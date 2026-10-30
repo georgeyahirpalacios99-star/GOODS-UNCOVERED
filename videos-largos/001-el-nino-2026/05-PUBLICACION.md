@@ -1,5 +1,5 @@
 # PUBLICACIÓN · Video largo 001 (El Niño 2026)
-**Duración: 12:22 · Miniatura: `miniatura.jpg` (1280×720)**
+**Duración: 12:54 · Miniatura: `miniatura.jpg` (1280×720)**
 
 ## Título
 ```
@@ -15,11 +15,11 @@ En este video investigamos qué es El Niño, por qué en 2023 "no pasó nada", l
 ⏱️ CAPÍTULOS
 0:00 El mar más caliente que en 1997
 0:55 Qué es El Niño
-3:18 ¿Otra falsa alarma?
-5:32 Lo que pasó en 1997
-7:08 El Niño que Ecuador olvidó
-9:04 La paradoja: inundación y apagones
-11:08 Lo que viene (noviembre a marzo)
+3:21 ¿Otra falsa alarma?
+5:37 Lo que pasó en 1997
+7:16 El Niño que Ecuador olvidó
+9:15 La paradoja: inundación y apagones
+11:22 Lo que viene (noviembre a marzo)
 
 📚 FUENTES
 NOAA Climate Prediction Center, discusión ENSO (8 oct 2026)
@@ -52,7 +52,7 @@ fenómeno del niño, el niño 2026, el niño ecuador, lluvias ecuador, guayaquil
 | Idioma | Español (Latinoamérica) |
 | Categoría | Educación |
 | Capítulos automáticos | Activados (ya van en la descripción) |
-| Pantalla final | Últimos 20 s: "Suscribirse" + el Short 003 o el video más reciente |
+| Pantalla final | Últimos 15 s (12:39 a 12:54): ya están los espacios marcados. Pon 2 videos en los recuadros y "Suscribirse" en el círculo |
 | Hora | 19:00 hora de Ecuador |
 
 ## Comentario fijado
