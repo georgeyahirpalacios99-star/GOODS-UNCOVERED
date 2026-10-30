@@ -8,6 +8,8 @@ Repositorio de trabajo de George Palacios para producción de videos de YouTube 
 |---|---|
 | `FORMATO-VIDEO-LARGO-ENSAYO.md` | **Molde de los videos largos**, sacado de tu referencia de las orcas: pregunta central al minuto 1, ciclos abiertos ("esa no es la principal razón"), tarjetas palabra por palabra, tablero de investigación, ritmo de cortes y cómo hacerlo sin metraje ajeno. |
 | `ESTILO-EDICION-GOODS-UNCOVERED.md` | **Regla de edición del canal**, sacada de tu video del Arca: ritmo de cortes, paleta dorada, tipografía serif + sans, las 11 piezas que se repiten (versículo, cifra gigante, contador de capítulos, mapas, sello CLASSIFIED…) y transiciones. |
+| `motor-largo/` | **Editor de videos largos 16:9** con el estilo de la referencia de las orcas: tarjetas palabra por palabra, cifras, barras, mapas, tablero de corcho, efectos VHS. Sincroniza cada párrafo con su voz. |
+| `videos-largos/001-el-nino-2026/` | **Video largo 1:** "El mar de Ecuador está más caliente que en 1997". Investigación con fuentes, guion de 13 min, voz en 7 bloques, fuentes de imágenes libres y `video.json`. |
 | `motor-shorts/` | **Editor automático de Shorts.** Voz + imágenes + `short.json` → MP4 9:16 con cortes en cada pausa, zoom, contador, respuesta en caja, subtítulos y música. Reemplaza CapCut. |
 | `shorts/001-records-mercancia/` | Short 1 de Goods Uncovered, formato récords: guion para ElevenLabs, 9 prompts para Flow en 9:16, fuentes y publicación. |
 | `que-pasaria-si/001-mexico-conquista/` | **Proyecto activo.** Serie "¿Qué pasaría si…?" de historia latinoamericana, estilo monitos. Video largo de 9:03: ficha y publicación, guion para tu voz, 124 prompts para Flow y el Short de prueba. |
