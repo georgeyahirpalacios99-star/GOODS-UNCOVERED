@@ -64,8 +64,9 @@
     {
      "tipo": "img",
      "imagen": "mapa-mar-caliente",
-     "buscar": "El Niño 2026 sea surface temperature anomaly (NASA)",
-     "credito": "NASA / NOAA",
+     "buscar": "El Niño sea level map (NASA)",
+     "credito": "NASA / JPL · nivel del mar, 6 oct 1997",
+     "etiqueta": "ASÍ ESTABA EL MAR EN 1997",
      "zoom": 0.12
     },
     {
@@ -496,8 +497,9 @@
     {
      "tipo": "img",
      "imagen": "mapa-anomalia-oct",
-     "buscar": "El Niño 2026 October anomaly map (NASA)",
-     "credito": "NASA / NOAA"
+     "buscar": "El Niño sea level map 2023 (NASA)",
+     "credito": "NASA / JPL · nivel del mar, mar 2023",
+     "etiqueta": "EL NIÑO DE 2023"
     },
     {
      "tipo": "barras",
