@@ -195,10 +195,10 @@ function pistaDeAudio(audio, total) {
     if (mus) { a.push('-stream_loop', '-1', '-i', mus); f.push(`[${k++}:a]volume=${spec.volumen_musica ?? 0.1}[m]`); mix.push('[m]'); }
     if (!mix.length) { a.push('-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo'); mix.push(`[${k++}:a]`); }
     f.push(mix.length > 1 ? `${mix.join('')}amix=inputs=${mix.length}:duration=first:normalize=0[a]` : `${mix[0]}anull[a]`);
-    spawnSync('ffmpeg', [...a, '-filter_complex', f.join(';'), '-map', '0:v', '-map', '[a]', '-ss', '0', '-t', (dur - desde).toFixed(2),
+    spawnSync('ffmpeg', [...a, '-filter_complex', f.join(';'), '-map', '0:v', '-map', '[a]', '-t', (dur - desde).toFixed(2),
       '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out], { stdio: 'inherit' });
     console.log(`listo: ${out}`);
   }
   await browser.close();
-  fs.rmSync(tmpDir, { recursive: true, force: true });
+  if (!process.env.GU_KEEP) fs.rmSync(tmpDir, { recursive: true, force: true });
 })();
