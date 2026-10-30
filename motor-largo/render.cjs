@@ -62,6 +62,7 @@ function construirLinea(tramos) {
   return { escenas, audio, total: t };
 }
 
+const VIDEOS = {};
 function imagenes(escenas) {
   const idir = path.join(dir, 'imagenes'), out = {};
   const files = fs.existsSync(idir) ? fs.readdirSync(idir) : [];
@@ -70,11 +71,17 @@ function imagenes(escenas) {
   const mime = { '.png': 'png', '.jpg': 'jpeg', '.jpeg': 'jpeg', '.webp': 'webp' };
   let faltan = 0;
   for (const n of nombres) {
+    const v = files.find(x => path.parse(x).name === n && /\.(mp4|mov|webm)$/i.test(x));
+    if (v) { // clip de video (Veo): se pasa a cuadros una sola vez y se lee cuadro por cuadro
+      const vd = path.join(tmpDir, 'vid', n); fs.mkdirSync(vd, { recursive: true });
+      spawnSync('ffmpeg', ['-v', 'error', '-i', path.join(idir, v), '-vf', `fps=${FPS},scale=1920:1080:force_original_aspect_ratio=increase,crop=1920:1080`, '-q:v', '3', path.join(vd, '%05d.jpg')]);
+      VIDEOS[n] = { dir: vd, n: fs.readdirSync(vd).length }; continue;
+    }
     const f = files.find(x => path.parse(x).name === n && mime[path.extname(x).toLowerCase()]);
     if (!f) { faltan++; continue; }
     out[n] = `data:image/${mime[path.extname(f).toLowerCase()]};base64,${fs.readFileSync(path.join(idir, f)).toString('base64')}`;
   }
-  console.log(`imágenes: ${nombres.size - faltan} de ${nombres.size}${faltan ? ` (faltan ${faltan}: se ven como recuadro gris)` : ''}`);
+  console.log(`imágenes y videos: ${nombres.size - faltan} de ${nombres.size} (${Object.keys(VIDEOS).length} videos)${faltan ? ` (faltan ${faltan}: se ven como recuadro gris)` : ''}`);
   return out;
 }
 
@@ -103,7 +110,19 @@ function pistaDeAudio(audio, total) {
   await page.goto('file://' + path.join(__dirname, 'plantilla.html'));
   await page.evaluate(() => Promise.all(['500 40px Inter', '600 40px Inter', '700 40px Inter', '800 40px Inter', 'italic 600 40px Inter'].map(f => document.fonts.load(f))));
   await page.evaluate(([e, im]) => init(e, im), [escenas, imagenes(escenas)]);
-  const grab = t => page.evaluate(t => { render(t); return document.getElementById('c').toDataURL('image/jpeg', 0.9); }, t).then(u => Buffer.from(u.split(',')[1], 'base64'));
+  const cuadros = t => { // cuadro actual de cada clip visible (escena actual y la anterior durante el cruce)
+    const out = {};
+    escenas.forEach(e => { const v = VIDEOS[e.imagen]; if (!v || t < e.ini - .01 || t > e.fin + .4) return;
+      const i = Math.min(v.n, 1 + Math.floor(Math.max(0, t - e.ini) * FPS) % v.n);
+      out[e.imagen] = 'data:image/jpeg;base64,' + fs.readFileSync(path.join(v.dir, String(i).padStart(5, '0') + '.jpg')).toString('base64'); });
+    return out;
+  };
+  const grab = async t => {
+    const vf = Object.keys(VIDEOS).length ? cuadros(t) : null;
+    if (vf && Object.keys(vf).length) await page.evaluate(m => cuadrosDeVideo(m), vf);
+    const u = await page.evaluate(t => { render(t); return document.getElementById('c').toDataURL('image/jpeg', 0.9); }, t);
+    return Buffer.from(u.split(',')[1], 'base64');
+  };
 
   if (preview) {
     const pd = path.join(dir, 'preview'); fs.mkdirSync(pd, { recursive: true });

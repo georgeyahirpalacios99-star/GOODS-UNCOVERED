@@ -93,10 +93,10 @@
     {
      "tipo": "img",
      "imagen": "archivo-1998-inundacion",
-     "buscar": "El Niño 1998 Ecuador flood (Wikimedia PD)",
+     "buscar": "flood 1998",
      "bn": true,
      "vhs": true,
-     "etiqueta": "ECUADOR · 1998"
+     "etiqueta": "RECREACIÓN · ECUADOR 1998"
     }
    ]
   },
@@ -308,9 +308,10 @@
    "escenas": [
     {
      "tipo": "img",
-     "imagen": "ondas-kelvin",
-     "buscar": "Kelvin wave El Niño animation (NASA)",
-     "credito": "NASA / NOAA"
+     "imagen": "mapa-anomalia-oct",
+     "buscar": "sea level map",
+     "credito": "NASA / JPL",
+     "zoom": 0.18
     }
    ]
   },
@@ -458,8 +459,10 @@
    "escenas": [
     {
      "tipo": "img",
-     "imagen": "cielo-nublado",
-     "buscar": "overcast sky timelapse (Pexels)"
+     "imagen": "nubes-oceano",
+     "buscar": "clouds",
+     "credito": "NASA / NOAA",
+     "zoom": 0.15
     }
    ]
   },
@@ -591,10 +594,10 @@
     {
      "tipo": "img",
      "imagen": "archivo-1998-canoa",
-     "buscar": "1998 El Niño flooding canoe street (PD)",
+     "buscar": "canoe street",
      "bn": true,
      "vhs": true,
-     "etiqueta": "ARCHIVO · 1998"
+     "etiqueta": "RECREACIÓN · 1998"
     }
    ]
   },
@@ -634,8 +637,9 @@
     {
      "tipo": "img",
      "imagen": "puente-caido",
-     "buscar": "bridge collapsed flood (PD)",
-     "bn": true
+     "buscar": "bridge",
+     "bn": true,
+     "etiqueta": "RECREACIÓN"
     }
    ]
   },
@@ -709,10 +713,11 @@
     {
      "tipo": "img",
      "imagen": "archivo-bn",
-     "buscar": "old black and white flood photo (PD)",
+     "buscar": "archive",
      "bn": true,
      "vhs": true,
-     "color": true
+     "color": true,
+     "etiqueta": "RECREACIÓN"
     }
    ]
   },
@@ -727,10 +732,10 @@
     {
      "tipo": "img",
      "imagen": "guayaquil-1940",
-     "buscar": "Guayaquil 1940s (Wikimedia PD)",
+     "buscar": "Guayaquil 1940",
      "bn": true,
      "vhs": true,
-     "etiqueta": "GUAYAQUIL · 1940"
+     "etiqueta": "RECREACIÓN · GUAYAQUIL 1940"
     },
     {
      "tipo": "cifra",
@@ -796,8 +801,9 @@
     },
     {
      "tipo": "img",
-     "imagen": "mar-turbio",
-     "buscar": "murky ocean water (Pexels)"
+     "imagen": "mar-profundo",
+     "buscar": "underwater",
+     "zoom": 0.2
     }
    ]
   },
@@ -821,8 +827,10 @@
     },
     {
      "tipo": "img",
-     "imagen": "iguana-marina-2",
-     "buscar": "marine iguana close up (CC0)"
+     "imagen": "iguana-marina",
+     "buscar": "marine iguana",
+     "zoom": 0.25,
+     "dir": 1
     }
    ]
   },
@@ -836,8 +844,10 @@
    "escenas": [
     {
      "tipo": "img",
-     "imagen": "iguana-sol",
-     "buscar": "marine iguana sunbathing (CC0)"
+     "imagen": "iguana-marina",
+     "buscar": "marine iguana",
+     "zoom": 0.15,
+     "dir": -1
     }
    ]
   },
@@ -960,12 +970,8 @@
     {
      "tipo": "img",
      "imagen": "ciudad-apagon",
-     "buscar": "city lights blackout (Pexels)"
-    },
-    {
-     "tipo": "img",
-     "imagen": "vela",
-     "buscar": "candle dark room (Pexels)"
+     "buscar": "city blackout",
+     "zoom": 0.14
     }
    ]
   },
@@ -1151,8 +1157,10 @@
    "escenas": [
     {
      "tipo": "img",
-     "imagen": "mar-atardecer",
-     "buscar": "ocean sunset (Pexels)"
+     "imagen": "pescador",
+     "buscar": "fisherman",
+     "zoom": 0.12,
+     "dir": 1
     }
    ]
   },

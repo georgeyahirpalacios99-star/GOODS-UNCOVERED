@@ -270,6 +270,9 @@ async function init(escenas, imgs) {
   S = escenas; DURATION = S.length ? S[S.length - 1].fin : 0;
   await Promise.all(Object.entries(imgs).map(([k, src]) => new Promise(r => { const i = new Image(); i.onload = () => { IM[k] = i; r(); }; i.onerror = r; i.src = src; })));
 }
+async function cuadrosDeVideo(m) {
+  await Promise.all(Object.entries(m).map(async ([k, src]) => { const i = new Image(); i.src = src; await i.decode(); IM[k] = i; }));
+}
 function dibuja(s, t) { (R[s.tipo] || R.img)(s, t - s.ini, s.fin - s.ini, t); }
 function render(t) {
   let i = S.findIndex(s => t < s.fin); if (i < 0) i = S.length - 1;
