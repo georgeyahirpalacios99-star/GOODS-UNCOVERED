@@ -44,22 +44,70 @@ function tramosDeVoz() {
   return tramos;
 }
 
+const norm = x => x.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 function construirLinea(tramos) {
-  const escenas = [], audio = []; let t = 0, k = 0;
+  const escenas = [], audio = [], caps = [{ n: 0, ini: 0, titulo: null }]; let t = 0, k = 0, bloque = 1;
   for (const it of spec.timeline) {
-    let d;
+    let d, hi = t + AIRE, hd;
     if (it.tarjeta) d = it.dur || 3.2;
     else if (it.bloque) {
       const tr = tramos.get(it);
       if (tr) { d = tr.b - tr.a + 2 * AIRE; audio.push({ t: t + AIRE, ...tr }); }
       else d = (it.voz || '').split(/\s+/).length / PALABRAS_POR_SEG + 2 * AIRE;
+      hd = d - 2 * AIRE;
+      if (it.bloque !== bloque) { bloque = it.bloque; const ti = (spec.capitulos || {})[bloque]; if (ti) caps.push({ n: caps.length, ini: t, titulo: ti }); }
     } else d = it.dur || 3;
-    const lista = it.tarjeta ? [{ tipo: 'tarjeta', texto: it.tarjeta, tam: it.tam }] : it.escenas;
-    const pesoTotal = lista.reduce((s, e) => s + (e.peso || 1), 0); let u = t;
-    lista.forEach(e => { const dd = d * (e.peso || 1) / pesoTotal; escenas.push({ ...e, _i: k++, ini: u, fin: u + dd }); u += dd; });
+    const lista = it.tarjeta ? [{ tipo: 'tarjeta', texto: it.tarjeta, tam: it.tam, glitch: it.glitch }] : it.escenas;
+    const pesoTotal = lista.reduce((s, e) => s + (e.peso || 1), 0); let u = t; const propias = [];
+    lista.forEach(e => { const dd = d * (e.peso || 1) / pesoTotal, esc = { ...e, _i: k++, ini: u, fin: u + dd, capas: [] }; propias.push([esc, e.capas || []]); escenas.push(esc); u += dd; });
+    // cada capa aparece cuando la voz dice su palabra clave y se pega a la escena que está en pantalla en ese momento
+    propias.forEach(([esc, capas]) => capas.forEach(c => {
+      let tc = esc.ini + (c.en ?? .35);
+      if (c.clave && it.voz && hd) { const pos = norm(it.voz).indexOf(norm(c.clave)); if (pos >= 0) tc = hi + hd * pos / it.voz.length; }
+      tc = Math.min(Math.max(tc, t), t + d - .8);
+      const lst = propias.map(p => p[0]); let dueña = lst.find(x => tc >= x.ini && tc < x.fin) || esc;
+      const sig = lst[lst.indexOf(dueña) + 1]; if (sig && dueña.fin - tc < 1.2) { dueña = sig; tc = sig.ini + .1; } // no dejar una palabra pegada a un corte
+      const resta = dueña.fin - tc, fija = ['sello', 'fuente', 'suscribete'].includes(c.tipo);
+      dueña.capas.push({ ...c, _t: tc, _d: Math.max(.8, fija ? resta : Math.min(c.dur || 2.4, resta)) });
+    }));
     t += d;
   }
-  return { escenas, audio, total: t };
+  return { escenas, audio, total: t, caps };
+}
+
+// ---------- efectos de sonido (sintetizados, sin derechos) ----------
+function sfx() {
+  const d = path.join(tmpDir, 'sfx'); fs.mkdirSync(d, { recursive: true });
+  const gen = (n, src) => { const f = path.join(d, n + '.wav'); spawnSync('ffmpeg', ['-y', '-v', 'error', '-f', 'lavfi', '-i', src, '-ar', '48000', '-ac', '1', f]); return f; };
+  return {
+    whoosh: gen('whoosh', "anoisesrc=d=0.7:c=pink:a=0.6,highpass=f=400,lowpass=f=4000,afade=t=in:d=0.4,afade=t=out:st=0.4:d=0.3"),
+    golpe: gen('golpe', "aevalsrc='0.9*sin(2*PI*(70-45*t)*t)*exp(-5*t)+0.25*(random(0)-0.5)*exp(-30*t)':d=0.9"),
+    pop: gen('pop', "aevalsrc='0.5*sin(2*PI*(900-600*t)*t)*exp(-25*t)':d=0.18"),
+    glitch: gen('glitch', "anoisesrc=d=0.3:c=white:a=0.5,acrusher=bits=3:mode=log,afade=t=out:st=0.15:d=0.15"),
+    tic: gen('tic', "aevalsrc='0.35*sin(2*PI*1800*t)*exp(-90*t)':d=0.06"),
+  };
+}
+function eventosDeSonido(escenas, caps) {
+  const ev = [];
+  escenas.forEach((e, i) => {
+    if (e.tipo === 'tarjeta' || e.tipo === 'marca') ev.push([e.ini, 'whoosh']);
+    if (e.glitch) ev.push([e.ini, 'glitch']);
+    if (e.tipo === 'cifra') { const n = (e.items || [e]).length, seg = (e.fin - e.ini) / n; for (let j = 0; j < n; j++) ev.push([e.ini + j * seg + .05, 'golpe']); }
+    if (['barras', 'linea', 'esquema', 'calendario', 'tablero'].includes(e.tipo)) ev.push([e.ini + .3, 'pop']);
+    (e.capas || []).forEach(c => ev.push([c._t + (c.tipo === 'sello' ? .14 : 0), c.tipo === 'sello' ? 'golpe' : (c.tipo === 'fuente' ? 'tic' : 'pop')]));
+  });
+  caps.slice(1).forEach(c => ev.push([c.ini + .4, 'whoosh']));
+  return ev.sort((a, b) => a[0] - b[0]);
+}
+function pistaDeEfectos(ev, total) {
+  const S = sfx(), lista = []; let cur = 0;
+  const sil = dd => { const f = path.join(tmpDir, `e${dd.toFixed(3)}.wav`); if (!fs.existsSync(f)) spawnSync('ffmpeg', ['-y', '-v', 'error', '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=mono', '-t', dd.toFixed(3), f]); return f; };
+  const largo = {}; for (const [k, f] of Object.entries(S)) largo[k] = duracion(f);
+  for (const [t, k] of ev) { if (t < cur) continue; if (t > cur + .001) lista.push(sil(t - cur)); lista.push(S[k]); cur = t + largo[k]; }
+  if (total > cur) lista.push(sil(total - cur));
+  const l = path.join(tmpDir, 'sfx.txt'); fs.writeFileSync(l, lista.map(f => `file '${f}'`).join('\n'));
+  const out = path.join(tmpDir, 'sfx.wav'); spawnSync('ffmpeg', ['-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', l, '-c', 'copy', out]);
+  return out;
 }
 
 const VIDEOS = {};
@@ -101,15 +149,15 @@ function pistaDeAudio(audio, total) {
 }
 
 (async () => {
-  const tramos = tramosDeVoz(), { escenas, audio, total } = construirLinea(tramos);
+  const tramos = tramosDeVoz(), { escenas, audio, total, caps } = construirLinea(tramos);
   const dur = hasta ? Math.min(hasta, total) : total;
-  if (args.includes('--lista')) { escenas.forEach(e => console.log(`${e.ini.toFixed(1).padStart(6)}  ${e.tipo.padEnd(10)} ${e.imagen || e.texto || e.titulo || ''}`)); return; }
+  if (args.includes('--lista')) { escenas.forEach(e => { console.log(`${e.ini.toFixed(1).padStart(6)}  ${e.tipo.padEnd(10)} ${e.imagen || e.texto || e.titulo || ''}`); (e.capas || []).forEach(c => console.log(`${c._t.toFixed(1).padStart(10)}    + ${c.tipo} ${c.texto || ''}`)); }); return; }
   console.log(`${escenas.length} escenas · ${(total / 60).toFixed(1)} min · voz: ${audio.length ? `${audio.length} párrafos` : 'no (tiempos estimados)'}`);
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
   await page.goto('file://' + path.join(__dirname, 'plantilla.html'));
   await page.evaluate(() => Promise.all(['500 40px Inter', '600 40px Inter', '700 40px Inter', '800 40px Inter', 'italic 600 40px Inter'].map(f => document.fonts.load(f))));
-  await page.evaluate(([e, im]) => init(e, im), [escenas, imagenes(escenas)]);
+  await page.evaluate(([e, im, c]) => init(e, im, c), [escenas, imagenes(escenas), caps]);
   const cuadros = t => { // cuadro actual de cada clip visible (escena actual y la anterior durante el cruce)
     const out = {};
     escenas.forEach(e => { const v = VIDEOS[e.imagen]; if (!v || t < e.ini - .01 || t > e.fin + .4) return;
@@ -142,11 +190,12 @@ function pistaDeAudio(audio, total) {
 
     const a = ['-y', '-v', 'error', '-i', tmp], mix = [], f = []; let k = 1;
     if (audio.length) { a.push('-i', pistaDeAudio(audio, total)); mix.push(`[${k++}:a]`); }
+    if (spec.efectos !== false) { a.push('-i', pistaDeEfectos(eventosDeSonido(escenas, caps), total)); f.push(`[${k++}:a]volume=${spec.volumen_efectos ?? 0.45}[e]`); mix.push('[e]'); }
     const mus = ['musica.mp3', 'musica.wav', 'musica.m4a'].map(x => path.join(dir, x)).find(fs.existsSync);
     if (mus) { a.push('-stream_loop', '-1', '-i', mus); f.push(`[${k++}:a]volume=${spec.volumen_musica ?? 0.1}[m]`); mix.push('[m]'); }
     if (!mix.length) { a.push('-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo'); mix.push(`[${k++}:a]`); }
     f.push(mix.length > 1 ? `${mix.join('')}amix=inputs=${mix.length}:duration=first:normalize=0[a]` : `${mix[0]}anull[a]`);
-    spawnSync('ffmpeg', [...a, '-filter_complex', f.join(';'), '-map', '0:v', '-map', '[a]', '-t', (dur - desde).toFixed(2),
+    spawnSync('ffmpeg', [...a, '-filter_complex', f.join(';'), '-map', '0:v', '-map', '[a]', '-ss', '0', '-t', (dur - desde).toFixed(2),
       '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out], { stdio: 'inherit' });
     console.log(`listo: ${out}`);
   }

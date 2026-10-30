@@ -95,14 +95,73 @@ TL = [
   V(4, dict(tipo='marca', sub='¿cómo está lloviendo en tu ciudad? cuéntanos abajo')),
 ]
 
+
+# ---------- motion graphics: (bloque, párrafo) → capas de la escena (índice de escena opcional con 'esc') ----------
+pal = lambda txt, clave=None, **k: dict(tipo='palabra', texto=txt, clave=clave or txt, **k)
+dato = lambda txt, u, v, **k: dict(tipo='dato', texto=txt, u=u, v=v, **k)
+circ = lambda u, v, **k: dict(tipo='circulo', u=u, v=v, **k)
+sello = lambda txt, clave=None, **k: dict(tipo='sello', texto=txt, **({'clave': clave} if clave else {}), **k)
+fte = lambda txt, **k: dict(tipo='fuente', texto=txt, **k)
+MG = {
+ (1,1): [pal('medio milímetro', 'medio milímetro'), fte('Inamhi · estación aeropuerto de Guayaquil')],
+ (1,3): [pal('19 veces', 'diecinueve veces', rojo=True)],
+ (1,4): [circ(.79, .55, r=120, texto='Ecuador'), dict(esc=1, **pal('ni en 1997', 'ni en el Niño de 1997'))],
+ (1,5): [sello('~300 muertes', x=960, y=540, rot=-6)],
+ (2,1): [pal('Paita · 1892', 'Paita'), fte('Boletín de la Sociedad Geográfica de Lima, 1892')],
+ (2,2): [pal('el Niño Jesús', 'Niño Jesús')],
+ (2,4): [pal('corriente de Humboldt', 'Humboldt')],
+ (2,5): [dict(esc=1, **pal('agua caliente', 'agua caliente', rojo=True))],
+ (2,6): [pal('nubes enormes', 'nubes enormes')],
+ (2,8): [pal('ondas Kelvin', 'ondas Kelvin'), pal('2 a 3 meses', 'dos o tres meses', y=300)],
+ (2,10): [dato('boya de monitoreo', .65, .6, dx=300, dy=-200), dict(esc=1, **fte('NOAA CPC · 8 oct 2026'))],
+ (3,1): [pal('2023', 'En 2023'), pal('fue moderado', 'fue moderado', rojo=True, y=300)],
+ (3,2): [fte('Inocar · Primicias')],
+ (3,4): [sello('récord', x=1480, y=800), fte('Inamhi · Primicias')],
+ (3,5): [circ(.25, .37, r=110), dict(esc=1, **pal('hasta 7 °C', 'siete grados', rojo=True))],
+ (3,6): [pal('Inocar', 'Inocar'), fte('Instituto Oceanográfico de la Armada')],
+ (3,8): [fte('NOAA · 8 oct 2026'), dict(esc=1, **fte('Josh Willis, NASA JPL'))],
+ (4,1): [pal('casi 30 años', 'casi treinta años')],
+ (4,2): [sello('7 nov 1997', x=1500, y=260, rot=6)],
+ (4,3): [pal('pueblos aislados', 'aislados', rojo=True)],
+ (4,4): [fte('BID · CEPAL · CAF')],
+ (4,6): [pal('−20 % banano', 'veinte por ciento', rojo=True), dict(esc=1, **pal('USD 59 → 18 millones', 'dieciocho', rojo=True))],
+ (4,7): [pal('no fue el peor', 'no fue el Niño más lluvioso')],
+ (5,1): [fte('Copernicus C3S · ECMWF vía Primicias')],
+ (5,2): [pal('Segunda Guerra Mundial', 'Segunda Guerra Mundial'), pal('terremoto · 1942', 'terremoto', rojo=True, y=300)],
+ (5,3): [dato('Galápagos', .4, .6, dx=320, dy=-200), dict(esc=1, **pal('iguana marina', 'iguana marina'))],
+ (5,4): [pal('sin comida', 'Se quedan sin comida', rojo=True)],
+ (5,5): [fte('Wikelski y Thom · Nature, 2000'), dict(esc=1, **pal('es hueso', 'Es hueso', rojo=True))],
+ (5,6): [pal('vivían más', 'más tiempo vivían')],
+ (6,2): [dato('embalse', .5, .82, dx=300, dy=-220, sub='cuenca del Oriente'), pal('Paute · Mazar · Coca Codo', 'Paute', y=300)],
+ (6,3): [sello('alerta', x=1450, y=280)],
+ (6,4): [fte('Primicias · Ministerio de Energía')],
+ (6,5): [sello('14 horas sin luz', 'catorce horas', x=960, y=560, rot=-5)],
+ (6,6): [pal('dengue', 'dengue', rojo=True), dict(esc=1, **fte('MSP · corte al 3 oct 2026'))],
+ (6,8): [pal('la atmósfera', 'si la atmósfera responde')],
+ (7,1): [fte('Comité ERFEN')],
+ (7,2): [sello('alerta roja', x=1460, y=250, rot=-7), fte('Secretaría de Gestión de Riesgos · 28 oct 2026')],
+ (7,3): [pal('limpia los desagües', 'limpiar los desagües'), dict(esc=1, **pal('tapa el agua', 'tapar el agua')), dict(esc=2, **pal('mochila lista', 'mochila'))],
+ (7,4): [pal('el mar avisa', 'el mar avisa')],
+ (7,6): [dict(tipo='suscribete', en=1.2)],
+}
+for k, v in MG.items():
+    for c in v:
+        if 'clave' in c and c.get('tipo') == 'sello': pass
+
 usados = {}; out = []
 for it in TL:
     if it[0] == 't': out.append(dict(tarjeta=it[1], dur=it[2]))
     elif it[0] == 'v': out.append(dict(dur=it[1], escenas=it[2]))
     else:
         bl = it[1]; i = usados.get(bl, 0); usados[bl] = i + 1
-        out.append(dict(bloque=bl, voz=voz[bl][i], escenas=it[2]))
+        esc = [dict(e) for e in it[2]]
+        for c in MG.get((bl, i + 1), []):
+            c = dict(c); j = c.pop('esc', 0); esc[min(j, len(esc) - 1)].setdefault('capas', []).append(c)
+        out.append(dict(bloque=bl, voz=voz[bl][i], escenas=esc))
 for bl, ps in voz.items():
     assert usados.get(bl) == len(ps), f'bloque {bl}: {usados.get(bl)} escenas vs {len(ps)} párrafos'
-json.dump(dict(salida='001-el-nino-2026', fps=30, volumen_musica=0.1, timeline=out), open(dst, 'w'), ensure_ascii=False, indent=1)
+for it in out:
+    if it.get('tarjeta') and ('extraño' in it['tarjeta'] or 'otra' in it['tarjeta']): it['glitch'] = True
+json.dump(dict(salida='001-el-nino-2026', fps=30, volumen_musica=0.1, volumen_efectos=0.45,
+  capitulos={'2': 'qué es el niño', '3': '¿otra falsa alarma?', '4': 'lo que pasó en 1997', '5': 'el niño olvidado', '6': 'la paradoja', '7': 'lo que viene'}, timeline=out), open(dst, 'w'), ensure_ascii=False, indent=1)
 print('ok', len(out), 'items')

@@ -2,6 +2,15 @@
  "salida": "001-el-nino-2026",
  "fps": 30,
  "volumen_musica": 0.1,
+ "volumen_efectos": 0.45,
+ "capitulos": {
+  "2": "qué es el niño",
+  "3": "¿otra falsa alarma?",
+  "4": "lo que pasó en 1997",
+  "5": "el niño olvidado",
+  "6": "la paradoja",
+  "7": "lo que viene"
+ },
  "timeline": [
   {
    "bloque": 1,
@@ -10,7 +19,18 @@
     {
      "tipo": "img",
      "imagen": "lluvia-charco",
-     "buscar": "rain puddle night (Pexels)"
+     "buscar": "rain puddle night (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "medio milímetro",
+       "clave": "medio milímetro"
+      },
+      {
+       "tipo": "fuente",
+       "texto": "Inamhi · estación aeropuerto de Guayaquil"
+      }
+     ]
     },
     {
      "tipo": "img",
@@ -44,7 +64,15 @@
     {
      "tipo": "img",
      "imagen": "agua-puerta",
-     "buscar": "flood water door (Pexels)"
+     "buscar": "flood water door (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "19 veces",
+       "clave": "diecinueve veces",
+       "rojo": true
+      }
+     ]
     },
     {
      "tipo": "img",
@@ -67,7 +95,16 @@
      "buscar": "El Niño sea level map (NASA)",
      "credito": "NASA / JPL · nivel del mar, 6 oct 1997",
      "etiqueta": "ASÍ ESTABA EL MAR EN 1997",
-     "zoom": 0.12
+     "zoom": 0.12,
+     "capas": [
+      {
+       "tipo": "circulo",
+       "u": 0.79,
+       "v": 0.55,
+       "r": 120,
+       "texto": "Ecuador"
+      }
+     ]
     },
     {
      "tipo": "cifra",
@@ -82,7 +119,14 @@
        "texto": "sobre lo normal"
       }
      ],
-     "peso": 1.2
+     "peso": 1.2,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "ni en 1997",
+       "clave": "ni en el Niño de 1997"
+      }
+     ]
     }
    ]
   },
@@ -96,7 +140,16 @@
      "buscar": "flood 1998",
      "bn": true,
      "vhs": true,
-     "etiqueta": "RECREACIÓN · ECUADOR 1998"
+     "etiqueta": "RECREACIÓN · ECUADOR 1998",
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "~300 muertes",
+       "x": 960,
+       "y": 540,
+       "rot": -6
+      }
+     ]
     }
    ]
   },
@@ -121,7 +174,18 @@
      "tipo": "img",
      "imagen": "grabado-puerto",
      "buscar": "fishing port engraving 19th century (PD)",
-     "bn": true
+     "bn": true,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "Paita · 1892",
+       "clave": "Paita"
+      },
+      {
+       "tipo": "fuente",
+       "texto": "Boletín de la Sociedad Geográfica de Lima, 1892"
+      }
+     ]
     },
     {
      "tipo": "costa",
@@ -149,7 +213,14 @@
      "tipo": "img",
      "imagen": "pesebre",
      "buscar": "nativity painting public domain",
-     "color": true
+     "color": true,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "el Niño Jesús",
+       "clave": "Niño Jesús"
+      }
+     ]
     }
    ]
   },
@@ -233,6 +304,13 @@
        "texto": "agua fría",
        "dy": 60
       }
+     ],
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "corriente de Humboldt",
+       "clave": "Humboldt"
+      }
      ]
     }
    ]
@@ -249,7 +327,15 @@
     {
      "tipo": "img",
      "imagen": "playa-seca",
-     "buscar": "dry beach (Pexels)"
+     "buscar": "dry beach (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "agua caliente",
+       "clave": "agua caliente",
+       "rojo": true
+      }
+     ]
     }
    ]
   },
@@ -261,7 +347,14 @@
      "tipo": "img",
      "imagen": "nubes-oceano",
      "buscar": "clouds over Pacific GOES satellite (NASA)",
-     "credito": "NASA / NOAA"
+     "credito": "NASA / NOAA",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "nubes enormes",
+       "clave": "nubes enormes"
+      }
+     ]
     }
    ]
   },
@@ -311,7 +404,20 @@
      "imagen": "mapa-anomalia-oct",
      "buscar": "sea level map",
      "credito": "NASA / JPL",
-     "zoom": 0.18
+     "zoom": 0.18,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "ondas Kelvin",
+       "clave": "ondas Kelvin"
+      },
+      {
+       "tipo": "palabra",
+       "texto": "2 a 3 meses",
+       "clave": "dos o tres meses",
+       "y": 300
+      }
+     ]
     }
    ]
   },
@@ -394,7 +500,17 @@
      "tipo": "img",
      "imagen": "boyas-pacifico",
      "buscar": "TAO buoy array (NOAA)",
-     "credito": "NASA / NOAA"
+     "credito": "NASA / NOAA",
+     "capas": [
+      {
+       "tipo": "dato",
+       "texto": "boya de monitoreo",
+       "u": 0.65,
+       "v": 0.6,
+       "dx": 300,
+       "dy": -200
+      }
+     ]
     },
     {
      "tipo": "cifra",
@@ -403,6 +519,12 @@
        "valor": "+3.9 °C",
        "rojo": true,
        "texto": "región Niño 1+2 · frente a Ecuador"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "NOAA CPC · 8 oct 2026"
       }
      ]
     }
@@ -430,7 +552,21 @@
     {
      "tipo": "img",
      "imagen": "celular-lluvia",
-     "buscar": "phone rain (Pexels)"
+     "buscar": "phone rain (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "2023",
+       "clave": "En 2023"
+      },
+      {
+       "tipo": "palabra",
+       "texto": "fue moderado",
+       "clave": "fue moderado",
+       "rojo": true,
+       "y": 300
+      }
+     ]
     }
    ]
   },
@@ -448,6 +584,12 @@
       },
       {
        "texto": "resultado: moderado"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Inocar · Primicias"
       }
      ]
     }
@@ -485,13 +627,26 @@
        "texto": "37 mm",
        "rojo": true
       }
+     ],
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "récord",
+       "x": 1480,
+       "y": 800
+      },
+      {
+       "tipo": "fuente",
+       "texto": "Inamhi · Primicias"
+      }
      ]
     }
    ]
   },
   {
    "tarjeta": "pero esta vez… el mar *dice* *otra* *cosa*",
-   "dur": 3.2
+   "dur": 3.2,
+   "glitch": true
   },
   {
    "bloque": 3,
@@ -502,7 +657,15 @@
      "imagen": "mapa-anomalia-oct",
      "buscar": "El Niño sea level map 2023 (NASA)",
      "credito": "NASA / JPL · nivel del mar, mar 2023",
-     "etiqueta": "EL NIÑO DE 2023"
+     "etiqueta": "EL NIÑO DE 2023",
+     "capas": [
+      {
+       "tipo": "circulo",
+       "u": 0.25,
+       "v": 0.37,
+       "r": 110
+      }
+     ]
     },
     {
      "tipo": "barras",
@@ -519,6 +682,14 @@
        "texto": "hasta 7 °C",
        "rojo": true
       }
+     ],
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "hasta 7 °C",
+       "clave": "siete grados",
+       "rojo": true
+      }
      ]
     }
    ]
@@ -530,7 +701,18 @@
     {
      "tipo": "img",
      "imagen": "mar-profundo",
-     "buscar": "deep ocean underwater blue (Pexels)"
+     "buscar": "deep ocean underwater blue (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "Inocar",
+       "clave": "Inocar"
+      },
+      {
+       "tipo": "fuente",
+       "texto": "Instituto Oceanográfico de la Armada"
+      }
+     ]
     }
    ]
   },
@@ -578,12 +760,24 @@
        "unidad": " %",
        "texto": "probabilidad de un Niño fuerte o muy fuerte · NOAA"
       }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "NOAA · 8 oct 2026"
+      }
      ]
     },
     {
      "tipo": "cita",
      "texto": "se parece al de 1997… pero va en camino de ser más grande",
-     "autor": "Josh Willis, NASA"
+     "autor": "Josh Willis, NASA",
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Josh Willis, NASA JPL"
+      }
+     ]
     }
    ]
   },
@@ -597,7 +791,14 @@
      "buscar": "canoe street",
      "bn": true,
      "vhs": true,
-     "etiqueta": "RECREACIÓN · 1998"
+     "etiqueta": "RECREACIÓN · 1998",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "casi 30 años",
+       "clave": "casi treinta años"
+      }
+     ]
     }
    ]
   },
@@ -622,6 +823,15 @@
        "texto": "de lluvia en la Costa",
        "rojo": true
       }
+     ],
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "7 nov 1997",
+       "x": 1500,
+       "y": 260,
+       "rot": 6
+      }
      ]
     }
    ]
@@ -639,7 +849,15 @@
      "imagen": "puente-caido",
      "buscar": "bridge",
      "bn": true,
-     "etiqueta": "RECREACIÓN"
+     "etiqueta": "RECREACIÓN",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "pueblos aislados",
+       "clave": "aislados",
+       "rojo": true
+      }
+     ]
     }
    ]
   },
@@ -662,6 +880,12 @@
       {
        "valor": "USD 2,882 M",
        "texto": "≈ 15 % de la economía del país"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "BID · CEPAL · CAF"
       }
      ]
     }
@@ -697,12 +921,28 @@
     {
      "tipo": "img",
      "imagen": "banano-inundado",
-     "buscar": "banana plantation (Pexels)"
+     "buscar": "banana plantation (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "−20 % banano",
+       "clave": "veinte por ciento",
+       "rojo": true
+      }
+     ]
     },
     {
      "tipo": "img",
      "imagen": "cacao",
-     "buscar": "cacao pods (Pexels)"
+     "buscar": "cacao pods (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "USD 59 → 18 millones",
+       "clave": "dieciocho",
+       "rojo": true
+      }
+     ]
     }
    ]
   },
@@ -717,7 +957,14 @@
      "bn": true,
      "vhs": true,
      "color": true,
-     "etiqueta": "RECREACIÓN"
+     "etiqueta": "RECREACIÓN",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "no fue el peor",
+       "clave": "no fue el Niño más lluvioso"
+      }
+     ]
     }
    ]
   },
@@ -735,7 +982,13 @@
      "buscar": "Guayaquil 1940",
      "bn": true,
      "vhs": true,
-     "etiqueta": "RECREACIÓN · GUAYAQUIL 1940"
+     "etiqueta": "RECREACIÓN · GUAYAQUIL 1940",
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Copernicus C3S · ECMWF vía Primicias"
+      }
+     ]
     },
     {
      "tipo": "cifra",
@@ -765,7 +1018,21 @@
      "imagen": "periodicos-guerra",
      "buscar": "WWII newspaper headlines public domain",
      "bn": true,
-     "color": true
+     "color": true,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "Segunda Guerra Mundial",
+       "clave": "Segunda Guerra Mundial"
+      },
+      {
+       "tipo": "palabra",
+       "texto": "terremoto · 1942",
+       "clave": "terremoto",
+       "rojo": true,
+       "y": 300
+      }
+     ]
     }
    ]
   },
@@ -781,12 +1048,29 @@
      "tipo": "img",
      "imagen": "galapagos-satelite",
      "buscar": "Galapagos Islands satellite (NASA)",
-     "credito": "NASA / NOAA"
+     "credito": "NASA / NOAA",
+     "capas": [
+      {
+       "tipo": "dato",
+       "texto": "Galápagos",
+       "u": 0.4,
+       "v": 0.6,
+       "dx": 320,
+       "dy": -200
+      }
+     ]
     },
     {
      "tipo": "img",
      "imagen": "iguana-marina",
-     "buscar": "marine iguana Galapagos (CC0)"
+     "buscar": "marine iguana Galapagos (CC0)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "iguana marina",
+       "clave": "iguana marina"
+      }
+     ]
     }
    ]
   },
@@ -797,7 +1081,15 @@
     {
      "tipo": "img",
      "imagen": "algas-rocas",
-     "buscar": "intertidal algae rocks Galapagos (PD)"
+     "buscar": "intertidal algae rocks Galapagos (PD)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "sin comida",
+       "clave": "Se quedan sin comida",
+       "rojo": true
+      }
+     ]
     },
     {
      "tipo": "img",
@@ -823,6 +1115,12 @@
        "valor": "hueso",
        "texto": "no grasa"
       }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Wikelski y Thom · Nature, 2000"
+      }
      ]
     },
     {
@@ -830,7 +1128,15 @@
      "imagen": "iguana-marina",
      "buscar": "marine iguana",
      "zoom": 0.25,
-     "dir": 1
+     "dir": 1,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "es hueso",
+       "clave": "Es hueso",
+       "rojo": true
+      }
+     ]
     }
    ]
   },
@@ -847,7 +1153,14 @@
      "imagen": "iguana-marina",
      "buscar": "marine iguana",
      "zoom": 0.15,
-     "dir": -1
+     "dir": -1,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "vivían más",
+       "clave": "más tiempo vivían"
+      }
+     ]
     }
    ]
   },
@@ -876,7 +1189,8 @@
   },
   {
    "tarjeta": "y eso no es lo más *extraño*…",
-   "dur": 3
+   "dur": 3,
+   "glitch": true
   },
   {
    "bloque": 6,
@@ -908,7 +1222,24 @@
     {
      "tipo": "img",
      "imagen": "represa",
-     "buscar": "hydroelectric dam reservoir (PD)"
+     "buscar": "hydroelectric dam reservoir (PD)",
+     "capas": [
+      {
+       "tipo": "dato",
+       "texto": "embalse",
+       "u": 0.5,
+       "v": 0.82,
+       "dx": 300,
+       "dy": -220,
+       "sub": "cuenca del Oriente"
+      },
+      {
+       "tipo": "palabra",
+       "texto": "Paute · Mazar · Coca Codo",
+       "clave": "Paute",
+       "y": 300
+      }
+     ]
     },
     {
      "tipo": "cifra",
@@ -936,6 +1267,14 @@
        "rojo": true,
        "texto": "bajó el embalse de Mazar · ago-sep 2026"
       }
+     ],
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "alerta",
+       "x": 1450,
+       "y": 280
+      }
      ]
     }
    ]
@@ -959,6 +1298,12 @@
        "texto": "114 m³/s",
        "rojo": true
       }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Primicias · Ministerio de Energía"
+      }
      ]
     }
    ]
@@ -971,7 +1316,17 @@
      "tipo": "img",
      "imagen": "ciudad-apagon",
      "buscar": "city blackout",
-     "zoom": 0.14
+     "zoom": 0.14,
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "14 horas sin luz",
+       "clave": "catorce horas",
+       "x": 960,
+       "y": 560,
+       "rot": -5
+      }
+     ]
     }
    ]
   },
@@ -986,7 +1341,15 @@
     {
      "tipo": "img",
      "imagen": "agua-estancada",
-     "buscar": "stagnant water (Pexels)"
+     "buscar": "stagnant water (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "dengue",
+       "clave": "dengue",
+       "rojo": true
+      }
+     ]
     },
     {
      "tipo": "cifra",
@@ -999,6 +1362,12 @@
        "valor": "42",
        "rojo": true,
        "texto": "muertes"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "MSP · corte al 3 oct 2026"
       }
      ]
     }
@@ -1059,7 +1428,14 @@
     {
      "tipo": "img",
      "imagen": "cientifico-datos",
-     "buscar": "scientist data screen (Pexels)"
+     "buscar": "scientist data screen (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "la atmósfera",
+       "clave": "si la atmósfera responde"
+      }
+     ]
     }
    ]
   },
@@ -1080,6 +1456,12 @@
       "ene",
       "feb",
       "mar"
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Comité ERFEN"
+      }
      ]
     }
    ]
@@ -1104,6 +1486,19 @@
        "rojo": true,
        "texto": "ríos desbordados · sep → oct"
       }
+     ],
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "alerta roja",
+       "x": 1460,
+       "y": 250,
+       "rot": -7
+      },
+      {
+       "tipo": "fuente",
+       "texto": "Secretaría de Gestión de Riesgos · 28 oct 2026"
+      }
      ]
     }
    ]
@@ -1115,17 +1510,38 @@
     {
      "tipo": "img",
      "imagen": "limpiar-desague",
-     "buscar": "cleaning drain (Pexels)"
+     "buscar": "cleaning drain (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "limpia los desagües",
+       "clave": "limpiar los desagües"
+      }
+     ]
     },
     {
      "tipo": "img",
      "imagen": "tanque-agua",
-     "buscar": "water tank (Pexels)"
+     "buscar": "water tank (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "tapa el agua",
+       "clave": "tapar el agua"
+      }
+     ]
     },
     {
      "tipo": "img",
      "imagen": "mochila",
-     "buscar": "emergency backpack (Pexels)"
+     "buscar": "emergency backpack (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "mochila lista",
+       "clave": "mochila"
+      }
+     ]
     }
    ]
   },
@@ -1136,7 +1552,14 @@
     {
      "tipo": "img",
      "imagen": "pescador",
-     "buscar": "fisherman sunrise sea (Pexels)"
+     "buscar": "fisherman sunrise sea (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "el mar avisa",
+       "clave": "el mar avisa"
+      }
+     ]
     }
    ]
   },
@@ -1160,7 +1583,13 @@
      "imagen": "pescador",
      "buscar": "fisherman",
      "zoom": 0.12,
-     "dir": 1
+     "dir": 1,
+     "capas": [
+      {
+       "tipo": "suscribete",
+       "en": 1.2
+      }
+     ]
     }
    ]
   },

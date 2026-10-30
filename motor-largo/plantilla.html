@@ -16,7 +16,7 @@ const eio = x => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2
 const pr = (t, a, d) => clamp((t - a) / d);
 function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
 
-let S = [], IM = {}, DURATION = 0;
+let S = [], IM = {}, DURATION = 0, CAPS = [], RECT = null;
 
 // ---------- texturas ----------
 const grains = [0, 1, 2, 3].map(i => {
@@ -80,6 +80,7 @@ R.img = (s, lt, d, t) => {
     const fs = H / img.height * (.96 + z * .5 * k), fw = img.width * fs, fh = img.height * fs;
     ctx.save(); if (s.bn) ctx.filter = 'grayscale(1) contrast(1.15) brightness(.92)';
     ctx.drawImage(img, (W - fw) / 2 + dir * (k - .5) * 20, (H - fh) / 2, fw, fh); ctx.restore();
+    RECT = { x: (W - fw) / 2 + dir * (k - .5) * 20, y: (H - fh) / 2, w: fw, h: fh };
   } else {
   const sc = Math.max(W / img.width, H / img.height) * (1.02 + z * k);
   const w = img.width * sc, h = img.height * sc;
@@ -87,6 +88,7 @@ R.img = (s, lt, d, t) => {
   if (s.bn) ctx.filter = 'grayscale(1) contrast(1.15) brightness(.92)';
   ctx.drawImage(img, (W - w) / 2 + dir * (k - .5) * 50, (H - h) / 2, w, h);
   ctx.restore();
+  RECT = { x: (W - w) / 2 + dir * (k - .5) * 50, y: (H - h) / 2, w, h };
   if (s.color) { // desfase de color rojo/azul
     ctx.save(); ctx.globalCompositeOperation = 'screen'; ctx.globalAlpha = .35;
     ctx.filter = 'sepia(1) saturate(6) hue-rotate(-50deg)'; ctx.drawImage(img, (W - w) / 2 + 6, (H - h) / 2, w, h);
@@ -275,21 +277,126 @@ R.costa = (s, lt, d, t) => { // mapa esquemático: costa oeste de Sudamérica
 };
 
 // ---------- init y frame ----------
-async function init(escenas, imgs) {
-  S = escenas; DURATION = S.length ? S[S.length - 1].fin : 0;
+async function init(escenas, imgs, caps) {
+  S = escenas; CAPS = caps || []; DURATION = S.length ? S[S.length - 1].fin : 0;
   await Promise.all(Object.entries(imgs).map(([k, src]) => new Promise(r => { const i = new Image(); i.onload = () => { IM[k] = i; r(); }; i.onerror = r; i.src = src; })));
 }
 async function cuadrosDeVideo(m) {
   await Promise.all(Object.entries(m).map(async ([k, src]) => { const i = new Image(); i.src = src; await i.decode(); IM[k] = i; }));
 }
 function dibuja(s, t) { (R[s.tipo] || R.img)(s, t - s.ini, s.fin - s.ini, t); }
+// ---------- motion graphics (capas sobre las escenas) ----------
+const ACC = '#ffd23f';
+const rnd = (seed) => { const r = rng(seed); return r; };
+function aPantalla(c) { // u,v (0..1 dentro de la imagen) → coordenadas de pantalla
+  const r = RECT || { x: 0, y: 0, w: W, h: H };
+  return [r.x + r.w * (c.u ?? .5), r.y + r.h * (c.v ?? .5)];
+}
+const CAPA = {};
+CAPA.palabra = (c, l, d) => { // palabra clave que salta cuando la voz la dice
+  const pin = clamp(l / .28), out = 1 - pr(l, d - .25, .25); if (out <= 0) return;
+  const sc = l < .28 ? .4 + .75 * eo(pin) - .15 * Math.sin(pin * Math.PI) : 1;
+  const f = font(900, c.tam || 96), txt = c.texto.toUpperCase();
+  ctx.save(); ctx.font = f; const tw = ctx.measureText(txt).width;
+  const x = c.x ?? W / 2, y = c.y ?? H * .8;
+  ctx.translate(x, y); ctx.rotate((c.rot ?? -2) * Math.PI / 180); ctx.scale(sc, sc); ctx.globalAlpha = out;
+  ctx.fillStyle = c.rojo ? RED : ACC; ctx.fillRect(-tw / 2 - 30, -(c.tam || 96) * .62, tw + 60, (c.tam || 96) * 1.24);
+  ctx.fillStyle = c.rojo ? WHITE : '#0b0f12'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(txt, 0, 4);
+  ctx.restore();
+};
+CAPA.dato = (c, l, d) => { // punto que late + línea + etiqueta
+  const out = 1 - pr(l, d - .3, .3); if (out <= 0) return;
+  const [x, y] = aPantalla(c), dx = c.dx ?? 260, dy = c.dy ?? -160, pl = eio(pr(l, .15, .45));
+  ctx.save(); ctx.globalAlpha = out;
+  const pulse = 1 + .5 * ((l * 1.4) % 1);
+  ctx.strokeStyle = ACC; ctx.lineWidth = 3; ctx.globalAlpha = out * (1 - ((l * 1.4) % 1)); ctx.beginPath(); ctx.arc(x, y, 16 * pulse * 1.6, 0, Math.PI * 2); ctx.stroke();
+  ctx.globalAlpha = out; ctx.fillStyle = ACC; ctx.beginPath(); ctx.arc(x, y, 9, 0, Math.PI * 2); ctx.fill();
+  const ex = x + dx * pl, ey = y + dy * pl; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(ex, ey); ctx.stroke();
+  if (pl >= 1) {
+    const a = eo(pr(l, .6, .3)); ctx.globalAlpha = out * a; ctx.font = font(800, 40); const tw = ctx.measureText(c.texto).width;
+    const bx = dx > 0 ? ex : ex - tw - 40; ctx.fillStyle = 'rgba(8,14,18,.85)'; ctx.fillRect(bx, ey - 32, tw + 40, 64);
+    ctx.fillStyle = ACC; ctx.fillRect(bx, ey - 32, 6, 64); ctx.fillStyle = WHITE; ctx.textBaseline = 'middle'; ctx.fillText(c.texto, bx + 22, ey + 2);
+    if (c.sub) { ctx.font = font(500, 26); ctx.fillStyle = TXT; ctx.fillText(c.sub, bx + 22, ey + 54); }
+  }
+  ctx.restore();
+};
+CAPA.circulo = (c, l, d) => { // círculo rojo a mano
+  const out = 1 - pr(l, d - .3, .3); if (out <= 0) return;
+  const [x, y] = aPantalla(c), r = c.r || 140, p = eio(pr(l, 0, .7)), rr = rng(7);
+  ctx.save(); ctx.globalAlpha = out; ctx.strokeStyle = RED; ctx.lineWidth = 9; ctx.lineCap = 'round'; ctx.beginPath();
+  const n = 60, tot = Math.PI * 2.15 * p;
+  for (let i = 0; i <= n; i++) { const a = -Math.PI * .6 + tot * i / n, j = 1 + Math.sin(i * .7) * .04 + (rr() - .5) * .02;
+    const px = x + Math.cos(a) * r * 1.35 * j, py = y + Math.sin(a) * r * j; i ? ctx.lineTo(px, py) : ctx.moveTo(px, py); }
+  ctx.stroke(); ctx.restore();
+  if (c.texto) { ctx.save(); ctx.globalAlpha = out * eo(pr(l, .6, .3)); ctx.font = 'italic ' + font(800, 44); ctx.fillStyle = RED; ctx.textAlign = 'center'; ctx.fillText(c.texto, x, y + r + 60); ctx.restore(); }
+};
+CAPA.sello = (c, l, d) => { // sello que cae con golpe
+  const out = 1 - pr(l, d - .3, .3); if (out <= 0) return;
+  const p = clamp(l / .18), sc = 2.4 - 1.4 * eo(p), txt = c.texto.toUpperCase(), f = font(900, c.tam || 84);
+  ctx.save(); ctx.font = f; const tw = ctx.measureText(txt).width, h = (c.tam || 84) * 1.5;
+  ctx.translate(c.x ?? W * .68, c.y ?? H * .3); ctx.rotate((c.rot ?? -8) * Math.PI / 180); ctx.scale(sc, sc); ctx.globalAlpha = out * (p < 1 ? p : .92);
+  ctx.strokeStyle = RED; ctx.lineWidth = 10; ctx.strokeRect(-tw / 2 - 36, -h / 2, tw + 72, h);
+  ctx.lineWidth = 3; ctx.strokeRect(-tw / 2 - 24, -h / 2 + 12, tw + 48, h - 24);
+  ctx.fillStyle = RED; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(txt, 0, 4);
+  ctx.restore();
+};
+CAPA.fuente = (c, l, d) => {
+  const a = eo(pr(l, 0, .5)) * (1 - pr(l, d - .4, .4)); if (a <= 0) return;
+  ctx.save(); ctx.globalAlpha = a; ctx.font = font(600, 24); const txt = 'FUENTE: ' + c.texto.toUpperCase(), tw = ctx.measureText(txt).width;
+  ctx.fillStyle = 'rgba(0,0,0,.6)'; ctx.fillRect(56, 60, tw + 32, 44); ctx.fillStyle = TXT; ctx.textBaseline = 'middle'; ctx.fillText(txt, 72, 83); ctx.restore();
+};
+CAPA.suscribete = (c, l, d) => {
+  const p = eo(pr(l, 0, .5)), click = pr(l, 1.4, .25), out = 1 - pr(l, d - .3, .3); if (out <= 0) return;
+  const x = W / 2, y = H * .72, sc = (.6 + .4 * p) * (1 - .08 * Math.sin(click * Math.PI));
+  ctx.save(); ctx.globalAlpha = out * p; ctx.translate(x, y); ctx.scale(sc, sc);
+  const on = click >= 1; ctx.fillStyle = on ? '#3a3a3a' : '#cc0000'; ctx.beginPath(); ctx.roundRect(-230, -55, 460, 110, 55); ctx.fill();
+  ctx.fillStyle = WHITE; ctx.font = font(800, 44); ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(on ? 'SUSCRITO ✓' : 'SUSCRÍBETE', 0, 3);
+  ctx.restore();
+};
+function capasDe(s, t) {
+  (s.capas || []).forEach(c => { const l = t - c._t, d = c._d; if (l >= 0 && l <= d) (CAPA[c.tipo] || (() => {}))(c, l, d); });
+}
+function sacudida(s, t) {
+  let m = 0; (s.capas || []).forEach(c => { if (c.tipo === 'sello' || c.golpe) { const l = t - c._t - .16; if (l >= 0 && l < .35) m = Math.max(m, 1 - l / .35); } });
+  if (s.tipo === 'cifra') { const n = (s.items || [s]).length, seg = (s.fin - s.ini) / n, l = ((t - s.ini) % seg) - .08; if (l >= 0 && l < .3) m = Math.max(m, .45 * (1 - l / .3)); }
+  return m;
+}
+function glitch(t, lt) {
+  if (lt > .35) return; const r = rng(Math.floor(t * 30)), k = 1 - lt / .35;
+  for (let i = 0; i < 9; i++) { const y = r() * H, h = 8 + r() * 70, dx = (r() - .5) * 160 * k; ctx.drawImage(C, 0, y, W, h, dx, y, W, h); }
+  ctx.save(); ctx.globalAlpha = .25 * k; ctx.globalCompositeOperation = 'screen';
+  ctx.fillStyle = '#ff0040'; ctx.fillRect(0, r() * H, W, 6 + r() * 30); ctx.fillStyle = '#00e5ff'; ctx.fillRect(0, r() * H, W, 6 + r() * 30); ctx.restore();
+}
+function capitulos(t) {
+  if (!CAPS.length) return;
+  // barra de progreso por capítulos
+  const fin = DURATION, gap = 8, x0 = 0; let x = x0;
+  CAPS.forEach((c, i) => { const ini = c.ini, f = i < CAPS.length - 1 ? CAPS[i + 1].ini : fin, w = (f - ini) / fin * W - gap;
+    ctx.fillStyle = 'rgba(255,255,255,.18)'; ctx.fillRect(x, 0, w, 7);
+    ctx.fillStyle = ACC; ctx.fillRect(x, 0, w * clamp((t - ini) / (f - ini)), 7); x += w + gap; });
+  // rótulo del capítulo
+  const c = CAPS.filter(c => c.titulo && t >= c.ini).pop(); if (!c) return;
+  const l = t - c.ini - .4, d = 3.4; if (l < 0 || l > d) return;
+  const p = eo(pr(l, 0, .5)), out = 1 - pr(l, d - .4, .4);
+  ctx.save(); ctx.globalAlpha = out; ctx.translate(-(1 - p) * 120, 0);
+  ctx.fillStyle = 'rgba(6,12,16,.82)'; ctx.fillRect(56, H - 200, 640, 120); ctx.fillStyle = ACC; ctx.fillRect(56, H - 200, 8, 120);
+  ctx.font = font(900, 64); ctx.fillStyle = ACC; ctx.textBaseline = 'middle'; ctx.fillText(String(c.n).padStart(2, '0'), 90, H - 140);
+  ctx.font = font(700, 40); ctx.fillStyle = WHITE; ctx.fillText(c.titulo, 190, H - 140); ctx.restore();
+}
 function render(t) {
   let i = S.findIndex(s => t < s.fin); if (i < 0) i = S.length - 1;
   const s = S[i], lt = t - s.ini, prev = S[i - 1];
   const negro = s.tipo === 'tarjeta' || s.tipo === 'marca' || (prev && (prev.tipo === 'tarjeta' || prev.tipo === 'marca'));
-  if (prev && lt < .35 && !negro) { dibuja(prev, t); ctx.save(); ctx.globalAlpha = eo(lt / .35); dibuja(s, t); ctx.restore(); }
+  const sh = sacudida(s, t), r = rng(Math.floor(t * 60));
+  ctx.save(); if (sh > 0) { ctx.translate((r() - .5) * 34 * sh, (r() - .5) * 34 * sh); }
+  RECT = null;
+  if (prev && lt < .35 && !negro && !s.glitch) { dibuja(prev, t); ctx.save(); ctx.globalAlpha = eo(lt / .35); dibuja(s, t); ctx.restore(); }
   else dibuja(s, t);
+  ctx.restore();
+  if (s.glitch) glitch(t, lt);
+  capasDe(s, t);
   if (negro && lt < .4) { ctx.fillStyle = `rgba(0,0,0,${1 - lt / .4})`; ctx.fillRect(0, 0, W, H); }
+  if (s.tipo !== 'marca') capitulos(t);
   const out = s.fin - t; if (i === S.length - 1 && out < 1) { ctx.fillStyle = `rgba(0,0,0,${1 - out})`; ctx.fillRect(0, 0, W, H); }
   ctx.save(); ctx.globalAlpha = .06; ctx.globalCompositeOperation = 'overlay'; ctx.drawImage(grains[Math.floor(t * 24) % 4], 0, 0, W, H); ctx.restore();
 }
