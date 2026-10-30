@@ -28,7 +28,7 @@ TL = [
   T('¿estamos a punto de vivir el niño *más* *fuerte* de la historia?', 4.2),
   V(3, dict(tipo='marca', sub='una investigación sobre El Niño 2026')),
   # BLOQUE 2 · QUÉ ES EL NIÑO
-  P(2, I('grabado-puerto', 'fishing port engraving 19th century (PD)', bn=True), dict(tipo='costa', puntos=[PAITA, ECU], titulo='1892')),
+  P(2, I('grabado-puerto', 'fishing port engraving 19th century (PD)', bn=True, lugar='Paita, Perú', sub='ilustración · 1892'), dict(tipo='costa', puntos=[PAITA, ECU], titulo='1892')),
   P(2, I('pesebre', 'nativity painting public domain', color=True)),
   P(2, dict(tipo='tablero', piezas=[dict(imagen='grabado-puerto', x=560, y=480, w=480, texto='Paita'), dict(texto='Camilo Carrillo · 1892', x=1180, y=380), dict(texto='corriente caliente después de Navidad', x=1300, y=720, rojo=True)], hilo=True)),
   P(2, dict(tipo='costa', titulo='la corriente de Humboldt', puntos=[ECU, PAITA], flechas=[dict(ruta=[[-77, -45], [-76, -35], [-73.5, -22], [-79, -10], [-83, -3], [-84.5, 0]], texto='agua fría', dy=60)])),
@@ -67,7 +67,7 @@ TL = [
   P(5, I('guayaquil-1940', 'Guayaquil 1940', bn=True, vhs=True, etiqueta='RECREACIÓN · GUAYAQUIL 1940'), dict(tipo='cifra', items=[dict(valor='1939 - 1942'), dict(valor='~9,000 mm', texto='de lluvia en Guayaquil'), dict(valor='×1.5', rojo=True, texto='más que en 1997')])),
   P(5, I('periodicos-guerra', 'WWII newspaper headlines public domain', bn=True, color=True)),
   T('el niño que ecuador *olvidó*', 3),
-  P(5, I('galapagos-satelite', 'Galapagos Islands satellite (NASA)', credito=NASA), I('iguana-marina', 'marine iguana Galapagos (CC0)')),
+  P(5, I('galapagos-satelite', 'Galapagos Islands satellite (NASA)', credito=NASA, lugar='Galápagos', sub='vista satelital · NASA'), I('iguana-marina', 'marine iguana Galapagos (CC0)')),
   P(5, I('algas-rocas', 'intertidal algae rocks Galapagos (PD)'), I('mar-profundo', 'underwater', zoom=.2)),
   P(5, dict(tipo='cifra', items=[dict(valor='−20 %', rojo=True, texto='de su tamaño'), dict(valor='hueso', texto='no grasa')]), I('iguana-marina', 'marine iguana', zoom=.25, dir=1)),
   T('para sobrevivir… se *encogen*', 3),
@@ -162,6 +162,6 @@ for bl, ps in voz.items():
     assert usados.get(bl) == len(ps), f'bloque {bl}: {usados.get(bl)} escenas vs {len(ps)} párrafos'
 for it in out:
     if it.get('tarjeta') and ('extraño' in it['tarjeta'] or 'otra' in it['tarjeta']): it['glitch'] = True
-json.dump(dict(salida='001-el-nino-2026', fps=30, volumen_musica=0.1, volumen_efectos=0.45,
+json.dump(dict(salida='001-el-nino-2026', fps=30, volumen_musica=0.1, volumen_efectos=0.45, volumen_ambiente=0.14, pantalla_final=15, dur_capitulo=2.8,
   capitulos={'2': 'qué es el niño', '3': '¿otra falsa alarma?', '4': 'lo que pasó en 1997', '5': 'el niño olvidado', '6': 'la paradoja', '7': 'lo que viene'}, timeline=out), open(dst, 'w'), ensure_ascii=False, indent=1)
 print('ok', len(out), 'items')

@@ -3,6 +3,9 @@
  "fps": 30,
  "volumen_musica": 0.1,
  "volumen_efectos": 0.45,
+ "volumen_ambiente": 0.14,
+ "pantalla_final": 15,
+ "dur_capitulo": 2.8,
  "capitulos": {
   "2": "qué es el niño",
   "3": "¿otra falsa alarma?",
@@ -175,6 +178,8 @@
      "imagen": "grabado-puerto",
      "buscar": "fishing port engraving 19th century (PD)",
      "bn": true,
+     "lugar": "Paita, Perú",
+     "sub": "ilustración · 1892",
      "capas": [
       {
        "tipo": "palabra",
@@ -1049,6 +1054,8 @@
      "imagen": "galapagos-satelite",
      "buscar": "Galapagos Islands satellite (NASA)",
      "credito": "NASA / NOAA",
+     "lugar": "Galápagos",
+     "sub": "vista satelital · NASA",
      "capas": [
       {
        "tipo": "dato",
