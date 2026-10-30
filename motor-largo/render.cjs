@@ -36,9 +36,22 @@ function tramosDeVoz() {
     const total = duracion(f), sil = silencios(f), n = items.length;
     const lead = sil.length && sil[0][0] <= .05 ? sil[0][1] : 0;
     const tail = sil.length && sil[sil.length - 1][1] >= total - .05 ? sil[sil.length - 1][0] : total;
-    const inner = sil.filter(([a, c]) => a > lead + .05 && c < tail - .05);
+    const inner = sil.filter(([a, c]) => a > lead + .05 && c < tail - .05 && c - a >= .45);
     if (inner.length < n - 1) throw new Error(`voz-${b}: tiene ${inner.length + 1} párrafos y el guion ${n}. Revisa las pausas entre párrafos.`);
-    const cuts = inner.sort((x, y) => (y[1] - y[0]) - (x[1] - x[0])).slice(0, n - 1).sort((x, y) => x[0] - y[0]);
+    // Dónde debería terminar cada párrafo según su cantidad de texto; se elige, en orden, la pausa que mejor cuadra
+    // (cerca del punto esperado y larga). Las pausas entre frases duran casi lo mismo que las de párrafo.
+    const largos = items.map(it => (it.voz || '').length), totalC = largos.reduce((x, y) => x + y, 0);
+    let acc = 0; const esperado = largos.slice(0, -1).map(l => { acc += l; return lead + (tail - lead) * acc / totalC; });
+    const m = inner.length, J = n - 1, INF = 1e9;
+    const costo = (j, c) => { const mid = (inner[c][0] + inner[c][1]) / 2; return ((mid - esperado[j]) / 2.5) ** 2 - 3 * (inner[c][1] - inner[c][0]); };
+    const D = Array.from({ length: J }, () => new Array(m).fill(INF)), P = Array.from({ length: J }, () => new Array(m).fill(-1));
+    for (let c = 0; c < m; c++) D[0][c] = costo(0, c);
+    for (let j = 1; j < J; j++) { let best = INF, bi = -1;
+      for (let c = 0; c < m; c++) { if (c > 0 && D[j - 1][c - 1] < best) { best = D[j - 1][c - 1]; bi = c - 1; } if (bi >= 0) { D[j][c] = best + costo(j, c); P[j][c] = bi; } } }
+    let c = D[J - 1].indexOf(Math.min(...D[J - 1])); const pick = [];
+    for (let j = J - 1; j >= 0; j--) { pick.unshift(c); c = P[j][c]; }
+    const cuts = pick.map(i => inner[i]);
+    if (process.env.GU_DEBUG) console.log(`voz-${b}:`, cuts.map((x, j) => `${((x[0] + x[1]) / 2).toFixed(1)}~${esperado[j].toFixed(1)}`).join(' '));
     items.forEach((it, i) => tramos.set(it, { f, a: i ? cuts[i - 1][1] : lead, b: i < n - 1 ? cuts[i][0] : tail }));
   }
   return tramos;
@@ -151,7 +164,7 @@ function pistaDeAudio(audio, total) {
 (async () => {
   const tramos = tramosDeVoz(), { escenas, audio, total, caps } = construirLinea(tramos);
   const dur = hasta ? Math.min(hasta, total) : total;
-  if (args.includes('--lista')) { escenas.forEach(e => { console.log(`${e.ini.toFixed(1).padStart(6)}  ${e.tipo.padEnd(10)} ${e.imagen || e.texto || e.titulo || ''}`); (e.capas || []).forEach(c => console.log(`${c._t.toFixed(1).padStart(10)}    + ${c.tipo} ${c.texto || ''}`)); }); return; }
+  if (args.includes('--lista')) { escenas.forEach(e => { console.log(`${e.ini.toFixed(1).padStart(6)}  ${e.tipo.padEnd(10)} ${e.imagen || e.texto || e.titulo || ''}`); (e.capas || []).forEach(c => console.log(`${c._t.toFixed(1).padStart(10)}    + ${c.tipo} ${c.texto || ''}`)); }); caps.forEach(c => console.log(`CAPITULO ${c.ini.toFixed(1)} ${c.titulo || 'inicio'}`)); console.log(`TOTAL ${total.toFixed(1)}`); return; }
   console.log(`${escenas.length} escenas · ${(total / 60).toFixed(1)} min · voz: ${audio.length ? `${audio.length} párrafos` : 'no (tiempos estimados)'}`);
   const browser = await chromium.launch();
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
