@@ -73,6 +73,14 @@ const R = {};
 R.img = (s, lt, d, t) => {
   const img = IM[s.imagen]; if (!img) { placeholder(s); return; }
   const k = clamp(lt / d), z = s.zoom ?? .08, dir = s.dir ?? (s._i % 2 ? 1 : -1);
+  if (img.width / img.height < 1.45) { // imagen más angosta que 16:9: fondo desenfocado y la imagen completa al centro
+    const bs = Math.max(W / img.width, H / img.height) * 1.1;
+    ctx.save(); ctx.filter = 'blur(40px) brightness(.45)' + (s.bn ? ' grayscale(1)' : '');
+    ctx.drawImage(img, (W - img.width * bs) / 2, (H - img.height * bs) / 2, img.width * bs, img.height * bs); ctx.restore();
+    const fs = H / img.height * (.96 + z * .5 * k), fw = img.width * fs, fh = img.height * fs;
+    ctx.save(); if (s.bn) ctx.filter = 'grayscale(1) contrast(1.15) brightness(.92)';
+    ctx.drawImage(img, (W - fw) / 2 + dir * (k - .5) * 20, (H - fh) / 2, fw, fh); ctx.restore();
+  } else {
   const sc = Math.max(W / img.width, H / img.height) * (1.02 + z * k);
   const w = img.width * sc, h = img.height * sc;
   ctx.save();
@@ -84,6 +92,7 @@ R.img = (s, lt, d, t) => {
     ctx.filter = 'sepia(1) saturate(6) hue-rotate(-50deg)'; ctx.drawImage(img, (W - w) / 2 + 6, (H - h) / 2, w, h);
     ctx.filter = 'sepia(1) saturate(6) hue-rotate(160deg)'; ctx.drawImage(img, (W - w) / 2 - 6, (H - h) / 2, w, h);
     ctx.restore();
+  }
   }
   if (s.vhs) { ctx.save(); ctx.fillStyle = 'rgba(0,0,0,.18)'; for (let y = (t * 40) % 4; y < H; y += 4) ctx.fillRect(0, y, W, 1.5); ctx.restore(); }
   const v = ctx.createRadialGradient(W / 2, H / 2, H * .35, W / 2, H / 2, W * .7); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.55)');
