@@ -45,6 +45,23 @@ El maíz que come todo el mundo nació en México. <break time="0.7s" />
 
 Regla: **solo CC0 o dominio público.** Nada con logos de marcas (Corona, Modelo, Samsung).
 
+### Plan B: prompts para Google Flow (9:16), si no hay fotos libres
+
+Todos terminan con el mismo bloque de estilo del 001 y 002:
+`Subject centered in the middle third of the frame, empty dark space above and below. Documentary realism, shot on 35mm film, heavy grain, deep steel blue shadows and warm rust orange highlights. No letters, no numbers, no words, no labels and no logos anywhere in the image.`
+
+| # | Inicio del prompt (pegar + bloque de estilo) |
+|---|---|
+| 01 | Vertical 9:16 photo. A mountain of freshly harvested green avocados in wooden crates in a Michoacán orchard at golden hour, a farmer's hands holding one cut in half. |
+| 02 | Vertical 9:16 photo. Endless rows of amber glass beer bottles moving on a brewery conveyor line, warm backlight shining through the glass. All bottles are plain and blank. |
+| 03 | Vertical 9:16 photo. A stack of shining silver bars on a dark table inside an old mine in Zacatecas, a miner's lamp lighting the metal. |
+| 04 | Vertical 9:16 photo. A worker carrying a crate overflowing with ripe red tomatoes inside a huge greenhouse in Sinaloa, rows of plants fading into the distance. |
+| 05 | Vertical 9:16 photo. A long factory assembly line full of large flat-screen televisions being built in Tijuana, workers in blue uniforms. All screens and boxes are plain and blank. |
+| 06 | Vertical 9:16 photo. A huge pile of bright green limes at a Mexican market stall, a vendor's hands scooping them, morning light. |
+| 07 | Vertical 9:16 photo. Endless rows of blue agave plants in a Jalisco field at sunset, a jimador with his coa standing among them. |
+| 08 | Vertical 9:16 photo. Ears of Mexican heirloom corn in red, blue, yellow and white laid side by side on a woven palm mat, soft side light. |
+| 09 | Vertical 9:16 photo. A colorful traditional Mexican market street at dusk, papel picado banners overhead in green, white and red, people walking. |
+
 ---
 
 ## 3. FUENTES
