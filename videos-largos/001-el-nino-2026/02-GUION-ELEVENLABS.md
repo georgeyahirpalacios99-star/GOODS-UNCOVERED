@@ -40,7 +40,7 @@ Y el agua caliente no llega de un día para otro. Viaja por debajo del océano, 
 
 Ecuador está justo en el punto del choque. <break time="0.6s" />
 
-Para vigilarlo, los científicos dividieron el océano en cuadros. El más famoso, el Niño 3.4, está en medio del Pacífico. Pero hay uno que nos toca directamente: el Niño 1+2, el pedazo de mar que está justo frente a Ecuador y el norte del Perú. A comienzos de octubre, ese cuadro estaba casi cuatro grados por encima de lo normal. <break time="0.6s" />
+Para vigilarlo, los científicos dividieron el océano en cuadros. El más famoso, el Niño tres punto cuatro, está en medio del Pacífico. Pero hay uno que nos toca directamente: el Niño uno más dos, el pedazo de mar que está justo frente a Ecuador y el norte del Perú. A comienzos de octubre, ese cuadro estaba casi cuatro grados por encima de lo normal. <break time="0.6s" />
 
 Y en 2026, las ondas siguen llegando. <break time="0.6s" />
 
