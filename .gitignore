@@ -1,0 +1,7 @@
+shorts/*/preview/
+shorts/*/*.mp4
+*.tmp.mp4
+videos-largos/*/preview/
+videos-largos/*/*.mp4
+videos-largos/*/.tmp/
+entregas/

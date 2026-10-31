@@ -1,0 +1,1613 @@
+{
+ "salida": "001-el-nino-2026",
+ "fps": 30,
+ "volumen_musica": 0.1,
+ "volumen_efectos": 0.45,
+ "volumen_ambiente": 0.14,
+ "pantalla_final": 15,
+ "dur_capitulo": 2.8,
+ "capitulos": {
+  "2": "qué es el niño",
+  "3": "¿otra falsa alarma?",
+  "4": "lo que pasó en 1997",
+  "5": "el niño olvidado",
+  "6": "la paradoja",
+  "7": "lo que viene"
+ },
+ "timeline": [
+  {
+   "bloque": 1,
+   "voz": "En septiembre, en Guayaquil, casi nunca llueve. El promedio de todo el mes, en el aeropuerto, es de medio milímetro. Medio. Es menos que una cucharadita de agua sobre una baldosa.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "lluvia-charco",
+     "buscar": "rain puddle night (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "medio milímetro",
+       "clave": "medio milímetro"
+      },
+      {
+       "tipo": "fuente",
+       "texto": "Inamhi · estación aeropuerto de Guayaquil"
+      }
+     ]
+    },
+    {
+     "tipo": "img",
+     "imagen": "calle-inundada",
+     "buscar": "flooded street car (Pexels)",
+     "vhs": true
+    }
+   ]
+  },
+  {
+   "bloque": 1,
+   "voz": "Este año, en un solo día de septiembre, cayeron treinta y siete milímetros.",
+   "escenas": [
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "desde": 0,
+       "hasta": 37,
+       "unidad": " mm",
+       "texto": "en un solo día de septiembre"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 1,
+   "voz": "Y en octubre pasó algo peor: en una sola noche llovió diecinueve veces lo que normalmente llueve en todo el mes.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "agua-puerta",
+     "buscar": "flood water door (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "19 veces",
+       "clave": "diecinueve veces",
+       "rojo": true
+      }
+     ]
+    },
+    {
+     "tipo": "img",
+     "imagen": "relampago-ciudad",
+     "buscar": "lightning city (Pexels)"
+    }
+   ]
+  },
+  {
+   "tarjeta": "y eso… *no* es normal",
+   "dur": 2.8
+  },
+  {
+   "bloque": 1,
+   "voz": "Frente a nuestras costas, el mar llegó a veintinueve grados. Hasta siete grados más caliente de lo normal. Valores que, según los registros, no se vieron ni en el Niño de 1997, el que todavía recuerdan nuestros padres.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "mapa-mar-caliente",
+     "buscar": "El Niño sea level map (NASA)",
+     "credito": "NASA / JPL · nivel del mar, 6 oct 1997",
+     "etiqueta": "ASÍ ESTABA EL MAR EN 1997",
+     "zoom": 0.12,
+     "capas": [
+      {
+       "tipo": "circulo",
+       "u": 0.79,
+       "v": 0.55,
+       "r": 120,
+       "texto": "Ecuador"
+      }
+     ]
+    },
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "valor": "29 °C",
+       "texto": "el mar frente a Ecuador"
+      },
+      {
+       "valor": "+7 °C",
+       "rojo": true,
+       "texto": "sobre lo normal"
+      }
+     ],
+     "peso": 1.2,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "ni en 1997",
+       "clave": "ni en el Niño de 1997"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 1,
+   "voz": "Ese Niño mató a casi trescientas personas.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "archivo-1998-inundacion",
+     "buscar": "flood 1998",
+     "bn": true,
+     "vhs": true,
+     "etiqueta": "RECREACIÓN · ECUADOR 1998",
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "~300 muertes",
+       "x": 960,
+       "y": 540,
+       "rot": -6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tarjeta": "¿estamos a punto de vivir el niño *más* *fuerte* de la historia?",
+   "dur": 4.2
+  },
+  {
+   "dur": 3,
+   "escenas": [
+    {
+     "tipo": "marca",
+     "sub": "una investigación sobre El Niño 2026"
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "Para entender lo que está pasando hay que ir a 1892, a un puerto pequeño del norte del Perú llamado Paita. Los pescadores de ahí conocían el mar mejor que nadie, y cada cierto tiempo notaban algo raro: justo después de Navidad, llegaba una corriente de agua caliente que espantaba a los peces.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "grabado-puerto",
+     "buscar": "fishing port engraving 19th century (PD)",
+     "bn": true,
+     "lugar": "Paita, Perú",
+     "sub": "ilustración · 1892",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "Paita · 1892",
+       "clave": "Paita"
+      },
+      {
+       "tipo": "fuente",
+       "texto": "Boletín de la Sociedad Geográfica de Lima, 1892"
+      }
+     ]
+    },
+    {
+     "tipo": "costa",
+     "puntos": [
+      {
+       "lon": -81.1,
+       "lat": -5.1,
+       "nombre": "Paita"
+      },
+      {
+       "lon": -80.4,
+       "lat": -1.6,
+       "nombre": "Ecuador"
+      }
+     ],
+     "titulo": "1892"
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "Como aparecía con la Navidad, le pusieron el nombre del Niño Jesús: la corriente de El Niño. Un capitán de navío llamado Camilo Carrillo lo dejó por escrito ese año, y el nombre se quedó para siempre.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "pesebre",
+     "buscar": "nativity painting public domain",
+     "color": true,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "el Niño Jesús",
+       "clave": "Niño Jesús"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "Pero para entender por qué ese mar caliente nos inunda, primero hay que entender por qué nuestra costa, normalmente, es tan seca.",
+   "escenas": [
+    {
+     "tipo": "tablero",
+     "piezas": [
+      {
+       "imagen": "grabado-puerto",
+       "x": 560,
+       "y": 480,
+       "w": 480,
+       "texto": "Paita"
+      },
+      {
+       "texto": "Camilo Carrillo · 1892",
+       "x": 1180,
+       "y": 380
+      },
+      {
+       "texto": "corriente caliente después de Navidad",
+       "x": 1300,
+       "y": 720,
+       "rojo": true
+      }
+     ],
+     "hilo": true
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "Frente a Ecuador pasa una corriente de agua fría que viene del sur: la corriente de Humboldt. El agua fría casi no se evapora. Y si el mar no se evapora, no se forman nubes. Por eso Santa Elena, Manabí o el sur de Perú pueden pasar meses enteros sin una gota.",
+   "escenas": [
+    {
+     "tipo": "costa",
+     "titulo": "la corriente de Humboldt",
+     "puntos": [
+      {
+       "lon": -80.4,
+       "lat": -1.6,
+       "nombre": "Ecuador"
+      },
+      {
+       "lon": -81.1,
+       "lat": -5.1,
+       "nombre": "Paita"
+      }
+     ],
+     "flechas": [
+      {
+       "ruta": [
+        [
+         -77,
+         -45
+        ],
+        [
+         -76,
+         -35
+        ],
+        [
+         -73.5,
+         -22
+        ],
+        [
+         -79,
+         -10
+        ],
+        [
+         -83,
+         -3
+        ],
+        [
+         -84.5,
+         0
+        ]
+       ],
+       "texto": "agua fría",
+       "dy": 60
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "corriente de Humboldt",
+       "clave": "Humboldt"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "Ahora imagina que esa agua fría desaparece y en su lugar llega agua caliente, a veinticinco, veintiséis, veintisiete grados.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "mar-gris",
+     "buscar": "grey ocean waves (Pexels)"
+    },
+    {
+     "tipo": "img",
+     "imagen": "playa-seca",
+     "buscar": "dry beach (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "agua caliente",
+       "clave": "agua caliente",
+       "rojo": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "El mar empieza a evaporarse como una olla al fuego. El vapor sube, se enfría y se convierte en nubes enormes. Y esas nubes descargan todo sobre la costa.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "nubes-oceano",
+     "buscar": "clouds over Pacific GOES satellite (NASA)",
+     "credito": "NASA / NOAA",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "nubes enormes",
+       "clave": "nubes enormes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "Eso es El Niño. No es una tormenta. Es el océano entero cambiando de lugar.",
+   "escenas": [
+    {
+     "tipo": "esquema",
+     "pasos": [
+      {
+       "texto": "agua fría",
+       "azul": true
+      },
+      {
+       "texto": "no se evapora"
+      },
+      {
+       "texto": "no hay nubes"
+      }
+     ]
+    },
+    {
+     "tipo": "esquema",
+     "pasos": [
+      {
+       "texto": "agua caliente",
+       "rojo": true
+      },
+      {
+       "texto": "se evapora"
+      },
+      {
+       "texto": "tormentas",
+       "rojo": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "Y el agua caliente no llega de un día para otro. Viaja por debajo del océano, en unas ondas gigantes llamadas ondas Kelvin, que cruzan el Pacífico de oeste a este en dos o tres meses. Cuando chocan contra Sudamérica, se parten en dos: una parte sube hacia México y Estados Unidos, la otra baja hacia Chile.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "mapa-anomalia-oct",
+     "buscar": "sea level map",
+     "credito": "NASA / JPL",
+     "zoom": 0.18,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "ondas Kelvin",
+       "clave": "ondas Kelvin"
+      },
+      {
+       "tipo": "palabra",
+       "texto": "2 a 3 meses",
+       "clave": "dos o tres meses",
+       "y": 300
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "Ecuador está justo en el punto del choque.",
+   "escenas": [
+    {
+     "tipo": "costa",
+     "puntos": [
+      {
+       "lon": -80.4,
+       "lat": -1.6,
+       "nombre": "Ecuador"
+      }
+     ],
+     "flechas": [
+      {
+       "ruta": [
+        [
+         -100,
+         0
+        ],
+        [
+         -90,
+         0
+        ],
+        [
+         -82,
+         -1
+        ]
+       ],
+       "rojo": true,
+       "texto": "onda Kelvin",
+       "dy": -50
+      },
+      {
+       "ruta": [
+        [
+         -82,
+         -1
+        ],
+        [
+         -80,
+         6
+        ],
+        [
+         -79,
+         9
+        ]
+       ],
+       "rojo": true
+      },
+      {
+       "ruta": [
+        [
+         -82,
+         -1
+        ],
+        [
+         -80,
+         -12
+        ],
+        [
+         -73,
+         -25
+        ]
+       ],
+       "rojo": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "Para vigilarlo, los científicos dividieron el océano en cuadros. El más famoso, el Niño tres punto cuatro, está en medio del Pacífico. Pero hay uno que nos toca directamente: el Niño uno más dos, el pedazo de mar que está justo frente a Ecuador y el norte del Perú. A comienzos de octubre, ese cuadro estaba casi cuatro grados por encima de lo normal.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "boyas-pacifico",
+     "buscar": "TAO buoy array (NOAA)",
+     "credito": "NASA / NOAA",
+     "capas": [
+      {
+       "tipo": "dato",
+       "texto": "boya de monitoreo",
+       "u": 0.65,
+       "v": 0.6,
+       "dx": 300,
+       "dy": -200
+      }
+     ]
+    },
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "valor": "+3.9 °C",
+       "rojo": true,
+       "texto": "región Niño 1+2 · frente a Ecuador"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "NOAA CPC · 8 oct 2026"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 2,
+   "voz": "Y en 2026, las ondas siguen llegando.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "olas-rompiendo",
+     "buscar": "big waves crashing (Pexels)"
+    }
+   ]
+  },
+  {
+   "tarjeta": "en 2023 también nos lo dijeron…",
+   "dur": 3
+  },
+  {
+   "bloque": 3,
+   "voz": "Si vives en Ecuador, seguramente ya escuchaste esto antes. En 2023 nos dijeron que venía un Niño fuerte, que había que prepararse para lo peor. Se compraron sacos de arena, se limpiaron canales… y al final fue moderado.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "celular-lluvia",
+     "buscar": "phone rain (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "2023",
+       "clave": "En 2023"
+      },
+      {
+       "tipo": "palabra",
+       "texto": "fue moderado",
+       "clave": "fue moderado",
+       "rojo": true,
+       "y": 300
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 3,
+   "voz": "¿Qué pasó? Los oceanógrafos lo explicaron después: el mar se enfrió más rápido de lo esperado, unos vientos del sur bajaron la temperatura frente a la costa, y la atmósfera, que es la que de verdad fabrica la lluvia, no respondió.",
+   "escenas": [
+    {
+     "tipo": "esquema",
+     "titulo": "2023",
+     "pasos": [
+      {
+       "texto": "pronóstico: fuerte",
+       "rojo": true
+      },
+      {
+       "texto": "resultado: moderado"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Inocar · Primicias"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 3,
+   "voz": "Por eso hoy mucha gente piensa: otra vez la misma alarma.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "nubes-oceano",
+     "buscar": "clouds",
+     "credito": "NASA / NOAA",
+     "zoom": 0.15
+    }
+   ]
+  },
+  {
+   "bloque": 3,
+   "voz": "Pero los números de este año no se parecen a los de 2023. Se parecen a otros. En septiembre de 1997, cuando empezaba el peor Niño de nuestra historia reciente, en Guayaquil cayeron doce milímetros. En septiembre de 2026 se pasó esa cifra con amplio margen. Y el 28 de agosto, el Comité ERFEN, que reúne a los institutos que vigilan el mar y el clima, declaró oficialmente el evento.",
+   "escenas": [
+    {
+     "tipo": "barras",
+     "titulo": "lluvia en Guayaquil en septiembre",
+     "barras": [
+      {
+       "etiqueta": "septiembre 1997",
+       "valor": 12.4,
+       "texto": "12.4 mm"
+      },
+      {
+       "etiqueta": "un solo día de septiembre 2026",
+       "valor": 37,
+       "texto": "37 mm",
+       "rojo": true
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "récord",
+       "x": 1480,
+       "y": 800
+      },
+      {
+       "tipo": "fuente",
+       "texto": "Inamhi · Primicias"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tarjeta": "pero esta vez… el mar *dice* *otra* *cosa*",
+   "dur": 3.2,
+   "glitch": true
+  },
+  {
+   "bloque": 3,
+   "voz": "En 2023, la anomalía frente a la costa llegó a casi tres grados en su pico. Hoy, los reportes hablan de cinco, seis y hasta siete grados por encima de lo normal.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "mapa-anomalia-oct",
+     "buscar": "El Niño sea level map 2023 (NASA)",
+     "credito": "NASA / JPL · nivel del mar, mar 2023",
+     "etiqueta": "EL NIÑO DE 2023",
+     "capas": [
+      {
+       "tipo": "circulo",
+       "u": 0.25,
+       "v": 0.37,
+       "r": 110
+      }
+     ]
+    },
+    {
+     "tipo": "barras",
+     "titulo": "anomalía de temperatura frente a la costa",
+     "barras": [
+      {
+       "etiqueta": "2023",
+       "valor": 3,
+       "texto": "~3 °C"
+      },
+      {
+       "etiqueta": "2026",
+       "valor": 7,
+       "texto": "hasta 7 °C",
+       "rojo": true
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "hasta 7 °C",
+       "clave": "siete grados",
+       "rojo": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 3,
+   "voz": "Y hay un dato que preocupa más que la superficie. El Instituto Oceanográfico de la Armada, el Inocar, metió sensores bajo el agua. Normalmente, bajando unos metros, aparece el agua fría de Humboldt. Esta vez no.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "mar-profundo",
+     "buscar": "deep ocean underwater blue (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "Inocar",
+       "clave": "Inocar"
+      },
+      {
+       "tipo": "fuente",
+       "texto": "Instituto Oceanográfico de la Armada"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tarjeta": "no hay agua fría ni a *100* *metros*",
+   "dur": 3
+  },
+  {
+   "bloque": 3,
+   "voz": "A cincuenta metros de profundidad, el agua está a veinticuatro grados. Y a cien metros, todavía no aparece el agua fría. Es como si alguien hubiera calentado la olla entera, no solo la tapa.",
+   "escenas": [
+    {
+     "tipo": "perfil",
+     "titulo": "el mar frente a Ecuador · octubre 2026",
+     "marcas": [
+      {
+       "f": 0,
+       "prof": "0 m",
+       "temp": "29 °C"
+      },
+      {
+       "f": 0.5,
+       "prof": "50 m",
+       "temp": "24 °C"
+      },
+      {
+       "f": 1,
+       "prof": "100 m",
+       "temp": "sin agua fría"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 3,
+   "voz": "En Estados Unidos, la NOAA calcula más de un ochenta y tres por ciento de probabilidad de que este Niño sea fuerte o muy fuerte hasta marzo de 2027. Y un científico de la NASA, Josh Willis, lo dijo así: se parece al de 1997… pero va en camino de ser más grande.",
+   "escenas": [
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "desde": 0,
+       "hasta": 83,
+       "unidad": " %",
+       "texto": "probabilidad de un Niño fuerte o muy fuerte · NOAA"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "NOAA · 8 oct 2026"
+      }
+     ]
+    },
+    {
+     "tipo": "cita",
+     "texto": "se parece al de 1997… pero va en camino de ser más grande",
+     "autor": "Josh Willis, NASA",
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Josh Willis, NASA JPL"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 4,
+   "voz": "Para entender el tamaño de esa frase, hay que recordar lo que pasó hace casi treinta años.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "archivo-1998-canoa",
+     "buscar": "canoe street",
+     "bn": true,
+     "vhs": true,
+     "etiqueta": "RECREACIÓN · 1998",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "casi 30 años",
+       "clave": "casi treinta años"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 4,
+   "voz": "La primera gran inundación llegó el 7 de noviembre de 1997, en Santa Rosa, El Oro. Después vinieron Chone, Portoviejo, Vinces, Quevedo, Esmeraldas, Machala, y decenas de ciudades más. En la costa llovió nueve meses seguidos, casi sin parar.",
+   "escenas": [
+    {
+     "tipo": "linea",
+     "titulo": "El Niño 1997-1998",
+     "puntos": [
+      {
+       "fecha": "7 nov 1997",
+       "texto": "Santa Rosa, El Oro"
+      },
+      {
+       "fecha": "1998",
+       "texto": "Chone, Portoviejo, Vinces, Quevedo, Machala"
+      },
+      {
+       "fecha": "9 meses",
+       "texto": "de lluvia en la Costa",
+       "rojo": true
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "7 nov 1997",
+       "x": 1500,
+       "y": 260,
+       "rot": 6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tarjeta": "9 meses de lluvia",
+   "dur": 2.6
+  },
+  {
+   "bloque": 4,
+   "voz": "Se cayeron puentes en la vía a Portoviejo, en la vía a Jipijapa. Hubo pueblos que quedaron aislados durante semanas.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "puente-caido",
+     "buscar": "bridge",
+     "bn": true,
+     "etiqueta": "RECREACIÓN",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "pueblos aislados",
+       "clave": "aislados",
+       "rojo": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 4,
+   "voz": "Al menos doscientas ochenta y seis personas murieron. Treinta mil se quedaron sin casa. Y el daño se calculó en casi tres mil millones de dólares: alrededor del quince por ciento de todo lo que producía el país en un año.",
+   "escenas": [
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "valor": "286",
+       "rojo": true,
+       "texto": "muertos"
+      },
+      {
+       "valor": "30,000",
+       "texto": "personas sin hogar"
+      },
+      {
+       "valor": "USD 2,882 M",
+       "texto": "≈ 15 % de la economía del país"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "BID · CEPAL · CAF"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 4,
+   "voz": "Para ponerlo en perspectiva: el Niño anterior, el de 1982 y 1983, ya había sido terrible, con daños de unos seiscientos cuarenta millones de dólares. El de 1997 causó casi cuatro veces más. Cada Niño grande encontró un país con más gente viviendo junto a los ríos, más carreteras y más cultivos en la zona de riesgo.",
+   "escenas": [
+    {
+     "tipo": "barras",
+     "titulo": "daños de El Niño en Ecuador",
+     "barras": [
+      {
+       "etiqueta": "1982-1983",
+       "valor": 640,
+       "texto": "USD 640 M"
+      },
+      {
+       "etiqueta": "1997-1998",
+       "valor": 2882,
+       "texto": "USD 2,882 M",
+       "rojo": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 4,
+   "voz": "Las exportaciones de banano cayeron casi un veinte por ciento. Las de cacao pasaron de cincuenta y nueve millones de dólares a dieciocho.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "banano-inundado",
+     "buscar": "banana plantation (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "−20 % banano",
+       "clave": "veinte por ciento",
+       "rojo": true
+      }
+     ]
+    },
+    {
+     "tipo": "img",
+     "imagen": "cacao",
+     "buscar": "cacao pods (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "USD 59 → 18 millones",
+       "clave": "dieciocho",
+       "rojo": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 4,
+   "voz": "Y aun así, 1997 no fue el Niño más lluvioso que ha vivido Guayaquil.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "archivo-bn",
+     "buscar": "archive",
+     "bn": true,
+     "vhs": true,
+     "color": true,
+     "etiqueta": "RECREACIÓN",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "no fue el peor",
+       "clave": "no fue el Niño más lluvioso"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tarjeta": "hubo uno peor… y casi *nadie* lo recuerda",
+   "dur": 3.2
+  },
+  {
+   "bloque": 5,
+   "voz": "Entre 1939 y 1942, Ecuador vivió un Niño que duró casi tres años. Las reconstrucciones del clima calculan que en Guayaquil cayeron cerca de nueve mil milímetros de lluvia en ese periodo. Una vez y media más que en 1997.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "guayaquil-1940",
+     "buscar": "Guayaquil 1940",
+     "bn": true,
+     "vhs": true,
+     "etiqueta": "RECREACIÓN · GUAYAQUIL 1940",
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Copernicus C3S · ECMWF vía Primicias"
+      }
+     ]
+    },
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "valor": "1939 - 1942"
+      },
+      {
+       "valor": "~9,000 mm",
+       "texto": "de lluvia en Guayaquil"
+      },
+      {
+       "valor": "×1.5",
+       "rojo": true,
+       "texto": "más que en 1997"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 5,
+   "voz": "¿Por qué casi nadie lo recuerda? Porque el mundo estaba mirando otra cosa: la Segunda Guerra Mundial. Y en 1942, Ecuador sufrió además un terremoto que golpeó Guayaquil, Portoviejo y Guaranda. La lluvia quedó enterrada en la memoria.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "periodicos-guerra",
+     "buscar": "WWII newspaper headlines public domain",
+     "bn": true,
+     "color": true,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "Segunda Guerra Mundial",
+       "clave": "Segunda Guerra Mundial"
+      },
+      {
+       "tipo": "palabra",
+       "texto": "terremoto · 1942",
+       "clave": "terremoto",
+       "rojo": true,
+       "y": 300
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tarjeta": "el niño que ecuador *olvidó*",
+   "dur": 3
+  },
+  {
+   "bloque": 5,
+   "voz": "Pero hay un lugar donde El Niño nunca se olvida: Galápagos. Ahí vive un animal que no existe en ningún otro lugar del planeta, la iguana marina, que se alimenta de algas en las rocas del mar.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "galapagos-satelite",
+     "buscar": "Galapagos Islands satellite (NASA)",
+     "credito": "NASA / NOAA",
+     "lugar": "Galápagos",
+     "sub": "vista satelital · NASA",
+     "capas": [
+      {
+       "tipo": "dato",
+       "texto": "Galápagos",
+       "u": 0.4,
+       "v": 0.6,
+       "dx": 320,
+       "dy": -200
+      }
+     ]
+    },
+    {
+     "tipo": "img",
+     "imagen": "iguana-marina",
+     "buscar": "marine iguana Galapagos (CC0)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "iguana marina",
+       "clave": "iguana marina"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 5,
+   "voz": "Cuando llega El Niño y el agua se calienta, esas algas mueren o son reemplazadas por otras que no pueden digerir. Se quedan sin comida.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "algas-rocas",
+     "buscar": "intertidal algae rocks Galapagos (PD)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "sin comida",
+       "clave": "Se quedan sin comida",
+       "rojo": true
+      }
+     ]
+    },
+    {
+     "tipo": "img",
+     "imagen": "mar-profundo",
+     "buscar": "underwater",
+     "zoom": 0.2
+    }
+   ]
+  },
+  {
+   "bloque": 5,
+   "voz": "Y entonces hacen algo que ningún otro animal con columna vertebral hace: se encogen. Los científicos Martin Wikelski y Corinna Thom midieron miles de iguanas durante cuatro Niños y lo publicaron en la revista Nature: pueden perder hasta un veinte por ciento de su tamaño. No es grasa. Es hueso. Su cuerpo se lo come para sobrevivir.",
+   "escenas": [
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "valor": "−20 %",
+       "rojo": true,
+       "texto": "de su tamaño"
+      },
+      {
+       "valor": "hueso",
+       "texto": "no grasa"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Wikelski y Thom · Nature, 2000"
+      }
+     ]
+    },
+    {
+     "tipo": "img",
+     "imagen": "iguana-marina",
+     "buscar": "marine iguana",
+     "zoom": 0.25,
+     "dir": 1,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "es hueso",
+       "clave": "Es hueso",
+       "rojo": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tarjeta": "para sobrevivir… se *encogen*",
+   "dur": 3
+  },
+  {
+   "bloque": 5,
+   "voz": "Y las que más se encogían, eran las que más tiempo vivían.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "iguana-marina",
+     "buscar": "marine iguana",
+     "zoom": 0.15,
+     "dir": -1,
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "vivían más",
+       "clave": "más tiempo vivían"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 5,
+   "voz": "Lo más increíble es que, cuando el mar se enfría y las algas vuelven, las iguanas vuelven a crecer. En el estudio, más de cien de ellas se encogieron y después recuperaron su tamaño. Galápagos es, literalmente, un termómetro vivo de El Niño.",
+   "escenas": [
+    {
+     "tipo": "tablero",
+     "piezas": [
+      {
+       "imagen": "iguana-marina",
+       "x": 620,
+       "y": 470,
+       "w": 520,
+       "texto": "Wikelski y Thom · Nature · 2000"
+      },
+      {
+       "texto": "+100 se encogieron y volvieron a crecer",
+       "x": 1300,
+       "y": 520
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tarjeta": "y eso no es lo más *extraño*…",
+   "dur": 3,
+   "glitch": true
+  },
+  {
+   "bloque": 6,
+   "voz": "En 1997 llovió en la Costa… y también en el Oriente. Esta vez, los pronósticos dicen algo distinto: lluvia muy fuerte en la Costa, pero sequía fuerte en la Amazonía y en el Austro.",
+   "escenas": [
+    {
+     "tipo": "esquema",
+     "titulo": "El Niño 2026 en Ecuador",
+     "pasos": [
+      {
+       "texto": "Costa: lluvia",
+       "azul": true
+      },
+      {
+       "texto": "Sierra"
+      },
+      {
+       "texto": "Amazonía y Austro: sequía",
+       "rojo": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 6,
+   "voz": "Y ahí está el problema. La mayor parte de la luz de Ecuador no sale de la Costa. Sale de las hidroeléctricas de la Amazonía y del Austro: Paute, Mazar, Coca Codo Sinclair. Solo en esas cuencas del Oriente se concentran cerca de cuatro mil megavatios.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "represa",
+     "buscar": "hydroelectric dam reservoir (PD)",
+     "capas": [
+      {
+       "tipo": "dato",
+       "texto": "embalse",
+       "u": 0.5,
+       "v": 0.82,
+       "dx": 300,
+       "dy": -220,
+       "sub": "cuenca del Oriente"
+      },
+      {
+       "tipo": "palabra",
+       "texto": "Paute · Mazar · Coca Codo",
+       "clave": "Paute",
+       "y": 300
+      }
+     ]
+    },
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "valor": "~4,000 MW",
+       "texto": "en las cuencas del Oriente"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 6,
+   "voz": "Entre agosto y septiembre de este año, el embalse de Mazar bajó cinco metros y medio.",
+   "escenas": [
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "desde": 0,
+       "hasta": 5.43,
+       "dec": 2,
+       "unidad": " m",
+       "rojo": true,
+       "texto": "bajó el embalse de Mazar · ago-sep 2026"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "alerta",
+       "x": 1450,
+       "y": 280
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 6,
+   "voz": "El río Paute, que alimenta esas represas, trae este año menos agua que en 1997. Y Coca Codo Sinclair, la central más grande del país, tuvo treinta y tres salidas de operación en 2025 y cuatro paros totales en la primera mitad de 2026.",
+   "escenas": [
+    {
+     "tipo": "barras",
+     "titulo": "caudal del río Paute",
+     "barras": [
+      {
+       "etiqueta": "1997",
+       "valor": 119.45,
+       "texto": "119 m³/s"
+      },
+      {
+       "etiqueta": "2026",
+       "valor": 114.13,
+       "texto": "114 m³/s",
+       "rojo": true
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Primicias · Ministerio de Energía"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 6,
+   "voz": "Ya vivimos lo que pasa cuando esos ríos se secan. En 2024, hubo cortes de luz de hasta catorce horas al día. Este año, el ministro del área dijo que trabajan para evitarlos, pero no pudo garantizar que no vuelvan.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "ciudad-apagon",
+     "buscar": "city blackout",
+     "zoom": 0.14,
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "14 horas sin luz",
+       "clave": "catorce horas",
+       "x": 960,
+       "y": 560,
+       "rot": -5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tarjeta": "un país que se inunda… y se queda *sin* *agua*",
+   "dur": 3.4
+  },
+  {
+   "bloque": 6,
+   "voz": "Y hay una tercera consecuencia, más silenciosa. El agua estancada es la casa del mosquito del dengue. Hasta el 3 de octubre, Ecuador ya llevaba más de treinta y ocho mil casos confirmados y cuarenta y dos muertes este año. Más que en todo 2025. Y en 2024 se pasaron los sesenta y un mil casos.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "agua-estancada",
+     "buscar": "stagnant water (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "dengue",
+       "clave": "dengue",
+       "rojo": true
+      }
+     ]
+    },
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "valor": "38,607",
+       "texto": "casos de dengue en 2026"
+      },
+      {
+       "valor": "42",
+       "rojo": true,
+       "texto": "muertes"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "MSP · corte al 3 oct 2026"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 6,
+   "voz": "Entonces, volvamos a la pregunta del inicio: ¿estamos a punto de vivir el Niño más fuerte de la historia?",
+   "escenas": [
+    {
+     "tipo": "tablero",
+     "piezas": [
+      {
+       "texto": "mar a 29 °C",
+       "x": 420,
+       "y": 300
+      },
+      {
+       "texto": "sin agua fría a 100 m",
+       "x": 900,
+       "y": 260,
+       "rojo": true
+      },
+      {
+       "imagen": "archivo-1998-inundacion",
+       "x": 1450,
+       "y": 330,
+       "w": 380,
+       "texto": "1998"
+      },
+      {
+       "imagen": "iguana-marina",
+       "x": 520,
+       "y": 720,
+       "w": 360,
+       "texto": "Galápagos"
+      },
+      {
+       "texto": "Mazar −5.4 m",
+       "x": 1050,
+       "y": 700,
+       "rojo": true
+      },
+      {
+       "texto": "dengue: 38,607",
+       "x": 1520,
+       "y": 760
+      }
+     ],
+     "hilo": true
+    }
+   ]
+  },
+  {
+   "bloque": 6,
+   "voz": "La respuesta honesta es: todavía no se sabe. Algunos oceanógrafos de la ESPOL hablan de un evento moderado-alto o fuerte-bajo, y recuerdan que no todos los Niños son iguales. El mar ya está listo. Lo que falta saber es si la atmósfera responde.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "cientifico-datos",
+     "buscar": "scientist data screen (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "la atmósfera",
+       "clave": "si la atmósfera responde"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tarjeta": "lo peor todavía *no* *llega*",
+   "dur": 3
+  },
+  {
+   "bloque": 7,
+   "voz": "Según el Comité ERFEN, el mayor impacto en Ecuador se espera entre noviembre de 2026 y marzo de 2027. Justo ahora empieza.",
+   "escenas": [
+    {
+     "tipo": "calendario",
+     "titulo": "mayor impacto esperado · Comité ERFEN",
+     "meses": [
+      "nov",
+      "dic",
+      "ene",
+      "feb",
+      "mar"
+     ],
+     "capas": [
+      {
+       "tipo": "fuente",
+       "texto": "Comité ERFEN"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 7,
+   "voz": "Y apenas en estos dos meses, ya hay más de treinta y tres mil personas afectadas y más de ochocientos eventos en veintitrés provincias. Todo el país está en alerta roja desde el 29 de agosto. Los ríos, esteros y canales desbordados pasaron de cincuenta y dos en septiembre a ciento siete en octubre. Se duplicaron en un mes.",
+   "escenas": [
+    {
+     "tipo": "cifra",
+     "items": [
+      {
+       "valor": "33,486",
+       "texto": "personas afectadas"
+      },
+      {
+       "valor": "817",
+       "texto": "eventos en 23 provincias"
+      },
+      {
+       "valor": "52 → 107",
+       "rojo": true,
+       "texto": "ríos desbordados · sep → oct"
+      }
+     ],
+     "capas": [
+      {
+       "tipo": "sello",
+       "texto": "alerta roja",
+       "x": 1460,
+       "y": 250,
+       "rot": -7
+      },
+      {
+       "tipo": "fuente",
+       "texto": "Secretaría de Gestión de Riesgos · 28 oct 2026"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 7,
+   "voz": "Lo que sí depende de nosotros: limpiar los desagües antes de que llueva, tapar el agua guardada para que no críe mosquitos, tener una mochila lista con documentos y agua, y seguir solo las alertas oficiales del Inamhi y de la Secretaría de Gestión de Riesgos.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "limpiar-desague",
+     "buscar": "cleaning drain (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "limpia los desagües",
+       "clave": "limpiar los desagües"
+      }
+     ]
+    },
+    {
+     "tipo": "img",
+     "imagen": "tanque-agua",
+     "buscar": "water tank (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "tapa el agua",
+       "clave": "tapar el agua"
+      }
+     ]
+    },
+    {
+     "tipo": "img",
+     "imagen": "mochila",
+     "buscar": "emergency backpack (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "mochila lista",
+       "clave": "mochila"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 7,
+   "voz": "Los pescadores de Paita lo entendieron hace más de cien años: el mar avisa antes de que llegue la lluvia.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "pescador",
+     "buscar": "fisherman sunrise sea (Pexels)",
+     "capas": [
+      {
+       "tipo": "palabra",
+       "texto": "el mar avisa",
+       "clave": "el mar avisa"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "bloque": 7,
+   "voz": "Y esta vez… el mar ya avisó.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "lluvia-charco",
+     "buscar": "rain puddle night (Pexels)"
+    }
+   ]
+  },
+  {
+   "bloque": 7,
+   "voz": "En Goods Uncovered vamos a seguir este Niño mes a mes, con los datos oficiales y sin alarmismo. Si quieres saber qué pasa en noviembre, suscríbete y activa la campanita.",
+   "escenas": [
+    {
+     "tipo": "img",
+     "imagen": "pescador",
+     "buscar": "fisherman",
+     "zoom": 0.12,
+     "dir": 1,
+     "capas": [
+      {
+       "tipo": "suscribete",
+       "en": 1.2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 4,
+   "escenas": [
+    {
+     "tipo": "marca",
+     "sub": "¿cómo está lloviendo en tu ciudad? cuéntanos abajo"
+    }
+   ]
+  }
+ ]
+}
