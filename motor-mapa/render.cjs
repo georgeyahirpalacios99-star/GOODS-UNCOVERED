@@ -42,11 +42,20 @@ function datos() {
     desiertos: capas('ne_10m_geography_regions_polys.geojson', p => p.FEATURECLA === 'Desert' && p.SCALERANK <= 4),
     rios: lineas('ne_50m_rivers_lake_centerlines.geojson'),
   };
+  if (spec.estilo === 'pergamino') return { paises: paises('ne_50m_admin_0_countries.geojson'), estados: estados('ne_50m_admin_1_states_provinces.geojson') };
   return { paises: paises('ne_50m_admin_0_countries.geojson') };
+}
+function estados(archivo) {
+  return JSON.parse(fs.readFileSync(path.join(DAT, archivo), 'utf8')).features.map(f => {
+    const p = f.properties, polys = polysDe(f.geometry).map(pg => { const rings = pg.map(anillo); return { rings, bb: bbox(rings[0]), a: area(rings[0]) }; });
+    if (!polys.length) return null; let main = 0; polys.forEach((q, i) => { if (q.a > polys[main].a) main = i; });
+    const bb = polys.reduce((b, q) => bbox([q.bb[0], q.bb[1], q.bb[2], q.bb[3]], b), [1e9, 1e9, -1e9, -1e9]);
+    return { adm: `${p.adm0_a3}:${p.postal}`, iso: '', nombre: p.name, lx: p.longitude, ly: p.latitude, polys: polys.map(q => ({ rings: q.rings, bb: q.bb })), bb, mb: polys[main].bb, main };
+  }).filter(Boolean);
 }
 function banderas(geo) {
   const usadas = new Set(); const ev = JSON.stringify(spec);
-  if (spec.estilo === 'documental') { for (const m of ev.matchAll(/"iso"\s*:\s*"([a-z]{2})"/g)) usadas.add(m[1]); }
+  if (spec.estilo !== 'caricatura') { for (const m of ev.matchAll(/"iso"\s*:\s*"([a-z]{2})"/g)) usadas.add(m[1]); }
   else geo.paises.forEach(p => p.iso && usadas.add(p.iso));
   const out = {}; for (const iso of usadas) { const f = path.join(DAT, 'banderas', iso + '.svg'); if (fs.existsSync(f)) out[iso] = 'data:image/svg+xml;base64,' + fs.readFileSync(f).toString('base64'); }
   // en caricatura las banderas se buscan por el iso del país; en el resto de capas se usa el iso en minúsculas
@@ -64,7 +73,7 @@ function imagenes() {
   const nuevaPagina = async () => {
     const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
     await page.goto('file://' + path.join(__dirname, 'mapa.html'));
-    await page.evaluate(() => Promise.all(['700 40px Fredoka', '600 40px Fredoka', '500 40px Fredoka', '400 40px Fredoka', '900 40px Montserrat', '800 40px Montserrat', '700 40px Montserrat', '600 40px Montserrat', '500 40px Montserrat'].map(f => document.fonts.load(f))));
+    await page.evaluate(() => Promise.all(['700 40px Fredoka', '600 40px Fredoka', '500 40px Fredoka', '400 40px Fredoka', '900 40px Montserrat', '800 40px Montserrat', '700 40px Montserrat', '600 40px Montserrat', '500 40px Montserrat', '400 40px Fell', 'italic 400 40px Fell'].map(f => document.fonts.load(f))));
     await page.evaluate(([g, s, f, i]) => init(g, s, f, i), [geo, spec, fl, im]);
     return page;
   };
