@@ -85,7 +85,7 @@ toma(65, 'foco', z0=1.1, z1=1); golpe(65, .2, 'EL ERROR', tam=220, y=470, color=
 toma(66, 'calle', hora=.04, letrero='FAMILY DOLLAR', neonColor='#ff8a2b', neonClaro='#ffd0a0', z0=1, z1=1.07, foco=[960, 600]); cifra(66, 3.5, 8000, prefijo='+$', sufijo=' M', dur=1.4, sub='lo que pagó en 2015', y=430, tam=150, color='#ffcf8a')
 toma(67, 'foco'); capa('comparar', 67, 0, pantalla=True, encima=True, barras=[dict(valor=8000, texto='+$8,000 M', sub='compra 2015', color='#ffb36b', desde=S(67)), dict(valor=1000, texto='~$1,000 M', sub='venta 2025', color='#e8463a', desde=S(67) + 3.5)])
 toma(68, 'cara', c0='#1e1a2a', c1='#2c2335', bok='160,170,200'); busto(68, CLI, x=1300, y=640, tam=1150, cara='serio', rim='#c8d0ff')
-capa('lista', 69, .3, pantalla=True, encima=True, x=110, y=260, w=700, titulo='¿QUÉ SALIÓ MAL?', items=[[S(69) + 3.4, 'Inflación', '#e8463a'], [S(69) + 6.0, 'Robos en tiendas', '#e8463a'], [S(69) + 8.4, 'Fin de las ayudas', '#e8463a']])
+capa('lista', 69, 3.0, pantalla=True, encima=True, x=110, y=260, w=700, titulo='¿QUÉ SALIÓ MAL?', items=[[S(69) + 3.4, 'Inflación', '#e8463a'], [S(69) + 6.0, 'Robos en tiendas', '#e8463a'], [S(69) + 8.4, 'Fin de las ayudas', '#e8463a']])
 toma(70, 'calle', hora=.9, letrero='FAMILY DOLLAR', neonColor='#ff8a2b', neonClaro='#ffd0a0', apagar=S(70) + 1.5, z0=1, z1=1.06, foco=[960, 560]); golpe(70, 2.2, 'CERRADO', tam=150, y=560, color='#e8463a')
 toma(71, 'rayos', z0=1.1, z1=1, flash=True); cifra(71, .4, 7000, prefijo='-$', sufijo=' M', dur=1.4, sub='de valor perdido', y=470, tam=180, color='#e8463a')
 toma(72, 'cara', c0='#1b1830', c1='#3b2a4a', bok='150,170,255'); busto(72, JEFE, cara='serio', rim='#9fb4ff')
@@ -96,7 +96,7 @@ toma(74, 'producto', z0=1, z1=1.06); capa('precio', 74, .2, x=1240, y=470, tam=1
 toma(76, 'dia', horaDe=.6, horaA=.98, flash=True); capa('multitud', 76, 0, n=20, paso=.3); cifra(76, 2.0, 7050, prefijo='$', sufijo=' M', dur=1.4, sub='ganancia bruta en 2025', fuente='Dollar Tree, informe anual 2025', y=420, tam=150, color='#7dea8f')
 toma(77, 'rayos', z0=1.12, z1=1, flash=True); golpe(77, .2, 'NO ES LO QUE VENDEN', tam=96, y=400, color='#fff'); golpe(77, 1.9, 'ES CUÁNTAS VECES', tam=120, y=580, color='#7dea8f')
 toma(78, 'cara', c0='#2b2040', c1='#5b3350'); busto(78, CLI, x=1400, y=660, tam=1050, cara='feliz')
-capa('lista', 78, 0, pantalla=True, encima=True, x=110, y=230, w=760, titulo='LOS 5 TRUCOS', tam=38, lh=86,
+capa('lista', 79, -.3, pantalla=True, encima=True, x=110, y=230, w=760, titulo='LOS 5 TRUCOS', tam=38, lh=86,
      items=[[S(79), '1 · El precio único'], [S(79) + 2.4, '2 · Comprar gigante'], [S(79) + 5.0, '3 · El precio manda'], [S(79) + 7.6, '4 · Tiendas pequeñas'], [S(79) + 10.4, '5 · La cacería del tesoro']], hasta=E(79) + .2)
 capa('lista', 80, 0, pantalla=True, encima=True, x=110, y=300, w=760, titulo='LA PRÓXIMA VEZ', items=[[S(80) + .2, 'Lleva tu lista'], [S(80) + 1.6, 'Fíjate en el tamaño'], [S(80) + 3.2, 'Decide tú, no la tienda']])
 toma(81, 'cara', c0='#2a1630', c1='#5b2340', bok='255,110,150'); busto(81, CLI, y=660, tam=1150, manos='arriba', cara='feliz', rim='#ff9db5'); capa('pregunta', 81, .2, pantalla=True, encima=True, texto='¿QUÉ NEGOCIO EXPLICAMOS DESPUÉS?', y=150)
