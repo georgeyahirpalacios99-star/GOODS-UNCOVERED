@@ -1,6 +1,6 @@
 # Publicación · Video 1
 
-**Archivo:** `entregas-partes/Video 1 - Como gana dinero una tienda de todo a 1.25.mp4` · **Miniatura:** `canal-negocios/video-01/miniatura.jpg`
+**Archivo:** `entregas-partes/Video 1 - … - parte 1.mp4` y `parte 2.mp4` (únelas en CapCut o sube el completo desde la computadora) · **Miniatura:** `canal-negocios/video-01/miniatura.jpg`
 
 ## Título (copiar)
 ```
