@@ -26,3 +26,6 @@ canal-negocios/demo-animado/voz-norm.wav
 canal-negocios/demo-cine/*.mp4
 canal-negocios/demo-cine/preview/
 canal-negocios/demo-cine/voz-norm.wav
+canal-negocios/video-01/voz/*.wav
+canal-negocios/video-01/*.mp4
+canal-negocios/video-01/preview/

@@ -1,0 +1,586 @@
+{
+"total": 546.83,
+"frases": [
+{
+"id": 0,
+"parte": 1,
+"desde": 0.0,
+"hasta": 7.09,
+"texto": "Todo en esta tienda cuesta un dólar con veinticinco. Una taza. Unas pilas. Un pato de hule. Todo."
+},
+{
+"id": 1,
+"parte": 1,
+"desde": 8.05,
+"hasta": 15.05,
+"texto": "Y aun así, esta empresa vendió diecinueve mil cuatrocientos millones de dólares en un solo año."
+},
+{
+"id": 2,
+"parte": 1,
+"desde": 16.08,
+"hasta": 18.96,
+"texto": "¿Cómo se hace rico alguien vendiendo cosas que casi regala?"
+},
+{
+"id": 3,
+"parte": 1,
+"desde": 19.69,
+"hasta": 23.86,
+"texto": "La respuesta no está en el precio. Está en todo lo que no ves cuando entras a la tienda."
+},
+{
+"id": 4,
+"parte": 1,
+"desde": 24.66,
+"hasta": 31.48,
+"texto": "Hoy te voy a contar los cinco trucos de Dollar Tree… y el error de más de ocho mil millones de dólares que les salió carísimo."
+},
+{
+"id": 5,
+"parte": 1,
+"desde": 32.7,
+"hasta": 34.55,
+"texto": "Para entenderlo, hay que ir más atrás."
+},
+{
+"id": 6,
+"parte": 1,
+"desde": 35.13,
+"hasta": 43.03,
+"texto": "En mil novecientos cincuenta y tres, un señor llamado K. R. Perry abrió una pequeña tienda de variedades en Norfolk, Virginia."
+},
+{
+"id": 7,
+"parte": 1,
+"desde": 43.69,
+"hasta": 54.74,
+"texto": "Años después, junto a su hijo Doug y a su socio Macon Brock, convirtió ese negocio en una cadena de jugueterías, K&K Toys, que llegó a tener más de ciento treinta tiendas."
+},
+{
+"id": 8,
+"parte": 1,
+"desde": 55.38,
+"hasta": 60.68,
+"texto": "O sea: cuando empezaron Dollar Tree, ya sabían perfectamente cómo se mueve una tienda."
+},
+{
+"id": 9,
+"parte": 1,
+"desde": 61.52,
+"hasta": 64.28,
+"texto": "Y en mil novecientos ochenta y seis, prueban algo nuevo."
+},
+{
+"id": 10,
+"parte": 1,
+"desde": 64.88,
+"hasta": 72.23,
+"texto": "Macon Brock, Doug Perry y Ray Compton abren cinco tiendas con un nombre que lo decía todo: Only One Dollar. Solo un dólar."
+},
+{
+"id": 11,
+"parte": 1,
+"desde": 73.16,
+"hasta": 80.38,
+"texto": "La idea parecía una locura: un mismo precio para todo. Sin etiquetas distintas. Sin ofertas. Sin comparar."
+},
+{
+"id": 12,
+"parte": 1,
+"desde": 81.12,
+"hasta": 83.72,
+"texto": "Pero ahí está el primer truco."
+},
+{
+"id": 13,
+"parte": 1,
+"desde": 84.7,
+"hasta": 94.81,
+"texto": "Cuando todo cuesta lo mismo, tu cerebro deja de hacer cuentas. No piensas si algo es caro o barato. Solo piensas: es un dólar. Y lo echas a la canasta."
+},
+{
+"id": 14,
+"parte": 1,
+"desde": 95.52,
+"hasta": 106.5,
+"texto": "En mil novecientos noventa y uno vendieron la cadena de juguetes para concentrarse en esta idea. Y en mil novecientos noventa y tres cambiaron el nombre a Dollar Tree."
+},
+{
+"id": 15,
+"parte": 1,
+"desde": 107.2,
+"hasta": 112.57,
+"texto": "A finales de los noventa compraron otras cadenas de precio fijo, en California y en Nueva York."
+},
+{
+"id": 16,
+"parte": 1,
+"desde": 113.21,
+"hasta": 116.96,
+"texto": "Y esas cinco tiendas empezaron a multiplicarse como nadie esperaba."
+},
+{
+"id": 17,
+"parte": 1,
+"desde": 117.69,
+"hasta": 123.78,
+"texto": "Pero el precio fijo es solo la puerta de entrada. Lo que de verdad los hizo gigantes son los otros cuatro trucos."
+},
+{
+"id": 18,
+"parte": 2,
+"desde": 124.83,
+"hasta": 127.71,
+"texto": "Truco número dos: comprar como un gigante."
+},
+{
+"id": 19,
+"parte": 2,
+"desde": 128.54,
+"hasta": 137.67,
+"texto": "Para vender barato y aun así ganar, necesitas pagar todavía menos por cada producto. Y la única forma de lograrlo es comprar cantidades enormes."
+},
+{
+"id": 20,
+"parte": 2,
+"desde": 138.45,
+"hasta": 146.09,
+"texto": "Cerca del cuarenta por ciento de lo que vende Dollar Tree lo importa directamente, sin intermediarios. Y la mayoría viene de China."
+},
+{
+"id": 21,
+"parte": 2,
+"desde": 146.9,
+"hasta": 156.11,
+"texto": "Esos productos cruzan el océano en barcos llenos de contenedores, pasan por dieciocho centros de distribución, y de ahí salen en camiones a miles de tiendas."
+},
+{
+"id": 22,
+"parte": 2,
+"desde": 156.81,
+"hasta": 157.44,
+"texto": "Piénsalo así."
+},
+{
+"id": 23,
+"parte": 2,
+"desde": 158.02,
+"hasta": 163.43,
+"texto": "Si tú compras una taza, pagas el precio de la tienda. Si compras cien, te hacen descuento."
+},
+{
+"id": 24,
+"parte": 2,
+"desde": 164.09,
+"hasta": 175.09,
+"texto": "Pero si compras cientos de miles, ya no le compras a la tienda. Le compras directo a la fábrica. Y la fábrica te hace la taza como tú la pidas, al precio que tú necesitas."
+},
+{
+"id": 25,
+"parte": 2,
+"desde": 175.92,
+"hasta": 182.3,
+"texto": "Cada intermediario que se saltan, es un centavo que se quedan. Y en un negocio de centavos, eso lo es todo."
+},
+{
+"id": 26,
+"parte": 2,
+"desde": 183.56,
+"hasta": 186.54,
+"texto": "Truco número tres: el precio manda sobre el producto."
+},
+{
+"id": 27,
+"parte": 2,
+"desde": 187.43,
+"hasta": 191.14,
+"texto": "En una tienda normal, primero existe el producto y después le ponen un precio."
+},
+{
+"id": 28,
+"parte": 2,
+"desde": 191.82,
+"hasta": 197.61,
+"texto": "Aquí es al revés. Primero existe el precio… y después buscan un producto que quepa en él."
+},
+{
+"id": 29,
+"parte": 2,
+"desde": 198.38,
+"hasta": 205.79,
+"texto": "Y si algo sube de costo, con un precio fijo solo hay dos caminos: hacerlo más pequeño… o dejar de venderlo."
+},
+{
+"id": 30,
+"parte": 2,
+"desde": 206.6,
+"hasta": 212.53,
+"texto": "Por eso, en una tienda de precio fijo, siempre conviene fijarte en el tamaño, y no solo en el precio."
+},
+{
+"id": 31,
+"parte": 2,
+"desde": 213.44,
+"hasta": 215.75,
+"texto": "Y aquí viene algo que casi nadie nota."
+},
+{
+"id": 32,
+"parte": 2,
+"desde": 216.45,
+"hasta": 224.67,
+"texto": "En su propio informe anual, la empresa explica que la comida y los productos de limpieza dejan menos margen que los productos de variedad y de temporada."
+},
+{
+"id": 33,
+"parte": 2,
+"desde": 225.37,
+"hasta": 233.9,
+"texto": "Los primeros te hacen volver cada semana. Los segundos, los globos, la decoración, los juguetes, son los que dejan más dinero."
+},
+{
+"id": 34,
+"parte": 3,
+"desde": 234.99,
+"hasta": 238.7,
+"texto": "Truco número cuatro: tiendas pequeñas… pero muchísimas."
+},
+{
+"id": 35,
+"parte": 3,
+"desde": 239.3,
+"hasta": 249.27,
+"texto": "Una tienda de Dollar Tree suele tener entre setecientos cincuenta y novecientos treinta metros cuadrados de venta. Más o menos el tamaño de dos canchas de básquetbol."
+},
+{
+"id": 36,
+"parte": 3,
+"desde": 250.13,
+"hasta": 255.09,
+"texto": "Una tienda pequeña paga menos renta, gasta menos luz y necesita menos gente para funcionar."
+},
+{
+"id": 37,
+"parte": 3,
+"desde": 255.7,
+"hasta": 261.72,
+"texto": "Y lo que pierden en tamaño, lo ganan en número: hoy tienen más de nueve mil doscientas tiendas en Estados Unidos y Canadá."
+},
+{
+"id": 38,
+"parte": 3,
+"desde": 262.51,
+"hasta": 268.56,
+"texto": "Si repartes sus ventas entre todas, cada tienda vende en promedio unos cinco mil ochocientos dólares al día."
+},
+{
+"id": 39,
+"parte": 3,
+"desde": 269.19,
+"hasta": 270.03,
+"texto": "Todos los días."
+},
+{
+"id": 40,
+"parte": 3,
+"desde": 270.9,
+"hasta": 271.89,
+"texto": "Y ahora haz la cuenta."
+},
+{
+"id": 41,
+"parte": 3,
+"desde": 272.44,
+"hasta": 281.59,
+"texto": "Si todo costara un dólar con veinticinco, cinco mil ochocientos dólares serían unas cuatro mil seiscientas cosas vendidas en un solo día, en una sola tienda."
+},
+{
+"id": 42,
+"parte": 3,
+"desde": 282.37,
+"hasta": 287.55,
+"texto": "Si la tienda abre trece horas, eso es casi seis productos por minuto."
+},
+{
+"id": 43,
+"parte": 3,
+"desde": 288.37,
+"hasta": 292.29,
+"texto": "Una taza. Unas pilas. Un globo. Otra taza. Sin parar."
+},
+{
+"id": 44,
+"parte": 3,
+"desde": 293.63,
+"hasta": 296.23,
+"texto": "Truco número cinco: la cacería del tesoro."
+},
+{
+"id": 45,
+"parte": 3,
+"desde": 297.22,
+"hasta": 300.41,
+"texto": "Entras por una sola cosa. Unas bolsas para la basura."
+},
+{
+"id": 46,
+"parte": 3,
+"desde": 301.03,
+"hasta": 310.05,
+"texto": "Pero en el pasillo ves globos, un cargador, dulces, una taza bonita… y todo cuesta casi lo mismo. Sales con seis cosas."
+},
+{
+"id": 47,
+"parte": 3,
+"desde": 310.84,
+"hasta": 319.02,
+"texto": "Además, una parte de lo que venden son oportunidades: mercancía que compran barata cuando otra empresa necesita deshacerse de ella."
+},
+{
+"id": 48,
+"parte": 3,
+"desde": 319.59,
+"hasta": 327.99,
+"texto": "Es menos del diez por ciento de sus compras, pero basta para que la tienda nunca se vea igual. Y si no lo compras hoy, mañana tal vez ya no está."
+},
+{
+"id": 49,
+"parte": 3,
+"desde": 328.87,
+"hasta": 331.95,
+"texto": "Eso tiene un nombre en el comercio: compra por impulso."
+},
+{
+"id": 50,
+"parte": 3,
+"desde": 332.6,
+"hasta": 335.04,
+"texto": "Y es el motor silencioso de todo este negocio."
+},
+{
+"id": 51,
+"parte": 3,
+"desde": 336.02,
+"hasta": 338.47,
+"texto": "Todo funcionó perfecto durante treinta y cinco años."
+},
+{
+"id": 52,
+"parte": 3,
+"desde": 339.14,
+"hasta": 342.75,
+"texto": "Hasta que un día, el mundo cambió… y el dólar ya no alcanzó."
+},
+{
+"id": 53,
+"parte": 4,
+"desde": 343.78,
+"hasta": 347.5,
+"texto": "Pero en dos mil veintiuno, el dólar dejó de alcanzar."
+},
+{
+"id": 54,
+"parte": 4,
+"desde": 348.28,
+"hasta": 357.46,
+"texto": "Después de la pandemia, los puertos del mundo se saturaron. Había barcos esperando semanas para descargar, y los contenedores no alcanzaban para todos."
+},
+{
+"id": 55,
+"parte": 4,
+"desde": 358.17,
+"hasta": 363.86,
+"texto": "Y recuerda: casi la mitad de lo que vende Dollar Tree viene en esos contenedores."
+},
+{
+"id": 56,
+"parte": 4,
+"desde": 364.65,
+"hasta": 370.6,
+"texto": "Imagina vender a un dólar algo que, de pronto, te cuesta casi un dólar traer hasta la tienda."
+},
+{
+"id": 57,
+"parte": 4,
+"desde": 371.29,
+"hasta": 380.99,
+"texto": "Traer un contenedor desde Asia se volvió carísimo. Solo ese año, la empresa calculó que podría pagar hasta doscientos millones de dólares extra en fletes."
+},
+{
+"id": 58,
+"parte": 4,
+"desde": 381.83,
+"hasta": 386.71,
+"texto": "Y tomó la decisión que había evitado durante treinta y cinco años: subir el precio."
+},
+{
+"id": 59,
+"parte": 4,
+"desde": 387.24,
+"hasta": 391.87,
+"texto": "De un dólar… a un dólar con veinticinco. Y dijo que era permanente."
+},
+{
+"id": 60,
+"parte": 4,
+"desde": 392.74,
+"hasta": 395.59,
+"texto": "Y con ese cambio abrieron una puerta que ya no se cerró."
+},
+{
+"id": 61,
+"parte": 4,
+"desde": 396.26,
+"hasta": 402.82,
+"texto": "Primero llegaron los productos de tres y de cinco dólares. Después, comida congelada y refrigerada a distintos precios."
+},
+{
+"id": 62,
+"parte": 4,
+"desde": 403.65,
+"hasta": 410.9,
+"texto": "Hoy, unas cinco mil trescientas tiendas manejan varios precios. El precio único, poco a poco, se está quedando atrás."
+},
+{
+"id": 63,
+"parte": 4,
+"desde": 411.67,
+"hasta": 417.75,
+"texto": "Y aun así, la gente sigue entrando. Porque aunque ya no todo cuesta un dólar, la sensación de barato sigue ahí."
+},
+{
+"id": 64,
+"parte": 4,
+"desde": 418.3,
+"hasta": 420.41,
+"texto": "Y eso, para el negocio, vale más que el precio."
+},
+{
+"id": 65,
+"parte": 5,
+"desde": 421.41,
+"hasta": 423.7,
+"texto": "Y luego está el error más caro de su historia."
+},
+{
+"id": 66,
+"parte": 5,
+"desde": 424.54,
+"hasta": 435.57,
+"texto": "En dos mil quince, Dollar Tree compró a su rival, Family Dollar, por más de ocho mil millones de dólares. Fue la compra más grande en la historia de las tiendas de a dólar."
+},
+{
+"id": 67,
+"parte": 5,
+"desde": 436.35,
+"hasta": 441.85,
+"texto": "Diez años después, en dos mil veinticinco, la vendió… por unos mil millones."
+},
+{
+"id": 68,
+"parte": 5,
+"desde": 442.82,
+"hasta": 443.49,
+"texto": "¿Qué salió mal?"
+},
+{
+"id": 69,
+"parte": 5,
+"desde": 444.1,
+"hasta": 457.46,
+"texto": "Family Dollar vendía a gente que contaba cada centavo. Y cuando llegó la inflación, cuando subieron los robos en las tiendas y cuando se acabaron las ayudas del gobierno de la pandemia, sus clientes simplemente dejaron de gastar."
+},
+{
+"id": 70,
+"parte": 5,
+"desde": 458.19,
+"hasta": 463.24,
+"texto": "La empresa anunció que cerraría cientos de tiendas. Y al final decidió soltarla."
+},
+{
+"id": 71,
+"parte": 5,
+"desde": 463.89,
+"hasta": 470.99,
+"texto": "Más de siete mil millones de dólares de valor que se esfumaron, por una cadena que nunca funcionó como ellos esperaban."
+},
+{
+"id": 72,
+"parte": 5,
+"desde": 471.61,
+"hasta": 478.48,
+"texto": "La lección es simple: lo que funciona en un negocio no siempre funciona en otro, aunque los dos vendan barato."
+},
+{
+"id": 73,
+"parte": 5,
+"desde": 479.68,
+"hasta": 483.2,
+"texto": "Entonces… ¿cuánto gana de verdad Dollar Tree?"
+},
+{
+"id": 74,
+"parte": 5,
+"desde": 484.05,
+"hasta": 489.99,
+"texto": "De cada dólar con veinticinco que pagas, unos ochenta centavos se van en comprar el producto y ponerlo en la tienda."
+},
+{
+"id": 75,
+"parte": 5,
+"desde": 490.5,
+"hasta": 496.27,
+"texto": "Le quedan unos cuarenta y cinco centavos para pagar sueldos, gastos… y la ganancia."
+},
+{
+"id": 76,
+"parte": 5,
+"desde": 497.1,
+"hasta": 503.22,
+"texto": "Parece poco. Pero en dos mil veinticinco, esos centavos sumaron más de siete mil millones de dólares."
+},
+{
+"id": 77,
+"parte": 5,
+"desde": 503.97,
+"hasta": 507.69,
+"texto": "No ganan por lo que te venden. Ganan por cuántas veces te lo venden."
+},
+{
+"id": 78,
+"parte": 5,
+"desde": 508.59,
+"hasta": 514.4,
+"texto": "Así que la próxima vez que entres a una tienda donde todo cuesta lo mismo, acuérdate de los cinco trucos."
+},
+{
+"id": 79,
+"parte": 5,
+"desde": 514.98,
+"hasta": 528.45,
+"texto": "El precio que no te deja pensar. La compra gigante desde la fábrica. El producto que se adapta al precio. La tienda pequeña que se repite miles de veces. Y la cacería del tesoro que te hace salir con seis cosas."
+},
+{
+"id": 80,
+"parte": 5,
+"desde": 529.13,
+"hasta": 534.66,
+"texto": "Lleva tu lista. Fíjate en el tamaño. Y decide tú… no la tienda."
+},
+{
+"id": 81,
+"parte": 5,
+"desde": 536.03,
+"hasta": 540.13,
+"texto": "¿Qué negocio quieres que expliquemos después? Déjalo en los comentarios."
+},
+{
+"id": 82,
+"parte": 5,
+"desde": 540.73,
+"hasta": 546.53,
+"texto": "Y si quieres saber cómo ganan dinero las empresas que usas todos los días, suscríbete a La Letra Chica."
+}
+]
+}
