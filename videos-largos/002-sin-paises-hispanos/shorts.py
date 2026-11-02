@@ -61,11 +61,12 @@ for s in SHORTS:
     (d / 'mapa.json').write_text(json.dumps(sp, ensure_ascii=False), encoding='utf-8')
     print(f"Short {s['n']}: {ini:.1f} → {fin:.1f} s ({fin - ini:.1f} s)", flush=True)
     if '--armar' in sys.argv: continue
-    subprocess.run(['node', str(RAIZ / 'motor-mapa' / 'render.cjs'), str(d), '--desde', str(ini), '--hasta', str(fin)], check=True, stdout=subprocess.DEVNULL)
+    if not list(d.glob('short-tramo-*.mp4')):
+        subprocess.run(['node', str(RAIZ / 'motor-mapa' / 'render.cjs'), str(d), '--desde', str(ini), '--hasta', str(fin)], check=True, stdout=subprocess.DEVNULL)
     video = next(d.glob('short-tramo-*.mp4'))
     out = SALIDA / f"Short {s['n']} - {s['nombre']}.mp4"
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(video), '-ss', str(ini), '-t', str(fin - ini), '-i', str(DIR / '.tmp' / 'voz.wav'),
-                    '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-af', f'loudnorm=I=-14:TP=-2:LRA=11,afade=t=in:d=.15,afade=t=out:st={fin - ini - .4:.2f}:d=.4',
+                    '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-af', f'loudnorm=I=-14:TP=-2:LRA=11,afade=t=in:d=0.15,afade=t=out:st={fin - ini - .4:.2f}:d=0.4',
                     '-ar', '48000', '-c:a', 'aac', '-b:a', '160k', '-shortest', '-movflags', '+faststart', str(out)], check=True)
     video.unlink()
     (d / 'titulo.txt').write_text(s['titulo'] + '\n', encoding='utf-8')
