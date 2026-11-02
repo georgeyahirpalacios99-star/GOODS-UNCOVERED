@@ -273,7 +273,7 @@ cara('FLK', b4.T('Y las islas Malvinas'), 'shock')
 E('cinta', b4.T('se quedan flotando'), pais='FLK', texto='SOLAS EN EL ATLÁNTICO', icono='alerta', hasta=b4.T('El fútbol también'))
 C(b4.T('El fútbol también'), -45, -15, 120)
 E('iconos', b4.T('El fútbol también'), y=330, items=[dict(icono='futbol', texto='ARGENTINA ×3'), dict(icono='futbol', texto='URUGUAY ×2'), dict(icono='futbol', texto='ESPAÑA ×1')], gap=300, hasta=b4.T('Y con ellos'))
-E('cifra', b4.T('al menos seis Copas'), texto='6 COPAS DEL MUNDO', tam=96, sub='desaparecen de golpe', fuente='FIFA', y=640, hasta=b4.T('Brasil mira'))
+E('cifra', b4.T('al menos seis Copas'), texto='6 COPAS DEL MUNDO', tam=96, color='#ffffff', sub='desaparecen de golpe', fuente='FIFA', y=650, hasta=b4.T('Brasil mira'))
 C(b4.T('Brasil mira'), -54, -11, 58)
 cara('BRA', b4.T('Brasil mira'), 'llora')
 E('globo', b4.T('Tiene más de doscientos'), pais='BRA', texto='¿Alguien quiere jugar?', hasta=b4.fin)
@@ -377,6 +377,19 @@ E('cinta', b7.T('suscríbete'), x=960, y=640, texto='EL PRÓXIMO PAÍS LO ELIGES
 C(DUR, -48, 15, 225, suave=False)
 
 # ---------------------------------------------------------------- salida
+cam.sort(key=lambda k: k['t'])
+# la cámara empieza a moverse cuando la voz dice la frase (no antes): mantener la posición previa y llegar en 1.6-2.6 s
+quieta = [cam[0]]
+for k in cam[1:]:
+    prev = quieta[-1]
+    if k.get('suave') is False:
+        quieta.append(k); continue
+    mov = 2.6 if k.get('arco') else 1.7
+    if k['t'] - prev['t'] > mov + .4:
+        quieta.append(dict(t=k['t'], lon=prev['lon'], lat=prev['lat'], ancho=prev['ancho'], suave=False))
+        k = dict(k, t=round(k['t'] + mov, 2))
+    quieta.append(k)
+cam = quieta
 cam.sort(key=lambda k: k['t'])
 for i in range(1, len(cam)):
     if cam[i]['t'] <= cam[i - 1]['t']: cam[i]['t'] = round(cam[i - 1]['t'] + .05, 2)

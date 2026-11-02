@@ -80,7 +80,7 @@ function imagenes() {
     const desde = opt('--desde') ? Number(opt('--desde')) : 0, tramo = desde > 0 || hasta;
     const out = path.join(dir, (spec.salida || 'demo') + (tramo ? `-tramo-${desde}-${dur}` : '') + '.mp4');
     const ff = spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-', ...(tramo ? [] : spec.audio ? ['-i', path.resolve(dir, spec.audio)] : ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo']),
-      ...(tramo ? ['-an'] : ['-shortest']), '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', String(spec.crf || 22), '-maxrate', '14M', '-bufsize', '28M', '-preset', 'medium', ...(tramo ? [] : ['-c:a', 'aac', '-b:a', '128k']), '-movflags', '+faststart', out], { stdio: ['pipe', 'inherit', 'inherit'] });
+      ...(tramo ? ['-an'] : ['-shortest']), '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', String(spec.crf || 23), '-maxrate', '9M', '-bufsize', '18M', '-preset', 'medium', ...(tramo ? [] : ['-c:a', 'aac', '-b:a', '128k']), '-movflags', '+faststart', out], { stdio: ['pipe', 'inherit', 'inherit'] });
     const n = Math.round((dur - desde) * FPS), t0 = Date.now();
     for (let i = 0; i < n; i += HILOS) {
       const bufs = await Promise.all(pages.map((p, k) => i + k < n ? grab(p, desde + (i + k) / FPS) : null));

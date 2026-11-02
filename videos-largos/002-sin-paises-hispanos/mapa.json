@@ -18,6 +18,13 @@
   },
   {
    "t": 4.68,
+   "lon": -48,
+   "lat": 18,
+   "ancho": 225,
+   "suave": false
+  },
+  {
+   "t": 6.38,
    "lon": -101,
    "lat": 23,
    "ancho": 44
@@ -36,16 +43,23 @@
   },
   {
    "t": 11.74,
+   "lon": -62,
+   "lat": -20,
+   "ancho": 72,
+   "suave": false
+  },
+  {
+   "t": 13.44,
    "lon": -73,
    "lat": 19.5,
    "ancho": 24
   },
   {
    "t": 17.65,
-   "lon": -4,
-   "lat": 40,
-   "ancho": 26,
-   "arco": 0.8
+   "lon": -73,
+   "lat": 19.5,
+   "ancho": 24,
+   "suave": false
   },
   {
    "t": 18.64,
@@ -55,7 +69,21 @@
    "arco": 0.4
   },
   {
+   "t": 20.25,
+   "lon": -4,
+   "lat": 40,
+   "ancho": 26,
+   "arco": 0.8
+  },
+  {
    "t": 24.2,
+   "lon": 10,
+   "lat": 2.5,
+   "ancho": 26,
+   "suave": false
+  },
+  {
+   "t": 26.8,
    "lon": -40,
    "lat": 14,
    "ancho": 265,
@@ -77,96 +105,208 @@
   },
   {
    "t": 75.94,
+   "lon": -40,
+   "lat": 12,
+   "ancho": 255,
+   "suave": false
+  },
+  {
+   "t": 77.64,
    "lon": -97,
    "lat": 33,
    "ancho": 58
   },
   {
    "t": 82.88,
+   "lon": -97,
+   "lat": 33,
+   "ancho": 58,
+   "suave": false
+  },
+  {
+   "t": 84.58,
    "lon": -103,
    "lat": 27,
    "ancho": 36
   },
   {
    "t": 92.79,
+   "lon": -103,
+   "lat": 27,
+   "ancho": 36,
+   "suave": false
+  },
+  {
+   "t": 94.49,
    "lon": -97,
    "lat": 33,
    "ancho": 52
   },
   {
    "t": 103.92,
+   "lon": -97,
+   "lat": 33,
+   "ancho": 52,
+   "suave": false
+  },
+  {
+   "t": 105.62,
    "lon": -88,
    "lat": 20,
    "ancho": 75
   },
   {
    "t": 126.0,
+   "lon": -88,
+   "lat": 20,
+   "ancho": 75,
+   "suave": false
+  },
+  {
+   "t": 127.7,
    "lon": -97,
    "lat": 38,
    "ancho": 48
   },
   {
    "t": 149.54,
+   "lon": -97,
+   "lat": 38,
+   "ancho": 48,
+   "suave": false
+  },
+  {
+   "t": 151.24,
    "lon": -98,
    "lat": 54,
    "ancho": 80
   },
   {
    "t": 159.5,
+   "lon": -98,
+   "lat": 54,
+   "ancho": 80,
+   "suave": false
+  },
+  {
+   "t": 161.2,
    "lon": -88.7,
    "lat": 17.3,
    "ancho": 9
   },
   {
    "t": 173.59,
+   "lon": -88.7,
+   "lat": 17.3,
+   "ancho": 9,
+   "suave": false
+  },
+  {
+   "t": 175.29,
    "lon": -73,
    "lat": 19.5,
    "ancho": 16
   },
   {
    "t": 190.06,
+   "lon": -73,
+   "lat": 19.5,
+   "ancho": 16,
+   "suave": false
+  },
+  {
+   "t": 191.76,
    "lon": -67.5,
    "lat": 18.5,
    "ancho": 12
   },
   {
    "t": 200.12,
+   "lon": -67.5,
+   "lat": 18.5,
+   "ancho": 12,
+   "suave": false
+  },
+  {
+   "t": 201.82,
    "lon": -85,
    "lat": 12.5,
    "ancho": 26
   },
   {
    "t": 208.05,
+   "lon": -85,
+   "lat": 12.5,
+   "ancho": 26,
+   "suave": false
+  },
+  {
+   "t": 209.75,
    "lon": -80,
    "lat": 12,
    "ancho": 40
   },
   {
    "t": 242.48,
+   "lon": -80,
+   "lat": 12,
+   "ancho": 40,
+   "suave": false
+  },
+  {
+   "t": 244.18,
    "lon": -70,
    "lat": 17,
    "ancho": 34
   },
   {
    "t": 258.25,
+   "lon": -70,
+   "lat": 17,
+   "ancho": 34,
+   "suave": false
+  },
+  {
+   "t": 259.95,
    "lon": -78,
    "lat": 8,
    "ancho": 150
   },
   {
    "t": 269.29,
+   "lon": -78,
+   "lat": 8,
+   "ancho": 150,
+   "suave": false
+  },
+  {
+   "t": 270.99,
    "lon": -56,
    "lat": -10,
    "ancho": 62
   },
   {
    "t": 278.89,
+   "lon": -56,
+   "lat": -10,
+   "ancho": 62,
+   "suave": false
+  },
+  {
+   "t": 280.59,
    "lon": -55,
    "lat": -2,
    "ancho": 45
   },
   {
    "t": 292.99,
+   "lon": -55,
+   "lat": -2,
+   "ancho": 45,
+   "suave": false
+  },
+  {
+   "t": 294.69,
    "lon": -62,
    "lat": -12,
    "ancho": 55
@@ -174,11 +314,25 @@
   {
    "t": 306.31,
    "lon": -62,
+   "lat": -12,
+   "ancho": 55,
+   "suave": false
+  },
+  {
+   "t": 308.01,
+   "lon": -62,
    "lat": -22,
    "ancho": 72
   },
   {
    "t": 318.26,
+   "lon": -62,
+   "lat": -22,
+   "ancho": 72,
+   "suave": false
+  },
+  {
+   "t": 320.86,
    "lon": -150,
    "lat": 62,
    "ancho": 40,
@@ -193,36 +347,78 @@
   },
   {
    "t": 331.19,
+   "lon": -80,
+   "lat": -15,
+   "ancho": 60,
+   "suave": false
+  },
+  {
+   "t": 332.89,
    "lon": -59.5,
    "lat": -51.7,
    "ancho": 14
   },
   {
    "t": 338.47,
+   "lon": -59.5,
+   "lat": -51.7,
+   "ancho": 14,
+   "suave": false
+  },
+  {
+   "t": 340.17,
    "lon": -45,
    "lat": -15,
    "ancho": 120
   },
   {
    "t": 352.58,
+   "lon": -45,
+   "lat": -15,
+   "ancho": 120,
+   "suave": false
+  },
+  {
+   "t": 354.28,
    "lon": -54,
    "lat": -11,
    "ancho": 58
   },
   {
    "t": 365.35,
+   "lon": -54,
+   "lat": -11,
+   "ancho": 58,
+   "suave": false
+  },
+  {
+   "t": 367.05,
    "lon": -20,
    "lat": 15,
    "ancho": 330
   },
   {
    "t": 414.4,
+   "lon": -20,
+   "lat": 15,
+   "ancho": 330,
+   "suave": false
+  },
+  {
+   "t": 416.1,
    "lon": -30,
    "lat": 20,
    "ancho": 230
   },
   {
    "t": 432.25,
+   "lon": -30,
+   "lat": 20,
+   "ancho": 230,
+   "suave": false
+  },
+  {
+   "t": 434.85,
    "lon": 104,
    "lat": 35,
    "ancho": 70,
@@ -230,6 +426,13 @@
   },
   {
    "t": 440.64,
+   "lon": 104,
+   "lat": 35,
+   "ancho": 70,
+   "suave": false
+  },
+  {
+   "t": 443.24,
    "lon": 10,
    "lat": 48,
    "ancho": 45,
@@ -237,12 +440,26 @@
   },
   {
    "t": 448.97,
+   "lon": 10,
+   "lat": 48,
+   "ancho": 45,
+   "suave": false
+  },
+  {
+   "t": 450.67,
    "lon": -20,
    "lat": 15,
    "ancho": 320
   },
   {
    "t": 453.83,
+   "lon": -20,
+   "lat": 15,
+   "ancho": 320,
+   "suave": false
+  },
+  {
+   "t": 455.53,
    "lon": -5,
    "lat": 40,
    "ancho": 24
@@ -255,30 +472,65 @@
   },
   {
    "t": 461.32,
+   "lon": -8,
+   "lat": 36,
+   "ancho": 34,
+   "suave": false
+  },
+  {
+   "t": 463.02,
    "lon": -6,
    "lat": 40.5,
    "ancho": 16
   },
   {
    "t": 467.05,
+   "lon": -6,
+   "lat": 40.5,
+   "ancho": 16,
+   "suave": false
+  },
+  {
+   "t": 468.75,
    "lon": 1.5,
    "lat": 42.6,
    "ancho": 8
   },
   {
    "t": 473.81,
+   "lon": 1.5,
+   "lat": 42.6,
+   "ancho": 8,
+   "suave": false
+  },
+  {
+   "t": 475.51,
    "lon": -5.35,
    "lat": 36.6,
    "ancho": 6
   },
   {
    "t": 481.09,
+   "lon": -5.35,
+   "lat": 36.6,
+   "ancho": 6,
+   "suave": false
+  },
+  {
+   "t": 482.79,
    "lon": 8,
    "lat": 41,
    "ancho": 40
   },
   {
    "t": 496.24,
+   "lon": 8,
+   "lat": 41,
+   "ancho": 40,
+   "suave": false
+  },
+  {
+   "t": 498.84,
    "lon": 11,
    "lat": 2,
    "ancho": 16,
@@ -286,12 +538,26 @@
   },
   {
    "t": 509.86,
+   "lon": 11,
+   "lat": 2,
+   "ancho": 16,
+   "suave": false
+  },
+  {
+   "t": 511.56,
    "lon": -40,
    "lat": 15,
    "ancho": 250
   },
   {
    "t": 545.44,
+   "lon": -40,
+   "lat": 15,
+   "ancho": 250,
+   "suave": false
+  },
+  {
+   "t": 548.04,
    "lon": -96,
    "lat": 37,
    "ancho": 60,
@@ -299,12 +565,26 @@
   },
   {
    "t": 573.11,
+   "lon": -96,
+   "lat": 37,
+   "ancho": 60,
+   "suave": false
+  },
+  {
+   "t": 574.81,
    "lon": -30,
    "lat": 18,
    "ancho": 320
   },
   {
    "t": 594.84,
+   "lon": -30,
+   "lat": 18,
+   "ancho": 320,
+   "suave": false
+  },
+  {
+   "t": 597.44,
    "lon": 85,
    "lat": 42,
    "ancho": 85,
@@ -312,6 +592,13 @@
   },
   {
    "t": 601.71,
+   "lon": 85,
+   "lat": 42,
+   "ancho": 85,
+   "suave": false
+  },
+  {
+   "t": 603.41,
    "lon": -45,
    "lat": 15,
    "ancho": 240
@@ -1711,9 +1998,10 @@
    "desde": 345.01,
    "texto": "6 COPAS DEL MUNDO",
    "tam": 96,
+   "color": "#ffffff",
    "sub": "desaparecen de golpe",
    "fuente": "FIFA",
-   "y": 640,
+   "y": 650,
    "hasta": 352.58
   },
   {
