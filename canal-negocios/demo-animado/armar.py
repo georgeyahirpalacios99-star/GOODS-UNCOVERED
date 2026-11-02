@@ -72,7 +72,7 @@ ev = [
     dict(tipo='pila', desde=24.3, hasta=27.75, x=P(700, 0)[0], y=P(0, 452)[1], r=19, de=1, a=9, dur=2.6),
     # 8 · lluvia de monedas
     dict(tipo='palito', desde=27.7, hasta=31.55, **JEFE, x=2100, y=P(0, 655)[1], tam=520, claves=[dict(t=27.7, x=2100), dict(t=29.0, x=960, pose='risa', dir=0)], cara='feliz', caras=[[29.0, 'risa']]),
-    dict(tipo='monedas', desde=28.5, hasta=31.55, x=960, y=930, n=30, paso=.09, ancho=1900, r=30, vuelo=1.1),
+    dict(tipo='monedas', capa='detras', desde=28.5, hasta=31.55, x=960, y=930, n=30, paso=.09, ancho=1900, r=30, vuelo=1.1),
     dict(tipo='cifra', desde=29.2, hasta=31.4, texto='$7,050 M', sub='ganancia bruta en 2025', fuente='Dollar Tree, informe anual 2025', y=200, tam=130, color='#7dd67a'),
     # 9 · pregunta final
     dict(tipo='palito', desde=31.5, hasta=35.4, **BETO, x=960, y=1070, tam=700, dir=0, claves=[dict(t=31.5, pose='parado'), dict(t=32.0, pose='saludar')], cara='feliz'),
