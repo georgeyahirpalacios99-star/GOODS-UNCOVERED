@@ -42,6 +42,7 @@ function datos() {
     desiertos: capas('ne_10m_geography_regions_polys.geojson', p => p.FEATURECLA === 'Desert' && p.SCALERANK <= 4),
     rios: lineas('ne_50m_rivers_lake_centerlines.geojson'),
   };
+  if (spec.estilo === 'escena') return {};
   if (spec.estilo === 'pergamino') return { paises: paises('ne_50m_admin_0_countries.geojson'), estados: estados('ne_50m_admin_1_states_provinces.geojson') };
   return { paises: paises('ne_50m_admin_0_countries.geojson') };
 }

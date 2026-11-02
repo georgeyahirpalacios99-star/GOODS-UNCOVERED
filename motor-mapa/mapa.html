@@ -93,7 +93,7 @@ async function init(geo, spec, flags, imgs) {
   SP = spec; G = {};
   if (spec.formato === 'vertical') { W = 1080; H = 1920; cv.width = W; cv.height = H; }
   for (const k of Object.keys(geo)) G[k] = k === 'rios' ? armarLineas(geo[k]) : (k === 'montes' || k === 'desiertos') ? armarCapas(geo[k]) : armarPaises(geo[k]);
-  G.idx = {}; (G.paises || G.hi).forEach(p => G.idx[p.adm] = p); (G.estados || []).forEach(p => G.idx[p.adm] = p);
+  G.idx = {}; (G.paises || G.hi || []).forEach(p => G.idx[p.adm] = p); (G.estados || []).forEach(p => G.idx[p.adm] = p);
   G.regiones = (SP.regiones || []).map(r => { const path = new Path2D(); let bb = [1e9, 1e9, -1e9, -1e9]; for (const id of r.partes) { const c = G.idx[id]; if (!c) continue; path.addPath(c.path); bb = [Math.min(bb[0], c.bb[0]), Math.min(bb[1], c.bb[1]), Math.max(bb[2], c.bb[2]), Math.max(bb[3], c.bb[3])]; } return Object.assign({}, r, { path, bb }); }); if (G.lo) { G.idxLo = {}; G.lo.forEach(p => G.idxLo[p.adm] = p); }
   await Promise.all(Object.entries(flags).map(async ([iso, url]) => { const im = new Image(); im.src = url; await im.decode().catch(() => {});
     const c = document.createElement('canvas'); c.width = 640; c.height = 480; const x = c.getContext('2d'); try { x.drawImage(im, 0, 0, 640, 480); } catch (e) {}
@@ -460,7 +460,9 @@ function muneco(e, t, x, y, h) {
   // cuerpo
   const col = e.ropa || '#2f3f6e'; ctx.fillStyle = col; ctx.beginPath(); ctx.moveTo(-25 * k, -2 * k); ctx.bezierCurveTo(-27 * k, -30 * k, -24 * k, -52 * k, -14 * k, -58 * k); ctx.lineTo(14 * k, -58 * k); ctx.bezierCurveTo(24 * k, -52 * k, 27 * k, -30 * k, 25 * k, -2 * k); ctx.quadraticCurveTo(0, 3 * k, -25 * k, -2 * k); ctx.fill(); ctx.stroke();
   if (e.solapa !== false) { ctx.fillStyle = e.camisa || '#f4efe4'; ctx.beginPath(); ctx.moveTo(-9 * k, -58 * k); ctx.lineTo(0, -38 * k); ctx.lineTo(9 * k, -58 * k); ctx.closePath(); ctx.fill(); ctx.stroke(); }
-  if (e.botones !== false) { ctx.fillStyle = e.oro || '#e0b13a'; for (const by of [-32, -22, -12]) { ctx.beginPath(); ctx.arc(0, by * k, 2.2 * k, 0, Math.PI * 2); ctx.fill(); } }
+  if (e.delantal) { ctx.fillStyle = e.delantal; ctx.beginPath(); ctx.moveTo(-15 * k, -44 * k); ctx.lineTo(15 * k, -44 * k); ctx.lineTo(19 * k, -3 * k); ctx.quadraticCurveTo(0, 0, -19 * k, -3 * k); ctx.closePath(); ctx.fill(); ctx.stroke(); }
+  if (e.corbata) { ctx.fillStyle = e.corbata; ctx.beginPath(); ctx.moveTo(-3.5 * k, -56 * k); ctx.lineTo(3.5 * k, -56 * k); ctx.lineTo(5 * k, -28 * k); ctx.lineTo(0, -22 * k); ctx.lineTo(-5 * k, -28 * k); ctx.closePath(); ctx.fill(); ctx.stroke(); }
+  if (e.botones !== false && !e.corbata && !e.delantal) { ctx.fillStyle = e.oro || '#e0b13a'; for (const by of [-32, -22, -12]) { ctx.beginPath(); ctx.arc(0, by * k, 2.2 * k, 0, Math.PI * 2); ctx.fill(); } }
   if (e.banda) { ctx.strokeStyle = e.banda; ctx.lineWidth = 6 * k; ctx.beginPath(); ctx.moveTo(-20 * k, -52 * k); ctx.lineTo(18 * k, -10 * k); ctx.stroke(); ctx.strokeStyle = TINTA; ctx.lineWidth = Math.max(1.5, 2.6 * k); }
   // cabeza
   const hy = -80 * k, r = 26 * k;
@@ -531,8 +533,108 @@ Object.assign(C, {
     ctx.restore(); },
 });
 
+// ---------- estilo escena (negocios explicados con muñequitos, sin mapa) ----------
+const PALETA = ['#e8574a', '#f2b134', '#4f8fc0', '#6dbb6a', '#b46fc4', '#f08a4b', '#3fa7a0', '#e86aa0'];
+function escenaEn(t) { const L = SP.escenas || [{ desde: 0, fondo: 'papel' }]; let i = 0; while (i < L.length - 1 && t >= L[i + 1].desde) i++; return [L[i], L[i - 1]]; }
+function producto(tipo, x, y, s, t = 0) {
+  ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.strokeStyle = TINTA; ctx.lineWidth = 3; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+  if (tipo === 'taza') { ctx.lineWidth = 7; ctx.beginPath(); ctx.arc(27, -27, 13, -Math.PI / 2, Math.PI / 2); ctx.stroke(); ctx.strokeStyle = '#e8574a'; ctx.lineWidth = 3.5; ctx.stroke(); ctx.strokeStyle = TINTA; ctx.lineWidth = 3;
+    ctx.fillStyle = '#e8574a'; ctx.beginPath(); ctx.moveTo(-26, -52); ctx.lineTo(26, -52); ctx.lineTo(22, -2); ctx.quadraticCurveTo(0, 4, -22, -2); ctx.closePath(); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#f7efe0'; ctx.beginPath(); ctx.ellipse(0, -52, 26, 6, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); corazon(0, -26, 22, '#fff'); }
+  else if (tipo === 'pato') { ctx.fillStyle = '#f7c832'; ctx.beginPath(); ctx.ellipse(0, -18, 30, 18, 0, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); ctx.beginPath(); ctx.arc(14, -44, 15, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#f08a4b'; ctx.beginPath(); ctx.ellipse(31, -41, 9, 4.5, .1, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); ctx.fillStyle = TINTA; ctx.beginPath(); ctx.arc(18, -48, 2.6, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = '#d9a514'; ctx.beginPath(); ctx.arc(-6, -20, 11, .2, 2.4); ctx.stroke(); }
+  else if (tipo === 'pilas') { for (const dx of [-15, 15]) { ctx.fillStyle = '#2f3f6e'; ctx.beginPath(); ctx.roundRect(dx - 12, -58, 24, 58, 5); ctx.fill(); ctx.stroke(); ctx.fillStyle = '#f2b134'; ctx.fillRect(dx - 10.5, -58 + 1.5, 21, 14); ctx.fillStyle = '#bbb'; ctx.fillRect(dx - 5, -64, 10, 6); ctx.strokeRect(dx - 5, -64, 10, 6); texto('+', dx, -30, '700 18px Fredoka', '#fff'); } }
+  else if (tipo === 'frasco') { ctx.fillStyle = 'rgba(220,240,250,.85)'; ctx.beginPath(); ctx.roundRect(-24, -58, 48, 58, 10); ctx.fill(); ctx.stroke();
+    for (let i = 0; i < 9; i++) { ctx.fillStyle = PALETA[i % 8]; ctx.beginPath(); ctx.arc(-14 + (i % 3) * 14, -12 - Math.floor(i / 3) * 13, 6, 0, Math.PI * 2); ctx.fill(); }
+    ctx.fillStyle = '#d6453d'; ctx.beginPath(); ctx.roundRect(-27, -68, 54, 12, 4); ctx.fill(); ctx.stroke(); }
+  else { ctx.fillStyle = '#4f8fc0'; ctx.beginPath(); ctx.roundRect(-24, -56, 48, 56, 6); ctx.fill(); ctx.stroke(); }
+  ctx.restore(); }
+function cosaEstante(i, j, x, y) { const r = hs(i, j, 7), c = PALETA[Math.floor(hs(i, j, 9) * 8)]; ctx.strokeStyle = TINTA; ctx.lineWidth = 2.4; ctx.fillStyle = c;
+  if (r < .32) { const h = 50 + hs(i, j, 3) * 30; ctx.beginPath(); ctx.roundRect(x - 20, y - h, 40, h, 4); ctx.fill(); ctx.stroke(); ctx.fillStyle = 'rgba(255,255,255,.75)'; ctx.fillRect(x - 14, y - h * .62, 28, h * .26); }
+  else if (r < .58) { ctx.beginPath(); ctx.moveTo(x - 13, y); ctx.lineTo(x - 13, y - 44); ctx.quadraticCurveTo(x - 13, y - 56, x - 5, y - 60); ctx.lineTo(x - 5, y - 72); ctx.lineTo(x + 5, y - 72); ctx.lineTo(x + 5, y - 60); ctx.quadraticCurveTo(x + 13, y - 56, x + 13, y - 44); ctx.lineTo(x + 13, y); ctx.closePath(); ctx.fill(); ctx.stroke(); ctx.fillStyle = '#fff'; ctx.fillRect(x - 13, y - 34, 26, 12); }
+  else if (r < .8) { ctx.beginPath(); ctx.roundRect(x - 16, y - 42, 32, 42, 3); ctx.fill(); ctx.stroke(); ctx.fillStyle = 'rgba(0,0,0,.18)'; ctx.fillRect(x - 16, y - 42, 32, 8); }
+  else producto(['taza', 'pato', 'pilas', 'frasco'][Math.floor(hs(i, j, 5) * 4)], x, y, .62); }
+function tiendita(x, y, s, c) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.strokeStyle = TINTA; ctx.lineWidth = 3; ctx.fillStyle = '#f3e7cf'; ctx.fillRect(-40, -56, 80, 56); ctx.strokeRect(-40, -56, 80, 56);
+  for (let i = 0; i < 5; i++) { ctx.fillStyle = i % 2 ? '#fff' : c; ctx.beginPath(); ctx.moveTo(-46 + i * 18.4, -56); ctx.lineTo(-46 + (i + 1) * 18.4, -56); ctx.lineTo(-46 + (i + 1) * 18.4, -44); ctx.arc(-46 + (i + .5) * 18.4, -44, 9.2, 0, Math.PI); ctx.closePath(); ctx.fill(); ctx.stroke(); }
+  ctx.fillStyle = '#6dbb6a'; ctx.fillRect(-30, -78, 60, 20); ctx.strokeRect(-30, -78, 60, 20); texto('$1.25', 0, -67, '700 13px Fredoka', '#fff');
+  ctx.fillStyle = '#7fb7d8'; ctx.fillRect(-32, -30, 26, 22); ctx.strokeRect(-32, -30, 26, 22); ctx.fillStyle = '#a8834f'; ctx.fillRect(8, -32, 22, 32); ctx.strokeRect(8, -32, 22, 32); ctx.restore(); }
+function capaPapel(alpha = .5) { ctx.save(); ctx.globalCompositeOperation = 'multiply'; const p = PAT.papel || (PAT.papel = ctx.createPattern(papel(), 'repeat')); p.setTransform(new DOMMatrix([900 / N, 0, 0, 900 / N, 0, 0])); ctx.fillStyle = p; ctx.globalAlpha = alpha; ctx.fillRect(-60, -60, W + 120, H + 120); ctx.restore();
+  const vg = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * .4, W / 2, H / 2, Math.max(W, H) * .78); vg.addColorStop(0, 'rgba(60,40,20,0)'); vg.addColorStop(1, 'rgba(60,40,20,.34)'); ctx.fillStyle = vg; ctx.fillRect(-60, -60, W + 120, H + 120); }
+function fondo(sc, t) {
+  if (sc.fondo === 'tienda') {
+    ctx.fillStyle = sc.pared || '#86bfae'; ctx.fillRect(-60, -60, W + 120, H + 120); ctx.fillStyle = 'rgba(255,255,255,.08)'; for (let x = -60; x < W + 60; x += 90) ctx.fillRect(x, -60, 45, H);
+    const piso = sc.piso ?? 840; ctx.fillStyle = '#c99a63'; ctx.fillRect(-60, piso, W + 120, H - piso + 60); ctx.strokeStyle = 'rgba(90,60,30,.35)'; ctx.lineWidth = 3;
+    for (let y = piso + 40; y < H + 60; y += 55) { ctx.beginPath(); ctx.moveTo(-60, y); ctx.lineTo(W + 60, y); ctx.stroke(); } ctx.fillStyle = 'rgba(90,60,30,.5)'; ctx.fillRect(-60, piso, W + 120, 10);
+    for (const [x0, x1, sd] of sc.estantes || [[40, 640, 1], [1280, 1880, 2]]) { ctx.fillStyle = '#9b6b3e'; ctx.strokeStyle = TINTA; ctx.lineWidth = 4; ctx.fillRect(x0 - 14, 250, 14, piso - 250); ctx.fillRect(x1, 250, 14, piso - 250); ctx.strokeRect(x0 - 14, 250, 14, piso - 250); ctx.strokeRect(x1, 250, 14, piso - 250);
+      [390, 560, 730].forEach((by, j) => { for (let i = 0, x = x0 + 30; x < x1 - 20; i++, x += 52) cosaEstante(i + sd * 100, j, x, by); ctx.fillStyle = '#b07c48'; ctx.fillRect(x0 - 14, by, x1 - x0 + 28, 16); ctx.strokeRect(x0 - 14, by, x1 - x0 + 28, 16); }); }
+    if (sc.letrero) { ctx.save(); ctx.translate(W / 2, 120); ctx.rotate(Math.sin(t * 1.3) * .008); ctx.strokeStyle = TINTA; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(-250, -90); ctx.lineTo(-250, -50); ctx.moveTo(250, -90); ctx.lineTo(250, -50); ctx.stroke();
+      ctx.font = '700 84px Fredoka'; const w = ctx.measureText(sc.letrero).width + 110; rr(-w / 2, -58, w, 124, 24, '#d6453d', TINTA, 6); rr(-w / 2 + 10, -48, w - 20, 104, 18, null, 'rgba(255,255,255,.8)', 3); texto(sc.letrero, 0, 6, '700 84px Fredoka', '#fff', 'center', 'middle', TINTA, 10); ctx.restore(); }
+    if (sc.mostrador) { const [mx, mw] = sc.mostrador; ctx.fillStyle = '#7a4f2a'; ctx.strokeStyle = TINTA; ctx.lineWidth = 5; ctx.beginPath(); ctx.roundRect(mx - mw / 2, piso - 150, mw, 170, 10); ctx.fill(); ctx.stroke(); ctx.fillStyle = '#b07c48'; ctx.beginPath(); ctx.roundRect(mx - mw / 2 - 20, piso - 172, mw + 40, 28, 8); ctx.fill(); ctx.stroke(); }
+  } else {
+    ctx.fillStyle = sc.color || '#f1e3c4'; ctx.fillRect(-60, -60, W + 120, H + 120); ctx.save(); ctx.globalAlpha = .07; ctx.translate((t * 12) % 160, (t * 6) % 160);
+    for (let y = -160; y < H + 160; y += 160) for (let x = -160 + (y / 160 % 2) * 80; x < W + 160; x += 160) texto('$', x, y, '700 64px Fredoka', TINTA); ctx.restore();
+  }
+  capaPapel(sc.fondo === 'tienda' ? .4 : .55);
+}
+function etiqueta(x, y, s, txt, col, t, tipo) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s); ctx.font = '700 46px Fredoka'; const w = Math.max(150, ctx.measureText(txt).width + 70), h = 86;
+  ctx.strokeStyle = TINTA; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(0, -70); ctx.lineTo(0, -h / 2); ctx.stroke(); ctx.translate(0, -h / 2); ctx.rotate(Math.sin(t * 2.4) * .06); ctx.fillStyle = col || '#ffd23f'; ctx.lineWidth = 5;
+  ctx.beginPath(); ctx.moveTo(-w / 2 + 26, 0); ctx.lineTo(w / 2, 0); ctx.lineTo(w / 2, h); ctx.lineTo(-w / 2 + 26, h); ctx.lineTo(-w / 2, h / 2); ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(-w / 2 + 26, h / 2, 8, 0, Math.PI * 2); ctx.fill(); ctx.stroke(); texto(txt, 13, h / 2 + 3, '700 46px Fredoka', TINTA); ctx.restore(); }
+function moneda(x, y, r, giro) { ctx.save(); ctx.translate(x, y); ctx.scale(Math.max(.12, Math.abs(Math.cos(giro))), 1); ctx.fillStyle = '#f2c230'; ctx.strokeStyle = '#8a6412'; ctx.lineWidth = Math.max(2, r * .12); ctx.beginPath(); ctx.arc(0, 0, r, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+  ctx.beginPath(); ctx.arc(0, 0, r * .72, 0, Math.PI * 2); ctx.stroke(); texto('$', 0, r * .06, `700 ${r * 1.05}px Fredoka`, '#a8770f'); ctx.restore(); }
+const fmtNum = v => Math.round(v).toLocaleString('en-US');
+Object.assign(C, {
+  producto(e, t) { const p = eob(pr(t, e.desde, .45)), a = fade(t, e, .1, .3); if (p <= 0) return; let [x, y] = anclar(e);
+    if (e.hacia) { const q = eio(pr(t, e.hacia.desde, e.hacia.dur || .9)); x = lerp(x, e.hacia.x, q); y = lerp(y, e.hacia.y, q) - Math.sin(q * Math.PI) * 90; }
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); ctx.scale(p, p); ctx.translate(-x, -y); producto(e.cual, x, y + Math.sin(t * 3) * 2, (e.tam || 100) / 60, t);
+    if (e.precio) { const pp = eob(pr(t, e.precioDesde ?? e.desde + .4, .4)); if (pp > 0) etiqueta(x + (e.tam || 100) * .9, y - (e.tam || 100) * .55, pp * (e.tamPrecio || 1), e.precio, e.colorPrecio, t); }
+    if (e.tachar) { const q = cl((t - e.tachar) / .3); if (q > 0) { ctx.strokeStyle = RED; ctx.lineWidth = 14; ctx.lineCap = 'round'; const r = (e.tam || 100) * .9; ctx.beginPath(); ctx.moveTo(x - r, y - r * 1.4); ctx.lineTo(x - r + 2 * r * q, y - r * 1.4 + 1.6 * r * q); ctx.stroke(); } }
+    ctx.restore(); },
+  etiqueta(e, t) { const p = eob(pr(t, e.desde, .45)), a = fade(t, e, .1, .3); if (p <= 0) return; const [x, y] = anclar(e); ctx.save(); ctx.globalAlpha = a; etiqueta(x, y, p * (e.tam || 1), e.texto, e.color, t); ctx.restore(); },
+  desglose(e, t) { const a = fade(t, e, .3, .3), x = e.x, y = e.y, w = e.w || 820, h = e.h || 120, tot = e.partes.reduce((s, q) => s + q.valor, 0); ctx.save(); ctx.globalAlpha = a;
+    if (e.titulo) texto(e.titulo, x + w / 2, y - 62, '700 52px Fredoka', '#fff', 'center', 'middle', TINTA, 10);
+    rr(x - 8, y - 8, w + 16, h + 16, 26, TINTA); rr(x, y, w, h, 20, 'rgba(255,255,255,.55)'); let cx = x;
+    for (const q of e.partes) { const ww = w * q.valor / tot, g = eo(pr(t, q.desde, .8)); if (g > 0) { ctx.save(); ctx.beginPath(); ctx.roundRect(x, y, w, h, 20); ctx.clip(); ctx.fillStyle = q.color; ctx.fillRect(cx, y, ww * g, h); ctx.fillStyle = 'rgba(255,255,255,.18)'; ctx.fillRect(cx, y, ww * g, h * .3); ctx.restore();
+        const al = cl((t - q.desde - .5) / .3); ctx.globalAlpha = a * al; texto(q.cifra, cx + ww / 2, y + h / 2 + 4, '700 66px Fredoka', '#fff', 'center', 'middle', TINTA, 10);
+        const ls = partir(q.texto, '700 40px Fredoka', Math.max(ww - 10, 300)); ls.forEach((l, i) => texto(l, cx + ww / 2, y + h + 56 + i * 46, '700 40px Fredoka', q.color, 'center', 'middle', TINTA, 9)); ctx.globalAlpha = a;
+        if (cx > x) { ctx.strokeStyle = TINTA; ctx.lineWidth = 6; ctx.beginPath(); ctx.moveTo(cx, y); ctx.lineTo(cx, y + h); ctx.stroke(); } } cx += ww; }
+    if (e.fuente) texto('Fuente: ' + e.fuente, x + w / 2, y + h + 190, '500 26px Fredoka', TINTA); ctx.restore(); },
+  tiendas(e, t) { const a = fade(t, e, .2, .3), cols = e.cols || 10, filas = e.filas || 4, gx = e.gx || 150, gy = e.gy || 120, x0 = (e.x || W / 2) - (cols - 1) * gx / 2, y0 = e.y || 520; ctx.save(); ctx.globalAlpha = a;
+    for (let j = 0; j < filas; j++) for (let i = 0; i < cols; i++) { const k = j * cols + i, p = eob(pr(t, e.desde + k * (e.paso || .04), .35)); if (p <= 0) continue; ctx.save(); ctx.translate(x0 + i * gx + (j % 2) * gx * .25, y0 + j * gy); ctx.scale(p, p); tiendita(0, 0, e.tam || 1, PALETA[(i * 3 + j) % 8]); ctx.restore(); }
+    if (e.total) { const q = eo(pr(t, e.desde, e.dur || 2.2)), y = e.yCifra || 210; texto((e.prefijo || '') + fmtNum(e.total * q) + (e.sufijo || ''), W / 2, y, '700 150px Fredoka', '#ffd23f', 'center', 'middle', TINTA, 22); if (e.sub) texto(e.sub, W / 2, y + 100, '700 44px Fredoka', '#fff', 'center', 'middle', TINTA, 10); }
+    ctx.restore(); },
+  caja(e, t) { const p = eob(pr(t, e.desde, .45)), a = fade(t, e, .1, .3); if (p <= 0) return; const [x, y] = anclar(e), s = (e.tam || 100) / 100; ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); ctx.scale(p * s, p * s); ctx.strokeStyle = TINTA; ctx.lineWidth = 5; ctx.lineJoin = 'round';
+    const ab = (e.abre || []).map(d => Math.sin(cl((t - d) / .45) * Math.PI)).reduce((m, q) => Math.max(m, q), 0); ctx.fillStyle = '#2e6b4c'; ctx.beginPath(); ctx.roundRect(-120, -40 + ab * 0, 240, 40, 6); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#3f8a62'; ctx.beginPath(); ctx.roundRect(-110 - ab * 0, -30 + ab * 34, 220, 30, 6); ctx.fill(); ctx.stroke(); if (ab > .2) for (let i = 0; i < 5; i++) moneda(-70 + i * 35, -22 + ab * 34, 12, i);
+    ctx.fillStyle = '#3f8a62'; ctx.beginPath(); ctx.moveTo(-110, -40); ctx.lineTo(-90, -150); ctx.lineTo(90, -150); ctx.lineTo(110, -40); ctx.closePath(); ctx.fill(); ctx.stroke();
+    for (let i = 0; i < 3; i++) for (let j = 0; j < 4; j++) { ctx.fillStyle = '#e8eef2'; ctx.beginPath(); ctx.roundRect(-74 + j * 30 + i * 3, -122 + i * 26, 22, 16, 4); ctx.fill(); ctx.stroke(); }
+    ctx.fillStyle = '#1d2a22'; ctx.beginPath(); ctx.roundRect(-105, -230, 210, 66, 10); ctx.fill(); ctx.stroke(); ctx.fillRect(-12, -166, 24, 18);
+    const m = e.monto ? lerp(e.monto[0], e.monto[1], eo(pr(t, e.monto[2], e.monto[3] || 3))) : 0; texto(e.texto ?? ((e.prefijo ?? '$') + fmtNum(m) + (e.sufijo || '')), 0, -196, '700 40px Fredoka', '#7dff9a'); ctx.restore(); },
+  monedas(e, t) { const a = fade(t, e, .1, .3), [tx, ty] = anclar(e), n = e.n || 16; ctx.save(); ctx.globalAlpha = a;
+    for (let i = 0; i < n; i++) { const t0 = e.desde + i * (e.paso || .18), q = pr(t, t0, e.vuelo || .8); if (q <= 0 || q >= 1) continue; const sx = tx + (hs(i, 1, 3) - .5) * (e.ancho || 900), sy = -60 - hs(i, 2, 3) * 120;
+      const x = lerp(sx, tx, eio(q)), y = lerp(sy, ty, q * q) - Math.sin(q * Math.PI) * 60; moneda(x, y, e.r || 30, t * 9 + i); }
+    ctx.restore(); },
+});
+function renderEscena(t) {
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.letterSpacing = '0px';
+  const [sc, prev] = escenaEn(t), q = prev ? eio(pr(t, sc.desde, .6)) : 1;
+  const base = s => { const z = 1 + (s.zoom ?? .035) * eio(pr(t, s.desde, s.dur || 9)); return [z, 0, 0, z, W / 2 * (1 - z), H / 2 * (1 - z)]; };
+  if (q < 1) { ctx.setTransform(...base(prev)); fondo(prev, t); }
+  ctx.save(); if (q < 1) { ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.beginPath(); ctx.arc(W / 2, H / 2, q * Math.hypot(W, H) / 2 + 1, 0, Math.PI * 2); ctx.clip(); }
+  ctx.setTransform(...base(sc)); fondo(sc, t); ctx.restore();
+  if (q < 1 && q > 0) { ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.strokeStyle = TINTA; ctx.lineWidth = 14; ctx.beginPath(); ctx.arc(W / 2, H / 2, q * Math.hypot(W, H) / 2, 0, Math.PI * 2); ctx.stroke(); }
+  const m = base(sc);
+  for (const e of SP.eventos) { const fn = C[e.tipo] || D[e.tipo]; if (!activo(t, e) || !fn || OCULTO(e.tipo)) continue; ctx.save(); ctx.setTransform(...m); ctx.letterSpacing = '0px'; fn(e, t); ctx.restore(); }
+  ctx.setTransform(1, 0, 0, 1, 0, 0); subtitulos(t);
+  ctx.save(); ctx.globalAlpha = .03; GRANO.setTransform(new DOMMatrix([1, 0, 0, 1, Math.random() * 256, Math.random() * 256])); ctx.fillStyle = GRANO; ctx.fillRect(0, 0, W, H); ctx.restore();
+  const fi = SP.fundido_inicio ?? .4; if (t < fi) { ctx.fillStyle = `rgba(0,0,0,${1 - t / fi})`; ctx.fillRect(0, 0, W, H); }
+  if (SP.duracion - t < .6) { ctx.fillStyle = `rgba(0,0,0,${1 - (SP.duracion - t) / .6})`; ctx.fillRect(0, 0, W, H); }
+}
+
 // ---------- cuadro ----------
 function render(t) {
+  if (SP.estilo === 'escena') return renderEscena(t);
   camara(t); ctx.globalAlpha = 1; ctx.letterSpacing = '0px';
   if (SP.estilo === 'documental') mapaDoc(t); else if (SP.estilo === 'pergamino') mapaPerg(t); else mapaCarto(t);
   ctx.setTransform(1, 0, 0, 1, 0, 0);
