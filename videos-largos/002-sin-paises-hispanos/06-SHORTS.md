@@ -12,11 +12,11 @@ Todos van en vertical (1080×1920), con tu voz, subtítulos y una cabecera fija.
 
 | Día | Archivo | Duración |
 |---|---|---|
-| Hoy | `Short 1 - 21 paises borrados.mp4` | ~40 s |
-| Mañana | `Short 3 - brasil se queda solo.mp4` | ~36 s |
-| Día 3 | `Short 4 - portugal se vuelve isla.mp4` | ~28 s |
-| Día 4 | `Short 2 - adios canal de panama.mp4` | ~46 s |
-| Día 5 | `Short 5 - el nuevo hogar del espanol.mp4` | ~47 s |
+| Hoy | `Short 1 - 21 paises borrados.mp4` | 39 s |
+| Mañana | `Short 3 - brasil se queda solo.mp4` | 35 s |
+| Día 3 | `Short 4 - portugal se vuelve isla.mp4` | 27 s |
+| Día 4 | `Short 2 - adios canal de panama.mp4` | 44 s |
+| Día 5 | `Short 5 - el nuevo hogar del espanol.mp4` | 46 s |
 
 ---
 
