@@ -12,3 +12,5 @@ videos-largos/*/miniaturas/*/preview/
 __pycache__/
 canal-geografia/.marca.html
 canal-geografia/fondo/preview/
+videos-largos/*/shorts/*/preview/
+videos-largos/*/shorts/*/*.mp4
