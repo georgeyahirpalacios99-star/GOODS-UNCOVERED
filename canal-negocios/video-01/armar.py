@@ -31,7 +31,7 @@ toma(6, 'calle', hora=.3, sepia=True, letrero='TIENDA DE VARIEDADES', neon=False
 toma(7, 'calle', hora=.3, sepia=True, letrero='K&K TOYS', neon=False, z0=1.06, z1=1, foco=[960, 560]); capa('multitud', 7, 0, n=20, paso=.4); cifra(7, 5.5, 130, prefijo='+', sufijo=' jugueterías', dur=1.6, y=300, tam=120, color='#ffcf8a')
 toma(8, 'cara', sepia=True, c0='#3a2a20', c1='#6b4a30'); busto(8, FUND, cara='feliz', rim='#ffcf8a')
 toma(9, 'foco', z0=1.1, z1=1); golpe(9, .3, '1986', tam=240, y=470, color='#ff9db5')
-toma(10, 'calle', hora=.04, letrero='ONLY $1.00', z0=1, z1=1.07, foco=[960, 600]); cifra(10, 3.6, 5, sufijo=' tiendas', dur=.8, y=180, tam=110, color='#ff9db5')
+toma(10, 'calle', hora=.04, letrero='ONLY $1.00', z0=1, z1=1.07, foco=[960, 600]); cifra(10, 3.6, 5, sufijo=' tiendas', dur=.8, y=470, tam=120, color='#ff9db5')
 toma(11, 'producto', objetos=[[S(11), 'taza'], [S(11) + 1.8, 'pilas'], [S(11) + 3.4, 'globo'], [S(11) + 5.2, 'pato']]); capa('precio', 11, .3, x=1240, y=470, tam=1.5, texto='$1.00')
 cap(12, '1', 'El precio que no te deja pensar')
 toma(13, 'cara', c0='#2b2040', c1='#5b3350'); busto(13, CLI, x=1250, y=650, tam=1150, cara='feliz'); capa('piensa', 13, 2.5, x=600, y=330, texto='$1', tam=110)
