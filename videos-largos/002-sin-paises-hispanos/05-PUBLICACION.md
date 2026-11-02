@@ -1,5 +1,5 @@
 # PUBLICACIÓN · Video 002
-**Duración: 10:33 · Miniatura recomendada: `miniaturas/miniatura-A.jpg`**
+**Duración: 10:14 · Miniatura recomendada: `miniaturas/miniatura-A.jpg`**
 
 ## Título
 ```
@@ -17,11 +17,11 @@ Escenario hipotético, contado con datos reales.
 ⏱️ CAPÍTULOS
 0:00 Borramos 21 territorios
 1:14 Estados Unidos, Canadá y Belice
-2:54 El Caribe y el Canal de Panamá
-4:25 Brasil se queda solo
-6:01 Lo que el mundo deja de recibir
-7:31 Europa, África y el idioma
-9:30 Quién llora y quién ni se entera
+2:52 El Caribe y el Canal de Panamá
+4:28 Brasil se queda solo
+6:04 Lo que el mundo deja de recibir
+7:32 Europa, África y el idioma
+9:18 Quién llora y quién ni se entera
 
 📚 FUENTES
 Instituto Cervantes, El español en el mundo 2025
