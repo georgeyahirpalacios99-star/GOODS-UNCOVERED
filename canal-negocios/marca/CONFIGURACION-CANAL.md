@@ -1,4 +1,4 @@
-# La Letra Chica · todo para crear y llenar el canal
+# Así Ganan · todo para crear y llenar el canal
 
 ## Archivos
 | Para | Archivo | Medida |
@@ -8,19 +8,19 @@
 | Marca de agua | `marca-de-agua.png` | 150×150, fondo transparente |
 
 ## Datos (YouTube Studio → Personalización → Información básica)
-- **Nombre:** La Letra Chica
-- **Identificador:** @laletrachicatv (si está tomado: @laletrachicanegocios)
+- **Nombre:** Así Ganan
+- **Identificador:** @asiganan (si YouTube no lo deja: @asiganantv)
 - **Descripción (copiar):**
 ```
 ¿Cómo gana dinero una tienda donde todo cuesta un dólar? ¿Por qué las palomitas del cine cuestan más que la película?
 
-En La Letra Chica te explicamos, con animación y datos reales, cómo ganan dinero las empresas que usas todos los días y por qué las cosas cuestan lo que cuestan.
+En Así Ganan te explicamos, con animación y datos reales, cómo ganan dinero las empresas que usas todos los días y por qué las cosas cuestan lo que cuestan.
 
 🧾 Un negocio nuevo cada semana.
 📊 Cada cifra con su fuente.
 💬 Comenta qué empresa quieres que expliquemos.
 
-Lo que nadie te cuenta… está en la letra chica.
+Así ganan dinero las empresas que usas todos los días.
 ```
 - **Correo de contacto:** el tuyo (para marcas y patrocinios).
 
@@ -30,14 +30,14 @@ Lo que nadie te cuenta… está en la letra chica.
 ## Configuración del canal (Configuración → Canal)
 - **País:** el tuyo · **Palabras clave:**
 ```
-cómo ganan dinero, negocios, economía, modelo de negocio, empresas, por qué es tan caro, finanzas, negocios explicados, animación, la letra chica
+cómo ganan dinero, negocios, economía, modelo de negocio, empresas, por qué es tan caro, finanzas, negocios explicados, animación, así ganan
 ```
 - **Configuración avanzada:** el canal **no es para niños**.
 
 ## Valores predeterminados de subida (Configuración → Valores predeterminados)
 - **Categoría:** Educación · **Idioma del video:** Español (Latinoamérica).
 - **Contenido alterado o sintético:** márcalo en cada video (voz de IA).
-- **Etiquetas por defecto:** la letra chica, negocios, cómo ganan dinero.
+- **Etiquetas por defecto:** así ganan, negocios, cómo ganan dinero.
 
 ## Página principal (Personalización → Diseño)
 - **Tráiler para quien no está suscrito:** Video 1.

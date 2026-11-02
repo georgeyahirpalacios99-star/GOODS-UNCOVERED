@@ -105,7 +105,7 @@ Así que la próxima vez que entres a una tienda donde todo cuesta lo mismo, acu
 El precio que no te deja pensar. La compra gigante desde la fábrica. El producto que se adapta al precio. La tienda pequeña que se repite miles de veces. Y la cacería del tesoro que te hace salir con seis cosas. <break time="0.4s" />
 Lleva tu lista. Fíjate en el tamaño. Y decide tú… no la tienda. <break time="0.9s" />
 ¿Qué negocio quieres que expliquemos después? Déjalo en los comentarios. <break time="0.3s" />
-Y si quieres saber cómo ganan dinero las empresas que usas todos los días, suscríbete a La Letra Chica.
+Y si quieres saber cómo hacen su dinero las empresas que usas todos los días, suscríbete a Así Ganan.
 ```
 
 ---

@@ -31,12 +31,12 @@ Todo cuesta un dólar con veinticinco… y aun así Dollar Tree vendió 19,400 m
 
 💬 ¿Qué negocio quieres que expliquemos después? Déjalo en los comentarios.
 
-#negocios #dollartree #economia #comoganandinero #laletrachica
+#negocios #dollartree #economia #comoganandinero #asiganan
 ```
 
 ## Etiquetas (copiar)
 ```
-cómo gana dinero dollar tree, dollar tree, tienda de todo a un dólar, negocios explicados, cómo ganan dinero las empresas, modelo de negocio, economía, family dollar, por qué es tan barato, la letra chica, negocios animados, finanzas
+cómo gana dinero dollar tree, dollar tree, tienda de todo a un dólar, negocios explicados, cómo ganan dinero las empresas, modelo de negocio, economía, family dollar, por qué es tan barato, así ganan, negocios animados, finanzas
 ```
 
 ## Configuración al subir
