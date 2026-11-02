@@ -1,7 +1,7 @@
 {
  "estilo": "caricatura",
  "salida": "que-pasaria-sin-paises-hispanos",
- "duracion": 633.11,
+ "duracion": 634.81,
  "camara": [
   {
    "t": 0,
@@ -17,307 +17,307 @@
    "suave": false
   },
   {
-   "t": 3.57,
+   "t": 4.68,
    "lon": -101,
    "lat": 23,
    "ancho": 44
   },
   {
-   "t": 5.1,
+   "t": 7.05,
    "lon": -86,
    "lat": 14,
    "ancho": 30
   },
   {
-   "t": 7.12,
+   "t": 9.1,
    "lon": -62,
    "lat": -20,
    "ancho": 72
   },
   {
-   "t": 9.48,
+   "t": 11.74,
    "lon": -73,
    "lat": 19.5,
    "ancho": 24
   },
   {
-   "t": 15.5,
+   "t": 17.65,
    "lon": -4,
    "lat": 40,
    "ancho": 26,
    "arco": 0.8
   },
   {
-   "t": 16.6,
+   "t": 18.64,
    "lon": 10,
    "lat": 2.5,
    "ancho": 26,
    "arco": 0.4
   },
   {
-   "t": 22.37,
+   "t": 24.2,
    "lon": -40,
    "lat": 14,
    "ancho": 265,
    "arco": 0.3
   },
   {
-   "t": 35.79,
+   "t": 36.42,
    "lon": -42,
    "lat": 14,
    "ancho": 250,
    "suave": false
   },
   {
-   "t": 73.79,
+   "t": 73.47,
    "lon": -40,
    "lat": 12,
    "ancho": 255,
    "suave": false
   },
   {
-   "t": 75.47,
+   "t": 75.94,
    "lon": -97,
    "lat": 33,
    "ancho": 58
   },
   {
-   "t": 82.64,
+   "t": 82.88,
    "lon": -103,
    "lat": 27,
    "ancho": 36
   },
   {
-   "t": 92.55,
+   "t": 92.79,
    "lon": -97,
    "lat": 33,
    "ancho": 52
   },
   {
-   "t": 106.05,
+   "t": 103.92,
    "lon": -88,
    "lat": 20,
    "ancho": 75
   },
   {
-   "t": 129.86,
+   "t": 126.0,
    "lon": -97,
    "lat": 38,
    "ancho": 48
   },
   {
-   "t": 151.7,
+   "t": 149.54,
    "lon": -98,
    "lat": 54,
    "ancho": 80
   },
   {
-   "t": 161.4,
+   "t": 159.5,
    "lon": -88.7,
    "lat": 17.3,
    "ancho": 9
   },
   {
-   "t": 175.09,
+   "t": 173.59,
    "lon": -73,
    "lat": 19.5,
    "ancho": 16
   },
   {
-   "t": 190.31,
+   "t": 190.06,
    "lon": -67.5,
    "lat": 18.5,
    "ancho": 12
   },
   {
-   "t": 201.24,
+   "t": 200.12,
    "lon": -85,
    "lat": 12.5,
    "ancho": 26
   },
   {
-   "t": 209.09,
+   "t": 208.05,
    "lon": -80,
    "lat": 12,
    "ancho": 40
   },
   {
-   "t": 241.73,
+   "t": 242.48,
    "lon": -70,
    "lat": 17,
    "ancho": 34
   },
   {
-   "t": 255.15,
+   "t": 258.25,
    "lon": -78,
    "lat": 8,
    "ancho": 150
   },
   {
-   "t": 266.01,
+   "t": 269.29,
    "lon": -56,
    "lat": -10,
    "ancho": 62
   },
   {
-   "t": 275.23,
+   "t": 278.89,
    "lon": -55,
    "lat": -2,
    "ancho": 45
   },
   {
-   "t": 289.13,
+   "t": 292.99,
    "lon": -62,
    "lat": -12,
    "ancho": 55
   },
   {
-   "t": 301.94,
+   "t": 306.31,
    "lon": -62,
    "lat": -22,
    "ancho": 72
   },
   {
-   "t": 313.94,
+   "t": 318.26,
    "lon": -150,
    "lat": 62,
    "ancho": 40,
    "arco": 1.2
   },
   {
-   "t": 318.6,
+   "t": 323.19,
    "lon": -80,
    "lat": -15,
    "ancho": 60,
    "arco": 1.0
   },
   {
-   "t": 327.43,
+   "t": 331.19,
    "lon": -59.5,
    "lat": -51.7,
    "ancho": 14
   },
   {
-   "t": 334.99,
+   "t": 338.47,
    "lon": -45,
    "lat": -15,
    "ancho": 120
   },
   {
-   "t": 348.56,
+   "t": 352.58,
    "lon": -54,
    "lat": -11,
    "ancho": 58
   },
   {
-   "t": 362.45,
+   "t": 365.35,
    "lon": -20,
    "lat": 15,
    "ancho": 330
   },
   {
-   "t": 412.01,
+   "t": 414.4,
    "lon": -30,
    "lat": 20,
    "ancho": 230
   },
   {
-   "t": 430.96,
+   "t": 432.25,
    "lon": 104,
    "lat": 35,
    "ancho": 70,
    "arco": 0.9
   },
   {
-   "t": 439.17,
+   "t": 440.64,
    "lon": 10,
    "lat": 48,
    "ancho": 45,
    "arco": 0.6
   },
   {
-   "t": 446.93,
+   "t": 448.97,
    "lon": -20,
    "lat": 15,
    "ancho": 320
   },
   {
-   "t": 452.13,
+   "t": 453.83,
    "lon": -5,
    "lat": 40,
    "ancho": 24
   },
   {
-   "t": 455.86,
+   "t": 457.55,
    "lon": -8,
    "lat": 36,
    "ancho": 34
   },
   {
-   "t": 459.63,
+   "t": 461.32,
    "lon": -6,
    "lat": 40.5,
    "ancho": 16
   },
   {
-   "t": 465.35,
+   "t": 467.05,
    "lon": 1.5,
    "lat": 42.6,
    "ancho": 8
   },
   {
-   "t": 472.11,
+   "t": 473.81,
    "lon": -5.35,
    "lat": 36.6,
    "ancho": 6
   },
   {
-   "t": 479.39,
+   "t": 481.09,
    "lon": 8,
    "lat": 41,
    "ancho": 40
   },
   {
-   "t": 494.55,
+   "t": 496.24,
    "lon": 11,
    "lat": 2,
    "ancho": 16,
    "arco": 0.6
   },
   {
-   "t": 508.17,
+   "t": 509.86,
    "lon": -40,
    "lat": 15,
    "ancho": 250
   },
   {
-   "t": 543.75,
+   "t": 545.44,
    "lon": -96,
    "lat": 37,
    "ancho": 60,
    "arco": 0.5
   },
   {
-   "t": 571.41,
+   "t": 573.11,
    "lon": -30,
    "lat": 18,
    "ancho": 320
   },
   {
-   "t": 593.14,
+   "t": 594.84,
    "lon": 85,
    "lat": 42,
    "ancho": 85,
    "arco": 0.6
   },
   {
-   "t": 600.01,
+   "t": 601.71,
    "lon": -45,
    "lat": 15,
    "ancho": 240
   },
   {
-   "t": 633.11,
+   "t": 634.81,
    "lon": -48,
    "lat": 15,
    "ancho": 225,
@@ -327,92 +327,92 @@
  "desaparece": [
   {
    "iso": "MEX",
-   "t": 74.89
+   "t": 75.3
   },
   {
    "iso": "GTM",
-   "t": 74.95
+   "t": 75.36
   },
   {
    "iso": "SLV",
-   "t": 75.01
+   "t": 75.42
   },
   {
    "iso": "HND",
-   "t": 75.07
+   "t": 75.48
   },
   {
    "iso": "NIC",
-   "t": 75.13
+   "t": 75.54
   },
   {
    "iso": "CRI",
-   "t": 75.19
+   "t": 75.6
   },
   {
    "iso": "PAN",
-   "t": 75.25
+   "t": 75.66
   },
   {
    "iso": "CUB",
-   "t": 75.31
+   "t": 75.72
   },
   {
    "iso": "DOM",
-   "t": 75.37
+   "t": 75.78
   },
   {
    "iso": "PRI",
-   "t": 75.43
+   "t": 75.84
   },
   {
    "iso": "COL",
-   "t": 75.49
+   "t": 75.9
   },
   {
    "iso": "VEN",
-   "t": 75.55
+   "t": 75.96
   },
   {
    "iso": "ECU",
-   "t": 75.61
+   "t": 76.02
   },
   {
    "iso": "PER",
-   "t": 75.67
+   "t": 76.08
   },
   {
    "iso": "BOL",
-   "t": 75.73
+   "t": 76.14
   },
   {
    "iso": "CHL",
-   "t": 75.79
+   "t": 76.2
   },
   {
    "iso": "ARG",
-   "t": 75.85
+   "t": 76.26
   },
   {
    "iso": "PRY",
-   "t": 75.91
+   "t": 76.32
   },
   {
    "iso": "URY",
-   "t": 75.97
+   "t": 76.38
   },
   {
    "iso": "ESP",
-   "t": 76.03
+   "t": 76.44
   },
   {
    "iso": "GNQ",
-   "t": 76.09
+   "t": 76.5
   }
  ],
  "sacudidas": [
   {
-   "t": 74.89,
+   "t": 75.3,
    "dur": 0.9,
    "fuerza": 16
   }
@@ -434,47 +434,47 @@
    "lat": 5
   },
   {
-   "t": 75.47068965517241,
+   "t": 75.943063,
    "lon": -102,
    "lat": 22
   },
   {
-   "t": 175.0862068965517,
+   "t": 173.594688,
    "lon": -70.5,
    "lat": 19
   },
   {
-   "t": 255.15,
+   "t": 258.25,
    "lon": -70,
    "lat": 0
   },
   {
-   "t": 266.00517241379305,
+   "t": 269.287126,
    "lon": -65,
    "lat": -15
   },
   {
-   "t": 362.4482758620689,
+   "t": 365.345251,
    "lon": -65,
    "lat": -5
   },
   {
-   "t": 452.1327586206896,
+   "t": 453.827904,
    "lon": -4,
    "lat": 40
   },
   {
-   "t": 543.75,
+   "t": 545.44,
    "lon": -97,
    "lat": 38
   },
   {
-   "t": 571.4103448275862,
+   "t": 573.1054902068965,
    "lon": -65,
    "lat": 0
   },
   {
-   "t": 600.01,
+   "t": 601.71,
    "lon": -70,
    "lat": 0
   }
@@ -486,379 +486,379 @@
     "normal"
    ],
    [
-    75.29,
+    75.7,
     "shock"
    ],
    [
-    77.97,
+    78.44,
     "normal"
    ]
   ],
   "MEX": [
    [
-    3.87,
+    4.98,
     "shock"
    ]
   ],
   "GTM": [
    [
-    5.4,
+    7.35,
     "shock"
    ]
   ],
   "SLV": [
    [
-    5.4,
+    7.35,
     "shock"
    ]
   ],
   "HND": [
    [
-    5.4,
+    7.35,
     "shock"
    ]
   ],
   "NIC": [
    [
-    5.4,
+    7.35,
     "shock"
    ]
   ],
   "CRI": [
    [
-    5.4,
+    7.35,
     "shock"
    ]
   ],
   "PAN": [
    [
-    5.4,
+    7.35,
     "shock"
    ]
   ],
   "COL": [
    [
-    7.42,
+    9.4,
     "shock"
    ]
   ],
   "VEN": [
    [
-    7.42,
+    9.4,
     "shock"
    ]
   ],
   "ECU": [
    [
-    7.42,
+    9.4,
     "shock"
    ]
   ],
   "PER": [
    [
-    7.42,
+    9.4,
     "shock"
    ]
   ],
   "BOL": [
    [
-    7.42,
+    9.4,
     "shock"
    ]
   ],
   "CHL": [
    [
-    7.42,
+    9.4,
     "shock"
    ]
   ],
   "ARG": [
    [
-    7.42,
+    9.4,
     "shock"
    ]
   ],
   "PRY": [
    [
-    7.42,
+    9.4,
     "shock"
    ]
   ],
   "URY": [
    [
-    7.42,
+    9.4,
     "shock"
    ]
   ],
   "CUB": [
    [
-    9.78,
+    12.04,
     "shock"
    ]
   ],
   "DOM": [
    [
-    9.78,
+    12.04,
     "shock"
    ]
   ],
   "PRI": [
    [
-    9.78,
+    12.04,
     "shock"
    ]
   ],
   "ESP": [
    [
-    15.8,
+    17.95,
     "shock"
    ]
   ],
   "GNQ": [
    [
-    16.9,
+    18.94,
     "shock"
    ]
   ],
   "USA": [
    [
-    75.77,
+    76.24,
     "shock"
    ],
    [
-    103.31,
+    101.38,
     "llora"
    ],
    [
-    139.73,
+    136.51,
     "triste"
    ],
    [
-    148.0,
+    145.33,
     "llora"
    ],
    [
-    556.51,
+    558.2,
     "amor"
    ],
    [
-    575.04,
+    576.74,
     "llora"
    ]
   ],
   "CAN": [
    [
-    151.7,
+    149.54,
     "duda"
    ],
    [
-    587.09,
+    588.79,
     "triste"
    ]
   ],
   "BLZ": [
    [
-    168.37,
+    166.79,
     "shock"
    ]
   ],
   "HTI": [
    [
-    183.29,
+    182.35,
     "shock"
    ]
   ],
   "JAM": [
    [
-    251.73,
+    254.15,
     "shock"
    ]
   ],
   "BHS": [
    [
-    251.73,
+    254.15,
     "shock"
    ]
   ],
   "TTO": [
    [
-    251.73,
+    254.15,
     "shock"
    ]
   ],
   "ABW": [
    [
-    251.73,
+    254.15,
     "shock"
    ]
   ],
   "CUW": [
    [
-    251.73,
+    254.15,
     "shock"
    ]
   ],
   "BRA": [
    [
-    266.51,
+    269.79,
     "shock"
    ],
    [
-    291.54,
+    295.48,
     "feliz"
    ],
    [
-    298.14,
+    302.54,
     "triste"
    ],
    [
-    348.56,
+    352.58,
     "llora"
    ],
    [
-    575.04,
+    576.74,
     "llora"
    ]
   ],
   "GUY": [
    [
-    278.4,
+    282.04,
     "shock"
    ]
   ],
   "SUR": [
    [
-    278.95,
+    282.59,
     "shock"
    ]
   ],
   "FRA": [
    [
-    279.71,
+    283.35,
     "shock"
    ],
    [
-    439.17,
+    440.64,
     "triste"
    ],
    [
-    468.94,
+    470.63,
     "feliz"
    ],
    [
-    587.09,
+    588.79,
     "triste"
    ]
   ],
   "FLK": [
    [
-    327.43,
+    331.19,
     "shock"
    ]
   ],
   "CHN": [
    [
-    432.48,
+    433.8,
     "shock"
    ],
    [
-    436.2,
+    437.61,
     "llora"
    ],
    [
-    575.04,
+    576.74,
     "llora"
    ]
   ],
   "DEU": [
    [
-    439.17,
+    440.64,
     "triste"
    ]
   ],
   "ITA": [
    [
-    439.17,
+    440.64,
     "triste"
    ],
    [
-    489.6,
+    491.3,
     "feliz"
    ]
   ],
   "GBR": [
    [
-    439.17,
+    440.64,
     "triste"
    ]
   ],
   "POL": [
    [
-    439.17,
+    440.64,
     "triste"
    ]
   ],
   "NLD": [
    [
-    439.17,
+    440.64,
     "triste"
    ]
   ],
   "BEL": [
    [
-    439.17,
+    440.64,
     "triste"
    ]
   ],
   "PRT": [
    [
-    463.56,
+    465.26,
     "shock"
    ],
    [
-    575.04,
+    576.74,
     "llora"
    ]
   ],
   "AND": [
    [
-    467.35,
+    469.05,
     "feliz"
    ]
   ],
   "GRC": [
    [
-    489.6,
+    491.3,
     "feliz"
    ]
   ],
   "GAB": [
    [
-    501.37,
+    503.07,
     "duda"
    ]
   ],
   "CMR": [
    [
-    501.37,
+    503.07,
     "duda"
    ]
   ],
   "MNG": [
    [
-    594.93,
+    596.63,
     "feliz"
    ]
   ],
   "NPL": [
    [
-    595.62,
+    597.32,
     "feliz"
    ]
   ],
   "KAZ": [
    [
-    596.18,
+    597.87,
     "feliz"
    ]
   ]
@@ -866,15 +866,15 @@
  "eventos": [
   {
    "tipo": "marcar",
-   "desde": 3.57,
+   "desde": 4.68,
    "paises": [
     "MEX"
    ],
-   "hasta": 74.64
+   "hasta": 75.05
   },
   {
    "tipo": "marcar",
-   "desde": 5.1,
+   "desde": 7.05,
    "paises": [
     "GTM",
     "SLV",
@@ -883,11 +883,11 @@
     "CRI",
     "PAN"
    ],
-   "hasta": 74.64
+   "hasta": 75.05
   },
   {
    "tipo": "marcar",
-   "desde": 7.12,
+   "desde": 9.1,
    "paises": [
     "COL",
     "VEN",
@@ -899,83 +899,83 @@
     "PRY",
     "URY"
    ],
-   "hasta": 74.64
+   "hasta": 75.05
   },
   {
    "tipo": "marcar",
-   "desde": 9.48,
+   "desde": 11.74,
    "paises": [
     "CUB",
     "DOM",
     "PRI"
    ],
-   "hasta": 74.64
+   "hasta": 75.05
   },
   {
    "tipo": "marcar",
-   "desde": 15.5,
+   "desde": 17.65,
    "paises": [
     "ESP"
    ],
-   "hasta": 74.64
+   "hasta": 75.05
   },
   {
    "tipo": "marcar",
-   "desde": 16.6,
+   "desde": 18.64,
    "paises": [
     "GNQ"
    ],
-   "hasta": 74.64
+   "hasta": 75.05
   },
   {
    "tipo": "nombre",
-   "desde": 18.94,
+   "desde": 20.75,
    "texto": "GUINEA ECUATORIAL",
    "lon": 10.4,
    "lat": 4.2,
-   "hasta": 21.34
+   "hasta": 23.15
   },
   {
    "tipo": "cifra",
-   "desde": 22.37,
+   "desde": 24.2,
    "texto": "21",
    "sub": "TERRITORIOS",
-   "hasta": 24.16
+   "hasta": 25.77
   },
   {
    "tipo": "cifra",
-   "desde": 24.16,
+   "desde": 25.77,
    "texto": "12 MILLONES DE km²",
    "tam": 104,
    "sub": "más que Canadá entero",
-   "hasta": 28.78
+   "hasta": 29.83
   },
   {
    "tipo": "resaltar",
-   "desde": 27.19,
+   "desde": 28.44,
    "pais": "CAN",
-   "hasta": 29.28
+   "hasta": 30.33
   },
   {
    "tipo": "cifra",
-   "desde": 28.78,
+   "desde": 29.83,
    "texto": "460 MILLONES",
    "tam": 118,
    "sub": "de hablantes nativos de español",
    "fuente": "Instituto Cervantes, 2025",
-   "hasta": 35.79
+   "hasta": 36.42
   },
   {
    "tipo": "titulo",
-   "desde": 35.79,
+   "desde": 36.42,
    "texto": "¿QUÉ PASARÍA SI DESAPARECIERAN\nTODOS LOS PAÍSES QUE\nHABLAN *ESPAÑOL*?",
    "tam": 84,
    "y": 300,
-   "hasta": 45.49
+   "hasta": 44.62
   },
   {
    "tipo": "reglas",
-   "desde": 45.49,
+   "desde": 44.62,
    "titulo": "LAS REGLAS",
    "y": 250,
    "paso": 2.2,
@@ -985,11 +985,11 @@
     "La gente que vive fuera se queda",
     "Todo lo demás: datos reales"
    ],
-   "hasta": 58.23
+   "hasta": 57.75
   },
   {
    "tipo": "iconos",
-   "desde": 62.16,
+   "desde": 61.72,
    "y": 420,
    "paso": 0.55,
    "items": [
@@ -1010,77 +1010,77 @@
      "texto": "VECINOS"
     }
    ],
-   "hasta": 66.99
+   "hasta": 66.58
   },
   {
    "tipo": "titulo",
-   "desde": 66.99,
+   "desde": 66.58,
    "texto": "¿EL NUEVO HOGAR\nDEL *ESPAÑOL*?",
    "tam": 88,
    "y": 360,
-   "hasta": 73.79
+   "hasta": 73.47
   },
   {
    "tipo": "cifra",
-   "desde": 73.79,
+   "desde": 73.47,
    "texto": "3",
    "tam": 230,
    "color": "#ffffff",
-   "hasta": 74.64
+   "hasta": 74.32
   },
   {
    "tipo": "cifra",
-   "desde": 74.2,
+   "desde": 74.28,
    "texto": "2",
    "tam": 230,
    "color": "#ffffff",
-   "hasta": 75.05
+   "hasta": 75.13
   },
   {
    "tipo": "cifra",
-   "desde": 74.54,
+   "desde": 74.95,
    "texto": "1",
    "tam": 230,
    "color": "#ffffff",
-   "hasta": 75.24
+   "hasta": 75.65
   },
   {
    "tipo": "region",
-   "desde": 75.47,
+   "desde": 75.94,
    "texto": "NORTEAMÉRICA",
-   "hasta": 174.64
+   "hasta": 173.14
   },
   {
    "tipo": "nombre",
-   "desde": 82.64,
+   "desde": 82.88,
    "texto": "AQUÍ ESTABA LA FRONTERA",
    "lon": -103,
    "lat": 29.5,
    "fantasma": true,
-   "hasta": 86.64
+   "hasta": 86.88
   },
   {
    "tipo": "pin",
-   "desde": 87.4,
+   "desde": 87.49,
    "lon": -117.16,
    "lat": 32.72,
    "texto": "SAN DIEGO",
-   "hasta": 91.9
+   "hasta": 91.99
   },
   {
    "tipo": "barra",
-   "desde": 92.55,
-   "hasta": 633.11
+   "desde": 92.79,
+   "hasta": 634.81
   },
   {
    "tipo": "marcador",
-   "desde": 92.55,
+   "desde": 92.79,
    "texto": "EL MUNDO",
-   "hasta": 633.11
+   "hasta": 634.81
   },
   {
    "tipo": "flujo",
-   "desde": 92.55,
+   "desde": 92.79,
    "de": [
     -102,
     22
@@ -1092,36 +1092,36 @@
    "icono": "aguacate",
    "roto": true,
    "n": 5,
-   "hasta": 106.05
+   "hasta": 103.92
   },
   {
    "tipo": "globo",
-   "desde": 97.86,
+   "desde": 97.03,
    "pais": "USA",
    "texto": "¿Y mi guacamole?",
-   "hasta": 101.46
+   "hasta": 100.63
   },
   {
    "tipo": "tarjeta",
-   "desde": 97.86,
+   "desde": 97.03,
    "iso": "us",
    "nombre": "Estados Unidos",
    "estado": "LLORA",
    "dato": "CASI 9 DE CADA 10",
    "texto": "aguacates que importa Estados Unidos vienen de México.",
    "fuente": "Departamento de Agricultura de EE. UU.",
-   "hasta": 106.05
+   "hasta": 103.92
   },
   {
    "tipo": "lista",
-   "desde": 98.86,
+   "desde": 98.03,
    "iso": "us",
    "nombre": "Estados Unidos",
    "estado": "LLORA"
   },
   {
    "tipo": "flujo",
-   "desde": 106.05,
+   "desde": 103.92,
    "de": [
     -74,
     4.5
@@ -1133,30 +1133,30 @@
    "icono": "flor",
    "roto": true,
    "n": 5,
-   "hasta": 120.31
+   "hasta": 116.61
   },
   {
    "tipo": "tarjeta",
-   "desde": 107.5,
+   "desde": 105.17,
    "iso": "us",
    "nombre": "Estados Unidos",
    "estado": "LLORA",
    "dato": "2 DE CADA 3",
    "texto": "flores que importa Estados Unidos vienen de Colombia.",
    "fuente": "Asocolflores",
-   "hasta": 120.31
+   "hasta": 116.61
   },
   {
    "tipo": "cinta",
-   "desde": 116.05,
+   "desde": 112.56,
    "pais": "USA",
    "texto": "SAN VALENTÍN EN PELIGRO",
    "icono": "flor",
-   "hasta": 119.25
+   "hasta": 115.76
   },
   {
    "tipo": "flujo",
-   "desde": 120.31,
+   "desde": 116.61,
    "de": [
     -79.5,
     -1.5
@@ -1168,29 +1168,29 @@
    "icono": "camaron",
    "roto": true,
    "n": 4,
-   "hasta": 129.86
+   "hasta": 126.0
   },
   {
    "tipo": "cinta",
-   "desde": 121.27,
+   "desde": 117.52,
    "pais": "USA",
    "texto": "ADIÓS AL CAMARÓN",
    "icono": "camaron",
-   "hasta": 129.86
+   "hasta": 126.0
   },
   {
    "tipo": "cifra",
-   "desde": 134.76,
+   "desde": 131.22,
    "texto": "68 MILLONES",
    "tam": 120,
    "sub": "de hispanos en EE. UU. · 1 de cada 5",
    "fuente": "Oficina del Censo de EE. UU., 2024",
    "y": 300,
-   "hasta": 139.73
+   "hasta": 136.51
   },
   {
    "tipo": "iconos",
-   "desde": 143.11,
+   "desde": 140.11,
    "y": 330,
    "paso": 0.9,
    "items": [
@@ -1207,118 +1207,118 @@
      "texto": "VOLVER"
     }
    ],
-   "hasta": 151.7
+   "hasta": 149.54
   },
   {
    "tipo": "globo",
-   "desde": 153.49,
+   "desde": 151.33,
    "pais": "CAN",
    "texto": "¿El T-MEC… sin la M?",
-   "hasta": 157.49
+   "hasta": 155.33
   },
   {
    "tipo": "cinta",
-   "desde": 158.59,
+   "desde": 156.43,
    "pais": "CAN",
    "texto": "EL T-MEC SE QUEDA COJO",
    "icono": "alerta",
    "color": "#e0672a",
-   "hasta": 161.4
+   "hasta": 159.5
   },
   {
    "tipo": "lista",
-   "desde": 158.59,
+   "desde": 156.43,
    "iso": "ca",
    "nombre": "Canadá",
    "estado": "LE AFECTA"
   },
   {
    "tipo": "resaltar",
-   "desde": 164.23,
+   "desde": 162.46,
    "pais": "BLZ",
-   "hasta": 174.64
+   "hasta": 173.14
   },
   {
    "tipo": "cinta",
-   "desde": 168.37,
+   "desde": 166.79,
    "pais": "BLZ",
    "texto": "BELICE AHORA ES UNA ISLA",
    "icono": "alerta",
    "dy": 40,
-   "hasta": 174.64
+   "hasta": 173.14
   },
   {
    "tipo": "lista",
-   "desde": 169.17,
+   "desde": 167.59,
    "iso": "bz",
    "nombre": "Belice",
    "estado": "LE AFECTA"
   },
   {
    "tipo": "globo",
-   "desde": 169.95,
+   "desde": 168.45,
    "pais": "BLZ",
    "texto": "¿Qué acaba de pasar?",
-   "hasta": 174.64
+   "hasta": 173.14
   },
   {
    "tipo": "region",
-   "desde": 175.09,
+   "desde": 173.59,
    "texto": "EL CARIBE",
-   "hasta": 201.24
+   "hasta": 200.12
   },
   {
    "tipo": "nombre",
-   "desde": 176.4,
+   "desde": 174.99,
    "texto": "CUBA",
    "lon": -79,
    "lat": 21.8,
    "fantasma": true,
-   "hasta": 179.9
+   "hasta": 178.49
   },
   {
    "tipo": "nombre",
-   "desde": 177.57,
+   "desde": 176.24,
    "texto": "REP. DOMINICANA",
    "lon": -70.3,
    "lat": 19.4,
    "fantasma": true,
-   "hasta": 181.07
+   "hasta": 179.74
   },
   {
    "tipo": "resaltar",
-   "desde": 183.29,
+   "desde": 182.35,
    "pais": "HTI",
-   "hasta": 190.31
+   "hasta": 190.06
   },
   {
    "tipo": "cinta",
-   "desde": 187.16,
+   "desde": 186.46,
    "pais": "HTI",
    "texto": "MEDIA ISLA, CERO VECINOS",
    "icono": "alerta",
    "dy": 30,
-   "hasta": 190.31
+   "hasta": 190.06
   },
   {
    "tipo": "lista",
-   "desde": 187.16,
+   "desde": 186.46,
    "iso": "ht",
    "nombre": "Haití",
    "estado": "LE AFECTA"
   },
   {
    "tipo": "nombre",
-   "desde": 190.31,
+   "desde": 190.06,
    "texto": "PUERTO RICO",
    "lon": -66.5,
    "lat": 18.2,
    "fantasma": true,
-   "hasta": 201.24
+   "hasta": 200.12
   },
   {
    "tipo": "iconos",
-   "desde": 196.72,
+   "desde": 195.75,
    "y": 330,
    "items": [
     {
@@ -1327,110 +1327,110 @@
      "tachado": true
     }
    ],
-   "hasta": 201.24
+   "hasta": 200.12
   },
   {
    "tipo": "region",
-   "desde": 201.24,
+   "desde": 200.12,
    "texto": "CENTROAMÉRICA",
-   "hasta": 241.73
+   "hasta": 242.48
   },
   {
    "tipo": "nombre",
-   "desde": 203.04,
+   "desde": 201.86,
    "texto": "GUATEMALA",
    "lon": -90.3,
    "lat": 15.6,
    "fantasma": true,
    "tam": 24,
-   "hasta": 209.09
+   "hasta": 208.05
   },
   {
    "tipo": "nombre",
-   "desde": 203.8,
+   "desde": 202.6,
    "texto": "HONDURAS",
    "lon": -86.6,
    "lat": 14.8,
    "fantasma": true,
    "tam": 24,
-   "hasta": 209.09
+   "hasta": 208.05
   },
   {
    "tipo": "nombre",
-   "desde": 204.49,
+   "desde": 203.27,
    "texto": "EL SALVADOR",
    "lon": -88.9,
    "lat": 13.7,
    "fantasma": true,
    "tam": 24,
-   "hasta": 209.09
+   "hasta": 208.05
   },
   {
    "tipo": "nombre",
-   "desde": 205.38,
+   "desde": 204.14,
    "texto": "NICARAGUA",
    "lon": -85.2,
    "lat": 12.8,
    "fantasma": true,
    "tam": 24,
-   "hasta": 209.09
+   "hasta": 208.05
   },
   {
    "tipo": "nombre",
-   "desde": 206.14,
+   "desde": 204.88,
    "texto": "COSTA RICA",
    "lon": -84.1,
    "lat": 9.9,
    "fantasma": true,
    "tam": 24,
-   "hasta": 209.09
+   "hasta": 208.05
   },
   {
    "tipo": "nombre",
-   "desde": 207.04,
+   "desde": 205.75,
    "texto": "PANAMÁ",
    "lon": -80.1,
    "lat": 8.6,
    "fantasma": true,
    "tam": 24,
-   "hasta": 209.09
+   "hasta": 208.05
   },
   {
    "tipo": "cinta",
-   "desde": 207.59,
+   "desde": 206.29,
    "x": 960,
    "y": 200,
    "texto": "TODO ES AGUA",
    "icono": "alerta",
-   "hasta": 209.59
+   "hasta": 208.55
   },
   {
    "tipo": "titulo",
-   "desde": 214.4,
+   "desde": 213.42,
    "texto": "*ATLÁNTICO* + *PACÍFICO*",
    "tam": 80,
    "y": 210,
-   "hasta": 218.74
+   "hasta": 217.81
   },
   {
    "tipo": "pin",
-   "desde": 218.74,
+   "desde": 217.81,
    "lon": -79.7,
    "lat": 9.1,
    "texto": "AQUÍ ESTABA EL CANAL",
-   "hasta": 229.41
+   "hasta": 228.81
   },
   {
    "tipo": "sello",
-   "desde": 223.71,
+   "desde": 222.83,
    "x": 1350,
    "y": 320,
    "texto": "YA NO HACE FALTA",
-   "hasta": 229.41
+   "hasta": 228.81
   },
   {
    "tipo": "flujo",
-   "desde": 224.95,
+   "desde": 224.09,
    "de": [
     -70,
     15
@@ -1441,253 +1441,253 @@
    ],
    "icono": "barco",
    "n": 4,
-   "hasta": 240.91
+   "hasta": 241.19
   },
   {
    "tipo": "cinta",
-   "desde": 233.89,
+   "desde": 233.69,
    "x": 960,
    "y": 860,
    "texto": "PERO NO HAY PUERTOS",
    "icono": "barco",
    "color": "#e0672a",
-   "hasta": 241.73
+   "hasta": 242.48
   },
   {
    "tipo": "region",
-   "desde": 241.73,
+   "desde": 242.48,
    "texto": "EL CARIBE QUE QUEDA",
-   "hasta": 255.15
+   "hasta": 258.25
   },
   {
    "tipo": "nombre",
-   "desde": 245.87,
+   "desde": 247.31,
    "texto": "JAMAICA",
    "lon": -77.3,
    "lat": 19.200000000000003,
    "tam": 22,
-   "hasta": 255.15
+   "hasta": 258.25
   },
   {
    "tipo": "nombre",
-   "desde": 246.49,
+   "desde": 248.03,
    "texto": "BAHAMAS",
    "lon": -77.4,
    "lat": 25.400000000000002,
    "tam": 22,
-   "hasta": 255.15
+   "hasta": 258.25
   },
   {
    "tipo": "nombre",
-   "desde": 247.11,
+   "desde": 248.76,
    "texto": "TRINIDAD Y TOBAGO",
    "lon": -61.3,
    "lat": 11.7,
    "tam": 22,
-   "hasta": 255.15
+   "hasta": 258.25
   },
   {
    "tipo": "nombre",
-   "desde": 248.42,
+   "desde": 250.29,
    "texto": "ARUBA",
    "lon": -70,
    "lat": 13.6,
    "tam": 22,
-   "hasta": 255.15
+   "hasta": 258.25
   },
   {
    "tipo": "nombre",
-   "desde": 248.9,
+   "desde": 250.85,
    "texto": "CURAZAO",
    "lon": -69,
    "lat": 13.299999999999999,
    "tam": 22,
-   "hasta": 255.15
+   "hasta": 258.25
   },
   {
    "tipo": "titulo",
-   "desde": 261.7,
+   "desde": 265.05,
    "texto": "UN *HUECO* GIGANTE",
    "tam": 86,
    "y": 200,
-   "hasta": 265.56
+   "hasta": 268.84
   },
   {
    "tipo": "region",
-   "desde": 266.01,
+   "desde": 269.29,
    "texto": "SUDAMÉRICA",
-   "hasta": 362.0
+   "hasta": 364.9
   },
   {
    "tipo": "cifra",
-   "desde": 269.59,
+   "desde": 272.93,
    "texto": "10 VECINOS",
    "tam": 110,
    "sub": "7 hablan español",
    "y": 260,
-   "hasta": 275.23
+   "hasta": 278.89
   },
   {
    "tipo": "cifra",
-   "desde": 275.23,
+   "desde": 278.89,
    "texto": "3 VECINOS",
    "tam": 110,
    "color": "#ff6b5e",
    "y": 260,
-   "hasta": 289.13
+   "hasta": 292.99
   },
   {
    "tipo": "resaltar",
-   "desde": 278.4,
+   "desde": 282.04,
    "pais": "GUY",
-   "hasta": 289.13
+   "hasta": 292.99
   },
   {
    "tipo": "nombre",
-   "desde": 278.4,
+   "desde": 282.04,
    "texto": "GUYANA",
    "lon": -58.9,
    "lat": 6.800000000000001,
    "tam": 22,
-   "hasta": 289.13
+   "hasta": 292.99
   },
   {
    "tipo": "resaltar",
-   "desde": 278.95,
+   "desde": 282.59,
    "pais": "SUR",
-   "hasta": 289.13
+   "hasta": 292.99
   },
   {
    "tipo": "nombre",
-   "desde": 278.95,
+   "desde": 282.59,
    "texto": "SURINAM",
    "lon": -55.9,
    "lat": 5.9,
    "tam": 22,
-   "hasta": 289.13
+   "hasta": 292.99
   },
   {
    "tipo": "resaltar",
-   "desde": 279.71,
+   "desde": 283.35,
    "pais": "FRA",
-   "hasta": 289.13
+   "hasta": 292.99
   },
   {
    "tipo": "nombre",
-   "desde": 279.71,
+   "desde": 283.35,
    "texto": "GUAYANA FRANCESA",
    "lon": -53.1,
    "lat": 5.2,
    "tam": 22,
-   "hasta": 289.13
+   "hasta": 292.99
   },
   {
    "tipo": "globo",
-   "desde": 285.16,
+   "desde": 288.76,
    "pais": "BRA",
    "texto": "¿Bonjour…?",
    "dy": -20,
-   "hasta": 289.63
+   "hasta": 293.49
   },
   {
    "tipo": "cinta",
-   "desde": 291.54,
+   "desde": 295.48,
    "pais": "BRA",
    "texto": "¡AHORA TENGO PACÍFICO!",
    "icono": "barco",
    "color": "#2e9e5b",
    "dx": -120,
-   "hasta": 298.14
+   "hasta": 302.54
   },
   {
    "tipo": "nombre",
-   "desde": 293.54,
+   "desde": 297.54,
    "texto": "AQUÍ ESTABAN PERÚ Y BOLIVIA",
    "lon": -72,
    "lat": -13,
    "fantasma": true,
-   "hasta": 298.14
+   "hasta": 302.54
   },
   {
    "tipo": "nombre",
-   "desde": 301.94,
+   "desde": 306.31,
    "texto": "AQUÍ ESTABAN LOS ANDES",
    "lon": -71,
    "lat": -25,
    "fantasma": true,
-   "hasta": 313.94
+   "hasta": 318.26
   },
   {
    "tipo": "cifra",
-   "desde": 308.97,
+   "desde": 313.31,
    "texto": "6.961 m",
    "tam": 120,
    "sub": "Aconcagua: ya no existe",
    "y": 280,
-   "hasta": 313.94
+   "hasta": 318.26
   },
   {
    "tipo": "pin",
-   "desde": 315.14,
+   "desde": 319.46,
    "lon": -151.0,
    "lat": 63.07,
    "texto": "DENALI · 6.190 m",
-   "hasta": 318.6
+   "hasta": 323.19
   },
   {
    "tipo": "cinta",
-   "desde": 315.74,
+   "desde": 320.06,
    "x": 960,
    "y": 230,
    "texto": "NUEVO TECHO DE AMÉRICA",
    "icono": "alerta",
    "color": "#2e9e5b",
-   "hasta": 318.6
+   "hasta": 323.19
   },
   {
    "tipo": "nombre",
-   "desde": 319.6,
+   "desde": 324.19,
    "texto": "GALÁPAGOS",
    "lon": -90.5,
    "lat": -0.6,
    "fantasma": true,
-   "hasta": 327.43
+   "hasta": 331.19
   },
   {
    "tipo": "nombre",
-   "desde": 324.05,
+   "desde": 328.13,
    "texto": "ATACAMA",
    "lon": -69.5,
    "lat": -24,
    "fantasma": true,
-   "hasta": 327.43
+   "hasta": 331.19
   },
   {
    "tipo": "nombre",
-   "desde": 326.46,
+   "desde": 330.31,
    "texto": "PATAGONIA",
    "lon": -69,
    "lat": -45,
    "fantasma": true,
-   "hasta": 327.43
+   "hasta": 331.19
   },
   {
    "tipo": "resaltar",
-   "desde": 327.43,
+   "desde": 331.19,
    "pais": "FLK",
-   "hasta": 334.99
+   "hasta": 338.47
   },
   {
    "tipo": "cinta",
-   "desde": 331.08,
+   "desde": 334.5,
    "pais": "FLK",
    "texto": "SOLAS EN EL ATLÁNTICO",
    "icono": "alerta",
-   "hasta": 334.99
+   "hasta": 338.47
   },
   {
    "tipo": "iconos",
-   "desde": 334.99,
+   "desde": 338.47,
    "y": 330,
    "items": [
     {
@@ -1704,49 +1704,49 @@
     }
    ],
    "gap": 300,
-   "hasta": 343.54
+   "hasta": 347.2
   },
   {
    "tipo": "cifra",
-   "desde": 341.41,
+   "desde": 345.01,
    "texto": "6 COPAS DEL MUNDO",
    "tam": 96,
    "sub": "desaparecen de golpe",
    "fuente": "FIFA",
    "y": 640,
-   "hasta": 348.56
+   "hasta": 352.58
   },
   {
    "tipo": "lista",
-   "desde": 348.56,
+   "desde": 352.58,
    "iso": "br",
    "nombre": "Brasil",
    "estado": "LLORA"
   },
   {
    "tipo": "globo",
-   "desde": 350.49,
+   "desde": 354.37,
    "pais": "BRA",
    "texto": "¿Alguien quiere jugar?",
-   "hasta": 362.0
+   "hasta": 364.9
   },
   {
    "tipo": "region",
-   "desde": 362.45,
+   "desde": 365.35,
    "texto": "EL MUNDO",
-   "hasta": 451.68
+   "hasta": 453.38
   },
   {
    "tipo": "titulo",
-   "desde": 362.65,
+   "desde": 365.55,
    "texto": "LO QUE EL MUNDO\n*DEJA DE RECIBIR*",
    "tam": 86,
    "y": 220,
-   "hasta": 368.43
+   "hasta": 371.53
   },
   {
    "tipo": "iconos",
-   "desde": 372.15,
+   "desde": 375.15,
    "y": 300,
    "items": [
     {
@@ -1754,11 +1754,11 @@
      "texto": "COBRE"
     }
    ],
-   "hasta": 377.26
+   "hasta": 380.1
   },
   {
    "tipo": "flujo",
-   "desde": 377.26,
+   "desde": 380.1,
    "de": [
     -70,
     -25
@@ -1770,31 +1770,31 @@
    "icono": "cobre",
    "roto": true,
    "n": 5,
-   "hasta": 389.86
+   "hasta": 392.82
   },
   {
    "tipo": "tarjeta",
-   "desde": 377.26,
+   "desde": 380.1,
    "iso": "cl",
    "nombre": "Chile + Perú",
    "estado": "YA NO EXISTE",
    "dato": "MÁS DE 1 DE CADA 3",
    "texto": "toneladas de cobre que se extraen en el planeta.",
    "fuente": "USGS, Mineral Commodity Summaries 2026",
-   "hasta": 389.86
+   "hasta": 392.82
   },
   {
    "tipo": "nombre",
-   "desde": 389.86,
+   "desde": 392.82,
    "texto": "TRIÁNGULO DEL LITIO",
    "lon": -66,
    "lat": -23,
    "fantasma": true,
-   "hasta": 403.7
+   "hasta": 407.27
   },
   {
    "tipo": "iconos",
-   "desde": 394.27,
+   "desde": 397.3,
    "y": 300,
    "items": [
     {
@@ -1802,33 +1802,33 @@
      "texto": "LITIO"
     }
    ],
-   "hasta": 403.7
+   "hasta": 407.27
   },
   {
    "tipo": "tarjeta",
-   "desde": 396.48,
+   "desde": 399.54,
    "iso": "ar",
    "nombre": "Argentina, Bolivia y Chile",
    "estado": "YA NO EXISTE",
    "dato": "MÁS DEL 50 %",
    "texto": "de los recursos de litio conocidos del mundo.",
    "fuente": "USGS",
-   "hasta": 403.7
+   "hasta": 407.27
   },
   {
    "tipo": "tarjeta",
-   "desde": 403.7,
+   "desde": 407.27,
    "iso": "mx",
    "nombre": "México",
    "estado": "YA NO EXISTE",
    "dato": "1 DE CADA 5",
    "texto": "onzas de plata que se sacan de la tierra.",
    "fuente": "World Silver Survey 2026",
-   "hasta": 412.01
+   "hasta": 414.4
   },
   {
    "tipo": "iconos",
-   "desde": 403.7,
+   "desde": 407.27,
    "y": 300,
    "items": [
     {
@@ -1836,11 +1836,11 @@
      "texto": "PLATA"
     }
    ],
-   "hasta": 412.01
+   "hasta": 414.4
   },
   {
    "tipo": "flujo",
-   "desde": 412.91,
+   "desde": 415.21,
    "de": [
     -79,
     -1.5
@@ -1852,22 +1852,22 @@
    "icono": "platano",
    "roto": true,
    "n": 5,
-   "hasta": 430.96
+   "hasta": 432.25
   },
   {
    "tipo": "tarjeta",
-   "desde": 412.91,
+   "desde": 415.21,
    "iso": "ec",
    "nombre": "Ecuador",
    "estado": "YA NO EXISTE",
    "dato": "CERCA DE 1 DE CADA 3",
    "texto": "bananos que se exportan en el mundo.",
    "fuente": "FAO",
-   "hasta": 418.22
+   "hasta": 419.97
   },
   {
    "tipo": "iconos",
-   "desde": 418.22,
+   "desde": 419.97,
    "y": 300,
    "paso": 0.3,
    "items": [
@@ -1888,22 +1888,22 @@
      "texto": "GUATEMALA"
     }
    ],
-   "hasta": 423.88
+   "hasta": 425.03
   },
   {
    "tipo": "tarjeta",
-   "desde": 423.88,
+   "desde": 425.03,
    "iso": "es",
    "nombre": "España",
    "estado": "YA NO EXISTE",
    "dato": "45 %",
    "texto": "de todo el aceite de oliva del planeta.",
    "fuente": "Ministerio de Agricultura de España",
-   "hasta": 430.96
+   "hasta": 432.25
   },
   {
    "tipo": "iconos",
-   "desde": 423.88,
+   "desde": 425.03,
    "y": 300,
    "items": [
     {
@@ -1911,35 +1911,35 @@
      "texto": "ACEITE DE OLIVA"
     }
    ],
-   "hasta": 430.96
+   "hasta": 432.25
   },
   {
    "tipo": "globo",
-   "desde": 432.48,
+   "desde": 433.8,
    "pais": "CHN",
    "texto": "¿Y mi cobre?",
-   "hasta": 439.17
+   "hasta": 440.64
   },
   {
    "tipo": "lista",
-   "desde": 433.48,
+   "desde": 434.8,
    "iso": "cn",
    "nombre": "China",
    "estado": "LLORA"
   },
   {
    "tipo": "cinta",
-   "desde": 439.17,
+   "desde": 440.64,
    "x": 960,
    "y": 230,
    "texto": "SIN BANANO EN EL DESAYUNO",
    "icono": "platano",
    "color": "#e0672a",
-   "hasta": 446.93
+   "hasta": 448.97
   },
   {
    "tipo": "iconos",
-   "desde": 442.41,
+   "desde": 443.96,
    "y": 560,
    "items": [
     {
@@ -1948,127 +1948,127 @@
      "tachado": true
     }
    ],
-   "hasta": 446.93
+   "hasta": 448.97
   },
   {
    "tipo": "titulo",
-   "desde": 450.38,
+   "desde": 452.31,
    "texto": "TODO *CUESTA MÁS*",
    "tam": 96,
    "y": 300,
-   "hasta": 451.68
+   "hasta": 453.38
   },
   {
    "tipo": "region",
-   "desde": 452.13,
+   "desde": 453.83,
    "texto": "EUROPA",
-   "hasta": 494.55
+   "hasta": 496.24
   },
   {
    "tipo": "nombre",
-   "desde": 455.86,
+   "desde": 457.55,
    "texto": "CANARIAS",
    "lon": -15.6,
    "lat": 28.3,
    "fantasma": true,
    "tam": 22,
-   "hasta": 459.63
+   "hasta": 461.32
   },
   {
    "tipo": "nombre",
-   "desde": 457.24,
+   "desde": 458.93,
    "texto": "BALEARES",
    "lon": 2.9,
    "lat": 39.6,
    "fantasma": true,
    "tam": 22,
-   "hasta": 459.63
+   "hasta": 461.32
   },
   {
    "tipo": "nombre",
-   "desde": 457.93,
+   "desde": 459.62,
    "texto": "CEUTA",
    "lon": -5.3,
    "lat": 36.8,
    "fantasma": true,
    "tam": 22,
-   "hasta": 459.63
+   "hasta": 461.32
   },
   {
    "tipo": "nombre",
-   "desde": 458.48,
+   "desde": 460.17,
    "texto": "MELILLA",
    "lon": -2.9,
    "lat": 35.3,
    "fantasma": true,
    "tam": 22,
-   "hasta": 459.63
+   "hasta": 461.32
   },
   {
    "tipo": "resaltar",
-   "desde": 459.63,
+   "desde": 461.32,
    "pais": "PRT",
-   "hasta": 465.35
+   "hasta": 467.05
   },
   {
    "tipo": "cinta",
-   "desde": 463.56,
+   "desde": 465.26,
    "pais": "PRT",
    "texto": "PORTUGAL AHORA ES UNA ISLA",
    "icono": "alerta",
    "dx": 60,
-   "hasta": 465.85
+   "hasta": 467.55
   },
   {
    "tipo": "lista",
-   "desde": 464.56,
+   "desde": 466.26,
    "iso": "pt",
    "nombre": "Portugal",
    "estado": "LLORA"
   },
   {
    "tipo": "resaltar",
-   "desde": 465.35,
+   "desde": 467.05,
    "pais": "AND",
-   "hasta": 468.94
+   "hasta": 470.63
   },
   {
    "tipo": "nombre",
-   "desde": 467.35,
+   "desde": 469.05,
    "texto": "ANDORRA: ¡PLAYA!",
    "lon": 1.55,
    "lat": 42.15,
    "tam": 26,
-   "hasta": 472.11
+   "hasta": 473.81
   },
   {
    "tipo": "lista",
-   "desde": 468.94,
+   "desde": 470.63,
    "iso": "fr",
    "nombre": "Francia",
    "estado": "LE AFECTA"
   },
   {
    "tipo": "pin",
-   "desde": 472.11,
+   "desde": 473.81,
    "lon": -5.35,
    "lat": 36.14,
    "texto": "GIBRALTAR",
-   "hasta": 479.39
+   "hasta": 481.09
   },
   {
    "tipo": "cifra",
-   "desde": 484.02,
+   "desde": 485.71,
    "texto": "97 MILLONES",
    "tam": 120,
    "sub": "de turistas extranjeros en 2025",
    "fuente": "INE · Frontur",
    "y": 270,
-   "hasta": 494.55
+   "hasta": 496.24
   },
   {
    "tipo": "flujo",
-   "desde": 489.6,
+   "desde": 491.3,
    "de": [
     -4,
     40
@@ -2079,11 +2079,11 @@
    ],
    "icono": "avion",
    "n": 3,
-   "hasta": 494.55
+   "hasta": 496.24
   },
   {
    "tipo": "flujo",
-   "desde": 492.5,
+   "desde": 494.19,
    "de": [
     -4,
     40
@@ -2094,46 +2094,46 @@
    ],
    "icono": "avion",
    "n": 3,
-   "hasta": 494.55
+   "hasta": 496.24
   },
   {
    "tipo": "region",
-   "desde": 494.55,
+   "desde": 496.24,
    "texto": "ÁFRICA",
-   "hasta": 508.17
+   "hasta": 509.86
   },
   {
    "tipo": "nombre",
-   "desde": 495.99,
+   "desde": 497.69,
    "texto": "AQUÍ ESTABA GUINEA ECUATORIAL",
    "lon": 10.3,
    "lat": 1.6,
    "fantasma": true,
    "tam": 22,
-   "hasta": 508.17
+   "hasta": 509.86
   },
   {
    "tipo": "resaltar",
-   "desde": 501.37,
+   "desde": 503.07,
    "pais": "GAB",
-   "hasta": 508.17
+   "hasta": 509.86
   },
   {
    "tipo": "resaltar",
-   "desde": 501.37,
+   "desde": 503.07,
    "pais": "CMR",
-   "hasta": 508.17
+   "hasta": 509.86
   },
   {
    "tipo": "lista",
-   "desde": 505.44,
+   "desde": 507.14,
    "iso": "ga",
    "nombre": "Gabón",
    "estado": "NI LO NOTA"
   },
   {
    "tipo": "iconos",
-   "desde": 508.17,
+   "desde": 509.86,
    "y": 360,
    "paso": 0.45,
    "items": [
@@ -2159,158 +2159,158 @@
     }
    ],
    "gap": 250,
-   "hasta": 521.93
+   "hasta": 523.62
   },
   {
    "tipo": "titulo",
-   "desde": 521.93,
+   "desde": 523.62,
    "texto": "EL GIRO:\n¿Y EL *IDIOMA*?",
    "tam": 100,
    "y": 320,
-   "hasta": 525.42
+   "hasta": 527.12
   },
   {
    "tipo": "cifra",
-   "desde": 525.42,
+   "desde": 527.12,
    "texto": "520 MILLONES",
    "tam": 120,
    "sub": "de hablantes nativos de español",
    "fuente": "Instituto Cervantes, 2025",
    "y": 300,
-   "hasta": 537.97
+   "hasta": 539.67
   },
   {
    "tipo": "cifra",
-   "desde": 537.97,
+   "desde": 539.67,
    "texto": "9 DE CADA 10",
    "tam": 130,
    "color": "#ff6b5e",
    "sub": "desaparecen con sus países",
    "y": 300,
-   "hasta": 543.75
+   "hasta": 545.44
   },
   {
    "tipo": "cifra",
-   "desde": 546.71,
+   "desde": 548.41,
    "texto": "45 MILLONES",
    "tam": 120,
    "sub": "hablan español en casa en EE. UU.",
    "fuente": "Oficina del Censo, 2024",
    "y": 260,
-   "hasta": 558.62
+   "hasta": 560.32
   },
   {
    "tipo": "cinta",
-   "desde": 556.51,
+   "desde": 558.2,
    "pais": "USA",
    "texto": "EL NUEVO HOGAR DEL ESPAÑOL",
    "icono": "libro",
    "color": "#2e9e5b",
-   "hasta": 570.96
+   "hasta": 572.66
   },
   {
    "tipo": "pin",
-   "desde": 558.62,
+   "desde": 560.32,
    "lon": -80.19,
    "lat": 25.76,
    "texto": "MIAMI",
    "color": "#ffd23f",
-   "hasta": 570.96
+   "hasta": 572.66
   },
   {
    "tipo": "pin",
-   "desde": 559.11,
+   "desde": 560.8,
    "lon": -118.24,
    "lat": 34.05,
    "texto": "LOS ÁNGELES",
    "color": "#ffd23f",
-   "hasta": 570.96
+   "hasta": 572.66
   },
   {
    "tipo": "pin",
-   "desde": 560.0,
+   "desde": 561.7,
    "lon": -95.37,
    "lat": 29.76,
    "texto": "HOUSTON",
    "color": "#ffd23f",
-   "hasta": 570.96
+   "hasta": 572.66
   },
   {
    "tipo": "pin",
-   "desde": 560.69,
+   "desde": 562.39,
    "lon": -74.0,
    "lat": 40.71,
    "texto": "NUEVA YORK",
    "color": "#ffd23f",
-   "hasta": 570.96
+   "hasta": 572.66
   },
   {
    "tipo": "region",
-   "desde": 571.41,
+   "desde": 573.11,
    "texto": "EL VEREDICTO",
-   "hasta": 630.11
+   "hasta": 631.81
   },
   {
    "tipo": "titulo",
-   "desde": 571.61,
+   "desde": 573.31,
    "texto": "¿QUIÉN LLORA Y\nQUIÉN *NI SE ENTERA*?",
    "tam": 88,
    "y": 240,
-   "hasta": 575.04
+   "hasta": 576.74
   },
   {
    "tipo": "nombre",
-   "desde": 575.04,
+   "desde": 576.74,
    "texto": "LLORAN",
    "lon": -98,
    "lat": 50,
    "fondo": "#4ea3ff",
    "borde": "#ffffff",
    "tam": 34,
-   "hasta": 587.09
+   "hasta": 588.79
   },
   {
    "tipo": "nombre",
-   "desde": 587.09,
+   "desde": 588.79,
    "texto": "LES AFECTA",
    "lon": 2,
    "lat": 55,
    "fondo": "#e0a400",
    "borde": "#ffffff",
    "tam": 34,
-   "hasta": 593.14
+   "hasta": 594.84
   },
   {
    "tipo": "lista",
-   "desde": 594.93,
+   "desde": 596.63,
    "iso": "mn",
    "nombre": "Mongolia",
    "estado": "NI LO NOTA"
   },
   {
    "tipo": "lista",
-   "desde": 595.62,
+   "desde": 597.32,
    "iso": "np",
    "nombre": "Nepal",
    "estado": "NI LO NOTA"
   },
   {
    "tipo": "lista",
-   "desde": 596.18,
+   "desde": 597.87,
    "iso": "kz",
    "nombre": "Kazajistán",
    "estado": "NI LO NOTA"
   },
   {
    "tipo": "globo",
-   "desde": 597.0,
+   "desde": 598.7,
    "pais": "MNG",
    "texto": "¿Pasó algo?",
-   "hasta": 600.01
+   "hasta": 601.71
   },
   {
    "tipo": "iconos",
-   "desde": 604.7,
+   "desde": 606.4,
    "y": 420,
    "paso": 0.4,
    "gap": 220,
@@ -2336,24 +2336,25 @@
      "texto": "IDIOMA"
     }
    ],
-   "hasta": 613.71
+   "hasta": 615.4
   },
   {
    "tipo": "pregunta",
-   "desde": 613.71,
+   "desde": 615.4,
    "texto": "¿QUÉ EXTRAÑARÍA EL MUNDO DE TU PAÍS?",
    "y": 470,
-   "hasta": 633.11
+   "hasta": 634.81
   },
   {
    "tipo": "cinta",
-   "desde": 626.19,
+   "desde": 627.88,
    "x": 960,
    "y": 640,
    "texto": "EL PRÓXIMO PAÍS LO ELIGES TÚ",
    "icono": "globo",
    "color": "#2e9e5b",
-   "hasta": 633.11
+   "hasta": 634.81
   }
- ]
+ ],
+ "audio": ".tmp/voz.wav"
 }

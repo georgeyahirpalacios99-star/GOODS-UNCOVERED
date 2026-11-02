@@ -77,12 +77,13 @@ function imagenes() {
     console.log('preview en ' + pd);
   } else {
     const pages = await Promise.all(Array.from({ length: HILOS }, nuevaPagina));
-    const out = path.join(dir, (spec.salida || 'demo') + '.mp4');
-    const ff = spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-', ...(spec.audio ? ['-i', path.resolve(dir, spec.audio)] : ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo']),
-      '-shortest', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', String(spec.crf || 22), '-maxrate', '14M', '-bufsize', '28M', '-preset', 'medium', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', out], { stdio: ['pipe', 'inherit', 'inherit'] });
-    const n = Math.round(dur * FPS), t0 = Date.now();
+    const desde = opt('--desde') ? Number(opt('--desde')) : 0, tramo = desde > 0 || hasta;
+    const out = path.join(dir, (spec.salida || 'demo') + (tramo ? `-tramo-${desde}-${dur}` : '') + '.mp4');
+    const ff = spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-', ...(tramo ? [] : spec.audio ? ['-i', path.resolve(dir, spec.audio)] : ['-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo']),
+      ...(tramo ? ['-an'] : ['-shortest']), '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', String(spec.crf || 22), '-maxrate', '14M', '-bufsize', '28M', '-preset', 'medium', ...(tramo ? [] : ['-c:a', 'aac', '-b:a', '128k']), '-movflags', '+faststart', out], { stdio: ['pipe', 'inherit', 'inherit'] });
+    const n = Math.round((dur - desde) * FPS), t0 = Date.now();
     for (let i = 0; i < n; i += HILOS) {
-      const bufs = await Promise.all(pages.map((p, k) => i + k < n ? grab(p, (i + k) / FPS) : null));
+      const bufs = await Promise.all(pages.map((p, k) => i + k < n ? grab(p, desde + (i + k) / FPS) : null));
       for (const b of bufs) if (b && !ff.stdin.write(b)) await new Promise(r => ff.stdin.once('drain', r));
       if (i % (FPS * 5) < HILOS) console.log(`  ${(i / FPS).toFixed(0)} / ${dur.toFixed(0)} s  (${((Date.now() - t0) / 1000).toFixed(0)} s)`);
     }

@@ -50,18 +50,31 @@ class Bloque:
             # ancla: final de cada segmento hablado = inicio del silencio que mejor encaja con lo esperado
             total_est = sum(est) + sum(p for _, p in self.segs)
             esc = self.dur / total_est
-            anclas, pos, usado = [], 0, -1
-            for i, ((s, p), e) in enumerate(zip(self.segs, est)):
-                pos += e
-                if i == len(self.segs) - 1: break
-                esperado = pos * esc
-                cand = [(abs(a - esperado), k) for k, (a, b) in enumerate(sil) if k > usado and (b - a) >= min(.25, p * .5)]
-                if cand:
-                    _, k = min(cand); usado = k; a, b = sil[k]
-                    anclas.append((a, b))
-                else:
-                    anclas.append((esperado, esperado + p * esc))
-                pos += self.segs[i][1]
+            # DP: elegir un silencio por cada pausa del guion para que cada tramo dure lo esperado según su texto
+            m, n = len(self.segs) - 1, len(sil)
+            PS = 0.6   # pausa típica entre oraciones dentro de un tramo
+            internas = [len(re.findall(r'[.?!…:](?=\s)', s_)) for s_, _ in self.segs]
+            habla = self.dur - sum(p_ for _, p_ in self.segs) - PS * sum(internas)
+            cps = sum(len(s_) for s_, _ in self.segs) / max(1, habla)
+            exp = [len(s_) / cps + PS * k for (s_, _), k in zip(self.segs, internas)]
+            def costo(i, a, b, kb=None):
+                d = b - a; e = exp[i]
+                return ((d - e) / (0.12 * e + 0.6)) ** 2 - (1.5 * (sil[kb][1] - sil[kb][0]) if kb is not None else 0)
+            INF = float('inf'); anclas = []
+            if m and n >= m:
+                dp = [[INF] * n for _ in range(m)]; ant = [[-1] * n for _ in range(m)]
+                for k in range(n): dp[0][k] = costo(0, 0, sil[k][0], k)
+                for i in range(1, m):
+                    for k in range(i, n):
+                        for k2 in range(i - 1, k):
+                            v = dp[i - 1][k2] + costo(i, sil[k2][1], sil[k][0], k)
+                            if v < dp[i][k]: dp[i][k], ant[i][k] = v, k2
+                k = min(range(n), key=lambda k: dp[m - 1][k] + costo(m, sil[k][1], self.dur)); idx = []
+                for i in range(m - 1, -1, -1): idx.append(k); k = ant[i][k]
+                anclas = [sil[k] for k in reversed(idx)]
+            elif m:
+                t_ = 0
+                for e_, (_, p_) in zip(exp, self.segs): t_ += e_; anclas.append((t_, t_ + p_)); t_ += p_
             self.tramos, t = [], 0.0
             for i, (s, _) in enumerate(self.segs):
                 fin = anclas[i][0] if i < len(anclas) else self.dur
@@ -370,7 +383,7 @@ for i in range(1, len(cam)):
 for k in caras.values(): k.sort()
 spec = dict(estilo='caricatura', salida='que-pasaria-sin-paises-hispanos', duracion=DUR, camara=cam, desaparece=DESAP, sacudidas=sacud,
             tam={'USA': 1.2, 'BRA': 1.2, 'BLZ': 1.4, 'HTI': 1.3, 'PRT': 1.3, 'CHN': 1.1, 'FLK': 1.3, 'AND': 1.6}, mirar=mirar, caras=caras, eventos=sorted(ev, key=lambda e: e['desde']))
-if all(b.audio for b in B):
+if any(b.audio for b in B):
     tmp = DIR / '.tmp'; tmp.mkdir(exist_ok=True)
     partes = []
     def silencio(seg, nombre):
@@ -378,12 +391,17 @@ if all(b.audio for b in B):
     t = 0.0
     for i, b in enumerate(B):
         partes.append(silencio(b.t0 - t, f's{i}.wav'))
-        f = tmp / f'v{i}.wav'; subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(b.audio), '-ar', '44100', '-ac', '1', '-c:a', 'pcm_s16le', str(f)], check=True); partes.append(f)
+        if b.audio:
+            f = tmp / f'v{i}.wav'; subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(b.audio), '-ar', '44100', '-ac', '1', '-c:a', 'pcm_s16le', str(f)], check=True)
+        else:
+            f = silencio(b.dur, f'v{i}.wav')
+        partes.append(f)
         t = b.t0 + duracion(f)
     partes.append(silencio(DUR - t, 'sfin.wav'))
     (tmp / 'lista.txt').write_text(''.join(f"file '{p}'\n" for p in partes))
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', str(tmp / 'lista.txt'), '-c:a', 'pcm_s16le', str(tmp / 'voz.wav')], check=True)
     spec['audio'] = '.tmp/voz.wav'
 (DIR / 'mapa.json').write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding='utf-8')
+print('bloques con voz:', [b.n for b in B if b.audio])
 print(f"{len(ev)} capas · {len(cam)} posiciones de cámara · {DUR / 60:.1f} min · voz: {'sí' if spec.get('audio') else 'no (tiempos estimados)'}")
 for b in B: print(f'  bloque {b.n}: {b.t0:7.1f} s  dura {b.dur:5.1f} s')

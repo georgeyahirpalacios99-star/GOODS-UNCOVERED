@@ -9,3 +9,4 @@ demos-mapa/*/preview/
 demos-mapa/*/*.mp4
 videos-largos/*/.tmp/
 videos-largos/*/miniaturas/*/preview/
+__pycache__/
