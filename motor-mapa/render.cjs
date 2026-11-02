@@ -79,7 +79,7 @@ function imagenes() {
     const pages = await Promise.all(Array.from({ length: HILOS }, nuevaPagina));
     const out = path.join(dir, (spec.salida || 'demo') + '.mp4');
     const ff = spawn('ffmpeg', ['-y', '-v', 'error', '-f', 'image2pipe', '-framerate', String(FPS), '-c:v', 'mjpeg', '-i', '-', '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo',
-      '-shortest', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '19', '-preset', 'medium', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', out], { stdio: ['pipe', 'inherit', 'inherit'] });
+      '-shortest', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', String(spec.crf || 22), '-maxrate', '14M', '-bufsize', '28M', '-preset', 'medium', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', out], { stdio: ['pipe', 'inherit', 'inherit'] });
     const n = Math.round(dur * FPS), t0 = Date.now();
     for (let i = 0; i < n; i += HILOS) {
       const bufs = await Promise.all(pages.map((p, k) => i + k < n ? grab(p, (i + k) / FPS) : null));
