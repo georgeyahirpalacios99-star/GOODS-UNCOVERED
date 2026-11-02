@@ -562,6 +562,9 @@ function tiendita(x, y, s, c) { ctx.save(); ctx.translate(x, y); ctx.scale(s, s)
 function capaPapel(alpha = .5) { ctx.save(); ctx.globalCompositeOperation = 'multiply'; const p = PAT.papel || (PAT.papel = ctx.createPattern(papel(), 'repeat')); p.setTransform(new DOMMatrix([900 / N, 0, 0, 900 / N, 0, 0])); ctx.fillStyle = p; ctx.globalAlpha = alpha; ctx.fillRect(-60, -60, W + 120, H + 120); ctx.restore();
   const vg = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * .4, W / 2, H / 2, Math.max(W, H) * .78); vg.addColorStop(0, 'rgba(60,40,20,0)'); vg.addColorStop(1, 'rgba(60,40,20,.34)'); ctx.fillStyle = vg; ctx.fillRect(-60, -60, W + 120, H + 120); }
 function fondo(sc, t) {
+  if (sc.img && IM[sc.img]) { const im = IM[sc.img], k = Math.max(W / im.width, H / im.height) * 1.06, q = eio(pr(t, sc.desde, sc.dur || 6)), [px, py] = sc.pan || [0, 0];
+    ctx.fillStyle = '#000'; ctx.fillRect(-60, -60, W + 120, H + 120); const w = im.width * k, h = im.height * k; ctx.drawImage(im, (W - w) / 2 + px * W * .025 * (q * 2 - 1), (H - h) / 2 + py * H * .025 * (q * 2 - 1), w, h);
+    const vg = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * .45, W / 2, H / 2, Math.max(W, H) * .8); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,.28)'); ctx.fillStyle = vg; ctx.fillRect(-60, -60, W + 120, H + 120); return; }
   if (sc.fondo === 'tienda') {
     ctx.fillStyle = sc.pared || '#86bfae'; ctx.fillRect(-60, -60, W + 120, H + 120); ctx.fillStyle = 'rgba(255,255,255,.08)'; for (let x = -60; x < W + 60; x += 90) ctx.fillRect(x, -60, 45, H);
     const piso = sc.piso ?? 840; ctx.fillStyle = '#c99a63'; ctx.fillRect(-60, piso, W + 120, H - piso + 60); ctx.strokeStyle = 'rgba(90,60,30,.35)'; ctx.lineWidth = 3;

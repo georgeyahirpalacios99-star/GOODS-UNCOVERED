@@ -64,7 +64,7 @@ function banderas(geo) {
 }
 function imagenes() {
   const out = {}, mime = { '.jpg': 'jpeg', '.jpeg': 'jpeg', '.png': 'png', '.webp': 'webp' };
-  for (const e of spec.eventos) if (e.img && !out[e.img]) { const f = path.join(dir, e.img); if (!fs.existsSync(f)) { console.warn('falta imagen ' + e.img); continue; } out[e.img] = `data:image/${mime[path.extname(f).toLowerCase()]};base64,` + fs.readFileSync(f).toString('base64'); }
+  for (const e of [...spec.eventos, ...(spec.escenas || [])]) if (e.img && !out[e.img]) { const f = path.join(dir, e.img); if (!fs.existsSync(f)) { console.warn('falta imagen ' + e.img); continue; } out[e.img] = `data:image/${mime[path.extname(f).toLowerCase()]};base64,` + fs.readFileSync(f).toString('base64'); }
   return out;
 }
 
