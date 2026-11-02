@@ -1,0 +1,412 @@
+{
+ "estilo": "caricatura",
+ "salida": "demo-B-caricatura",
+ "duracion": 39.5,
+ "camara": [
+  {
+   "t": 0,
+   "lon": -102,
+   "lat": 23.5,
+   "ancho": 36
+  },
+  {
+   "t": 3.2,
+   "lon": -101.5,
+   "lat": 23.8,
+   "ancho": 31,
+   "suave": false
+  },
+  {
+   "t": 4.8,
+   "lon": -99,
+   "lat": 30,
+   "ancho": 64
+  },
+  {
+   "t": 6.2,
+   "lon": -97,
+   "lat": 38,
+   "ancho": 54
+  },
+  {
+   "t": 13.0,
+   "lon": -96.5,
+   "lat": 38.3,
+   "ancho": 49,
+   "suave": false
+  },
+  {
+   "t": 19.2,
+   "lon": -96,
+   "lat": 38.6,
+   "ancho": 45,
+   "suave": false
+  },
+  {
+   "t": 20.8,
+   "lon": -98,
+   "lat": 57,
+   "ancho": 74
+  },
+  {
+   "t": 25.8,
+   "lon": -97,
+   "lat": 57,
+   "ancho": 68,
+   "suave": false
+  },
+  {
+   "t": 28.4,
+   "lon": -4,
+   "lat": 40.2,
+   "ancho": 26,
+   "arco": 1.1
+  },
+  {
+   "t": 34.6,
+   "lon": -3.6,
+   "lat": 40.2,
+   "ancho": 23,
+   "suave": false
+  },
+  {
+   "t": 36.4,
+   "lon": -45,
+   "lat": 30,
+   "ancho": 165
+  },
+  {
+   "t": 39.5,
+   "lon": -45,
+   "lat": 30,
+   "ancho": 155,
+   "suave": false
+  }
+ ],
+ "desaparece": [
+  {
+   "iso": "MEX",
+   "t": 3.3
+  }
+ ],
+ "sacudidas": [
+  {
+   "t": 3.3,
+   "dur": 0.6,
+   "fuerza": 14
+  }
+ ],
+ "tam": {
+  "MEX": 1.35,
+  "USA": 1.3,
+  "CAN": 1.1,
+  "ESP": 1.35
+ },
+ "mirar": [
+  {
+   "t": 0,
+   "lon": -102,
+   "lat": 23.5
+  }
+ ],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    3.45,
+    "shock"
+   ],
+   [
+    5.2,
+    "normal"
+   ]
+  ],
+  "MEX": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    3.3,
+    "shock"
+   ]
+  ],
+  "GTM": [
+   [
+    3.45,
+    "shock"
+   ]
+  ],
+  "USA": [
+   [
+    6.4,
+    "shock"
+   ],
+   [
+    7.6,
+    "llora"
+   ],
+   [
+    13.5,
+    "triste"
+   ],
+   [
+    14.6,
+    "llora"
+   ]
+  ],
+  "CAN": [
+   [
+    21.0,
+    "duda"
+   ],
+   [
+    24.2,
+    "triste"
+   ]
+  ],
+  "ESP": [
+   [
+    28.8,
+    "shock"
+   ],
+   [
+    29.6,
+    "llora"
+   ]
+  ],
+  "FRA": [
+   [
+    29.0,
+    "normal"
+   ]
+  ]
+ },
+ "eventos": [
+  {
+   "tipo": "titulo",
+   "texto": "¿QUÉ PASARÍA SI\n*MÉXICO* DESAPARECIERA?",
+   "desde": 0.3,
+   "hasta": 3.3,
+   "y": 190,
+   "tam": 92
+  },
+  {
+   "tipo": "titulo",
+   "texto": "*MÉXICO* YA NO EXISTE",
+   "desde": 4.0,
+   "hasta": 5.8,
+   "y": 880,
+   "tam": 80
+  },
+  {
+   "tipo": "region",
+   "texto": "NORTEAMÉRICA",
+   "desde": 5.8,
+   "hasta": 26.2
+  },
+  {
+   "tipo": "barra",
+   "desde": 5.8,
+   "hasta": 39.5
+  },
+  {
+   "tipo": "marcador",
+   "iso": "mx",
+   "texto": "MÉXICO",
+   "desde": 5.8,
+   "hasta": 39.5
+  },
+  {
+   "tipo": "flujo",
+   "de": [
+    -102,
+    23.5
+   ],
+   "a": [
+    -99,
+    33.5
+   ],
+   "icono": "aguacate",
+   "roto": true,
+   "n": 5,
+   "desde": 6.4,
+   "hasta": 13.0
+  },
+  {
+   "tipo": "globo",
+   "pais": "USA",
+   "texto": "¿Y ahora quién me manda aguacates?",
+   "desde": 7.0,
+   "hasta": 10.8
+  },
+  {
+   "tipo": "cinta",
+   "pais": "USA",
+   "texto": "SE QUEDA SIN AGUACATES",
+   "icono": "aguacate",
+   "desde": 7.6,
+   "hasta": 13.0
+  },
+  {
+   "tipo": "tarjeta",
+   "iso": "us",
+   "nombre": "Estados Unidos",
+   "estado": "LLORA",
+   "dato": "CASI 9 DE CADA 10",
+   "texto": "aguacates que importa Estados Unidos vienen de México.",
+   "fuente": "USDA",
+   "desde": 8.4,
+   "hasta": 13.0
+  },
+  {
+   "tipo": "lista",
+   "iso": "us",
+   "nombre": "Estados Unidos",
+   "estado": "LLORA",
+   "desde": 8.6
+  },
+  {
+   "tipo": "flujo",
+   "de": [
+    -99,
+    33.5
+   ],
+   "a": [
+    -102,
+    23.5
+   ],
+   "icono": "dolar",
+   "roto": true,
+   "n": 5,
+   "desde": 13.5,
+   "hasta": 19.2
+  },
+  {
+   "tipo": "globo",
+   "pais": "USA",
+   "texto": "¡Era mi primer socio comercial!",
+   "desde": 13.9,
+   "hasta": 17.4
+  },
+  {
+   "tipo": "cinta",
+   "pais": "USA",
+   "texto": "PIERDE A SU PRIMER SOCIO",
+   "icono": "dolar",
+   "anio": "2023",
+   "desde": 14.5,
+   "hasta": 19.2,
+   "color": "#e0672a"
+  },
+  {
+   "tipo": "tarjeta",
+   "iso": "us",
+   "nombre": "Estados Unidos",
+   "estado": "LLORA",
+   "dato": "Nº 1 EN 2023",
+   "texto": "México pasó a ser el primer socio comercial de Estados Unidos.",
+   "fuente": "Oficina del Censo de EE. UU.",
+   "desde": 15.1,
+   "hasta": 19.2
+  },
+  {
+   "tipo": "globo",
+   "pais": "CAN",
+   "texto": "¿El T-MEC… sin la M?",
+   "desde": 21.2,
+   "hasta": 24.8
+  },
+  {
+   "tipo": "cinta",
+   "pais": "CAN",
+   "texto": "EL T-MEC SE QUEDA COJO",
+   "icono": "alerta",
+   "desde": 21.8,
+   "hasta": 26.0,
+   "color": "#e0672a"
+  },
+  {
+   "tipo": "tarjeta",
+   "iso": "ca",
+   "nombre": "Canadá",
+   "estado": "LE AFECTA",
+   "dato": "DESDE 2020",
+   "texto": "el T-MEC une el comercio de Estados Unidos, México y Canadá.",
+   "fuente": "Gobierno de Canadá",
+   "desde": 22.4,
+   "hasta": 26.0
+  },
+  {
+   "tipo": "lista",
+   "iso": "ca",
+   "nombre": "Canadá",
+   "estado": "LE AFECTA",
+   "desde": 22.6
+  },
+  {
+   "tipo": "region",
+   "texto": "EUROPA",
+   "desde": 28.0,
+   "hasta": 35.2
+  },
+  {
+   "tipo": "globo",
+   "pais": "ESP",
+   "texto": "¿Y quién va a hablar español ahora?",
+   "desde": 29.2,
+   "hasta": 32.8,
+   "lado": 1
+  },
+  {
+   "tipo": "cinta",
+   "pais": "ESP",
+   "texto": "ADIÓS A 1 DE CADA 4 HABLANTES",
+   "icono": "libro",
+   "desde": 29.8,
+   "hasta": 34.8
+  },
+  {
+   "tipo": "tarjeta",
+   "iso": "es",
+   "nombre": "España",
+   "estado": "LLORA",
+   "dato": "1 DE CADA 4",
+   "texto": "hablantes nativos de español vive en México.",
+   "fuente": "Instituto Cervantes, 2024",
+   "desde": 30.4,
+   "hasta": 34.8
+  },
+  {
+   "tipo": "lista",
+   "iso": "es",
+   "nombre": "España",
+   "estado": "LLORA",
+   "desde": 30.6
+  },
+  {
+   "tipo": "lista",
+   "iso": "fr",
+   "nombre": "Francia",
+   "estado": "NI LO NOTA",
+   "desde": 31.6
+  },
+  {
+   "tipo": "lista",
+   "iso": "pt",
+   "nombre": "Portugal",
+   "estado": "NI LO NOTA",
+   "desde": 32.2
+  },
+  {
+   "tipo": "pregunta",
+   "texto": "¿QUÉ PAÍS LO EXTRAÑARÍA MÁS?",
+   "desde": 36.0,
+   "hasta": 39.5,
+   "y": 520
+  }
+ ]
+}

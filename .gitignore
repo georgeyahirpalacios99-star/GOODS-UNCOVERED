@@ -5,3 +5,5 @@ videos-largos/*/preview/
 videos-largos/*/*.mp4
 videos-largos/*/.tmp/
 entregas/
+demos-mapa/*/preview/
+demos-mapa/*/*.mp4
