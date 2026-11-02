@@ -29,3 +29,6 @@ canal-negocios/demo-cine/voz-norm.wav
 canal-negocios/video-01/voz/*.wav
 canal-negocios/video-01/*.mp4
 canal-negocios/video-01/preview/
+canal-negocios/video-01/render.log
+canal-negocios/video-01/miniatura/preview/
+canal-negocios/video-01/voz/lista.txt
