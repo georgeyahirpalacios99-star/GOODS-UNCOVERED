@@ -11,7 +11,7 @@ for e in reg:
     if e['texto'] in nombres and nombres[e['texto']] not in [c[1] for c in caps]: caps.append((max(0, e['desde'] - 1), nombres[e['texto']]))
 cap_txt = '\n'.join(f'{mm(t)} {n}' for t, n in caps)
 (D / '05-PUBLICACION.md').write_text(f"""# PUBLICACIÓN · Video 002
-**Duración: {mm(spec['duracion'])} · Miniatura recomendada: `miniaturas/miniatura-A.jpg`**
+**Duración: {mm(spec['duracion'])} · Miniatura recomendada: `miniaturas/miniatura-D.jpg`**
 
 ## Título
 ```
@@ -54,7 +54,7 @@ qué pasaría si, qué pasaría si desaparecieran los países que hablan españo
 ## Configuración
 | Campo | Qué elegir |
 |---|---|
-| Miniatura | `miniaturas/miniatura-A.jpg` |
+| Miniatura | `miniaturas/miniatura-D.jpg` |
 | Lista de reproducción | Nueva: **¿Qué pasaría si…?** |
 | Público | No es para niños |
 | Contenido alterado o sintético | **Sí** (voz generada con IA) |

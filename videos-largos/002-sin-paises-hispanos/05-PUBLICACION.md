@@ -1,5 +1,5 @@
 # PUBLICACIÓN · Video 002
-**Duración: 10:14 · Miniatura recomendada: `miniaturas/miniatura-A.jpg`**
+**Duración: 10:14 · Miniatura recomendada: `miniaturas/miniatura-D.jpg`**
 
 ## Título
 ```
@@ -48,7 +48,7 @@ qué pasaría si, qué pasaría si desaparecieran los países que hablan españo
 ## Configuración
 | Campo | Qué elegir |
 |---|---|
-| Miniatura | `miniaturas/miniatura-A.jpg` |
+| Miniatura | `miniaturas/miniatura-D.jpg` |
 | Lista de reproducción | Nueva: **¿Qué pasaría si…?** |
 | Público | No es para niños |
 | Contenido alterado o sintético | **Sí** (voz generada con IA) |
