@@ -84,5 +84,49 @@ INI = [e['desde'] for e in esc]
 for e in ev:
     if e.pop('global_', False): e['global'] = True
     if any(abs(e.get('hasta', 0) - (i + .05)) < .06 for i in INI): e['hasta'] = round(e['hasta'] + .55, 2)
+
+# ---- sincronizar con la voz de ElevenLabs (voz.mp3): mapa de tiempos viejos -> tiempos de la voz ----
+if (D / 'voz.mp3').exists():
+    ANCLAS = [(0, 0), (.5, .05), (3.6, 2.09), (3.7, 2.75), (7.0, 5.98), (7.1, 6.55), (9.3, 8.05), (9.6, 8.55), (13.0, 12.04), (13.1, 12.5),
+              (16.8, 16.57), (17.1, 17.15), (20.0, 19.77), (20.1, 20.1), (24.0, 26.08), (24.1, 26.45), (27.4, 29.76), (27.7, 30.3),
+              (31.4, 34.4), (31.5, 35.0), (35.0, 38.36), (35.4, 38.95)]
+    def T(v):
+        for (a0, b0), (a1, b1) in zip(ANCLAS, ANCLAS[1:]):
+            if v <= a1: return round(b0 + (b1 - b0) * (v - a0) / (a1 - a0), 3)
+        return round(ANCLAS[-1][1] + v - ANCLAS[-1][0], 3)
+    def mover(o):
+        if isinstance(o, list): [mover(x) for x in o]; return
+        if not isinstance(o, dict): return
+        if 'dur' in o and 'desde' in o: o['dur'] = round(T(o['desde'] + o['dur']) - T(o['desde']), 3)
+        for k in ('desde', 'hasta', 't', 'precioDesde'):
+            if isinstance(o.get(k), (int, float)): o[k] = T(o[k])
+        for k in ('caras', 'habla'):
+            if k in o: o[k] = [[T(x[0])] + ([T(x[1])] if k == 'habla' else x[1:]) for x in o[k]]
+        if 'monto' in o: m = o['monto']; o['monto'] = [m[0], m[1], T(m[2]), round(T(m[2] + m[3]) - T(m[2]), 3)]
+        for k in ('claves', 'partes'):
+            if k in o: mover(o[k])
+    for e in esc: mover(e)
+    for e in ev: mover(e)
+    for e in ev:
+        if e['tipo'] == 'desglose': e['partes'][0]['desde'] = 22.3; e['partes'][1]['desde'] = 26.9
+        if e['tipo'] == 'cifra' and e['texto'] == '$7,050 M': e['desde'] = 32.6
+        if e['tipo'] == 'cifra' and e['texto'] == '$19,400 M': e['desde'] = 13.6
+    spec.update(duracion=38.95, audio='voz-norm.wav', narracion=[dict(desde=a, hasta=b, texto=x) for a, b, x in [
+        (0.0, 2.09, 'Todo en esta tienda cuesta un dólar con veinticinco.'),
+        (3.01, 5.98, 'Entonces… ¿cómo gana millones vendiendo cosas tan baratas?'),
+        (6.82, 8.05, 'Empecemos por el tamaño.'),
+        (8.81, 12.04, 'Dollar Tree tiene más de 9,200 tiendas en Estados Unidos y Canadá.'),
+        (12.75, 16.57, 'Y en 2025 vendió 19,400 millones de dólares.'),
+        (17.45, 19.77, 'Pero el truco está en cuánto paga por cada cosa.'),
+        (20.38, 21.80, 'De cada dólar con veinticinco,'),
+        (22.29, 26.08, 'unos 80 centavos se van en comprar el producto y ponerlo en la tienda.'),
+        (26.71, 29.76, 'Le quedan unos 45 centavos para sueldos, gastos… y ganancia.'),
+        (30.61, 31.18, 'Parece poco.'),
+        (31.86, 34.40, 'Pero en un año, eso sumó más de 7,000 millones de dólares.'),
+        (35.33, 36.82, '¿Qué negocio quieres que expliquemos después?'),
+        (37.46, 38.60, 'Déjalo en los comentarios.')]])
+    if not (D / 'voz-norm.wav').exists():
+        import subprocess
+        subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(D / 'voz.mp3'), '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11', '-ar', '48000', str(D / 'voz-norm.wav')], check=True)
 (D / 'mapa.json').write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding='utf-8')
 print('ok')

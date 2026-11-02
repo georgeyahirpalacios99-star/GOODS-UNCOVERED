@@ -1,21 +1,21 @@
 {
  "estilo": "escena",
  "fps": 30,
- "duracion": 35.4,
+ "duracion": 38.95,
  "salida": "demo-animado",
  "subY": 1018,
  "subTam": 46,
  "escenas": [
   {
-   "desde": 0,
-   "dur": 3.7,
+   "desde": 0.0,
+   "dur": 2.75,
    "img": "img/01.jpg",
    "margen": 1,
    "zoom": 0.05
   },
   {
-   "desde": 3.7,
-   "dur": 3.4,
+   "desde": 2.75,
+   "dur": 3.8,
    "img": "img/02.jpg",
    "frente": [
     [
@@ -65,22 +65,22 @@
    "zoom": 0.05
   },
   {
-   "desde": 7.1,
-   "dur": 6.0,
+   "desde": 6.55,
+   "dur": 5.95,
    "img": "img/03.jpg",
    "margen": 1,
    "zoom": 0.05
   },
   {
-   "desde": 13.1,
-   "dur": 4.0,
+   "desde": 12.5,
+   "dur": 4.65,
    "img": "img/04.jpg",
    "margen": 1,
    "zoom": 0.05
   },
   {
-   "desde": 17.1,
-   "dur": 3.0,
+   "desde": 17.15,
+   "dur": 2.95,
    "img": "img/05.jpg",
    "frente": [
     [
@@ -107,14 +107,14 @@
   },
   {
    "desde": 20.1,
-   "dur": 4.0,
+   "dur": 6.35,
    "img": "img/06.jpg",
    "margen": 1,
    "zoom": 0.05
   },
   {
-   "desde": 24.1,
-   "dur": 3.6,
+   "desde": 26.45,
+   "dur": 3.85,
    "img": "img/07.jpg",
    "frente": [
     [
@@ -194,15 +194,15 @@
    "zoom": 0.05
   },
   {
-   "desde": 27.7,
-   "dur": 3.8,
+   "desde": 30.3,
+   "dur": 4.7,
    "img": "img/08.jpg",
    "margen": 1,
    "zoom": 0.05
   },
   {
-   "desde": 31.5,
-   "dur": 4.0,
+   "desde": 35.0,
+   "dur": 4.05,
    "img": "img/01.jpg",
    "margen": 1,
    "zoom": 0.05
@@ -210,61 +210,76 @@
  ],
  "narracion": [
   {
-   "desde": 0.5,
-   "hasta": 3.6,
+   "desde": 0.0,
+   "hasta": 2.09,
    "texto": "Todo en esta tienda cuesta un dólar con veinticinco."
   },
   {
-   "desde": 3.7,
-   "hasta": 7.0,
-   "texto": "Entonces, ¿cómo gana millones vendiendo cosas tan baratas?"
+   "desde": 3.01,
+   "hasta": 5.98,
+   "texto": "Entonces… ¿cómo gana millones vendiendo cosas tan baratas?"
   },
   {
-   "desde": 7.1,
-   "hasta": 9.3,
+   "desde": 6.82,
+   "hasta": 8.05,
    "texto": "Empecemos por el tamaño."
   },
   {
-   "desde": 9.6,
-   "hasta": 13.0,
+   "desde": 8.81,
+   "hasta": 12.04,
    "texto": "Dollar Tree tiene más de 9,200 tiendas en Estados Unidos y Canadá."
   },
   {
-   "desde": 13.1,
-   "hasta": 16.8,
+   "desde": 12.75,
+   "hasta": 16.57,
    "texto": "Y en 2025 vendió 19,400 millones de dólares."
   },
   {
-   "desde": 17.1,
-   "hasta": 20.0,
+   "desde": 17.45,
+   "hasta": 19.77,
    "texto": "Pero el truco está en cuánto paga por cada cosa."
   },
   {
-   "desde": 20.1,
-   "hasta": 24.0,
-   "texto": "De cada dólar con veinticinco, unos 80 centavos se van en comprar el producto y ponerlo en la tienda."
+   "desde": 20.38,
+   "hasta": 21.8,
+   "texto": "De cada dólar con veinticinco,"
   },
   {
-   "desde": 24.1,
-   "hasta": 27.4,
+   "desde": 22.29,
+   "hasta": 26.08,
+   "texto": "unos 80 centavos se van en comprar el producto y ponerlo en la tienda."
+  },
+  {
+   "desde": 26.71,
+   "hasta": 29.76,
    "texto": "Le quedan unos 45 centavos para sueldos, gastos… y ganancia."
   },
   {
-   "desde": 27.7,
-   "hasta": 31.4,
-   "texto": "Parece poco. Pero en un año, eso sumó más de 7,000 millones de dólares."
+   "desde": 30.61,
+   "hasta": 31.18,
+   "texto": "Parece poco."
   },
   {
-   "desde": 31.5,
-   "hasta": 35.0,
+   "desde": 31.86,
+   "hasta": 34.4,
+   "texto": "Pero en un año, eso sumó más de 7,000 millones de dólares."
+  },
+  {
+   "desde": 35.33,
+   "hasta": 36.82,
    "texto": "¿Qué negocio quieres que expliquemos después?"
+  },
+  {
+   "desde": 37.46,
+   "hasta": 38.6,
+   "texto": "Déjalo en los comentarios."
   }
  ],
  "eventos": [
   {
    "tipo": "palito",
-   "desde": 0,
-   "hasta": 4.3,
+   "desde": 0.0,
+   "hasta": 3.337,
    "ropa": "#4f8fc0",
    "pantalon": "#5d6470",
    "pelo": "#231a14",
@@ -275,40 +290,40 @@
    "lleva": "taza",
    "claves": [
     {
-     "t": 0,
+     "t": 0.0,
      "x": -150
     },
     {
-     "t": 1.7,
+     "t": 0.84,
      "x": 700,
      "pose": "parado",
      "dir": 0
     },
     {
-     "t": 2.1,
+     "t": 1.103,
      "pose": "señalarArriba",
      "dir": 0
     }
    ],
    "caras": [
     [
-     1.8,
+     0.905,
      "sorpresa"
     ]
    ]
   },
   {
    "tipo": "titulo",
-   "desde": 0.9,
-   "hasta": 3.6,
+   "desde": 0.313,
+   "hasta": 2.09,
    "texto": "¿CÓMO GANA DINERO\nUNA TIENDA DE *TODO A $1.25*?",
    "y": 372,
    "tam": 70
   },
   {
    "tipo": "palito",
-   "desde": 3.7,
-   "hasta": 7.7,
+   "desde": 2.75,
+   "hasta": 6.959,
    "capa": "detras",
    "ropa": "#efe6d2",
    "delantal": "#3f7d4e",
@@ -320,11 +335,11 @@
    "dir": -1,
    "claves": [
     {
-     "t": 3.7,
+     "t": 2.75,
      "pose": "saludar"
     },
     {
-     "t": 5.0,
+     "t": 4.022,
      "pose": "parado"
     }
    ],
@@ -332,8 +347,8 @@
   },
   {
    "tipo": "palito",
-   "desde": 3.7,
-   "hasta": 7.7,
+   "desde": 2.75,
+   "hasta": 6.959,
    "ropa": "#4f8fc0",
    "pantalon": "#5d6470",
    "pelo": "#231a14",
@@ -345,33 +360,33 @@
    "dir": 1,
    "claves": [
     {
-     "t": 3.7,
+     "t": 2.75,
      "pose": "parado"
     },
     {
-     "t": 4.3,
+     "t": 3.337,
      "pose": "rascar",
      "lleva": "nada"
     }
    ],
    "caras": [
     [
-     3.7,
+     2.75,
      "confundido"
     ]
    ]
   },
   {
    "tipo": "signos",
-   "desde": 4.5,
-   "hasta": 7.65,
+   "desde": 3.533,
+   "hasta": 6.925,
    "quien": 1,
    "texto": "???"
   },
   {
    "tipo": "pines",
-   "desde": 9.4,
-   "hasta": 13.65,
+   "desde": 8.217,
+   "hasta": 13.105,
    "puntos": [
     [
      238.6,
@@ -515,29 +530,29 @@
   },
   {
    "tipo": "tiendas",
-   "desde": 9.5,
-   "hasta": 13.0,
+   "desde": 8.383,
+   "hasta": 12.04,
    "filas": 0,
    "total": 9200,
    "prefijo": "+",
-   "dur": 2.4,
+   "dur": 2.528,
    "sub": "tiendas en EE. UU. y Canadá",
    "yCifra": 500
   },
   {
    "tipo": "montana",
-   "desde": 13.2,
-   "hasta": 17.7,
+   "desde": 12.61,
+   "hasta": 17.692,
    "x": 960,
    "y": 975,
    "w": 820,
    "h": 420,
-   "dur": 2.2
+   "dur": 2.42
   },
   {
    "tipo": "palito",
-   "desde": 15.0,
-   "hasta": 17.7,
+   "desde": 14.59,
+   "hasta": 17.692,
    "ropa": "#2c3e6b",
    "pantalon": "#2c3e6b",
    "cuello": true,
@@ -550,7 +565,7 @@
    "dir": 0,
    "claves": [
     {
-     "t": 15.0,
+     "t": 14.59,
      "pose": "celebrar"
     }
    ],
@@ -558,8 +573,8 @@
   },
   {
    "tipo": "cifra",
-   "desde": 13.4,
-   "hasta": 16.9,
+   "desde": 13.6,
+   "hasta": 16.763,
    "texto": "$19,400 M",
    "sub": "en ventas en 2025",
    "fuente": "Dollar Tree, informe anual 2025",
@@ -570,8 +585,8 @@
   },
   {
    "tipo": "cinta",
-   "desde": 17.1,
-   "hasta": 20.7,
+   "desde": 17.15,
+   "hasta": 21.02,
    "x0": 140.2,
    "x1": 1785.5,
    "y": 517.5,
@@ -581,8 +596,8 @@
   },
   {
    "tipo": "palito",
-   "desde": 17.1,
-   "hasta": 20.7,
+   "desde": 17.15,
+   "hasta": 21.02,
    "capa": "detras",
    "ropa": "#6a8fb3",
    "sombrero": "gorra",
@@ -593,7 +608,7 @@
    "dir": 1,
    "claves": [
     {
-     "t": 17.1,
+     "t": 17.15,
      "pose": "contar"
     }
    ],
@@ -601,8 +616,8 @@
   },
   {
    "tipo": "palito",
-   "desde": 17.1,
-   "hasta": 20.7,
+   "desde": 17.15,
+   "hasta": 21.02,
    "capa": "detras",
    "ropa": "#6a8fb3",
    "sombrero": "gorra",
@@ -614,7 +629,7 @@
    "dir": -1,
    "claves": [
     {
-     "t": 17.1,
+     "t": 17.15,
      "pose": "contar"
     }
    ],
@@ -622,8 +637,8 @@
   },
   {
    "tipo": "palito",
-   "desde": 17.1,
-   "hasta": 20.7,
+   "desde": 17.15,
+   "hasta": 21.02,
    "ropa": "#2c3e6b",
    "pantalon": "#2c3e6b",
    "cuello": true,
@@ -635,11 +650,11 @@
    "tam": 560,
    "claves": [
     {
-     "t": 17.1,
+     "t": 17.15,
      "x": -120
     },
     {
-     "t": 18.2,
+     "t": 18.144,
      "x": 300,
      "pose": "señalar",
      "dir": 1
@@ -650,18 +665,18 @@
   {
    "tipo": "camion",
    "desde": 20.1,
-   "hasta": 24.7,
+   "hasta": 27.052,
    "x0": -500,
    "x1": 2400,
    "y": 970.3,
-   "dur": 4.0,
+   "dur": 6.35,
    "tam": 150,
    "lineal": true
   },
   {
    "tipo": "palito",
    "desde": 20.1,
-   "hasta": 24.7,
+   "hasta": 27.052,
    "ropa": "#e8873a",
    "pantalon": "#4a4f57",
    "sombrero": "casco",
@@ -680,8 +695,8 @@
   },
   {
    "tipo": "desglose",
-   "desde": 20.2,
-   "hasta": 27.6,
+   "desde": 20.253,
+   "hasta": 30.12,
    "x": 420,
    "y": 110,
    "w": 1080,
@@ -693,14 +708,14 @@
      "cifra": "≈ 80¢",
      "texto": "Comprar el producto y ponerlo en la tienda",
      "color": "#e8574a",
-     "desde": 20.4
+     "desde": 22.3
     },
     {
      "valor": 45,
      "cifra": "≈ 45¢",
      "texto": "Le queda",
      "color": "#6dbb6a",
-     "desde": 24.3
+     "desde": 26.9
     }
    ],
    "fuente": "margen bruto de 36.4 %, Dollar Tree, año fiscal 2025",
@@ -708,8 +723,8 @@
   },
   {
    "tipo": "palito",
-   "desde": 24.1,
-   "hasta": 28.3,
+   "desde": 26.45,
+   "hasta": 30.965,
    "capa": "detras",
    "ropa": "#2c3e6b",
    "pantalon": "#2c3e6b",
@@ -723,36 +738,36 @@
    "dir": 0,
    "claves": [
     {
-     "t": 24.1,
+     "t": 26.45,
      "pose": "contar"
     }
    ],
    "caras": [
     [
-     24.1,
+     26.45,
      "preocupado"
     ],
     [
-     26.2,
+     28.556,
      "normal"
     ]
    ]
   },
   {
    "tipo": "pila",
-   "desde": 24.3,
-   "hasta": 28.3,
+   "desde": 26.651,
+   "hasta": 30.965,
    "x": 976.9,
    "y": 635.6,
    "r": 19,
    "de": 1,
    "a": 9,
-   "dur": 2.6
+   "dur": 2.607
   },
   {
    "tipo": "palito",
-   "desde": 27.7,
-   "hasta": 32.1,
+   "desde": 30.3,
+   "hasta": 35.576,
    "ropa": "#2c3e6b",
    "pantalon": "#2c3e6b",
    "cuello": true,
@@ -764,11 +779,11 @@
    "tam": 520,
    "claves": [
     {
-     "t": 27.7,
+     "t": 30.3,
      "x": 2100
     },
     {
-     "t": 29.0,
+     "t": 31.741,
      "x": 960,
      "pose": "risa",
      "dir": 0
@@ -777,7 +792,7 @@
    "cara": "feliz",
    "caras": [
     [
-     29.0,
+     31.741,
      "risa"
     ]
    ]
@@ -785,8 +800,8 @@
   {
    "tipo": "monedas",
    "capa": "detras",
-   "desde": 28.5,
-   "hasta": 32.1,
+   "desde": 31.186,
+   "hasta": 35.576,
    "x": 960,
    "y": 930,
    "n": 30,
@@ -797,8 +812,8 @@
   },
   {
    "tipo": "cifra",
-   "desde": 29.2,
-   "hasta": 31.4,
+   "desde": 32.6,
+   "hasta": 34.4,
    "texto": "$7,050 M",
    "sub": "ganancia bruta en 2025",
    "fuente": "Dollar Tree, informe anual 2025",
@@ -808,8 +823,8 @@
   },
   {
    "tipo": "palito",
-   "desde": 31.5,
-   "hasta": 35.4,
+   "desde": 35.0,
+   "hasta": 38.95,
    "ropa": "#4f8fc0",
    "pantalon": "#5d6470",
    "pelo": "#231a14",
@@ -820,11 +835,11 @@
    "dir": 0,
    "claves": [
     {
-     "t": 31.5,
+     "t": 35.0,
      "pose": "parado"
     },
     {
-     "t": 32.0,
+     "t": 35.48,
      "pose": "saludar"
     }
    ],
@@ -832,10 +847,11 @@
   },
   {
    "tipo": "pregunta",
-   "desde": 31.9,
-   "hasta": 35.4,
+   "desde": 35.384,
+   "hasta": 38.95,
    "texto": "¿QUÉ NEGOCIO EXPLICAMOS DESPUÉS?",
    "y": 120
   }
- ]
+ ],
+ "audio": "voz-norm.wav"
 }
