@@ -1,0 +1,280 @@
+{
+ "motor": "cine",
+ "estilo": "cine",
+ "fps": 30,
+ "duracion": 20.6,
+ "salida": "demo-cine",
+ "tomas": [
+  {
+   "tipo": "calle",
+   "desde": 0,
+   "z0": 1,
+   "z1": 1.08,
+   "foco": [
+    960,
+    620
+   ],
+   "hora": 0.04
+  },
+  {
+   "tipo": "cara",
+   "desde": 4.2,
+   "z0": 1,
+   "z1": 1.06,
+   "foco": [
+    960,
+    420
+   ]
+  },
+  {
+   "tipo": "rayos",
+   "desde": 7.0,
+   "z0": 1.15,
+   "z1": 1,
+   "flash": true
+  },
+  {
+   "tipo": "dia",
+   "desde": 8.6,
+   "z0": 1,
+   "z1": 1.05,
+   "foco": [
+    960,
+    600
+   ],
+   "horaDe": 0.04,
+   "horaA": 0.97,
+   "flash": true
+  },
+  {
+   "tipo": "foco",
+   "desde": 16.0,
+   "z0": 1.02,
+   "z1": 1.12,
+   "foco": [
+    960,
+    380
+   ]
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "persona",
+   "toma": 0,
+   "desde": 0,
+   "hasta": 4.2,
+   "id": 1,
+   "ropa": "#c23b4a",
+   "ropa2": "#8f2533",
+   "x": 250,
+   "y": 905,
+   "tam": 430,
+   "claves": [
+    {
+     "t": 0.2,
+     "x": 250
+    },
+    {
+     "t": 3.2,
+     "x": 820,
+     "pose": "parado",
+     "dir": 1
+    }
+   ],
+   "caras": [
+    [
+     0,
+     "feliz"
+    ]
+   ]
+  },
+  {
+   "tipo": "persona",
+   "toma": 1,
+   "desde": 4.2,
+   "hasta": 7.0,
+   "id": 1,
+   "ropa": "#c23b4a",
+   "ropa2": "#8f2533",
+   "x": 960,
+   "y": 430,
+   "tam": 1600,
+   "busto": true,
+   "manos": "frotar",
+   "claves": [
+    {
+     "t": 4.2
+    }
+   ],
+   "cara": "feliz"
+  },
+  {
+   "tipo": "golpe",
+   "toma": 2,
+   "desde": 7.05,
+   "hasta": 8.6,
+   "texto": "¡ABIERTO!",
+   "tam": 170,
+   "y": 540
+  },
+  {
+   "tipo": "multitud",
+   "toma": 3,
+   "desde": 8.8,
+   "hasta": 16.0,
+   "n": 28,
+   "paso": 0.24,
+   "dur": 1.5
+  },
+  {
+   "tipo": "persona",
+   "toma": 3,
+   "desde": 8.6,
+   "hasta": 16.0,
+   "id": 1,
+   "ropa": "#c23b4a",
+   "ropa2": "#8f2533",
+   "x": 1290,
+   "y": 930,
+   "tam": 440,
+   "claves": [
+    {
+     "t": 8.6,
+     "pose": "parado"
+    },
+    {
+     "t": 12.5,
+     "pose": "celebrar"
+    }
+   ],
+   "cara": "feliz"
+  },
+  {
+   "tipo": "pops",
+   "pantalla": true,
+   "encima": true,
+   "desde": 8.9,
+   "hasta": 16.0,
+   "tiempos": [
+    9.0,
+    9.24,
+    9.48,
+    9.72,
+    9.96,
+    10.2,
+    10.44,
+    10.68,
+    10.92,
+    11.16,
+    11.4,
+    11.64,
+    11.88,
+    12.12,
+    12.36,
+    12.6,
+    12.84,
+    13.08,
+    13.32,
+    13.56,
+    13.8,
+    14.04,
+    14.28,
+    14.52,
+    14.76,
+    15.0,
+    15.24,
+    15.48
+   ],
+   "x": 1660,
+   "y": 330
+  },
+  {
+   "tipo": "cifra",
+   "pantalla": true,
+   "encima": true,
+   "desde": 13.6,
+   "hasta": 16.0,
+   "a": 5776,
+   "prefijo": "$",
+   "dur": 1.0,
+   "sub": "lo que vende una tienda promedio en un día",
+   "fuente": "Cálculo: ventas 2025 (Dollar Tree) ÷ 9,200 tiendas ÷ 365 días",
+   "y": 420,
+   "tam": 150,
+   "color": "#7dea8f"
+  },
+  {
+   "tipo": "persona",
+   "toma": 4,
+   "desde": 16.0,
+   "hasta": 20.6,
+   "id": 1,
+   "ropa": "#c23b4a",
+   "ropa2": "#8f2533",
+   "x": 960,
+   "y": 430,
+   "tam": 1500,
+   "busto": true,
+   "manos": "arriba",
+   "claves": [
+    {
+     "t": 16.0
+    }
+   ],
+   "cara": "oo",
+   "rim": "#7ee0a0"
+  },
+  {
+   "tipo": "hud",
+   "pantalla": true,
+   "encima": true,
+   "desde": 0.6,
+   "hasta": 20.6,
+   "horaDe": 6,
+   "horaA": 21.25,
+   "relojDesde": 8.6,
+   "relojDur": 7.2,
+   "dinDe": 0,
+   "dinA": 5776,
+   "dinDesde": 8.9,
+   "dinDur": 6.9
+  }
+ ],
+ "narracion": [
+  {
+   "desde": 0.4,
+   "hasta": 2.3,
+   "texto": "Son las seis de la mañana."
+  },
+  {
+   "desde": 2.4,
+   "hasta": 4.1,
+   "texto": "Y hoy, la tienda es tuya."
+  },
+  {
+   "desde": 4.3,
+   "hasta": 6.9,
+   "texto": "Todo adentro cuesta un dólar con veinticinco."
+  },
+  {
+   "desde": 7.0,
+   "hasta": 8.5,
+   "texto": "Abres la puerta…"
+  },
+  {
+   "desde": 8.7,
+   "hasta": 11.8,
+   "texto": "…y empieza a entrar gente. Una tras otra."
+  },
+  {
+   "desde": 11.9,
+   "hasta": 15.9,
+   "texto": "Al cerrar, una tienda promedio de Dollar Tree vende unos 5,800 dólares."
+  },
+  {
+   "desde": 16.1,
+   "hasta": 20.3,
+   "texto": "Pero de todo eso… ¿cuánto es tuyo de verdad?"
+  }
+ ]
+}
