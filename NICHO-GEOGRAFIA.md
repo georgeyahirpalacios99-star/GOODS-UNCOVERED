@@ -143,7 +143,7 @@ Criterio: evidencia (un video parecido se disparó o hay búsquedas reales), tam
 ### Nivel 1: potencial muy alto (empezar por aquí)
 | # | Idea | Estilo | Por qué |
 |---|---|---|---|
-| 1 | ¿Qué pasaría si México desapareciera? | C | Formato que se dispara (18x), el país hispano más grande y el demo ya está hecho |
+| 1 | ¿Qué pasaría si desaparecieran TODOS los países que hablan español? | C | Solo existe en Shorts de 8-20 s (1.5 M, 737 K y 286 K vistas); en formato largo no hay ninguno |
 | 2 | ¿Por qué Europa tiene 44 países y Sudamérica solo 12? | D | Tema de 1.3 M vistas en Un Mundo Inmenso; ángulo propio |
 | 3 | ¿Por qué la cuenca del Congo es más peligrosa que el Amazonas? | D | 35,500 búsquedas al mes, +841% |
 | 4 | Los países de Latinoamérica que fueron borrados del mapa | D | "8 países borrados" tuvo 425 K |
@@ -261,7 +261,7 @@ Criterio: evidencia (un video parecido se disparó o hay búsquedas reales), tam
 ---
 
 ## 8. Primeros 4 videos (un mes)
-1. **¿Qué pasaría si México desapareciera?** (C): el demo ya está hecho; solo falta el guion completo.
+1. **¿Qué pasaría si desaparecieran todos los países que hablan español?** (C): el hueco que confirmé con vidIQ (México y EE. UU. ya están hechos por otros canales).
 2. **¿Por qué la cuenca del Congo es más peligrosa que el Amazonas?** (D): la búsqueda que más crece.
 3. **¿Por qué Chile es tan largo y tan delgado?** (D)
 4. **¿Qué pasaría si España desapareciera?** (C): trae al público de España.
