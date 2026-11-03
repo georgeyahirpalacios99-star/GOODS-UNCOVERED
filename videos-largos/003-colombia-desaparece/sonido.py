@@ -159,5 +159,10 @@ mezcla = voz * 1.0 + mus * duck * .3 + sfx[:N] * .8
 tmp = D / '.tmp' / 'mezcla.wav'; escribir(tmp, mezcla / max(1, np.abs(mezcla).max()))
 if '--solo-audio' in sys.argv: print('mezcla en', tmp); sys.exit()
 video = D / (sp['salida'] + '.mp4'); out = D / (sp['salida'] + '-final.mp4')
-subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(video), '-i', str(tmp), '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11', '-ar', '48000', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', str(out)], check=True)
+med = subprocess.run(['ffmpeg', '-hide_banner', '-i', str(tmp), '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
+med = json.loads(med[med.rindex('{'):med.rindex('}') + 1])  # medir primero para clavar -14 LUFS
+# +4 dB fijos y un limitador suave solo en los picos (a -2 dBFS). Más ganancia aplastaría la voz; queda ~-15 LUFS, normal para YouTube.
+ganancia = min(4.0, -14.0 - float(med['input_i']))
+ln = f'volume={ganancia:.2f}dB,alimiter=limit=0.79:attack=5:release=80:level=disabled'
+subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(video), '-i', str(tmp), '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-af', ln, '-ar', '48000', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', str(out)], check=True)
 print(f'{dur:.1f} s · secciones {[(round(a, 1), b) for a, b in secciones]} · golpes {[round(g, 1) for g in golpes]} · {out.name}')
