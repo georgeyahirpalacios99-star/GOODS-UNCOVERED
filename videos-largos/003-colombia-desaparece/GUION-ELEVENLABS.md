@@ -1,7 +1,7 @@
 # Video 003 · ¿Qué pasaría si COLOMBIA desapareciera?
 
 **ElevenLabs:** la misma voz del canal · Multilingual v2 · Stability 40 · Similarity 75 · **Style 20** (más expresiva) · Speed 1.0.
-Genera **cada parte por separado** y súbelas en orden (Parte 1 a 5). Duración estimada: 9 a 10 minutos.
+Genera **cada parte por separado** y súbelas en orden (Parte 1 a 5). Duración estimada: unos 8 a 9 minutos.
 Las cifras van escritas en letras a propósito, para que la voz las lea bien.
 
 ---
@@ -24,11 +24,22 @@ En este experimento, Colombia y toda su gente simplemente se mudan a otro rincó
 ## Parte 2 · El nuevo mapa y la gente
 ```
 Empecemos por lo que se ve desde el espacio. <break time="0.5s" />
+Colombia era el único país de Sudamérica con costa en dos mares a la vez: el Pacífico y el Caribe. <break time="0.3s" />
+Y ahora esos dos mares, que siempre estuvieron separados por montañas, se tocan. <break time="0.6s" />
 De un momento a otro, desaparecen seis mil trescientos cuarenta y dos kilómetros de fronteras. <break time="0.4s" />
 Venezuela pierde la frontera más larga que tenía: dos mil doscientos diecinueve kilómetros. <break time="0.3s" />
 Brasil pierde mil seiscientos cuarenta y cinco. Perú, mil seiscientos veintiséis. Y Ecuador, quinientos ochenta y seis. <break time="0.5s" />
 Pero el caso más raro es el de Panamá. <break time="0.3s" />
-Panamá pasa a ser el final de Norteamérica. La última parada. Más al sur, ya no hay nada… solo agua. <break time="0.8s" />
+Panamá pasa a ser el final de Norteamérica. La última parada. Más al sur, ya no hay nada… solo agua. <break time="0.6s" />
+Y esto no es solo un cambio en el mapa. <break time="0.3s" />
+Cuando los dos continentes se unieron, hace unos tres millones de años, los animales empezaron a cruzar. <break time="0.3s" />
+Los armadillos y las zarigüeyas subieron al norte. Los pumas, los osos y los antepasados de las llamas bajaron al sur. <break time="0.4s" />
+Ese puente natural pasaba justo por aquí. Sin Colombia, se corta. Para siempre. <break time="0.5s" />
+Y no solo para los animales. <break time="0.3s" />
+Por la selva del Darién, en la frontera con Panamá, cruzaron a pie más de quinientas mil personas solo en dos mil veintitrés, buscando llegar al norte. <break time="0.4s" />
+Esa ruta, la más peligrosa del continente, simplemente deja de existir. <break time="0.7s" />
+Y en el Caribe también desaparecen islas: San Andrés y Providencia, con su mar de siete colores. <break time="0.3s" />
+Donde había playas llenas de turistas, ahora hay… más mar. <break time="0.8s" />
 Ahora, piensa en la gente. <break time="0.3s" />
 En Colombia viven más de cincuenta y tres millones de personas. Más que en toda España. <break time="0.5s" />
 Y no solo colombianos. <break time="0.3s" />
@@ -46,7 +57,10 @@ Si cada taza lleva unos diez gramos, estamos hablando de unas ochenta mil millon
 Al año. <break time="0.7s" />
 Sin Colombia, el mundo pierde de golpe uno de sus mayores proveedores del café arábica, el más suave. <break time="0.4s" />
 Y cuando falta algo que todos quieren, pasa siempre lo mismo: el precio sube. <break time="0.4s" />
-Y quien más lo aprovecharía sería Brasil, que ya es el rey del café… y ahora reinaría solo. <break time="0.9s" />
+Y quien más lo aprovecharía sería Brasil, que ya es el rey del café… y ahora reinaría solo. <break time="0.7s" />
+Ah, y hay otra pelea que se termina para siempre. <break time="0.3s" />
+La discusión de quién inventó la arepa. <break time="0.3s" />
+Sin Colombia en el mapa… Venezuela gana por abandono. <break time="0.9s" />
 Pero el golpe más bonito, y más raro, llegaría en febrero. <break time="0.4s" />
 Para San Valentín de dos mil veinticinco, Colombia mandó cerca de novecientos millones de flores, casi todas a Estados Unidos. <break time="0.4s" />
 Más de sesenta y cinco mil toneladas de rosas, claveles y crisantemos, en solo unas semanas. <break time="0.5s" />
@@ -81,11 +95,19 @@ Colombia es el país con más especies de aves del planeta. <break time="0.3s" /
 Lleva cuatro años seguidos ganando el conteo mundial de aves, el Global Big Day. <break time="0.4s" />
 En su territorio viven cerca de mil novecientas cincuenta especies. Casi una de cada cinco aves del mundo. <break time="0.4s" />
 Y unas ochenta y dos no existen en ningún otro lugar. <break time="0.3s" />
-Esas no se mudan. Esas se pierden para siempre. <break time="0.9s" />
+Esas no se mudan. Esas se pierden para siempre. <break time="0.7s" />
+Y bajo la tierra también se va un tesoro. <break time="0.3s" />
+Colombia produce más o menos la mitad de las esmeraldas que se venden en el mundo, y muchas de las más puras salen de un solo pueblo: Muzo. <break time="0.4s" />
+Sin Colombia, las joyerías de Nueva York, Dubái o Tokio tendrían que buscar sus esmeraldas en Zambia o en Brasil. <break time="0.9s" />
+En el fútbol, Sudamérica pierde a uno de sus rivales más duros. <break time="0.3s" />
+La selección que llegó a la final de la Copa América de dos mil veinticuatro, y el país de James Rodríguez, el goleador del Mundial de dos mil catorce. <break time="0.9s" />
 También se iría la música que suena en medio planeta: Shakira, Karol G, J Balvin, Carlos Vives. <break time="0.4s" />
 Y se iría Macondo. <break time="0.3s" />
 El pueblo inventado por Gabriel García Márquez, el colombiano que ganó el Premio Nobel de Literatura en mil novecientos ochenta y dos. <break time="0.4s" />
 Los libros seguirían en las librerías del mundo… pero el lugar que los inspiró ya no estaría en el mapa. <break time="0.9s" />
+¿Te acuerdas de lo que te prometí al principio? <break time="0.3s" />
+Las rosas de San Valentín, tu café de la mañana y el país que se quedaba sin luz. <break time="0.3s" />
+Ya lo viste: todo eso dependía de un solo país. <break time="0.6s" />
 Entonces… ¿quién gana y quién pierde? <break time="0.4s" />
 Brasil gana el café. Ecuador gana las rosas, pero pierde la luz. Panamá se queda como el final del camino. <break time="0.4s" />
 Y Sudamérica se convierte en lo que fue hace millones de años: una isla. <break time="0.8s" />
@@ -105,4 +127,7 @@ Y si te quedaste hasta aquí, ya sabes qué hacer. Suscríbete a Lo Que el Mapa 
 - Flores: Ministerio de Agricultura / ICA y prensa (Portafolio, Forbes Colombia): ~900 millones de tallos y más de 65.000 toneladas a EE. UU. en San Valentín 2025.
 - Electricidad Ecuador–Colombia: Primicias, El Comercio, Cenace (460 MW, ~11 % de la demanda máxima; USD 267,5 millones entre enero y noviembre de 2024).
 - Aves: Ministerio de Comercio (Global Big Day 2023–2026) y SiB Colombia (1.954 especies, 82 endémicas).
+- Darién: Servicio Nacional de Migración de Panamá, más de 520.000 cruces en 2023.
+- Esmeraldas: Fedesmeraldas (Colombia abastece cerca del 55 % del mercado mundial); Muzo, Boyacá.
+- Fútbol: Copa América 2024 (Colombia finalista); James Rodríguez, Bota de Oro del Mundial 2014.
 - Istmo de Panamá: estudios geológicos sitúan su cierre hace unos 3 millones de años (O'Dea et al., 2016, Science Advances).
