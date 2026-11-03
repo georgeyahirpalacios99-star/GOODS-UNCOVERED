@@ -37,3 +37,7 @@ canal-negocios/video-01/editado/
 canal-negocios/marca/banner2/preview/
 canal-negocios/video-01/miniatura2/preview/
 invitaciones/*/preview/
+videos-largos/003-colombia-desaparece/voz/*.wav
+videos-largos/003-colombia-desaparece/.tmp/
+videos-largos/003-colombia-desaparece/*.mp4
+videos-largos/003-colombia-desaparece/preview/
