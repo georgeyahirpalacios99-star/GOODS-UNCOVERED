@@ -1,6 +1,6 @@
 # Video 003 · ¿Qué pasaría si COLOMBIA desapareciera?
 
-**ElevenLabs:** la misma voz del canal · Multilingual v2 · Stability 40 · Similarity 75 · **Style 20** · **Speed 1.12** (más ágil, ritmo de canal profesional: ~175 palabras por minuto).
+**ElevenLabs:** la misma voz y los mismos ajustes de siempre (Multilingual v2 · Speed **1.0**). No cambies la voz. El ritmo se gana con pausas cortas en el guion y recortando silencios en la edición, sin acelerar ni procesar la voz.
 Genera **cada parte por separado** y súbelas en orden (Parte 1 a 6). Duración estimada: unos 8 a 9 minutos.
 Las cifras van escritas en letras a propósito, para que la voz las lea bien.
 
