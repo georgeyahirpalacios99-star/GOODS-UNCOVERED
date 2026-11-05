@@ -48,3 +48,7 @@ shorts/004-por-que-llueve-tanto-en-ecuador/prueba/
 shorts/004-por-que-llueve-tanto-en-ecuador/referencia/preview/
 shorts/004-por-que-llueve-tanto-en-ecuador/voz/*.wav
 motor-3d/node_modules/
+shorts/005-fusion-banderas/*.mp4
+shorts/005-fusion-banderas/.tmp/
+shorts/005-fusion-banderas/preview/
+shorts/005-fusion-banderas/voz/*.wav
