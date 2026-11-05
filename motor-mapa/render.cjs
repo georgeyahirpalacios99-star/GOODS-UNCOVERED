@@ -43,6 +43,7 @@ function datos() {
     rios: lineas('ne_50m_rivers_lake_centerlines.geojson'),
   };
   if (spec.estilo === 'escena' || spec.motor) return {};
+  if (spec.estilo === 'fantasia') { const [bx0, by0] = proj(-100, 18), [bx1, by1] = proj(-55, -22); return { paises: paises('ne_10m_admin_0_countries.geojson').filter(p => !(p.bb[2] < bx0 || p.bb[0] > bx1 || p.bb[3] < by0 || p.bb[1] > by1)) }; }
   if (spec.estilo === 'pergamino') return { paises: paises('ne_50m_admin_0_countries.geojson'), estados: estados('ne_50m_admin_1_states_provinces.geojson') };
   return { paises: paises('ne_50m_admin_0_countries.geojson') };
 }
