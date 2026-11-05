@@ -1,0 +1,24 @@
+{
+  "salida": "003-lo-que-el-mundo-le-compra-a-mexico",
+  "volumen_musica": 0.12,
+  "items": [
+    { "imagen": "01", "etiqueta": "Los aguacates del mundo", "respuesta": "4 de cada 10",
+      "narracion": "De cada diez aguacates que se venden en el mundo, cuatro son de México." },
+    { "imagen": "02", "etiqueta": "La cerveza que más se exporta", "respuesta": "la mexicana",
+      "narracion": "La cerveza que más se exporta en el mundo es la mexicana." },
+    { "imagen": "03", "etiqueta": "El país con más plata", "respuesta": "México",
+      "narracion": "El país que más plata saca de la tierra es México." },
+    { "imagen": "04", "etiqueta": "El jitomate que más se exporta", "respuesta": "el mexicano",
+      "narracion": "El jitomate que más se exporta en el mundo es el mexicano." },
+    { "imagen": "05", "etiqueta": "Las teles que compra Estados Unidos", "respuesta": "hechas en México",
+      "narracion": "Las televisiones que más compra Estados Unidos están hechas en México." },
+    { "imagen": "06", "etiqueta": "El país que más limón produce", "respuesta": "México",
+      "narracion": "El país que más limón produce en el mundo es México." },
+    { "imagen": "07", "etiqueta": "El tequila de verdad", "respuesta": "solo en México",
+      "narracion": "El tequila solo se puede hacer legalmente en México." },
+    { "imagen": "08", "etiqueta": "El maíz que come el mundo", "respuesta": "nació en México",
+      "narracion": "El maíz que come todo el mundo nació en México." }
+  ],
+  "cierre": { "imagen": "09", "etiqueta": "¿Qué le faltó?",
+    "narracion": "¿Qué le faltó a tu país? Escríbelo y síguenos para el siguiente." }
+}

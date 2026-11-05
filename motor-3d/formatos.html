@@ -1,0 +1,111 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>@font-face{font-family:M;src:url(/motor-mapa/datos/fuentes/Montserrat.ttf);font-weight:100 900}@font-face{font-family:Fr;src:url(/motor-mapa/datos/fuentes/Fredoka.ttf);font-weight:300 700} html,body{margin:0;background:#000}</style>
+<script src="/motor-3d/node_modules/d3-array/dist/d3-array.min.js"></script><script src="/motor-3d/node_modules/d3-geo/dist/d3-geo.min.js"></script>
+<script type="importmap">{"imports":{"three":"/motor-3d/node_modules/three/build/three.module.js","three/addons/":"/motor-3d/node_modules/three/examples/jsm/"}}</script>
+</head><body>
+<script type="module">
+// Maquetas de formatos virales hechos solo con código: bolas-país 3D y 2D, fusión de banderas, "países que caben dentro de…", podio.
+import * as THREE from 'three';
+import { OutlineEffect } from 'three/addons/effects/OutlineEffect.js';
+import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.js';
+const W = 1080, H = 1920;
+const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true, alpha: true }); renderer.setPixelRatio(1); renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+const efecto = new OutlineEffect(renderer, { defaultThickness: .006, defaultColor: [.06, .04, .03] });
+const gm = (() => { const d = new Uint8Array([150, 150, 150, 255, 205, 205, 205, 255, 240, 240, 240, 255, 255, 255, 255, 255]); const t = new THREE.DataTexture(d, 4, 1, THREE.RGBAFormat); t.minFilter = t.magFilter = THREE.NearestFilter; t.needsUpdate = true; return t; })();
+const toon = (c, x = {}) => new THREE.MeshToonMaterial(Object.assign({ color: c, gradientMap: gm }, x));
+const sinBorde = m => { m.userData.outlineParameters = { visible: false }; return m; };
+const carga = u => new Promise((r, j) => { const i = new Image(); i.onload = () => r(i); i.onerror = j; i.src = u; });
+const BAND = {}; async function bandera(a2) { if (!BAND[a2]) BAND[a2] = await carga(`/motor-mapa/datos/banderas/${a2}.svg`); return BAND[a2]; }
+function lienzo(w, h, f) { const c = document.createElement('canvas'); c.width = w; c.height = h; f(c.getContext('2d'), w, h); return c; }
+const tex = c => { const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t; };
+// ---------- cara propia (ojos grandes con brillo + boca), distinta a las countryballs clásicas ----------
+function caraLienzo(ex) { return lienzo(512, 512, (x) => { const T = '#1a120c';
+  for (const k of [-1, 1]) { const ox = 256 + k * 82, oy = 220;
+    if (ex === 'feliz') { x.strokeStyle = T; x.lineWidth = 16; x.lineCap = 'round'; x.beginPath(); x.arc(ox, oy + 14, 34, Math.PI * 1.12, Math.PI * 1.88); x.stroke(); continue; }
+    const b = ex === 'shock' ? 1.22 : 1; x.fillStyle = '#fff'; x.strokeStyle = T; x.lineWidth = 11; x.beginPath(); x.ellipse(ox, oy, 46 * b, 58 * b, 0, 0, 7); x.fill(); x.stroke();
+    const pr = ex === 'shock' ? 14 : 24; x.fillStyle = T; x.beginPath(); x.arc(ox + k * 4, oy + 8, pr, 0, 7); x.fill(); x.fillStyle = '#fff'; x.beginPath(); x.arc(ox - pr * .3, oy - pr * .3, pr * .45, 0, 7); x.fill();
+    if (ex === 'enojo') { x.strokeStyle = T; x.lineWidth = 15; x.beginPath(); x.moveTo(ox - k * 46, oy - 78); x.lineTo(ox + k * 36, oy - 56); x.stroke(); } }
+  x.strokeStyle = T; x.lineWidth = 12; x.lineCap = 'round'; const my = 330;
+  if (ex === 'shock') { x.fillStyle = '#4a1414'; x.beginPath(); x.ellipse(256, my + 8, 24, 32, 0, 0, 7); x.fill(); x.stroke(); }
+  else if (ex === 'feliz') { x.fillStyle = '#4a1414'; x.beginPath(); x.moveTo(196, my - 8); x.quadraticCurveTo(256, my + 84, 316, my - 8); x.closePath(); x.fill(); x.stroke(); x.save(); x.clip(); x.fillStyle = '#ef6b80'; x.beginPath(); x.arc(256, my + 56, 30, 0, 7); x.fill(); x.restore(); }
+  else if (ex === 'enojo') { x.beginPath(); x.moveTo(218, my + 14); x.quadraticCurveTo(256, my - 6, 294, my + 14); x.stroke(); }
+  else { x.beginPath(); x.moveTo(220, my); x.quadraticCurveTo(256, my + 26, 292, my); x.stroke(); } }); }
+async function bola3d(a2, ex, r = 1, flagCanvas) { const g = new THREE.Group(); const img = flagCanvas || await bandera(a2);
+  const fl = lienzo(1024, 512, (x, w, h) => { x.drawImage(img, 0, 0, w, h); }); const t = tex(fl); t.wrapS = THREE.RepeatWrapping; t.repeat.set(2, 1);
+  const s = new THREE.Mesh(new THREE.SphereGeometry(r, 64, 48), toon('#ffffff', { map: t })); s.castShadow = true; g.add(s);
+  const cara = new THREE.Mesh(new THREE.SphereGeometry(r * 1.01, 48, 32, Math.PI / 2 - .95, 1.9, Math.PI / 2 - .85, 1.7), sinBorde(new THREE.MeshBasicMaterial({ map: tex(caraLienzo(ex)), transparent: true, depthWrite: false }))); g.add(cara);
+  const brillo = new THREE.Mesh(new THREE.SphereGeometry(r * 1.015, 32, 16, Math.PI * .62, .5, .42, .42), sinBorde(new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true, opacity: .45, depthWrite: false }))); g.add(brillo);
+  return g; }
+function fondo3d(c1, c2) { return tex(lienzo(512, 1024, (x, w, h) => { const g = x.createRadialGradient(w / 2, h * .45, 30, w / 2, h * .45, h * .75); g.addColorStop(0, c1); g.addColorStop(1, c2); x.fillStyle = g; x.fillRect(0, 0, w, h);
+  x.globalCompositeOperation = 'lighter'; for (let k = 0; k < 16; k++) { x.save(); x.translate(w / 2, h * .45); x.rotate(k / 16 * Math.PI * 2); x.fillStyle = 'rgba(255,255,255,.035)'; x.beginPath(); x.moveTo(0, 0); x.lineTo(w, -60); x.lineTo(w, 60); x.fill(); x.restore(); }
+  for (let k = 0; k < 90; k++) { x.fillStyle = `rgba(255,255,255,${.15 + Math.random() * .5})`; x.beginPath(); x.arc(Math.random() * w, Math.random() * h, Math.random() * 2.2, 0, 7); x.fill(); } })); }
+function texto2d(x, t, cx, cy, sz, col = '#fff', borde = '#000', fam = 'M', peso = 900) { x.font = `${peso} ${sz}px ${fam}`; x.textAlign = 'center'; x.textBaseline = 'middle'; x.lineJoin = 'round'; x.lineWidth = sz * .2; x.strokeStyle = borde; x.strokeText(t, cx, cy); x.fillStyle = col; x.fillText(t, cx, cy); }
+function chip(x, t, cx, cy, sz, fondo = 'rgba(10,16,24,.9)', borde = '#ffd23f') { x.font = `800 ${sz}px M`; const w = x.measureText(t).width + sz * 1.2, h = sz * 1.6; x.fillStyle = fondo; x.beginPath(); x.roundRect(cx - w / 2, cy - h / 2, w, h, h / 2); x.fill(); x.strokeStyle = borde; x.lineWidth = 4; x.stroke(); x.fillStyle = '#fff'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(t, cx, cy + 2); }
+function marca(x) { x.fillStyle = 'rgba(0,0,0,.55)'; x.beginPath(); x.roundRect(W - 330, H - 120, 300, 70, 35); x.fill(); x.font = '800 26px M'; x.fillStyle = '#ffd23f'; x.textAlign = 'center'; x.fillText('MAQUETA · ESTILO PROPIO', W - 180, H - 84); }
+async function fusionBandera(a, b) { const A = await bandera(a), B = await bandera(b); return lienzo(1200, 800, (x, w, h) => { x.drawImage(A, 0, 0, w, h); x.save(); x.beginPath(); x.moveTo(w * .52, 0); x.lineTo(w, 0); x.lineTo(w, h); x.lineTo(w * .3, h); x.closePath(); x.clip(); x.drawImage(B, 0, 0, w, h); x.restore();
+  x.strokeStyle = 'rgba(255,255,255,.9)'; x.lineWidth = 14; x.beginPath(); x.moveTo(w * .52, 0); x.lineTo(w * .3, h); x.stroke(); }); }
+// ---------- FORMATO 1 · fusión de banderas (3D) ----------
+window.fusion3d = async (a, b, na, nb, nf) => {
+  const S = new THREE.Scene(); S.background = fondo3d('#5a3fd1', '#120a3a'); S.add(new THREE.HemisphereLight('#ffffff', '#5a4a8a', 1.3)); const l = new THREE.DirectionalLight('#fff4e0', 2.4); l.position.set(-4, 6, 8); l.castShadow = true; S.add(l); const rim = new THREE.DirectionalLight('#9fdcff', 1.8); rim.position.set(4, 3, -5); S.add(rim);
+  const A = await bola3d(a, 'normal', .95), B = await bola3d(b, 'shock', .95), F = await bola3d(null, 'feliz', 1.45, await fusionBandera(a, b));
+  A.position.set(-1.55, 2.6, 0); A.rotation.y = .35; B.position.set(1.55, 2.6, 0); B.rotation.y = -.35; F.position.set(0, -1.5, .4); S.add(A, B, F);
+  const halo = new THREE.Mesh(new THREE.RingGeometry(1.75, 2.1, 64), sinBorde(new THREE.MeshBasicMaterial({ color: '#ffd23f', transparent: true, opacity: .55 }))); halo.position.set(0, -1.5, -.3); S.add(halo);
+  for (let k = 0; k < 22; k++) { const sp = new THREE.Mesh(new THREE.OctahedronGeometry(.07 + Math.random() * .08), sinBorde(new THREE.MeshBasicMaterial({ color: k % 2 ? '#ffd23f' : '#ffffff' }))); const an = Math.random() * 6.28, d = 2 + Math.random() * 1.2; sp.position.set(Math.cos(an) * d, -1.5 + Math.sin(an) * d * 1.1, .2); S.add(sp); }
+  renderer.setSize(W, H); const cam = new THREE.PerspectiveCamera(40, W / H, .1, 100); cam.position.set(0, .2, 15.5); cam.lookAt(0, .25, 0); efecto.render(S, cam);
+  const c = lienzo(W, H, x => x.drawImage(renderer.domElement, 0, 0)), x = c.getContext('2d');
+  texto2d(x, '¿QUÉ PAÍS NACE SI', W / 2, 250, 78); texto2d(x, 'LOS FUSIONAMOS?', W / 2, 345, 92, '#ffd23f');
+  chip(x, na, 330, 870, 36); chip(x, nb, 750, 870, 36); texto2d(x, '+', W / 2, 680, 130); texto2d(x, '=', W / 2, 975, 110);
+  chip(x, nf, W / 2, 1640, 52, '#e41e1e', '#000'); marca(x); return c.toDataURL('image/jpeg', .92); };
+// ---------- FORMATO 1 · fusión de banderas (2D plano) ----------
+async function bola2d(x, img, cx, cy, r, ex) { x.save(); x.fillStyle = 'rgba(0,0,0,.25)'; x.beginPath(); x.ellipse(cx, cy + r * 1.05, r * .85, r * .18, 0, 0, 7); x.fill(); x.beginPath(); x.arc(cx, cy, r, 0, 7); x.clip(); x.drawImage(img, cx - r * 1.5, cy - r, r * 3, r * 2);
+  const g = x.createRadialGradient(cx - r * .4, cy - r * .45, r * .1, cx, cy, r * 1.05); g.addColorStop(0, 'rgba(255,255,255,.35)'); g.addColorStop(.5, 'rgba(255,255,255,0)'); g.addColorStop(1, 'rgba(0,0,0,.35)'); x.fillStyle = g; x.fillRect(cx - r, cy - r, 2 * r, 2 * r); x.restore();
+  x.lineWidth = r * .07; x.strokeStyle = '#111'; x.beginPath(); x.arc(cx, cy, r, 0, 7); x.stroke(); x.drawImage(caraLienzo(ex), cx - r * .95, cy - r * 1.0, r * 1.9, r * 1.9); }
+window.fusion2d = async (a, b, na, nb, nf) => { const A = await bandera(a), B = await bandera(b), F = await fusionBandera(a, b);
+  const c = lienzo(W, H, (x) => { x.fillStyle = '#ffe9a8'; x.fillRect(0, 0, W, H); x.fillStyle = 'rgba(230,140,40,.18)'; for (let i = 0; i < 40; i++) for (let j = 0; j < 72; j++) { x.beginPath(); x.arc(i * 28 + (j % 2) * 14, j * 28, 5, 0, 7); x.fill(); } }), x = c.getContext('2d');
+  x.fillStyle = '#ff5a3c'; x.beginPath(); x.moveTo(0, 0); x.lineTo(W, 0); x.lineTo(W, 420); x.lineTo(0, 520); x.fill();
+  texto2d(x, '¿QUÉ PAÍS NACE SI', W / 2, 230, 78); texto2d(x, 'LOS FUSIONAMOS?', W / 2, 330, 92, '#ffe066');
+  await bola2d(x, A, 290, 720, 190, 'normal'); await bola2d(x, B, 790, 720, 190, 'enojo'); texto2d(x, '+', W / 2, 730, 140); chip(x, na, 290, 975, 38); chip(x, nb, 790, 975, 38);
+  texto2d(x, '=', W / 2, 1080, 120); x.save(); x.globalAlpha = .9; x.strokeStyle = '#ff5a3c'; x.lineWidth = 10; x.setLineDash([24, 18]); x.beginPath(); x.arc(W / 2, 1390, 300, 0, 7); x.stroke(); x.restore();
+  await bola2d(x, F, W / 2, 1390, 260, 'feliz'); chip(x, nf, W / 2, 1730, 50, '#e41e1e', '#000'); marca(x); return c.toDataURL('image/jpeg', .92); };
+// ---------- FORMATO 2 · ¿cuántos países caben dentro de Brasil? (tamaño real, proyección de áreas iguales) ----------
+let GEO = null;
+function principal(f) { const g = f.geometry, polys = g.type === 'Polygon' ? [g.coordinates] : g.coordinates; const ar = polys.map(p => d3.geoArea({ type: 'Polygon', coordinates: p })); const i = ar.indexOf(Math.max(...ar)); const c0 = d3.geoCentroid({ type: 'Polygon', coordinates: polys[i] });
+  return { type: 'Feature', properties: f.properties, geometry: { type: 'MultiPolygon', coordinates: polys.filter(p => d3.geoDistance(d3.geoCentroid({ type: 'Polygon', coordinates: p }), c0) < .2) } }; }
+window.caben = async (estilo) => { if (!GEO) GEO = (await (await fetch('/motor-3d/datos-caben.json')).json()).features.map(principal);
+  const ESCALA = 1720, br = GEO.find(f => f.properties.iso === 'BRA'), proyecta = f => d3.geoAzimuthalEqualArea().rotate(d3.geoCentroid(f).map(v => -v)).scale(ESCALA).translate([0, 0]);
+  const pb = proyecta(br), pathB = d3.geoPath(pb); const bbB = pathB.bounds(br), ox = W / 2 - (bbB[0][0] + bbB[1][0]) / 2, oy = 1040 - (bbB[0][1] + bbB[1][1]) / 2;
+  const c = document.createElement('canvas'); c.width = W; c.height = H; const x = c.getContext('2d');
+  if (estilo === 'atlas') { const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#2b6f78'); g.addColorStop(1, '#173f48'); x.fillStyle = g; x.fillRect(0, 0, W, H); x.strokeStyle = 'rgba(190,230,220,.25)'; x.lineWidth = 2.5; for (let j = 0; j < 60; j++) for (let i = 0; i < 14; i++) { const px = i * 84 + (j % 2) * 42, py = j * 34; x.beginPath(); x.moveTo(px, py); x.quadraticCurveTo(px + 9, py - 7, px + 18, py); x.quadraticCurveTo(px + 27, py - 7, px + 36, py); x.stroke(); } }
+  else { x.fillStyle = '#05070d'; x.fillRect(0, 0, W, H); x.strokeStyle = 'rgba(80,140,255,.08)'; x.lineWidth = 1; for (let i = 0; i < W; i += 40) { x.beginPath(); x.moveTo(i, 0); x.lineTo(i, H); x.stroke(); } for (let j = 0; j < H; j += 40) { x.beginPath(); x.moveTo(0, j); x.lineTo(W, j); x.stroke(); } }
+  const pb2 = new Path2D(); const ctxB = d3.geoPath(pb, { moveTo: (a, b) => pb2.moveTo(a + ox, b + oy), lineTo: (a, b) => pb2.lineTo(a + ox, b + oy), closePath: () => pb2.closePath(), arc() {} }); ctxB(br);
+  if (estilo === 'atlas') { x.save(); x.shadowColor = 'rgba(0,0,0,.45)'; x.shadowBlur = 30; x.fillStyle = '#9fcf72'; x.fill(pb2); x.restore(); x.strokeStyle = '#2b1d10'; x.lineWidth = 7; x.stroke(pb2); }
+  else { x.save(); x.shadowColor = '#3bff9a'; x.shadowBlur = 40; x.strokeStyle = '#3bff9a'; x.lineWidth = 6; x.stroke(pb2); x.restore(); x.fillStyle = 'rgba(59,255,154,.06)'; x.fill(pb2); }
+  // colocar países de Europa dentro de Brasil (de mayor a menor)
+  const otros = GEO.filter(f => f.properties.iso !== 'BRA').map(f => ({ f, area: d3.geoArea(f) })).sort((a, b) => b.area - a.area); const colocados = []; const prueba = document.createElement('canvas').getContext('2d');
+  const NEON = ['#ff4fd8', '#3bd1ff', '#ffd23f', '#ff7a3b', '#9b7bff', '#5effb1'];
+  for (const [k, { f }] of otros.entries()) { const p = proyecta(f); const pts = []; d3.geoPath(p, { moveTo: (a, b) => pts.push([a, b]), lineTo: (a, b) => pts.push([a, b]), closePath() {}, arc() {} })(f); const muestra = pts.filter((_, i) => i % Math.max(1, Math.floor(pts.length / 60)) === 0);
+    let hecho = null; for (let gy = 520; gy < 1600 && !hecho; gy += 14) for (let gx = 80; gx < 1000 && !hecho; gx += 14) { if (!muestra.every(([a, b]) => x.isPointInPath(pb2, a + gx, b + gy))) continue; if (colocados.some(c2 => muestra.some(([a, b]) => prueba.isPointInPath(c2, a + gx, b + gy)))) continue; hecho = [gx, gy]; }
+    if (!hecho) continue; const [gx, gy] = hecho, pp = new Path2D(); d3.geoPath(p, { moveTo: (a, b) => pp.moveTo(a + gx, b + gy), lineTo: (a, b) => pp.lineTo(a + gx, b + gy), closePath: () => pp.closePath(), arc() {} })(f);
+    const bb = muestra.reduce((m, [a, b]) => [Math.min(m[0], a + gx), Math.min(m[1], b + gy), Math.max(m[2], a + gx), Math.max(m[3], b + gy)], [1e9, 1e9, -1e9, -1e9]); colocados.push(new Path2D(pp)); const marg = new Path2D(pp); colocados.push(marg);
+    if (estilo === 'atlas') { const img = await bandera(f.properties.a2); x.save(); x.clip(pp); x.drawImage(img, bb[0] - 4, bb[1] - 4, bb[2] - bb[0] + 8, bb[3] - bb[1] + 8); x.restore(); x.strokeStyle = '#2b1d10'; x.lineWidth = 3.5; x.stroke(pp); }
+    else { const col = NEON[k % NEON.length]; x.save(); x.shadowColor = col; x.shadowBlur = 18; x.strokeStyle = col; x.lineWidth = 3.5; x.stroke(pp); x.restore(); x.fillStyle = col + '22'; x.fill(pp); }
+    const cx = (bb[0] + bb[2]) / 2, cy = (bb[1] + bb[3]) / 2, nm = f.properties.nombre.toUpperCase(); if (bb[2] - bb[0] > 70) { x.font = `800 ${Math.max(15, Math.min(24, (bb[2] - bb[0]) / 6))}px M`; x.textAlign = 'center'; x.textBaseline = 'middle'; x.lineWidth = 5; x.strokeStyle = '#000'; x.strokeText(nm, cx, cy); x.fillStyle = '#fff'; x.fillText(nm, cx, cy); }
+    f.properties._ok = true; }
+  const n = GEO.filter(f => f.properties._ok).length; GEO.forEach(f => delete f.properties._ok);
+  if (estilo === 'atlas') { texto2d(x, '¿CUÁNTOS PAÍSES', W / 2, 200, 84); texto2d(x, 'DE EUROPA', W / 2, 295, 84); texto2d(x, 'CABEN EN BRASIL?', W / 2, 390, 84, '#ffd23f'); chip(x, `${n} Y SOBRA ESPACIO`, W / 2, 1720, 46, '#e41e1e', '#000'); }
+  else { texto2d(x, '¿CUÁNTOS PAÍSES', W / 2, 200, 84, '#fff', '#0a2a6a'); texto2d(x, 'DE EUROPA', W / 2, 295, 84, '#fff', '#0a2a6a'); texto2d(x, 'CABEN EN BRASIL?', W / 2, 390, 84, '#3bff9a', '#003a1e'); x.save(); x.shadowColor = '#3bff9a'; x.shadowBlur = 30; texto2d(x, String(n), W / 2, 1730, 150, '#3bff9a', '#003a1e'); x.restore(); }
+  marca(x); return c.toDataURL('image/jpeg', .92); };
+// ---------- FORMATO 3 · podio de bolas-país 3D ----------
+window.podio3d = async (lista, titulo1, titulo2) => { const S = new THREE.Scene(); S.background = fondo3d('#ff9a3c', '#6a1830'); S.add(new THREE.HemisphereLight('#fff6ea', '#7a3a3a', 1.2)); const l = new THREE.DirectionalLight('#fff4e0', 2.6); l.position.set(-5, 9, 8); l.castShadow = true; l.shadow.mapSize.set(2048, 2048); S.add(l);
+  const piso = new THREE.Mesh(new THREE.CircleGeometry(9, 64), toon('#5a1f34')); piso.rotation.x = -Math.PI / 2; piso.receiveShadow = true; S.add(piso);
+  const alturas = [2.6, 1.8, 1.2], xs = [0, -2.5, 2.5], colores = ['#ffd23f', '#d9dde3', '#e0965a'];
+  for (let i = 0; i < 3; i++) { const b = new THREE.Mesh(new RoundedBoxGeometry(2.3, alturas[i], 2.0, 4, .12), toon(colores[i])); b.position.set(xs[i], alturas[i] / 2, 0); b.castShadow = b.receiveShadow = true; S.add(b);
+    const bola = await bola3d(lista[i][0], lista[i][2], .95); bola.position.set(xs[i], alturas[i] + .95, .1); bola.rotation.y = -xs[i] * .08; S.add(bola);
+    if (i === 0) { const cor = new THREE.Group(); const base = new THREE.Mesh(new THREE.CylinderGeometry(.5, .55, .35, 24, 1, true), toon('#ffcf2e', { side: THREE.DoubleSide })); cor.add(base); for (let k = 0; k < 5; k++) { const p = new THREE.Mesh(new THREE.ConeGeometry(.12, .35, 8), toon('#ffcf2e')); const a = k / 5 * Math.PI * 2; p.position.set(Math.cos(a) * .48, .32, Math.sin(a) * .48); cor.add(p); } cor.position.set(0, alturas[0] + 2.0, .05); cor.rotation.z = -.15; S.add(cor); } }
+  renderer.setSize(W, H); const cam = new THREE.PerspectiveCamera(40, W / H, .1, 100); cam.position.set(0, 4.6, 17.5); cam.lookAt(0, 2.6, 0); efecto.render(S, cam);
+  const c = lienzo(W, H, x => x.drawImage(renderer.domElement, 0, 0)), x = c.getContext('2d'); texto2d(x, titulo1, W / 2, 230, 70); texto2d(x, titulo2, W / 2, 320, 62, '#ffd23f');
+  const pos = [[W / 2, 1230], [W * .25, 1310], [W * .75, 1370]]; for (let i = 0; i < 3; i++) { texto2d(x, String(i + 1), pos[i][0], pos[i][1], 110, '#fff'); chip(x, lista[i][1], pos[i][0], pos[i][1] + 150, 34); chip(x, lista[i][3], pos[i][0], pos[i][1] + 215, 30, '#e41e1e', '#000'); }
+  marca(x); return c.toDataURL('image/jpeg', .92); };
+window.listo = true;
+</script></body></html>

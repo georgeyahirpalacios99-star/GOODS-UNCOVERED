@@ -1,0 +1,24 @@
+{
+  "salida": "001-records-mercancia",
+  "volumen_musica": 0.12,
+  "items": [
+    { "imagen": "01", "etiqueta": "El alimento más robado del mundo", "respuesta": "el queso",
+      "narracion": "El alimento más robado del mundo es el queso." },
+    { "imagen": "02", "etiqueta": "La especia más cara del mundo", "respuesta": "el azafrán",
+      "narracion": "La especia más cara del mundo es el azafrán." },
+    { "imagen": "03", "etiqueta": "La mercancía que más dinero mueve", "respuesta": "el petróleo",
+      "narracion": "La mercancía que más dinero mueve en el mundo es el petróleo." },
+    { "imagen": "04", "etiqueta": "El alimento que nunca caduca", "respuesta": "la miel",
+      "narracion": "El alimento que nunca caduca es la miel." },
+    { "imagen": "05", "etiqueta": "La bebida más consumida después del agua", "respuesta": "el té",
+      "narracion": "La bebida más consumida después del agua es el té." },
+    { "imagen": "06", "etiqueta": "El cultivo que más se produce", "respuesta": "la caña de azúcar",
+      "narracion": "El cultivo que más se produce en el mundo es la caña de azúcar." },
+    { "imagen": "07", "etiqueta": "La fruta más cara jamás subastada", "respuesta": "el melón Yubari",
+      "narracion": "La fruta más cara jamás subastada es el melón Yubari." },
+    { "imagen": "08", "etiqueta": "Lo falso que más decomisan en aduanas", "respuesta": "los zapatos",
+      "narracion": "El producto falso que más decomisan en aduanas son los zapatos." }
+  ],
+  "cierre": { "imagen": "09", "etiqueta": "Síguenos",
+    "narracion": "Síguenos para saber lo que nadie te cuenta de lo que compras." }
+}
