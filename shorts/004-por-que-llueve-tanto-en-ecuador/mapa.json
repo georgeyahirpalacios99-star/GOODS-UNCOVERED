@@ -2,7 +2,7 @@
  "estilo": "fantasia",
  "formato": "vertical",
  "salida": "por-que-llueve-tanto-en-ecuador",
- "duracion": 61.74,
+ "duracion": 60.74,
  "camara": [
   {
    "t": 0,
@@ -24,178 +24,178 @@
    "ancho": 8.8
   },
   {
-   "t": 1.63,
+   "t": 1.64,
    "lon": -78.3,
    "lat": -2.75,
    "ancho": 8.8,
    "suave": false
   },
   {
-   "t": 2.01,
+   "t": 2.02,
    "lon": -77.95,
    "lat": -1.6,
    "ancho": 3.6
   },
   {
-   "t": 4.07,
+   "t": 4.12,
    "lon": -77.95,
    "lat": -1.6,
    "ancho": 3.6,
    "suave": false
   },
   {
-   "t": 4.45,
+   "t": 4.5,
    "lon": -80.72,
    "lat": -2.3,
    "ancho": 3.3
   },
   {
-   "t": 5.31,
+   "t": 5.43,
    "lon": -80.72,
    "lat": -2.3,
    "ancho": 3.3,
    "suave": false
   },
   {
-   "t": 5.81,
+   "t": 5.93,
    "lon": -78.3,
    "lat": -2.75,
    "ancho": 8.8
   },
   {
-   "t": 12.51,
+   "t": 12.54,
    "lon": -78.3,
    "lat": -2.75,
    "ancho": 8.8,
    "suave": false
   },
   {
-   "t": 14.11,
+   "t": 14.14,
    "lon": -78.4,
    "lat": -2.5,
    "ancho": 8.0
   },
   {
-   "t": 14.91,
+   "t": 14.74,
    "lon": -78.4,
    "lat": -2.5,
    "ancho": 8.0,
    "suave": false
   },
   {
-   "t": 15.41,
+   "t": 15.24,
    "lon": -77.6,
    "lat": -1.6,
    "ancho": 2.2
   },
   {
-   "t": 24.63,
+   "t": 25.13,
    "lon": -80.25,
    "lat": -2.45,
    "ancho": 5.6,
    "suave": false
   },
   {
-   "t": 30.34,
+   "t": 30.66,
    "lon": -80.25,
    "lat": -2.45,
    "ancho": 5.6,
    "suave": false
   },
   {
-   "t": 30.79,
+   "t": 31.11,
    "lon": -80.7,
    "lat": -2.35,
    "ancho": 3.4
   },
   {
-   "t": 33.49,
+   "t": 33.65,
    "lon": -80.7,
    "lat": -2.35,
    "ancho": 3.4,
    "suave": false
   },
   {
-   "t": 34.09,
+   "t": 34.25,
    "lon": -80.0,
    "lat": -2.0,
    "ancho": 5.2
   },
   {
-   "t": 35.69,
+   "t": 36.04,
    "lon": -80.0,
    "lat": -2.0,
    "ancho": 5.2,
    "suave": false
   },
   {
-   "t": 36.14,
+   "t": 36.49,
    "lon": -78.6,
    "lat": -1.45,
    "ancho": 4.3
   },
   {
-   "t": 39.07,
+   "t": 38.99,
    "lon": -78.6,
    "lat": -1.45,
    "ancho": 4.3,
    "suave": false
   },
   {
-   "t": 40.07,
+   "t": 39.99,
    "lon": -80.4,
    "lat": -2.6,
    "ancho": 11.0,
    "arco": 0.15
   },
   {
-   "t": 42.16,
+   "t": 42.33,
    "lon": -80.4,
    "lat": -2.6,
    "ancho": 11.0,
    "suave": false
   },
   {
-   "t": 42.96,
+   "t": 43.13,
    "lon": -80.6,
    "lat": -2.7,
    "ancho": 6.2
   },
   {
-   "t": 46.86,
+   "t": 46.43,
    "lon": -80.6,
    "lat": -2.7,
    "ancho": 6.2,
    "suave": false
   },
   {
-   "t": 47.66,
+   "t": 47.23,
    "lon": -79.9,
    "lat": -2.55,
    "ancho": 9.2
   },
   {
-   "t": 50.0,
+   "t": 49.59,
    "lon": -79.9,
    "lat": -2.55,
    "ancho": 9.2,
    "suave": false
   },
   {
-   "t": 50.7,
+   "t": 50.29,
    "lon": -80.3,
    "lat": -2.5,
    "ancho": 8.0
   },
   {
-   "t": 56.17,
+   "t": 55.65,
    "lon": -80.3,
    "lat": -2.5,
    "ancho": 8.0,
    "suave": false
   },
   {
-   "t": 56.97,
+   "t": 56.45,
    "lon": -78.3,
    "lat": -2.75,
    "ancho": 8.8
@@ -203,37 +203,37 @@
  ],
  "sacudidas": [
   {
-   "t": 3.03,
+   "t": 3.05,
    "dur": 0.5,
    "fuerza": 12
   },
   {
-   "t": 7.42,
+   "t": 7.22,
    "dur": 0.5,
    "fuerza": 9
   },
   {
-   "t": 23.5,
+   "t": 23.98,
    "dur": 0.5,
    "fuerza": 8
   },
   {
-   "t": 32.44,
+   "t": 32.72,
    "dur": 0.5,
    "fuerza": 8
   },
   {
-   "t": 40.72,
+   "t": 40.73,
    "dur": 0.5,
    "fuerza": 10
   },
   {
-   "t": 43.79,
+   "t": 43.89,
    "dur": 0.5,
    "fuerza": 12
   },
   {
-   "t": 52.67,
+   "t": 52.31,
    "dur": 0.6,
    "fuerza": 16
   }
@@ -247,112 +247,112 @@
  "narracion": [
   {
    "desde": 0.75,
-   "hasta": 5.05,
+   "hasta": 5.1,
    "texto": "En Ecuador hay un lugar donde llueve veinticinco veces más que en otro."
   },
   {
-   "desde": 5.31,
-   "hasta": 8.19,
+   "desde": 5.43,
+   "hasta": 7.89,
    "texto": "Y están a solo trescientos cuarenta kilómetros."
   },
   {
-   "desde": 8.45,
-   "hasta": 9.1,
+   "desde": 8.23,
+   "hasta": 8.89,
    "texto": "La razón:"
   },
   {
-   "desde": 9.36,
-   "hasta": 12.25,
+   "desde": 9.22,
+   "hasta": 12.19,
    "texto": "Ecuador no tiene una sola temporada de lluvias."
   },
   {
-   "desde": 12.51,
-   "hasta": 15.1,
+   "desde": 12.54,
+   "hasta": 14.87,
    "texto": "Cada región llueve por un motivo distinto."
   },
   {
-   "desde": 15.36,
-   "hasta": 18.65,
+   "desde": 15.19,
+   "hasta": 18.57,
    "texto": "En la Amazonía, el aire húmedo choca contra los Andes…"
   },
   {
-   "desde": 18.91,
-   "hasta": 19.97,
+   "desde": 18.84,
+   "hasta": 20.44,
    "texto": "sube, se enfría…"
   },
   {
-   "desde": 20.23,
-   "hasta": 21.18,
+   "desde": 20.71,
+   "hasta": 21.63,
    "texto": "y se descarga."
   },
   {
-   "desde": 21.44,
-   "hasta": 24.32,
+   "desde": 21.95,
+   "hasta": 24.75,
    "texto": "En Puyo caen unos cuatro mil milímetros al año."
   },
   {
-   "desde": 24.58,
-   "hasta": 26.47,
+   "desde": 25.08,
+   "hasta": 26.74,
    "texto": "En la Costa pasa lo contrario:"
   },
   {
-   "desde": 26.73,
-   "hasta": 30.08,
+   "desde": 27.06,
+   "hasta": 30.31,
    "texto": "la corriente fría de Humboldt no deja crecer las nubes."
   },
   {
-   "desde": 30.34,
-   "hasta": 33.23,
+   "desde": 30.66,
+   "hasta": 33.47,
    "texto": "Salinas recibe apenas ciento veinte milímetros,"
   },
   {
-   "desde": 33.49,
-   "hasta": 35.43,
+   "desde": 33.65,
+   "hasta": 35.74,
    "texto": "casi todos entre enero y abril."
   },
   {
-   "desde": 35.69,
-   "hasta": 38.81,
+   "desde": 36.04,
+   "hasta": 38.66,
    "texto": "Y en la Sierra hay dos temporadas de lluvia al año."
   },
   {
-   "desde": 39.07,
-   "hasta": 41.9,
+   "desde": 38.99,
+   "hasta": 41.97,
    "texto": "Pero cada pocos años el mar cambia las reglas."
   },
   {
-   "desde": 42.16,
-   "hasta": 44.33,
+   "desde": 42.33,
+   "hasta": 44.41,
    "texto": "Los pescadores lo llamaron El Niño,"
   },
   {
-   "desde": 44.59,
-   "hasta": 46.6,
+   "desde": 44.55,
+   "hasta": 46.12,
    "texto": "porque llegaba cerca de Navidad."
   },
   {
-   "desde": 46.86,
-   "hasta": 49.74,
+   "desde": 46.43,
+   "hasta": 49.25,
    "texto": "El agua se calienta y empieza a fabricar nubes."
   },
   {
-   "desde": 50.0,
-   "hasta": 53.0,
+   "desde": 49.59,
+   "hasta": 52.68,
    "texto": "Hoy el mar de Ecuador llegó a veintinueve grados:"
   },
   {
-   "desde": 53.26,
-   "hasta": 55.91,
+   "desde": 52.85,
+   "hasta": 55.32,
    "texto": "más que en mil novecientos noventa y siete."
   },
   {
-   "desde": 56.17,
-   "hasta": 58.18,
+   "desde": 55.65,
+   "hasta": 57.38,
    "texto": "¿En tu ciudad cuándo llueve más?"
   },
   {
-   "desde": 58.44,
-   "hasta": 60.56,
+   "desde": 57.65,
+   "hasta": 59.56,
    "texto": "Escríbelo y lo ponemos en el mapa."
   }
  ],
@@ -362,31 +362,31 @@
  "eventos": [
   {
    "tipo": "regiones3",
-   "desde": 9.83,
+   "desde": 9.71,
    "paso": 0.25,
    "foco": [
     [
-     12.51,
+     12.54,
      "costa"
     ],
     [
-     13.21,
+     13.17,
      "sierra"
     ],
     [
-     14.03,
+     13.91,
      "amazonia"
     ]
    ],
-   "hasta": 15.61
+   "hasta": 15.44
   },
   {
    "tipo": "tinte",
-   "desde": 49.24,
+   "desde": 48.77,
    "region": "amazonia",
    "color": "#d9a441",
    "alfa": 0.5,
-   "hasta": 56.77
+   "hasta": 56.25
   },
   {
    "tipo": "tormenta",
@@ -396,11 +396,11 @@
    "r": 1.75,
    "sem": 3,
    "rayos": [
-    2.36,
-    3.23,
-    3.92
+    2.38,
+    3.25,
+    3.97
    ],
-   "hasta": 8.45
+   "hasta": 8.23
   },
   {
    "tipo": "seco",
@@ -409,11 +409,11 @@
    "lat": -2.25,
    "r": 0.55,
    "remolino": true,
-   "hasta": 8.45
+   "hasta": 8.23
   },
   {
    "tipo": "tormenta",
-   "desde": 12.51,
+   "desde": 12.54,
    "lon": -79.9,
    "lat": -1.5,
    "r": 0.75,
@@ -421,19 +421,19 @@
    "fi": 0.2,
    "fo": 0.3,
    "oscura": false,
-   "hasta": 13.41
+   "hasta": 13.37
   },
   {
    "tipo": "seco",
-   "desde": 13.01,
+   "desde": 13.04,
    "lon": -80.0,
    "lat": -1.6,
    "r": 0.7,
-   "hasta": 13.51
+   "hasta": 13.47
   },
   {
    "tipo": "tormenta",
-   "desde": 13.21,
+   "desde": 13.17,
    "lon": -78.65,
    "lat": -1.1,
    "r": 0.6,
@@ -441,43 +441,43 @@
    "fi": 0.2,
    "fo": 0.3,
    "rayos": [
-    13.46
+    13.42
    ],
-   "hasta": 14.13
+   "hasta": 14.01
   },
   {
    "tipo": "tormenta",
-   "desde": 14.03,
+   "desde": 13.91,
    "lon": -77.0,
    "lat": -1.7,
    "r": 1.15,
    "sem": 13,
    "fi": 0.2,
-   "hasta": 15.66
+   "hasta": 15.49
   },
   {
    "tipo": "seco",
-   "desde": 30.34,
+   "desde": 30.66,
    "lon": -80.72,
    "lat": -2.25,
    "r": 0.5,
    "remolino": true,
-   "hasta": 33.89
+   "hasta": 34.05
   },
   {
    "tipo": "tormenta",
-   "desde": 34.33,
+   "desde": 34.55,
    "lon": -80.0,
    "lat": -1.6,
    "r": 0.9,
    "sem": 21,
    "oscura": false,
    "crece": 0.8,
-   "hasta": 36.09
+   "hasta": 36.44
   },
   {
    "tipo": "tormenta",
-   "desde": 36.81,
+   "desde": 36.97,
    "lon": -78.55,
    "lat": -0.95,
    "r": 0.55,
@@ -485,13 +485,13 @@
    "fi": 0.2,
    "fo": 0.25,
    "rayos": [
-    37.11
+    37.27
    ],
-   "hasta": 37.66
+   "hasta": 37.82
   },
   {
    "tipo": "tormenta",
-   "desde": 37.69,
+   "desde": 37.71,
    "lon": -78.75,
    "lat": -2.2,
    "r": 0.55,
@@ -499,13 +499,13 @@
    "fi": 0.2,
    "fo": 0.25,
    "rayos": [
-    37.94
+    37.96
    ],
-   "hasta": 39.27
+   "hasta": 39.19
   },
   {
    "tipo": "tormenta",
-   "desde": 48.74,
+   "desde": 48.27,
    "lon": -80.0,
    "lat": -1.75,
    "r": 1.35,
@@ -513,22 +513,22 @@
    "desdeMar": true,
    "crece": 1.2,
    "rayos": [
-    49.94,
-    52.37
+    49.47,
+    52.01
    ],
-   "hasta": 56.67
+   "hasta": 56.15
   },
   {
    "tipo": "inundacion",
-   "desde": 49.54,
+   "desde": 49.07,
    "lon": -79.65,
    "lat": -1.75,
    "r": 0.85,
-   "hasta": 56.77
+   "hasta": 56.25
   },
   {
    "tipo": "trazo",
-   "desde": 5.78,
+   "desde": 5.83,
    "de": [
     -78.0,
     -1.49
@@ -537,11 +537,11 @@
     -80.95,
     -2.21
    ],
-   "hasta": 12.51
+   "hasta": 12.54
   },
   {
    "tipo": "nubesBajas",
-   "desde": 28.49,
+   "desde": 28.76,
    "puntos": [
     [
      -80.15,
@@ -557,17 +557,17 @@
     ]
    ],
    "llovizna": true,
-   "hasta": 33.79
+   "hasta": 33.95
   },
   {
    "tipo": "girar",
-   "desde": 14.03,
+   "desde": 13.91,
    "vueltas": 2,
-   "hasta": 15.23
+   "hasta": 15.11
   },
   {
    "tipo": "corriente",
-   "desde": 26.73,
+   "desde": 27.06,
    "mar": true,
    "ruta": [
     [
@@ -599,11 +599,11 @@
    "brillo": "#dfe8ff",
    "ancho": 0.3,
    "frio": true,
-   "hasta": 33.49
+   "hasta": 33.65
   },
   {
    "tipo": "corriente",
-   "desde": 33.49,
+   "desde": 33.65,
    "mar": true,
    "ruta": [
     [
@@ -630,70 +630,70 @@
    "color": "#ff8a3d",
    "brillo": "#fff1c9",
    "ancho": 0.4,
-   "hasta": 35.99
+   "hasta": 36.34
   },
   {
    "tipo": "calor",
-   "desde": 47.33,
+   "desde": 46.89,
    "mar": true,
-   "hasta": 56.77
+   "hasta": 56.25
   },
   {
    "tipo": "noche",
-   "desde": 42.06,
+   "desde": 42.23,
    "lon": -81.0,
    "lat": -2.75,
    "estrella": [
     790,
     640
    ],
-   "hasta": 47.26
+   "hasta": 46.83
   },
   {
    "tipo": "corte",
-   "desde": 15.41,
-   "tAire": 0.8941176470588239,
-   "tFrio": 3.6641176470588226,
-   "tNube": 3.5041176470588233,
-   "tLluvia": 4.944117647058825,
-   "tZoom": 6.0341176470588245,
+   "desde": 15.24,
+   "tAire": 1.174199999999999,
+   "tFrio": 3.8242000000000003,
+   "tNube": 3.6041999999999987,
+   "tLluvia": 5.594199999999997,
+   "tZoom": 6.714199999999998,
    "rayos": [
-    5.244117647058824,
-    7.294117647058823,
-    8.384117647058822
+    5.894199999999997,
+    7.9441999999999995,
+    8.9942
    ],
-   "hasta": 24.83
+   "hasta": 25.33
   },
   {
    "tipo": "nubesPaso",
-   "desde": 14.91,
-   "hasta": 15.91
+   "desde": 14.74,
+   "hasta": 15.74
   },
   {
    "tipo": "chip",
-   "desde": 2.16,
+   "desde": 2.18,
    "lon": -78.0,
    "lat": -1.49,
    "dy": -78,
    "texto": "PUYO",
    "flecha": true,
    "tam": 44,
-   "hasta": 8.45,
+   "hasta": 8.23,
    "arriba": true
   },
   {
    "tipo": "cifra",
-   "desde": 2.93,
+   "desde": 2.95,
    "texto": "×25",
    "sub": "MÁS LLUVIA",
    "tam": 230,
    "y": 300,
-   "hasta": 6.19,
+   "hasta": 6.18,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 4.32,
+   "desde": 4.37,
    "lon": -80.95,
    "lat": -2.21,
    "dy": -78,
@@ -701,181 +701,181 @@
    "flecha": true,
    "tam": 44,
    "color": "#ff9a3c",
-   "hasta": 8.45,
+   "hasta": 8.23,
    "arriba": true
   },
   {
    "tipo": "contador",
-   "desde": 6.19,
+   "desde": 6.18,
    "de": 0,
    "a": 340,
    "suf": " km",
    "sub": "EN LÍNEA RECTA",
    "tam": 200,
    "y": 300,
-   "hasta": 8.55,
+   "hasta": 8.33,
    "arriba": true
   },
   {
    "tipo": "titulo",
-   "desde": 8.45,
+   "desde": 8.23,
    "texto": "¿POR *QUÉ*?",
    "tam": 150,
    "y": 300,
-   "hasta": 12.51,
+   "hasta": 12.54,
    "arriba": true
   },
   {
    "tipo": "titulo",
-   "desde": 12.51,
+   "desde": 12.54,
    "texto": "CADA REGIÓN, *SU LLUVIA*",
    "tam": 72,
    "y": 300,
-   "hasta": 15.01,
+   "hasta": 14.84,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 12.51,
+   "desde": 12.54,
    "lon": -80.05,
    "lat": -1.25,
    "texto": "COSTA",
    "tam": 38,
-   "hasta": 15.01,
+   "hasta": 14.84,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 13.21,
+   "desde": 13.17,
    "lon": -78.72,
    "lat": -1.05,
    "texto": "SIERRA",
    "tam": 38,
-   "hasta": 15.01,
+   "hasta": 14.84,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 14.03,
+   "desde": 13.91,
    "lon": -76.95,
    "lat": -1.75,
    "texto": "AMAZONÍA",
    "tam": 38,
-   "hasta": 15.01,
+   "hasta": 14.84,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 15.36,
+   "desde": 15.19,
    "x": 890,
    "y": 1110,
    "texto": "AMAZONÍA",
    "tam": 34,
    "color": "#5fb35a",
-   "hasta": 24.58,
+   "hasta": 25.08,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 16.3,
+   "desde": 16.41,
    "x": 880,
    "y": 980,
    "texto": "AIRE HÚMEDO",
    "tam": 36,
    "color": "#3fd0c4",
-   "hasta": 20.35,
+   "hasta": 20.83,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 17.53,
+   "desde": 17.54,
    "x": 660,
    "y": 690,
    "texto": "LOS ANDES",
    "tam": 40,
-   "hasta": 21.44,
+   "hasta": 21.95,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 19.27,
+   "desde": 19.26,
    "x": 450,
    "y": 640,
    "texto": "SE ENFRÍA",
    "tam": 40,
    "color": "#bfe9ff",
-   "hasta": 20.75,
+   "hasta": 21.23,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 21.44,
+   "desde": 21.95,
    "x": 860,
    "y": 1065,
    "texto": "PUYO",
    "tam": 38,
    "flecha": true,
-   "hasta": 24.58,
+   "hasta": 25.08,
    "arriba": true
   },
   {
    "tipo": "contador",
-   "desde": 22.5,
+   "desde": 22.98,
    "de": 0,
    "a": 4000,
    "suf": " mm",
    "sub": "DE LLUVIA AL AÑO",
    "tam": 170,
    "y": 330,
-   "hasta": 24.68,
+   "hasta": 25.18,
    "arriba": true
   },
   {
    "tipo": "titulo",
-   "desde": 25.29,
+   "desde": 25.7,
    "texto": "LA COSTA: *AL REVÉS*",
    "tam": 92,
    "y": 300,
-   "hasta": 26.73,
+   "hasta": 27.06,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 27.33,
+   "desde": 27.66,
    "lon": -81.7,
    "lat": -3.6,
    "texto": "FRÍA",
    "tam": 30,
    "color": "#bfe9ff",
-   "hasta": 30.34,
+   "hasta": 30.66,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 27.79,
+   "desde": 28.08,
    "lon": -81.55,
    "lat": -3.05,
    "texto": "CORRIENTE DE HUMBOLDT",
    "tam": 34,
    "color": "#9d97ff",
-   "hasta": 30.34,
+   "hasta": 30.66,
    "arriba": true
   },
   {
    "tipo": "contador",
-   "desde": 31.64,
+   "desde": 31.92,
    "de": 0,
    "a": 120,
    "suf": " mm",
    "sub": "AL AÑO EN SALINAS",
    "tam": 170,
    "y": 330,
-   "hasta": 35.69,
+   "hasta": 36.04,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 34.13,
+   "desde": 34.35,
    "lon": -80.95,
    "lat": -2.21,
    "dy": -80,
@@ -883,197 +883,197 @@
    "tam": 36,
    "color": "#ff9a3c",
    "flecha": true,
-   "hasta": 35.69,
+   "hasta": 36.04,
    "arriba": true
   },
   {
    "tipo": "titulo",
-   "desde": 36.81,
+   "desde": 36.97,
    "texto": "SIERRA: *2* TEMPORADAS",
    "tam": 92,
    "y": 300,
-   "hasta": 39.07,
+   "hasta": 38.99,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 36.81,
+   "desde": 36.97,
    "lon": -78.55,
    "lat": -0.95,
    "dy": -90,
    "texto": "1",
    "tam": 40,
-   "hasta": 39.07,
+   "hasta": 38.99,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 37.69,
+   "desde": 37.71,
    "lon": -78.75,
    "lat": -2.2,
    "dy": -90,
    "texto": "2",
    "tam": 40,
-   "hasta": 39.07,
+   "hasta": 38.99,
    "arriba": true
   },
   {
    "tipo": "titulo",
-   "desde": 40.31,
+   "desde": 40.3,
    "texto": "EL MAR *CAMBIA*\nLAS REGLAS",
    "tam": 92,
    "y": 300,
-   "hasta": 42.16,
+   "hasta": 42.33,
    "arriba": true
   },
   {
    "tipo": "caja",
-   "desde": 43.74,
+   "desde": 43.84,
    "x": 540,
    "y": 330,
    "texto": "EL NIÑO",
    "tam": 130,
-   "hasta": 46.86,
+   "hasta": 46.43,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 45.48,
+   "desde": 45.23,
    "x": 540,
    "y": 500,
    "texto": "LLEGABA EN NAVIDAD",
    "tam": 40,
-   "hasta": 47.06,
+   "hasta": 46.63,
    "arriba": true
   },
   {
    "tipo": "titulo",
-   "desde": 47.33,
+   "desde": 46.89,
    "texto": "EL AGUA SE *CALIENTA*",
    "tam": 88,
    "y": 300,
-   "hasta": 48.94,
+   "hasta": 48.47,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 48.94,
+   "desde": 48.47,
    "x": 540,
    "y": 330,
    "texto": "¡FABRICA NUBES!",
    "tam": 52,
-   "hasta": 50.0,
+   "hasta": 49.59,
    "arriba": true
   },
   {
    "tipo": "contador",
-   "desde": 51.77,
+   "desde": 51.41,
    "de": 24,
    "a": 29,
    "suf": " °C",
    "sub": "MÁS QUE EN 1997",
    "tam": 200,
    "y": 300,
-   "hasta": 56.17,
+   "hasta": 55.65,
    "arriba": true
   },
   {
    "tipo": "titulo",
-   "desde": 56.17,
+   "desde": 55.65,
    "texto": "¿Y EN *TU CIUDAD*?",
    "tam": 110,
-   "y": 300,
-   "hasta": 61.74,
+   "y": 270,
+   "hasta": 60.74,
    "arriba": true
   },
   {
    "tipo": "chip",
-   "desde": 58.44,
+   "desde": 57.65,
    "x": 540,
-   "y": 470,
+   "y": 395,
    "texto": "COMENTA Y LA PONEMOS EN EL MAPA",
    "tam": 36,
-   "hasta": 61.74,
+   "hasta": 60.74,
    "arriba": true
   },
   {
    "tipo": "pin",
-   "desde": 59.14,
+   "desde": 58.28,
    "lon": -78.47,
    "lat": -0.18,
    "escala": 1.6,
    "color": "#ffd23f",
-   "hasta": 61.74,
+   "hasta": 60.74,
    "arriba": true
   },
   {
    "tipo": "pin",
-   "desde": 59.26,
+   "desde": 58.4,
    "lon": -79.9,
    "lat": -2.19,
    "escala": 1.6,
    "color": "#ffd23f",
-   "hasta": 61.74,
+   "hasta": 60.74,
    "arriba": true
   },
   {
    "tipo": "pin",
-   "desde": 59.38,
+   "desde": 58.52,
    "lon": -79.0,
    "lat": -2.9,
    "escala": 1.6,
    "color": "#ffd23f",
-   "hasta": 61.74,
+   "hasta": 60.74,
    "arriba": true
   },
   {
    "tipo": "pin",
-   "desde": 59.5,
+   "desde": 58.64,
    "lon": -80.72,
    "lat": -0.95,
    "escala": 1.6,
    "color": "#ffd23f",
-   "hasta": 61.74,
+   "hasta": 60.74,
    "arriba": true
   },
   {
    "tipo": "pin",
-   "desde": 59.62,
+   "desde": 58.76,
    "lon": -79.7,
    "lat": 0.97,
    "escala": 1.6,
    "color": "#ffd23f",
-   "hasta": 61.74,
+   "hasta": 60.74,
    "arriba": true
   },
   {
    "tipo": "pin",
-   "desde": 59.74,
+   "desde": 58.88,
    "lon": -78.62,
    "lat": -1.24,
    "escala": 1.6,
    "color": "#ffd23f",
-   "hasta": 61.74,
+   "hasta": 60.74,
    "arriba": true
   },
   {
    "tipo": "pin",
-   "desde": 59.86,
+   "desde": 59.0,
    "lon": -79.2,
    "lat": -4.0,
    "escala": 1.6,
    "color": "#ffd23f",
-   "hasta": 61.74,
+   "hasta": 60.74,
    "arriba": true
   },
   {
    "tipo": "pin",
-   "desde": 59.98,
+   "desde": 59.12,
    "lon": -77.81,
    "lat": -0.99,
    "escala": 1.6,
    "color": "#ffd23f",
-   "hasta": 61.74,
+   "hasta": 60.74,
    "arriba": true
   },
   {
@@ -1084,5 +1084,6 @@
    "hasta": 1.6
   }
  ],
- "fundido_inicio": 0
+ "fundido_inicio": 0,
+ "audio": ".tmp/voz.wav"
 }

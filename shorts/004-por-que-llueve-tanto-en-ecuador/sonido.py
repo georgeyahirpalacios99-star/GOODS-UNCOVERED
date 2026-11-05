@@ -1,182 +1,261 @@
-"""Short 004 · música original (sintetizada, sin derechos) + efectos atados a cada evento + mezcla con la voz.
+"""Short 004 · diseño de sonido profesional en estéreo (todo sintetizado aquí: sin derechos de autor) + mezcla con la voz.
     python3 shorts/004-por-que-llueve-tanto-en-ecuador/sonido.py      (después de construir.py y del render)
-La voz NO se toca: solo se le suma música por debajo y efectos. Sin voz, deja una vista previa con música y efectos.
+- Cada evento del mapa tiene su sonido: gota, tormentas y truenos, cada texto, cada número, cada zoom y cada paneo de cámara
+  (paneado a izquierda/derecha según hacia dónde se mueve la imagen), transiciones con barridos y golpes de cine.
+- Música original: trap/cinemática a 130 BPM con 808, palmas con reverb, hi-hats con redobles, pads con bombeo y arpegio con eco;
+  cambia por sección, frena en seco ("tape stop") en el giro de la historia y vuelve con todo en El Niño.
+- La voz NO se toca: va al centro, encima de todo; música y efectos bajan solos cuando habla.
 """
-import json, subprocess, sys, wave
+import json, subprocess, wave
 from pathlib import Path
 import numpy as np
+from scipy import signal
 D = Path(__file__).resolve().parent; SR = 48000
-rng = np.random.default_rng(3)
-T = lambda d: np.arange(int(d * SR)) / SR
-def norm(s): m = np.abs(s).max(); return (s / m if m > 0 else s).astype(np.float32)
-def suave(x, n): k = np.ones(n) / n; return np.convolve(x, k, 'same')
-def ruido(d): return rng.standard_normal(int(d * SR))
+rng = np.random.default_rng(7)
+tt = lambda d: np.arange(int(d * SR)) / SR
+nz = lambda d: rng.standard_normal(int(d * SR))
+def filt(x, kind, f, order=2): return signal.sosfilt(signal.butter(order, f, btype=kind, fs=SR, output='sos'), x)
+def norm(x, p=1.0): m = np.abs(x).max(); return (x / m * p if m > 0 else x).astype(np.float32)
+def env_ar(n, a, r): e = np.ones(n); ia, ir = min(n, int(a * SR)), min(n, int(r * SR)); e[:ia] = np.linspace(0, 1, ia) if ia else e[:ia]; e[n - ir:] = np.minimum(e[n - ir:], np.linspace(1, 0, ir)) if ir else e[n - ir:]; return e
+def fase(f): return 2 * np.pi * np.cumsum(f) / SR
+def bandas(x, centro, ancho=.35):
+    """Filtro de banda que se mueve en el tiempo (centro en Hz por muestra): mezcla 12 bandas fijas con pesos gaussianos en escala log."""
+    fs = np.geomspace(150, 9000, 12); out = np.zeros_like(x); lc = np.log(np.maximum(centro, 60))
+    for i, f in enumerate(fs):
+        lo, hi = f / 1.35, min(f * 1.35, SR / 2 - 100); b = signal.sosfilt(signal.butter(2, [lo, hi], btype='band', fs=SR, output='sos'), x)
+        out += b * np.exp(-((np.log(f) - lc) ** 2) / (2 * ancho ** 2))
+    return out
 
-# ---------------- efectos ----------------
-def whoosh(d=.45): t = T(d); env = np.sin(np.pi * t / t[-1]) ** 2; n = ruido(d); return norm((suave(n, 24) * .7 + (n - suave(n, 6)) * .15) * env)
-def impacto(): t = T(1.1); s = np.sin(2 * np.pi * np.cumsum(38 + 60 * np.exp(-t * 7)) / SR) * np.exp(-t * 4); s += suave(ruido(1.1), 8) * np.exp(-t * 26) * 1.2; return norm(s)
-def golpe(): t = T(.35); s = np.sin(2 * np.pi * np.cumsum(90 + 130 * np.exp(-t * 18)) / SR) * np.exp(-t * 11) + suave(ruido(.35), 4) * np.exp(-t * 45) * .6; return norm(s)
-def pop(f0=520): t = T(.1); return norm(np.sin(2 * np.pi * np.cumsum(f0 + f0 * 1.3 * t / t[-1]) / SR) * np.exp(-t * 40))
-def ding(f=1568): t = T(.8); return norm(sum(a * np.sin(2 * np.pi * f * m * t) * np.exp(-t * k) for m, a, k in [(1, .6, 5), (1.5, .3, 8), (2, .15, 11)]))
-def riser(d=1.2): t = T(d); n = ruido(d); f = 200 + 2200 * (t / d) ** 2; s = np.sin(2 * np.pi * np.cumsum(f) / SR) * .4 + (n - suave(n, 3)) * .5 * (t / d); return norm(s * (t / d) ** 1.5)
-def latido():  # dos golpes graves de corazón
-    t = T(.18); g = np.sin(2 * np.pi * np.cumsum(48 + 40 * np.exp(-t * 30)) / SR) * np.exp(-t * 22)
-    s = np.zeros(int(.5 * SR)); s[:len(g)] += g; i = int(.2 * SR); s[i:i + len(g)] += .7 * g; return norm(s)
-def agua(d=1.8):  # ola que entra donde estaba el país
-    t = T(d); n = ruido(d); env = np.minimum(1, t / .35) * np.exp(-np.maximum(0, t - .35) * 1.9)
-    s = suave(n, 40) * .9 + suave(n, 9) * .35 * (.6 + .4 * np.sin(2 * np.pi * 7 * t)); return norm(s * env)
-def grieta():  # crujido seco
-    t = T(.45); s = np.zeros(len(t))
-    for k in range(9):
-        i = int(rng.uniform(0, .25) * SR); L = int(.03 * SR); s[i:i + L] += ruido(.03)[:len(s[i:i + L])] * np.exp(-np.arange(min(L, len(s) - i)) / SR * 90) * rng.uniform(.4, 1)
-    return norm(s + .3 * np.sin(2 * np.pi * 70 * t) * np.exp(-t * 9))
-def zap(d=1.2):  # chispazo eléctrico + bajón de tensión
-    t = T(d); zum = np.sign(np.sin(2 * np.pi * 120 * t)) * .25 * (np.sin(2 * np.pi * 9 * t) > -.2)
-    caida = np.sin(2 * np.pi * np.cumsum(420 * np.exp(-t * 2.4) + 40) / SR) * .6
-    chis = (ruido(d) - suave(ruido(d), 3)) * (np.exp(-t * 18) + .3 * (np.sin(2 * np.pi * 13 * t) > .7))
-    return norm((zum + caida + chis * .5) * np.exp(-t * 1.6))
-def retumbo(d=1.0): t = T(d); return norm(suave(ruido(d), 120) * np.exp(-t * 3) + .5 * np.sin(2 * np.pi * 42 * t) * np.exp(-t * 4))
-def sello(): g = golpe(); p = np.concatenate([np.zeros(int(.02 * SR)), pop(260)]); g[:len(p)] += .4 * p; return norm(g)
-def tic(): t = T(.04); return norm(np.sin(2 * np.pi * 2400 * t) * np.exp(-t * 160))
-
-# ---------------- música ----------------
-BPM = 112; BEAT = 60 / BPM
-# Re menor · Si bemol · Fa · Do  (y una variante tensa con La mayor)
-PROG = {'n': [(73.42, [293.66, 349.23, 440, 587.33]), (58.27, [233.08, 293.66, 349.23, 466.16]), (87.31, [349.23, 440, 523.25, 698.46]), (65.41, [261.63, 329.63, 392, 523.25])],
-        't': [(73.42, [293.66, 349.23, 440, 587.33]), (58.27, [233.08, 293.66, 349.23, 466.16]), (49.0, [196, 233.08, 293.66, 392]), (55.0, [220, 277.18, 329.63, 440])]}
-def musica(dur, secciones, golpes):
-    N = int(dur * SR) + 2 * SR; m = np.zeros(N, np.float32)
-    def put(t0, s, g):
-        i = int(t0 * SR); j = min(N, i + len(s))
-        if 0 <= i < N: m[i:j] += g * s[:j - i]
-    t = T(.35); kick = norm(np.sin(2 * np.pi * np.cumsum(45 + 110 * np.exp(-t * 30)) / SR) * np.exp(-t * 9))
-    t = T(.2); n = ruido(.2); clap = norm((n - suave(n, 3)) * np.exp(-t * 22))
-    t = T(.05); n = ruido(.05); hat = norm((n - suave(n, 2)) * np.exp(-t * 90))
-    def pluck(f, d=.24): t = T(d); return norm(sum(np.sin(2 * np.pi * f * k * t) / k * np.exp(-t * (13 + 3 * k)) for k in range(1, 7)))
-    def marimba(f, d=.5): t = T(d); return norm((np.sin(2 * np.pi * f * t) + .25 * np.sin(2 * np.pi * f * 4 * t) * np.exp(-t * 30)) * np.exp(-t * 7))
-    def bajo(f, d): t = T(d); s = np.sin(2 * np.pi * f * t) + .3 * np.sin(4 * np.pi * f * t); return norm(s * np.minimum(1, t / .01) * np.exp(-t * 1.1))
-    def pad(fs, d): t = T(d); s = sum(np.sin(2 * np.pi * f * t) + .3 * np.sin(6 * np.pi * f * t) / 3 for f in fs); return norm(s * np.minimum(1, t / .5) * np.minimum(1, (d - t) / .5))
-    def modo(t0):
-        mo = secciones[0][1]
-        for ts, x in secciones:
-            if t0 >= ts: mo = x
-        return mo
-    nb = int(dur / BEAT) + 2
-    for b in range(nb):
-        t0 = b * BEAT; mo = modo(t0)
-        if mo == 'nada': continue
-        prog = PROG['t' if mo in ('tension', 'oscuro') else 'n']; raiz, notas = prog[(b // 4) % 4]
-        if b % 4 == 0: put(t0, pad([f / 2 for f in notas[:3]], BEAT * 4), .07 if mo != 'ambiente' else .1)
-        if mo in ('tension', 'oscuro'):
-            if b % 2 == 0: put(t0, kick, .42)
-            if b % 4 == 0: put(t0, bajo(raiz, BEAT * 4), .3)
-            if mo == 'tension': put(t0 + BEAT / 2, hat, .06)
-            continue
-        if mo == 'ambiente':
-            if b % 4 == 0: put(t0, bajo(raiz, BEAT * 4), .2)
-            for s8 in range(2): put(t0 + s8 * BEAT / 2, marimba(notas[(b * 2 + s8) % 4]), .07)
-            continue
-        # completo / ligero / final
-        if mo != 'ligero':
-            put(t0, kick, .55)
-            if b % 2 == 1: put(t0, clap, .26)
-        for h in range(2): put(t0 + h * BEAT / 2 + (.02 if h else 0), hat, .09 + .05 * h)
-        if b % 4 == 0: put(t0, bajo(raiz, BEAT * 4), .32)
-        for s16 in range(4):
-            nota = notas[(b * 4 + s16) % 4] * (2 if (b // 8) % 2 and s16 % 2 else 1); put(t0 + s16 * BEAT / 4, pluck(nota), .08)
-        if mo == 'final' and b % 2 == 0: put(t0, marimba(notas[(b // 2) % 4] * 2, .6), .08)
-    for g in golpes:  # un tiempo de vacío antes del golpe, sube un riser, y el golpe entra con todo
-        i0, i1 = int((g - BEAT) * SR), int(g * SR)
-        if i0 > 0: m[i0:i1] *= np.linspace(1, .1, i1 - i0)
-        put(g - 1.0, riser(1.0), .16)
-    return m[:int(dur * SR)]
-
-
-# ---------------- efectos propios de este Short ----------------
-def plink():  # gota que cae sobre el mapa
-    t = T(1.4); s = np.sin(2 * np.pi * np.cumsum(1250 * np.exp(-t * 9) + 380) / SR) * np.exp(-t * 6)
-    eco = np.zeros_like(s)
-    for d, g in [(.11, .45), (.23, .28), (.37, .16)]: i = int(d * SR); eco[i:] += g * s[:len(s) - i]
-    return norm(s + eco)
-def trueno(d=1.8):
-    t = T(d); n = ruido(d); crack = (n - suave(n, 2)) * np.exp(-t * 30)
-    rumble = suave(n, 220) * np.exp(-t * 1.6) * (1 + .5 * np.sin(2 * np.pi * 3 * t)); return norm(crack * .5 + rumble * 2.2)
-def lluvia(d):  # lecho de lluvia: ruido brillante + gotas
-    n = ruido(d); s = (n - suave(n, 3)) * .5 + suave(n, 6) * .3
-    for _ in range(int(d * 60)): i = int(rng.uniform(0, d) * SR); L = int(.01 * SR); s[i:i + L] += rng.uniform(-1, 1) * np.exp(-np.arange(min(L, len(s) - i)) / SR * 400) * 2
-    env = np.minimum(1, T(d) / .4) * np.minimum(1, (d - T(d)) / .4); return norm(s * env)
+# ======================= EFECTOS =======================
+def gota_agua():  # "plip" con chirrido hacia arriba (como una gota real) + burbuja
+    t = tt(.5); a = np.sin(fase(700 + 2100 * (1 - np.exp(-t * 60)))) * np.exp(-t * 38); b = np.sin(fase(420 + 380 * (1 - np.exp(-t * 25)))) * np.exp(-np.maximum(0, t - .02) * 22) * (t > .02) * .5
+    return norm(a + b + filt(nz(.5), 'high', 3000) * np.exp(-t * 200) * .15)
+def boom(d=1.6, f0=150, f1=40, dist=2.2):  # 808 / boom de cine
+    t = tt(d); s = np.sin(fase(f1 + (f0 - f1) * np.exp(-t * 11))) * np.exp(-t * 2.3); s = np.tanh(s * dist) / np.tanh(dist)
+    s[:int(.006 * SR)] += filt(nz(.006), 'high', 2000) * .5; return norm(s)
+def impacto():  # golpe de tráiler: sub + golpe grave + metal + platillo
+    d = 2.4; t = tt(d); s = boom(d, 160, 38) * .9 + filt(nz(d), 'low', 300) * np.exp(-t * 18) * 1.2
+    metal = sum(np.sin(2 * np.pi * f * t) * np.exp(-t * k) for f, k in [(183, 5), (417, 6), (689, 7), (1131, 8), (1866, 10), (2937, 12)]) * .12
+    plat = filt(nz(d), 'high', 3500) * np.exp(-t * 4) * .35; return norm(s + metal + plat)
+def succion(d=.9):  # "reverse": se aspira hacia el golpe
+    t = tt(d); x = filt(nz(d), 'band', [500, 6000]) * (t / d) ** 3 + sum(np.sin(2 * np.pi * f * t) for f in (220, 330, 495)) * (t / d) ** 4 * .08
+    return norm(x * env_ar(len(t), .01, .01))
+def barrido(d=.45, f0=500, fp=3200, f1=900, aire=.25):  # whoosh real: banda de ruido que sube y baja (sin silbido)
+    t = tt(d); u = t / d; c = np.where(u < .42, f0 * (fp / f0) ** (u / .42), fp * (f1 / fp) ** ((u - .42) / .58)); x = bandas(nz(d), c, .32)
+    e = np.where(u < .45, (u / .45) ** 1.6, ((1 - u) / .55) ** 1.4); x = x * e + filt(nz(d), 'high', 5000) * e * aire * .3; return norm(x)
+def zoom_in(d=.55):  # sube hacia el detalle y termina en un clic
+    t = tt(d); u = t / d; ruido = bandas(nz(d), 300 * (5000 / 300) ** u, .3) * u ** 1.5
+    saw = sum(np.sin(k * fase(70 + 220 * u ** 2)) / k for k in range(1, 9)); saw = filt(saw, 'low', 1400) * u ** 2 * .35
+    x = ruido + saw; x[-int(.008 * SR):] += filt(nz(.008), 'high', 2500) * 1.5; return norm(x)
+def zoom_out(d=.6): x = zoom_in(d)[::-1].copy(); t = tt(d); return norm(x * np.exp(-t * 1.5) + boom(d, 90, 45, 1.5)[:len(x)] * .35)
+def pop(f=620):  # pop de interfaz nítido
+    t = tt(.12); s = np.sin(fase(f * (1 + .9 * np.exp(-t * 90)))) * np.exp(-t * 42); s[:int(.003 * SR)] += filt(nz(.003), 'high', 3000) * .6; return norm(s)
+def tic(): t = tt(.02); return norm((np.sin(2 * np.pi * 2600 * t) + .3 * np.sin(2 * np.pi * 7800 * t)) * np.exp(-t * 260))
+def campana(f=1318.5):  # campana FM brillante
+    t = tt(1.6); idx = 3.5 * np.exp(-t * 4); return norm(np.sin(2 * np.pi * f * t + idx * np.sin(2 * np.pi * f * 3.5 * t)) * np.exp(-t * 3.2))
+def papel(d=.32):  # hoja que se voltea (crujido real con chasquidos)
+    t = tt(d); x = filt(nz(d), 'band', [700, 7000]) * np.exp(-((t - d * .4) / (d * .25)) ** 2)
+    for _ in range(40): i = int(rng.uniform(.05, .8) * d * SR); L = int(.002 * SR); x[i:i + L] += rng.uniform(-1, 1) * 1.5
+    return norm(x + filt(nz(d), 'low', 180) * np.exp(-t * 25) * .8)
+def plegar(): a = papel(.42); b = boom(.44, 110, 50, 1.4) * .35; n = max(len(a), len(b)); return norm(np.pad(a, (0, n - len(a))) + np.pad(b, (0, n - len(b))))
+def trueno(d=3.2):
+    t = tt(d); crack = filt(nz(d), 'high', 1400) * np.exp(-t * 22) * 1.3; br = filt(np.cumsum(nz(d)) * .02, 'high', 25)
+    am = filt(np.abs(nz(d)), 'low', 6); rumble = filt(br, 'low', 170) * (am / am.max()) * np.minimum(1, t / .12) * np.exp(-t / 1.1) * 3; return norm(crack + rumble)
+def lluvia(d, k=1.0):
+    t = tt(d); x = filt(filt(nz(d), 'high', 500), 'low', 7500) * .35
+    gotas = np.zeros(len(t)); idx = rng.integers(0, len(t), int(d * 420 * k)); gotas[idx] = rng.uniform(-1, 1, len(idx)); x += filt(gotas, 'high', 2500) * 1.6
+    return norm(x * env_ar(len(t), .5, .6) * (1 + .15 * np.sin(2 * np.pi * .3 * t)))
 def viento(d, sube=True):
-    t = T(d); n = ruido(d); s = suave(n, 60) * (1 + .4 * np.sin(2 * np.pi * .7 * t)); env = (t / d) ** 1.2 if sube else np.sin(np.pi * t / d); return norm(s * env)
-def papel(): t = T(.28); n = ruido(.28); return norm((n - suave(n, 4)) * np.exp(-t * 14) * (1 + np.sin(2 * np.pi * 38 * t)))
-def chisporroteo(d=2.0): t = T(d); n = ruido(d); s = (n - suave(n, 2)) * (np.abs(n) > 1.8) * 2 + (n - suave(n, 5)) * .3; return norm(s * np.minimum(1, t / .5) * np.exp(-np.maximum(0, t - 1.2) * 2))
-def campana(f=1046.5): t = T(2.2); return norm(sum(a * np.sin(2 * np.pi * f * m * t) * np.exp(-t * k) for m, a, k in [(1, .7, 2.2), (2.76, .35, 3.5), (5.4, .2, 5), (8.9, .1, 7)]))
+    t = tt(d); u = t / d; c = 260 + 420 * (.5 + .5 * np.sin(2 * np.pi * .35 * t + 1)); x = bandas(nz(d), c, .45)
+    return norm(x * ((u ** 1.3) if sube else np.sin(np.pi * u)) * env_ar(len(t), .05, .3))
+def brillo(d=.7):  # destellos cortos (escarcha / chispas), sin notas largas
+    t = tt(d); x = np.zeros(len(t))
+    for _ in range(int(d * 34)): i = int(rng.uniform(0, d - .03) * SR); f = rng.uniform(2200, 5200); n = int(.025 * SR); x[i:i + n] += np.sin(2 * np.pi * f * tt(.025)) * np.exp(-tt(.025) * 160) * rng.uniform(.3, 1)
+    return norm(x * env_ar(len(t), .05, .2))
+def chisporroteo(d=2.2):
+    t = tt(d); g = np.zeros(len(t)); idx = rng.integers(0, len(t), int(d * 700)); g[idx] = rng.uniform(-1, 1, len(idx)); x = filt(g, 'high', 1800) * 1.5 + filt(nz(d), 'high', 4500) * .12
+    return norm(x * np.minimum(1, t / .8) * env_ar(len(t), .01, .4))
+def agua_corre(d=2.4):
+    t = tt(d); x = filt(nz(d), 'low', 900) * (.6 + .4 * np.sin(2 * np.pi * .8 * t)) * .6
+    for _ in range(int(d * 22)): i = int(rng.uniform(0, d - .05) * SR); n = int(.04 * SR); tb = tt(.04); x[i:i + n] += np.sin(fase(rng.uniform(220, 520) * (1 + 1.5 * tb / .04))) * np.exp(-tb * 60) * .5
+    return norm(x * env_ar(len(t), .25, .6))
+def oleaje(d): t = tt(d); return norm(filt(nz(d), 'low', 520) * (.55 + .45 * np.sin(2 * np.pi * t / 3.2 - 1.5)) * env_ar(len(t), .6, .8))
+def cascabeles(d=1.6, paso=.16):  # cascabeles de Navidad
+    t = tt(d); x = np.zeros(len(t)); parciales = [(2950, 1), (4120, .7), (5330, .5), (6810, .35)]
+    for k in range(int(d / paso)):
+        for _ in range(10):
+            i = int((k * paso + rng.uniform(0, .04)) * SR); n = int(.06 * SR)
+            if i + n >= len(t): continue
+            tb = tt(.06); x[i:i + n] += sum(a * np.sin(2 * np.pi * f * rng.uniform(.97, 1.03) * tb) for f, a in parciales) * np.exp(-tb * 70) * rng.uniform(.2, .6)
+    return norm(x * env_ar(len(t), .02, .5))
+def trinquete(d=1.2):  # la rosa de los vientos girando
+    x = np.zeros(int(d * SR)); t = 0.0
+    while t < d - .02: u = t / d; i = int(t * SR); n = int(.012 * SR); x[i:i + n] += filt(nz(.012), 'band', [1400, 3400]) * np.exp(-tt(.012) * 300); t += .02 + .07 * (2 * abs(u - .5)) ** 1.5
+    return norm(x)
+def pluck(f, d=.5):  # marimba/pluck para los pines
+    t = tt(d); return norm((np.sin(2 * np.pi * f * t) + .35 * np.sin(2 * np.pi * f * 4 * t) * np.exp(-t * 30) + .2 * np.sin(2 * np.pi * f * 2.01 * t)) * np.exp(-t * 7))
+def riser(d=1.6):
+    t = tt(d); u = t / d; return norm(bandas(nz(d), 600 * (7000 / 600) ** u, .4) * u ** 2.2 + filt(nz(d), 'high', 6000) * u ** 4 * .4)
+def nube_paso(d=1.1): return norm(barrido(d, 220, 1500, 300, .1) + filt(nz(d), 'low', 260) * np.sin(np.pi * tt(d) / d) * .6)
+
+# ======================= MÚSICA =======================
+BPM = 130; BEAT = 60 / BPM; PASO = BEAT / 4
+ACORDES = [(73.42, [293.66, 349.23, 440.0]), (58.27, [233.08, 293.66, 349.23]), (87.31, [349.23, 440.0, 523.25]), (65.41, [261.63, 329.63, 392.0])]  # Rem · Sib · Fa · Do
+def musica(dur, secc, golpes, tape):
+    N = int((dur + 3) * SR); L = np.zeros(N); R = np.zeros(N); envio = np.zeros(N); kicks = []
+    def put(t0, s, g, p=0., rev=0.):
+        i = int(t0 * SR)
+        if i < 0 or i >= N: return
+        j = min(N, i + len(s)); s = s[:j - i]; L[i:j] += g * s * np.cos((p + 1) * np.pi / 4) * 1.41; R[i:j] += g * s * np.sin((p + 1) * np.pi / 4) * 1.41; envio[i:j] += g * s * rev
+    t = tt(.5); kick = norm(np.tanh(np.sin(fase(45 + 115 * np.exp(-t * 28))) * np.exp(-t * 7) * 2.5)); kick[:int(.004 * SR)] += filt(nz(.004), 'high', 3000) * .4
+    t = tt(.3); n = nz(.3); palma = norm(sum(filt(n, 'band', [900, 5200]) * np.exp(-np.maximum(0, t - k * .011) * 28) * (t >= k * .011) for k in range(3)))
+    t = tt(.05); hat = norm(filt(nz(.05), 'high', 7000) * np.exp(-t * 95)); t = tt(.25); hato = norm(filt(nz(.25), 'high', 6500) * np.exp(-t * 16))
+    def bajo808(f, f2, d):
+        t = tt(d); fr = np.where(t > d - .07, f * (f2 / f) ** ((t - (d - .07)) / .07), f); s = np.sin(fase(fr)); s = np.tanh(s * 1.8) * np.minimum(1, t / .005) * np.exp(-t * .9); return norm(s * env_ar(len(t), .003, .03))
+    def pad(fs, d):
+        t = tt(d); s = sum(sum(np.sin(2 * np.pi * f * k * (1 + dt) * t) / k for k in range(1, 7)) for f in fs for dt in (-.004, .004)); return norm(filt(s, 'low', 1700) * env_ar(len(t), .5, .6))
+    def plk(f, d=.28): t = tt(d); s = sum(np.sin(2 * np.pi * f * k * t) / k * np.exp(-t * (10 + 4 * k)) for k in range(1, 8)); return norm(s)
+    def modo(t0):
+        m = secc[0][1]
+        for ts, x in secc:
+            if t0 >= ts - 1e-6: m = x
+        return m
+    nb = int(dur / BEAT) + 2
+    for bt in range(nb):
+        t0 = bt * BEAT; mo = modo(t0); raiz, notas = ACORDES[(bt // 4) % 4]; sig = ACORDES[((bt // 4) + 1) % 4][0]
+        if mo == 'nada': continue
+        if bt % 4 == 0: put(t0, pad([f / 2 for f in notas], BEAT * 4), .1 if mo != 'oscuro' else .13, 0, .5)
+        if mo in ('completo', 'final', 'oscuro') and bt % 4 == 0: put(t0, bajo808(raiz, sig, BEAT * (4 if mo != 'oscuro' else 2)), .42 if mo != 'oscuro' else .32)
+        for s16 in range(4):
+            ts = t0 + s16 * PASO; paso_bar = (bt % 4) * 4 + s16
+            if mo in ('completo', 'final'):
+                if paso_bar in (0, 7, 10): put(ts, kick, .62); kicks.append(ts)
+                if paso_bar == 8: put(ts, palma, .34, 0, .35)
+                if s16 % 2 == 0: put(ts, hat, .09 + .03 * (s16 == 2), .25 * (1 if s16 == 2 else -1))
+                if paso_bar in (14, 15) and (bt // 4) % 2 == 1:
+                    for k in range(3): put(ts + k * PASO / 3, hat, .07, .3)
+                if paso_bar == 6 and (bt // 4) % 4 == 3: put(ts, hato, .06, -.3)
+                nota = notas[[0, 1, 2, 1][paso_bar % 4]] * (2 if paso_bar % 8 >= 4 else 1); put(ts, plk(nota), .055 if mo == 'completo' else .07, .35 * np.sin(paso_bar), .4)
+                if mo == 'final' and s16 == 0 and bt % 2 == 0: put(ts, plk(notas[(bt // 2) % 3] * 2, .5), .06, 0, .5)
+            elif mo == 'ligero':
+                if s16 % 2 == 0: put(ts, hat, .05, .2)
+                if s16 in (0, 3) : put(ts, plk(notas[(bt + s16) % 3] * 2, .4), .045, -.3 + .6 * (s16 == 3), .6)
+            elif mo == 'oscuro':
+                if bt % 2 == 0 and s16 == 0: put(ts, kick, .4); kicks.append(ts)
+    for g in golpes:  # un tiempo de vacío antes del golpe + subida
+        i0, i1 = int((g - BEAT) * SR), int(g * SR)
+        if i0 > 0: f = np.linspace(1, .12, i1 - i0); L[i0:i1] *= f; R[i0:i1] *= f
+    # bombeo de los pads con el bombo
+    bomb = np.ones(N)
+    for k in kicks: i = int(k * SR); n = min(N - i, int(.22 * SR)); bomb[i:i + n] = np.minimum(bomb[i:i + n], .45 + .55 * (np.arange(n) / n) ** .6)
+    rv = reverb(envio, 1.8); L = (L + rv[0] * .45) * bomb ** .4; R = (R + rv[1] * .45) * bomb ** .4
+    # frenazo de cinta en el giro de la historia
+    for t0 in tape:
+        i = int(t0 * SR); d = int(.7 * SR); vel = np.linspace(1, 0, d) ** 1.4; pos = np.cumsum(vel); pos = (pos / pos[-1] * d * .5).astype(int)
+        for ch in (L, R): seg = ch[i:i + d].copy(); ch[i:i + d] = seg[np.clip(pos, 0, len(seg) - 1)] * np.linspace(1, 0, d) ** .5
+    return np.stack([L, R])[:, :int(dur * SR)]
+def reverb(x, rt=1.6):
+    n = int(rt * SR); t = np.arange(n) / SR; out = []
+    for s in (11, 23):
+        ir = np.random.default_rng(s).standard_normal(n) * np.exp(-6.9 * t / rt); ir = filt(ir, 'low', 6500); ir[:int(.012 * SR)] = 0; out.append(signal.fftconvolve(x, ir)[:len(x)] / np.sqrt(n) * 3)
+    return out
+
+# ======================= MEZCLA =======================
 def leer(f):
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(f), '-ac', '1', '-ar', str(SR), '-f', 's16le', '-'], capture_output=True).stdout
     return np.frombuffer(raw, np.int16).astype(np.float32) / 32768
-def escribir(f, x):
-    with wave.open(str(f), 'w') as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(x, -1, 1) * 32767).astype(np.int16).tobytes())
-
-
-sp = json.load(open(D / 'mapa.json')); ev = sp['eventos']; dur = sp['duracion']; N = int(dur * SR)
+sp = json.load(open(D / 'mapa.json')); ev = sp['eventos']; dur = sp['duracion']; N = int(dur * SR); cam = sp['camara']
 fv = D / '.tmp' / 'voz.wav'; CON_VOZ = fv.exists() and 'audio' in sp
 voz = leer(fv) if CON_VOZ else np.zeros(N, np.float32); voz = np.pad(voz, (0, max(0, N - len(voz))))[:N]
-sfx = np.zeros(N + 4 * SR, np.float32)
-def put(t0, s, g):
-    i = int(max(0, t0) * SR); j = min(len(sfx), i + len(s)); sfx[i:j] += g * s[:j - i]
-def lecho(t0, t1, s_fn, g):
-    if t1 - t0 > .2: put(t0, s_fn(t1 - t0), g)
-golpes, seq, npin = [], 0, 0
+FX = np.zeros((2, N + 6 * SR)); ENV = np.zeros(N + 6 * SR)
+def fx(t0, s, g, p=0., rev=.15, mov=None):
+    """Pone un efecto en t0 con paneo p (-1 izq … 1 der) o un paneo que se mueve (mov=(p0, p1)) y un envío a reverb."""
+    i = int(max(0, t0) * SR); j = min(FX.shape[1], i + len(s)); s = s[:j - i]
+    pp = np.linspace(mov[0], mov[1], len(s)) if mov else np.full(len(s), p); FX[0, i:j] += g * s * np.cos((pp + 1) * np.pi / 4) * 1.41; FX[1, i:j] += g * s * np.sin((pp + 1) * np.pi / 4) * 1.41; ENV[i:j] += g * s * rev
+def cam_en(t):
+    k = cam[0]
+    for a, b in zip(cam, cam[1:]):
+        if a['t'] <= t <= b['t']: u = (t - a['t']) / max(1e-3, b['t'] - a['t']); return {q: a[q] + (b[q] - a[q]) * u for q in ('lon', 'lat', 'ancho')}
+        k = b
+    return k
+def pan_lon(t, lon): c = cam_en(t); return float(np.clip((lon - c['lon']) / (c['ancho'] / 2), -1, 1)) * .7
+def pan_x(x): return float(np.clip((x - 540) / 540, -1, 1)) * .7
+impactos = []
+nchip = 0; npin = 0; PENTA = [293.66, 349.23, 392.0, 440.0, 523.25, 587.33, 698.46, 783.99]
 for e in sorted(ev, key=lambda e: e['desde']):
-    tp, t0 = e['tipo'], e['desde']; t1 = e.get('hasta', t0 + 2)
-    if tp == 'gota': hit = t0 + e.get('cae', .55); put(hit - .02, plink(), .75); put(hit, whoosh(.9), .22); put(hit + .05, agua(1.3), .18); golpes.append(hit)
+    tp, t0 = e['tipo'], e['desde']; t1 = e.get('hasta', t0 + 2); p = pan_lon(t0, e['lon']) if 'lon' in e else (pan_x(e['x']) if 'x' in e else 0)
+    if tp == 'gota':
+        hit = t0 + e.get('cae', .55); fx(hit - .5, barrido(.5, 2500, 3500, 1200, .2), .12, 0, .1); fx(hit - .005, gota_agua(), .8, 0, .7); fx(hit, boom(2.0, 140, 36), .55, 0, .2); fx(hit, impacto(), .3, 0, .5); impactos.append(hit)
     elif tp == 'tormenta':
-        lecho(t0, t1, lluvia, .11 * min(1.4, e.get('r', 1)))
-        for r in e.get('rayos', []): put(r, trueno(), .5)
-    elif tp == 'seco': lecho(t0, t1, lambda d: viento(d, False), .05)
+        if t1 - t0 > .3: fx(t0, lluvia(t1 - t0, min(1.6, e.get('r', 1))), .065 * min(1.5, .6 + e.get('r', 1) * .5), 0, .05, mov=(p * .6, p * .6))
+        for r in e.get('rayos', []): fx(r - .02, trueno(), .42, p, .25); impactos.append(r)
+    elif tp == 'seco' and t1 - t0 > .4: fx(t0, viento(t1 - t0, False), .07, p, .05)
     elif tp == 'chip':
-        put(t0, pop(600 + (seq % 6) * 70), .28); seq += 1
-        if 'NAVIDAD' in e.get('texto', ''): put(t0 + .05, campana(), .3)
-    elif tp in ('cifra', 'contador'):
-        put(t0, golpe(), .45); put(t0 + .08, ding(1320), .16)
-        if tp == 'contador':
-            d = e.get('dur', 1)
-            for q in range(int(d / .07)): put(t0 + .1 + q * .07, tic(), .07)
-            put(t0 + .1 + d, golpe(), .3)
-    elif tp == 'trazo': put(t0, whoosh(1.0), .25); put(t0 + e.get('dur', .8), ding(1760), .16)
-    elif tp == 'titulo': put(t0 - .25, whoosh(.5), .22); put(t0, pop(420), .22)
-    elif tp == 'caja': put(t0, impacto(), .62); put(t0, golpe(), .45); golpes.append(t0)
+        txt = e.get('texto', ''); fx(t0 - .06, barrido(.16, 1800, 4200, 2600, .1), .1, p, .05); fx(t0, pop(560 + (nchip % 5) * 85), .42, p, .2); nchip += 1
+        if 'NAVIDAD' in txt: fx(t0 + .05, cascabeles(1.8), .32, .2, .35); fx(t0 + .1, campana(1318.5), .18, -.2, .5)
+        if 'ENFRÍA' in txt: fx(t0, brillo(.9), .22, p, .4)
+        if 'AIRE' in txt: fx(t0 - .2, barrido(.6, 300, 1400, 500, .1), .2, .4, .1, mov=(.8, -.2))
+    elif tp == 'cifra':
+        fx(t0 - .9, succion(.9), .32, 0, .2); fx(t0, impacto(), .62, 0, .45); fx(t0, boom(1.6, 160, 38, 3), .55, 0, .1); impactos.append(t0)
+    elif tp == 'contador':
+        d = e.get('dur', 1); fx(t0 - .18, barrido(.22, 900, 3500, 1500, .1), .16, 0, .05)
+        for q in range(int(d / .055)): fx(t0 + .1 + q * .055, tic(), .1, -.25 if q % 2 else .25, .05)
+        grande = e.get('a') in (29, 4000); fx(t0 + .1 + d, boom(1.8 if grande else 1.2, 150, 38, 2.8), .6 if grande else .45, 0, .1); fx(t0 + .1 + d, campana(1567.98 if grande else 1318.5), .16, 0, .4)
+        if grande: fx(t0 + .1 + d, impacto(), .45, 0, .45)
+        impactos.append(t0 + .1 + d)
+    elif tp == 'trazo': fx(t0, barrido(e.get('dur', .8), 600, 2600, 1400, .2), .3, 0, .1, mov=(.6, -.6)); fx(t0 + .1, brillo(.7), .14, 0, .4); fx(t0 + e.get('dur', .8), pop(880), .3, -.6, .3)
+    elif tp == 'titulo': fx(t0 - .3, barrido(.34, 600, 3000, 1100, .15), .26, 0, .1); fx(t0, boom(.6, 120, 55, 1.6), .3, 0, .15); fx(t0, pop(420), .3, 0, .2)
+    elif tp == 'caja': fx(t0 - .95, succion(.95), .4, 0, .3); fx(t0, impacto(), .7, 0, .55); fx(t0, boom(2.2, 170, 34, 3.2), .6, 0, .1); impactos.append(t0)
     elif tp == 'regiones3':
-        for i in range(3): put(t0 + i * e.get('paso', .22), papel(), .4); put(t0 + i * e.get('paso', .22), pop(360 + i * 120), .2)
-    elif tp == 'nubesPaso': put(t0, whoosh(1.3), .5)
+        for i in range(3): ti = t0 + i * e.get('paso', .22); fx(ti, papel(), .5, [-.5, 0, .5][i], .25); fx(ti + .03, boom(.4, 140 + i * 30, 70 + i * 15, 1.2), .3, [-.5, 0, .5][i], .1)
+        for ft, _ in e.get('foco', []): fx(ft, pop(990), .2, 0, .3); fx(ft - .1, barrido(.2, 1200, 3800, 2000, .1), .1, 0, .05)
+    elif tp == 'girar': fx(t0, trinquete(e.get('dur', 1.2)), .3, -.4, .15)
+    elif tp == 'nubesPaso': fx(t0, nube_paso(e.get('dur', 1) + .2), .55, 0, .3); fx(t0 + .45, boom(1.0, 100, 40, 1.5), .35, 0, .3)
     elif tp == 'corte':
-        put(t0, papel(), .45); put(t1 - .3, papel(), .35)
-        lecho(t0 + e.get('tAire', .7), t0 + e.get('tLluvia', 3), viento, .14); lecho(t0 + e.get('tLluvia', 3), t1, lluvia, .15)
-        for r in e.get('rayos', []): put(t0 + r, trueno(), .5)
-    elif tp == 'corriente': put(t0, agua(1.6), .2); put(t0, whoosh(1.2), .15)
-    elif tp == 'calor': put(t0, chisporroteo(2.2), .2); put(t0, riser(1.4), .14)
-    elif tp == 'inundacion': put(t0, agua(2.4), .28)
-    elif tp == 'pin': put(t0, pop(780 + npin * 85), .28); npin += 1
-    elif tp == 'girar':
-        for q in range(int(e.get('dur', 1.2) / .06)): put(t0 + q * .06, tic(), .06)
-cam = sp['camara']
+        fx(t0, plegar(), .5, 0, .3); fx(t1 - .35, plegar(), .42, 0, .3)
+        ta, tf, tn, tl = t0 + e.get('tAire', .7), t0 + e.get('tFrio', 1.9), t0 + e.get('tNube', 2.2), t0 + e.get('tLluvia', 3.2)
+        fx(ta, viento(max(.5, tl - ta) + .4, True), .22, 0, .1, mov=(.7, -.2)); fx(tf, brillo(1.0), .18, -.1, .45); fx(tn, boom(1.4, 90, 38, 1.4), .32, .2, .4)
+        fx(tl, lluvia(max(.5, t1 - tl), 1.3), .1, .25, .05)
+        for r in e.get('rayos', []): fx(t0 + r - .02, trueno(), .45, .3, .25); impactos.append(t0 + r)
+    elif tp == 'corriente': fx(t0, oleaje(max(1.5, min(5, t1 - t0))), .22, p, .1); fx(t0, barrido(1.2, 200, 900, 300, .05), .22, p, .1)
+    elif tp == 'nubesBajas' and t1 - t0 > .5: fx(t0, viento(t1 - t0, False), .08, 0, .1)
+    elif tp == 'calor': fx(t0, chisporroteo(2.6), .26, -.2, .1); fx(t0 + .2, riser(1.8), .2, 0, .3)
+    elif tp == 'inundacion': fx(t0, agua_corre(2.6), .34, p, .2)
+    elif tp == 'noche': fx(t0, oleaje(max(1.0, t1 - t0)), .16, -.3, .15)
+    elif tp == 'pin': fx(t0, pluck(PENTA[npin % len(PENTA)]), .3, p, .35); fx(t0, pop(1100), .12, p, .1); npin += 1
+# cámara: paneos rápidos y zooms
 for a, b in zip(cam, cam[1:]):
-    if a.get('suave') is False and 0 < b['t'] - a['t'] < .7 and (a['lon'], a['lat'], a['ancho']) != (b['lon'], b['lat'], b['ancho']): put(a['t'] - .05, whoosh(.5), .2)
-for s in sp.get('sacudidas', []): put(s['t'], retumbo(s.get('dur', .5)), .3)
-# música por secciones
-secc = [(0, 'nada'), (golpes[0] if golpes else .5, 'completo')]
-for e in ev:
-    if e['tipo'] == 'corte': secc += [(e['desde'], 'ligero'), (e['hasta'], 'completo')]
-    if e['tipo'] == 'noche': secc += [(e['desde'], 'oscuro'), (e['hasta'], 'completo')]
-fin = [e['desde'] for e in ev if e['tipo'] == 'titulo' and 'CIUDAD' in e.get('texto', '')]
-if fin: secc.append((fin[0], 'final'))
-secc.sort()
-gm = sorted(set([g for g in golpes[1:]] + [e['desde'] + e.get('dur', 1) for e in ev if e['tipo'] == 'contador' and e.get('a') in (25, 29)] + [e['desde'] for e in ev if e['tipo'] == 'cifra']))
-mus = musica(dur, secc, gm); mus *= np.clip(1 - (np.arange(N) / SR - (dur - 1.2)) / 1.2, 0, 1)
-envv = np.sqrt(suave(voz ** 2, 4800)); duck = 1 - .62 * np.clip(envv / (np.percentile(envv, 95) * .3 + 1e-9), 0, 1) if CON_VOZ else np.ones(N); duck = suave(duck, 2400)
-mezcla = voz + mus * duck * (.3 if CON_VOZ else .42) + sfx[:N] * .8
-tmp = D / '.tmp'; tmp.mkdir(exist_ok=True); escribir(tmp / 'mezcla.wav', mezcla / max(1, np.abs(mezcla).max()))
+    d = b['t'] - a['t']
+    if a.get('suave') is not False or not (0 < d < .9) or (a['lon'], a['lat'], a['ancho']) == (b['lon'], b['lat'], b['ancho']): continue
+    r = b['ancho'] / a['ancho']; dirx = float(np.sign(b['lon'] - a['lon'])) if abs(b['lon'] - a['lon']) > .3 else 0
+    if r < .72: fx(a['t'] - .03, zoom_in(d + .05), .34, 0, .1)
+    elif r > 1.35: fx(a['t'] - .03, zoom_out(d + .1), .34, 0, .15)
+    else: fx(a['t'] - .03, barrido(max(.3, d + .05), 400, 3000, 800, .2), .34, 0, .1, mov=(dirx * .8, -dirx * .8))
+for s in sp.get('sacudidas', []):
+    if min([abs(s['t'] - i) for i in impactos] + [9]) > .35: fx(s['t'], boom(.8, 120, 45, 2), .35, 0, .1)
+
+# secciones de la música
+t_pero = next(n['desde'] for n in sp['narracion'] if n['texto'].startswith('Pero cada pocos'))
+noche = next(e for e in ev if e['tipo'] == 'noche'); corte = next(e for e in ev if e['tipo'] == 'corte'); calor = next(e for e in ev if e['tipo'] == 'calor')
+gota_hit = next(e['desde'] + e.get('cae', .55) for e in ev if e['tipo'] == 'gota')
+fin = next(e['desde'] for e in ev if e['tipo'] == 'titulo' and 'CIUDAD' in e.get('texto', ''))
+secc = sorted([(0, 'nada'), (gota_hit, 'completo'), (corte['desde'] + .3, 'ligero'), (corte['hasta'] - .1, 'completo'), (t_pero + .05, 'nada'), (noche['desde'], 'oscuro'), (calor['desde'], 'completo'), (fin, 'final')])
+fx(calor['desde'] - 1.6, riser(1.6), .22, 0, .3); fx(corte['hasta'] - 1.2, riser(1.2), .16, 0, .3)
+fx(t_pero + .55, boom(2.5, 70, 30, 1.2), .3, 0, .5)  # golpe grave y vacío tras el frenazo
+golpes_m = sorted({round(g, 2) for g in [corte['hasta'] - .1, calor['desde']] + [e['desde'] + e.get('dur', 1) + .1 for e in ev if e['tipo'] == 'contador' and e.get('a') == 29]})
+mus = musica(dur, secc, golpes_m, [t_pero])
+mus *= np.clip(1 - (np.arange(N) / SR - (dur - 1.4)) / 1.4, 0, 1)
+rv = reverb(ENV[:N], 1.5); fxL = FX[0, :N] + rv[0] * .5; fxR = FX[1, :N] + rv[1] * .5
+# la música y los efectos bajan solos cuando habla la voz
+envv = filt(np.abs(voz), 'low', 8); duck = 1 - .6 * np.clip(envv / (np.percentile(envv, 96) * .45 + 1e-9), 0, 1) if CON_VOZ else np.ones(N)
+duck_fx = 1 - .45 * (1 - duck) / .6 if CON_VOZ else np.ones(N)
+gm = .2 if CON_VOZ else .5
+mixL = voz + mus[0] * duck * gm + fxL * duck_fx * .56; mixR = voz + mus[1] * duck * gm + fxR * duck_fx * .56
+mix = np.stack([mixL, mixR]); mix /= max(1, np.abs(mix).max())
+tmp = D / '.tmp'; tmp.mkdir(exist_ok=True)
+with wave.open(str(tmp / 'mezcla.wav'), 'w') as w: w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(mix.T, -1, 1) * 32767).astype(np.int16).tobytes())
 med = subprocess.run(['ffmpeg', '-hide_banner', '-i', str(tmp / 'mezcla.wav'), '-af', 'loudnorm=I=-14:TP=-1.5:LRA=11:print_format=json', '-f', 'null', '-'], capture_output=True, text=True).stderr
-med = json.loads(med[med.rindex('{'):med.rindex('}') + 1]); gan = min(4.0, -14.0 - float(med['input_i']))
+med = json.loads(med[med.rindex('{'):med.rindex('}') + 1]); gan = min(5.0, -14.0 - float(med['input_i']))
 video = D / (sp['salida'] + '.mp4'); out = D / (sp['salida'] + ('-final.mp4' if CON_VOZ else '-vista-previa.mp4'))
-subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(video), '-i', str(tmp / 'mezcla.wav'), '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-af', f'volume={gan:.2f}dB,alimiter=limit=0.79:attack=5:release=80:level=disabled', '-ar', '48000', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', str(out)], check=True)
-print(('CON VOZ' if CON_VOZ else 'SIN VOZ (vista previa)'), f'· {dur:.1f} s · secciones {[(round(a, 1), b) for a, b in secc]} · {out.name}')
+subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(video), '-i', str(tmp / 'mezcla.wav'), '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-af', f'volume={gan:.2f}dB,alimiter=limit=0.8:attack=4:release=70:level=disabled', '-ar', '48000', '-c:a', 'aac', '-b:a', '256k', '-shortest', '-movflags', '+faststart', str(out)], check=True)
+print(('CON VOZ' if CON_VOZ else 'SIN VOZ'), f'· {dur:.1f} s · {len(impactos)} golpes · secciones {[(round(a, 1), b) for a, b in secc]} · {out.name}')

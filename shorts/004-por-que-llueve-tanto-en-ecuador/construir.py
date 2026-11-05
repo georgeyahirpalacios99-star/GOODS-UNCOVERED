@@ -232,8 +232,8 @@ SAC(T('veintinueve', d=.9), 16, .6)
 # ================= 7 · CIERRE =================
 t14 = U(iu('En tu ciudad'))
 CAM(t14, *TODO, d=.8)
-E('titulo', t14, texto='¿Y EN *TU CIUDAD*?', tam=110, y=300, hasta=DUR)
-E('chip', T('Escríbelo'), x=540, y=470, texto='COMENTA Y LA PONEMOS EN EL MAPA', tam=36, hasta=DUR)
+E('titulo', t14, texto='¿Y EN *TU CIUDAD*?', tam=110, y=270, hasta=DUR)
+E('chip', T('Escríbelo'), x=540, y=395, texto='COMENTA Y LA PONEMOS EN EL MAPA', tam=36, hasta=DUR)
 for i, (lo, la) in enumerate([(-78.47, -.18), (-79.9, -2.19), (-79.0, -2.9), (-80.72, -.95), (-79.7, .97), (-78.62, -1.24), (-79.2, -4.0), (-77.81, -.99)]):
     E('pin', T('lo ponemos en el mapa', d=i * .12), lon=lo, lat=la, escala=1.6, color='#ffd23f', hasta=DUR)
 
