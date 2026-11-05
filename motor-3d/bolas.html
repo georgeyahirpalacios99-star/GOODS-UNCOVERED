@@ -141,7 +141,7 @@ window.init = async (spec) => { SP = spec; construirMundo(spec);
   IMG.azar = []; for (const a2 of ['br', 'jp', 'ar', 'de', 'fr', 'us', 'pe', 'kr', 'ca', 'cl', 'in', 'za']) IMG.azar.push(await bandera(a2)); return 'ok'; };
 function palabra(t) { const p = SP.palabras.find(p => t >= p.t0 && t < p.t1 + .05); if (!p) return; const u = pr(t, p.t0, .12), s = 1.18 - .18 * eo(u); x.save(); x.translate(W / 2, 830); x.scale(s, s); contorno(p.w.toUpperCase().replace(/^\W+|\W+$/g, '') === '' ? p.w : p.w, 0, 0, 120); x.restore(); }
 function progreso(t, n) { const tot = SP.total; for (let k = 0; k < tot; k++) { const on = k < n; x.fillStyle = on ? '#ffd23f' : 'rgba(255,255,255,.35)'; x.strokeStyle = '#000'; x.lineWidth = 4; x.beginPath(); x.roundRect(170 + k * 95, 78, 80, 18, 9); x.fill(); x.stroke(); } }
-function escenaFusion(e, t) { const sal = pr(t, e.hasta - .25, .25), ent = eob(pr(t, e.desde, .35));
+function escenaFusion(e, t) { const sal = pr(t, e.hasta - .2, .2), ent = eob(pr(t, e.desde, .35));
   const yS = 1290, rA = 150; const imgA = IMG[e.A], imgC = IMG[e.C], emb = EMB[e.obj];
   // tarjeta
   const enFus = t >= e.tFus; const s = (enFus ? 1 + .14 * (1 - eo(pr(t, e.tFus, .35))) : ent) * (1 - sal * .4), rot = enFus ? 0 : Math.sin(t * 2) * .01; const yOff = -sal * 900;
@@ -160,14 +160,14 @@ function escenaFusion(e, t) { const sal = pr(t, e.hasta - .25, .25), ent = eob(p
     rayos(t, e.tFus - .6, e.tFus, 540, yb); }
   else { const q = eob(pr(t, e.tFus + .05, .45)); bola(imgC, 540, yb, rA * 1.15 * q, t > e.tC ? 'feliz' : 'shock', t, { suelo: yb + rA * 1.2, pulgar: t > e.tC + .2, sy: 1 + .1 * Math.sin(Math.PI * pr(t, e.tC, .3)) }); }
   onda(t, e.tFus, 540, yb); particulas(t, e.tFus, 540, yb, COLS[e.C] || ['#fff', '#ffd23f']); particulas(t, e.tFus, CX, CY, COLS[e.C] || ['#fff'], 30, 420); destello(t, e.tFus); }
-function escenaGiro(e, t) { const sal = pr(t, e.hasta - .25, .25), ent = eob(pr(t, e.desde, .35)), q = eio(pr(t, e.tGiro, .9)), yb = 1290 + sal * 700, imgA = IMG[e.A];
+function escenaGiro(e, t) { const sal = pr(t, e.hasta - .2, .2), ent = eob(pr(t, e.desde, .35)), q = eio(pr(t, e.tGiro, .9)), yb = 1290 + sal * 700, imgA = IMG[e.A];
   x.save(); x.translate(0, -sal * 900); tarjeta(flagDib(imgA), ent * (1 + .06 * Math.sin(Math.PI * q)), Math.PI * q); chip(q > .5 ? e.nC : e.nA, CX - 210, CY - 255, 42, 'rgba(12,16,24,.92)', '#ffd23f', ent); chip(`FUSIÓN ${e.n}/${SP.total}`, CX + 210, CY + 268, 30, '#ffd23f', '#000', ent);
   if (t > e.tC) { const s = eob(pr(t, e.tC, .4)); sticker('risa', CX + 355, CY - 230, .9 * s, .2, t); sticker('wow', CX - 360, CY + 210, .75 * s, -.25, t); } x.restore();
   if (t > e.tC) cinta(t, '¡' + e.nC + '!', W / 2, 1010, eob(pr(t, e.tC, .35)) * (1 - sal), '#e41e1e');
   if (t > e.tNota) chip(e.nota, W / 2, 1110, 36, '#1a2a6a', '#7ae8ff', eob(pr(t, e.tNota, .35)) * (1 - sal));
   const caeA = eob(pr(t, e.tA, .45)), salto = Math.sin(Math.PI * q) * 160; if (t > e.tA) bola(imgA, 540, lerp(-200, yb, caeA) - salto, 160, q > .5 ? (t > e.tC ? 'feliz' : 'shock') : 'duda', t, { suelo: yb + 165, rot: Math.PI * q, pulgar: t > e.tC + .2 && q >= 1 });
   if (q > 0 && q < 1) lineasVelocidad(t, .8); particulas(t, e.tGiro + .9, 540, yb, COLS.id, 36); }
-function escenaIguales(e, t) { const sal = pr(t, e.hasta - .25, .25), ent = eob(pr(t, e.desde, .35)), yb = 1290 + sal * 700, A = IMG[e.A], B = IMG[e.B];
+function escenaIguales(e, t) { const sal = pr(t, e.hasta - .2, .2), ent = eob(pr(t, e.desde, .35)), yb = 1290 + sal * 700, A = IMG[e.A], B = IMG[e.B];
   x.save(); x.translate(0, -sal * 900); tarjeta(() => { x.drawImage(A, -CW / 2, -CH / 2, CW / 2, CH); if (t > e.tB) { const q = eo(pr(t, e.tB, .4)); x.save(); x.beginPath(); x.rect(CW / 2 - CW / 2 * q, -CH / 2, CW / 2 * q, CH); x.clip(); x.drawImage(B, 0, -CH / 2, CW / 2, CH); x.restore(); } x.fillStyle = '#111'; x.fillRect(-5, -CH / 2, 10, CH); }, ent);
   chip(e.nA, CX - 190, CY - 255, 40, 'rgba(12,16,24,.92)', '#ffd23f', ent); if (t > e.tB) chip(e.nB, CX + 190, CY - 255, 40, 'rgba(12,16,24,.92)', '#ffd23f', eob(pr(t, e.tB, .35))); chip(`FUSIÓN ${e.n}/${SP.total}`, CX + 210, CY + 268, 30, '#ffd23f', '#000', ent);
   if (t > e.tIg) { const s = eob(pr(t, e.tIg, .4)); contorno('=', CX, CY, 220 * s, '#ffd23f', '#000'); sticker('wow', CX + 355, CY - 230, .9 * s, .2, t); }

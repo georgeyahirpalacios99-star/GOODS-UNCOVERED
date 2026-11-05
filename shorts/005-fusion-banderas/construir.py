@@ -89,7 +89,7 @@ class BloqueEstimado(Bloque):
         self.dur = t - pausa; self._hab = lambda a, b: b - a; self.cps = cps
 
 def limpiar(mp3, out, SR=44100):
-    """Acorta solo los silencios largos (> 0.5 s) a 0.45 s. La voz no se toca."""
+    """Acorta solo los silencios muy largos (> 0.9 s) a 0.8 s. La voz no se toca."""
     x = np.frombuffer(subprocess.run(['ffmpeg', '-v', 'error', '-i', str(mp3), '-ac', '1', '-ar', str(SR), '-f', 's16le', '-'], capture_output=True).stdout, np.int16).astype(np.float32)
     fr = int(SR * .01); m = len(x) // fr; sil = 20 * np.log10(np.sqrt((x[:m * fr].reshape(m, fr) ** 2).mean(1)) / 32768 + 1e-9) < -40
     tramos, i = [], 0
@@ -103,12 +103,22 @@ def limpiar(mp3, out, SR=44100):
     for a, b in tramos:
         if a == 0: last = max(0, b - 5) * fr; continue
         if b == m: keep.append(x[last:min(len(x), (a + 15) * fr)]); last = len(x); break
-        if (b - a) * .01 > .5: keep.append(x[last:(a + 20) * fr]); last = (b - 25) * fr
+        if (b - a) * .01 > .9: keep.append(x[last:(a + 40) * fr]); last = (b - 40) * fr  # aquí las pausas largas sostienen cada revelación
     keep.append(x[last:]); y = np.concatenate(keep)
     with wave.open(str(out), 'w') as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(y.astype(np.int16).tobytes())
 
 mp3s = sorted((DIR / 'voz').glob('*.mp3'))
-if mp3s: limpiar(mp3s[0], DIR / 'voz' / 'limpia-1.wav'); b = Bloque(1, TEXTO, INICIO); CON_VOZ = True
+def pausas_extra(wav, cortes, extra=.45, SR=44100):
+    """Inserta silencio tras cada revelación (no cambia la voz: solo alarga la pausa entre frases)."""
+    with wave.open(str(wav)) as w: x = np.frombuffer(w.readframes(w.getnframes()), np.int16)
+    partes, last = [], 0
+    for c in sorted(cortes): i = int(c * SR); partes += [x[last:i], np.zeros(int(extra * SR), np.int16)]; last = i
+    partes.append(x[last:]); y = np.concatenate(partes)
+    with wave.open(str(wav), 'w') as w: w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR); w.writeframes(y.tobytes())
+if mp3s:
+    limpiar(mp3s[0], DIR / 'voz' / 'limpia-1.wav'); b0 = Bloque(1, TEXTO, 0)
+    cortes = [b0.tramos[i][1] + .08 for i, u in enumerate(b0.us) if u.startswith('¡') and u.endswith('!') and 'casi iguales' not in u]
+    pausas_extra(DIR / 'voz' / 'limpia-1.wav', cortes); b = Bloque(1, TEXTO, INICIO); CON_VOZ = True
 else: b = BloqueEstimado(1, TEXTO, INICIO); CON_VOZ = False
 T = b.T; FIN_VOZ = b.fin; DUR = round(FIN_VOZ + 1.3, 2)
 
