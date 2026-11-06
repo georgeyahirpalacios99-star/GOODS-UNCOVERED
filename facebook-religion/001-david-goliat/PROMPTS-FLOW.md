@@ -1,94 +1,108 @@
-# Reel 001 · "Goliat no medía lo que crees" — capas para Google Flow
-**Estilo:** collage cinematográfico realista (papel rasgado + recortes tipo sticker + profundidad), como el video de referencia de *Vive de lo tuyo*.
-**Formato:** Facebook Reels 9:16 · ~45 s · subtítulos quemados (en Facebook casi todos ven sin sonido).
+# Reel 001 · "Goliat no medía lo que crees" — PROMPTS LISTOS PARA COPIAR
+**Estilo (según tu video de referencia):**
+- Cada escena es una foto realista en 9:16 con movimiento lento.
+- Lleva partículas (polvo o luz) y un título elegante arriba: una línea pequeña en mayúsculas y luego la frase con **la palabra clave en cursiva dorada**.
+- Hay escenas de "mesa de madera" donde caen objetos.
+- Uno de los objetos es un grabado que se **dibuja solo, línea por línea**.
+- Abajo van dos etiquetas: "DAVID Y GOLIAT · 1 SAMUEL 17" y "RECREACIÓN CON IA".
+- Los textos, el movimiento, las partículas, los dibujos que aparecen, el sonido y los subtítulos los hago yo en código.
+
+## AJUSTES EN FLOW (iguales para todo)
+- Crear imagen → modelo **Nano Banana Pro** (si no aparece, usa Nano Banana) · **2 resultados** por prompt.
+- **Grupo 1 y 2:** formato **9:16**. **Grupo 3:** formato **1:1**.
+- Envíame las imágenes **en el mismo orden de la lista**. No hace falta que les cambies el nombre.
+
+## ORDEN PARA GENERAR
+1. Primero **E2** (Goliat) y **E4** (David). Son los "maestros".
+2. Para **E3, E6 y E8**, agrega **E4** como ingrediente (botón + → imagen).
+3. Para **E7**, agrega **E2** como ingrediente.
+4. El resto, en el orden que quieras.
 
 ---
 
-## 0. Cómo funciona (tú → yo)
-1. En **Flow** genera cada capa de la lista (sección 2). Usa **Nano Banana** (o Imagen) y **2 versiones por prompt**; quédate con la mejor.
-2. **Personajes y objetos:** sobre **fondo verde puro**. Yo quito el verde y los recorto con borde blanco tipo sticker.
-   **Fondos:** sin personas, para poder poner los personajes encima.
-3. **Mismo David y mismo Goliat en todas las tomas:** genera primero **P1 (Goliat)** y **P2 (David)**. Después, en cada prompt donde aparezcan, súbelos como **imagen de referencia ("ingrediente")**.
-4. Mándame las imágenes con su nombre (F1, P1, O1…) por aquí o por Google Drive, más la voz de ElevenLabs (sección 4).
-5. Yo armo la animación con código:
-   - movimiento de cámara en profundidad;
-   - papel que se rasga para pasar de escena;
-   - recortes con borde blanco, cinta adhesiva, círculos y líneas punteadas;
-   - polvo, destellos de luz y grano de película;
-   - contadores (2,9 m · 57 kg) y subtítulos palabra por palabra, más sonido y música.
+## GRUPO 1 · ESCENAS (9:16)
 
-**Todo lo gráfico extra (papel rasgado, cinta, polvo, textos) lo hago yo en código: no lo generes.**
+**E1 · Valle de Elá**
+```
+Wide shot of the Valley of Elah: two rocky hills facing each other across a dry valley with a small stream in the middle, the tents and bronze shields of two ancient armies on each hilltop, dust in the air, dramatic sky. Ultra-realistic cinematic film still, ancient Israel around 1000 BC, Iron Age, warm golden-hour light with soft haze, shot on 35mm film, shallow depth of field, earthy palette of ochre, olive and bronze, natural skin texture, vertical 9:16 composition with the upper third calm and uncluttered. No text, no letters, no watermark, no modern objects, no extra fingers, no deformed hands or faces.
+```
+
+**E2 · Goliat (MAESTRO)**
+```
+A towering Philistine giant warrior standing alone in a dusty valley, seen from a low angle so he looks enormous, massive muscular build, bronze helmet, heavy coat of bronze scale armor, bronze greaves, a huge spear in his hand and a bronze javelin on his back, intimidating stare, an army blurred far behind him. Ultra-realistic cinematic film still, ancient Israel around 1000 BC, Iron Age, warm golden-hour light with soft haze, shot on 35mm film, shallow depth of field, earthy palette of ochre, olive and bronze, natural skin texture, vertical 9:16 composition with the upper third calm and uncluttered. No text, no letters, no watermark, no modern objects, no extra fingers, no deformed hands or faces.
+```
+
+**E3 · David con la armadura del rey (ingrediente: E4)**
+```
+The same young shepherd from the reference image wearing a king's bronze armor and helmet that are far too big for him, the helmet tilted over his eyes, struggling to walk inside an ancient military tent, slightly humorous but realistic. Ultra-realistic cinematic film still, ancient Israel around 1000 BC, Iron Age, warm golden-hour light with soft haze, shot on 35mm film, shallow depth of field, earthy palette of ochre, olive and bronze, natural skin texture, vertical 9:16 composition with the upper third calm and uncluttered. No text, no letters, no watermark, no modern objects, no extra fingers, no deformed hands or faces.
+```
+
+**E4 · David en el arroyo (MAESTRO)**
+```
+A young Israelite shepherd of about 16, slim, curly dark hair, simple wool tunic with a leather belt and a shepherd's bag, kneeling by a clear shallow brook and picking up a smooth round stone from the water, a leather sling hanging from his belt, calm and focused face, full body. Ultra-realistic cinematic film still, ancient Israel around 1000 BC, Iron Age, warm golden-hour light with soft haze, shot on 35mm film, shallow depth of field, earthy palette of ochre, olive and bronze, natural skin texture, vertical 9:16 composition with the upper third calm and uncluttered. No text, no letters, no watermark, no modern objects, no extra fingers, no deformed hands or faces.
+```
+
+**E5 · Los 700 honderos**
+```
+A long row of ancient Benjamite slingers in a dry field, swinging leather slings with their left hands, shot from the side, motion blur on the slings, dust glowing in the light. Ultra-realistic cinematic film still, ancient Israel around 1000 BC, Iron Age, warm golden-hour light with soft haze, shot on 35mm film, shallow depth of field, earthy palette of ochre, olive and bronze, natural skin texture, vertical 9:16 composition with the upper third calm and uncluttered. No text, no letters, no watermark, no modern objects, no extra fingers, no deformed hands or faces.
+```
+
+**E6 · David gira la honda (ingrediente: E4)**
+```
+The same young shepherd from the reference image running forward and spinning a leather sling above his head at full speed, dynamic action pose, dust kicking up from his sandals, three-quarter view, motion blur on the sling. Ultra-realistic cinematic film still, ancient Israel around 1000 BC, Iron Age, warm golden-hour light with soft haze, shot on 35mm film, shallow depth of field, earthy palette of ochre, olive and bronze, natural skin texture, vertical 9:16 composition with the upper third calm and uncluttered. No text, no letters, no watermark, no modern objects, no extra fingers, no deformed hands or faces.
+```
+
+**E7 · Goliat cae (ingrediente: E2)**
+```
+The same giant warrior from the reference image falling forward face down in the dust, mid-fall, helmet slipping, spear dropping from his hand, a cloud of dust rising, dramatic low angle. Ultra-realistic cinematic film still, ancient Israel around 1000 BC, Iron Age, warm golden-hour light with soft haze, shot on 35mm film, shallow depth of field, earthy palette of ochre, olive and bronze, natural skin texture, vertical 9:16 composition with the upper third calm and uncluttered. No text, no letters, no watermark, no modern objects, no extra fingers, no deformed hands or faces.
+```
+
+**E8 · Atardecer final (ingrediente: E4)**
+```
+Sunset over the Valley of Elah, the same young shepherd from the reference image seen from behind standing on a hill with a sling in his hand, epic golden sky, long shadows, the valley far below. Ultra-realistic cinematic film still, ancient Israel around 1000 BC, Iron Age, warm golden-hour light with soft haze, shot on 35mm film, shallow depth of field, earthy palette of ochre, olive and bronze, natural skin texture, vertical 9:16 composition with the upper third calm and uncluttered. No text, no letters, no watermark, no modern objects, no extra fingers, no deformed hands or faces.
+```
 
 ---
 
-## 1. BLOQUE DE ESTILO (pégalo al final de CADA prompt)
-```
-Ultra-realistic cinematic photograph, ancient Israel around 1000 BC, the Valley of Elah, warm golden-hour sunlight with soft atmospheric haze, shot on 35mm film, shallow depth of field, rich earthy palette of ochre, olive green, bronze and deep blue sky, historically accurate Iron Age clothing and bronze armor, natural skin texture, dramatic but believable lighting. No text, no letters, no watermark, no logos, no modern objects, no extra fingers, no deformed hands or faces.
-```
+## GRUPO 2 · MESA (9:16)
 
-**Añade esto solo a los personajes y objetos (P y O):**
+**M1 · Mesa de madera vacía**
 ```
-Isolated subject on a solid pure chroma green background (#00FF00), evenly lit, no shadow on the background, full subject visible and not cropped, sharp clean edges, generous margin around the subject.
-```
-
-**Añade esto solo a los fondos (F):**
-```
-Empty background plate with no people, wide composition, the lower third clear so characters can be placed on top, vertical 9:16.
+Top-down photograph of an empty antique dark walnut wooden desk, rich wood grain, warm oil-lamp light from the upper left fading into a dark vignette at the edges, faint dust floating in the light, nothing on the desk, vertical 9:16. Ultra-realistic, shot on 35mm film. No text, no objects, no watermark.
 ```
 
 ---
 
-## 2. CAPAS (18 imágenes · ⭐ = imprescindibles)
+## GRUPO 3 · OBJETOS PARA LA MESA (1:1, fondo verde)
 
-### Fondos (9:16)
-| ID | Prompt |
-|---|---|
-| ⭐ F1 | `The Valley of Elah seen from a low angle: two rocky hills facing each other across a dry valley with a small stream, distant tents and banners of two ancient armies on each hilltop, dust in the air, dramatic sky.` |
-| ⭐ F2 | `A clear shallow brook running over smooth round stones in a dry valley, close to the water, morning light reflecting on the water, reeds and dry grass.` |
-| F3 | `The center of the battlefield after a fall: a cloud of golden dust rising from the ground, scattered bronze fragments and footprints, dramatic backlight.` |
-| F4 | `Interior of an ancient scribe's room: wooden table, clay jars, oil lamp glowing, old parchment scrolls, warm dim light.` |
-| ⭐ F5 | `Sunset over the Valley of Elah, a lone young shepherd seen from behind standing on a hill with a sling in his hand, epic golden sky, long shadows.` (este sí lleva persona) |
+**O1 · Fragmento de los Rollos del Mar Muerto**
+```
+A fragment of an ancient Dead Sea Scroll, torn brown parchment with faded handwritten Hebrew letters and irregular edges, seen from above. Ultra-realistic product photograph, soft warm light from the upper left, sharp focus, the whole object visible and centered with a wide margin, isolated on a solid pure chroma green background (#00FF00), no shadow on the background. No watermark, no modern text.
+```
 
-### Personajes (1:1, fondo verde)
-| ID | Prompt |
-|---|---|
-| ⭐ P1 Goliat | `A towering Philistine warrior, about 2.9 meters tall, massive muscular build, full body, wearing a bronze helmet, a heavy coat of bronze scale armor, bronze greaves on his legs, a bronze javelin on his back and a huge spear in his hand, intimidating expression, seen from a slightly low angle.` |
-| ⭐ P2 David | `A young Israelite shepherd boy of about 16, slim, curly dark hair, simple wool tunic with a leather belt and a shepherd's bag, sandals, holding a leather sling, full body, calm and confident expression.` |
-| P3 | `The same young shepherd (use reference P2) kneeling by a stream, picking a smooth round stone from the water, full body, side view.` |
-| P4 | `The same young shepherd (use reference P2) wearing oversized royal bronze armor and a helmet that is far too big for him, struggling to walk, awkward funny expression, full body.` |
-| ⭐ P5 | `The same young shepherd (use reference P2) spinning a sling above his head at full speed, dynamic action pose, dust kicking up, full body, three-quarter view.` |
-| ⭐ P6 | `The giant warrior (use reference P1) falling forward face down, mid-fall, helmet slipping, spear dropping from his hand, dramatic action, full body.` |
-| P7 | `A group of five ancient Benjamite slingers, left-handed, in Iron Age tunics, all aiming slings in the same direction, full bodies, disciplined army look.` |
+**O2 · Grabado de la armadura (este es el que "se dibuja solo")**
+```
+A sheet of aged cream parchment seen from above with a detailed antique black ink engraving of a bronze scale armor coat, fine hatching lines like a 19th-century encyclopedia illustration, the drawing fills most of the sheet, no labels, no captions. Ultra-realistic product photograph, soft warm light from the upper left, sharp focus, the whole sheet visible and centered with a wide margin, isolated on a solid pure chroma green background (#00FF00), no shadow on the background. No text, no watermark.
+```
 
-### Objetos (1:1, fondo verde)
-| ID | Prompt |
-|---|---|
-| ⭐ O1 | `A fragment of an ancient Dead Sea Scroll, torn brown parchment with faded Hebrew handwriting, close-up, museum lighting.` (aquí sí se permiten letras hebreas antiguas) |
-| ⭐ O2 | `A heavy ancient bronze scale armor coat displayed upright, hundreds of overlapping bronze scales, worn and polished, studio product shot.` |
-| O3 | `A massive ancient spear head made of dark iron, rough forged texture, attached to a thick wooden shaft, close-up product shot.` |
-| ⭐ O4 | `Five smooth round river stones held in the open palm of a young hand, wet, close-up.` |
-| O5 | `An ancient leather sling with braided cords and a stone pouch, laid flat, studio product shot.` |
-| ⭐ O6 | `A single smooth river stone flying through the air with a slight motion blur, sharp center, close-up.` |
-| O7 | `A bronze helmet of a giant warrior lying in the dust, dented, close-up product shot.` |
+**O3 · Punta de lanza de hierro**
+```
+A large heavy ancient iron spear point with a hammered, slightly rusted surface, lying flat, seen from above. Ultra-realistic product photograph, soft warm light from the upper left, sharp focus, the whole object visible and centered with a wide margin, isolated on a solid pure chroma green background (#00FF00), no shadow on the background. No text, no labels, no watermark.
+```
+
+**O4 · Las cinco piedras**
+```
+Five smooth round river stones, wet and gray-brown, laid out in one straight row and clearly separated from each other, seen from above. Ultra-realistic product photograph, soft warm light from the upper left, sharp focus, all five stones fully visible and centered with a wide margin, isolated on a solid pure chroma green background (#00FF00), no shadow on the background. No text, no labels, no watermark.
+```
+
+**O5 · La honda**
+```
+An ancient leather sling with a woven leather pouch and two long braided cords, laid flat in an S-shape, seen from above. Ultra-realistic product photograph, soft warm light from the upper left, sharp focus, the whole sling visible and centered with a wide margin, isolated on a solid pure chroma green background (#00FF00), no shadow on the background. No text, no labels, no watermark.
+```
 
 ---
 
-## 3. Toma por toma (cómo las voy a animar)
-| Tiempo | Capas | Animación |
-|---|---|---|
-| 0–3 s | F1 + P1 + P2 | **Gancho:** cámara que sube por Goliat hasta su casco; David diminuto delante; contador **2,9 m** con golpe grave |
-| 3–9 s | F4 → O1 | El papel se rasga y aparece el rollo antiguo; tarjetas "**6 codos y un palmo = 2,9 m**" contra "**4 codos y un palmo = 2,0 m**" |
-| 9–15 s | O2, O3 | Armadura y lanza en recortes tipo sticker; contadores **57 kg** y **6,8 kg** |
-| 15–19 s | P4 | David con la armadura gigante, sacudida cómica |
-| 19–24 s | F2 + P3 + O4 | Zoom al arroyo; las 5 piedras aparecen una por una (1 · 2 · 3 · 4 · 5) |
-| 24–31 s | P7 | Rasgado de papel; "**700 zurdos que no fallaban**" (Jueces 20:16) |
-| 31–37 s | P5 → O6 | La honda gira con estela; la piedra vuela en cámara lenta con línea punteada hacia Goliat |
-| 37–41 s | P6 + F3 + O7 | Impacto: destello, polvo, el casco rodando |
-| 41–45 s | F5 | Atardecer + pregunta final |
-
----
-
-## 4. VOZ (ElevenLabs · tono de narrador cálido · Speed 1.0)
+## VOZ · ElevenLabs (narrador cálido · Speed 1.0 · un solo mp3)
 ```
 Goliat medía casi tres metros… <break time="0.3s" /> o eso dice tu Biblia. <break time="0.3s" /> Porque los manuscritos más antiguos dicen otra cosa. <break time="0.5s" />
 El texto que usamos hoy dice seis codos y un palmo: <break time="0.2s" /> unos dos metros noventa. <break time="0.3s" /> Pero los Rollos del Mar Muerto y la traducción griega dicen cuatro codos y un palmo: <break time="0.2s" /> unos dos metros. <break time="0.5s" />
@@ -101,14 +115,36 @@ Una sola piedra. <break time="0.5s" />
 ¿Qué historia de la Biblia quieres que contemos después?
 ```
 
-## 5. Datos y fuentes (para la descripción)
-- Altura: 1 Samuel 17:4 → "seis codos y un palmo" (texto masorético, unos 2,9 m). Los Rollos del Mar Muerto (4QSamᵃ), Flavio Josefo y la Septuaginta dicen "cuatro codos y un palmo" (unos 2 m). Codo ≈ 45 cm, palmo ≈ 22 cm.
-- Armadura: 1 Samuel 17:5 → 5.000 siclos de bronce (siclo ≈ 11,4 g → unos 57 kg).
-- Lanza: 1 Samuel 17:7 → punta de 600 siclos de hierro (unos 6,8 kg).
-- La armadura de Saúl: 1 Samuel 17:38-39. Las cinco piedras: 1 Samuel 17:40. La piedra en la frente: 1 Samuel 17:49.
-- Los 700 honderos zurdos de Benjamín: Jueces 20:16.
+---
 
-## 6. Reglas de Facebook que cuidan el alcance
-- **No pidas "escribe Amén" ni "comparte si crees".** Facebook le baja el alcance a eso porque lo cuenta como "cebo de interacción". Cierra con una pregunta real, como en el guion.
-- Si alguna imagen parece una foto real de un hecho histórico, márcala con la etiqueta de IA de Facebook ("Información de IA").
-- Pon los versículos en la descripción: dan confianza y evitan discusiones en los comentarios.
+## CÓMO LO ARMO (referencia para mí)
+| Voz | Imagen | Título en pantalla (línea pequeña / frase) | Animación |
+|---|---|---|---|
+| "Goliat medía casi tres metros…" | E1 → E2 | 1 SAMUEL 17 / Casi *tres metros.* | Acercamiento lento, polvo, contador 0 → 2,9 m |
+| "los manuscritos más antiguos…" | M1 + O1 | QUMRÁN · CUEVA 4 / Este rollo dice *otra cosa.* | El rollo cae sobre la mesa con sombra |
+| "seis codos… cuatro codos…" | M1 + O1 | 6 codos = *2,9 m* → 4 codos = *2,0 m* | Tachado rojo sobre 2,9 |
+| "armadura… 57 kilos" | M1 + O2 | 1 SAMUEL 17:5 / *57 kilos.* | El grabado se dibuja línea por línea |
+| "punta de su lanza… 7 kilos" | M1 + O2 + O3 | 1 SAMUEL 17:7 / *7 kilos* de hierro. | La punta cae con golpe y polvo |
+| "la armadura del rey…" | E3 | 1 SAMUEL 17:39 / Ni podía *caminar.* | Pequeña sacudida de cámara |
+| "cinco piedras lisas" | E4 → M1 + O4 | 1 SAMUEL 17:40 / Cinco *piedras.* | Las 5 piedras caen una por una (1·2·3·4·5) |
+| "setecientos zurdos…" | E5 | JUECES 20:16 / 700 *zurdos.* | Paneo lateral |
+| "la honda no era un juguete" | E6 + O5 | La honda *no era un juguete.* | Estela de giro, zoom rápido |
+| "la piedra entró en su frente" | E7 | 1 SAMUEL 17:49 / Una sola *piedra.* | Destello, cámara lenta, polvo |
+| pregunta final | E8 | ¿Qué historia *sigue?* | Alejamiento lento, luz dorada |
+
+## DATOS Y FUENTES (van en la descripción)
+- **Altura:** 1 Samuel 17:4.
+  - El texto masorético dice "seis codos y un palmo", unos 2,9 m.
+  - Los Rollos del Mar Muerto (4QSamᵃ), Flavio Josefo y la Septuaginta dicen "cuatro codos y un palmo", unos 2 m.
+  - Equivalencias: codo ≈ 45 cm, palmo ≈ 22 cm.
+- **Armadura:** 1 Samuel 17:5. Son 5.000 siclos de bronce, unos 57 kg (siclo ≈ 11,4 g).
+- **Lanza:** 1 Samuel 17:7. La punta pesaba 600 siclos de hierro, unos 6,8 kg.
+- **Otros pasajes:**
+  - La armadura de Saúl: 1 Samuel 17:38-39.
+  - Las cinco piedras: 17:40.
+  - La piedra en la frente: 17:49.
+  - Los 700 zurdos de Benjamín: Jueces 20:16.
+
+## REGLAS DE FACEBOOK
+- **No uses** "escribe Amén" ni "comparte si crees": Facebook le baja el alcance a eso. Cierra con una pregunta real.
+- La etiqueta "RECREACIÓN CON IA" va en pantalla. Además, activa la etiqueta de IA de Facebook al publicar, porque las imágenes son realistas.
