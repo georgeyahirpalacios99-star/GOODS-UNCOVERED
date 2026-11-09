@@ -124,7 +124,7 @@ function construirBloques(spec) {
   ESC = new THREE.Scene(); NIEBLA = new THREE.Fog('#d4ecff', 28, 110); ESC.fog = NIEBLA;
   ESC.add(new THREE.HemisphereLight('#ffffff', '#7a7a90', 1.45)); const sol = new THREE.DirectionalLight('#fff3dc', 1.6); sol.position.set(-20, 40, 14); ESC.add(sol);
   HORARIO = spec.escenas.map(e => ({ z0: -VEL * e.desde + 4, z1: -VEL * e.hasta + 4, bio: e.bioma || 'pradera' }));
-  const largo = VEL * spec.duracion + 60, B = {}, pon = (tipo, px, py, pz) => (B[tipo] = B[tipo] || []).push([px, py, pz]);
+  const largo = VEL * spec.duracion + 60, B = {}, pon = (tipo, px, py, pz) => { const k = tipo + '|' + Math.floor(-pz / 24); (B[k] = B[k] || []).push([px, py, pz]); }; // por trozos de 24: la cámara solo dibuja los que ve
   const alto = {}; // columnas ocupadas por el recorrido (para no tapar con árboles)
   // ---- recorrido de parkour: bloques sueltos con huecos de 2 a 3 ----
   const bioV = z => bioEn(z + 15);
@@ -153,7 +153,7 @@ function construirBloques(spec) {
       else if (a === 'pino') { for (let q = 0; q < 6; q++) pon('tronco', px, tb + q, pz); for (let l = 0; l < 4; l++) { const R = l === 3 ? 0 : 2 - (l % 2); for (let i = -R; i <= R; i++) for (let j = -R; j <= R; j++) if (Math.abs(i) + Math.abs(j) <= R + 1) pon(l === 3 ? 'nieve' : 'pino', px + i, tb + 2 + l * 1.0, pz + j); } }
       else if (a === 'cactus') { const hc = 2 + Math.floor(r * 100) % 2; for (let q = 0; q < hc; q++) pon('cactus', px, tb + q, pz); }
       else if (a === 'antorcha') { pon('brillante', px, tb, pz); } } }
-  for (const [tipo, lista] of Object.entries(B)) { const m = new THREE.InstancedMesh(caja, matB(tipo), lista.length); const o = new THREE.Object3D(); lista.forEach(([px, py, pz], i) => { o.position.set(px, py, pz); o.updateMatrix(); m.setMatrixAt(i, o.matrix); }); if (tipo === 'agua') m.renderOrder = 2; ESC.add(m); }
+  for (const [clave, lista] of Object.entries(B)) { const tipo = clave.split('|')[0], m = new THREE.InstancedMesh(caja, matB(tipo), lista.length); const o = new THREE.Object3D(); lista.forEach(([px, py, pz], i) => { o.position.set(px, py, pz); o.updateMatrix(); m.setMatrixAt(i, o.matrix); }); m.computeBoundingSphere(); if (tipo === 'agua') m.renderOrder = 2; ESC.add(m); }
   // nubes planas, sol cuadrado y estrellas
   NUBES = new THREE.Group(); const nm = new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true, opacity: .88, fog: false });
   for (let q = 0; q < 70; q++) { const g = new THREE.Group(), nz = -rnd() * largo; for (let s = 0; s < 3; s++) { const b = new THREE.Mesh(caja, nm); b.scale.set(6 + Math.floor(rnd() * 8), 1.2, 4 + Math.floor(rnd() * 6)); b.position.set(Math.floor((rnd() - .5) * 8), 0, Math.floor((rnd() - .5) * 6)); g.add(b); } g.position.set((rnd() - .5) * 110, 24 + rnd() * 6, nz); NUBES.add(g); } ESC.add(NUBES);
