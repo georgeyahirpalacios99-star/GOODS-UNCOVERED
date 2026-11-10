@@ -134,37 +134,110 @@ A samba school parade at night, dancers in huge colorful feathered costumes, con
 
 ---
 
-## CLIPS DE VIDEO (opcional, si te alcanzan los créditos de Flow)
-En Flow: elige la imagen → **Imagen a video** (Veo) → pega el movimiento. Cada clip dura unos 8 s; con 6 basta.
+## CLIPS DE VIDEO: LAS 20 ANIMADAS
+En Flow: abre la imagen → **Imagen a video** (Veo 3.1 **Fast**, para que te rindan los créditos) → pega el movimiento de su número. Cada clip dura unos 8 s.
+- Revisa cuántos créditos muestra Flow antes de generar; en Fast suele ser el más barato.
+- Si un clip sale deformado, genéralo otra vez. Es mejor que yo reciba 1 bueno que 2 malos.
+- El sonido de Veo no importa: pongo yo todo el sonido.
 
-**B01**
+**B01 · Río al amanecer**
 ```
-Slow drone flight forward over the city toward the statue, golden mist drifting, birds flying. Cinematic, realistic, no text.
-```
-
-**B02**
-```
-Slow drone flight forward over the ocean, waves moving, sun glare shimmering. Cinematic, realistic, no text.
+Slow drone flight forward over the city toward the Christ the Redeemer statue, golden mist drifting between the hills, birds flying, sunlight growing. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
 ```
 
-**B03**
+**B02 · Solo mar**
 ```
-Slow push-in toward the people on the beach, waves rolling onto the sand, palm leaves moving in the wind. Cinematic, realistic, no text.
-```
-
-**B10**
-```
-Slow aerial glide over the canopy, mist rising and swirling upward, sunbeams moving. Cinematic, realistic, no text.
+Slow drone flight forward low over the ocean, waves rolling, sun glare shimmering on the water, seagulls gliding past the camera. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
 ```
 
-**B13**
+**B03 · Bolivia con playa**
 ```
-Slow aerial pull-back revealing the empty reservoir, heat haze, dust blowing over the dry riverbed. Cinematic, realistic, no text.
+Slow push-in toward the people walking onto the sand, waves rolling onto the beach, palm leaves moving in the wind, a child running toward the water. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
 ```
 
-**B15**
+**B04 · Armada de Bolivia**
 ```
-Slow push-in toward the dry cliffs, thin threads of water falling, tourists turning their heads. Cinematic, realistic, no text.
+Slow tracking shot following the patrol boat across the lake, small waves and wake behind the boat, clouds moving over the snowy mountains. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B05 · Uruguay**
+```
+Slow aerial glide along the coastline, cars moving on the seaside avenue, waves breaking softly on the rocks, warm sunset light. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B06 · Amazonas en Leticia**
+```
+Slow aerial flight following the river, small boats moving on the brown water, morning mist rising from the forest. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B07 · El desayuno**
+```
+Slow macro push-in across the table, steam rising from the coffee, a sugar cube dropped into the cup, light shifting through the window. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B08 · Campos de soja**
+```
+Slow aerial tracking shot alongside the combine harvesters moving through the field, dust trailing in the golden light. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B09 · Cerdos en China**
+```
+Slow dolly shot down the long aisle of the farm, pigs moving and eating, workers walking in the background. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B10 · Ríos voladores**
+```
+Slow aerial glide over the canopy, white mist rising and swirling upward into the sky, sunbeams moving through the clouds. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B11 · El campo sin lluvia**
+```
+Slow push-in toward the farmer looking up at the empty sky, dry wheat swaying, dust blowing across the cracked ground. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B12 · Itaipú normal**
+```
+Slow aerial pull-back revealing the full dam, white water roaring down the spillway, mist and spray in the air. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B13 · Itaipú seca**
+```
+Slow aerial pull-back revealing the empty reservoir, heat haze over the cracked riverbed, dust blowing past the stranded boats. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B14 · Iguazú normal**
+```
+Slow push-in toward the Devil's Throat, massive water falling, thick spray rising, the rainbow shimmering, tourists' raincoats flapping. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B15 · Iguazú casi seca**
+```
+Slow push-in toward the dry cliffs, thin threads of water falling, tourists on the walkway turning their heads in shock. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B16 · Ciudad a oscuras**
+```
+Slow aerial drift over the dark city, car headlights moving on the streets, candle lights flickering in a few windows, stars twinkling. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B17 · Puerto de granos**
+```
+Slow tracking shot along the port, grain pouring from the conveyor into the ship, river water flowing slowly, sunset light. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B18 · Niobio**
+```
+Slow orbit around the metal ingot, studio light reflections sliding across the shiny surface. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B19 · El fútbol**
+```
+Slow push-in from the stands toward the jersey on the center circle, floodlights flickering softly, light wind moving the grass. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
+```
+
+**B20 · Carnaval**
+```
+Slow tracking shot alongside the dancers, feathers swaying, confetti falling, the illuminated float moving forward. Smooth cinematic camera movement, realistic physics and natural motion, keep the scene exactly as in the image, no morphing, no text, no subtitles, no music.
 ```
 
 ---
