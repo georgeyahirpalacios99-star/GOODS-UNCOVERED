@@ -824,6 +824,13 @@ function capaClip(t) { const c = clipActivo(t); if (!c || !CLIPIMG) return 0;
   if (c.etiqueta !== false) { ctx.font = F(700, 22); ctx.letterSpacing = '4px'; const txt = c.etiqueta || 'RECREACIÓN CON IA', w = ctx.measureText(txt).width + 34; rr(40, H - 78, w, 40, 8, 'rgba(0,0,0,.55)', 'rgba(255,255,255,.35)', 1.5); texto(txt, 40 + w / 2, H - 57, F(700, 22), '#fff'); }
   ctx.restore(); return a; }
 const enMapa = e => e.tipo === 'region' || e.lon !== undefined || e.pais !== undefined || e.de !== undefined || e.tipo === 'resaltar' || e.tipo === 'flujo' || e.tipo === 'medida' || e.tipo === 'ruta';
+// ---------- subtítulo de una palabra (Shorts): grande, con golpe, y las palabras clave en amarillo ----------
+function palabrasCap(t) { const L = SP.palabras; if (!L) return; const p = L.find(q => t >= q.t0 && t < q.t1 + .05); if (!p) return;
+  const limpio = p.w.replace(/[¿?¡!"“”]/g, '').toUpperCase(), clave = (SP.resaltar || []).some(r => limpio.includes(r)) || /\d/.test(limpio);
+  const u = pr(t, p.t0, .13), s = 1.22 - .22 * eo(u), sz = SP.capTam || 110; ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.font = F(900, sz, 'Montserrat');
+  const fit = Math.min(1, (W * .9) / (ctx.measureText(limpio).width + sz * .4)); ctx.translate(W / 2, SP.capY || 1340); ctx.scale(s * fit, s * fit); ctx.rotate((L.indexOf(p) % 2 ? 1 : -1) * .025);
+  ctx.lineJoin = 'round'; ctx.lineWidth = sz * .24; ctx.strokeStyle = '#000'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.strokeText(limpio, 0, 0);
+  ctx.fillStyle = clave ? '#ffd23f' : '#ffffff'; ctx.fillText(limpio, 0, 0); ctx.restore(); }
 function render(t) {
   if (SP.estilo === 'escena') return renderEscena(t);
   camara(t); ctx.globalAlpha = 1; ctx.letterSpacing = '0px';
@@ -834,6 +841,7 @@ function render(t) {
   if (SP.estilo === 'fantasia') { pase(e => !e.mar && !e.arriba); desenfoqueFant(t); pase(e => e.arriba); marcoFant(t); }
   else pase(() => true);
   if (SP.estilo !== 'documental') { if (!OCULTO('lista')) C.listaPanel(t); if (SP.narracion) subtitulos(t); } else subtitulos(t);
+  palabrasCap(t);
   ctx.save(); ctx.globalAlpha = SP.estilo === 'documental' ? .055 : .03; GRANO.setTransform(new DOMMatrix([1, 0, 0, 1, Math.random() * 256, Math.random() * 256])); ctx.fillStyle = GRANO; ctx.fillRect(0, 0, W, H); ctx.restore();
   const fi = SP.fundido_inicio ?? .4; if (t < fi) { ctx.fillStyle = `rgba(0,0,0,${1 - t / fi})`; ctx.fillRect(0, 0, W, H); }
   if (SP.duracion - t < .6) { ctx.fillStyle = `rgba(0,0,0,${1 - (SP.duracion - t) / .6})`; ctx.fillRect(0, 0, W, H); }

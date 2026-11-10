@@ -58,3 +58,8 @@ shorts/006-fusion-banderas-parte-2/voz/*.wav
 shorts/006-fusion-banderas-parte-2/.tmp/
 videos-largos/*/clips/*.mp4
 videos-largos/*/.clips/
+shorts/007-brasil-shorts/*/.clips/
+shorts/007-brasil-shorts/*/.tmp/
+shorts/007-brasil-shorts/*/preview/
+shorts/007-brasil-shorts/*/*.mp4
+shorts/007-brasil-shorts/*/voz/*.wav
