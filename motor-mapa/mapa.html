@@ -812,13 +812,25 @@ function renderEscena(t) {
 }
 
 // ---------- cuadro ----------
+// ---------- clips de video (escenas reales de Flow/Veo) entre los mapas ----------
+let CLIPIMG = null;
+async function setClip(src) { if (!src) { CLIPIMG = null; return; } const im = new Image(); im.src = src; await im.decode(); CLIPIMG = im; }
+const clipActivo = t => (SP.clips || []).find(c => t >= c.desde && t < c.hasta);
+function capaClip(t) { const c = clipActivo(t); if (!c || !CLIPIMG) return 0;
+  const a = fade(t, c, c.entra ?? .28, c.sale ?? .28), q = cl((t - c.desde) / (c.hasta - c.desde)), golpe = 1 - eo(pr(t, c.desde, .45));
+  const z = (c.z0 ?? 1.02) + ((c.z1 ?? 1.09) - (c.z0 ?? 1.02)) * q + golpe * .06, iw = CLIPIMG.width, ih = CLIPIMG.height, k = Math.max(W / iw, H / ih) * z;
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = a; ctx.drawImage(CLIPIMG, W / 2 - iw * k / 2 + (c.dx || 0) * q, H / 2 - ih * k / 2, iw * k, ih * k);
+  const vg = ctx.createRadialGradient(W / 2, H / 2, H * .35, W / 2, H / 2, W * .75); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,.42)'); ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
+  if (c.etiqueta !== false) { ctx.font = F(700, 22); ctx.letterSpacing = '4px'; const txt = c.etiqueta || 'RECREACIÓN CON IA', w = ctx.measureText(txt).width + 34; rr(40, H - 78, w, 40, 8, 'rgba(0,0,0,.55)', 'rgba(255,255,255,.35)', 1.5); texto(txt, 40 + w / 2, H - 57, F(700, 22), '#fff'); }
+  ctx.restore(); return a; }
+const enMapa = e => e.tipo === 'region' || e.lon !== undefined || e.pais !== undefined || e.de !== undefined || e.tipo === 'resaltar' || e.tipo === 'flujo' || e.tipo === 'medida' || e.tipo === 'ruta';
 function render(t) {
   if (SP.estilo === 'escena') return renderEscena(t);
   camara(t); ctx.globalAlpha = 1; ctx.letterSpacing = '0px';
   if (SP.estilo === 'documental') mapaDoc(t); else if (SP.estilo === 'pergamino') mapaPerg(t); else if (SP.estilo === 'fantasia') mapaFant(t); else mapaCarto(t);
-  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.setTransform(1, 0, 0, 1, 0, 0); const ca = capaClip(t);
   const R = SP.estilo === 'documental' ? D : C;
-  const pase = filtro => { for (const e of SP.eventos) { const fn = R[e.tipo] || D[e.tipo]; if (!filtro(e) || !activo(t, e) || !fn || OCULTO(e.tipo)) continue; ctx.save(); ctx.letterSpacing = '0px'; fn(e, t); ctx.restore(); } };
+  const pase = filtro => { for (const e of SP.eventos) { const fn = R[e.tipo] || D[e.tipo]; if (!filtro(e) || (ca > .5 && enMapa(e)) || !activo(t, e) || !fn || OCULTO(e.tipo)) continue; ctx.save(); ctx.letterSpacing = '0px'; fn(e, t); ctx.restore(); } };
   if (SP.estilo === 'fantasia') { pase(e => !e.mar && !e.arriba); desenfoqueFant(t); pase(e => e.arriba); marcoFant(t); }
   else pase(() => true);
   if (SP.estilo !== 'documental') { if (!OCULTO('lista')) C.listaPanel(t); if (SP.narracion) subtitulos(t); } else subtitulos(t);

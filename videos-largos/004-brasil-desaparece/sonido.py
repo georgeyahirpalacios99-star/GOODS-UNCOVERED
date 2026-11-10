@@ -133,6 +133,35 @@ for e in sorted(ev, key=lambda e: e['desde']):
     elif tp == 'iconos':
         for i, _ in enumerate(e['items']): put(t0 + i * e.get('paso', .35), pop(620 + i * 110), .3)
     elif tp == 'tarjeta': put(t0 - .15, whoosh(.45), .25); put(t0 + .3, pop(820), .25)
+# --- ambiente de cada escena real (clips): todo sintetizado aquí ---
+def filtro_lp(x, n): return suave(x, n)
+def viento(d): t = T(d); n = ruido(d); g = .55 + .45 * np.sin(2 * np.pi * .23 * t + 1.3) * np.sin(2 * np.pi * .07 * t); return norm(filtro_lp(n, 60) * g)
+def olas(d):
+    s = np.zeros(int(d * SR)); k = 0.0
+    while k < d: o = agua(2.4); i = int(k * SR); j = min(len(s), i + len(o)); s[i:j] += o[:j - i] * .8; k += 2.1 + rng.uniform(0, .7)
+    return norm(s + .25 * filtro_lp(ruido(d), 30))
+def cascada(d): n = ruido(d); return norm(filtro_lp(n, 14) * .8 + filtro_lp(n, 90) * .6)
+def pajaros(d):
+    s = np.zeros(int(d * SR))
+    for k in range(int(d * 2.2)):
+        f0 = rng.uniform(2200, 4200); L = int(rng.uniform(.06, .16) * SR); tt = np.arange(L) / SR; i = int(rng.uniform(0, d - .2) * SR)
+        ch = np.sin(2 * np.pi * np.cumsum(f0 + 900 * np.sin(2 * np.pi * rng.uniform(18, 40) * tt)) / SR) * np.sin(np.pi * tt / tt[-1]) ** 2
+        s[i:i + L] += ch * rng.uniform(.3, 1)
+    return norm(s)
+def gotas(d):
+    s = np.zeros(int(d * SR))
+    for k in range(int(d * 3)): i = int(rng.uniform(0, d - .1) * SR); g = pop(rng.uniform(900, 1600)); s[i:i + len(g)] += g * rng.uniform(.2, .6)
+    return norm(s)
+AMB = {'B01': [(viento, .10), (pajaros, .05)], 'B02': [(olas, .30), (viento, .06)], 'B03': [(olas, .26), (pajaros, .05)], 'B07': [(gotas, .0)],
+       'B10': [(pajaros, .10), (viento, .07)], 'B11': [(viento, .26)], 'B12': [(cascada, .26)], 'B13': [(viento, .30)], 'B14': [(cascada, .34)], 'B15': [(gotas, .14), (viento, .12)]}
+for c in sp.get('clips', []):
+    d = c['hasta'] - c['desde'] + .6
+    if c['desde'] > .3: put(c['desde'] - .3, whoosh(.55), .28)
+    put(c['hasta'] - .25, whoosh(.5), .22)
+    for fn, g in AMB.get(c['codigo'], []):
+        if g <= 0: continue
+        s = fn(d); env = np.minimum(1, np.arange(len(s)) / (.35 * SR)) * np.minimum(1, (len(s) - np.arange(len(s))) / (.45 * SR)); put(c['desde'] - .2, s * env, g)
+    if c['codigo'] == 'B07': put(c['desde'] + 1.0, ding(2637), .12); put(c['desde'] + 1.05, pop(1800), .1)
 for k in sp.get('camara', []):
     if 3 < k['t'] < dur - 2 and not k.get('suave') is False: put(k['t'], whoosh(.55), .14)
 for s in sp.get('sacudidas', []):

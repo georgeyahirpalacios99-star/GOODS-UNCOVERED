@@ -79,7 +79,12 @@ function imagenes() {
     await page.evaluate(([g, s, f, i]) => init(g, s, f, i), [geo, spec, fl, im]);
     return page;
   };
-  const grab = async (page, t) => Buffer.from((await page.evaluate(t => { render(t); return document.getElementById('c').toDataURL('image/jpeg', 0.92); }, t)).split(',')[1], 'base64');
+  // clips de video: cuadros ya extraídos a 30 fps en <carpeta>/.clips/<código>/0001.jpg (los prepara construir.py)
+  const CLIPS = spec.clips || [], CDIR = path.join(dir, '.clips'), NCL = {};
+  for (const c of CLIPS) if (!NCL[c.codigo]) NCL[c.codigo] = fs.readdirSync(path.join(CDIR, c.codigo)).filter(f => f.endsWith('.jpg')).length;
+  const cuadroClip = t => { const c = CLIPS.find(c => t >= c.desde && t < c.hasta); if (!c) return null; const n = NCL[c.codigo], i = Math.min(n - 1, Math.max(0, Math.floor(((t - c.desde) * (c.vel || 1) + (c.ofs || 0)) * 30)));
+    return 'data:image/jpeg;base64,' + fs.readFileSync(path.join(CDIR, c.codigo, String(i + 1).padStart(4, '0') + '.jpg')).toString('base64'); };
+  const grab = async (page, t) => Buffer.from((await page.evaluate(async ([t, src]) => { await setClip(src); render(t); return document.getElementById('c').toDataURL('image/jpeg', 0.92); }, [t, cuadroClip(t)])).split(',')[1], 'base64');
   const dur = hasta ? Math.min(hasta, spec.duracion) : spec.duracion;
 
   if (preview) {

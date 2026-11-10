@@ -112,7 +112,6 @@ ITAIPU, YACY, IGUAZU, CURITIBA = (-54.59, -25.41), (-56.75, -27.48), (-54.44, -2
 ROSARIO, ASUNCION, ARAXA, RIO = (-60.64, -32.95), (-57.58, -25.28), (-46.94, -19.59), (-43.21, -22.95)
 
 # ================= 1 · EL GANCHO =================
-E('despertar', 0, dur=2.8)
 C(0, -60, 10, 120); C(b1.T('Imagina que mañana', d=.2), -54, -13, 50, arco=.2)
 cara('BRA', 0, 'feliz'); cara('BRA', b1.T('te despiertas'), 'normal')
 T_DES = b1.T('y Brasil ya no está', d=.35)
@@ -354,6 +353,30 @@ E('pregunta', b6.T('Qué país hacemos'), texto='¿QUÉ PAÍS DESAPARECEMOS DESP
 E('cinta', b6.T('el más votado'), x=960, y=640, texto='EL MÁS VOTADO ES EL SIGUIENTE', icono='globo', color='#2e9e5b', hasta=DUR)
 C(DUR, -45, 5, 145, suave=False)
 
+# ================= escenas reales (clips de Flow/Veo) entre los mapas =================
+# (código, desde, hasta, extras). Encima van los textos de pantalla; lo atado al mapa se oculta mientras dura el clip.
+CL = [
+    ('B01', 0.0, b1.T('y Brasil ya no está', d=.15), dict(entra=.01)),
+    ('B02', b1.T('Simplemente, donde estaba', d=-.15), b1.T('Y no es un país', d=-.05), {}),
+    ('B03', b1.T('despertaría con playa', d=-.35), b1.T('Antes de que termine', d=-.05), dict(z0=1.0, z1=1.1)),
+    ('B07', b2.T('Empieza en tu desayuno', d=-.25), b3.t0 + 1.0, {}),
+    ('B07', b3.T('O sea: café'), b3.T('Pero el golpe más grande', d=-.05), dict(ofs=3.6)),
+    ('B10', b3.T('Exporta… lluvia', d=-.25), b4.T('Cada día', d=-.05), dict(vel=.85)),
+    ('B11', b4.T('El problema real'), b4.T('Argentina es uno', d=-.05), {}),
+    ('B12', b5.T('Paraguay comparte con Brasil', d=-.1), b5.T('En dos mil veinticinco, Itaipú', d=-.05), {}),
+    ('B13', b5.T('Sin Brasil, Itaipú', d=-.1), b5.T('Paraguay pasaría de tener', d=-.05), dict(ofs=.5)),
+    ('B14', b5.T('Las cataratas del Iguazú', d=-.1), b5.T('Pero el río Iguazú', d=-.05), {}),
+    ('B15', b5.T('Sin Brasil, a las cataratas', d=-.1), b5.T('Y Argentina también', d=-.05), dict(z0=1.0, z1=1.12)),
+]
+CLIPS = []
+for cod, a0, a1, ex in CL:
+    src, dst = DIR / 'clips' / f'{cod}.mp4', DIR / '.clips' / cod
+    if not src.exists(): print('  falta el clip', cod); continue
+    if not dst.exists():
+        dst.mkdir(parents=True)
+        subprocess.run(['ffmpeg', '-v', 'error', '-i', str(src), '-vf', 'fps=30,scale=1920:1080:flags=lanczos', '-q:v', '3', str(dst / '%04d.jpg')], check=True)
+    CLIPS.append(dict(codigo=cod, desde=round(a0, 2), hasta=round(a1, 2), **ex))
+
 # ================= salida =================
 cam.sort(key=lambda k: k['t']); quieta = [cam[0]]
 for k in cam[1:]:
@@ -377,7 +400,7 @@ if CON_VOZ:
     (tmp / 'lista.txt').write_text(''.join(f"file '{p}'\n" for p in partes))
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-f', 'concat', '-safe', '0', '-i', str(tmp / 'lista.txt'), '-af', 'loudnorm=I=-16:TP=-2:LRA=11', '-ar', '48000', str(tmp / 'voz.wav')], check=True)
 spec = dict(estilo='caricatura', salida='que-pasaria-si-brasil-desapareciera', duracion=DUR, camara=cam, desaparece=DESAP, sacudidas=sacud,
-            tam={'URY': 1.35, 'PRY': 1.25, 'BOL': 1.1, 'ECU': 1.3, 'GUY': 1.3, 'SUR': 1.4, 'CHL': 1.1, 'VNM': 1.4, 'ITA': 1.3, 'DEU': 1.2}, mirar=mirar, caras=caras, eventos=sorted(ev, key=lambda e: e['desde']), **({'audio': '.tmp/voz.wav'} if CON_VOZ else {}))
+            tam={'URY': 1.35, 'PRY': 1.25, 'BOL': 1.1, 'ECU': 1.3, 'GUY': 1.3, 'SUR': 1.4, 'CHL': 1.1, 'VNM': 1.4, 'ITA': 1.3, 'DEU': 1.2}, mirar=mirar, caras=caras, eventos=sorted(ev, key=lambda e: e['desde']), clips=CLIPS, fundido_inicio=.5, **({'audio': '.tmp/voz.wav'} if CON_VOZ else {}))
 (DIR / 'mapa.json').write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding='utf-8')
 print(('CON VOZ' if CON_VOZ else 'SIN VOZ (tiempos estimados)') + f" · {len(ev)} capas · {len(cam)} posiciones de cámara · {DUR / 60:.2f} min")
 for b in B: print(f'  parte {b.n}: {b.t0:6.1f} s · dura {b.dur:5.1f} s')

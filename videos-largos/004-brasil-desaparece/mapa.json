@@ -895,11 +895,6 @@
  },
  "eventos": [
   {
-   "tipo": "despertar",
-   "desde": 0,
-   "hasta": 2.8
-  },
-  {
    "tipo": "nombre",
    "desde": 3.92,
    "texto": "BRASIL",
@@ -2942,5 +2937,71 @@
    "color": "#2e9e5b",
    "hasta": 480.29
   }
- ]
+ ],
+ "clips": [
+  {
+   "codigo": "B01",
+   "desde": 0.0,
+   "hasta": 2.72,
+   "entra": 0.01
+  },
+  {
+   "codigo": "B02",
+   "desde": 5.85,
+   "hasta": 8.53
+  },
+  {
+   "codigo": "B03",
+   "desde": 23.57,
+   "hasta": 26.8,
+   "z0": 1.0,
+   "z1": 1.1
+  },
+  {
+   "codigo": "B07",
+   "desde": 140.25,
+   "hasta": 142.99
+  },
+  {
+   "codigo": "B07",
+   "desde": 166.4,
+   "hasta": 170.84,
+   "ofs": 3.6
+  },
+  {
+   "codigo": "B10",
+   "desde": 203.48,
+   "hasta": 209.6,
+   "vel": 0.85
+  },
+  {
+   "codigo": "B11",
+   "desde": 254.2,
+   "hasta": 258.95
+  },
+  {
+   "codigo": "B12",
+   "desde": 291.48,
+   "hasta": 295.83
+  },
+  {
+   "codigo": "B13",
+   "desde": 306.2,
+   "hasta": 309.81,
+   "ofs": 0.5
+  },
+  {
+   "codigo": "B14",
+   "desde": 323.21,
+   "hasta": 328.43
+  },
+  {
+   "codigo": "B15",
+   "desde": 334.3,
+   "hasta": 341.06,
+   "z0": 1.0,
+   "z1": 1.12
+  }
+ ],
+ "fundido_inicio": 0.5
 }

@@ -56,3 +56,5 @@ videos-largos/004-brasil-desaparece/voz/*.wav
 videos-largos/*/miniatura/base/preview/
 shorts/006-fusion-banderas-parte-2/voz/*.wav
 shorts/006-fusion-banderas-parte-2/.tmp/
+videos-largos/*/clips/*.mp4
+videos-largos/*/.clips/
