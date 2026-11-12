@@ -29,19 +29,20 @@ TIT, CIF, CINTA = 300, 330, 1185
 SSV, PAP, CDB = (-89.19, 13.69), (-72.34, 18.54), (-72.2, 18.58)     # San Salvador, Puerto Príncipe, Croix-des-Bouquets
 
 clip('N03', 0, T('a un país que está', d=-.05), entra=.01, z0=1.0, z1=1.1)
-E('cifra', .1, texto='+2,000', tam=200, sub='soldados de El Salvador', y=CIF, hasta=T('a un país que está'))
+E('ultimahora', 0, texto='EL SALVADOR EN HAITÍ', y=175, hasta=T('¿Por qué?'))
+E('cifra', .1, texto='+2,000', num=[0, 2000], pre='+', dur=1.0, tam=200, sub='soldados de El Salvador', y=CIF, hasta=T('a un país que está'))
 CAM(0, -80.5, 16, 26, d=0); CAM(T('a un país que está', d=-.05), -80.5, 16, 24, d=1.2)
 E('ruta', T('a un país que está'), puntos=[list(SSV), list(PAP)], dur=1.4, color='#ffd23f', hasta=T('¿Por qué?'))
 E('pin', T('a un país que está'), lon=SSV[0], lat=SSV[1], texto='SAN SALVADOR', escala=1.5, hasta=T('Haití.'))
 E('pin', T('casi dos mil', d=.2), lon=PAP[0], lat=PAP[1], texto='PUERTO PRÍNCIPE', escala=1.5, hasta=T('¿Por qué?'))
-E('cifra', T('casi dos mil'), texto='1,880 km', tam=170, sub='en línea recta', y=CIF, hasta=T('Haití.'))
+E('cifra', T('casi dos mil'), texto='1,880 km', num=[0, 1880], suf=' km', dur=1.0, tam=170, sub='en línea recta', y=CIF, hasta=T('Haití.'))
 CAM(T('Haití.', d=-.1), -72.7, 18.95, 4.6, d=.7)
 E('resaltar', T('Haití.'), pais='HTI', color='#ff5a4a', hasta=T('En Puerto Príncipe'))
 E('titulo', T('¿Por qué?'), texto='¿POR QUÉ?', tam=110, y=TIT, hasta=T('En Puerto Príncipe'))
 clip('N01', T('En Puerto Príncipe', d=-.1), T('Y más de un millón', d=-.05))
-E('cifra', T('las pandillas controlan'), texto='≈ 85 %', tam=180, sub='de la capital, en manos de pandillas (ONU)', y=CIF, hasta=T('Y más de un millón'))
+E('cifra', T('las pandillas controlan'), texto='≈ 85 %', num=[0, 85], pre='≈ ', suf=' %', dur=1.1, tam=180, sub='de la capital, en manos de pandillas (ONU)', y=CIF, hasta=T('Y más de un millón'))
 clip('N06', T('Y más de un millón', d=-.1), T('El Salvador ya tenía', d=-.05))
-E('cifra', T('Y más de un millón'), texto='1.4 MILLONES', tam=140, sub='de personas tuvieron que huir', y=CIF, hasta=T('El Salvador ya tenía'))
+E('cifra', T('Y más de un millón'), texto='1.4 MILLONES', num=[0, 1.4], dec=1, suf=' MILLONES', dur=1.0, tam=140, sub='de personas tuvieron que huir', y=CIF, hasta=T('El Salvador ya tenía'))
 CAM(T('El Salvador ya tenía', d=-.15), -72.3, 18.6, 1.7, d=.6)
 E('pin', T('El Salvador ya tenía'), lon=PAP[0], lat=PAP[1], texto='PUERTO PRÍNCIPE', escala=1.5, hasta=T('Bukele respondió'))
 E('cinta', T('en la fuerza internacional'), x=960, y=CINTA, escala=1.2, texto='FUERZA DE LA ONU CONTRA PANDILLAS', icono='globo', color='#1f6aa8', hasta=T('Pero el dieciocho'))
@@ -55,7 +56,7 @@ E('fecha', T('y el diez de noviembre'), texto='10 DE NOVIEMBRE', hasta=T('El gob
 E('pin', T('el ataque al cuartel'), lon=CDB[0], lat=CDB[1], texto='ZONA DE 400 MAWOZO', escala=1.5, color='#e8463a', hasta=T('El gobierno de Haití'))
 CAM(T('El gobierno de Haití', d=-.1), -72.7, 18.95, 4.6, d=.6)
 E('cinta', T('El gobierno de Haití'), x=960, y=CINTA, escala=1.25, texto='HAITÍ: "GRACIAS"', icono='corazon', color='#2e9e5b', hasta=T('La ONU, en cambio'))
-E('cifra', T('La ONU, en cambio'), texto='≈ 200', tam=200, sub='de más de 2,000 están en la misión de la ONU', y=CIF, hasta=T('Y los cuatro'))
+E('cifra', T('la mayoría de esos soldados'), texto='≈ 200', num=[2000, 200], pre='≈ ', dur=1.2, tam=200, sub='de más de 2,000 están en la misión de la ONU', y=CIF, hasta=T('Y los cuatro'))
 clip('N02', T('Y los cuatro', d=-.1), T('¿Es el principio', d=-.05))
 E('titulo', T('siguen sin aparecer'), texto='SIGUEN SIN\nAPARECER', tam=100, y=TIT, hasta=T('¿Es el principio'))
 CAM(T('¿Es el principio', d=-.1), -80.5, 16, 22, d=2.2)
@@ -63,17 +64,25 @@ E('pregunta', T('¿Es el principio'), texto='¿FIN DE LAS PANDILLAS O GUERRA SIN
 E('resaltar', T('¿Es el principio'), pais='HTI', color='#ff5a4a', hasta=DUR)
 E('resaltar', T('¿Es el principio', d=.3), pais='SLV', color='#4ea3ff', hasta=DUR)
 
+# deriva lenta entre movimientos de cámara: el mapa nunca queda quieto
+base = sorted(cam, key=lambda k: k['t']); extra = []
+for k1, k2 in zip(base, base[1:]):
+    if k1.get('suave') is False or k2.get('suave') is not False: continue
+    if k2['t'] - k1['t'] > 1.2: extra.append(dict(t=round(k2['t'] - .05, 2), lon=k1['lon'], lat=k1['lat'], ancho=round(k1['ancho'] * .9, 3)))
+cam += extra
+for f in ['emboscada', 'el ataque al cuartel', 'siguen sin aparecer']: sacud.append(dict(t=round(T(f), 2), dur=.5, fuerza=10))
+DESTELLOS = [round(T(f), 2) for f in ['Haití.', '¿Por qué?', 'siguen sin aparecer']]
 for c in CLIPS:
     dst = DIR / '.clips' / c['codigo']
     if not dst.exists():
         dst.mkdir(parents=True)
         subprocess.run(['ffmpeg', '-v', 'error', '-i', str(DIR / 'clips' / f"{c['codigo']}.mp4"), '-vf', 'scale=1080:1920:flags=lanczos,fps=30', '-q:v', '3', str(dst / '%04d.jpg')], check=True)
-cam.sort(key=lambda k: k['t'])
+cam.sort(key=lambda k: (k['t'], k.get('suave') is not False))
 for i in range(1, len(cam)):
     if cam[i]['t'] <= cam[i - 1]['t']: cam[i]['t'] = round(cam[i - 1]['t'] + .02, 2)
 spec = dict(estilo='documental', formato='vertical', salida='el-salvador-en-haiti', duracion=DUR, camara=cam, sacudidas=sacud, eventos=sorted(ev, key=lambda e: e['desde']),
             clips=CLIPS, palabras=palabras_de(b), resaltar=['SALVADOR', 'HAITÍ', 'PANDILLAS', 'BUKELE', 'ONU', 'DESAPARECIDOS', 'MAWOZO', 'GUERRA', 'APARECER', 'HUIR'],
-            capY=1420, capTam=104, fundido_inicio=0)
+            capY=1420, capTam=104, fundido_inicio=0, barra=True, destellos=DESTELLOS)
 if CON_VOZ:
     tmp = DIR / '.tmp'; tmp.mkdir(exist_ok=True)
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(DIR / 'voz' / 'limpia.wav'), '-af', f'adelay={int(INICIO * 1000)},apad=whole_dur={DUR},loudnorm=I=-16:TP=-2:LRA=11', '-ar', '48000', '-ac', '1', str(tmp / 'voz.wav')], check=True)

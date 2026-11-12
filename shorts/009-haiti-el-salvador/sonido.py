@@ -210,7 +210,15 @@ for d in sp.get('desaparece', []):  # el país que desaparece
     t0 = d['t']; fx(t0 - .9, succion(.9), .42, 0, .3); fx(t0 - .05, grieta(), .5, 0, .2); fx(t0, impacto(), .75, 0, .55); fx(t0, boom(2.4, 170, 32, 3.4), .62, 0, .1); fx(t0 + .25, ola(2.4), .45, 0, .3, mov=(-.5, .5)); impactos.append(t0)
 for e in sorted(ev, key=lambda e: e['desde']):
     tp, t0 = e['tipo'], e['desde']; t1 = e.get('hasta', t0 + 2); p = pan_lon(t0, e['lon']) if 'lon' in e else 0
-    if tp == 'cifra': fx(t0 - .8, succion(.8), .3, 0, .2); fx(t0, impacto(), .58, 0, .45); fx(t0, boom(1.5, 160, 38, 3), .5, 0, .1); impactos.append(t0)
+    if tp == 'cifra' and e.get('num'):
+        dd = e.get('dur', .9); fx(t0 - .6, succion(.6), .28, 0, .2); fx(t0, boom(.5, 140, 70, 1.4), .3, 0, .1)
+        for q in range(int(dd / .045)): fx(t0 + .05 + q * .045, tic(), .09, -.3 if q % 2 else .3, .03)
+        fx(t0 + .05 + dd, impacto(), .6, 0, .45); fx(t0 + .05 + dd, boom(1.6, 160, 36, 3), .52, 0, .1); impactos.append(t0 + .05 + dd)
+    elif tp == 'cifra': fx(t0 - .8, succion(.8), .3, 0, .2); fx(t0, impacto(), .58, 0, .45); fx(t0, boom(1.5, 160, 38, 3), .5, 0, .1); impactos.append(t0)
+    elif tp == 'ultimahora': fx(t0, impacto(), .7, 0, .5); fx(t0, boom(2.2, 170, 32, 3.4), .6, 0, .1); fx(t0 + .02, barrido(.5, 3500, 900, 400, .2), .3, 0, .2, mov=(-.8, .8)); fx(t0 + .1, campana(987.8), .16, 0, .5)
+    elif tp == 'fecha':
+        for q in range(9): fx(t0 + q * .055, tic(), .14, -.2 + .05 * q, .05)
+        fx(t0 + .5, pop(520), .22, 0, .2)
     elif tp == 'titulo': fx(t0 - .3, barrido(.34, 600, 3000, 1100, .15), .26, 0, .1); fx(t0, boom(.7, 120, 50, 1.8), .36, 0, .15); fx(t0, pop(420), .3, 0, .2)
     elif tp == 'cinta': fx(t0 - .15, barrido(.25, 900, 3800, 1600, .1), .2, 0, .05); fx(t0, boom(.5, 140, 60, 1.6), .34, 0, .15); fx(t0 + .03, pop(760), .3, 0, .2)
     elif tp == 'sello': fx(t0 - .5, succion(.5), .3, 0, .2); fx(t0, impacto(), .6, 0, .5); impactos.append(t0)
@@ -227,6 +235,15 @@ for e in sorted(ev, key=lambda e: e['desde']):
         if e.get('roto'): fx(t0 + .6, grieta(.4), .32, 0, .2); fx(t0 + .6, boom(.6, 120, 50, 1.6), .26, 0, .1)
     elif tp == 'apagon': fx(t0, chisporroteo(1.6), .3, 0, .2); fx(t0 + .05, boom(1.8, 110, 30, 2.2), .45, 0, .3); fx(t0 + .3, succion(.6)[::-1].copy(), .22, 0, .2); impactos.append(t0)
     elif tp == 'pregunta': fx(t0 - .3, barrido(.4, 700, 3200, 1200, .2), .26, 0, .1); fx(t0, campana(1318.5), .2, 0, .4)
+for s_ in sp.get('sacudidas', []): fx(s_['t'], boom(.9, 120, 40, 2.2), .42, 0, .15); fx(s_['t'], grieta(.35), .18, 0, .1)
+for f in sp.get('destellos', []): fx(f - .25, succion(.25), .2, 0, .1); fx(f, impacto(), .35, 0, .4)
+fin_t = [e for e in ev if e['tipo'] == 'titulo' and 'APARECER' in e.get('texto', '')]
+for e in fin_t:  # reloj de tensión bajo "siguen sin aparecer"
+    k = 0
+    while e['desde'] + k < e['hasta']: fx(e['desde'] + k, tic(), .2 if int(k * 2) % 2 == 0 else .13, .25 if int(k * 2) % 2 else -.25, .2); k += .5
+def estatica(d): n = nz(d); g = (np.random.default_rng(3).random(int(d * 40)) > .55).repeat(int(SR / 40) + 1)[:len(n)]; return norm(filt(n, 'band', [900, 4000]) * g)
+for c in sp.get('clips', []):
+    if c['codigo'] == 'N05': fx(c['desde'] + .05, estatica(.7), .16, .4, .1)
 for c in sp.get('clips', []):  # escenas reales
     t0, t1 = c['desde'], c['hasta']
     if t0 > .2: fx(t0 - .28, barrido(.42, 400, 3600, 900, .2), .34, 0, .15, mov=(.7, -.7)); fx(t0, boom(.6, 130, 55, 1.6), .26, 0, .15)

@@ -396,7 +396,8 @@ const C = {
   nombre(e, t) { const [x, y] = ws(e.lon, e.lat), p = eob(pr(t, e.desde, .4)), a = fade(t, e, .05, .3); if (p <= 0) return; const sz = e.tam || 28; ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); ctx.scale(p, p); ctx.font = F(700, sz); const w = ctx.measureText(e.texto).width + 36, h = sz + 22;
     if (e.fantasma) { ctx.setLineDash([8, 6]); rr(-w / 2, -h / 2, w, h, h / 2, 'rgba(7,18,27,.45)', 'rgba(255,255,255,.85)', 2.5); ctx.setLineDash([]); texto(e.texto, 0, 2, F(700, sz), 'rgba(255,255,255,.92)'); }
     else { rr(-w / 2, -h / 2, w, h, h / 2, e.fondo || NAVY, e.borde || ACC, 3); texto(e.texto, 0, 2, F(700, sz), '#fff'); } ctx.restore(); },
-  cifra(e, t) { const p = eob(pr(t, e.desde, .5)), a = fade(t, e, .1, .35); if (p <= 0) return; const y = Y(e.y || 330), sz = e.tam || 140; ctx.font = F(700, sz); const w1 = ctx.measureText(e.texto).width + sz * .3; ctx.font = F(700, 40); const fit = encajar([w1, e.sub ? ctx.measureText(e.sub).width + 20 : 0], W * .94);
+  cifra(e, t) { const p = eob(pr(t, e.desde, .5)), a = fade(t, e, .1, .35); if (p <= 0) return; const y = Y(e.y || 330), sz = e.tam || 140;
+    if (e.num) { const q = eo(pr(t, e.desde + .05, e.dur || .9)), v = e.num[0] + (e.num[1] - e.num[0]) * q, d = e.dec || 0; e.texto = (e.pre || '') + v.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d }) + (e.suf || ''); } ctx.font = F(700, sz); const w1 = ctx.measureText(e.texto).width + sz * .3; ctx.font = F(700, 40); const fit = encajar([w1, e.sub ? ctx.measureText(e.sub).width + 20 : 0], W * .94);
     ctx.save(); ctx.globalAlpha = a; ctx.translate(e.x || W / 2, y); ctx.scale(p * fit, p * fit); ctx.rotate(Math.sin(t * 1.7) * .01);
     texto(e.texto, 0, 0, F(700, sz), e.color || ACC, 'center', 'middle', NAVY, sz * .16); if (e.sub) texto(e.sub, 0, sz * .62, F(700, 40), '#fff', 'center', 'middle', NAVY, 9);
     if (e.fuente) texto('Fuente: ' + e.fuente, 0, sz * .62 + 48, F(500, 22), 'rgba(255,255,255,.92)', 'center', 'middle', NAVY, 5); ctx.restore(); },
@@ -824,6 +825,16 @@ function capaClip(t) { const c = clipActivo(t); if (!c || !CLIPIMG) return 0;
   if (c.etiqueta !== false) { ctx.font = F(700, 22); ctx.letterSpacing = '4px'; const txt = c.etiqueta || 'RECREACIÓN CON IA', w = ctx.measureText(txt).width + 34; rr(40, H - 78, w, 40, 8, 'rgba(0,0,0,.55)', 'rgba(255,255,255,.35)', 1.5); texto(txt, 40 + w / 2, H - 57, F(700, 22), '#fff'); }
   ctx.restore(); return a; }
 const enMapa = e => e.tipo === 'region' || e.lon !== undefined || e.pais !== undefined || e.de !== undefined || e.tipo === 'resaltar' || e.tipo === 'flujo' || e.tipo === 'medida' || e.tipo === 'ruta';
+// ---------- retención: banner de "última hora", barra de progreso y destellos ----------
+function capasRetencion(t) {
+  for (const e of SP.eventos) { if (e.tipo !== 'ultimahora' || !activo(t, e)) continue; const q = eo(pr(t, e.desde, .35)), a = fade(t, e, .05, .3), y = e.y || 160;
+    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = a; ctx.translate(-(1 - q) * W, 0); ctx.font = F(900, 40, 'Montserrat'); const w1 = ctx.measureText('ÚLTIMA HORA').width + 60;
+    ctx.fillStyle = '#d61f26'; ctx.fillRect(0, y - 38, w1 + 40, 76); const pul = .5 + .5 * Math.sin(t * 10); ctx.fillStyle = `rgba(255,255,255,${.6 + .4 * pul})`; ctx.beginPath(); ctx.arc(34, y, 10, 0, 7); ctx.fill();
+    texto('ÚLTIMA HORA', 56 + (w1 - 60) / 2, y + 2, F(900, 40, 'Montserrat'), '#fff'); ctx.font = F(800, 34, 'Montserrat'); const w2 = ctx.measureText(e.texto).width + 50;
+    ctx.fillStyle = 'rgba(8,12,18,.88)'; ctx.fillRect(w1 + 40, y - 38, w2, 76); texto(e.texto, w1 + 40 + w2 / 2, y + 2, F(800, 34, 'Montserrat'), '#fff'); ctx.restore(); }
+  if (SP.barra) { ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = 'rgba(255,255,255,.18)'; ctx.fillRect(0, 0, W, 9); ctx.fillStyle = SP.barra === true ? '#ff2d2d' : SP.barra; ctx.fillRect(0, 0, W * cl(t / SP.duracion), 9); ctx.restore(); }
+  for (const c of SP.clips || []) { const u = (t - c.desde) / .16; if (u >= 0 && u < 1 && c.desde > .2) { ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = `rgba(255,255,255,${(1 - u) * .55})`; ctx.fillRect(0, 0, W, H); ctx.restore(); } }
+  for (const f of SP.destellos || []) { const u = (t - f) / .14; if (u >= 0 && u < 1) { ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = `rgba(255,255,255,${(1 - u) * .7})`; ctx.fillRect(0, 0, W, H); ctx.restore(); } } }
 // ---------- subtítulo de una palabra (Shorts): grande, con golpe, y las palabras clave en amarillo ----------
 function palabrasCap(t) { const L = SP.palabras; if (!L) return; const p = L.find(q => t >= q.t0 && t < q.t1 + .05); if (!p) return;
   const limpio = p.w.replace(/[¿?¡!"“”]/g, '').toUpperCase(), clave = (SP.resaltar || []).some(r => limpio.includes(r)) || /\d/.test(limpio);
@@ -841,7 +852,7 @@ function render(t) {
   if (SP.estilo === 'fantasia') { pase(e => !e.mar && !e.arriba); desenfoqueFant(t); pase(e => e.arriba); marcoFant(t); }
   else pase(() => true);
   if (SP.estilo !== 'documental') { if (!OCULTO('lista')) C.listaPanel(t); if (SP.narracion) subtitulos(t); } else subtitulos(t);
-  palabrasCap(t);
+  palabrasCap(t); capasRetencion(t);
   ctx.save(); ctx.globalAlpha = SP.estilo === 'documental' ? .055 : .03; GRANO.setTransform(new DOMMatrix([1, 0, 0, 1, Math.random() * 256, Math.random() * 256])); ctx.fillStyle = GRANO; ctx.fillRect(0, 0, W, H); ctx.restore();
   const fi = SP.fundido_inicio ?? .4; if (t < fi) { ctx.fillStyle = `rgba(0,0,0,${1 - t / fi})`; ctx.fillRect(0, 0, W, H); }
   if (SP.duracion - t < .6) { ctx.fillStyle = `rgba(0,0,0,${1 - (SP.duracion - t) / .6})`; ctx.fillRect(0, 0, W, H); }
