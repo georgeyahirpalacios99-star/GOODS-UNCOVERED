@@ -63,3 +63,9 @@ shorts/007-brasil-shorts/*/.tmp/
 shorts/007-brasil-shorts/*/preview/
 shorts/007-brasil-shorts/*/*.mp4
 shorts/007-brasil-shorts/*/voz/*.wav
+shorts/009-haiti-el-salvador/.clips/
+shorts/009-haiti-el-salvador/.tmp/
+shorts/009-haiti-el-salvador/preview/
+shorts/009-haiti-el-salvador/*.mp4
+shorts/009-haiti-el-salvador/clips/*.mp4
+shorts/009-haiti-el-salvador/voz/*.wav

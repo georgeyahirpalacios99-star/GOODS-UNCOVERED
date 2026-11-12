@@ -837,7 +837,7 @@ function render(t) {
   if (SP.estilo === 'documental') mapaDoc(t); else if (SP.estilo === 'pergamino') mapaPerg(t); else if (SP.estilo === 'fantasia') mapaFant(t); else mapaCarto(t);
   ctx.setTransform(1, 0, 0, 1, 0, 0); const ca = capaClip(t);
   const R = SP.estilo === 'documental' ? D : C;
-  const pase = filtro => { for (const e of SP.eventos) { const fn = R[e.tipo] || D[e.tipo]; if (!filtro(e) || (ca > .5 && enMapa(e)) || !activo(t, e) || !fn || OCULTO(e.tipo)) continue; ctx.save(); ctx.letterSpacing = '0px'; fn(e, t); ctx.restore(); } };
+  const pase = filtro => { for (const e of SP.eventos) { const fn = R[e.tipo] || D[e.tipo] || C[e.tipo]; if (!filtro(e) || (ca > .5 && enMapa(e)) || !activo(t, e) || !fn || OCULTO(e.tipo)) continue; ctx.save(); ctx.letterSpacing = '0px'; fn(e, t); ctx.restore(); } };
   if (SP.estilo === 'fantasia') { pase(e => !e.mar && !e.arriba); desenfoqueFant(t); pase(e => e.arriba); marcoFant(t); }
   else pase(() => true);
   if (SP.estilo !== 'documental') { if (!OCULTO('lista')) C.listaPanel(t); if (SP.narracion) subtitulos(t); } else subtitulos(t);
