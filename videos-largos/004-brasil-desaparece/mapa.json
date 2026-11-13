@@ -1,0 +1,3007 @@
+{
+ "estilo": "caricatura",
+ "salida": "que-pasaria-si-brasil-desapareciera",
+ "duracion": 480.29,
+ "camara": [
+  {
+   "t": 0,
+   "lon": -60,
+   "lat": 10,
+   "ancho": 120
+  },
+  {
+   "t": 0.9,
+   "lon": -54,
+   "lat": -13,
+   "ancho": 50,
+   "arco": 0.2
+  },
+  {
+   "t": 8.58,
+   "lon": -54,
+   "lat": -13,
+   "ancho": 50,
+   "suave": false
+  },
+  {
+   "t": 10.08,
+   "lon": -62,
+   "lat": -24,
+   "ancho": 135
+  },
+  {
+   "t": 19.22,
+   "lon": -62,
+   "lat": -24,
+   "ancho": 135,
+   "suave": false
+  },
+  {
+   "t": 20.72,
+   "lon": -63.5,
+   "lat": -17,
+   "ancho": 20
+  },
+  {
+   "t": 26.85,
+   "lon": -63.5,
+   "lat": -17,
+   "ancho": 20,
+   "suave": false
+  },
+  {
+   "t": 28.35,
+   "lon": -62,
+   "lat": -24,
+   "ancho": 135
+  },
+  {
+   "t": 37.36,
+   "lon": -58.2,
+   "lat": -23.4,
+   "ancho": 15,
+   "suave": false
+  },
+  {
+   "t": 38.75,
+   "lon": -60,
+   "lat": -18,
+   "ancho": 60
+  },
+  {
+   "t": 48.78,
+   "lon": -60,
+   "lat": -18,
+   "ancho": 60,
+   "suave": false
+  },
+  {
+   "t": 50.28,
+   "lon": -58,
+   "lat": -15,
+   "ancho": 62
+  },
+  {
+   "t": 64.07,
+   "lon": -58,
+   "lat": -15,
+   "ancho": 62,
+   "suave": false
+  },
+  {
+   "t": 65.57,
+   "lon": -63,
+   "lat": -15.5,
+   "ancho": 22
+  },
+  {
+   "t": 69.48,
+   "lon": -63,
+   "lat": -15.5,
+   "ancho": 22,
+   "suave": false
+  },
+  {
+   "t": 70.98,
+   "lon": -66,
+   "lat": -20,
+   "ancho": 26
+  },
+  {
+   "t": 80.08,
+   "lon": -66,
+   "lat": -20,
+   "ancho": 26,
+   "suave": false
+  },
+  {
+   "t": 81.58,
+   "lon": -57.5,
+   "lat": -23.5,
+   "ancho": 16
+  },
+  {
+   "t": 85.61,
+   "lon": -57.5,
+   "lat": -23.5,
+   "ancho": 16,
+   "suave": false
+  },
+  {
+   "t": 87.11,
+   "lon": -56.3,
+   "lat": -33.0,
+   "ancho": 11
+  },
+  {
+   "t": 101.93,
+   "lon": -56.3,
+   "lat": -33.0,
+   "ancho": 11,
+   "suave": false
+  },
+  {
+   "t": 103.43,
+   "lon": -54,
+   "lat": 4,
+   "ancho": 14
+  },
+  {
+   "t": 105.15,
+   "lon": -25,
+   "lat": 28,
+   "ancho": 120,
+   "arco": 0.25
+  },
+  {
+   "t": 113.15,
+   "lon": -25,
+   "lat": 28,
+   "ancho": 120,
+   "suave": false
+  },
+  {
+   "t": 114.65,
+   "lon": -70.8,
+   "lat": -3.6,
+   "ancho": 14
+  },
+  {
+   "t": 119.38,
+   "lon": -70.8,
+   "lat": -3.6,
+   "ancho": 14,
+   "suave": false
+  },
+  {
+   "t": 120.88,
+   "lon": -58,
+   "lat": -18,
+   "ancho": 66
+  },
+  {
+   "t": 141.99,
+   "lon": -58,
+   "lat": -18,
+   "ancho": 66,
+   "suave": false
+  },
+  {
+   "t": 143.49,
+   "lon": -64,
+   "lat": -2,
+   "ancho": 56
+  },
+  {
+   "t": 146.3,
+   "lon": -64,
+   "lat": -2,
+   "ancho": 56,
+   "suave": false
+  },
+  {
+   "t": 147.8,
+   "lon": -20,
+   "lat": 15,
+   "ancho": 235
+  },
+  {
+   "t": 173.43,
+   "lon": -20,
+   "lat": 15,
+   "ancho": 235,
+   "suave": false
+  },
+  {
+   "t": 174.54,
+   "lon": 30,
+   "lat": 5,
+   "ancho": 260
+  },
+  {
+   "t": 174.93,
+   "lon": 112,
+   "lat": 32,
+   "ancho": 60
+  },
+  {
+   "t": 185.72,
+   "lon": 30,
+   "lat": 5,
+   "ancho": 260,
+   "suave": false
+  },
+  {
+   "t": 187.22,
+   "lon": 108,
+   "lat": 33,
+   "ancho": 48
+  },
+  {
+   "t": 193.24,
+   "lon": 108,
+   "lat": 33,
+   "ancho": 48,
+   "suave": false
+  },
+  {
+   "t": 194.74,
+   "lon": 15,
+   "lat": 15,
+   "ancho": 250
+  },
+  {
+   "t": 199.37,
+   "lon": 15,
+   "lat": 15,
+   "ancho": 250,
+   "suave": false
+  },
+  {
+   "t": 200.87,
+   "lon": -60,
+   "lat": -10,
+   "ancho": 42
+  },
+  {
+   "t": 205.14,
+   "lon": -60,
+   "lat": -10,
+   "ancho": 42,
+   "suave": false
+  },
+  {
+   "t": 206.64,
+   "lon": -62,
+   "lat": -13,
+   "ancho": 44
+  },
+  {
+   "t": 232.78,
+   "lon": -62,
+   "lat": -13,
+   "ancho": 44,
+   "suave": false
+  },
+  {
+   "t": 234.28,
+   "lon": -40,
+   "lat": 0,
+   "ancho": 150
+  },
+  {
+   "t": 259.0,
+   "lon": -40,
+   "lat": 0,
+   "ancho": 150,
+   "suave": false
+  },
+  {
+   "t": 260.5,
+   "lon": -63,
+   "lat": -33,
+   "ancho": 30
+  },
+  {
+   "t": 266.14,
+   "lon": -63,
+   "lat": -33,
+   "ancho": 30,
+   "suave": false
+  },
+  {
+   "t": 267.64,
+   "lon": -57,
+   "lat": -25,
+   "ancho": 18
+  },
+  {
+   "t": 270.98,
+   "lon": -57,
+   "lat": -25,
+   "ancho": 18,
+   "suave": false
+  },
+  {
+   "t": 272.48,
+   "lon": -57,
+   "lat": -27,
+   "ancho": 24
+  },
+  {
+   "t": 288.8,
+   "lon": -57,
+   "lat": -27,
+   "ancho": 24,
+   "suave": false
+  },
+  {
+   "t": 290.3,
+   "lon": -56.2,
+   "lat": -25.2,
+   "ancho": 10
+  },
+  {
+   "t": 316.14,
+   "lon": -56.2,
+   "lat": -25.2,
+   "ancho": 10,
+   "suave": false
+  },
+  {
+   "t": 317.64,
+   "lon": -56.6,
+   "lat": -27.3,
+   "ancho": 9
+  },
+  {
+   "t": 321.82,
+   "lon": -56.6,
+   "lat": -27.3,
+   "ancho": 9,
+   "suave": false
+  },
+  {
+   "t": 323.32,
+   "lon": -54.6,
+   "lat": -25.7,
+   "ancho": 6
+  },
+  {
+   "t": 328.48,
+   "lon": -54.6,
+   "lat": -25.7,
+   "ancho": 6,
+   "suave": false
+  },
+  {
+   "t": 329.98,
+   "lon": -52,
+   "lat": -25.6,
+   "ancho": 10
+  },
+  {
+   "t": 341.11,
+   "lon": -52,
+   "lat": -25.6,
+   "ancho": 10,
+   "suave": false
+  },
+  {
+   "t": 342.61,
+   "lon": -60.5,
+   "lat": -32.5,
+   "ancho": 12
+  },
+  {
+   "t": 353.25,
+   "lon": -60.5,
+   "lat": -32.5,
+   "ancho": 12,
+   "suave": false
+  },
+  {
+   "t": 354.75,
+   "lon": -57,
+   "lat": -27,
+   "ancho": 34
+  },
+  {
+   "t": 360.81,
+   "lon": -57,
+   "lat": -27,
+   "ancho": 34,
+   "suave": false
+  },
+  {
+   "t": 362.31,
+   "lon": -57.5,
+   "lat": -23.5,
+   "ancho": 18
+  },
+  {
+   "t": 371.22,
+   "lon": -57.5,
+   "lat": -23.5,
+   "ancho": 18,
+   "suave": false
+  },
+  {
+   "t": 372.72,
+   "lon": -50,
+   "lat": -18,
+   "ancho": 46
+  },
+  {
+   "t": 387.01,
+   "lon": -50,
+   "lat": -18,
+   "ancho": 46,
+   "suave": false
+  },
+  {
+   "t": 388.51,
+   "lon": -47,
+   "lat": -19.5,
+   "ancho": 16
+  },
+  {
+   "t": 390.32,
+   "lon": -85,
+   "lat": 38,
+   "ancho": 120,
+   "arco": 0.2
+  },
+  {
+   "t": 396.5,
+   "lon": -85,
+   "lat": 38,
+   "ancho": 120,
+   "suave": false
+  },
+  {
+   "t": 398.0,
+   "lon": -50,
+   "lat": -15,
+   "ancho": 60
+  },
+  {
+   "t": 404.41,
+   "lon": -50,
+   "lat": -15,
+   "ancho": 60,
+   "suave": false
+  },
+  {
+   "t": 405.91,
+   "lon": 10,
+   "lat": 47,
+   "ancho": 34
+  },
+  {
+   "t": 409.04,
+   "lon": 10,
+   "lat": 47,
+   "ancho": 34,
+   "suave": false
+  },
+  {
+   "t": 410.54,
+   "lon": -64,
+   "lat": -34,
+   "ancho": 30
+  },
+  {
+   "t": 411.53,
+   "lon": -50,
+   "lat": -18,
+   "ancho": 46
+  },
+  {
+   "t": 423.37,
+   "lon": -50,
+   "lat": -18,
+   "ancho": 46,
+   "suave": false
+  },
+  {
+   "t": 424.87,
+   "lon": -62,
+   "lat": -24,
+   "ancho": 135
+  },
+  {
+   "t": 449.82,
+   "lon": -62,
+   "lat": -24,
+   "ancho": 135,
+   "suave": false
+  },
+  {
+   "t": 451.32,
+   "lon": -45,
+   "lat": 5,
+   "ancho": 150
+  },
+  {
+   "t": 480.29,
+   "lon": -45,
+   "lat": 5,
+   "ancho": 145,
+   "suave": false
+  }
+ ],
+ "desaparece": [
+  {
+   "iso": "BRA",
+   "t": 2.92
+  }
+ ],
+ "sacudidas": [
+  {
+   "t": 2.92,
+   "dur": 1.0,
+   "fuerza": 18
+  }
+ ],
+ "tam": {
+  "URY": 1.35,
+  "PRY": 1.25,
+  "BOL": 1.1,
+  "ECU": 1.3,
+  "GUY": 1.3,
+  "SUR": 1.4,
+  "CHL": 1.1,
+  "VNM": 1.4,
+  "ITA": 1.3,
+  "DEU": 1.2
+ },
+ "mirar": [],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    38.75,
+    "normal"
+   ],
+   [
+    48.78,
+    "normal"
+   ],
+   [
+    452.89,
+    "triste"
+   ],
+   [
+    455.95,
+    "feliz"
+   ]
+  ],
+  "BRA": [
+   [
+    0,
+    "feliz"
+   ],
+   [
+    1.6,
+    "normal"
+   ]
+  ],
+  "BOL": [
+   [
+    3.42,
+    "shock"
+   ],
+   [
+    14.51,
+    "preocupado"
+   ],
+   [
+    19.22,
+    "sorpresa"
+   ],
+   [
+    23.92,
+    "risa"
+   ],
+   [
+    26.85,
+    "normal"
+   ],
+   [
+    46.33,
+    "preocupado"
+   ],
+   [
+    64.07,
+    "risa"
+   ],
+   [
+    71.15,
+    "triste"
+   ],
+   [
+    73.64,
+    "risa"
+   ],
+   [
+    222.69,
+    "feliz"
+   ],
+   [
+    229.96,
+    "preocupado"
+   ]
+  ],
+  "PRY": [
+   [
+    3.42,
+    "shock"
+   ],
+   [
+    14.51,
+    "preocupado"
+   ],
+   [
+    37.36,
+    "grito"
+   ],
+   [
+    46.33,
+    "preocupado"
+   ],
+   [
+    80.08,
+    "sorpresa"
+   ],
+   [
+    82.46,
+    "feliz"
+   ],
+   [
+    222.69,
+    "feliz"
+   ],
+   [
+    229.96,
+    "preocupado"
+   ],
+   [
+    288.8,
+    "preocupado"
+   ],
+   [
+    309.08,
+    "llora"
+   ],
+   [
+    313.4,
+    "grito"
+   ],
+   [
+    316.14,
+    "triste"
+   ],
+   [
+    363.35,
+    "risa"
+   ]
+  ],
+  "URY": [
+   [
+    3.42,
+    "shock"
+   ],
+   [
+    14.51,
+    "preocupado"
+   ],
+   [
+    46.33,
+    "preocupado"
+   ],
+   [
+    96.08,
+    "sorpresa"
+   ],
+   [
+    100.06,
+    "risa"
+   ]
+  ],
+  "ARG": [
+   [
+    3.42,
+    "shock"
+   ],
+   [
+    14.51,
+    "preocupado"
+   ],
+   [
+    46.33,
+    "preocupado"
+   ],
+   [
+    222.69,
+    "feliz"
+   ],
+   [
+    229.96,
+    "preocupado"
+   ],
+   [
+    262.49,
+    "preocupado"
+   ],
+   [
+    316.66,
+    "preocupado"
+   ],
+   [
+    334.4,
+    "llora"
+   ],
+   [
+    357.32,
+    "llora"
+   ],
+   [
+    409.04,
+    "confundido"
+   ]
+  ],
+  "PER": [
+   [
+    3.42,
+    "shock"
+   ],
+   [
+    14.51,
+    "preocupado"
+   ],
+   [
+    46.33,
+    "preocupado"
+   ],
+   [
+    117.02,
+    "feliz"
+   ]
+  ],
+  "COL": [
+   [
+    3.42,
+    "shock"
+   ],
+   [
+    14.51,
+    "preocupado"
+   ],
+   [
+    117.02,
+    "sorpresa"
+   ],
+   [
+    145.15,
+    "risa"
+   ],
+   [
+    153.86,
+    "risa"
+   ]
+  ],
+  "VEN": [
+   [
+    3.42,
+    "shock"
+   ],
+   [
+    14.51,
+    "preocupado"
+   ]
+  ],
+  "GUY": [
+   [
+    3.42,
+    "shock"
+   ],
+   [
+    14.51,
+    "preocupado"
+   ]
+  ],
+  "SUR": [
+   [
+    3.42,
+    "shock"
+   ],
+   [
+    14.51,
+    "preocupado"
+   ]
+  ],
+  "CHL": [
+   [
+    14.51,
+    "preocupado"
+   ],
+   [
+    53.87,
+    "confundido"
+   ],
+   [
+    71.15,
+    "duda"
+   ]
+  ],
+  "ECU": [
+   [
+    14.51,
+    "preocupado"
+   ],
+   [
+    53.87,
+    "confundido"
+   ]
+  ],
+  "FRA": [
+   [
+    105.15,
+    "sorpresa"
+   ]
+  ],
+  "VNM": [
+   [
+    153.86,
+    "risa"
+   ]
+  ],
+  "CHN": [
+   [
+    173.43,
+    "shock"
+   ],
+   [
+    185.72,
+    "preocupado"
+   ],
+   [
+    190.32,
+    "llora"
+   ]
+  ],
+  "CAN": [
+   [
+    392.51,
+    "shock"
+   ]
+  ],
+  "DEU": [
+   [
+    406.89,
+    "risa"
+   ]
+  ],
+  "ITA": [
+   [
+    406.89,
+    "risa"
+   ]
+  ]
+ },
+ "eventos": [
+  {
+   "tipo": "nombre",
+   "desde": 3.92,
+   "texto": "BRASIL",
+   "lon": -52,
+   "lat": -11,
+   "tam": 52,
+   "fantasma": true,
+   "hasta": 8.58
+  },
+  {
+   "tipo": "titulo",
+   "desde": 6.0,
+   "texto": "SOLO… *MAR*",
+   "tam": 110,
+   "y": 230,
+   "hasta": 8.58
+  },
+  {
+   "tipo": "cifra",
+   "desde": 10.17,
+   "texto": "≈ 47 %",
+   "tam": 170,
+   "sub": "de Sudamérica era Brasil",
+   "fuente": "8.5 de 17.8 millones de km²",
+   "y": 250,
+   "hasta": 12.42
+  },
+  {
+   "tipo": "cinta",
+   "desde": 14.71,
+   "x": 960,
+   "y": 930,
+   "escala": 1.5,
+   "texto": "SUDAMÉRICA CON UN MORDISCO",
+   "icono": "globo",
+   "color": "#1f6aa8",
+   "hasta": 16.34
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.22,
+   "pais": "BOL",
+   "color": "#ffd23f",
+   "hasta": 26.85
+  },
+  {
+   "tipo": "pin",
+   "desde": 23.72,
+   "lon": -60.2,
+   "lat": -14.0,
+   "texto": "¿PLAYA?",
+   "escala": 1.6,
+   "hasta": 26.85
+  },
+  {
+   "tipo": "cinta",
+   "desde": 24.32,
+   "x": 960,
+   "y": 930,
+   "escala": 1.45,
+   "texto": "BOLIVIA DESPIERTA CON PLAYA",
+   "icono": "barco",
+   "color": "#1f6aa8",
+   "hasta": 26.85
+  },
+  {
+   "tipo": "iconos",
+   "desde": 26.85,
+   "y": 470,
+   "paso": 0.0,
+   "gap": 380,
+   "escala": 1.45,
+   "items": [
+    {
+     "icono": "isla",
+     "texto": "¿UNA ISLA?",
+     "color": "#1f6aa8"
+    },
+    {
+     "icono": "gota",
+     "texto": "¿IGUAZÚ SECO?",
+     "color": "#4ea3ff"
+    },
+    {
+     "icono": "foco",
+     "texto": "¿SIN LUZ?",
+     "color": "#ffd23f"
+    }
+   ],
+   "hasta": 37.36
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 28.85,
+   "pais": "URY",
+   "hasta": 30.95
+  },
+  {
+   "tipo": "pin",
+   "desde": 30.95,
+   "lon": -54.44,
+   "lat": -25.69,
+   "texto": "IGUAZÚ",
+   "escala": 1.5,
+   "hasta": 34.1
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 37.36,
+   "pais": "PRY",
+   "color": "#ffd23f",
+   "hasta": 38.75
+  },
+  {
+   "tipo": "apagon",
+   "desde": 38.16,
+   "fuerza": 0.55,
+   "hasta": 39.76
+  },
+  {
+   "tipo": "cinta",
+   "desde": 39.96,
+   "x": 960,
+   "y": 900,
+   "escala": 1.4,
+   "texto": "TRANQUILO: NADIE SUFRE",
+   "icono": "corazon",
+   "color": "#2e9e5b",
+   "hasta": 46.33
+  },
+  {
+   "tipo": "globo",
+   "desde": 43.5,
+   "pais": "ARG",
+   "texto": "¿Y a dónde se fueron?",
+   "lado": 1,
+   "hasta": 46.33
+  },
+  {
+   "tipo": "titulo",
+   "desde": 46.33,
+   "texto": "¿QUÉ PASARÍA SI\n*BRASIL*\nDESAPARECIERA?",
+   "tam": 92,
+   "y": 330,
+   "hasta": 48.68
+  },
+  {
+   "tipo": "region",
+   "desde": 48.78,
+   "texto": "EL NUEVO MAPA",
+   "hasta": 119.38
+  },
+  {
+   "tipo": "cifra",
+   "desde": 50.13,
+   "texto": "10 PAÍSES",
+   "tam": 150,
+   "sub": "tenían frontera con Brasil",
+   "y": 250,
+   "hasta": 55.22
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 50.38,
+   "pais": "ARG",
+   "color": "#ffd23f",
+   "hasta": 53.87
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 50.52,
+   "pais": "BOL",
+   "color": "#ffd23f",
+   "hasta": 53.87
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 50.66,
+   "pais": "COL",
+   "color": "#ffd23f",
+   "hasta": 53.87
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 50.8,
+   "pais": "FRA",
+   "color": "#ffd23f",
+   "hasta": 53.87
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 50.94,
+   "pais": "GUY",
+   "color": "#ffd23f",
+   "hasta": 53.87
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 51.08,
+   "pais": "PRY",
+   "color": "#ffd23f",
+   "hasta": 53.87
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 51.22,
+   "pais": "PER",
+   "color": "#ffd23f",
+   "hasta": 53.87
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 51.36,
+   "pais": "SUR",
+   "color": "#ffd23f",
+   "hasta": 53.87
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 51.5,
+   "pais": "URY",
+   "color": "#ffd23f",
+   "hasta": 53.87
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 51.64,
+   "pais": "VEN",
+   "color": "#ffd23f",
+   "hasta": 53.87
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 53.87,
+   "pais": "CHL",
+   "color": "#9aa5ae",
+   "hasta": 55.22
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 53.87,
+   "pais": "ECU",
+   "color": "#9aa5ae",
+   "hasta": 55.22
+  },
+  {
+   "tipo": "globo",
+   "desde": 54.17,
+   "pais": "ECU",
+   "texto": "¿Y nosotros qué?",
+   "lado": -1,
+   "hasta": 56.02
+  },
+  {
+   "tipo": "cifra",
+   "desde": 55.22,
+   "texto": "16,885 km",
+   "tam": 150,
+   "sub": "de fronteras que desaparecen",
+   "fuente": "Itamaraty",
+   "y": 250,
+   "hasta": 61.63
+  },
+  {
+   "tipo": "cinta",
+   "desde": 58.09,
+   "x": 960,
+   "y": 930,
+   "escala": 1.35,
+   "texto": "3.ª FRONTERA MÁS LARGA DEL PLANETA",
+   "icono": "globo",
+   "color": "#1f6aa8",
+   "hasta": 61.63
+  },
+  {
+   "tipo": "titulo",
+   "desde": 61.63,
+   "texto": "TODO ESO… *ES COSTA*",
+   "tam": 100,
+   "y": 250,
+   "hasta": 64.07
+  },
+  {
+   "tipo": "nombre",
+   "desde": 65.66,
+   "texto": "BOLIVIA +3,423 km DE COSTA",
+   "lon": -61,
+   "lat": -13.2,
+   "tam": 34,
+   "hasta": 80.08
+  },
+  {
+   "tipo": "pin",
+   "desde": 69.78,
+   "lon": -70.4,
+   "lat": -23.6,
+   "texto": "LITORAL · 1879",
+   "hasta": 75.32
+  },
+  {
+   "tipo": "cifra",
+   "desde": 71.15,
+   "texto": "400 km",
+   "tam": 150,
+   "sub": "de costa perdió Bolivia en 1879–1884",
+   "fuente": "Guerra del Pacífico",
+   "y": 250,
+   "hasta": 73.64
+  },
+  {
+   "tipo": "cifra",
+   "desde": 73.64,
+   "texto": "× 8",
+   "tam": 220,
+   "sub": "más costa que la que perdió",
+   "y": 280,
+   "hasta": 75.32
+  },
+  {
+   "tipo": "iconos",
+   "desde": 76.14,
+   "y": 430,
+   "paso": 0,
+   "escala": 1.5,
+   "items": [
+    {
+     "icono": "barco",
+     "texto": "ARMADA BOLIVIANA"
+    }
+   ],
+   "hasta": 80.08
+  },
+  {
+   "tipo": "globo",
+   "desde": 77.59,
+   "pais": "BOL",
+   "texto": "¡Zarpamos!",
+   "lado": 1,
+   "hasta": 80.68
+  },
+  {
+   "tipo": "nombre",
+   "desde": 82.46,
+   "texto": "PARAGUAY +1,365 km DE PLAYA",
+   "lon": -56.0,
+   "lat": -21.6,
+   "tam": 32,
+   "hasta": 85.61
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 85.61,
+   "pais": "URY",
+   "color": "#ffd23f",
+   "hasta": 101.93
+  },
+  {
+   "tipo": "nombre",
+   "desde": 94.07,
+   "texto": "RÍO URUGUAY",
+   "lon": -58.35,
+   "lat": -31.6,
+   "tam": 24,
+   "hasta": 101.93
+  },
+  {
+   "tipo": "nombre",
+   "desde": 94.78,
+   "texto": "RÍO DE LA PLATA",
+   "lon": -57.0,
+   "lat": -34.75,
+   "tam": 24,
+   "hasta": 101.93
+  },
+  {
+   "tipo": "iconos",
+   "desde": 99.14,
+   "y": 420,
+   "paso": 0,
+   "escala": 1.6,
+   "items": [
+    {
+     "icono": "isla",
+     "texto": ""
+    }
+   ],
+   "hasta": 101.93
+  },
+  {
+   "tipo": "cinta",
+   "desde": 100.06,
+   "x": 960,
+   "y": 930,
+   "escala": 1.5,
+   "texto": "URUGUAY ES UNA ISLA",
+   "icono": "isla",
+   "color": "#1f6aa8",
+   "hasta": 102.33
+  },
+  {
+   "tipo": "nombre",
+   "desde": 103.43,
+   "texto": "GUAYANA FRANCESA",
+   "lon": -53.2,
+   "lat": 3.9,
+   "tam": 28,
+   "hasta": 109.26
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 105.15,
+   "pais": "FRA",
+   "color": "#ffd23f",
+   "hasta": 113.15
+  },
+  {
+   "tipo": "nombre",
+   "desde": 106.75,
+   "texto": "FRANCIA",
+   "lon": 2.5,
+   "lat": 46.6,
+   "tam": 30,
+   "hasta": 113.15
+  },
+  {
+   "tipo": "nombre",
+   "desde": 107.05,
+   "texto": "GUAYANA FRANCESA",
+   "lon": -53.2,
+   "lat": 3.9,
+   "tam": 26,
+   "hasta": 113.15
+  },
+  {
+   "tipo": "cifra",
+   "desde": 109.26,
+   "texto": "730 km",
+   "tam": 150,
+   "sub": "era la frontera más larga de Francia",
+   "fuente": "Guayana Francesa – Brasil",
+   "y": 250,
+   "hasta": 113.15
+  },
+  {
+   "tipo": "flujo",
+   "desde": 113.15,
+   "de": [
+    -73.25,
+    -3.75
+   ],
+   "a": [
+    -69.94,
+    -4.21
+   ],
+   "icono": "gota",
+   "n": 5,
+   "hasta": 119.38
+  },
+  {
+   "tipo": "pin",
+   "desde": 117.02,
+   "lon": -69.94,
+   "lat": -4.21,
+   "texto": "LETICIA: FIN DEL AMAZONAS",
+   "hasta": 119.38
+  },
+  {
+   "tipo": "region",
+   "desde": 119.38,
+   "texto": "LA GENTE",
+   "hasta": 141.59
+  },
+  {
+   "tipo": "cifra",
+   "desde": 120.92,
+   "texto": "213 MILLONES",
+   "tam": 150,
+   "sub": "de personas vivían en Brasil",
+   "fuente": "IBGE, julio de 2025",
+   "y": 250,
+   "hasta": 126.04
+  },
+  {
+   "tipo": "cifra",
+   "desde": 126.04,
+   "texto": "1 DE CADA 3",
+   "tam": 150,
+   "sub": "latinoamericanos era brasileño",
+   "y": 250,
+   "hasta": 128.58
+  },
+  {
+   "tipo": "cifra",
+   "desde": 128.58,
+   "texto": "4 DE CADA 5",
+   "tam": 150,
+   "sub": "personas que hablan portugués",
+   "y": 250,
+   "hasta": 134.28
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.28,
+   "pais": "ARG",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "titulo",
+   "desde": 134.28,
+   "texto": "SUDAMÉRICA, CASI SOLO\nEN *ESPAÑOL*",
+   "tam": 84,
+   "y": 280,
+   "hasta": 136.91
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.33,
+   "pais": "BOL",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.38,
+   "pais": "CHL",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.43,
+   "pais": "COL",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.48,
+   "pais": "ECU",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.53,
+   "pais": "GUY",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.58,
+   "pais": "PRY",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.63,
+   "pais": "PER",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.68,
+   "pais": "SUR",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.73,
+   "pais": "URY",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 134.78,
+   "pais": "VEN",
+   "color": "#ffd23f",
+   "hasta": 136.91
+  },
+  {
+   "tipo": "titulo",
+   "desde": 140.5,
+   "texto": "EMPIEZA EN TU *DESAYUNO*",
+   "tam": 96,
+   "y": 320,
+   "hasta": 142.99
+  },
+  {
+   "tipo": "region",
+   "desde": 141.99,
+   "texto": "EL DESAYUNO",
+   "hasta": 170.89
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 142.29,
+   "pais": "COL",
+   "color": "#ffd23f",
+   "hasta": 146.3
+  },
+  {
+   "tipo": "globo",
+   "desde": 145.15,
+   "pais": "COL",
+   "texto": "¡Ahora me toca a mí!",
+   "lado": 1,
+   "hasta": 146.9
+  },
+  {
+   "tipo": "cifra",
+   "desde": 146.3,
+   "texto": "≈ 40 %",
+   "tam": 170,
+   "sub": "del café del mundo",
+   "fuente": "USDA FAS",
+   "y": 250,
+   "hasta": 149.65
+  },
+  {
+   "tipo": "flujo",
+   "desde": 146.7,
+   "de": [
+    -48,
+    -18
+   ],
+   "a": [
+    -95,
+    38
+   ],
+   "icono": "cafe",
+   "n": 5,
+   "hasta": 149.65
+  },
+  {
+   "tipo": "flujo",
+   "desde": 146.7,
+   "de": [
+    -48,
+    -18
+   ],
+   "a": [
+    10,
+    50
+   ],
+   "icono": "cafe",
+   "n": 5,
+   "hasta": 149.65
+  },
+  {
+   "tipo": "flujo",
+   "desde": 146.7,
+   "de": [
+    -48,
+    -18
+   ],
+   "a": [
+    138,
+    37
+   ],
+   "icono": "cafe",
+   "n": 5,
+   "hasta": 149.65
+  },
+  {
+   "tipo": "flujo",
+   "desde": 149.65,
+   "de": [
+    -48,
+    -18
+   ],
+   "a": [
+    -95,
+    38
+   ],
+   "icono": "cafe",
+   "n": 4,
+   "roto": true,
+   "hasta": 155.06
+  },
+  {
+   "tipo": "flujo",
+   "desde": 149.65,
+   "de": [
+    -48,
+    -18
+   ],
+   "a": [
+    10,
+    50
+   ],
+   "icono": "cafe",
+   "n": 4,
+   "roto": true,
+   "hasta": 155.06
+  },
+  {
+   "tipo": "flujo",
+   "desde": 149.65,
+   "de": [
+    -48,
+    -18
+   ],
+   "a": [
+    138,
+    37
+   ],
+   "icono": "cafe",
+   "n": 4,
+   "roto": true,
+   "hasta": 155.06
+  },
+  {
+   "tipo": "cinta",
+   "desde": 150.22,
+   "x": 960,
+   "y": 880,
+   "escala": 1.4,
+   "texto": "EL CAFÉ SUBE DE PRECIO",
+   "icono": "dolar",
+   "color": "#d6453d",
+   "hasta": 152.38
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 153.86,
+   "pais": "VNM",
+   "color": "#ffd23f",
+   "hasta": 155.06
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 153.86,
+   "pais": "COL",
+   "color": "#ffd23f",
+   "hasta": 155.06
+  },
+  {
+   "tipo": "iconos",
+   "desde": 155.06,
+   "y": 430,
+   "paso": 0,
+   "escala": 1.6,
+   "items": [
+    {
+     "icono": "naranja",
+     "texto": "JUGO DE NARANJA"
+    }
+   ],
+   "hasta": 156.79
+  },
+  {
+   "tipo": "cifra",
+   "desde": 156.79,
+   "texto": "3 DE CADA 4",
+   "tam": 150,
+   "sub": "vasos de jugo de naranja exportado",
+   "fuente": "CitrusBR / USDA",
+   "y": 250,
+   "hasta": 161.61
+  },
+  {
+   "tipo": "cifra",
+   "desde": 161.61,
+   "texto": "≈ 50 %",
+   "tam": 170,
+   "sub": "del azúcar que se exporta en el mundo",
+   "fuente": "Cepea / JOB",
+   "y": 250,
+   "hasta": 166.4
+  },
+  {
+   "tipo": "iconos",
+   "desde": 166.4,
+   "y": 440,
+   "paso": 0.35,
+   "gap": 360,
+   "escala": 1.45,
+   "items": [
+    {
+     "icono": "cafe",
+     "texto": "CAFÉ"
+    },
+    {
+     "icono": "naranja",
+     "texto": "JUGO"
+    },
+    {
+     "icono": "azucar",
+     "texto": "AZÚCAR"
+    }
+   ],
+   "hasta": 170.89
+  },
+  {
+   "tipo": "titulo",
+   "desde": 168.24,
+   "texto": "TU DESAYUNO…\n*DE UN SOLO PAÍS*",
+   "tam": 88,
+   "y": 250,
+   "hasta": 170.89
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 173.43,
+   "pais": "CHN",
+   "color": "#ffd23f",
+   "hasta": 174.54
+  },
+  {
+   "tipo": "cifra",
+   "desde": 174.54,
+   "texto": "58 %",
+   "tam": 170,
+   "sub": "de la soja exportada del planeta",
+   "fuente": "USDA WASDE 2024/25",
+   "y": 250,
+   "hasta": 179.41
+  },
+  {
+   "tipo": "flujo",
+   "desde": 174.84,
+   "de": [
+    -50,
+    -15
+   ],
+   "a": [
+    112,
+    32
+   ],
+   "icono": "soja",
+   "n": 7,
+   "hasta": 185.72
+  },
+  {
+   "tipo": "cifra",
+   "desde": 179.41,
+   "texto": "3 DE CADA 4",
+   "tam": 150,
+   "sub": "granos de soja que importa China",
+   "fuente": "Aduana de China / Hedgepoint, 2025",
+   "y": 250,
+   "hasta": 185.72
+  },
+  {
+   "tipo": "iconos",
+   "desde": 185.72,
+   "y": 430,
+   "paso": 0.25,
+   "gap": 200,
+   "escala": 1.4,
+   "items": [
+    {
+     "icono": "cerdo"
+    },
+    {
+     "icono": "cerdo"
+    },
+    {
+     "icono": "cerdo"
+    },
+    {
+     "icono": "cerdo"
+    }
+   ],
+   "hasta": 187.36
+  },
+  {
+   "tipo": "cifra",
+   "desde": 187.36,
+   "texto": "≈ 1 DE CADA 2",
+   "tam": 140,
+   "sub": "cerdos del mundo vive en China",
+   "fuente": "FAO",
+   "y": 250,
+   "hasta": 193.24
+  },
+  {
+   "tipo": "flujo",
+   "desde": 190.32,
+   "de": [
+    -50,
+    -15
+   ],
+   "a": [
+    112,
+    32
+   ],
+   "icono": "soja",
+   "n": 5,
+   "roto": true,
+   "hasta": 193.24
+  },
+  {
+   "tipo": "iconos",
+   "desde": 193.24,
+   "y": 430,
+   "paso": 0.35,
+   "gap": 420,
+   "escala": 1.5,
+   "items": [
+    {
+     "icono": "pollo",
+     "texto": "POLLO · N.º 1"
+    },
+    {
+     "icono": "carne",
+     "texto": "RES · N.º 1"
+    }
+   ],
+   "hasta": 199.37
+  },
+  {
+   "tipo": "cinta",
+   "desde": 197.45,
+   "x": 960,
+   "y": 880,
+   "escala": 1.4,
+   "texto": "LA CARNE SUBE EN MEDIO PLANETA",
+   "icono": "dolar",
+   "color": "#d6453d",
+   "hasta": 199.37
+  },
+  {
+   "tipo": "titulo",
+   "desde": 203.73,
+   "texto": "EXPORTA… *LLUVIA*",
+   "tam": 120,
+   "y": 260,
+   "hasta": 206.14
+  },
+  {
+   "tipo": "flujo",
+   "desde": 203.73,
+   "de": [
+    -58,
+    -4
+   ],
+   "a": [
+    -61,
+    -26
+   ],
+   "icono": "nube",
+   "n": 5,
+   "hasta": 206.14
+  },
+  {
+   "tipo": "region",
+   "desde": 205.14,
+   "texto": "LOS RÍOS QUE VUELAN",
+   "hasta": 266.14
+  },
+  {
+   "tipo": "nombre",
+   "desde": 206.14,
+   "texto": "AMAZONÍA",
+   "lon": -60,
+   "lat": -6,
+   "tam": 40,
+   "fantasma": true,
+   "hasta": 207.35
+  },
+  {
+   "tipo": "titulo",
+   "desde": 207.35,
+   "texto": "RÍOS *VOLADORES*",
+   "tam": 110,
+   "y": 250,
+   "hasta": 209.65
+  },
+  {
+   "tipo": "flujo",
+   "desde": 207.35,
+   "de": [
+    -55,
+    -3
+   ],
+   "a": [
+    -67,
+    -12
+   ],
+   "icono": "nube",
+   "n": 5,
+   "hasta": 229.96
+  },
+  {
+   "tipo": "flujo",
+   "desde": 208.15,
+   "de": [
+    -67,
+    -12
+   ],
+   "a": [
+    -60,
+    -27
+   ],
+   "icono": "nube",
+   "n": 5,
+   "hasta": 229.96
+  },
+  {
+   "tipo": "cifra",
+   "desde": 209.65,
+   "texto": "20,000 MILLONES",
+   "tam": 120,
+   "sub": "de toneladas de agua suben al aire cada día",
+   "fuente": "A. D. Nobre, INPE",
+   "y": 250,
+   "hasta": 215.52
+  },
+  {
+   "tipo": "iconos",
+   "desde": 215.52,
+   "y": 440,
+   "paso": 0.5,
+   "gap": 520,
+   "escala": 1.4,
+   "items": [
+    {
+     "icono": "nube",
+     "texto": "AL CIELO: 20,000 M t"
+    },
+    {
+     "icono": "gota",
+     "texto": "AL MAR: 18,000 M t"
+    }
+   ],
+   "hasta": 219.2
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 222.69,
+   "pais": "BOL",
+   "color": "#4ea3ff",
+   "hasta": 226.51
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 222.69,
+   "pais": "PRY",
+   "color": "#4ea3ff",
+   "hasta": 226.51
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 222.69,
+   "pais": "ARG",
+   "color": "#4ea3ff",
+   "hasta": 226.51
+  },
+  {
+   "tipo": "cifra",
+   "desde": 226.51,
+   "texto": "≈ 60 %",
+   "tam": 170,
+   "sub": "de la Amazonía estaba en Brasil",
+   "y": 250,
+   "hasta": 229.96
+  },
+  {
+   "tipo": "flujo",
+   "desde": 229.96,
+   "de": [
+    -55,
+    -3
+   ],
+   "a": [
+    -67,
+    -12
+   ],
+   "icono": "nube",
+   "n": 4,
+   "roto": true,
+   "hasta": 232.78
+  },
+  {
+   "tipo": "flujo",
+   "desde": 229.96,
+   "de": [
+    -67,
+    -12
+   ],
+   "a": [
+    -60,
+    -27
+   ],
+   "icono": "nube",
+   "n": 4,
+   "roto": true,
+   "hasta": 232.78
+  },
+  {
+   "tipo": "cifra",
+   "desde": 232.78,
+   "texto": "¿20 % DEL OXÍGENO?",
+   "tam": 120,
+   "sub": "lo que siempre nos dijeron",
+   "y": 250,
+   "hasta": 239.06
+  },
+  {
+   "tipo": "sello",
+   "desde": 238.15,
+   "x": 960,
+   "y": 560,
+   "texto": "MITO",
+   "tam": 2.2,
+   "hasta": 239.06
+  },
+  {
+   "tipo": "iconos",
+   "desde": 239.06,
+   "y": 440,
+   "paso": 0.8,
+   "gap": 440,
+   "escala": 1.5,
+   "items": [
+    {
+     "icono": "o2",
+     "texto": "+ LO PRODUCE"
+    },
+    {
+     "icono": "o2",
+     "texto": "− SE LO CONSUME",
+     "color": "#9aa5ae"
+    }
+   ],
+   "hasta": 246.3
+  },
+  {
+   "tipo": "cifra",
+   "desde": 246.3,
+   "texto": "≈ 0",
+   "tam": 220,
+   "sub": "aporte neto de oxígeno de la Amazonía",
+   "fuente": "Y. Malhi, Universidad de Oxford",
+   "y": 280,
+   "hasta": 251.99
+  },
+  {
+   "tipo": "cinta",
+   "desde": 251.99,
+   "x": 960,
+   "y": 900,
+   "escala": 1.4,
+   "texto": "EL AIRE: TRANQUILO",
+   "icono": "corazon",
+   "color": "#2e9e5b",
+   "hasta": 254.2
+  },
+  {
+   "tipo": "cinta",
+   "desde": 254.2,
+   "x": 960,
+   "y": 900,
+   "escala": 1.4,
+   "texto": "EL PROBLEMA: LA LLUVIA",
+   "icono": "gota",
+   "color": "#d6453d",
+   "hasta": 259.0
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 259.0,
+   "pais": "ARG",
+   "color": "#ffd23f",
+   "hasta": 266.14
+  },
+  {
+   "tipo": "iconos",
+   "desde": 259.0,
+   "y": 330,
+   "paso": 0.3,
+   "gap": 300,
+   "escala": 1.35,
+   "items": [
+    {
+     "icono": "soja",
+     "texto": "SOJA"
+    },
+    {
+     "icono": "maiz",
+     "texto": "MAÍZ"
+    },
+    {
+     "icono": "trigo",
+     "texto": "TRIGO"
+    }
+   ],
+   "hasta": 262.49
+  },
+  {
+   "tipo": "flujo",
+   "desde": 262.49,
+   "de": [
+    -60,
+    -8
+   ],
+   "a": [
+    -62,
+    -32
+   ],
+   "icono": "nube",
+   "n": 4,
+   "hasta": 266.14
+  },
+  {
+   "tipo": "titulo",
+   "desde": 269.72,
+   "texto": "PERDERÍA SUS *RÍOS*",
+   "tam": 110,
+   "y": 260,
+   "hasta": 271.98
+  },
+  {
+   "tipo": "region",
+   "desde": 270.98,
+   "texto": "LOS RÍOS DEL SUR",
+   "hasta": 370.82
+  },
+  {
+   "tipo": "flujo",
+   "desde": 271.95,
+   "de": [
+    -54.59,
+    -25.41
+   ],
+   "a": [
+    -60.64,
+    -32.95
+   ],
+   "icono": "gota",
+   "n": 6,
+   "hasta": 284.38
+  },
+  {
+   "tipo": "nombre",
+   "desde": 271.95,
+   "texto": "RÍO PARANÁ",
+   "lon": -58.6,
+   "lat": -28.4,
+   "tam": 28,
+   "hasta": 288.8
+  },
+  {
+   "tipo": "flujo",
+   "desde": 274.77,
+   "de": [
+    -50,
+    -20
+   ],
+   "a": [
+    -54.59,
+    -25.41
+   ],
+   "icono": "gota",
+   "n": 4,
+   "hasta": 284.38
+  },
+  {
+   "tipo": "nombre",
+   "desde": 275.17,
+   "texto": "NACE AQUÍ",
+   "lon": -50.5,
+   "lat": -20.5,
+   "tam": 26,
+   "fantasma": true,
+   "hasta": 288.8
+  },
+  {
+   "tipo": "flujo",
+   "desde": 276.18,
+   "de": [
+    -56.5,
+    -15.5
+   ],
+   "a": [
+    -57.58,
+    -25.28
+   ],
+   "icono": "gota",
+   "n": 4,
+   "hasta": 284.38
+  },
+  {
+   "tipo": "flujo",
+   "desde": 278.34,
+   "de": [
+    -51.5,
+    -27.6
+   ],
+   "a": [
+    -58.2,
+    -33.5
+   ],
+   "icono": "gota",
+   "n": 4,
+   "hasta": 284.38
+  },
+  {
+   "tipo": "cifra",
+   "desde": 279.78,
+   "texto": "3 RÍOS",
+   "tam": 170,
+   "sub": "del sur del continente nacen en Brasil",
+   "y": 250,
+   "hasta": 284.38
+  },
+  {
+   "tipo": "flujo",
+   "desde": 284.38,
+   "de": [
+    -50,
+    -20
+   ],
+   "a": [
+    -54.59,
+    -25.41
+   ],
+   "icono": "gota",
+   "n": 3,
+   "roto": true,
+   "hasta": 288.8
+  },
+  {
+   "tipo": "flujo",
+   "desde": 284.38,
+   "de": [
+    -56.5,
+    -15.5
+   ],
+   "a": [
+    -57.58,
+    -25.28
+   ],
+   "icono": "gota",
+   "n": 3,
+   "roto": true,
+   "hasta": 288.8
+  },
+  {
+   "tipo": "flujo",
+   "desde": 284.38,
+   "de": [
+    -51.5,
+    -27.6
+   ],
+   "a": [
+    -58.2,
+    -33.5
+   ],
+   "icono": "gota",
+   "n": 3,
+   "roto": true,
+   "hasta": 288.8
+  },
+  {
+   "tipo": "titulo",
+   "desde": 284.38,
+   "texto": "RÍOS QUE NACEN… *EN EL MAR*",
+   "tam": 86,
+   "y": 250,
+   "hasta": 288.8
+  },
+  {
+   "tipo": "pin",
+   "desde": 292.96,
+   "lon": -54.59,
+   "lat": -25.41,
+   "texto": "ITAIPÚ",
+   "escala": 1.4,
+   "hasta": 314.93
+  },
+  {
+   "tipo": "flujo",
+   "desde": 295.88,
+   "de": [
+    -54.59,
+    -25.41
+   ],
+   "a": [
+    -57.58,
+    -25.28
+   ],
+   "icono": "rayo",
+   "n": 5,
+   "hasta": 306.3
+  },
+  {
+   "tipo": "cifra",
+   "desde": 295.88,
+   "texto": "87.6 %",
+   "tam": 160,
+   "sub": "de la electricidad de Paraguay (2025)",
+   "fuente": "Itaipú, informe anual 2025",
+   "y": 250,
+   "hasta": 301.85
+  },
+  {
+   "tipo": "cinta",
+   "desde": 301.85,
+   "x": 960,
+   "y": 930,
+   "escala": 1.35,
+   "texto": "MITAD BRASIL · MITAD PARAGUAY",
+   "icono": "rayo",
+   "color": "#1f6aa8",
+   "hasta": 306.3
+  },
+  {
+   "tipo": "flujo",
+   "desde": 306.3,
+   "de": [
+    -54.59,
+    -25.41
+   ],
+   "a": [
+    -57.58,
+    -25.28
+   ],
+   "icono": "rayo",
+   "n": 4,
+   "roto": true,
+   "hasta": 314.93
+  },
+  {
+   "tipo": "apagon",
+   "desde": 309.28,
+   "fuerza": 0.5,
+   "hasta": 310.68
+  },
+  {
+   "tipo": "apagon",
+   "desde": 313.6,
+   "fuerza": 0.72,
+   "foco": true,
+   "hasta": 315.8
+  },
+  {
+   "tipo": "pin",
+   "desde": 316.66,
+   "lon": -56.75,
+   "lat": -27.48,
+   "texto": "YACYRETÁ",
+   "escala": 1.3,
+   "hasta": 321.82
+  },
+  {
+   "tipo": "pin",
+   "desde": 323.31,
+   "lon": -54.44,
+   "lat": -25.69,
+   "texto": "CATARATAS DEL IGUAZÚ",
+   "escala": 1.3,
+   "hasta": 341.11
+  },
+  {
+   "tipo": "cifra",
+   "desde": 324.8,
+   "texto": "275 SALTOS",
+   "tam": 150,
+   "sub": "de agua en la frontera con Argentina",
+   "y": 250,
+   "hasta": 328.48
+  },
+  {
+   "tipo": "flujo",
+   "desde": 328.48,
+   "de": [
+    -49.27,
+    -25.43
+   ],
+   "a": [
+    -54.44,
+    -25.69
+   ],
+   "icono": "gota",
+   "n": 6,
+   "hasta": 334.4
+  },
+  {
+   "tipo": "nombre",
+   "desde": 329.62,
+   "texto": "CURITIBA",
+   "lon": -49.27,
+   "lat": -25.43,
+   "tam": 26,
+   "fantasma": true,
+   "hasta": 337.75
+  },
+  {
+   "tipo": "flujo",
+   "desde": 334.4,
+   "de": [
+    -49.27,
+    -25.43
+   ],
+   "a": [
+    -54.44,
+    -25.69
+   ],
+   "icono": "gota",
+   "n": 3,
+   "roto": true,
+   "hasta": 341.11
+  },
+  {
+   "tipo": "cinta",
+   "desde": 336.35,
+   "x": 960,
+   "y": 930,
+   "escala": 1.4,
+   "texto": "IGUAZÚ: APENAS UN HILO DE AGUA",
+   "icono": "gota",
+   "color": "#d6453d",
+   "hasta": 337.75
+  },
+  {
+   "tipo": "sello",
+   "desde": 340.43,
+   "x": 960,
+   "y": 540,
+   "texto": "CASI SECA",
+   "tam": 1.8,
+   "hasta": 341.11
+  },
+  {
+   "tipo": "pin",
+   "desde": 343.65,
+   "lon": -60.64,
+   "lat": -32.95,
+   "texto": "GRAN ROSARIO",
+   "escala": 1.3,
+   "hasta": 353.25
+  },
+  {
+   "tipo": "cifra",
+   "desde": 346.27,
+   "texto": "75 %",
+   "tam": 170,
+   "sub": "de lo que Argentina exporta del campo",
+   "fuente": "Bolsa de Comercio de Rosario, 2025",
+   "y": 250,
+   "hasta": 350.38
+  },
+  {
+   "tipo": "flujo",
+   "desde": 350.38,
+   "de": [
+    -60.64,
+    -32.95
+   ],
+   "a": [
+    -53,
+    -36.5
+   ],
+   "icono": "barco",
+   "n": 3,
+   "hasta": 353.25
+  },
+  {
+   "tipo": "flujo",
+   "desde": 354.26,
+   "de": [
+    -60,
+    -33
+   ],
+   "a": [
+    -48,
+    -20
+   ],
+   "icono": "auto",
+   "n": 5,
+   "roto": true,
+   "hasta": 360.81
+  },
+  {
+   "tipo": "cifra",
+   "desde": 354.26,
+   "texto": "2 DE CADA 3",
+   "tam": 150,
+   "sub": "autos que exporta Argentina iban a Brasil",
+   "fuente": "ADEFA, 2025 (67.2 %)",
+   "y": 250,
+   "hasta": 357.32
+  },
+  {
+   "tipo": "globo",
+   "desde": 357.32,
+   "pais": "ARG",
+   "texto": "¿Y ahora a quién le vendo?",
+   "lado": 1,
+   "hasta": 361.41
+  },
+  {
+   "tipo": "iconos",
+   "desde": 363.35,
+   "y": 430,
+   "paso": 0.4,
+   "gap": 440,
+   "escala": 1.4,
+   "items": [
+    {
+     "icono": "barco",
+     "texto": "PUERTOS PROPIOS"
+    },
+    {
+     "icono": "soja",
+     "texto": "SOJA AL MUNDO"
+    }
+   ],
+   "hasta": 368.24
+  },
+  {
+   "tipo": "titulo",
+   "desde": 368.24,
+   "texto": "PARAGUAY PIERDE LA LUZ…\n…PERO GANA *EL OCÉANO*",
+   "tam": 80,
+   "y": 300,
+   "hasta": 371.12
+  },
+  {
+   "tipo": "region",
+   "desde": 371.22,
+   "texto": "LO QUE NO TIENE PRECIO",
+   "hasta": 423.37
+  },
+  {
+   "tipo": "iconos",
+   "desde": 373.33,
+   "y": 430,
+   "paso": 0,
+   "escala": 2.0,
+   "items": [
+    {
+     "icono": "niobio",
+     "texto": "NIOBIO"
+    }
+   ],
+   "hasta": 374.97
+  },
+  {
+   "tipo": "iconos",
+   "desde": 378.08,
+   "y": 430,
+   "paso": 0.3,
+   "gap": 300,
+   "escala": 1.35,
+   "items": [
+    {
+     "icono": "auto",
+     "texto": "AUTOS"
+    },
+    {
+     "icono": "casa",
+     "texto": "PUENTES",
+     "color": "#8fa3b8"
+    },
+    {
+     "icono": "rayo",
+     "texto": "GASODUCTOS",
+     "color": "#8fa3b8"
+    },
+    {
+     "icono": "avion",
+     "texto": "AVIONES"
+    }
+   ],
+   "hasta": 383.19
+  },
+  {
+   "tipo": "cifra",
+   "desde": 383.19,
+   "texto": "93 %",
+   "tam": 170,
+   "sub": "del niobio del mundo",
+   "fuente": "USGS, 2026",
+   "y": 250,
+   "hasta": 387.01
+  },
+  {
+   "tipo": "pin",
+   "desde": 387.61,
+   "lon": -46.94,
+   "lat": -19.59,
+   "texto": "ARAXÁ · MINAS GERAIS",
+   "escala": 1.5,
+   "hasta": 390.32
+  },
+  {
+   "tipo": "iconos",
+   "desde": 387.91,
+   "y": 330,
+   "paso": 0,
+   "escala": 1.6,
+   "items": [
+    {
+     "icono": "niobio",
+     "texto": ""
+    }
+   ],
+   "hasta": 390.32
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 392.51,
+   "pais": "CAN",
+   "color": "#ffd23f",
+   "hasta": 396.5
+  },
+  {
+   "tipo": "cifra",
+   "desde": 394.34,
+   "texto": "5 %",
+   "tam": 170,
+   "sub": "Canadá, el segundo productor",
+   "fuente": "USGS, 2026",
+   "y": 250,
+   "hasta": 396.5
+  },
+  {
+   "tipo": "cifra",
+   "desde": 398.65,
+   "texto": "23 DE 23",
+   "tam": 150,
+   "sub": "Mundiales jugados: todos",
+   "y": 250,
+   "hasta": 402.43
+  },
+  {
+   "tipo": "iconos",
+   "desde": 402.43,
+   "y": 430,
+   "paso": 0.18,
+   "gap": 170,
+   "escala": 1.3,
+   "items": [
+    {
+     "icono": "trofeo"
+    },
+    {
+     "icono": "trofeo"
+    },
+    {
+     "icono": "trofeo"
+    },
+    {
+     "icono": "trofeo"
+    },
+    {
+     "icono": "trofeo"
+    }
+   ],
+   "hasta": 404.41
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 406.89,
+   "pais": "DEU",
+   "color": "#ffd23f",
+   "hasta": 409.04
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 406.89,
+   "pais": "ITA",
+   "color": "#ffd23f",
+   "hasta": 409.04
+  },
+  {
+   "tipo": "iconos",
+   "desde": 407.79,
+   "y": 430,
+   "paso": 0.3,
+   "gap": 420,
+   "escala": 1.3,
+   "items": [
+    {
+     "icono": "trofeo",
+     "texto": "ALEMANIA · 4"
+    },
+    {
+     "icono": "trofeo",
+     "texto": "ITALIA · 4"
+    }
+   ],
+   "hasta": 409.04
+  },
+  {
+   "tipo": "globo",
+   "desde": 409.44,
+   "pais": "ARG",
+   "texto": "¿Y ahora contra quién?",
+   "lado": 1,
+   "hasta": 411.53
+  },
+  {
+   "tipo": "iconos",
+   "desde": 411.53,
+   "y": 430,
+   "paso": 0.35,
+   "gap": 300,
+   "items": [
+    {
+     "icono": "futbol",
+     "texto": "PELÉ"
+    },
+    {
+     "icono": "futbol",
+     "texto": "RONALDINHO"
+    },
+    {
+     "icono": "futbol",
+     "texto": "NEYMAR"
+    },
+    {
+     "icono": "nota",
+     "texto": "CARNAVAL"
+    }
+   ],
+   "hasta": 415.13
+  },
+  {
+   "tipo": "pin",
+   "desde": 415.13,
+   "lon": -43.21,
+   "lat": -22.95,
+   "texto": "RÍO DE JANEIRO",
+   "escala": 1.4,
+   "hasta": 423.37
+  },
+  {
+   "tipo": "iconos",
+   "desde": 415.13,
+   "y": 380,
+   "paso": 0,
+   "escala": 1.9,
+   "items": [
+    {
+     "icono": "cristo",
+     "texto": "CRISTO REDENTOR"
+    }
+   ],
+   "hasta": 418.62
+  },
+  {
+   "tipo": "iconos",
+   "desde": 418.62,
+   "y": 380,
+   "paso": 0,
+   "escala": 1.7,
+   "items": [
+    {
+     "icono": "nota",
+     "texto": "LA CHICA DE IPANEMA"
+    }
+   ],
+   "hasta": 423.37
+  },
+  {
+   "tipo": "iconos",
+   "desde": 423.37,
+   "y": 460,
+   "paso": 0.4,
+   "gap": 330,
+   "escala": 1.3,
+   "items": [
+    {
+     "icono": "barco",
+     "texto": "PLAYA ✓"
+    },
+    {
+     "icono": "isla",
+     "texto": "ISLA ✓"
+    },
+    {
+     "icono": "gota",
+     "texto": "IGUAZÚ ✓"
+    },
+    {
+     "icono": "foco",
+     "texto": "LUZ ✓",
+     "color": "#ffd23f"
+    }
+   ],
+   "hasta": 434.04
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 436.36,
+   "iso": "bo",
+   "nombre": "Bolivia",
+   "estado": "CELEBRA",
+   "dato": "GANA EL MAR",
+   "texto": "Por fin, playa propia.",
+   "hasta": 437.61
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 437.61,
+   "iso": "co",
+   "nombre": "Colombia",
+   "estado": "CELEBRA",
+   "dato": "GANA EL CAFÉ",
+   "texto": "Junto con Vietnam.",
+   "hasta": 439.48
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 439.48,
+   "iso": "py",
+   "nombre": "Paraguay",
+   "estado": "LE AFECTA",
+   "dato": "GANA Y PIERDE",
+   "texto": "Con océano… pero sin luz.",
+   "hasta": 441.88
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 441.88,
+   "iso": "ar",
+   "nombre": "Argentina",
+   "estado": "LLORA",
+   "dato": "PIERDE",
+   "texto": "Sin lluvia, sin cliente y sin rival.",
+   "hasta": 446.19
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.19,
+   "pais": "ARG",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "titulo",
+   "desde": 446.19,
+   "texto": "UNA *MEDIA LUNA*\nALREDEDOR DE UN MAR NUEVO",
+   "tam": 78,
+   "y": 280,
+   "hasta": 449.82
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.24,
+   "pais": "BOL",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.29,
+   "pais": "CHL",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.34,
+   "pais": "COL",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.39,
+   "pais": "ECU",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.44,
+   "pais": "GUY",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.49,
+   "pais": "PRY",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.54,
+   "pais": "PER",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.59,
+   "pais": "SUR",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.64,
+   "pais": "URY",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 446.69,
+   "pais": "VEN",
+   "color": "#ffd23f",
+   "hasta": 449.82
+  },
+  {
+   "tipo": "titulo",
+   "desde": 452.89,
+   "texto": "LE DABA *AGUA, COMIDA Y LLUVIA*\nA MEDIO CONTINENTE",
+   "tam": 72,
+   "y": 300,
+   "hasta": 455.95
+  },
+  {
+   "tipo": "pregunta",
+   "desde": 455.95,
+   "texto": "¿QUÉ PAÍS DESAPARECEMOS DESPUÉS?",
+   "y": 470,
+   "hasta": 480.29
+  },
+  {
+   "tipo": "cinta",
+   "desde": 460.26,
+   "x": 960,
+   "y": 640,
+   "texto": "EL MÁS VOTADO ES EL SIGUIENTE",
+   "icono": "globo",
+   "color": "#2e9e5b",
+   "hasta": 480.29
+  }
+ ],
+ "clips": [
+  {
+   "codigo": "B01",
+   "desde": 0.0,
+   "hasta": 2.72,
+   "entra": 0.01
+  },
+  {
+   "codigo": "B02",
+   "desde": 5.85,
+   "hasta": 8.53
+  },
+  {
+   "codigo": "B03",
+   "desde": 23.57,
+   "hasta": 26.8,
+   "z0": 1.0,
+   "z1": 1.1
+  },
+  {
+   "codigo": "B07",
+   "desde": 140.25,
+   "hasta": 142.99
+  },
+  {
+   "codigo": "B07",
+   "desde": 166.4,
+   "hasta": 170.84,
+   "ofs": 3.6
+  },
+  {
+   "codigo": "B10",
+   "desde": 203.48,
+   "hasta": 209.6,
+   "vel": 0.85
+  },
+  {
+   "codigo": "B11",
+   "desde": 254.2,
+   "hasta": 258.95
+  },
+  {
+   "codigo": "B12",
+   "desde": 291.48,
+   "hasta": 295.83
+  },
+  {
+   "codigo": "B13",
+   "desde": 306.2,
+   "hasta": 309.81,
+   "ofs": 0.5
+  },
+  {
+   "codigo": "B14",
+   "desde": 323.21,
+   "hasta": 328.43
+  },
+  {
+   "codigo": "B15",
+   "desde": 334.3,
+   "hasta": 341.06,
+   "z0": 1.0,
+   "z1": 1.12
+  }
+ ],
+ "fundido_inicio": 0.5
+}
