@@ -302,9 +302,19 @@ if prob: tape.append(prob - .65); secc += [(prob - .05, 'nada'), (prob + 1.0, 'o
 secc += [(dur - 4.5, 'final')]; secc.sort()
 mus = musica(dur, secc, sorted(set(round(i, 2) for i in impactos if i > 1)), tape)
 mus *= np.clip(1 - (np.arange(N) / SR - (dur - 1.0)) / 1.0, 0, 1)
+PISTA = D / 'musica.mp3'   # música que mandó George: va muy bajita, solo para que el video no suene vacío
+if PISTA.exists():
+    raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(PISTA), '-ac', '2', '-ar', str(SR), '-f', 's16le', '-'], capture_output=True).stdout
+    m = np.frombuffer(raw, np.int16).astype(np.float32).reshape(-1, 2).T / 32768
+    while m.shape[1] < N: m = np.concatenate([m, m], axis=1)
+    m = m[:, :N]; m = m / (np.sqrt(np.mean(m ** 2)) + 1e-9) * .1                      # nivel medio fijo (-20 dBFS) antes de la ganancia
+    m *= np.clip(np.arange(N) / SR / .8, 0, 1) * np.clip((dur - np.arange(N) / SR) / 1.5, 0, 1)
+    mus = m; MUS_PROPIA = True
+else: MUS_PROPIA = False
 rv = reverb(ENV[:N], 1.5); fxL = FX[0, :N] + rv[0] * .5; fxR = FX[1, :N] + rv[1] * .5
 envv = filt(np.abs(voz), 'low', 8); duck = 1 - .6 * np.clip(envv / (np.percentile(envv, 96) * .45 + 1e-9), 0, 1) if CON_VOZ else np.ones(N)
 duck_fx = 1 - .45 * (1 - duck) / .6 if CON_VOZ else np.ones(N); gm = .15 if CON_VOZ else .48   # música bajita bajo la voz
+if MUS_PROPIA: gm = .3   # con la pista de George: unos 30 dB por debajo de la voz mientras habla
 mix = np.stack([voz + mus[0] * duck * gm + fxL * duck_fx * .56, voz + mus[1] * duck * gm + fxR * duck_fx * .56]); mix /= max(1, np.abs(mix).max())
 tmp = D / '.tmp'; tmp.mkdir(exist_ok=True)
 with wave.open(str(tmp / 'mezcla.wav'), 'w') as w: w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(mix.T, -1, 1) * 32767).astype(np.int16).tobytes())
