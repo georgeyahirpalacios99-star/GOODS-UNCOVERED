@@ -224,8 +224,8 @@ def ambiente(cod, d):
     if cod == 'T07': return pala(d), .36
     if cod == 'T08': return goteo(d) * .8 + viento(d, False) * .3, .3
     if cod == 'T09': return viento(d, False) * .6 + hojas(d) * .4, .26
-    if cod == 'T10': return arena(d) * .8 + hojas(d) * .6, .34
-    if cod in ('T11', 'T11b'): return seco(d), .3
+    if cod in ('T10', 'T10b'): return arena(d) * .8 + hojas(d) * .6, .34
+    if cod in ('T11', 'T11b', 'T11c'): return seco(d), .3
     if cod == 'T12': return goteo(d), .4
     if cod == 'T13': return hojas(d) * .8 + viento(d, False) * .4, .3
     return None, 0
