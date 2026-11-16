@@ -281,6 +281,13 @@ const polS = p => p.map(([lo, la]) => ws(lo, la));
 
 // ---------- capas del estilo documental ----------
 const D = {
+  /* objeto recortado (png con transparencia): entra con rebote y flota. x, y en pantalla; w = ancho */
+  objeto(e, t) { const im = IM[e.img]; if (!im) return; const p = eob(pr(t, e.desde, .45)), a = fade(t, e, .05, .25); if (p <= 0) return; const w = e.w || 260, h = w * im.height / im.width;
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(e.x, Y(e.y) + Math.sin(t * 2.4 + e.x) * 8); ctx.rotate((e.rot || 0) * Math.PI / 180 + Math.sin(t * 1.7 + e.y) * .03); ctx.scale(p, p);
+    ctx.shadowColor = 'rgba(0,0,0,.55)'; ctx.shadowBlur = 30; ctx.shadowOffsetY = 14; ctx.drawImage(im, -w / 2, -h / 2, w, h); ctx.restore(); },
+  /* capa de atmósfera sobre el mapa (imagen con fondo negro, mezcla "screen"): nubes o polvo que derivan despacio */
+  capa(e, t) { const im = IM[e.img]; if (!im) return; const a = fade(t, e, .5, .4) * (e.alpha ?? .5), k = H * 1.12 / im.height, w = im.width * k, h = im.height * k, off = ((t * (e.vx ?? 14)) % w + w) % w;
+    ctx.save(); ctx.globalAlpha = a; ctx.globalCompositeOperation = 'screen'; for (let x = -off - w; x < W; x += w) ctx.drawImage(im, x, -H * .06 + Math.sin(t * .3) * 10, w + 1, h); ctx.restore(); },
   // muralla verde: línea sólida con brillo que avanza por los puntos (lon, lat); con cerrada:true termina en un anillo y da un destello al cerrarse
   muralla(e, t) { const pts = polS(e.puntos), a = fade(t, e, .2, .4), p = eio(pr(t, e.desde, e.dur || 1.6)); if (pts.length < 2) return;
     const L = [0]; for (let i = 1; i < pts.length; i++) L.push(L[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1])); const tot = L[L.length - 1], lim = tot * lerp(e.desdeP ?? 0, e.hastaP ?? 1, p);
@@ -855,7 +862,7 @@ function capaClip(t) { const c = clipActivo(t); if (!c || !CLIPIMG) return 0;
   const vg = ctx.createRadialGradient(W / 2, H / 2, H * .35, W / 2, H / 2, W * .75); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,.42)'); ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
   if (c.etiqueta !== false) { ctx.font = F(700, 22); ctx.letterSpacing = '4px'; const txt = c.etiqueta || 'RECREACIÓN CON IA', w = ctx.measureText(txt).width + 34; rr(40, H - 78, w, 40, 8, 'rgba(0,0,0,.55)', 'rgba(255,255,255,.35)', 1.5); texto(txt, 40 + w / 2, H - 57, F(700, 22), '#fff'); }
   ctx.restore(); return a; }
-const enMapa = e => e.tipo === 'region' || e.lon !== undefined || e.pais !== undefined || e.de !== undefined || e.tipo === 'resaltar' || e.tipo === 'flujo' || e.tipo === 'medida' || e.tipo === 'ruta' || e.tipo === 'muralla' || e.tipo === 'silueta';
+const enMapa = e => e.tipo === 'region' || e.lon !== undefined || e.pais !== undefined || e.de !== undefined || e.tipo === 'resaltar' || e.tipo === 'flujo' || e.tipo === 'medida' || e.tipo === 'ruta' || e.tipo === 'muralla' || e.tipo === 'silueta' || e.tipo === 'capa';
 // ---------- retención: banner de "última hora", barra de progreso y destellos ----------
 function capasRetencion(t) {
   for (const e of SP.eventos) { if (e.tipo !== 'ultimahora' || !activo(t, e)) continue; const q = eo(pr(t, e.desde, .35)), a = fade(t, e, .05, .3), y = e.y || 160;
