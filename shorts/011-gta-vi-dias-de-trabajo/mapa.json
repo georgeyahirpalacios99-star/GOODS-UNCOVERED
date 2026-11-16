@@ -232,16 +232,6 @@
    "hasta": 4.53
   },
   {
-   "tipo": "objeto",
-   "desde": 0.5,
-   "img": "obj/control.png",
-   "x": 540,
-   "y": 830,
-   "w": 330,
-   "rot": -8,
-   "hasta": 4.53
-  },
-  {
    "tipo": "cifra",
    "desde": 2.41,
    "texto": "1.5 DÍAS",
@@ -336,16 +326,6 @@
    "hasta": 15.41
   },
   {
-   "tipo": "objeto",
-   "desde": 14.48,
-   "img": "obj/billetes.png",
-   "x": 880,
-   "y": 720,
-   "w": 168,
-   "rot": 6,
-   "hasta": 15.41
-  },
-  {
    "tipo": "nombre",
    "desde": 15.36,
    "lon": -84.2,
@@ -401,16 +381,6 @@
    "y": 470,
    "color": "#7dffa0",
    "pre": "",
-   "hasta": 18.05
-  },
-  {
-   "tipo": "objeto",
-   "desde": 17.29,
-   "img": "obj/billetes.png",
-   "x": 880,
-   "y": 720,
-   "w": 184,
-   "rot": 6,
    "hasta": 18.05
   },
   {
@@ -474,16 +444,6 @@
    "hasta": 20.04
   },
   {
-   "tipo": "objeto",
-   "desde": 18.96,
-   "img": "obj/billetes.png",
-   "x": 880,
-   "y": 720,
-   "w": 192.0,
-   "rot": 6,
-   "hasta": 20.04
-  },
-  {
    "tipo": "nombre",
    "desde": 19.99,
    "lon": -102,
@@ -523,16 +483,6 @@
    "y": 470,
    "color": "#ffd23f",
    "pre": "",
-   "hasta": 21.73
-  },
-  {
-   "tipo": "objeto",
-   "desde": 20.93,
-   "img": "obj/billetes.png",
-   "x": 880,
-   "y": 720,
-   "w": 200,
-   "rot": 6,
    "hasta": 21.73
   },
   {
@@ -583,16 +533,6 @@
    "y": 470,
    "color": "#ffd23f",
    "pre": "CASI ",
-   "hasta": 24.31
-  },
-  {
-   "tipo": "objeto",
-   "desde": 23.12,
-   "img": "obj/billetes.png",
-   "x": 880,
-   "y": 720,
-   "w": 216,
-   "rot": 6,
    "hasta": 24.31
   },
   {
@@ -655,16 +595,6 @@
    "hasta": 26.4
   },
   {
-   "tipo": "objeto",
-   "desde": 25.59,
-   "img": "obj/billetes.png",
-   "x": 880,
-   "y": 720,
-   "w": 232,
-   "rot": 6,
-   "hasta": 26.4
-  },
-  {
    "tipo": "nombre",
    "desde": 26.35,
    "lon": -64.5,
@@ -716,16 +646,6 @@
    "hasta": 28.12
   },
   {
-   "tipo": "objeto",
-   "desde": 27.46,
-   "img": "obj/billetes.png",
-   "x": 880,
-   "y": 720,
-   "w": 248,
-   "rot": 6,
-   "hasta": 28.12
-  },
-  {
    "tipo": "nombre",
    "desde": 28.07,
    "lon": -52,
@@ -765,16 +685,6 @@
    "y": 470,
    "color": "#ff5a4a",
    "pre": "",
-   "hasta": 30.39
-  },
-  {
-   "tipo": "objeto",
-   "desde": 29.09,
-   "img": "obj/billetes.png",
-   "x": 880,
-   "y": 720,
-   "w": 280,
-   "rot": 6,
    "hasta": 30.39
   },
   {
@@ -829,16 +739,6 @@
    "hasta": 36.51
   },
   {
-   "tipo": "objeto",
-   "desde": 34.72,
-   "img": "obj/calendario.png",
-   "x": 870,
-   "y": 800,
-   "w": 300,
-   "rot": 8,
-   "hasta": 36.51
-  },
-  {
    "tipo": "titulo",
    "desde": 36.61,
    "texto": "Y ESO ES\n*SOLO EL JUEGO*",
@@ -846,16 +746,6 @@
    "y": 280,
    "capa": "C",
    "hasta": 38.11
-  },
-  {
-   "tipo": "objeto",
-   "desde": 38.31,
-   "img": "obj/consola.png",
-   "x": 540,
-   "y": 880,
-   "w": 420,
-   "rot": -4,
-   "hasta": 41.65
   },
   {
    "tipo": "cifra",

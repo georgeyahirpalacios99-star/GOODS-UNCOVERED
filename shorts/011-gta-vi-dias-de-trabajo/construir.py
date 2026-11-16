@@ -64,6 +64,7 @@ for i, (fr, fin, nom, (n, dec), col, paises, (lo, la, an), etis) in enumerate(RA
     for p in paises: E('resaltar', t0, pais=p, color=col, relleno='rgba(255,255,255,.14)', hasta=t1)
     for (elo, ela, cod, val) in etis: E('nombre', t1 - .05, lon=elo, lat=ela, texto=f'{cod} {val}', tam=30, hasta=DUR)
 ev[:] = [({k: v for k, v in e.items() if v is not None}) for e in ev]
+
 # ---------- 4 · Venezuela ----------
 tv = T('¿Y Venezuela?', d=-.08)
 CAM(tv - .1, -66.5, 6.0, 17)
@@ -86,6 +87,7 @@ CAM(T('Escribe tu país', d=-.3), -66.5, 6.0, 17, d=0); CAM(T('Escribe tu país'
 E('pregunta', T('Escribe tu país'), texto='ESCRIBE TU PAÍS EN LOS COMENTARIOS', y=CINTA, hasta=DUR)
 E('nombre', T('Escribe tu país'), lon=-66.5, lat=7.5, texto='VEN 16 años', tam=30, hasta=DUR)
 
+ev[:] = [e for e in ev if e['tipo'] != 'objeto']   # George pidió quitar los objetos recortados (la consola parecía una PS3)
 DESTELLOS = [round(ta + .95, 2)]
 for c in CLIPS:
     dst = DIR / '.clips' / c['codigo']
