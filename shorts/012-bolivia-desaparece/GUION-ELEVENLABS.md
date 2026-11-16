@@ -6,14 +6,13 @@ ElevenLabs:
 - Gasta unos **750 créditos** y dura unos 36 s.
 
 ```
-Bolivia lleva más de ciento cuarenta años pidiendo mar. <break time="0.3s" />
-¿Y si Bolivia… <break time="0.2s" /> se convirtiera en el mar? <break time="0.4s" />
-Si desapareciera mañana, <break time="0.2s" /> en el corazón de Sudamérica quedaría un mar interior tres veces más grande que el Caspio. <break time="0.4s" />
-Y el primero en celebrarlo sería Paraguay: <break time="0.2s" /> el otro país sin costa del continente… <break time="0.2s" /> por fin tendría playa. <break time="0.4s" />
-Chile pasaría a tener mar por los dos lados. <break time="0.3s" />
+¿Qué pasaría si Bolivia desapareciera mañana? <break time="0.3s" />
+En el corazón de Sudamérica quedaría un mar… <break time="0.2s" /> tres veces más grande que el Caspio. <break time="0.4s" />
+Y el primero en celebrarlo sería Paraguay: <break time="0.2s" /> nunca tuvo costa… <break time="0.2s" /> y de pronto tendría playa. <break time="0.4s" />
+Chile tendría mar por los dos lados. <break time="0.3s" />
+Argentina y Brasil estrenarían costa nueva. <break time="0.3s" />
 Y Perú se quedaría con su mitad del lago Titicaca… <break time="0.2s" /> colgando sobre un acantilado de casi cuatro mil metros. <break time="0.4s" />
-Pero el mundo perdería algo más grave: <break time="0.2s" /> la mayor reserva de litio del planeta. <break time="0.3s" />
-Eso te lo cuento en la parte dos.
+Lo más irónico: <break time="0.2s" /> Bolivia lleva más de ciento cuarenta años pidiendo mar… <break time="0.2s" /> y terminaría convertida en uno.
 ```
 
 ## Datos (hay que verificarlos con fuente antes de publicar)
@@ -22,6 +21,11 @@ Eso te lo cuento en la parte dos.
 - **Paraguay:** es el otro país sin salida al mar de América y comparte frontera con Bolivia.
 - **Chile:** hoy solo tiene costa al Pacífico; su frontera con Bolivia está en el noreste.
 - **Titicaca:** el lago está a 3,812 m sobre el nivel del mar y se reparte entre Perú (cerca del 56 %) y Bolivia.
-- **Litio:** el Servicio Geológico de EE. UU. atribuye a Bolivia los mayores recursos identificados de litio del mundo, unos 23 millones de toneladas. Son "recursos", no "reservas" probadas; si quieres ser exacto, cambia la palabra en la voz.
+- **Litio (queda para otro video, ya no va en este guion):** el Servicio Geológico de EE. UU. atribuye a Bolivia los mayores recursos identificados de litio del mundo, unos 23 millones de toneladas. Son "recursos", no "reservas" probadas; si quieres ser exacto, cambia la palabra en la voz.
 
 **Aviso:** estos datos salen de mi memoria, no los busqué hoy. Los confirmo con fuente cuando arme el video.
+
+## Cambios según las estadísticas del Short de Brasil (157 mil vistas)
+- **Mismo arranque que el ganador:** "¿Qué pasaría si ___ desapareciera mañana?".
+- **Sin "parte dos" al final:** en Brasil la retención cae de golpe en los últimos 2 segundos, justo en esa frase. Ahora termina en el dato más fuerte y el video vuelve a empezar solo.
+- **Entran Argentina y Perú:** son el 2.º y 3.er país que más vio el de Brasil.
