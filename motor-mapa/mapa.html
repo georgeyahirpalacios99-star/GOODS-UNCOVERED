@@ -128,12 +128,15 @@ const cruza = (bb, v) => !(bb[2] < v[0] || bb[0] > v[2] || bb[3] < v[1] || bb[1]
 // ---------- estilo documental ----------
 function tierraVisible(lista) { const v = vista(), p = new Path2D(); for (const c of lista) { if (!cruza(c.bb, v)) continue; for (const q of c.pp) if (cruza(q.bb, v)) p.addPath(q.path); } return p; }
 function capaSuave(lista, textu, tierra, blur, alpha) {
-  const v = vista(.2); octx.setTransform(1, 0, 0, 1, 0, 0); octx.clearRect(0, 0, W, H); octx.globalCompositeOperation = 'source-over';
-  setCam(octx); octx.filter = `blur(${blur}px)`; octx.fillStyle = '#fff'; let n = 0;
-  for (const q of lista) if (cruza(q.bb, v)) { octx.fill(q.path, 'evenodd'); n++; }
-  octx.filter = 'none'; if (!n) return;
-  octx.globalCompositeOperation = 'source-in'; const todo = new Path2D(); const vv = vista(.3); todo.rect(vv[0], vv[1], vv[2] - vv[0], vv[3] - vv[1]); rellenar(octx, todo, textu);
-  octx.globalCompositeOperation = 'destination-in'; octx.fillStyle = '#fff'; octx.fill(tierra, 'evenodd');
+  // primero la textura entera (sus dos octavas se mezclan bien con source-over) y después la máscara difuminada.
+  // Antes se pintaba con source-in y la segunda octava reemplazaba a la primera: la capa quedaba casi transparente.
+  const v = vista(.2), forma = new Path2D(); let n = 0;
+  for (const q of lista) if (cruza(q.bb, v)) { forma.addPath(q.path); n++; }
+  if (!n) return;
+  octx.setTransform(1, 0, 0, 1, 0, 0); octx.clearRect(0, 0, W, H); octx.globalCompositeOperation = 'source-over'; setCam(octx);
+  const todo = new Path2D(); const vv = vista(.3); todo.rect(vv[0], vv[1], vv[2] - vv[0], vv[3] - vv[1]); rellenar(octx, todo, textu);
+  setCam(octx); octx.globalCompositeOperation = 'destination-in'; octx.filter = `blur(${blur}px)`; octx.fillStyle = '#fff'; octx.fill(forma, 'nonzero'); octx.filter = 'none';
+  octx.fill(tierra, 'evenodd');
   octx.globalCompositeOperation = 'source-over'; ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = alpha; ctx.drawImage(OFF, 0, 0); ctx.globalAlpha = 1;
 }
 function mapaDoc(t) {

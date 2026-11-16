@@ -39,7 +39,7 @@ function datos() {
   if (spec.estilo === 'documental') return {
     lo: paises('ne_50m_admin_0_countries.geojson'), hi: paises('ne_10m_admin_0_countries.geojson'),
     montes: capas('ne_10m_geography_regions_polys.geojson', p => ['Range/mtn', 'Plateau'].includes(p.FEATURECLA) && p.SCALERANK <= 4),
-    desiertos: capas('ne_10m_geography_regions_polys.geojson', p => p.FEATURECLA === 'Desert' && p.SCALERANK <= 4),
+    desiertos: capas('ne_10m_geography_regions_polys.geojson', p => (p.FEATURECLA === 'Desert' && p.SCALERANK <= 4) || ['TARIM BASIN', 'Junggar Basin', 'Qaidam Basin'].includes(p.NAME)), // cuencas áridas de Asia central
     rios: lineas('ne_50m_rivers_lake_centerlines.geojson'),
   };
   if (spec.estilo === 'escena' || spec.motor) return {};
