@@ -154,8 +154,8 @@ function mapaDoc(t) {
   lg.addColorStop(0, 'rgba(150,150,120,.45)'); lg.addColorStop(cl((y0 - yN) / (yS - yN) - .12), 'rgba(40,80,30,.0)'); lg.addColorStop((y0 - yN) / (yS - yN), 'rgba(20,70,20,.18)'); lg.addColorStop(cl((y0 - yN) / (yS - yN) + .12), 'rgba(40,80,30,0)'); lg.addColorStop(1, 'rgba(150,150,120,.45)');
   ctx.fillStyle = lg; ctx.fill(tierra, 'evenodd');
   const blur = cl(CAM.z * S * .0009, 3, 36);
-  capaSuave(G.desiertos, 'desierto', tierra, blur, .85);
-  capaSuave(G.montes, 'monte', tierra, blur * 1.3, .95);
+  capaSuave(G.desiertos, 'desierto', tierra, blur, .95);
+  capaSuave(G.montes, 'monte', tierra, blur * 1.3, .82);
   setCam();
   for (const iso of ['GRL', 'ATA']) { const c = (lista === G.lo ? G.idxLo : G.idx)[iso]; if (c) { ctx.fillStyle = 'rgba(225,232,236,.9)'; ctx.fill(c.path, 'evenodd'); } }
   if (ancho < 70) { ctx.strokeStyle = `rgba(110,175,205,${cl((70 - ancho) / 40) * .55})`; ctx.lineWidth = 1.3 / CAM.z; ctx.lineJoin = 'round'; const v = vista(); for (const r of G.rios) if (cruza(r.bb, v)) ctx.stroke(r.path); }
@@ -281,6 +281,34 @@ const polS = p => p.map(([lo, la]) => ws(lo, la));
 
 // ---------- capas del estilo documental ----------
 const D = {
+  // muralla verde: línea sólida con brillo que avanza por los puntos (lon, lat); con cerrada:true termina en un anillo y da un destello al cerrarse
+  muralla(e, t) { const pts = polS(e.puntos), a = fade(t, e, .2, .4), p = eio(pr(t, e.desde, e.dur || 1.6)); if (pts.length < 2) return;
+    const L = [0]; for (let i = 1; i < pts.length; i++) L.push(L[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1])); const tot = L[L.length - 1], lim = tot * lerp(e.desdeP ?? 0, e.hastaP ?? 1, p);
+    const traza = (hasta) => { ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]); let fin = pts[0]; for (let i = 1; i < pts.length; i++) { if (L[i] <= hasta) { ctx.lineTo(pts[i][0], pts[i][1]); fin = pts[i]; } else { const u = (hasta - L[i - 1]) / ((L[i] - L[i - 1]) || 1); fin = [lerp(pts[i - 1][0], pts[i][0], u), lerp(pts[i - 1][1], pts[i][1], u)]; ctx.lineTo(fin[0], fin[1]); break; } } return fin; };
+    const g = (e.grosor || 16), col = e.color || '#35d06a'; ctx.save(); ctx.globalAlpha = a; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+    if (e.fantasma) { ctx.setLineDash([6, 12]); ctx.strokeStyle = 'rgba(255,255,255,.55)'; ctx.lineWidth = 3; traza(tot); ctx.stroke(); ctx.setLineDash([]); }
+    ctx.shadowColor = col; ctx.shadowBlur = 34 + 10 * Math.sin(t * 4); ctx.strokeStyle = '#0d5a2a'; ctx.lineWidth = g + 8; const fin = traza(lim); ctx.stroke();
+    ctx.shadowBlur = 0; ctx.strokeStyle = col; ctx.lineWidth = g; traza(lim); ctx.stroke(); ctx.strokeStyle = 'rgba(210,255,200,.75)'; ctx.lineWidth = g * .28; traza(lim); ctx.stroke();
+    if (p > 0 && p < 1) { ctx.fillStyle = '#eaffdf'; ctx.shadowColor = '#b8ff9a'; ctx.shadowBlur = 40; ctx.beginPath(); ctx.arc(fin[0], fin[1], g * .95, 0, Math.PI * 2); ctx.fill(); }
+    if (e.cerrada && p >= 1) { const q = pr(t, e.desde + (e.dur || 1.6), .7); if (q < 1) { ctx.globalAlpha = a * (1 - q); ctx.strokeStyle = '#eaffdf'; ctx.shadowColor = '#b8ff9a'; ctx.shadowBlur = 60; ctx.lineWidth = g + 26 * q; traza(tot); ctx.stroke(); } }
+    ctx.restore(); },
+  // silueta de un país llevada a otro lugar del mapa a su tamaño real (corrige la escala de Mercator con la latitud)
+  silueta(e, t) { const c = G.idx[e.pais]; if (!c) return; const a = fade(t, e, .25, .3), p = eob(pr(t, e.desde, .6)); if (p <= 0) return;
+    let m = c.pp[0], ar = 0; for (const q of c.pp) { const v = (q.bb[2] - q.bb[0]) * (q.bb[3] - q.bb[1]); if (v > ar) ar = v, m = q; }
+    const cx = (m.bb[0] + m.bb[2]) / 2, cy = (m.bb[1] + m.bb[3]) / 2, [tx, ty] = proj(e.lon, e.lat), k = Math.cos((e.lat0 || 0) * Math.PI / 180) / Math.cos(e.lat * Math.PI / 180) * p, col = e.color || '#ffd23f';
+    ctx.save(); ctx.globalAlpha = a; ctx.translate(W / 2, H / 2); ctx.scale(CAM.z, CAM.z); ctx.translate(tx - CAM.x, ty - CAM.y + (1 - p) * 60 / CAM.z); ctx.scale(k, k); ctx.translate(-cx, -cy);
+    ctx.fillStyle = e.relleno || 'rgba(255,210,63,.38)'; ctx.fill(m.path, 'evenodd'); ctx.shadowColor = col; ctx.shadowBlur = 24; ctx.strokeStyle = col; ctx.lineWidth = 5 / (CAM.z * k); ctx.lineJoin = 'round'; ctx.stroke(m.path); ctx.restore();
+    if (e.texto) { const [sx, sy] = wsx([tx, ty]); ctx.save(); ctx.globalAlpha = a * eo(pr(t, e.desde + .3, .3)); const sz = e.tam || 44; ctx.font = F(900, sz); const w = ctx.measureText(e.texto).width + 40; rr(sx - w / 2 + (e.dx || 0), sy - sz * .75 + (e.dy || 0), w, sz * 1.5, 12, 'rgba(7,18,27,.88)', col, 3); texto(e.texto, sx + (e.dx || 0), sy + 3 + (e.dy || 0), F(900, sz), '#fff'); ctx.restore(); } },
+  // 100 arbolitos en cuadrícula: aparecen verdes y después se secan todos menos e.vivos (para "solo 15 de cada 100")
+  arboles(e, t) { const a = fade(t, e, .15, .3); if (a <= 0) return; const n = 10, cel = e.celda || 84, x0 = W / 2 - cel * (n - 1) / 2, y0 = Y(e.y || 620), vivos = e.vivos ?? 15, tm = e.muere ?? (e.desde + 1.2), dm = e.durMuere || 2.2;
+    const orden = e._o || (e._o = (() => { const o = [...Array(100).keys()]; let s = 7; for (let i = 99; i > 0; i--) { s = (s * 1103515245 + 12345) & 0x7fffffff; const j = s % (i + 1); [o[i], o[j]] = [o[j], o[i]]; } return o; })());
+    ctx.save(); ctx.globalAlpha = a; rr(x0 - cel * .75, y0 - cel * .85, cel * (n + .5), cel * (n + .55), 26, 'rgba(7,18,27,.72)', 'rgba(255,255,255,.18)', 2);
+    for (let r = 0; r < n; r++) for (let q = 0; q < n; q++) { const i = r * n + q, rk = orden.indexOf(i), ap = eob(pr(t, e.desde + .1 + (r * n + q) * .006, .3)); if (ap <= 0) continue; const vive = rk < vivos, md = vive ? 0 : eo(pr(t, tm + (rk - vivos) / (100 - vivos) * dm, .35));
+      const x = x0 + q * cel, y = y0 + r * cel; ctx.save(); ctx.translate(x, y + 10); ctx.rotate(md * (i % 2 ? .5 : -.5)); ctx.scale(ap * (1 - md * .25), ap * (1 - md * .25));
+      const hoja = md > 0 ? `rgb(${Math.round(lerp(53, 120, md))},${Math.round(lerp(208, 112, md))},${Math.round(lerp(106, 100, md))})` : '#35d06a'; ctx.fillStyle = md > .5 ? '#6a5a4a' : '#7a5230'; ctx.fillRect(-4, 4, 8, 22);
+      if (vive && t > tm + dm * .6) { ctx.shadowColor = '#b8ff9a'; ctx.shadowBlur = 16 + 6 * Math.sin(t * 6 + i); } ctx.fillStyle = hoja; ctx.globalAlpha = a * (1 - md * .45);
+      ctx.beginPath(); ctx.arc(0, -8, 20 * (1 - md * .3), 0, Math.PI * 2); ctx.arc(-12, 2, 13 * (1 - md * .4), 0, Math.PI * 2); ctx.arc(12, 2, 13 * (1 - md * .4), 0, Math.PI * 2); ctx.fill(); ctx.restore(); }
+    ctx.restore(); },
   fecha(e, t) { const a = fade(t, e, .4, .3), x = 64 - (1 - a) * 30; ctx.save(); ctx.globalAlpha = a; ctx.font = F(800, 26); ctx.letterSpacing = '3px';
     const w = ctx.measureText(e.texto).width; rr(x - 18, 40, w + 52, 50, 6, 'rgba(6,18,28,.72)'); ctx.fillStyle = ACC; ctx.fillRect(x - 18, 40, 6, 50); texto(e.texto, x + 4, 66, F(800, 26), '#fff', 'left'); ctx.restore(); },
   titulo(e, t) { const a = fade(t, e, .2, .35), y = e.y || 250, f = F(900, e.tam || 74); ctx.save(); ctx.font = f; ctx.letterSpacing = '4px';
@@ -827,7 +855,7 @@ function capaClip(t) { const c = clipActivo(t); if (!c || !CLIPIMG) return 0;
   const vg = ctx.createRadialGradient(W / 2, H / 2, H * .35, W / 2, H / 2, W * .75); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,.42)'); ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
   if (c.etiqueta !== false) { ctx.font = F(700, 22); ctx.letterSpacing = '4px'; const txt = c.etiqueta || 'RECREACIÓN CON IA', w = ctx.measureText(txt).width + 34; rr(40, H - 78, w, 40, 8, 'rgba(0,0,0,.55)', 'rgba(255,255,255,.35)', 1.5); texto(txt, 40 + w / 2, H - 57, F(700, 22), '#fff'); }
   ctx.restore(); return a; }
-const enMapa = e => e.tipo === 'region' || e.lon !== undefined || e.pais !== undefined || e.de !== undefined || e.tipo === 'resaltar' || e.tipo === 'flujo' || e.tipo === 'medida' || e.tipo === 'ruta';
+const enMapa = e => e.tipo === 'region' || e.lon !== undefined || e.pais !== undefined || e.de !== undefined || e.tipo === 'resaltar' || e.tipo === 'flujo' || e.tipo === 'medida' || e.tipo === 'ruta' || e.tipo === 'muralla' || e.tipo === 'silueta';
 // ---------- retención: banner de "última hora", barra de progreso y destellos ----------
 function capasRetencion(t) {
   for (const e of SP.eventos) { if (e.tipo !== 'ultimahora' || !activo(t, e)) continue; const q = eo(pr(t, e.desde, .35)), a = fade(t, e, .05, .3), y = e.y || 160;
@@ -851,7 +879,7 @@ function render(t) {
   if (SP.estilo === 'documental') mapaDoc(t); else if (SP.estilo === 'pergamino') mapaPerg(t); else if (SP.estilo === 'fantasia') mapaFant(t); else mapaCarto(t);
   ctx.setTransform(1, 0, 0, 1, 0, 0); const ca = capaClip(t);
   const R = SP.estilo === 'documental' ? D : C;
-  const pase = filtro => { for (const e of SP.eventos) { const fn = R[e.tipo] || D[e.tipo] || C[e.tipo]; if (!filtro(e) || (ca > .5 && enMapa(e)) || !activo(t, e) || !fn || OCULTO(e.tipo)) continue; ctx.save(); ctx.letterSpacing = '0px'; fn(e, t); ctx.restore(); } };
+  const pase = filtro => { for (const e of SP.eventos) { const fn = (e.capa === 'C' && C[e.tipo]) || R[e.tipo] || D[e.tipo] || C[e.tipo]; /* capa:'C' fuerza la versión con borde grueso (se lee sobre clips claros) */ if (!filtro(e) || (ca > .5 && enMapa(e)) || !activo(t, e) || !fn || OCULTO(e.tipo)) continue; ctx.save(); ctx.letterSpacing = '0px'; fn(e, t); ctx.restore(); } };
   if (SP.estilo === 'fantasia') { pase(e => !e.mar && !e.arriba); desenfoqueFant(t); pase(e => e.arriba); marcoFant(t); }
   else pase(() => true);
   if (SP.estilo !== 'documental') { if (!OCULTO('lista')) C.listaPanel(t); if (SP.narracion) subtitulos(t); } else subtitulos(t);
