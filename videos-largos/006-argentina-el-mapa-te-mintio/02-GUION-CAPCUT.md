@@ -1,4 +1,4 @@
-# Video largo 006 · "El mapa te MINTIÓ: así de GIGANTE es Argentina" (16:9, unos 8 min)
+# Video largo 006 · "El mapa te MINTIÓ: así de GIGANTE es Argentina" (16:9, unos 5 min con la voz de CapCut)
 
 ## Cómo generar la voz en CapCut
 - La misma voz del Short de Panamá ("Dmitry"), velocidad 1.0x.

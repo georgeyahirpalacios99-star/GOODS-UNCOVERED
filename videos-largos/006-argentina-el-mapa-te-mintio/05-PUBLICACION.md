@@ -14,18 +14,12 @@
 En el mapa, Groenlandia parece 8 veces más grande que Argentina. En la realidad, Argentina es más grande. Estas son 15 verdades sobre el tamaño de Argentina que el mapa te escondió.
 
 0:00 El mapa que te mintió
-0:45 #15 al #12: provincias más grandes que países
-2:00 #11 al #9: Italia, Ecuador y Centroamérica
-3:00 #8 al #6: Texas, Escandinavia y Madrid–Moscú
-4:00 #5 al #3: Europa, Alaska y el giro de India
-5:15 #2 y #1: México + Chile y Groenlandia
-6:15 Por qué el mapa miente (Mercator, 1569)
+(los demás capítulos los pongo con los tiempos reales cuando tenga la voz)
 
 Fuentes: INDEC / IGN (provincias), CIA World Factbook (países), Natural Earth (fronteras para los cálculos de área y proyección Mercator). Los cálculos están hechos con esas fronteras.
 Imágenes ilustrativas creadas con IA; mapas con datos geográficos reales.
 #argentina #geografia #mapas #mercator #curiosidades
 ```
-Los tiempos de los capítulos se corrigen cuando tenga la voz.
 
 ## Etiquetas
 el mapa te mintió, argentina es más grande, tamaño real de argentina, proyección mercator, groenlandia tamaño real, argentina vs groenlandia, mapas, geografía, curiosidades, goods uncovered
@@ -34,7 +28,7 @@ el mapa te mintió, argentina es más grande, tamaño real de argentina, proyecc
 - **Contenido alterado o sintético:** Sí.
 - **Categoría:** Educación.
 - **Pantalla final:** el Short de Panamá y el próximo video de la serie.
-- **Duración:** si pasa de 8 minutos, activa anuncios a mitad del video. Pon uno en cada cambio de bloque: después del #12, del #6 y del #3.
+- **Duración:** con este guion queda en unos 5 minutos, así que no se pueden poner anuncios a mitad del video (YouTube los permite desde los 8 minutos).
 
 ## Lanzamiento
 1. **Short de promoción** (el que ya tienes listo en `shorts/014`): publícalo 2 horas antes del video largo. Pon el largo como "video relacionado".
