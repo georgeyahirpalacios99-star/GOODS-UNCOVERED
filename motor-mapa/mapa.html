@@ -280,7 +280,18 @@ function banderaCirculo(iso, x, y, r, ring = '#fff') { const fl = FLC[iso]; ctx.
 const polS = p => p.map(([lo, la]) => ws(lo, la));
 
 // ---------- capas del estilo documental ----------
+let RAYAS = {};
+function rayas(col) { if (RAYAS[col]) return RAYAS[col]; const c = document.createElement('canvas'); c.width = c.height = 16; const x = c.getContext('2d'); x.strokeStyle = col; x.lineWidth = 5; x.lineCap = 'square'; for (const o of [-16, 0, 16]) { x.beginPath(); x.moveTo(o, 16); x.lineTo(o + 16, 0); x.stroke(); } return RAYAS[col] = c; }
 const D = {
+  /* lista de claves ("un lago, un tren y un problema"): fichas numeradas que aparecen una a una; la activa se enciende y las demás quedan tenues */
+  claves(e, t) { const a = fade(t, e, .2, .3), x0 = e.x ?? W - 60, y0 = Y(e.y || 300), alto = e.alto || 96; e.items.forEach((it, i) => { const p = eob(pr(t, it.desde, .4)); if (p <= 0) return; const act = e.items.reduce((b, q, j) => (q.activa !== undefined && t >= q.activa ? j : b), -1), on = act < 0 || act === i, y = y0 + i * (alto + 14);
+      ctx.save(); ctx.globalAlpha = a * (on ? 1 : .38); const fz = e.tam || 40; ctx.font = F(900, fz); const txt = `${i + 1}. ${it.texto}`, w = ctx.measureText(txt).width + 56; ctx.translate(x0 + (1 - p) * 80, y); ctx.scale(on && act === i ? 1.08 : 1, on && act === i ? 1.08 : 1);
+      rr(-w, -alto / 2, w, alto, 14, act === i ? (e.color || '#d6283c') : 'rgba(7,18,27,.86)', 'rgba(255,255,255,.85)', 3); texto(txt, -w / 2, 3, F(900, fz), '#fff'); ctx.restore(); }); },
+  /* barras comparadas sobre el mapa: items [{valor, texto, color}] que crecen una tras otra */
+  barras(e, t) { const a = fade(t, e, .2, .3), n = e.items.length, bw = e.ancho || 190, gap = 46, x0 = W / 2 - (n * bw + (n - 1) * gap) / 2, yb = Y(e.y || 900), hmax = e.alto || 330, vmax = Math.max(...e.items.map(i => i.valor));
+    ctx.save(); ctx.globalAlpha = a; rr(x0 - 40, yb - hmax - 150, n * bw + (n - 1) * gap + 80, hmax + 250, 22, 'rgba(7,18,27,.78)', 'rgba(255,255,255,.2)', 2); if (e.titulo) texto(e.titulo, W / 2, yb - hmax - 105, F(800, 30), '#fff');
+    e.items.forEach((it, i) => { const p = eo(pr(t, it.desde ?? (e.desde + .2 + i * .6), .6)), h = hmax * it.valor / vmax * p, x = x0 + i * (bw + gap); ctx.fillStyle = it.color || '#4ea3ff'; ctx.beginPath(); ctx.roundRect(x, yb - h, bw, Math.max(1, h), 10); ctx.fill();
+      if (p > 0) { texto(String(Math.round(it.valor * p)), x + bw / 2, yb - h - 40, F(900, 62), '#fff', 'center', 'middle', NAVY, 10); texto(it.texto, x + bw / 2, yb + 44, F(800, 28), '#fff'); } }); ctx.restore(); },
   /* objeto recortado (png con transparencia): entra con rebote y flota. x, y en pantalla; w = ancho */
   objeto(e, t) { const im = IM[e.img]; if (!im) return; const p = eob(pr(t, e.desde, .45)), a = fade(t, e, .05, .25); if (p <= 0) return; const w = e.w || 260, h = w * im.height / im.width;
     ctx.save(); ctx.globalAlpha = a; ctx.translate(e.x, Y(e.y) + Math.sin(t * 2.4 + e.x) * 8); ctx.rotate((e.rot || 0) * Math.PI / 180 + Math.sin(t * 1.7 + e.y) * .03); ctx.scale(p, p);
@@ -429,7 +440,7 @@ const C = {
     lines.forEach((ln, i) => { ctx.save(); ctx.translate(W / 2, y0 + 25 * fit + (i + .55) * sz * 1.1 * fit); ctx.scale(fit, fit); ctx.font = F(700, sz); let tot = 0; const parts = ln.split('*'); parts.forEach(q => tot += ctx.measureText(q).width); let x = -tot / 2;
       parts.forEach((q, j) => { texto(q, x, 0, F(700, sz), j % 2 ? ACC : '#fff', 'left', 'middle'); x += ctx.measureText(q).width; }); ctx.restore(); }); ctx.restore(); },
   resaltar(e, t) { const c = G.idx[e.pais]; if (!c) return; const a = fade(t, e, .3, .3), pulso = .65 + .35 * Math.sin(t * 5); setCam(); ctx.save(); ctx.globalAlpha = a;
-    ctx.fillStyle = e.relleno || 'rgba(255,210,63,.20)'; ctx.fill(c.path, 'evenodd'); ctx.shadowColor = e.color || ACC; ctx.shadowBlur = 22 * pulso; ctx.strokeStyle = e.color || ACC; ctx.lineWidth = 5 / CAM.z; ctx.lineJoin = 'round'; ctx.stroke(c.path); ctx.restore(); ctx.setTransform(1, 0, 0, 1, 0, 0); },
+    ctx.fillStyle = e.relleno || 'rgba(255,210,63,.20)'; ctx.fill(c.path, 'evenodd'); if (e.rayas) { const pt = ctx.createPattern(rayas(e.color || ACC), 'repeat'); pt.setTransform(new DOMMatrix().scale(1 / CAM.z)); ctx.globalAlpha = a * .75; ctx.fillStyle = pt; ctx.fill(c.path, 'evenodd'); ctx.globalAlpha = a; } ctx.shadowColor = e.color || ACC; ctx.shadowBlur = 22 * pulso; ctx.strokeStyle = e.color || ACC; ctx.lineWidth = 5 / CAM.z; ctx.lineJoin = 'round'; ctx.stroke(c.path); ctx.restore(); ctx.setTransform(1, 0, 0, 1, 0, 0); },
   marcar() {},
   nombre(e, t) { const [x, y] = ws(e.lon, e.lat), p = eob(pr(t, e.desde, .4)), a = fade(t, e, .05, .3); if (p <= 0) return; const sz = e.tam || 28; ctx.save(); ctx.globalAlpha = a; ctx.translate(x, y); ctx.scale(p, p); ctx.font = F(700, sz); const w = ctx.measureText(e.texto).width + 36, h = sz + 22;
     if (e.fantasma) { ctx.setLineDash([8, 6]); rr(-w / 2, -h / 2, w, h, h / 2, 'rgba(7,18,27,.45)', 'rgba(255,255,255,.85)', 2.5); ctx.setLineDash([]); texto(e.texto, 0, 2, F(700, sz), 'rgba(255,255,255,.92)'); }
@@ -858,10 +869,10 @@ const clipActivo = t => (SP.clips || []).find(c => t >= c.desde && t < c.hasta);
 function capaClip(t) { const c = clipActivo(t); if (!c || !CLIPIMG) return 0;
   const a = fade(t, c, c.entra ?? .28, c.sale ?? .28), q = cl((t - c.desde) / (c.hasta - c.desde)), golpe = 1 - eo(pr(t, c.desde, .45));
   const z = (c.z0 ?? 1.02) + ((c.z1 ?? 1.09) - (c.z0 ?? 1.02)) * q + golpe * .06, iw = CLIPIMG.width, ih = CLIPIMG.height, k = Math.max(W / iw, H / ih) * z;
-  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = a; ctx.drawImage(CLIPIMG, W / 2 - iw * k / 2 + (c.dx || 0) * q, H / 2 - ih * k / 2, iw * k, ih * k);
+  ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); if (c.circulo) { const r = eio(pr(t, c.desde, .5)) * Math.hypot(W, H) * .62 * Math.min(1, (c.hasta - t) / .3 + .0001 < 1 ? eio(cl((c.hasta - t) / .3)) : 1); ctx.beginPath(); ctx.arc(W / 2, H * .42, Math.max(1, r), 0, Math.PI * 2); ctx.clip(); ctx.globalAlpha = 1; } else ctx.globalAlpha = a; ctx.drawImage(CLIPIMG, W / 2 - iw * k / 2 + (c.dx || 0) * q, H / 2 - ih * k / 2, iw * k, ih * k);
   const vg = ctx.createRadialGradient(W / 2, H / 2, H * .35, W / 2, H / 2, W * .75); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,.42)'); ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
   if (c.etiqueta !== false) { ctx.font = F(700, 22); ctx.letterSpacing = '4px'; const txt = c.etiqueta || 'RECREACIÓN CON IA', w = ctx.measureText(txt).width + 34; rr(40, H - 78, w, 40, 8, 'rgba(0,0,0,.55)', 'rgba(255,255,255,.35)', 1.5); texto(txt, 40 + w / 2, H - 57, F(700, 22), '#fff'); }
-  ctx.restore(); return a; }
+  ctx.restore(); return c.circulo ? (pr(t, c.desde, .5) >= 1 && t < c.hasta - .3 ? 1 : .4) : a; }
 const enMapa = e => e.tipo === 'region' || e.lon !== undefined || e.pais !== undefined || e.de !== undefined || e.tipo === 'resaltar' || e.tipo === 'flujo' || e.tipo === 'medida' || e.tipo === 'ruta' || e.tipo === 'muralla' || e.tipo === 'silueta' || e.tipo === 'capa';
 // ---------- retención: banner de "última hora", barra de progreso y destellos ----------
 function capasRetencion(t) {
@@ -874,7 +885,14 @@ function capasRetencion(t) {
   for (const c of SP.clips || []) { const u = (t - c.desde) / .16; if (u >= 0 && u < 1 && c.desde > .2) { ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = `rgba(255,255,255,${(1 - u) * .55})`; ctx.fillRect(0, 0, W, H); ctx.restore(); } }
   for (const f of SP.destellos || []) { const u = (t - f) / .14; if (u >= 0 && u < 1) { ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = `rgba(255,255,255,${(1 - u) * .7})`; ctx.fillRect(0, 0, W, H); ctx.restore(); } } }
 // ---------- subtítulo de una palabra (Shorts): grande, con golpe, y las palabras clave en amarillo ----------
-function palabrasCap(t) { const L = SP.palabras; if (!L) return; const p = L.find(q => t >= q.t0 && t < q.t1 + .05); if (!p) return;
+function capCaja(t) { const L = SP.palabras; if (!L) return;
+  if (!SP._grupos) { const G2 = []; let g = []; L.forEach((p, i) => { g.push(p); const fin = /[.,:;?!…]$/.test(p.w) || g.length >= 3 || (L[i + 1] && L[i + 1].t0 - p.t1 > .28); if (fin) { G2.push(g); g = []; } }); if (g.length) G2.push(g);
+    SP._grupos = G2.map(g => { const ws = g.map(p => p.w.replace(/[¿?¡!"“”.,:;…]/g, '').toUpperCase()); let k = ws.findIndex(w => (SP.resaltar || []).some(r => w.includes(r)) || /\d/.test(w)); if (k < 0) k = ws.reduce((b, w, i) => w.length > ws[b].length ? i : b, 0); return { t0: g[0].t0, t1: g[g.length - 1].t1, ws, k }; }); }
+  const g = SP._grupos.find(q => t >= q.t0 && t < q.t1 + .12); if (!g) return; const sz = SP.capTam || 64, u = eo(pr(t, g.t0, .12)); ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.font = F(900, sz, 'Montserrat'); ctx.letterSpacing = '2px';
+  const an = g.ws.map(w => ctx.measureText(w).width), esp = sz * .36, pad = sz * .2, tot = an.reduce((a, b) => a + b, 0) + esp * (g.ws.length - 1), fit = Math.min(1, W * .88 / (tot + pad * 2)); ctx.translate(W / 2, (SP.capY || 1340) + (1 - u) * 14); ctx.scale(fit, fit); ctx.globalAlpha = u;
+  let x = -tot / 2; g.ws.forEach((w, i) => { if (i === g.k) { ctx.fillStyle = SP.capColor || '#d6283c'; ctx.beginPath(); ctx.roundRect(x - pad, -sz * .62, an[i] + pad * 2, sz * 1.24, 6); ctx.fill(); }
+    ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; if (i !== g.k) { ctx.lineWidth = sz * .2; ctx.strokeStyle = 'rgba(0,0,0,.85)'; ctx.strokeText(w, x, 2); } ctx.fillStyle = '#fff'; ctx.fillText(w, x, 2); x += an[i] + esp; }); ctx.restore(); }
+function palabrasCap(t) { if (SP.capEstilo === 'caja') return capCaja(t); const L = SP.palabras; if (!L) return; const p = L.find(q => t >= q.t0 && t < q.t1 + .05); if (!p) return;
   const limpio = p.w.replace(/[¿?¡!"“”]/g, '').toUpperCase(), clave = (SP.resaltar || []).some(r => limpio.includes(r)) || /\d/.test(limpio);
   const u = pr(t, p.t0, .13), s = 1.22 - .22 * eo(u), sz = SP.capTam || 110; ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.font = F(900, sz, 'Montserrat');
   const fit = Math.min(1, (W * .9) / (ctx.measureText(limpio).width + sz * .4)); ctx.translate(W / 2, SP.capY || 1340); ctx.scale(s * fit, s * fit); ctx.rotate((L.indexOf(p) % 2 ? 1 : -1) * .025);
