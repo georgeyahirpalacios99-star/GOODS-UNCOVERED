@@ -1,0 +1,292 @@
+{
+ "estilo": "documental",
+ "formato": "vertical",
+ "salida": "la-boda-de-la-pina",
+ "duracion": 65.1,
+ "camara": [
+  {
+   "t": 0,
+   "lon": -78,
+   "lat": -1,
+   "ancho": 40
+  },
+  {
+   "t": 65.1,
+   "lon": -78,
+   "lat": -1,
+   "ancho": 40
+  }
+ ],
+ "sacudidas": [
+  {
+   "t": 18.9,
+   "dur": 0.45,
+   "fuerza": 12
+  },
+  {
+   "t": 28.8,
+   "dur": 0.45,
+   "fuerza": 12
+  },
+  {
+   "t": 35.7,
+   "dur": 0.45,
+   "fuerza": 12
+  },
+  {
+   "t": 50.6,
+   "dur": 0.45,
+   "fuerza": 12
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "titulo",
+   "desde": 0.05,
+   "hasta": 1.85,
+   "texto": "LA BODA\n*SE ARRUINÓ*",
+   "tam": 130,
+   "y": 330,
+   "capa": "C"
+  },
+  {
+   "tipo": "fecha",
+   "desde": 2.05,
+   "hasta": 9.6,
+   "texto": "LA BODA DEL AÑO"
+  },
+  {
+   "tipo": "titulo",
+   "desde": 2.3,
+   "hasta": 4.3,
+   "texto": "TODO ERA *PERFECTO*",
+   "tam": 96,
+   "y": 300,
+   "capa": "C"
+  },
+  {
+   "tipo": "fecha",
+   "desde": 9.95,
+   "hasta": 17.5,
+   "texto": "EL NOVIO"
+  },
+  {
+   "tipo": "titulo",
+   "desde": 10.4,
+   "hasta": 12.4,
+   "texto": "ÉL ESCONDÍA *ALGO*",
+   "tam": 96,
+   "y": 300,
+   "capa": "C"
+  },
+  {
+   "tipo": "fecha",
+   "desde": 17.85,
+   "hasta": 25.4,
+   "texto": "DE PRONTO…"
+  },
+  {
+   "tipo": "titulo",
+   "desde": 18.9,
+   "hasta": 20.9,
+   "texto": "ALGUIEN *INTERRUMPE*",
+   "tam": 96,
+   "y": 300,
+   "capa": "C"
+  },
+  {
+   "tipo": "fecha",
+   "desde": 25.75,
+   "hasta": 33.3,
+   "texto": "LA PRUEBA"
+  },
+  {
+   "tipo": "titulo",
+   "desde": 28.8,
+   "hasta": 30.8,
+   "texto": "¡*POSITIVO*!",
+   "tam": 96,
+   "y": 300,
+   "capa": "C"
+  },
+  {
+   "tipo": "fecha",
+   "desde": 33.65,
+   "hasta": 41.2,
+   "texto": "LA NOVIA"
+  },
+  {
+   "tipo": "titulo",
+   "desde": 34.5,
+   "hasta": 36.5,
+   "texto": "NO PUEDE *CREERLO*",
+   "tam": 96,
+   "y": 300,
+   "capa": "C"
+  },
+  {
+   "tipo": "fecha",
+   "desde": 41.55,
+   "hasta": 49.1,
+   "texto": "EL NOVIO SUPLICA"
+  },
+  {
+   "tipo": "titulo",
+   "desde": 43.4,
+   "hasta": 45.4,
+   "texto": "¿LO *PERDONA*?",
+   "tam": 96,
+   "y": 300,
+   "capa": "C"
+  },
+  {
+   "tipo": "fecha",
+   "desde": 49.45,
+   "hasta": 57.0,
+   "texto": "LA RESPUESTA"
+  },
+  {
+   "tipo": "titulo",
+   "desde": 50.6,
+   "hasta": 52.6,
+   "texto": "¡*PASTELAZO*!",
+   "tam": 96,
+   "y": 300,
+   "capa": "C"
+  },
+  {
+   "tipo": "fecha",
+   "desde": 57.35,
+   "hasta": 64.9,
+   "texto": "AFUERA DE LA IGLESIA"
+  },
+  {
+   "tipo": "titulo",
+   "desde": 61.8,
+   "hasta": 63.8,
+   "texto": "Y FALTABA *LO PEOR*…",
+   "tam": 96,
+   "y": 300,
+   "capa": "C"
+  },
+  {
+   "tipo": "pregunta",
+   "desde": 62.5,
+   "hasta": 65.1,
+   "texto": "¿QUIERES LA PARTE 2? COMENTA \"PIÑA\"",
+   "y": 1500
+  }
+ ],
+ "clips": [
+  {
+   "codigo": "F7",
+   "desde": 0,
+   "hasta": 1.9,
+   "ofs": 0.9,
+   "vel": 1,
+   "entra": 0.01,
+   "sale": 0.01,
+   "z0": 1.12,
+   "z1": 1.2,
+   "etiqueta": "HECHO CON IA"
+  },
+  {
+   "codigo": "F1",
+   "desde": 1.9,
+   "hasta": 9.8,
+   "vel": 1,
+   "entra": 0.01,
+   "sale": 0.01,
+   "z0": 1.0,
+   "z1": 1.07,
+   "etiqueta": "HECHO CON IA"
+  },
+  {
+   "codigo": "F2",
+   "desde": 9.8,
+   "hasta": 17.7,
+   "vel": 1,
+   "entra": 0.01,
+   "sale": 0.01,
+   "z0": 1.0,
+   "z1": 1.07,
+   "etiqueta": "HECHO CON IA"
+  },
+  {
+   "codigo": "F3",
+   "desde": 17.7,
+   "hasta": 25.6,
+   "vel": 1,
+   "entra": 0.01,
+   "sale": 0.01,
+   "z0": 1.0,
+   "z1": 1.07,
+   "etiqueta": "HECHO CON IA"
+  },
+  {
+   "codigo": "F4",
+   "desde": 25.6,
+   "hasta": 33.5,
+   "vel": 1,
+   "entra": 0.01,
+   "sale": 0.01,
+   "z0": 1.0,
+   "z1": 1.07,
+   "etiqueta": "HECHO CON IA"
+  },
+  {
+   "codigo": "F5",
+   "desde": 33.5,
+   "hasta": 41.4,
+   "vel": 1,
+   "entra": 0.01,
+   "sale": 0.01,
+   "z0": 1.0,
+   "z1": 1.07,
+   "etiqueta": "HECHO CON IA"
+  },
+  {
+   "codigo": "F6",
+   "desde": 41.4,
+   "hasta": 49.3,
+   "vel": 1,
+   "entra": 0.01,
+   "sale": 0.01,
+   "z0": 1.0,
+   "z1": 1.07,
+   "etiqueta": "HECHO CON IA"
+  },
+  {
+   "codigo": "F7",
+   "desde": 49.3,
+   "hasta": 57.2,
+   "vel": 1,
+   "entra": 0.01,
+   "sale": 0.01,
+   "z0": 1.0,
+   "z1": 1.07,
+   "etiqueta": "HECHO CON IA"
+  },
+  {
+   "codigo": "F8",
+   "desde": 57.2,
+   "hasta": 65.1,
+   "vel": 1,
+   "entra": 0.01,
+   "sale": 0.01,
+   "z0": 1.0,
+   "z1": 1.07,
+   "etiqueta": "HECHO CON IA"
+  }
+ ],
+ "tipografia": "cine",
+ "fundido_inicio": 0,
+ "barra": true,
+ "destellos": [
+  18.9,
+  28.8,
+  35.7,
+  50.6
+ ],
+ "audio": ".tmp/voz.wav"
+}

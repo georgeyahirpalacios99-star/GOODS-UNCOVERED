@@ -87,3 +87,8 @@ shorts/013-mexico-vs-canal-de-panama/preview/
 shorts/013-mexico-vs-canal-de-panama/*.mp4
 shorts/013-mexico-vs-canal-de-panama/clips/*.mp4
 shorts/013-mexico-vs-canal-de-panama/voz/*.wav
+facebook-frutinovela/*/.clips/
+facebook-frutinovela/*/.tmp/
+facebook-frutinovela/*/preview/
+facebook-frutinovela/*/*.mp4
+facebook-frutinovela/*/clips/*.mp4
