@@ -1605,8 +1605,9 @@
   "CIENTOS"
  ],
  "capY": 1500,
- "capTam": 66,
+ "capTam": 74,
  "capEstilo": "caja",
+ "tipografia": "cine",
  "fundido_inicio": 0,
  "barra": true,
  "destellos": [

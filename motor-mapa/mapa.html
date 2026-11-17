@@ -3,6 +3,8 @@
 <style>
 @font-face { font-family: Fredoka; src: url(datos/fuentes/Fredoka.ttf); font-weight: 300 700; }
 @font-face { font-family: Montserrat; src: url(datos/fuentes/Montserrat.ttf); font-weight: 100 900; }
+@font-face { font-family: Anton; src: url(datos/fuentes/Anton.woff2); font-weight: 400; }
+@font-face { font-family: Barlow; src: url(datos/fuentes/BarlowCondensed-700.woff2); font-weight: 700; }
 @font-face { font-family: Fell; src: url(datos/fuentes/IMFell.ttf); font-weight: 400; }
 @font-face { font-family: Fell; src: url(datos/fuentes/IMFell-it.ttf); font-style: italic; }
 html, body { margin: 0; background: #000; }
@@ -26,7 +28,7 @@ const hsh = s => { let h = 2166136261; for (const ch of String(s)) h = Math.imul
 function proj(lon, lat) { lat = cl(lat, -85, 85); return [(lon + 180) / 360 * S, (1 - Math.log(Math.tan(Math.PI / 4 + lat * Math.PI / 360)) / Math.PI) / 2 * S]; }
 const ws = (lon, lat) => { const [x, y] = proj(lon, lat); return [(x - CAM.x) * CAM.z + W / 2, (y - CAM.y) * CAM.z + H / 2]; };
 const wsx = ([x, y]) => [(x - CAM.x) * CAM.z + W / 2, (y - CAM.y) * CAM.z + H / 2];
-const F = (w, s, fam) => `${w} ${s}px ${fam || (SP.estilo !== 'documental' ? 'Fredoka' : 'Montserrat')}`;
+const F = (w, s, fam) => SP.tipografia === 'cine' ? (s >= 34 ? `400 ${Math.round(s * 1.12)}px Anton` : `700 ${Math.round(s * 1.18)}px Barlow`) : `${w} ${s}px ${fam || (SP.estilo !== 'documental' ? 'Fredoka' : 'Montserrat')}`;
 const fade = (t, e, fi = .35, fo = .3) => Math.min(eo(pr(t, e.desde, fi)), 1 - pr(t, (e.hasta ?? 1e9) - fo, fo));
 const activo = (t, e) => t >= e.desde && t <= (e.hasta ?? 1e9);
 
@@ -392,6 +394,11 @@ const C = {
   titulo(e, t) { const p = eob(pr(t, e.desde, .55)), a = fade(t, e, .1, .4); if (p <= 0) return; const lines = e.texto.split('\n'), sz = e.tam || 96;
     ctx.font = F(700, sz); const fit = encajar(lines.map(l => ctx.measureText(l.replace(/\*/g, '')).width + sz * .4), W * .94);
     ctx.save(); ctx.globalAlpha = a; ctx.translate(W / 2, Y(e.y || 200)); ctx.scale(p * fit, p * fit); ctx.rotate(Math.sin(t * 2) * .012);
+    if (SP.tipografia === 'cine') { ctx.rotate(-Math.sin(t * 2) * .012); ctx.letterSpacing = '3px'; lines.forEach((ln, i) => { const yy = (i - (lines.length - 1) / 2) * sz * 1.3, parts = ln.split('*'); ctx.font = F(700, sz); let tot = 0; parts.forEach(s => tot += ctx.measureText(s).width); let x = -tot / 2; const q = eo(pr(t, e.desde + i * .12, .35));
+        ctx.save(); ctx.beginPath(); ctx.rect(-W, yy - sz * .78, W * 2, sz * 1.56); ctx.clip(); ctx.translate(0, (1 - q) * sz * 1.3);
+        parts.forEach((s, j) => { const w = ctx.measureText(s).width; if (j % 2 && s) { ctx.save(); ctx.translate(x + w / 2, yy); ctx.transform(1, 0, -.12, 1, 0, 0); ctx.fillStyle = e.color || SP.capColor || '#d6283c'; ctx.shadowColor = 'rgba(0,0,0,.5)'; ctx.shadowBlur = 18; ctx.shadowOffsetY = 6; ctx.fillRect(-w / 2 - sz * .14, -sz * .66, w + sz * .28, sz * 1.32); ctx.restore(); }
+          ctx.save(); if (!(j % 2)) { ctx.shadowColor = 'rgba(0,0,0,.85)'; ctx.shadowBlur = 22; ctx.shadowOffsetY = 5; } ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#fff'; ctx.fillText(s, x, yy + sz * .04); if (!(j % 2)) ctx.fillText(s, x, yy + sz * .04); ctx.restore(); x += w; }); ctx.restore(); });
+      const lw = Math.min(W * .5, sz * 4) * eo(pr(t, e.desde + .25, .4)), yb = (lines.length / 2) * sz * 1.3 + 8; ctx.fillStyle = e.color || SP.capColor || '#d6283c'; ctx.fillRect(-lw / 2, yb, lw, 7); ctx.restore(); return; }
     lines.forEach((ln, i) => { const yy = (i - (lines.length - 1) / 2) * sz * 1.08; ctx.font = F(700, sz); let tot = 0; const parts = ln.split('*'); parts.forEach(s => tot += ctx.measureText(s).width); let x = -tot / 2;
       parts.forEach((s, j) => { texto(s, x, yy, F(700, sz), j % 2 ? ACC : '#fff', 'left', 'middle', NAVY, sz * .2); x += ctx.measureText(s).width; }); }); ctx.restore(); },
   region(e, t) { const a = fade(t, e, .35, .3), x = 40 - (1 - a) * 40; ctx.save(); ctx.globalAlpha = a; ctx.font = F(700, 26); const w = ctx.measureText(e.texto).width; rr(x, 34, w + 44, 52, 26, NAVY, ACC, 3); texto(e.texto, x + 22 + w / 2, 61, F(700, 26), '#fff'); ctx.restore(); },
@@ -888,7 +895,7 @@ function capasRetencion(t) {
 function capCaja(t) { const L = SP.palabras; if (!L) return;
   if (!SP._grupos) { const G2 = []; let g = []; L.forEach((p, i) => { g.push(p); const fin = /[.,:;?!…]$/.test(p.w) || g.length >= 3 || (L[i + 1] && L[i + 1].t0 - p.t1 > .28); if (fin) { G2.push(g); g = []; } }); if (g.length) G2.push(g);
     SP._grupos = G2.map(g => { const ws = g.map(p => p.w.replace(/[¿?¡!"“”.,:;…]/g, '').toUpperCase()); let k = ws.findIndex(w => (SP.resaltar || []).some(r => w.includes(r)) || /\d/.test(w)); if (k < 0) k = ws.reduce((b, w, i) => w.length > ws[b].length ? i : b, 0); return { t0: g[0].t0, t1: g[g.length - 1].t1, ws, k }; }); }
-  const g = SP._grupos.find(q => t >= q.t0 && t < q.t1 + .12); if (!g) return; const sz = SP.capTam || 64, u = eo(pr(t, g.t0, .12)); ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.font = F(900, sz, 'Montserrat'); ctx.letterSpacing = '2px';
+  const g = SP._grupos.find(q => t >= q.t0 && t < q.t1 + .12); if (!g) return; const sz = SP.capTam || 64, u = eo(pr(t, g.t0, .12)); ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.font = SP.tipografia === 'cine' ? `400 ${sz}px Anton` : F(900, sz, 'Montserrat'); ctx.letterSpacing = '2px';
   const an = g.ws.map(w => ctx.measureText(w).width), esp = sz * .36, pad = sz * .2, tot = an.reduce((a, b) => a + b, 0) + esp * (g.ws.length - 1), fit = Math.min(1, W * .88 / (tot + pad * 2)); ctx.translate(W / 2, (SP.capY || 1340) + (1 - u) * 14); ctx.scale(fit, fit); ctx.globalAlpha = u;
   let x = -tot / 2; g.ws.forEach((w, i) => { if (i === g.k) { ctx.fillStyle = SP.capColor || '#d6283c'; ctx.beginPath(); ctx.roundRect(x - pad, -sz * .62, an[i] + pad * 2, sz * 1.24, 6); ctx.fill(); }
     ctx.textAlign = 'left'; ctx.textBaseline = 'middle'; ctx.lineJoin = 'round'; if (i !== g.k) { ctx.lineWidth = sz * .2; ctx.strokeStyle = 'rgba(0,0,0,.85)'; ctx.strokeText(w, x, 2); } ctx.fillStyle = '#fff'; ctx.fillText(w, x, 2); x += an[i] + esp; }); ctx.restore(); }

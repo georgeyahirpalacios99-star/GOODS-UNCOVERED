@@ -75,7 +75,7 @@ function imagenes() {
   const nuevaPagina = async () => {
     const page = await browser.newPage({ viewport: { width: 1920, height: 1080 } });
     await page.goto('file://' + path.join(__dirname, spec.motor ? spec.motor + '.html' : 'mapa.html'));
-    await page.evaluate(() => Promise.all(['700 40px Fredoka', '600 40px Fredoka', '500 40px Fredoka', '400 40px Fredoka', '900 40px Montserrat', '800 40px Montserrat', '700 40px Montserrat', '600 40px Montserrat', '500 40px Montserrat', '400 40px Fell', 'italic 400 40px Fell'].map(f => document.fonts.load(f))));
+    await page.evaluate(() => Promise.all(['400 40px Anton', '700 40px Barlow', '700 40px Fredoka', '600 40px Fredoka', '500 40px Fredoka', '400 40px Fredoka', '900 40px Montserrat', '800 40px Montserrat', '700 40px Montserrat', '600 40px Montserrat', '500 40px Montserrat', '400 40px Fell', 'italic 400 40px Fell'].map(f => document.fonts.load(f))));
     await page.evaluate(([g, s, f, i]) => init(g, s, f, i), [geo, spec, fl, im]);
     return page;
   };

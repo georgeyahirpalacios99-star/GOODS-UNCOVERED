@@ -101,7 +101,7 @@ for i in range(1, len(cam)):
     if cam[i]['t'] <= cam[i - 1]['t']: cam[i]['t'] = round(cam[i - 1]['t'] + .02, 2)
 spec = dict(estilo='documental', formato='vertical', salida='mexico-vs-canal-de-panama', duracion=DUR, camara=cam, sacudidas=sacud, eventos=sorted(ev, key=lambda e: e['desde']),
             clips=CLIPS, palabras=palabras_de(b), resaltar=['PANAMÁ', 'AGUA', 'MÉXICO', 'TREN', 'BARCOS', 'LAGO', 'PROBLEMA', 'GATÚN', 'SEQUÍA', 'VEINTIDÓS', 'TRESCIENTOS', 'CATORCE', 'TRENES', 'CANAL', 'COBRA', 'OCÉANOS', 'MILLONES', 'LITROS', 'DÓLARES', 'CIENTOS'],
-            capY=1500, capTam=66, capEstilo='caja', fundido_inicio=0, barra=True, destellos=DESTELLOS)
+            capY=1500, capTam=74, capEstilo='caja', tipografia='cine', fundido_inicio=0, barra=True, destellos=DESTELLOS)
 if CON_VOZ:
     tmp = DIR / '.tmp'; tmp.mkdir(exist_ok=True)
     subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(DIR / 'voz' / 'limpia.wav'), '-af', f'adelay={int(INICIO * 1000)},apad=whole_dur={DUR},loudnorm=I=-16:TP=-2:LRA=11', '-ar', '48000', '-ac', '1', str(tmp / 'voz.wav')], check=True)
