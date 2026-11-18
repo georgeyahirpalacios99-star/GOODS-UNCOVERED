@@ -20,7 +20,7 @@
 | Camarón 2023 | 115,132 t, 45.1 % del valor nacional | CONAPESCA vía el Gobierno de Sinaloa | |
 | Atún | 70 % se procesa en Mazatlán | Debate (2015) | Dato viejo: el guion dice "según datos de 2015" |
 | Riego | 11 presas, más de 800,000 ha | Informe del Gobierno de Sinaloa | |
-| Pedro Infante | n. Mazatlán 18-nov-1917, creció en Guamúchil | Biografías y Vidas | |
+| Pedro Infante | n. Mazatlán 18-nov-1917, creció en Guamúchil; murió el 15-abr-1957 en un accidente de avión (Mérida) | Biografías y Vidas | |
 | Lola Beltrán | n. El Rosario, 1932 | Wikipedia / Vanguardia | |
 | Ana Gabriel | n. Guamúchil, 1955 | Biografía oficial | |
 | Banda El Recodo | Mazatlán, 1938, Cruz Lizárraga; primera banda de Sinaloa en la Casa Blanca | Wikipedia (Banda el Recodo) | |
