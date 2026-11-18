@@ -9,8 +9,13 @@ George lo pidió así: **realista y de diseñador, nada infantil**. Esta es la c
    - Si no hay clip ni foto, el mapa lleva una flecha, un círculo, un camino, figuritas o una cifra.
 3. **Anotaciones en cada escena de mapa:** flechas, círculos, pines, caminos con vehículo y figuritas tipo señalética, que actúan lo que dice la voz (caminar, cosechar, fila de proporción).
 4. **Fotos reales primero** (Wikimedia Commons, NASA o dominio público), con el crédito en pantalla. Flow/Veo se usa solo para lo que no existe y lleva la etiqueta "IMAGEN ILUSTRATIVA CON IA".
-5. **Muestras antes de producir:** con cada tema nuevo, primero se mandan 15–25 s de muestra y se espera el visto bueno de George.
-6. **Música muy baja**, solo de fondo, sintetizada y sin derechos. Nunca audios virales con copyright.
+5. **El mapa nunca va solo.** En toda escena de mapa hay, al mismo tiempo:
+   - `hud`: el lugar y las coordenadas en vivo, más la barra de escala;
+   - `ambiente`: partículas suaves;
+   - **al menos un acompañante** que cambia cada 3–4 s: `tarjetaFoto` (foto real flotando, unida al lugar), `simbolo` animado (notas, gotas, sol, precio, olas, reloj, alerta), `fila`, `dato` o `gente`.
+   - Cada cambio de escena lleva transición: `barrido`, o la entrada circular de un clip.
+6. **Muestras antes de producir:** con cada tema nuevo, primero se mandan 15–25 s de muestra y se espera el visto bueno de George.
+7. **Música muy baja**, solo de fondo, sintetizada y sin derechos. Nunca audios virales con copyright.
 
 ## Capas del estilo pro (`mapa.json`, estilo `documental`)
 Las posiciones aceptan `[lon, lat]` o `{ "x": px, "y": px }`.
@@ -30,6 +35,11 @@ Las posiciones aceptan `[lon, lat]` o `{ "x": px, "y": px }`.
 | `ficha` | Rótulo inferior (título + subtítulo) | `kicker`, `texto`, `sub` |
 | `dato` | Cifra grande con contador y fuente | `kicker`, `num`, `suf`, `sub`, `fuente` |
 | `capitulo` | Tarjeta de capítulo | `n`, `texto` |
+| `hud` | Lugar y coordenadas en vivo, y escala | `lugares: [{t, texto}]` |
+| `ambiente` | Partículas que flotan | `n`, `color` |
+| `tarjetaFoto` | Foto real flotando sobre el mapa, unida a un punto | `img`, `en`, `x`, `y`, `w`, `texto`, `credito`, `rot` |
+| `simbolo` | Motion graphic sobre el mapa | `forma` (`notas`, `gotas`, `sol`, `precio`, `olas`, `reloj`, `alerta`), `en`, `tam`, `texto` |
+| `barrido` | Transición: panel diagonal con filo amarillo | `desde`, `dur` |
 | `foto` | Foto real a pantalla completa con zoom lento | `img`, `z0`, `z1`, `credito` |
 
 Ejemplos que funcionan: `videos-largos/007-sinaloa-desaparece/muestras/` y `muestras-2/`.

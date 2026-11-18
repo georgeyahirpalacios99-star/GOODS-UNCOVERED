@@ -1,0 +1,321 @@
+{
+ "estilo": "documental",
+ "salida": "muestras-acompanantes",
+ "duracion": 23,
+ "estadosDe": [
+  "MEX"
+ ],
+ "camara": [
+  {
+   "t": 0,
+   "lon": -106.0,
+   "lat": 23.6,
+   "ancho": 7
+  },
+  {
+   "t": 7.3,
+   "lon": -106.3,
+   "lat": 23.45,
+   "ancho": 5.2,
+   "suave": false
+  },
+  {
+   "t": 11,
+   "lon": -107.6,
+   "lat": 24.9,
+   "ancho": 5.5
+  },
+  {
+   "t": 15.4,
+   "lon": -107.3,
+   "lat": 24.85,
+   "ancho": 5,
+   "suave": false
+  },
+  {
+   "t": 15.9,
+   "lon": -106.6,
+   "lat": 25.0,
+   "ancho": 6.5
+  },
+  {
+   "t": 19.2,
+   "lon": -106.6,
+   "lat": 25.0,
+   "ancho": 6.5,
+   "suave": false
+  },
+  {
+   "t": 19.6,
+   "lon": -106.2,
+   "lat": 23.4,
+   "ancho": 5
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "fronteras",
+   "desde": 0,
+   "hasta": 23
+  },
+  {
+   "tipo": "ambiente",
+   "desde": 0,
+   "hasta": 23
+  },
+  {
+   "tipo": "hud",
+   "desde": 0,
+   "hasta": 23,
+   "lugares": [
+    {
+     "t": 0,
+     "texto": "Mazatlán, Sinaloa"
+    },
+    {
+     "t": 11,
+     "texto": "Culiacán, Sinaloa"
+    },
+    {
+     "t": 15.4,
+     "texto": "Sierra Madre Occidental"
+    },
+    {
+     "t": 19.4,
+     "texto": "Mazatlán, Sinaloa"
+    }
+   ]
+  },
+  {
+   "tipo": "circuloPro",
+   "desde": 0.4,
+   "hasta": 7.3,
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "r": 40,
+   "texto": "MAZATLÁN"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 1.0,
+   "hasta": 7.3,
+   "img": "../fotos-reales/malecon-1.jpg",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "x": 1420,
+   "y": 420,
+   "w": 520,
+   "texto": "Malecón de Mazatlán",
+   "credito": "Foto: DogeGamer2015MZT · CC0"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 1.6,
+   "hasta": 7.3,
+   "forma": "olas",
+   "en": [
+    -107.3,
+    22.6
+   ],
+   "tam": 1.2
+  },
+  {
+   "tipo": "camino",
+   "desde": 2.2,
+   "hasta": 7.3,
+   "dur": 4.5,
+   "puntos": [
+    [
+     -106.42,
+     23.22
+    ],
+    [
+     -106.9,
+     22.7
+    ],
+    [
+     -107.9,
+     22.6
+    ]
+   ],
+   "vehiculo": "barco",
+   "curva": 0.25,
+   "color": "#7fd6ff",
+   "tam": 150
+  },
+  {
+   "tipo": "barrido",
+   "desde": 6.95,
+   "hasta": 7.7,
+   "dur": 0.75
+  },
+  {
+   "tipo": "foto",
+   "desde": 7.3,
+   "hasta": 11.3,
+   "img": "../fotos-reales/aguachile-1.jpg",
+   "z0": 1.04,
+   "z1": 1.14,
+   "credito": "Foto: Pequeño mar · CC BY-SA 4.0 · Wikimedia Commons"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 7.7,
+   "hasta": 11.3,
+   "kicker": "Hecho con camarón de Sinaloa",
+   "texto": "Aguachile",
+   "tam": 64,
+   "sub": "45 % del valor del camarón de México (CONAPESCA, 2023)"
+  },
+  {
+   "tipo": "barrido",
+   "desde": 10.95,
+   "hasta": 11.7,
+   "dur": 0.75
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 11.4,
+   "hasta": 15.4,
+   "en": [
+    -107.39,
+    24.8
+   ],
+   "texto": "CULIACÁN",
+   "tdx": 0
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 11.8,
+   "hasta": 15.4,
+   "img": "../fotos-reales/tortillas-3.jpg",
+   "en": [
+    -107.39,
+    24.8
+   ],
+   "x": 1400,
+   "y": 430,
+   "w": 480,
+   "texto": "Tortilla de maíz",
+   "credito": "Foto: Vigilantcosmicpenguin · CC BY 4.0",
+   "rot": 2
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 12.6,
+   "hasta": 15.4,
+   "forma": "precio",
+   "en": {
+    "x": 1760,
+    "y": 300
+   },
+   "tam": 1.1,
+   "texto": "SUBE"
+  },
+  {
+   "tipo": "fila",
+   "desde": 12.4,
+   "hasta": 15.4,
+   "icono": "maiz",
+   "en": {
+    "x": 470,
+    "y": 880
+   },
+   "n": 7,
+   "resalta": 1,
+   "r": 30,
+   "texto": "CASI 1 DE CADA 7 TONELADAS DE MAÍZ (2024)"
+  },
+  {
+   "tipo": "barrido",
+   "desde": 15.05,
+   "hasta": 15.8,
+   "dur": 0.75
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 15.7,
+   "hasta": 19.3,
+   "forma": "sol",
+   "en": {
+    "x": 1560,
+    "y": 260
+   },
+   "tam": 1.2
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 16.2,
+   "hasta": 19.3,
+   "forma": "gotas",
+   "en": [
+    -107.0,
+    25.1
+   ],
+   "tam": 1.7,
+   "texto": "PRESAS CASI VACÍAS",
+   "ty": 60
+  },
+  {
+   "tipo": "dato",
+   "desde": 16.4,
+   "hasta": 19.3,
+   "kicker": "Maíz de Sinaloa, 2025",
+   "num": [
+    0,
+    75
+   ],
+   "pre": "-",
+   "suf": "%",
+   "sub": "menos que su máximo histórico por la sequía",
+   "fuente": "Imagen Agropecuaria"
+  },
+  {
+   "tipo": "barrido",
+   "desde": 18.95,
+   "hasta": 19.7,
+   "dur": 0.75
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 19.6,
+   "hasta": 23,
+   "forma": "notas",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "tam": 1.1
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 19.9,
+   "hasta": 23,
+   "img": "../fotos-reales/recodo-1.jpg",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "x": 1400,
+   "y": 440,
+   "w": 460,
+   "h": 330,
+   "texto": "Banda El Recodo · Mazatlán, 1938",
+   "credito": "Foto: Gabriel Saldana · CC BY-SA 2.0",
+   "rot": -2
+  },
+  {
+   "tipo": "ficha",
+   "desde": 20.2,
+   "hasta": 23,
+   "kicker": "Capítulo 4",
+   "texto": "El sonido de México",
+   "tam": 58,
+   "sub": "Pedro Infante nació en Mazatlán el 18 de noviembre de 1917"
+  }
+ ]
+}
