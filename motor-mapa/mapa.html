@@ -425,7 +425,8 @@ const D = {
   ambiente(e, t) { const a = fade(t, e, .5, .5); if (a <= 0) return; ctx.save(); const n = e.n || 60; for (let i = 0; i < n; i++) { const sx = (Math.sin(i * 91.3) * .5 + .5), sy = (Math.sin(i * 47.7) * .5 + .5), sp = .01 + (i % 7) * .004;
       const x = ((sx + t * sp) % 1) * W, y = ((sy - t * sp * .6 + 1) % 1) * H, r = 1 + (i % 4) * .8; ctx.globalAlpha = a * (.15 + .25 * Math.sin(t * 1.3 + i)); ctx.fillStyle = e.color || '#fff6d6'; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill(); } ctx.restore(); },
   // tarjeta de foto flotante sobre el mapa, unida al lugar con una línea
-  tarjetaFoto(e, t) { const im = IM[e.img]; if (!im) return; const a = fade(t, e, .05, .35), p = eo(pr(t, e.desde, .6)); if (a <= 0) return; const w = e.w || 460, h = e.h || Math.round(w * .62), [cx, cy] = e.x !== undefined ? [e.x, e.y] : [W - w / 2 - 80, H / 2];
+  tarjetaClip(e, t) { const im = TARJ[e.codigo]; if (!im) return; D.tarjetaFoto(Object.assign({ credito: 'Imagen ilustrativa con IA' }, e, { _im: im }), t); },
+  tarjetaFoto(e, t) { const im = e._im || IM[e.img]; if (!im) return; const a = fade(t, e, .05, .35), p = eo(pr(t, e.desde, .6)); if (a <= 0) return; const w = e.w || 460, h = e.h || Math.round(w * .62), [cx, cy] = e.x !== undefined ? [e.x, e.y] : [W - w / 2 - 80, H / 2];
     ctx.save(); ctx.globalAlpha = a; if (e.en) { const [px, py] = PT(e.en); ctx.strokeStyle = 'rgba(255,255,255,.85)'; ctx.lineWidth = 2; ctx.setLineDash([6, 6]); ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(lerp(px, cx - w / 2, p), lerp(py, cy, p)); ctx.stroke(); ctx.setLineDash([]); ctx.fillStyle = ACC; ctx.beginPath(); ctx.arc(px, py, 6, 0, 7); ctx.fill(); }
     const y0 = cy + (1 - p) * 40; ctx.translate(cx, y0); ctx.rotate((e.rot || 0) * Math.PI / 180); ctx.shadowColor = 'rgba(0,0,0,.6)'; ctx.shadowBlur = 40; ctx.shadowOffsetY = 14; rr(-w / 2 - 6, -h / 2 - 6, w + 12, h + 64, 10, 'rgba(10,18,24,.92)'); ctx.shadowColor = 'transparent';
     ctx.save(); ctx.beginPath(); ctx.roundRect(-w / 2, -h / 2, w, h, 6); ctx.clip(); const q = pr(t, e.desde, (e.hasta ?? e.desde + 6) - e.desde), z = 1.06 + .1 * q, sc = Math.max(w / im.width, h / im.height) * z; ctx.drawImage(im, -im.width * sc / 2 + (q - .5) * 30, -im.height * sc / 2, im.width * sc, im.height * sc); ctx.restore();
@@ -1012,6 +1013,7 @@ function renderEscena(t) {
 // ---------- cuadro ----------
 // ---------- clips de video (escenas reales de Flow/Veo) entre los mapas ----------
 let CLIPIMG = null;
+const TARJ = {}; async function setTarjetas(m) { for (const k of Object.keys(TARJ)) if (!(k in m)) delete TARJ[k]; await Promise.all(Object.entries(m).map(async ([k, src]) => { const im = new Image(); im.src = src; await im.decode(); TARJ[k] = im; })); }
 async function setClip(src) { if (!src) { CLIPIMG = null; return; } const im = new Image(); im.src = src; await im.decode(); CLIPIMG = im; }
 const clipActivo = t => (SP.clips || []).find(c => t >= c.desde && t < c.hasta);
 function capaClip(t) { const c = clipActivo(t); if (!c || !CLIPIMG) return 0;

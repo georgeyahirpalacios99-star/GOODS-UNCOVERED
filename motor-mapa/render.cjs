@@ -88,9 +88,13 @@ function imagenes() {
   // clips de video: cuadros ya extraídos a 30 fps en <carpeta>/.clips/<código>/0001.jpg (los prepara construir.py)
   const CLIPS = spec.clips || [], CDIR = path.join(dir, '.clips'), NCL = {};
   for (const c of CLIPS) if (!NCL[c.codigo]) NCL[c.codigo] = fs.readdirSync(path.join(CDIR, c.codigo)).filter(f => f.endsWith('.jpg')).length;
+  // clips dentro de recuadros (tarjetaClip): mismo formato de cuadros, varios a la vez
+  const TCL = (spec.eventos || []).filter(e => e.tipo === 'tarjetaClip'); for (const c of TCL) if (!NCL[c.codigo]) NCL[c.codigo] = fs.readdirSync(path.join(CDIR, c.codigo)).filter(f => f.endsWith('.jpg')).length;
+  const cuadrosTarjeta = t => { const out = {}; for (const c of TCL) { if (t < c.desde - .05 || t > c.hasta + .05) continue; const n = NCL[c.codigo], i = Math.min(n - 1, Math.max(0, Math.floor(((t - c.desde) * (c.vel || 1) + (c.ofs || 0)) * 30)));
+    out[c.codigo] = 'data:image/jpeg;base64,' + fs.readFileSync(path.join(CDIR, c.codigo, String(i + 1).padStart(4, '0') + '.jpg')).toString('base64'); } return out; };
   const cuadroClip = t => { const c = CLIPS.find(c => t >= c.desde && t < c.hasta); if (!c) return null; const n = NCL[c.codigo], i = Math.min(n - 1, Math.max(0, Math.floor(((t - c.desde) * (c.vel || 1) + (c.ofs || 0)) * 30)));
     return 'data:image/jpeg;base64,' + fs.readFileSync(path.join(CDIR, c.codigo, String(i + 1).padStart(4, '0') + '.jpg')).toString('base64'); };
-  const grab = async (page, t) => Buffer.from((await page.evaluate(async ([t, src]) => { await setClip(src); render(t); return document.getElementById('c').toDataURL('image/jpeg', 0.92); }, [t, cuadroClip(t)])).split(',')[1], 'base64');
+  const grab = async (page, t) => Buffer.from((await page.evaluate(async ([t, src, tj]) => { await setClip(src); await setTarjetas(tj); render(t); return document.getElementById('c').toDataURL('image/jpeg', 0.92); }, [t, cuadroClip(t), cuadrosTarjeta(t)])).split(',')[1], 'base64');
   const dur = hasta ? Math.min(hasta, spec.duracion) : spec.duracion;
 
   if (preview) {
