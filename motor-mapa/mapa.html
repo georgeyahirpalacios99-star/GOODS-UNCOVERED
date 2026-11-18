@@ -1023,7 +1023,7 @@ function capaClip(t) { const c = clipActivo(t); if (!c || !CLIPIMG) return 0;
   const vg = ctx.createRadialGradient(W / 2, H / 2, H * .35, W / 2, H / 2, W * .75); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,.42)'); ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
   if (c.etiqueta !== false) { ctx.font = F(700, 22); ctx.letterSpacing = '4px'; const txt = c.etiqueta || 'RECREACIÓN CON IA', w = ctx.measureText(txt).width + 34; rr(40, H - 78, w, 40, 8, 'rgba(0,0,0,.55)', 'rgba(255,255,255,.35)', 1.5); texto(txt, 40 + w / 2, H - 57, F(700, 22), '#fff'); }
   ctx.restore(); return c.circulo ? (pr(t, c.desde, .5) >= 1 && t < c.hasta - .3 ? 1 : .4) : a; }
-const enMapa = e => e.tipo === 'region' || e.lon !== undefined || e.pais !== undefined || e.de !== undefined || e.tipo === 'resaltar' || e.tipo === 'flujo' || e.tipo === 'medida' || e.tipo === 'ruta' || e.tipo === 'muralla' || e.tipo === 'silueta' || e.tipo === 'capa';
+const enMapa = e => Array.isArray(e.en) || e.puntos !== undefined || ['hud', 'ambiente', 'fronteras', 'hueco', 'pinPro', 'circuloPro', 'flechaPro', 'camino', 'gente', 'simbolo', 'rotulo2'].includes(e.tipo) || e.tipo === 'region' || e.lon !== undefined || e.pais !== undefined || e.de !== undefined || e.tipo === 'resaltar' || e.tipo === 'flujo' || e.tipo === 'medida' || e.tipo === 'ruta' || e.tipo === 'muralla' || e.tipo === 'silueta' || e.tipo === 'capa';
 // ---------- retención: banner de "última hora", barra de progreso y destellos ----------
 function capasRetencion(t) {
   for (const e of SP.eventos) { if (e.tipo !== 'ultimahora' || !activo(t, e)) continue; const q = eo(pr(t, e.desde, .35)), a = fade(t, e, .05, .3), y = e.y || 160;
@@ -1052,7 +1052,7 @@ function render(t) {
   if (SP.estilo === 'escena') return renderEscena(t);
   camara(t); ctx.globalAlpha = 1; ctx.letterSpacing = '0px';
   if (SP.estilo === 'documental') mapaDoc(t); else if (SP.estilo === 'pergamino') mapaPerg(t); else if (SP.estilo === 'fantasia') mapaFant(t); else mapaCarto(t);
-  ctx.setTransform(1, 0, 0, 1, 0, 0); const ca = capaClip(t);
+  ctx.setTransform(1, 0, 0, 1, 0, 0); const ca0 = capaClip(t), ca = Math.max(ca0, SP.eventos.some(e => e.tipo === 'foto' && t > e.desde + .3 && t < (e.hasta ?? 1e9) - .2) ? 1 : 0);
   const R = SP.estilo === 'documental' ? D : C;
   const pase = filtro => { for (const e of SP.eventos) { const fn = (e.capa === 'C' && C[e.tipo]) || R[e.tipo] || D[e.tipo] || C[e.tipo]; /* capa:'C' fuerza la versión con borde grueso (se lee sobre clips claros) */ if (!filtro(e) || (ca > .5 && enMapa(e)) || !activo(t, e) || !fn || OCULTO(e.tipo)) continue; ctx.save(); ctx.letterSpacing = '0px'; fn(e, t); ctx.restore(); } };
   if (SP.estilo === 'fantasia') { pase(e => !e.mar && !e.arriba); desenfoqueFant(t); pase(e => e.arriba); marcoFant(t); }
