@@ -1,0 +1,132 @@
+{
+ "estilo": "documental",
+ "salida": "muestras-pro",
+ "duracion": 22,
+ "estadosDe": [
+  "MEX"
+ ],
+ "camara": [
+  {
+   "t": 0,
+   "lon": -102,
+   "lat": 23.8,
+   "ancho": 30
+  },
+  {
+   "t": 3.5,
+   "lon": -106.6,
+   "lat": 24.6,
+   "ancho": 11
+  },
+  {
+   "t": 10,
+   "lon": -106.6,
+   "lat": 24.6,
+   "ancho": 11,
+   "suave": false
+  },
+  {
+   "t": 11,
+   "lon": -105.6,
+   "lat": 25.2,
+   "ancho": 14
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "fronteras",
+   "desde": 0,
+   "hasta": 15
+  },
+  {
+   "tipo": "ficha",
+   "desde": 0.3,
+   "hasta": 3.2,
+   "kicker": "Goods Uncovered · México",
+   "texto": "¿Y si Sinaloa desaparece?",
+   "tam": 72,
+   "sub": "Lo que el país perdería en 24 horas"
+  },
+  {
+   "tipo": "hueco",
+   "desde": 3.6,
+   "hasta": 15,
+   "pais": "MEX:SI",
+   "t": 6.0,
+   "dur": 1.6
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 4.0,
+   "hasta": 6.0,
+   "lon": -107.4,
+   "lat": 24.8,
+   "dx": -170,
+   "dy": -120,
+   "texto": "SINALOA",
+   "sub": "3,026,943 HABITANTES · INEGI 2020"
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 7.8,
+   "hasta": 10,
+   "lon": -104.9,
+   "lat": 24.6,
+   "dx": 140,
+   "dy": -80,
+   "texto": "DURANGO",
+   "sub": "PIERDE SU SALIDA AL MAR MÁS CERCANA",
+   "tam": 28
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 8.2,
+   "hasta": 10,
+   "lon": -108.99,
+   "lat": 25.79,
+   "dx": -90,
+   "dy": 60,
+   "texto": "EL CHEPE",
+   "sub": "EL TREN AL PACÍFICO, SIN PACÍFICO",
+   "tam": 28
+  },
+  {
+   "tipo": "dato",
+   "desde": 11,
+   "hasta": 14,
+   "kicker": "Garbanzo",
+   "num": [
+    0,
+    62
+   ],
+   "suf": "%",
+   "sub": "de todo el garbanzo de México sale de un solo estado",
+   "fuente": "SIAP / SADER vía CODESIN"
+  },
+  {
+   "tipo": "capitulo",
+   "desde": 14.2,
+   "hasta": 17,
+   "n": 4,
+   "texto": "El sonido de México"
+  },
+  {
+   "tipo": "foto",
+   "desde": 17,
+   "hasta": 22,
+   "img": "../fotos-reales/baluarte-1.jpg",
+   "z0": 1.02,
+   "z1": 1.1,
+   "credito": "Foto: Fotrogafo Especial · CC0 · Wikimedia Commons"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 17.6,
+   "hasta": 22,
+   "kicker": "Frontera Durango–Sinaloa",
+   "texto": "Puente Baluarte",
+   "tam": 64,
+   "sub": "402 m de altura · En 2012, el puente atirantado más alto del mundo (Guinness)"
+  }
+ ]
+}
