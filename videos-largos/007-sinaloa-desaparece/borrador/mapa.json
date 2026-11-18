@@ -1,0 +1,267 @@
+{
+ "estilo": "caricatura",
+ "salida": "borrador-sinaloa",
+ "duracion": 16,
+ "estadosDe": [
+  "MEX"
+ ],
+ "coloresEstados": {
+  "MEX:SI": "#3fbf6a"
+ },
+ "camara": [
+  {
+   "t": 0,
+   "lon": -102,
+   "lat": 23.5,
+   "ancho": 34
+  },
+  {
+   "t": 3.2,
+   "lon": -107.3,
+   "lat": 25,
+   "ancho": 13
+  },
+  {
+   "t": 9.6,
+   "lon": -107.3,
+   "lat": 25,
+   "ancho": 13,
+   "suave": false
+  },
+  {
+   "t": 11,
+   "lon": -103,
+   "lat": 24,
+   "ancho": 26
+  }
+ ],
+ "desaparece": [
+  {
+   "iso": "MEX:SI",
+   "t": 6.2
+  }
+ ],
+ "sacudidas": [
+  {
+   "t": 6.2,
+   "dur": 0.9,
+   "fuerza": 22
+  }
+ ],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ]
+  ],
+  "MEX:SI": [
+   [
+    0,
+    "feliz"
+   ],
+   [
+    5.2,
+    "duda"
+   ]
+  ],
+  "MEX:SO": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    6.7,
+    "shock"
+   ]
+  ],
+  "MEX:CH": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    6.7,
+    "shock"
+   ]
+  ],
+  "MEX:DG": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    6.7,
+    "shock"
+   ]
+  ],
+  "MEX:NA": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    6.7,
+    "shock"
+   ]
+  ],
+  "MEX:BS": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    6.7,
+    "shock"
+   ]
+  ],
+  "MEX:JA": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    6.7,
+    "shock"
+   ]
+  ],
+  "MEX:ZA": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    6.7,
+    "shock"
+   ]
+  ],
+  "MEX:BC": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    6.7,
+    "shock"
+   ]
+  ],
+  "MEX:CO": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    6.7,
+    "shock"
+   ]
+  ],
+  "USA": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    6.7,
+    "shock"
+   ]
+  ]
+ },
+ "tipografia": "cine",
+ "tituloClave": "texto",
+ "barra": true,
+ "destellos": [
+  6.2
+ ],
+ "eventos": [
+  {
+   "tipo": "titulo",
+   "desde": 0.1,
+   "hasta": 3.0,
+   "texto": "¿Y SI *SINALOA*\nDESAPARECE?",
+   "tam": 110,
+   "y": 200,
+   "capa": "C"
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 3.2,
+   "hasta": 6.1,
+   "pais": "MEX:SI",
+   "color": "#ffd23f"
+  },
+  {
+   "tipo": "cifra",
+   "desde": 3.4,
+   "hasta": 6.1,
+   "texto": "3,026,943",
+   "num": [
+    0,
+    3026943
+   ],
+   "tam": 130,
+   "sub": "PERSONAS (INEGI 2020)",
+   "y": 170
+  },
+  {
+   "tipo": "barras",
+   "desde": 11.2,
+   "hasta": 16,
+   "titulo": "LO QUE MÉXICO PIERDE",
+   "x": 1500,
+   "y": 560,
+   "ancho": 220,
+   "alto": 330,
+   "suf": " %",
+   "items": [
+    {
+     "valor": 62,
+     "texto": "GARBANZO",
+     "color": "#ffd23f",
+     "desde": 11.3
+    },
+    {
+     "valor": 45,
+     "texto": "CAMARÓN",
+     "color": "#ff7a59",
+     "desde": 12.1
+    },
+    {
+     "valor": 21,
+     "texto": "TOMATE",
+     "color": "#e5383b",
+     "desde": 12.9
+    }
+   ]
+  },
+  {
+   "tipo": "pregunta",
+   "desde": 14.2,
+   "hasta": 16,
+   "texto": "¿QUÉ EXTRAÑARÍAS PRIMERO? 👇",
+   "y": 980
+  }
+ ],
+ "soloCaras": [
+  "MEX:SI",
+  "MEX:SO",
+  "MEX:CH",
+  "MEX:DG",
+  "MEX:NA",
+  "MEX:BS",
+  "MEX:BC",
+  "MEX:CO",
+  "MEX:ZA",
+  "MEX:JA",
+  "USA",
+  "MEX:SL",
+  "MEX:TM",
+  "MEX:NL",
+  "MEX:OA",
+  "MEX:GR",
+  "MEX:CS",
+  "MEX:VE",
+  "MEX:YU",
+  "MEX:CM",
+  "MEX:MI"
+ ]
+}

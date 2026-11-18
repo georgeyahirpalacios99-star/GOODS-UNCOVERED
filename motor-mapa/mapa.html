@@ -200,7 +200,7 @@ function mapaCarto(t) {
     if (dt < 2.4) { particulas(c, dt - .4); setCam(); } }
   // caras
   ctx.setTransform(1, 0, 0, 1, 0, 0);
-  for (const c of lista) { if (!c.mb) continue; const dt = desaparicion(c.adm, t); if (dt !== null && dt > .45) continue;
+  for (const c of lista) { if (!c.mb || (SP.soloCaras && !SP.soloCaras.includes(c.adm))) continue; const dt = desaparicion(c.adm, t); if (dt !== null && dt > .45) continue;
     const sz = Math.min(c.mb[2] - c.mb[0], c.mb[3] - c.mb[1]) * CAM.z, tam = (SP.tam || {})[c.adm] || 1;
     const e = Math.min(sz * .16, 70) * tam * (SP.escalaCaras || 1); if (e < 9) continue;
     const off = (SP.posCara || {})[c.adm] || [0, 0]; let [x, y] = ws(c.lx + off[0], c.ly + off[1]);
@@ -212,7 +212,7 @@ function marcado(adm, t) { let m = 0; for (const e of SP.eventos) if (e.tipo ===
 function paisBandera(c) {
   const fl = FLC[c.iso], z = CAM.z, v = vista();
   for (const q of c.pp) { if (!cruza(q.bb, v)) continue; const bw = q.bb[2] - q.bb[0], bh = q.bb[3] - q.bb[1];
-    if (!fl) { ctx.fillStyle = '#e3ddce'; ctx.fill(q.path, 'evenodd'); continue; }
+    if (!fl) { ctx.fillStyle = c.color || '#e3ddce'; ctx.fill(q.path, 'evenodd'); continue; }
     if (bw * z < 26 || bh * z < 18) { ctx.fillStyle = FLCOL[c.iso]; ctx.fill(q.path, 'evenodd'); continue; }
     const b = q === c.pp[c.main] ? c.mb : q.bb, sw = b[2] - b[0], sh = b[3] - b[1], sc = Math.max(sw / 4, sh / 3) * 1.04, cx = (b[0] + b[2]) / 2, cy = (b[1] + b[3]) / 2;
     ctx.save(); ctx.clip(q.path, 'evenodd'); ctx.fillStyle = FLCOL[c.iso]; ctx.fill(q.path, 'evenodd'); ctx.drawImage(fl, cx - 2 * sc, cy - 1.5 * sc, 4 * sc, 3 * sc); ctx.restore(); }

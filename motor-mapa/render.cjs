@@ -45,6 +45,11 @@ function datos() {
   if (spec.estilo === 'escena' || spec.motor) return {};
   if (spec.estilo === 'fantasia') { const [bx0, by0] = proj(-100, 18), [bx1, by1] = proj(-55, -22); return { paises: paises('ne_10m_admin_0_countries.geojson').filter(p => !(p.bb[2] < bx0 || p.bb[0] > bx1 || p.bb[3] < by0 || p.bb[1] > by1)) }; }
   if (spec.estilo === 'pergamino') return { paises: paises('ne_50m_admin_0_countries.geojson'), estados: estados('ne_50m_admin_1_states_provinces.geojson') };
+  if (spec.estadosDe) { // estados con cara (p. ej. México): sustituyen al país en el estilo caricatura
+    const PAL = ['#f4c95d', '#8fd694', '#f29e6d', '#9cc5f0', '#e7a3c9', '#c9b6f2', '#f6e27f', '#7fd1c7', '#f5b5a1'];
+    const est = estados('ne_10m_admin_1_mexico.geojson').filter(e => e.nombre).map((e, i) => Object.assign(e, { color: (spec.coloresEstados || {})[e.adm] || PAL[(e.mc * 7 + i * 5) % PAL.length] }));
+    return { paises: paises('ne_50m_admin_0_countries.geojson').filter(p => !spec.estadosDe.includes(p.adm)).concat(est) };
+  }
   return { paises: paises('ne_50m_admin_0_countries.geojson') };
 }
 function estados(archivo) {
@@ -52,7 +57,7 @@ function estados(archivo) {
     const p = f.properties, polys = polysDe(f.geometry).map(pg => { const rings = pg.map(anillo); return { rings, bb: bbox(rings[0]), a: area(rings[0]) }; });
     if (!polys.length) return null; let main = 0; polys.forEach((q, i) => { if (q.a > polys[main].a) main = i; });
     const bb = polys.reduce((b, q) => bbox([q.bb[0], q.bb[1], q.bb[2], q.bb[3]], b), [1e9, 1e9, -1e9, -1e9]);
-    return { adm: `${p.adm0_a3}:${p.postal}`, iso: '', nombre: p.name, lx: p.longitude, ly: p.latitude, polys: polys.map(q => ({ rings: q.rings, bb: q.bb })), bb, mb: polys[main].bb, main };
+    return { adm: `${p.adm0_a3}:${p.postal}`, iso: '', nombre: p.name, mc: p.mapcolor9 || 0, lx: p.longitude, ly: p.latitude, polys: polys.map(q => ({ rings: q.rings, bb: q.bb })), bb, mb: polys[main].bb, main };
   }).filter(Boolean);
 }
 function banderas(geo) {
