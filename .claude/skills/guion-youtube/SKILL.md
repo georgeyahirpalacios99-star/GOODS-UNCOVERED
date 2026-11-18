@@ -9,6 +9,13 @@ Canal: **Goods Uncovered**. Las historias ocultas detrás de los objetos que usa
 
 Escribe siempre en español latino, directo, con datos concretos y sin lenguaje de anuncio. Si hay que elegir algo, da **una sola recomendación**.
 
+
+## 0. Estilo visual OBLIGATORIO (configuración fija de George)
+- Lee y sigue `motor-mapa/ESTILO-PRO.md` antes de hacer cualquier video.
+- **Nada infantil:** sin caritas, sin el estilo `caricatura` y sin objetos con fondo verde. Se usa estilo `documental` realista, con acabado de diseñador o editor profesional.
+- **Siempre hay contenido visual:** flechas, círculos, pines, caminos con vehículo y figuritas tipo señalética que actúan lo que dice la voz. Hay un cambio cada 2–3 s y ningún cuadro queda quieto.
+- **Primero las muestras:** manda 15–25 s de muestra del estilo y espera el visto bueno antes de producir todo.
+
 ## 1. Investigar (antes de escribir una sola línea)
 - Usa WebSearch (extended si el tema es reciente). Busca la cifra más sorprendente, una contradicción, un dato histórico olvidado y un dato científico raro.
 - **Cada dato con fuente.** Si las fuentes no coinciden, usa la cifra más conservadora y dilo. Nada inventado.

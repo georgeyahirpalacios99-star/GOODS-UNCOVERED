@@ -1,0 +1,285 @@
+{
+ "estilo": "documental",
+ "salida": "muestras-anotaciones",
+ "duracion": 20,
+ "estadosDe": [
+  "MEX"
+ ],
+ "camara": [
+  {
+   "t": 0,
+   "lon": -104,
+   "lat": 27.6,
+   "ancho": 26
+  },
+  {
+   "t": 5,
+   "lon": -102,
+   "lat": 23,
+   "ancho": 27
+  },
+  {
+   "t": 10,
+   "lon": -102,
+   "lat": 23,
+   "ancho": 27,
+   "suave": false
+  },
+  {
+   "t": 11.2,
+   "lon": -107.3,
+   "lat": 25.2,
+   "ancho": 10
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "fronteras",
+   "desde": 0,
+   "hasta": 20
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 0,
+   "hasta": 20,
+   "pais": "MEX:SI",
+   "relleno": "rgba(255,210,63,.10)"
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 0.2,
+   "hasta": 5,
+   "en": [
+    -107.39,
+    24.8
+   ],
+   "texto": "CULIACÁN",
+   "tdx": -80,
+   "tdy": 40
+  },
+  {
+   "tipo": "camino",
+   "desde": 0.5,
+   "hasta": 5,
+   "dur": 3.4,
+   "puntos": [
+    [
+     -107.39,
+     24.8
+    ],
+    [
+     -109.9,
+     27.5
+    ],
+    [
+     -110.94,
+     31.1
+    ]
+   ],
+   "vehiculo": "camion",
+   "curva": 0.08,
+   "tam": 130,
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 3.6,
+   "hasta": 5,
+   "de": [
+    -112.2,
+    29.6
+   ],
+   "a": [
+    -111.1,
+    31.0
+   ],
+   "texto": "TOMATE A EE. UU.",
+   "curva": -0.3,
+   "color": "#ffffff",
+   "colorTexto": "#ffd23f",
+   "tdx": -60
+  },
+  {
+   "tipo": "fila",
+   "desde": 1.4,
+   "hasta": 5,
+   "en": {
+    "x": 1420,
+    "y": 860
+   },
+   "n": 5,
+   "resalta": 1,
+   "r": 36,
+   "texto": "1 DE CADA 5 TOMATES DE MÉXICO",
+   "icono": "tomate"
+  },
+  {
+   "tipo": "gente",
+   "desde": 5.3,
+   "hasta": 10,
+   "modo": "caminar",
+   "de": [
+    -96.72,
+    17.06
+   ],
+   "a": [
+    -107.39,
+    24.8
+   ],
+   "dur": 4.2,
+   "n": 6,
+   "tam": 36,
+   "texto": "JORNALEROS DEL SUR",
+   "en": [
+    -100.5,
+    18.6
+   ]
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 5.5,
+   "hasta": 10,
+   "de": [
+    -93.1,
+    16.75
+   ],
+   "a": [
+    -105.8,
+    23.6
+   ],
+   "curva": 0.18,
+   "punteada": true,
+   "grosor": 4
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 5.8,
+   "hasta": 10,
+   "de": [
+    -99.5,
+    17.55
+   ],
+   "a": [
+    -106,
+    24
+   ],
+   "curva": 0.12,
+   "punteada": true,
+   "grosor": 4
+  },
+  {
+   "tipo": "gente",
+   "desde": 7.2,
+   "hasta": 10,
+   "modo": "cosechar",
+   "en": [
+    -108.7,
+    26.0
+   ],
+   "n": 5,
+   "columnas": 5,
+   "tam": 34,
+   "texto": "COSECHA EN SINALOA"
+  },
+  {
+   "tipo": "circuloPro",
+   "desde": 11.6,
+   "hasta": 20,
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "r": 46,
+   "texto": "MAZATLÁN"
+  },
+  {
+   "tipo": "camino",
+   "desde": 12.2,
+   "hasta": 20,
+   "dur": 3.5,
+   "puntos": [
+    [
+     -106.42,
+     23.22
+    ],
+    [
+     -107.2,
+     22.5
+    ],
+    [
+     -108.6,
+     22.9
+    ]
+   ],
+   "vehiculo": "barco",
+   "curva": 0.2,
+   "color": "#7fd6ff",
+   "tam": 160
+  },
+  {
+   "tipo": "camino",
+   "desde": 12.6,
+   "hasta": 20,
+   "dur": 3.6,
+   "puntos": [
+    [
+     -107.3,
+     27.75
+    ],
+    [
+     -108.3,
+     26.6
+    ],
+    [
+     -108.99,
+     25.79
+    ]
+   ],
+   "vehiculo": "tren",
+   "curva": 0.1,
+   "color": "#ffffff",
+   "tam": 110,
+   "fin": true
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 15.8,
+   "hasta": 20,
+   "en": [
+    -108.99,
+    25.79
+   ],
+   "texto": "LOS MOCHIS",
+   "tdx": -60
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 16.4,
+   "hasta": 20,
+   "de": [
+    -104.2,
+    24.3
+   ],
+   "a": [
+    -105.9,
+    23.6
+   ],
+   "texto": "DE DURANGO AL MAR",
+   "curva": -0.3
+  },
+  {
+   "tipo": "fila",
+   "desde": 17.2,
+   "hasta": 20,
+   "en": {
+    "x": 420,
+    "y": 880
+   },
+   "n": 5,
+   "resalta": 2,
+   "r": 30,
+   "texto": "CASI LA MITAD DEL CAMARÓN",
+   "icono": "camaron"
+  }
+ ]
+}

@@ -10,16 +10,17 @@ Tus videos se caen a la mitad. Las causas son tres: el ritmo visual baja, no hay
 | La mitad aburre | En el minuto 5 (justo la mitad) entra **Pedro Infante + la banda**. Es el bloque más emocional, y además cambian la música y la paleta de color. |
 | Final flojo | El cierre no dice "parte 2". Hace una pregunta con tres opciones (aguachile, banda o carnaval) y pide el siguiente estado. |
 
-## Plantillas (las vas a ver en el borrador)
-1. **Mapa caricatura de México con estados**: cada estado tiene su color y su cara. Sinaloa es verde y feliz, tiembla, destella y desaparece. Los vecinos (Sonora, Chihuahua, Durango, Nayarit y las Baja California) ponen cara de susto. Esto es nuevo en el motor: antes solo había países.
-2. **Título de cine**: letra Anton, la palabra clave en amarillo y una línea debajo.
-3. **Contador**: la cifra sube con un tic de sonido (3,026,943 personas).
-4. **Barras "Lo que México pierde"**: garbanzo 62 %, camarón 45 % y tomate 21 %, que crecen una por una.
-5. **Tarjeta de capítulo** (1 a 6), con una barra de progreso arriba para que se vea cuánto falta.
-6. **Polaroid de foto real**: se pega sobre el mapa con el crédito "FOTO: autor · licencia".
-7. **Entrada circular de clip**: el mapa hace zoom al punto y el clip de Flow se abre en círculo.
-8. **Pregunta final**: una cápsula amarilla con 👇.
-9. **Subtítulos en caja**: grupos de 2–3 palabras y la clave en caja amarilla, en letra grande para los que ven en TV (20 %).
+## Plantillas: estilo PRO (ver `motor-mapa/ESTILO-PRO.md`)
+Muestras aprobadas en `muestras/` y `muestras-2/`. Sin caritas ni estilo caricatura.
+1. **Mapa satelital con relieve y fronteras de los estados.** Sinaloa se marca en amarillo y **se hunde en el mar**; queda el hueco con línea punteada.
+2. **Rótulos con línea guía** (DURANGO, EL CHEPE) y **pines** que caen sobre las ciudades.
+3. **Caminos con vehículo:** el tráiler del tomate hacia EE. UU., el barco camaronero desde Mazatlán y el tren del Chepe hasta Los Mochis.
+4. **Figuritas tipo señalética:** jornaleros que caminan del sur a Sinaloa y otros que se agachan a cosechar.
+5. **Proporciones con íconos:** "1 de cada 5 tomates" y "casi la mitad del camarón".
+6. **Flechas y círculos** que se dibujan solos sobre lo que nombra la voz.
+7. **Cifra grande con contador** y la fuente abajo; **tarjeta de capítulo** y **ficha inferior**.
+8. **Foto real a pantalla completa** con zoom lento y su crédito.
+9. **Subtítulos** en grupos de 2–3 palabras, en letra grande para TV.
 
 ## Ritmo por capítulo
 | Tiempo | Bloque | Qué se ve |
