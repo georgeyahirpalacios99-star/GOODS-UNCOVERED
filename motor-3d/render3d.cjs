@@ -10,16 +10,20 @@ const proj = (lon, lat) => [(lon + 180) / 360 * S, (1 - Math.log(Math.tan(Math.P
 // geometría: solo los países de la escena, simplificada
 const geo = JSON.parse(fs.readFileSync(path.join(DAT, 'ne_50m_admin_0_countries.geojson'), 'utf8'));
 const quiero = new Set(sc.paises.map(p => p.adm)); const paises = [];
+const geoGrande = null;
 for (const f of geo.features) { const p = f.properties; if (!quiero.has(p.ADM0_A3)) continue;
   const polys = (f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates).map(pg => pg.map(r => { const step = Math.max(1, Math.floor(r.length / 600)); return r.filter((_, i) => i % step === 0).map(([lo, la]) => proj(lo, la)); }));
   const conf = sc.paises.find(q => q.adm === p.ADM0_A3); paises.push({ adm: p.ADM0_A3, iso: conf.iso, lx: p.LABEL_X, ly: p.LABEL_Y, polys, ...conf }); }
+if (sc.contexto) { const [a, b, c, d] = sc.contexto; for (const f of geo.features) { const p = f.properties; if (quiero.has(p.ADM0_A3) || !f.geometry) continue;
+  const polys = (f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates).filter(pg => pg[0].some(([lo, la]) => lo > a && lo < c && la > b && la < d)).map(pg => pg.map(r => { const step = Math.max(1, Math.floor(r.length / 400)); return r.filter((_, i) => i % step === 0).map(([lo, la]) => proj(lo, Math.max(-80, la))); }));
+  if (polys.length) paises.push({ adm: p.ADM0_A3, iso: '', lx: p.LABEL_X, ly: p.LABEL_Y, polys, neutro: true, cara: false, alto: 1.2, minArea: 2 }); } }
 const flags = {}; for (const p of sc.paises) { const f = path.join(DAT, 'banderas', p.iso + '.svg'); if (fs.existsSync(f)) flags[p.iso] = 'data:image/svg+xml;base64,' + fs.readFileSync(f).toString('base64'); }
 const imgs = {}; for (const c of sc.capas || []) for (const k of ['img']) if (c[k] && !imgs[c[k]]) { const f = path.join(dir, c[k]); if (fs.existsSync(f)) imgs[c[k]] = 'data:image/jpeg;base64,' + fs.readFileSync(f).toString('base64'); else console.warn('falta', c[k]); }
 for (const c of sc.capas || []) for (const iso of [c.isoIzq, c.isoDer]) if (iso && !flags[iso]) { const f = path.join(DAT, 'banderas', iso + '.svg'); if (fs.existsSync(f)) flags[iso] = 'data:image/svg+xml;base64,' + fs.readFileSync(f).toString('base64'); }
 const fuente = n => 'data:font/woff2;base64,' + fs.readFileSync(path.join(DAT, 'fuentes', n)).toString('base64');
 const three = fs.readFileSync(path.join(__dirname, 'node_modules', 'three', 'build', 'three.min.js'), 'utf8');
 const W = sc.ancho || 1080, H = sc.alto || 1920, FPS = 30;
-const html = `<!doctype html><html><head><style>@font-face{font-family:Anton;src:url(${fuente('Anton.woff2')})}@font-face{font-family:Barlow;font-weight:700;src:url(${fuente('BarlowCondensed-700.woff2')})}
+const html = `<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:Anton;src:url(${fuente('Anton.woff2')})}@font-face{font-family:Barlow;font-weight:700;src:url(${fuente('BarlowCondensed-700.woff2')})}
 body{margin:0;background:#000}canvas{position:absolute;left:0;top:0}</style></head><body><canvas id="gl" width="${W}" height="${H}"></canvas><canvas id="ov" width="${W}" height="${H}"></canvas><script>${three}</script>
 <script src="escena3d.js"></script></body></html>`;
 fs.writeFileSync(path.join(__dirname, '.pagina.html'), html);

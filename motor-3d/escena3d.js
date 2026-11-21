@@ -25,7 +25,7 @@ async function iniciar(sc, paises, flags, imgs) {
   const mar = new THREE.Mesh(new THREE.PlaneGeometry(3000, 3000), new THREE.MeshStandardMaterial({ map: mt, roughness: .55, metalness: .05 })); mar.rotation.x = -Math.PI / 2; mar.receiveShadow = true; ESC.add(mar); P._mar = mt;
   for (const p of paises) {
     const im = flags[p.iso] ? await imagen(flags[p.iso]) : null, fc = document.createElement('canvas'); fc.width = 640; fc.height = 480; const f = fc.getContext('2d');
-    if (im) f.drawImage(im, 0, 0, 640, 480); else { f.fillStyle = '#e3ddce'; f.fillRect(0, 0, 640, 480); }
+    if (im) f.drawImage(im, 0, 0, 640, 480); else { f.fillStyle = p.neutro ? (SC.tierra || '#4a5d4a') : '#e3ddce'; f.fillRect(0, 0, 640, 480); if (p.neutro) for (let i = 0; i < 2600; i++) { f.fillStyle = `rgba(${hs('r' + i) > .5 ? '255,240,210' : '20,30,20'},${.05 + hs('a' + i) * .08})`; f.fillRect(hs('x' + i) * 640, hs('y' + i) * 480, 3 + hs('s' + i) * 9, 3 + hs('t' + i) * 9); } }
     const px = f.getImageData(0, 0, 640, 480).data; let r = 0, gg = 0, b = 0, n = 0; for (let i = 0; i < px.length; i += 4 * 97) { r += px[i]; gg += px[i + 1]; b += px[i + 2]; n++; }
     const lado = new THREE.Color(`rgb(${Math.round(r / n * .55)},${Math.round(gg / n * .55)},${Math.round(b / n * .55)})`);
     const shapes = []; let main = null, amax = 0;
@@ -48,6 +48,7 @@ async function iniciar(sc, paises, flags, imgs) {
     P[p.adm] = { grp, mesh, cara, alto, p, haz, caraY: cara ? cara.position.y : 0, ring: p.polys.reduce((a, b) => (b[0].length > a[0].length ? b : a))[0], colores: [lado, new THREE.Color('#ffffff')], fc };
   }
   if (SC.estiloCara === 'ojos3d') for (const k of Object.keys(P)) { const o = P[k]; if (k.startsWith('_') || o.p.cara === false) continue; const m = new THREE.Box3().setFromObject(o.mesh), tam = o.p.tamCara || Math.min(26, Math.sqrt((m.max.x - m.min.x) * (m.max.z - m.min.z)) * .32); crearOjos3d(o, tam); }
+  entorno(paises);
   for (const c of SC.columnas || []) { const o = P[c.pais]; if (!o) continue; const m = new THREE.Mesh(new THREE.CylinderGeometry(c.radio || 5, c.radio || 5, 1, 40), new THREE.MeshStandardMaterial({ color: c.color || '#ffd23f', metalness: .55, roughness: .25, emissive: c.color || '#ffd23f', emissiveIntensity: .12 })); m.castShadow = true; ESC.add(m); c._m = m; }
   OV = document.getElementById('ov'); OX = OV.getContext('2d');
 }
@@ -115,7 +116,7 @@ function camara(t) {
   const k = SC.camara; let a = k[0], b = k[0]; for (let i = 0; i < k.length; i++) { if (k[i].t <= t) { a = k[i]; b = k[i + 1] || k[i]; } }
   const u = b === a ? 0 : eio(cl((t - a.t) / (b.t - a.t))), q = x => lerp(a[x], b[x], u), [x, z] = W3(q('lon'), q('lat')), d = q('dist'), inc = q('inclin') * Math.PI / 180;
   CAM.position.set(x, d * Math.cos(inc), z + d * Math.sin(inc)); CAM.lookAt(x, 0, z);
-  if (ESC.fog) { ESC.fog.near = d * 1.1; ESC.fog.far = d * 2.6; }
+  if (ESC.fog && !ESC.userData.fijaNiebla) { ESC.fog.near = d * 1.1; ESC.fog.far = d * 2.6; }
 }
 function particulas(t, o, t0) {
   if (!o.part) { o.part = []; for (let i = 0; i < 70; i++) { const m = new THREE.Mesh(new THREE.BoxGeometry(1.6, .5, 1.1), new THREE.MeshStandardMaterial({ color: ['#1c9b3f', '#f2d21b', '#22409a', '#ffffff'][i % 4] })); m.castShadow = true; ESC.add(m);
@@ -134,7 +135,7 @@ function texto(t) {
     OX.restore(); }
 }
 function cuadro(t) {
-  camara(t); P._mar.offset.set(t * .01, t * .006);
+  camara(t); P._mar.offset.set(t * .01, t * .006); animaEntorno(t);
   const prot = SC.desaparece; let vx = 0, vz = 0; if (prot && P[prot.pais]) { vx = P[prot.pais].grp.position.x; vz = P[prot.pais].grp.position.z; }
   CAM.updateMatrixWorld(); const pv = new THREE.Vector3(vx, 0, vz).project(CAM);
   for (const k of Object.keys(P)) { if (k.startsWith('_')) continue; const o = P[k]; o.grp.position.y = Math.sin(t * 2 + hs(k) * 6) * .25; o.grp.rotation.set(0, 0, 0); o.grp.scale.set(1, 1, 1); o.grp.visible = true;
@@ -179,4 +180,53 @@ function capas2d(t) {
     else if (e.tipo === 'barrido') { const u = eio(pr(t, e.desde, e.hasta - e.desde)), x = lerp(-W * .6, W * 1.6, u), sk = 420; OX.globalAlpha = 1; OX.fillStyle = '#0a1218'; OX.beginPath(); OX.moveTo(x - W, 0); OX.lineTo(x + sk, 0); OX.lineTo(x, H); OX.lineTo(x - W - sk, H); OX.closePath(); OX.fill(); OX.fillStyle = ACC; OX.beginPath(); OX.moveTo(x + sk, 0); OX.lineTo(x + sk + 34, 0); OX.lineTo(x + 34, H); OX.lineTo(x, H); OX.closePath(); OX.fill(); }
     else if (e.tipo === 'columnaTexto') { const c = (SC.columnas || [])[e.col]; if (c && c._top && c._q > .05) { const [sx, sy] = aPantalla(c._top); txt(Math.round((e.valor || 0) * c._q) + (e.suf || ''), sx, sy - 30, '90px Anton', '#fff', 'center', '#0b0f14'); txt((e.texto || '').toUpperCase(), sx, sy + 26, '700 30px Barlow', ACC, 'center', '#0b0f14'); } }
     OX.restore(); }
+}
+
+// ---------- entornos: lo que rodea al mapa (mundo vivo, cancha, órbita) ----------
+let NUBES = [], BARCOS = [], AVIONES = [];
+function entorno(paises) {
+  const E = SC.entorno || 'simple'; if (E === 'simple') return;
+  const R0 = 1400, cv = document.createElement('canvas'); cv.width = cv.height = 4096; const g = cv.getContext('2d'), k = 4096 / (2 * R0), X = x => (x + R0) * k, Z = z => (z + R0) * k;
+  if (E === 'cancha') {
+    for (let i = 0; i < 40; i++) { g.fillStyle = i % 2 ? '#2f7a34' : '#357f39'; g.fillRect(i * 4096 / 40, 0, 4096 / 40 + 1, 4096); }
+    for (let i = 0; i < 30000; i++) { g.fillStyle = `rgba(${hs('g' + i) > .5 ? '20,60,20' : '120,180,90'},.12)`; g.fillRect(hs('x' + i) * 4096, hs('y' + i) * 4096, 2, 7); }
+    g.strokeStyle = 'rgba(255,255,255,.85)'; g.lineWidth = 14; const cx = 2048, cy = 2048, L = 1150, A = 740; g.lineWidth = 7; g.strokeRect(cx - L / 2, cy - A / 2, L, A); g.beginPath(); g.moveTo(cx, cy - A / 2); g.lineTo(cx, cy + A / 2); g.stroke(); g.beginPath(); g.arc(cx, cy, 130, 0, 7); g.stroke();
+    for (const s of [-1, 1]) { g.strokeRect(cx + s * L / 2 - (s > 0 ? 190 : 0), cy - 240, 190, 480); g.strokeRect(cx + s * L / 2 - (s > 0 ? 70 : 0), cy - 110, 70, 220); g.beginPath(); g.arc(cx + s * (L / 2 - 135), cy, 7, 0, 7); g.fillStyle = '#fff'; g.fill(); }
+    g.beginPath(); g.arc(cx, cy, 8, 0, 7); g.fill();
+  } else {
+    g.fillStyle = SC.mar || '#0d2a4f'; g.fillRect(0, 0, 4096, 4096);
+    const prof = g.createRadialGradient(2048, 2048, 200, 2048, 2048, 2600); prof.addColorStop(0, 'rgba(30,80,130,.35)'); prof.addColorStop(1, 'rgba(0,0,0,.35)'); g.fillStyle = prof; g.fillRect(0, 0, 4096, 4096);
+    g.strokeStyle = 'rgba(140,200,255,.13)'; g.lineWidth = 3; for (let lo = -180; lo <= 180; lo += 10) { const [x] = W3(lo, 0); g.beginPath(); g.moveTo(X(x), 0); g.lineTo(X(x), 4096); g.stroke(); }
+    for (let la = -70; la <= 70; la += 10) { const [, z] = W3(0, la); g.beginPath(); g.moveTo(0, Z(z)); g.lineTo(4096, Z(z)); g.stroke(); }
+    { const [, z] = W3(0, 0); g.strokeStyle = 'rgba(255,210,63,.25)'; g.setLineDash([30, 22]); g.lineWidth = 4; g.beginPath(); g.moveTo(0, Z(z)); g.lineTo(4096, Z(z)); g.stroke(); g.setLineDash([]); }
+    g.save(); g.shadowColor = 'rgba(80,200,230,.9)'; g.shadowBlur = 70; g.fillStyle = 'rgba(60,160,200,.55)';
+    for (const p of paises) for (const pg of p.polys) { g.beginPath(); pg[0].forEach(([x, y], i) => { const xx = X(x - CTR[0]), zz = Z(y - CTR[1]); i ? g.lineTo(xx, zz) : g.moveTo(xx, zz); }); g.closePath(); g.fill(); g.fill(); }
+    g.restore(); g.fillStyle = 'rgba(190,225,255,.22)'; g.textAlign = 'center'; g.font = '700 30px Barlow'; g.letterSpacing = '12px';
+    for (const [lo, la, n] of SC.oceanos || [[-100, -18, 'OCÉANO PACÍFICO'], [-22, -18, 'OCÉANO ATLÁNTICO'], [-75, 14.5, 'MAR CARIBE']]) { const [x, z] = W3(lo, la); g.fillText(n, X(x), Z(z)); }
+  }
+  const tx = new THREE.CanvasTexture(cv); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+  const pl = new THREE.Mesh(new THREE.PlaneGeometry(2 * R0, 2 * R0), new THREE.MeshStandardMaterial({ map: tx, roughness: E === 'cancha' ? .95 : .5, metalness: .05 })); pl.rotation.x = -Math.PI / 2; pl.position.y = .05; pl.receiveShadow = true; ESC.add(pl);
+  if (E === 'cancha') { // estadio alrededor: gradas con público y reflectores
+    const gc = document.createElement('canvas'); gc.width = 4096; gc.height = 512; const q = gc.getContext('2d'); q.fillStyle = '#10151c'; q.fillRect(0, 0, 4096, 512);
+    for (let i = 0; i < 26000; i++) { const y = hs('cy' + i) * 470 + 30; q.fillStyle = ['#d9d9d9', '#74acdf', '#f7e35c', '#2a8f3c', '#c0392b', '#ffffff', '#1f2a36'][Math.floor(hs('cc' + i) * 7)]; q.globalAlpha = .55 + hs('ca' + i) * .45; q.fillRect(hs('cx' + i) * 4096, y, 4, 5); }
+    q.globalAlpha = 1; for (let i = 0; i < 24; i++) { const x = i * 4096 / 24 + 80; q.fillStyle = 'rgba(255,255,230,.9)'; q.shadowColor = '#fff'; q.shadowBlur = 30; q.fillRect(x, 6, 70, 18); q.shadowBlur = 0; }
+    const tg = new THREE.CanvasTexture(gc); tg.colorSpace = THREE.SRGBColorSpace; tg.wrapS = THREE.RepeatWrapping; tg.repeat.set(3, 1);
+    const ring = new THREE.Mesh(new THREE.CylinderGeometry(560, 470, 170, 80, 1, true), new THREE.MeshBasicMaterial({ map: tg, side: THREE.BackSide })); ring.position.y = 70; ESC.add(ring); ESC.background = new THREE.Color('#070b12'); ESC.userData.fijaNiebla = true; ESC.fog = new THREE.Fog('#0b1220', 700, 1800);
+  }
+  if (E === 'orbita') { const bc = document.createElement('canvas'); bc.width = 4; bc.height = 512; const q = bc.getContext('2d'), gr = q.createLinearGradient(0, 0, 0, 512); gr.addColorStop(0, '#000208'); gr.addColorStop(.55, '#04122a'); gr.addColorStop(.8, '#1d6fb0'); gr.addColorStop(1, '#8fd6ff'); q.fillStyle = gr; q.fillRect(0, 0, 4, 512); const bt = new THREE.CanvasTexture(bc); bt.colorSpace = THREE.SRGBColorSpace; ESC.background = bt; ESC.userData.fijaNiebla = true; ESC.fog = new THREE.Fog('#4f93c8', 380, 1100); }
+  // nubes con sombra
+  for (let i = 0; i < (SC.nubes ?? 14); i++) { const nc = document.createElement('canvas'); nc.width = nc.height = 256; const q = nc.getContext('2d'); for (let j = 0; j < 9; j++) { const gx = 128 + (hs('nx' + i + j) - .5) * 120, gy = 128 + (hs('ny' + i + j) - .5) * 60, rr = 40 + hs('nr' + i + j) * 50, gg = q.createRadialGradient(gx, gy, 0, gx, gy, rr); gg.addColorStop(0, 'rgba(255,255,255,.75)'); gg.addColorStop(1, 'rgba(255,255,255,0)'); q.fillStyle = gg; q.beginPath(); q.arc(gx, gy, rr, 0, 7); q.fill(); }
+    const tx2 = new THREE.CanvasTexture(nc), m = new THREE.Mesh(new THREE.PlaneGeometry(70, 70), new THREE.MeshBasicMaterial({ map: tx2, transparent: true, opacity: E === 'cancha' ? 0 : .55, depthWrite: false })); m.rotation.x = -Math.PI / 2; const sh = new THREE.Mesh(new THREE.PlaneGeometry(70, 70), new THREE.MeshBasicMaterial({ map: tx2, transparent: true, opacity: .07, color: '#000000', depthWrite: false })); sh.rotation.x = -Math.PI / 2;
+    ESC.add(m); ESC.add(sh); NUBES.push({ m, sh, x: (hs('nx' + i) - .5) * 900, z: (hs('nz' + i) - .5) * 700, v: 3 + hs('nv' + i) * 4 }); if (E === 'cancha') { m.visible = sh.visible = false; } }
+  // barcos con estela
+  for (let i = 0; i < (E === 'cancha' ? 0 : (SC.barcos ?? 6)); i++) { const b = new THREE.Group(), cas = new THREE.Mesh(new THREE.BoxGeometry(6, 1.6, 2), new THREE.MeshStandardMaterial({ color: '#e8e2d4' })), cab = new THREE.Mesh(new THREE.BoxGeometry(2, 1.6, 1.6), new THREE.MeshStandardMaterial({ color: '#c0392b' }));
+    cab.position.set(-1.2, 1.4, 0); cas.castShadow = true; b.add(cas); b.add(cab); const es = new THREE.Mesh(new THREE.PlaneGeometry(26, 2.4), new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true, opacity: .25, depthWrite: false })); es.rotation.x = -Math.PI / 2; es.position.set(-16, -.7, 0); b.add(es); ESC.add(b);
+    const [x0, z0] = SC.rutasBarco && SC.rutasBarco[i] ? W3(...SC.rutasBarco[i]) : [(hs('bx' + i) - .3) * 600, (hs('bz' + i) - .5) * 500]; BARCOS.push({ b, x0, z0, ang: hs('ba' + i) * 6.28, v: 6 + hs('bv' + i) * 5 }); }
+  for (let i = 0; i < (E === 'cancha' ? 0 : (SC.aviones ?? 2)); i++) { const a = new THREE.Group(), cuerpo = new THREE.Mesh(new THREE.CylinderGeometry(.7, .7, 9, 10), new THREE.MeshStandardMaterial({ color: '#ffffff' })); cuerpo.rotation.z = Math.PI / 2; a.add(cuerpo); const ala = new THREE.Mesh(new THREE.BoxGeometry(2, .3, 10), new THREE.MeshStandardMaterial({ color: '#dfe6ee' })); a.add(ala);
+    const est = new THREE.Mesh(new THREE.PlaneGeometry(60, .8), new THREE.MeshBasicMaterial({ color: '#ffffff', transparent: true, opacity: .35, depthWrite: false })); est.position.set(-34, 0, 0); a.add(est); ESC.add(a); AVIONES.push({ a, z: (hs('az' + i) - .5) * 400, y: 70 + i * 15, v: 60 + i * 20, x0: -500 + i * 300 }); }
+}
+function animaEntorno(t) {
+  for (const n of NUBES) { const x = n.x + t * n.v * 3, z = n.z; n.m.position.set(x, 55, z); n.sh.position.set(x + 20, .4, z + 12); }
+  for (const b of BARCOS) { const d = t * b.v; b.b.position.set(b.x0 + Math.cos(b.ang) * d, .7 + Math.sin(t * 2 + b.ang) * .15, b.z0 + Math.sin(b.ang) * d); b.b.rotation.y = -b.ang; }
+  for (const a of AVIONES) { a.a.position.set(a.x0 + t * a.v, a.y, a.z); }
 }
