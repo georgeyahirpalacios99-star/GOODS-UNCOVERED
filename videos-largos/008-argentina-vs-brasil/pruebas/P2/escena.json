@@ -240,63 +240,14 @@
  "capas": [
   {
    "tipo": "foto",
-   "desde": 0.0,
-   "hasta": 0.5,
-   "img": "../../fotos-reales/pele-1.jpg",
-   "z0": 1.12,
-   "z1": 1.02,
-   "px": 1,
-   "credito": "Foto: AFP/SCANPIX · Public domain"
-  },
-  {
-   "tipo": "foto",
-   "desde": 0.48,
-   "hasta": 0.99,
+   "desde": 0,
+   "hasta": 3.15,
    "img": "../../fotos-reales/maradona-1.jpg",
-   "z0": 1.12,
-   "z1": 1.02,
-   "px": -1,
-   "credito": "Foto: Unknown authorUnknown author · Public domain"
-  },
-  {
-   "tipo": "foto",
-   "desde": 0.97,
-   "hasta": 1.47,
-   "img": "../../fotos-reales/messi-1.jpg",
-   "z0": 1.12,
-   "z1": 1.02,
-   "px": 1,
-   "credito": "Foto: Voltmetro · CC BY-SA 4.0"
-  },
-  {
-   "tipo": "foto",
-   "desde": 1.45,
-   "hasta": 1.95,
-   "img": "../../fotos-reales/vinicius-1.jpg",
-   "z0": 1.12,
-   "z1": 1.02,
-   "px": -1,
-   "credito": "Foto: Bryan Berlin · CC BY-SA 4.0"
-  },
-  {
-   "tipo": "foto",
-   "desde": 1.93,
-   "hasta": 2.44,
-   "img": "../../fotos-reales/maracana-1.jpg",
-   "z0": 1.12,
-   "z1": 1.02,
-   "px": 1,
-   "credito": "Foto: Rodrigo Soldon from Rio de Jan · CC BY 2.0"
-  },
-  {
-   "tipo": "foto",
-   "desde": 2.42,
-   "hasta": 2.92,
-   "img": "../../fotos-reales/hinchas-arg-1.jpg",
-   "z0": 1.12,
-   "z1": 1.02,
-   "px": -1,
-   "credito": "Foto: Adriel Rivera · CC BY-SA 4.0"
+   "z0": 1.0,
+   "z1": 1.12,
+   "px": 0,
+   "credito": "Foto: Unknown authorUnknown author · Public domain",
+   "sinFundido": true
   },
   {
    "tipo": "ficha",

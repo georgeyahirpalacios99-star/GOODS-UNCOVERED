@@ -160,7 +160,7 @@ function rr(x, y, w, h, r, fill) { OX.beginPath(); OX.roundRect(x, y, w, h, r); 
 function txt(s, x, y, f, col, al = 'left', borde) { OX.font = f; OX.textAlign = al; OX.textBaseline = 'middle'; if (borde) { OX.lineJoin = 'round'; OX.strokeStyle = borde; OX.lineWidth = 7; OX.strokeText(s, x, y); } OX.fillStyle = col; OX.fillText(s, x, y); }
 function capas2d(t) {
   const W = OV.width, H = OV.height;
-  for (const e of SC.capas || []) { if (t < e.desde - .01 || t > e.hasta + .01) continue; const a = cl(Math.min((t - e.desde) / .3, (e.hasta - t) / .3)), p = eo(pr(t, e.desde, .55)); OX.save(); OX.globalAlpha = a;
+  for (const e of SC.capas || []) { if (t < e.desde - .01 || t > e.hasta + .01) continue; const a = e.sinFundido ? 1 : cl(Math.min((t - e.desde) / .3, (e.hasta - t) / .3)), p = eo(pr(t, e.desde, .55)); OX.save(); OX.globalAlpha = a;
     if (e.tipo === 'tarjeta') { const im = IMGS[e.img]; const w = e.w || 560, h = e.h || Math.round(w * .62), cx = e.x ?? W / 2, cy = e.y ?? H * .3;
       if (e.lon !== undefined) { const [px, py] = aPantalla(puntoGeo(e.lon, e.lat)); OX.strokeStyle = 'rgba(255,255,255,.9)'; OX.lineWidth = 3; OX.setLineDash([9, 8]); OX.beginPath(); OX.moveTo(px, py); OX.lineTo(lerp(px, cx, p), lerp(py, cy + h / 2, p)); OX.stroke(); OX.setLineDash([]); OX.fillStyle = ACC; OX.beginPath(); OX.arc(px, py, 9, 0, 7); OX.fill(); OX.globalAlpha = a * (.5 + .5 * Math.sin(t * 5)); OX.beginPath(); OX.arc(px, py, 18, 0, 7); OX.strokeStyle = ACC; OX.stroke(); OX.globalAlpha = a; }
       OX.translate(cx, cy + (1 - p) * 50); OX.rotate((e.rot || 0) * Math.PI / 180); OX.shadowColor = 'rgba(0,0,0,.6)'; OX.shadowBlur = 40; OX.shadowOffsetY = 16; rr(-w / 2 - 8, -h / 2 - 8, w + 16, h + 86, 14, 'rgba(9,16,22,.94)'); OX.shadowColor = 'transparent';
