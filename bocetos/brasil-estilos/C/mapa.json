@@ -1,0 +1,184 @@
+{
+ "formato": "vertical",
+ "duracion": 8,
+ "camara": [
+  {
+   "t": 0,
+   "lon": -60,
+   "lat": -17,
+   "ancho": 62
+  },
+  {
+   "t": 2,
+   "lon": -56,
+   "lat": -13,
+   "ancho": 48
+  },
+  {
+   "t": 4.5,
+   "lon": -56,
+   "lat": -13,
+   "ancho": 48,
+   "suave": false
+  },
+  {
+   "t": 5.6,
+   "lon": -60,
+   "lat": -18,
+   "ancho": 62
+  }
+ ],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ]
+  ],
+  "BRA": [
+   [
+    0,
+    "feliz"
+   ],
+   [
+    2.6,
+    "duda"
+   ],
+   [
+    3.4,
+    "shock"
+   ]
+  ],
+  "ARG": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "BOL": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "PER": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "COL": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ]
+ },
+ "tipografia": "cine",
+ "tituloClave": "texto",
+ "fundido_inicio": 0,
+ "estilo": "documental",
+ "salida": "C-hibrido-satelital",
+ "eventos": [
+  {
+   "tipo": "hueco",
+   "desde": 4.2,
+   "hasta": 8,
+   "pais": "BRA",
+   "t": 4.5,
+   "dur": 1.0
+  },
+  {
+   "tipo": "personaje",
+   "desde": 0,
+   "hasta": 8,
+   "pais": "BRA",
+   "iso": "br",
+   "desaparece": 4.2,
+   "tam": 1.1
+  },
+  {
+   "tipo": "personaje",
+   "desde": 0,
+   "hasta": 8,
+   "pais": "ARG",
+   "iso": "ar",
+   "alto": 6
+  },
+  {
+   "tipo": "personaje",
+   "desde": 0,
+   "hasta": 8,
+   "pais": "BOL",
+   "iso": "bo",
+   "alto": 6
+  },
+  {
+   "tipo": "personaje",
+   "desde": 0,
+   "hasta": 8,
+   "pais": "PER",
+   "iso": "pe",
+   "alto": 6
+  },
+  {
+   "tipo": "personaje",
+   "desde": 0,
+   "hasta": 8,
+   "pais": "COL",
+   "iso": "co",
+   "alto": 6
+  },
+  {
+   "tipo": "titulo",
+   "desde": 0.1,
+   "hasta": 2.4,
+   "texto": "¿Y SI *BRASIL*\nDESAPARECE?",
+   "tam": 96,
+   "y": 330,
+   "capa": "C"
+  },
+  {
+   "tipo": "cifra",
+   "desde": 2.5,
+   "hasta": 4.1000000000000005,
+   "texto": "8,515,767 km²",
+   "num": [
+    0,
+    8515767
+   ],
+   "suf": " km²",
+   "tam": 120,
+   "sub": "el 47 % de Sudamérica",
+   "y": 360,
+   "capa": "C"
+  },
+  {
+   "tipo": "pregunta",
+   "desde": 6.4,
+   "hasta": 8,
+   "texto": "¿QUIÉN GANA MÁS? 👇",
+   "y": 1500,
+   "capa": "C"
+  }
+ ],
+ "destellos": [
+  4.2
+ ]
+}

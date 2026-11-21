@@ -1,0 +1,15 @@
+Clips e imágenes generados por George en Flow (Veo 3.1 / Nano Banana), zip "nov 15 - 21_45.zip"
+Drive: 1SoMS66h_Q4soLNleHmwFDR4butkmvLtL
+T01 Camera_descending_over_green_belt      (clip, 7.9 s)
+T02 Camera_descending_over_desert_dunes    (clip)
+T03 Sand_flowing_across_road               (clip; el camión desaparece desde ~4.5 s: usar solo 0-4.4 s)
+T04 Dust_wall_swallows_towers              (clip)
+T05 Pedestrians_walking_down_avenue        (clip; los autos se desvanecen desde ~6 s: usar 0-5.5 s)
+T06 Workers_planting_saplings_in_dunes     (imagen, cuadrícula de paja cenital)
+T07 Hands_planting_sapling_in_sand         (imagen)
+T08 Solar_panels_watering_desert_sap…      (imagen)
+T09 Workers_planting_trees_on_dunes        (imagen, dos franjas que se juntan)
+T10 Wind_blowing_sand_against_trees        (imagen) · T10b Desert_poplar_trees_stopping_sand (variante)
+T11 Dead_poplar_trees_on_ground            (imagen)
+T12 Water_drop_on_irrigation_emitter       (imagen)
+T13 Poplar_trees_bordering_sand_dunes      (imagen)

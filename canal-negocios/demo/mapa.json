@@ -1,0 +1,350 @@
+{
+ "estilo": "escena",
+ "fps": 30,
+ "duracion": 35.4,
+ "salida": "demo-la-letra-chica",
+ "subY": 1018,
+ "subTam": 46,
+ "escenas": [
+  {
+   "desde": 0,
+   "fondo": "tienda",
+   "letrero": "TODO A $1.25",
+   "mostrador": [
+    1300,
+    620
+   ],
+   "dur": 9
+  },
+  {
+   "desde": 9.5,
+   "fondo": "papel",
+   "color": "#86bfae",
+   "dur": 7.5
+  },
+  {
+   "desde": 17.0,
+   "fondo": "papel",
+   "dur": 10.5
+  },
+  {
+   "desde": 27.6,
+   "fondo": "tienda",
+   "letrero": "TODO A $1.25",
+   "estantes": [
+    [
+     40,
+     640,
+     3
+    ],
+    [
+     1320,
+     1880,
+     4
+    ]
+   ],
+   "dur": 8
+  }
+ ],
+ "narracion": [
+  {
+   "desde": 0.5,
+   "hasta": 3.6,
+   "texto": "Todo en esta tienda cuesta un dólar con veinticinco."
+  },
+  {
+   "desde": 3.7,
+   "hasta": 7.0,
+   "texto": "Entonces, ¿cómo gana millones vendiendo cosas tan baratas?"
+  },
+  {
+   "desde": 7.1,
+   "hasta": 9.3,
+   "texto": "Empecemos por el tamaño."
+  },
+  {
+   "desde": 9.6,
+   "hasta": 13.0,
+   "texto": "Dollar Tree tiene más de 9,200 tiendas en Estados Unidos y Canadá."
+  },
+  {
+   "desde": 13.1,
+   "hasta": 16.8,
+   "texto": "Y en 2025 vendió 19,400 millones de dólares."
+  },
+  {
+   "desde": 17.1,
+   "hasta": 20.0,
+   "texto": "Pero el truco está en cuánto paga por cada cosa."
+  },
+  {
+   "desde": 20.1,
+   "hasta": 24.0,
+   "texto": "De cada dólar con veinticinco, unos 80 centavos se van en comprar el producto y ponerlo en la tienda."
+  },
+  {
+   "desde": 24.1,
+   "hasta": 27.4,
+   "texto": "Le quedan unos 45 centavos para sueldos, gastos… y ganancia."
+  },
+  {
+   "desde": 27.7,
+   "hasta": 31.4,
+   "texto": "Parece poco. Pero en un año, eso sumó más de 7,000 millones de dólares."
+  },
+  {
+   "desde": 31.5,
+   "hasta": 35.0,
+   "texto": "¿Qué negocio quieres que expliquemos después?"
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "muneco",
+   "desde": 0.3,
+   "hasta": 9.4,
+   "x": -120,
+   "y": 900,
+   "tam": 330,
+   "ropa": "#4f8fc0",
+   "camisa": "#fff",
+   "pelo": "castano",
+   "dir": 1,
+   "hacia": {
+    "desde": 0.4,
+    "dur": 1.6,
+    "x": 620,
+    "y": 900
+   },
+   "caras": [
+    [
+     2.2,
+     "sorpresa"
+    ],
+    [
+     4.4,
+     "normal"
+    ],
+    [
+     6.2,
+     "feliz"
+    ]
+   ],
+   "habla": [
+    [
+     3.7,
+     7.0
+    ]
+   ]
+  },
+  {
+   "tipo": "titulo",
+   "desde": 1.0,
+   "hasta": 4.2,
+   "texto": "¿CÓMO GANA DINERO\nUNA TIENDA DE *TODO A $1.25*?",
+   "y": 470,
+   "tam": 92
+  },
+  {
+   "tipo": "producto",
+   "desde": 4.4,
+   "hasta": 9.4,
+   "cual": "taza",
+   "x": 960,
+   "y": 668,
+   "tam": 105,
+   "precio": "$1.25",
+   "precioDesde": 4.8,
+   "tamPrecio": 0.72
+  },
+  {
+   "tipo": "producto",
+   "desde": 4.7,
+   "hasta": 9.4,
+   "cual": "pato",
+   "x": 1220,
+   "y": 668,
+   "tam": 100,
+   "precio": "$1.25",
+   "precioDesde": 5.1,
+   "tamPrecio": 0.72
+  },
+  {
+   "tipo": "producto",
+   "desde": 5.0,
+   "hasta": 9.4,
+   "cual": "pilas",
+   "x": 1470,
+   "y": 668,
+   "tam": 100,
+   "precio": "$1.25",
+   "precioDesde": 5.4,
+   "tamPrecio": 0.72
+  },
+  {
+   "tipo": "muneco",
+   "desde": 5.6,
+   "hasta": 9.4,
+   "x": 1700,
+   "y": 900,
+   "tam": 300,
+   "ropa": "#6dbb6a",
+   "delantal": "#2e6b4c",
+   "pelo": "negro",
+   "dir": -1,
+   "cara": "feliz"
+  },
+  {
+   "tipo": "tiendas",
+   "desde": 9.8,
+   "hasta": 13.3,
+   "cols": 10,
+   "filas": 4,
+   "gx": 165,
+   "gy": 135,
+   "y": 500,
+   "total": 9200,
+   "prefijo": "+",
+   "dur": 2.6,
+   "sub": "tiendas en EE. UU. y Canadá",
+   "yCifra": 200,
+   "paso": 0.035,
+   "tam": 1.15
+  },
+  {
+   "tipo": "cifra",
+   "desde": 13.4,
+   "hasta": 16.9,
+   "texto": "$19,400 M",
+   "sub": "en ventas en 2025",
+   "fuente": "Dollar Tree, informe anual 2025",
+   "y": 500,
+   "tam": 210,
+   "color": "#7dd67a"
+  },
+  {
+   "tipo": "producto",
+   "desde": 17.3,
+   "hasta": 27.5,
+   "cual": "taza",
+   "x": 330,
+   "y": 760,
+   "tam": 230,
+   "precio": "$1.25",
+   "precioDesde": 17.7,
+   "tamPrecio": 1.5
+  },
+  {
+   "tipo": "desglose",
+   "desde": 19.6,
+   "hasta": 27.5,
+   "x": 700,
+   "y": 420,
+   "w": 1080,
+   "h": 130,
+   "titulo": "¿A DÓNDE VA TU $1.25?",
+   "partes": [
+    {
+     "valor": 80,
+     "cifra": "≈ 80¢",
+     "texto": "Comprar el producto y ponerlo en la tienda",
+     "color": "#e8574a",
+     "desde": 20.3
+    },
+    {
+     "valor": 45,
+     "cifra": "≈ 45¢",
+     "texto": "Le queda",
+     "color": "#6dbb6a",
+     "desde": 24.1
+    }
+   ],
+   "fuente": "margen bruto de 36.4 %, Dollar Tree, año fiscal 2025"
+  },
+  {
+   "tipo": "muneco",
+   "desde": 24.6,
+   "hasta": 27.5,
+   "x": 1740,
+   "y": 990,
+   "tam": 210,
+   "ropa": "#2f3f6e",
+   "camisa": "#fff",
+   "corbata": "#d6453d",
+   "sombrero": "copa",
+   "cara": "feliz",
+   "dir": -1
+  },
+  {
+   "tipo": "caja",
+   "desde": 27.9,
+   "hasta": 35,
+   "x": 1200,
+   "y": 835,
+   "tam": 135,
+   "monto": [
+    0,
+    7050,
+    28.3,
+    3.4
+   ],
+   "sufijo": " M",
+   "abre": [
+    29.0,
+    30.4
+   ]
+  },
+  {
+   "tipo": "cifra",
+   "desde": 29.6,
+   "hasta": 31.4,
+   "texto": "$7,050 M",
+   "sub": "ganancia bruta en 2025",
+   "fuente": "Dollar Tree, informe anual 2025",
+   "x": 1200,
+   "y": 330,
+   "tam": 92,
+   "color": "#7dd67a"
+  },
+  {
+   "tipo": "monedas",
+   "desde": 28.2,
+   "hasta": 35,
+   "x": 1200,
+   "y": 640,
+   "n": 22,
+   "paso": 0.15,
+   "ancho": 1100,
+   "r": 32
+  },
+  {
+   "tipo": "muneco",
+   "desde": 27.9,
+   "hasta": 35,
+   "x": 560,
+   "y": 900,
+   "tam": 340,
+   "ropa": "#2f3f6e",
+   "camisa": "#fff",
+   "corbata": "#d6453d",
+   "sombrero": "copa",
+   "caras": [
+    [
+     27.9,
+     "sorpresa"
+    ],
+    [
+     29.2,
+     "feliz"
+    ]
+   ]
+  },
+  {
+   "tipo": "pregunta",
+   "desde": 31.6,
+   "hasta": 35,
+   "texto": "¿QUÉ NEGOCIO EXPLICAMOS DESPUÉS?",
+   "y": 250
+  }
+ ]
+}

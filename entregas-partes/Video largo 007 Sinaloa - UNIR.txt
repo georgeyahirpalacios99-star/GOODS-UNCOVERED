@@ -1,0 +1,2 @@
+Para unir las partes del video 007:
+  cat "Video largo 007 Sinaloa - FINAL.mp4.parte-"* > "Video largo 007 Sinaloa - FINAL.mp4"

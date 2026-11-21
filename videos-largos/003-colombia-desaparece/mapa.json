@@ -1,0 +1,1766 @@
+{
+ "estilo": "caricatura",
+ "salida": "que-pasaria-si-colombia-desapareciera",
+ "duracion": 431.3,
+ "camara": [
+  {
+   "t": 0,
+   "lon": -60,
+   "lat": 10,
+   "ancho": 120
+  },
+  {
+   "t": 0.9,
+   "lon": -73.5,
+   "lat": 4.5,
+   "ancho": 26,
+   "arco": 0.2
+  },
+  {
+   "t": 13.11,
+   "lon": -73.5,
+   "lat": 4.5,
+   "ancho": 26,
+   "suave": false
+  },
+  {
+   "t": 14.61,
+   "lon": -77.8,
+   "lat": 8.2,
+   "ancho": 9
+  },
+  {
+   "t": 18.32,
+   "lon": -77.8,
+   "lat": 8.2,
+   "ancho": 9,
+   "suave": false
+  },
+  {
+   "t": 20.52,
+   "lon": -64,
+   "lat": -16,
+   "ancho": 78,
+   "arco": 0.3
+  },
+  {
+   "t": 25.7,
+   "lon": -64,
+   "lat": -16,
+   "ancho": 78,
+   "suave": false
+  },
+  {
+   "t": 27.2,
+   "lon": -70,
+   "lat": 8,
+   "ancho": 110
+  },
+  {
+   "t": 37.74,
+   "lon": -78.5,
+   "lat": -1.3,
+   "ancho": 13,
+   "suave": false
+  },
+  {
+   "t": 39.34,
+   "lon": -70,
+   "lat": 5,
+   "ancho": 60
+  },
+  {
+   "t": 50.18,
+   "lon": -70,
+   "lat": 5,
+   "ancho": 60,
+   "suave": false
+  },
+  {
+   "t": 51.68,
+   "lon": -72,
+   "lat": 4,
+   "ancho": 34
+  },
+  {
+   "t": 77.8,
+   "lon": -72,
+   "lat": 4,
+   "ancho": 34,
+   "suave": false
+  },
+  {
+   "t": 79.3,
+   "lon": -79.5,
+   "lat": 8.8,
+   "ancho": 11
+  },
+  {
+   "t": 88.01,
+   "lon": -79.5,
+   "lat": 8.8,
+   "ancho": 11,
+   "suave": false
+  },
+  {
+   "t": 90.21,
+   "lon": -80,
+   "lat": 8,
+   "ancho": 58,
+   "arco": 0.2
+  },
+  {
+   "t": 104.47,
+   "lon": -80,
+   "lat": 8,
+   "ancho": 58,
+   "suave": false
+  },
+  {
+   "t": 105.97,
+   "lon": -77.6,
+   "lat": 8.3,
+   "ancho": 8
+  },
+  {
+   "t": 116.02,
+   "lon": -77.6,
+   "lat": 8.3,
+   "ancho": 8,
+   "suave": false
+  },
+  {
+   "t": 117.52,
+   "lon": -81.7,
+   "lat": 12.6,
+   "ancho": 6
+  },
+  {
+   "t": 124.18,
+   "lon": -81.7,
+   "lat": 12.6,
+   "ancho": 6,
+   "suave": false
+  },
+  {
+   "t": 125.68,
+   "lon": -72,
+   "lat": 2,
+   "ancho": 40
+  },
+  {
+   "t": 140.05,
+   "lon": -72,
+   "lat": 2,
+   "ancho": 40,
+   "suave": false
+  },
+  {
+   "t": 141.55,
+   "lon": -68,
+   "lat": -10,
+   "ancho": 80
+  },
+  {
+   "t": 147.66,
+   "lon": -68,
+   "lat": -10,
+   "ancho": 80,
+   "suave": false
+  },
+  {
+   "t": 149.16,
+   "lon": -45,
+   "lat": 22,
+   "ancho": 210
+  },
+  {
+   "t": 173.44,
+   "lon": -45,
+   "lat": 22,
+   "ancho": 210,
+   "suave": false
+  },
+  {
+   "t": 174.94,
+   "lon": -55,
+   "lat": -12,
+   "ancho": 50
+  },
+  {
+   "t": 178.53,
+   "lon": -55,
+   "lat": -12,
+   "ancho": 50,
+   "suave": false
+  },
+  {
+   "t": 180.03,
+   "lon": -66,
+   "lat": 7,
+   "ancho": 16
+  },
+  {
+   "t": 185.78,
+   "lon": -66,
+   "lat": 7,
+   "ancho": 16,
+   "suave": false
+  },
+  {
+   "t": 187.98,
+   "lon": -88,
+   "lat": 35,
+   "ancho": 78,
+   "arco": 0.2
+  },
+  {
+   "t": 206.69,
+   "lon": -88,
+   "lat": 35,
+   "ancho": 78,
+   "suave": false
+  },
+  {
+   "t": 208.19,
+   "lon": -78.5,
+   "lat": -1.3,
+   "ancho": 16
+  },
+  {
+   "t": 212.59,
+   "lon": -78.5,
+   "lat": -1.3,
+   "ancho": 16,
+   "suave": false
+  },
+  {
+   "t": 214.09,
+   "lon": -78.2,
+   "lat": -1.6,
+   "ancho": 13
+  },
+  {
+   "t": 242.27,
+   "lon": -78.2,
+   "lat": -1.6,
+   "ancho": 13,
+   "suave": false
+  },
+  {
+   "t": 243.77,
+   "lon": -78.0,
+   "lat": 0.2,
+   "ancho": 9
+  },
+  {
+   "t": 253.31,
+   "lon": -78.0,
+   "lat": 0.2,
+   "ancho": 9,
+   "suave": false
+  },
+  {
+   "t": 255.51,
+   "lon": -85,
+   "lat": 18,
+   "ancho": 70,
+   "arco": 0.2
+  },
+  {
+   "t": 268.11,
+   "lon": -85,
+   "lat": 18,
+   "ancho": 70,
+   "suave": false
+  },
+  {
+   "t": 269.61,
+   "lon": -71,
+   "lat": 4,
+   "ancho": 30
+  },
+  {
+   "t": 314.0,
+   "lon": -71,
+   "lat": 4,
+   "ancho": 30,
+   "suave": false
+  },
+  {
+   "t": 315.5,
+   "lon": -72,
+   "lat": 3,
+   "ancho": 36
+  },
+  {
+   "t": 345.14,
+   "lon": -72,
+   "lat": 3,
+   "ancho": 36,
+   "suave": false
+  },
+  {
+   "t": 346.64,
+   "lon": 0,
+   "lat": 20,
+   "ancho": 300
+  },
+  {
+   "t": 351.75,
+   "lon": 0,
+   "lat": 20,
+   "ancho": 300,
+   "suave": false
+  },
+  {
+   "t": 353.25,
+   "lon": -62,
+   "lat": -15,
+   "ancho": 75
+  },
+  {
+   "t": 380.25,
+   "lon": -62,
+   "lat": -15,
+   "ancho": 75,
+   "suave": false
+  },
+  {
+   "t": 381.75,
+   "lon": -70,
+   "lat": 8,
+   "ancho": 110
+  },
+  {
+   "t": 396.79,
+   "lon": -70,
+   "lat": 8,
+   "ancho": 110,
+   "suave": false
+  },
+  {
+   "t": 398.29,
+   "lon": -64,
+   "lat": -16,
+   "ancho": 80
+  },
+  {
+   "t": 400.63,
+   "lon": -64,
+   "lat": -16,
+   "ancho": 80,
+   "suave": false
+  },
+  {
+   "t": 402.13,
+   "lon": -45,
+   "lat": 15,
+   "ancho": 240
+  },
+  {
+   "t": 431.3,
+   "lon": -45,
+   "lat": 15,
+   "ancho": 235,
+   "suave": false
+  }
+ ],
+ "desaparece": [
+  {
+   "iso": "COL",
+   "t": 3.05
+  }
+ ],
+ "sacudidas": [
+  {
+   "t": 3.05,
+   "dur": 1.0,
+   "fuerza": 18
+  }
+ ],
+ "tam": {
+  "USA": 1.2,
+  "BRA": 1.2,
+  "PAN": 1.4,
+  "ECU": 1.25,
+  "URY": 1.2
+ },
+ "mirar": [],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    39.34,
+    "normal"
+   ],
+   [
+    50.18,
+    "normal"
+   ],
+   [
+    268.11,
+    "normal"
+   ],
+   [
+    403.57,
+    "triste"
+   ],
+   [
+    407.37,
+    "feliz"
+   ]
+  ],
+  "COL": [
+   [
+    0,
+    "feliz"
+   ],
+   [
+    1.6,
+    "normal"
+   ]
+  ],
+  "VEN": [
+   [
+    3.55,
+    "shock"
+   ],
+   [
+    47.86,
+    "preocupado"
+   ],
+   [
+    66.24,
+    "triste"
+   ],
+   [
+    131.36,
+    "llora"
+   ],
+   [
+    184.32,
+    "risa"
+   ],
+   [
+    301.11,
+    "preocupado"
+   ]
+  ],
+  "ECU": [
+   [
+    3.55,
+    "shock"
+   ],
+   [
+    37.74,
+    "grito"
+   ],
+   [
+    39.34,
+    "normal"
+   ],
+   [
+    47.86,
+    "preocupado"
+   ],
+   [
+    75.82,
+    "triste"
+   ],
+   [
+    211.33,
+    "shock"
+   ],
+   [
+    229.26,
+    "llora"
+   ],
+   [
+    239.09,
+    "grito"
+   ],
+   [
+    252.04,
+    "risa"
+   ],
+   [
+    256.03,
+    "feliz"
+   ]
+  ],
+  "PER": [
+   [
+    3.55,
+    "shock"
+   ],
+   [
+    47.86,
+    "preocupado"
+   ],
+   [
+    73.53,
+    "triste"
+   ]
+  ],
+  "BRA": [
+   [
+    3.55,
+    "shock"
+   ],
+   [
+    47.86,
+    "preocupado"
+   ],
+   [
+    70.93,
+    "triste"
+   ],
+   [
+    173.44,
+    "risa"
+   ],
+   [
+    301.11,
+    "preocupado"
+   ]
+  ],
+  "PAN": [
+   [
+    3.55,
+    "shock"
+   ],
+   [
+    13.11,
+    "preocupado"
+   ],
+   [
+    47.86,
+    "preocupado"
+   ],
+   [
+    79.8,
+    "sorpresa"
+   ]
+  ],
+  "USA": [
+   [
+    200.18,
+    "llora"
+   ],
+   [
+    261.75,
+    "amor"
+   ]
+  ]
+ },
+ "eventos": [
+  {
+   "tipo": "despertar",
+   "desde": 0,
+   "hasta": 2.8
+  },
+  {
+   "tipo": "nombre",
+   "desde": 4.05,
+   "texto": "COLOMBIA",
+   "lon": -73.5,
+   "lat": 4.5,
+   "tam": 46,
+   "fantasma": true,
+   "hasta": 10.45
+  },
+  {
+   "tipo": "titulo",
+   "desde": 7.24,
+   "texto": "SOLO… *MAR*",
+   "tam": 110,
+   "y": 230,
+   "hasta": 10.45
+  },
+  {
+   "tipo": "pin",
+   "desde": 13.31,
+   "lon": -77.4,
+   "lat": 7.9,
+   "texto": "AQUÍ",
+   "escala": 1.8,
+   "hasta": 18.32
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.19,
+   "pais": "VEN",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.25,
+   "pais": "ECU",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.31,
+   "pais": "PER",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.37,
+   "pais": "BRA",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.43,
+   "pais": "BOL",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.49,
+   "pais": "CHL",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "cinta",
+   "desde": 19.49,
+   "x": 960,
+   "y": 930,
+   "escala": 1.55,
+   "texto": "SUDAMÉRICA ES UNA ISLA",
+   "icono": "globo",
+   "color": "#1f6aa8",
+   "hasta": 22.27
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.55,
+   "pais": "ARG",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.61,
+   "pais": "PRY",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.67,
+   "pais": "URY",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.73,
+   "pais": "GUY",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 19.79,
+   "pais": "SUR",
+   "color": "#ffd23f",
+   "hasta": 25.7
+  },
+  {
+   "tipo": "cifra",
+   "desde": 21.59,
+   "texto": "3 MILLONES DE AÑOS",
+   "tam": 104,
+   "sub": "desde la última vez que estuvo sola",
+   "fuente": "Istmo de Panamá · O’Dea et al., 2016",
+   "y": 260,
+   "hasta": 25.7
+  },
+  {
+   "tipo": "iconos",
+   "desde": 27.59,
+   "y": 470,
+   "paso": 0.0,
+   "gap": 380,
+   "escala": 1.45,
+   "items": [
+    {
+     "icono": "flor",
+     "texto": "¿ROSAS?",
+     "color": "#e8463a"
+    },
+    {
+     "icono": "cafe",
+     "texto": "¿TU CAFÉ?",
+     "color": "#a0683a"
+    },
+    {
+     "icono": "foco",
+     "texto": "¿LA LUZ?",
+     "color": "#ffd23f"
+    }
+   ],
+   "hasta": 37.74
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 29.29,
+   "pais": "USA",
+   "hasta": 32.69
+  },
+  {
+   "tipo": "apagon",
+   "desde": 36.57,
+   "fuerza": 0.55,
+   "hasta": 38.17
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 37.74,
+   "pais": "ECU",
+   "color": "#ffd23f",
+   "hasta": 39.34
+  },
+  {
+   "tipo": "cinta",
+   "desde": 41.14,
+   "x": 960,
+   "y": 900,
+   "escala": 1.4,
+   "texto": "TRANQUILO: NADIE SUFRE",
+   "icono": "corazon",
+   "color": "#2e9e5b",
+   "hasta": 47.86
+  },
+  {
+   "tipo": "globo",
+   "desde": 44.92,
+   "pais": "VEN",
+   "texto": "¿Y a dónde se fueron?",
+   "lado": 1,
+   "hasta": 47.86
+  },
+  {
+   "tipo": "titulo",
+   "desde": 47.86,
+   "texto": "¿QUÉ PASARÍA SI\n*COLOMBIA*\nDESAPARECIERA?",
+   "tam": 92,
+   "y": 330,
+   "hasta": 50.08
+  },
+  {
+   "tipo": "region",
+   "desde": 50.18,
+   "texto": "EL NUEVO MAPA",
+   "hasta": 124.18
+  },
+  {
+   "tipo": "flujo",
+   "desde": 57.67,
+   "de": [
+    -79,
+    12
+   ],
+   "a": [
+    -80,
+    2
+   ],
+   "icono": "gota",
+   "n": 5,
+   "hasta": 61.82
+  },
+  {
+   "tipo": "cifra",
+   "desde": 61.82,
+   "texto": "6,342 km",
+   "tam": 150,
+   "sub": "de fronteras que desaparecen",
+   "fuente": "Cancillería de Colombia",
+   "y": 250,
+   "hasta": 66.24
+  },
+  {
+   "tipo": "nombre",
+   "desde": 66.24,
+   "texto": "VENEZUELA −2,219 km",
+   "lon": -66,
+   "lat": 7.2,
+   "tam": 34,
+   "hasta": 77.8
+  },
+  {
+   "tipo": "nombre",
+   "desde": 70.93,
+   "texto": "BRASIL −1,645 km",
+   "lon": -62.5,
+   "lat": -3.5,
+   "tam": 34,
+   "hasta": 77.8
+  },
+  {
+   "tipo": "nombre",
+   "desde": 73.53,
+   "texto": "PERÚ −1,626 km",
+   "lon": -74.5,
+   "lat": -6.5,
+   "tam": 34,
+   "hasta": 77.8
+  },
+  {
+   "tipo": "nombre",
+   "desde": 75.82,
+   "texto": "ECUADOR −586 km",
+   "lon": -78.7,
+   "lat": -1.8,
+   "tam": 34,
+   "hasta": 77.8
+  },
+  {
+   "tipo": "pin",
+   "desde": 79.8,
+   "lon": -77.6,
+   "lat": 8.0,
+   "texto": "FIN DE NORTEAMÉRICA",
+   "hasta": 86.12
+  },
+  {
+   "tipo": "flujo",
+   "desde": 92.84,
+   "de": [
+    -76,
+    2
+   ],
+   "a": [
+    -90,
+    18
+   ],
+   "icono": "flecha",
+   "n": 3,
+   "roto": true,
+   "hasta": 102.93
+  },
+  {
+   "tipo": "flujo",
+   "desde": 95.24,
+   "de": [
+    -95,
+    20
+   ],
+   "a": [
+    -70,
+    -5
+   ],
+   "icono": "flecha",
+   "n": 3,
+   "roto": true,
+   "hasta": 102.93
+  },
+  {
+   "tipo": "sello",
+   "desde": 99.25,
+   "x": 960,
+   "y": 520,
+   "texto": "CORTADO",
+   "hasta": 102.93
+  },
+  {
+   "tipo": "cifra",
+   "desde": 107.0,
+   "texto": "+520,000",
+   "tam": 140,
+   "sub": "personas cruzaron el Darién en 2023",
+   "fuente": "Migración de Panamá",
+   "y": 260,
+   "hasta": 116.02
+  },
+  {
+   "tipo": "nombre",
+   "desde": 118.14,
+   "texto": "SAN ANDRÉS",
+   "lon": -81.7,
+   "lat": 12.55,
+   "fantasma": true,
+   "hasta": 124.18
+  },
+  {
+   "tipo": "nombre",
+   "desde": 118.54,
+   "texto": "PROVIDENCIA",
+   "lon": -81.37,
+   "lat": 13.35,
+   "fantasma": true,
+   "hasta": 124.18
+  },
+  {
+   "tipo": "region",
+   "desde": 124.18,
+   "texto": "LA GENTE",
+   "hasta": 147.26
+  },
+  {
+   "tipo": "cifra",
+   "desde": 125.62,
+   "texto": "53 MILLONES",
+   "tam": 150,
+   "sub": "más que toda España",
+   "fuente": "DANE, 2025",
+   "y": 260,
+   "hasta": 130.0
+  },
+  {
+   "tipo": "cifra",
+   "desde": 131.36,
+   "texto": "2.8 MILLONES",
+   "tam": 140,
+   "sub": "de venezolanos vivían en Colombia",
+   "fuente": "Migración Colombia, 2025",
+   "y": 260,
+   "hasta": 136.39
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 140.05,
+   "pais": "URY",
+   "color": "#ffd23f",
+   "hasta": 142.52
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 140.05,
+   "pais": "PRY",
+   "color": "#ffd23f",
+   "hasta": 142.52
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 140.05,
+   "pais": "PAN",
+   "color": "#ffd23f",
+   "hasta": 142.52
+  },
+  {
+   "tipo": "titulo",
+   "desde": 145.86,
+   "texto": "EMPIEZA EN TU *TAZA*",
+   "tam": 100,
+   "y": 320,
+   "hasta": 148.66
+  },
+  {
+   "tipo": "region",
+   "desde": 147.66,
+   "texto": "EL CAFÉ",
+   "hasta": 185.78
+  },
+  {
+   "tipo": "cifra",
+   "desde": 149.24,
+   "texto": "13.67 MILLONES",
+   "tam": 128,
+   "sub": "de sacos de café en 2025",
+   "fuente": "Federación Nacional de Cafeteros",
+   "y": 250,
+   "hasta": 153.01
+  },
+  {
+   "tipo": "flujo",
+   "desde": 153.01,
+   "de": [
+    -74,
+    4.5
+   ],
+   "a": [
+    -95,
+    38
+   ],
+   "icono": "cafe",
+   "n": 5,
+   "hasta": 164.43
+  },
+  {
+   "tipo": "flujo",
+   "desde": 153.01,
+   "de": [
+    -74,
+    4.5
+   ],
+   "a": [
+    10,
+    50
+   ],
+   "icono": "cafe",
+   "n": 5,
+   "hasta": 164.43
+  },
+  {
+   "tipo": "flujo",
+   "desde": 153.01,
+   "de": [
+    -74,
+    4.5
+   ],
+   "a": [
+    138,
+    37
+   ],
+   "icono": "cafe",
+   "n": 5,
+   "hasta": 164.43
+  },
+  {
+   "tipo": "cifra",
+   "desde": 158.49,
+   "texto": "80,000 MILLONES",
+   "tam": 118,
+   "sub": "de tazas de café al año",
+   "fuente": "cálculo: 10 g por taza",
+   "y": 250,
+   "hasta": 164.43
+  },
+  {
+   "tipo": "flujo",
+   "desde": 164.43,
+   "de": [
+    -74,
+    4.5
+   ],
+   "a": [
+    -95,
+    38
+   ],
+   "icono": "cafe",
+   "n": 4,
+   "roto": true,
+   "hasta": 173.44
+  },
+  {
+   "tipo": "flujo",
+   "desde": 164.43,
+   "de": [
+    -74,
+    4.5
+   ],
+   "a": [
+    10,
+    50
+   ],
+   "icono": "cafe",
+   "n": 4,
+   "roto": true,
+   "hasta": 173.44
+  },
+  {
+   "tipo": "flujo",
+   "desde": 164.43,
+   "de": [
+    -74,
+    4.5
+   ],
+   "a": [
+    138,
+    37
+   ],
+   "icono": "cafe",
+   "n": 4,
+   "roto": true,
+   "hasta": 173.44
+  },
+  {
+   "tipo": "cinta",
+   "desde": 172.38,
+   "x": 960,
+   "y": 880,
+   "escala": 1.4,
+   "texto": "EL CAFÉ SUBE DE PRECIO",
+   "icono": "dolar",
+   "color": "#d6453d",
+   "hasta": 176.91
+  },
+  {
+   "tipo": "globo",
+   "desde": 176.91,
+   "pais": "BRA",
+   "texto": "¡Más café para mí!",
+   "hasta": 179.13
+  },
+  {
+   "tipo": "globo",
+   "desde": 184.32,
+   "pais": "VEN",
+   "texto": "¡La arepa es mía!",
+   "hasta": 186.78
+  },
+  {
+   "tipo": "region",
+   "desde": 185.78,
+   "texto": "LAS FLORES",
+   "hasta": 206.69
+  },
+  {
+   "tipo": "flujo",
+   "desde": 188.7,
+   "de": [
+    -74,
+    4.5
+   ],
+   "a": [
+    -82,
+    33
+   ],
+   "icono": "flor",
+   "n": 6,
+   "hasta": 200.18
+  },
+  {
+   "tipo": "cifra",
+   "desde": 188.7,
+   "texto": "900 MILLONES",
+   "tam": 140,
+   "sub": "de flores para San Valentín 2025",
+   "fuente": "MinAgricultura / ICA",
+   "y": 250,
+   "hasta": 194.97
+  },
+  {
+   "tipo": "cifra",
+   "desde": 194.97,
+   "texto": "65,000 TONELADAS",
+   "tam": 120,
+   "sub": "de flores a EE. UU. en unas semanas",
+   "y": 250,
+   "hasta": 200.18
+  },
+  {
+   "tipo": "flujo",
+   "desde": 200.18,
+   "de": [
+    -74,
+    4.5
+   ],
+   "a": [
+    -82,
+    33
+   ],
+   "icono": "flor",
+   "n": 4,
+   "roto": true,
+   "hasta": 206.69
+  },
+  {
+   "tipo": "globo",
+   "desde": 204.96,
+   "pais": "USA",
+   "texto": "¿¡80 dólares un ramo!?",
+   "lado": -1,
+   "hasta": 207.49
+  },
+  {
+   "tipo": "apagon",
+   "desde": 211.43,
+   "foco": true,
+   "hasta": 213.79
+  },
+  {
+   "tipo": "region",
+   "desde": 212.59,
+   "texto": "ECUADOR",
+   "hasta": 267.71
+  },
+  {
+   "tipo": "flujo",
+   "desde": 212.59,
+   "de": [
+    -76.5,
+    3.5
+   ],
+   "a": [
+    -78.5,
+    -0.3
+   ],
+   "icono": "rayo",
+   "n": 5,
+   "hasta": 236.84
+  },
+  {
+   "tipo": "cifra",
+   "desde": 215.1,
+   "texto": "460 MW",
+   "tam": 150,
+   "sub": "de Colombia a Ecuador",
+   "fuente": "Cenace / Primicias",
+   "y": 250,
+   "hasta": 219.54
+  },
+  {
+   "tipo": "cifra",
+   "desde": 219.54,
+   "texto": "11 %",
+   "tam": 170,
+   "sub": "de la demanda máxima de Ecuador",
+   "y": 250,
+   "hasta": 223.78
+  },
+  {
+   "tipo": "cinta",
+   "desde": 223.78,
+   "x": 960,
+   "y": 930,
+   "escala": 1.35,
+   "texto": "2024 · CRISIS ELÉCTRICA",
+   "icono": "rayo",
+   "color": "#d6453d",
+   "hasta": 236.84
+  },
+  {
+   "tipo": "apagon",
+   "desde": 229.26,
+   "fuerza": 0.5,
+   "hasta": 230.66
+  },
+  {
+   "tipo": "cifra",
+   "desde": 233.26,
+   "texto": "$268 MILLONES",
+   "tam": 130,
+   "sub": "pagó Ecuador por luz colombiana",
+   "fuente": "Primicias, enero–noviembre 2024",
+   "y": 250,
+   "hasta": 236.84
+  },
+  {
+   "tipo": "flujo",
+   "desde": 236.84,
+   "de": [
+    -76.5,
+    3.5
+   ],
+   "a": [
+    -78.5,
+    -0.3
+   ],
+   "icono": "rayo",
+   "n": 4,
+   "roto": true,
+   "hasta": 241.08
+  },
+  {
+   "tipo": "apagon",
+   "desde": 239.29,
+   "fuerza": 0.7,
+   "foco": true,
+   "hasta": 241.29
+  },
+  {
+   "tipo": "pin",
+   "desde": 242.57,
+   "lon": -77.65,
+   "lat": 0.82,
+   "texto": "RUMICHACA",
+   "hasta": 253.31
+  },
+  {
+   "tipo": "cinta",
+   "desde": 252.04,
+   "x": 960,
+   "y": 930,
+   "escala": 1.35,
+   "texto": "ECUADOR: PLAYA NUEVA AL NORTE",
+   "icono": "casa",
+   "color": "#1f6aa8",
+   "hasta": 254.61
+  },
+  {
+   "tipo": "flujo",
+   "desde": 256.03,
+   "de": [
+    -78.5,
+    -1.5
+   ],
+   "a": [
+    -82,
+    33
+   ],
+   "icono": "flor",
+   "n": 6,
+   "hasta": 267.71
+  },
+  {
+   "tipo": "titulo",
+   "desde": 264.97,
+   "texto": "ECUADOR PIERDE LA LUZ…\n…PERO GANA *SAN VALENTÍN*",
+   "tam": 80,
+   "y": 300,
+   "hasta": 268.01
+  },
+  {
+   "tipo": "region",
+   "desde": 268.11,
+   "texto": "EL AGUA",
+   "hasta": 313.6
+  },
+  {
+   "tipo": "cifra",
+   "desde": 272.15,
+   "texto": "≈ 50 %",
+   "tam": 170,
+   "sub": "de los páramos del mundo",
+   "fuente": "PNUD / Gobierno de Colombia",
+   "y": 250,
+   "hasta": 275.08
+  },
+  {
+   "tipo": "pin",
+   "desde": 283.79,
+   "lon": -73.75,
+   "lat": 4.6,
+   "texto": "CHINGAZA · 80 % DEL AGUA DE BOGOTÁ",
+   "hasta": 287.84
+  },
+  {
+   "tipo": "flujo",
+   "desde": 289.81,
+   "de": [
+    -72.5,
+    4
+   ],
+   "a": [
+    -63,
+    7.8
+   ],
+   "icono": "gota",
+   "n": 6,
+   "hasta": 301.11
+  },
+  {
+   "tipo": "nombre",
+   "desde": 293.36,
+   "texto": "ORINOCO",
+   "lon": -64.5,
+   "lat": 7.6,
+   "tam": 26,
+   "hasta": 313.6
+  },
+  {
+   "tipo": "flujo",
+   "desde": 296.37,
+   "de": [
+    -75,
+    1
+   ],
+   "a": [
+    -62,
+    -3.3
+   ],
+   "icono": "gota",
+   "n": 6,
+   "hasta": 301.11
+  },
+  {
+   "tipo": "nombre",
+   "desde": 298.74,
+   "texto": "AMAZONAS",
+   "lon": -61,
+   "lat": -3.6,
+   "tam": 26,
+   "hasta": 313.6
+  },
+  {
+   "tipo": "flujo",
+   "desde": 301.11,
+   "de": [
+    -72.5,
+    4
+   ],
+   "a": [
+    -63,
+    7.8
+   ],
+   "icono": "gota",
+   "n": 4,
+   "roto": true,
+   "hasta": 313.6
+  },
+  {
+   "tipo": "flujo",
+   "desde": 301.11,
+   "de": [
+    -75,
+    1
+   ],
+   "a": [
+    -62,
+    -3.3
+   ],
+   "icono": "gota",
+   "n": 4,
+   "roto": true,
+   "hasta": 313.6
+  },
+  {
+   "tipo": "titulo",
+   "desde": 307.03,
+   "texto": "RÍOS QUE EMPIEZAN… *EN EL MAR*",
+   "tam": 86,
+   "y": 250,
+   "hasta": 311.88
+  },
+  {
+   "tipo": "region",
+   "desde": 314.0,
+   "texto": "LO QUE NO TIENE PRECIO",
+   "hasta": 380.25
+  },
+  {
+   "tipo": "iconos",
+   "desde": 315.99,
+   "y": 430,
+   "paso": 0.15,
+   "gap": 150,
+   "items": [
+    {
+     "icono": "ave",
+     "color": "#e8463a"
+    },
+    {
+     "icono": "ave",
+     "color": "#ffd23f"
+    },
+    {
+     "icono": "ave",
+     "color": "#3d6fb4"
+    },
+    {
+     "icono": "ave",
+     "color": "#2e9e5b"
+    },
+    {
+     "icono": "ave",
+     "color": "#e8873a"
+    }
+   ],
+   "hasta": 323.69
+  },
+  {
+   "tipo": "cifra",
+   "desde": 323.69,
+   "texto": "1,954 ESPECIES",
+   "tam": 128,
+   "sub": "de aves · casi 1 de cada 5 del mundo",
+   "fuente": "SiB Colombia · Global Big Day",
+   "y": 250,
+   "hasta": 329.69
+  },
+  {
+   "tipo": "cifra",
+   "desde": 329.69,
+   "texto": "82",
+   "tam": 220,
+   "sub": "solo existen en Colombia",
+   "y": 280,
+   "hasta": 335.45
+  },
+  {
+   "tipo": "sello",
+   "desde": 333.79,
+   "x": 960,
+   "y": 560,
+   "texto": "PARA SIEMPRE",
+   "hasta": 336.35
+  },
+  {
+   "tipo": "cifra",
+   "desde": 337.92,
+   "texto": "≈ 55 %",
+   "tam": 170,
+   "sub": "de las esmeraldas del mundo",
+   "fuente": "Fedesmeraldas",
+   "y": 250,
+   "hasta": 345.14
+  },
+  {
+   "tipo": "flujo",
+   "desde": 345.14,
+   "de": [
+    -74,
+    5.5
+   ],
+   "a": [
+    -74,
+    40.7
+   ],
+   "icono": "gema",
+   "n": 3,
+   "roto": true,
+   "hasta": 351.75
+  },
+  {
+   "tipo": "flujo",
+   "desde": 345.14,
+   "de": [
+    -74,
+    5.5
+   ],
+   "a": [
+    55.3,
+    25.2
+   ],
+   "icono": "gema",
+   "n": 3,
+   "roto": true,
+   "hasta": 351.75
+  },
+  {
+   "tipo": "flujo",
+   "desde": 345.14,
+   "de": [
+    -74,
+    5.5
+   ],
+   "a": [
+    139.7,
+    35.7
+   ],
+   "icono": "gema",
+   "n": 3,
+   "roto": true,
+   "hasta": 351.75
+  },
+  {
+   "tipo": "iconos",
+   "desde": 351.75,
+   "y": 430,
+   "paso": 0.5,
+   "gap": 560,
+   "escala": 1.2,
+   "items": [
+    {
+     "icono": "futbol",
+     "texto": "FINAL COPA AMÉRICA"
+    },
+    {
+     "icono": "futbol",
+     "texto": "BOTA DE ORO 2014"
+    }
+   ],
+   "hasta": 361.85
+  },
+  {
+   "tipo": "iconos",
+   "desde": 361.85,
+   "y": 430,
+   "paso": 0.35,
+   "gap": 250,
+   "items": [
+    {
+     "icono": "nota",
+     "texto": "SHAKIRA"
+    },
+    {
+     "icono": "nota",
+     "texto": "KAROL G"
+    },
+    {
+     "icono": "nota",
+     "texto": "J BALVIN"
+    },
+    {
+     "icono": "nota",
+     "texto": "CARLOS VIVES"
+    }
+   ],
+   "hasta": 367.6
+  },
+  {
+   "tipo": "iconos",
+   "desde": 367.6,
+   "y": 430,
+   "paso": 0,
+   "items": [
+    {
+     "icono": "libro",
+     "texto": "NOBEL 1982"
+    }
+   ],
+   "hasta": 380.25
+  },
+  {
+   "tipo": "titulo",
+   "desde": 367.8,
+   "texto": "*MACONDO*",
+   "tam": 120,
+   "y": 250,
+   "hasta": 375.19
+  },
+  {
+   "tipo": "iconos",
+   "desde": 380.25,
+   "y": 460,
+   "paso": 0.4,
+   "gap": 370,
+   "escala": 1.35,
+   "items": [
+    {
+     "icono": "flor",
+     "texto": "ROSAS ✓",
+     "color": "#e8463a"
+    },
+    {
+     "icono": "cafe",
+     "texto": "CAFÉ ✓",
+     "color": "#a0683a"
+    },
+    {
+     "icono": "foco",
+     "texto": "LUZ ✓",
+     "color": "#ffd23f"
+    }
+   ],
+   "hasta": 389.14
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 391.34,
+   "iso": "br",
+   "nombre": "Brasil",
+   "estado": "CELEBRA",
+   "dato": "GANA",
+   "texto": "Se queda con el café.",
+   "hasta": 392.59
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 392.59,
+   "iso": "ec",
+   "nombre": "Ecuador",
+   "estado": "LE AFECTA",
+   "dato": "PIERDE Y GANA",
+   "texto": "Sin luz… pero con las rosas.",
+   "hasta": 394.8
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 394.8,
+   "iso": "pa",
+   "nombre": "Panamá",
+   "estado": "NI LO NOTA",
+   "dato": "FIN DEL CAMINO",
+   "texto": "Última parada del continente.",
+   "hasta": 396.79
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 396.79,
+   "pais": "VEN",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 396.84,
+   "pais": "ECU",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 396.89,
+   "pais": "PER",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 396.94,
+   "pais": "BRA",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 396.99,
+   "pais": "BOL",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 397.04,
+   "pais": "CHL",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 397.09,
+   "pais": "ARG",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 397.14,
+   "pais": "PRY",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 397.19,
+   "pais": "URY",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 397.24,
+   "pais": "GUY",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 397.29,
+   "pais": "SUR",
+   "color": "#ffd23f",
+   "hasta": 400.63
+  },
+  {
+   "tipo": "titulo",
+   "desde": 403.57,
+   "texto": "HAY PAÍSES QUE SE EXTRAÑAN\nPOR LO QUE *SON*",
+   "tam": 78,
+   "y": 300,
+   "hasta": 407.37
+  },
+  {
+   "tipo": "pregunta",
+   "desde": 407.37,
+   "texto": "¿QUÉ PAÍS DESAPARECEMOS DESPUÉS?",
+   "y": 470,
+   "hasta": 431.3
+  },
+  {
+   "tipo": "cinta",
+   "desde": 410.92,
+   "x": 960,
+   "y": 640,
+   "texto": "EL MÁS VOTADO ES EL SIGUIENTE",
+   "icono": "globo",
+   "color": "#2e9e5b",
+   "hasta": 431.3
+  }
+ ],
+ "audio": ".tmp/voz.wav"
+}

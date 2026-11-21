@@ -1,0 +1,599 @@
+{
+ "estilo": "pergamino",
+ "formato": "vertical",
+ "salida": "demo-chibi-mexico",
+ "duracion": 34,
+ "camara": [
+  {
+   "t": 0,
+   "lon": -40,
+   "lat": 28,
+   "ancho": 150
+  },
+  {
+   "t": 2.4,
+   "lon": -100,
+   "lat": 31,
+   "ancho": 58
+  },
+  {
+   "t": 6.4,
+   "lon": -101,
+   "lat": 31,
+   "ancho": 54,
+   "suave": false
+  },
+  {
+   "t": 8.0,
+   "lon": -98,
+   "lat": 31,
+   "ancho": 30
+  },
+  {
+   "t": 11.8,
+   "lon": -98,
+   "lat": 31.5,
+   "ancho": 28,
+   "suave": false
+  },
+  {
+   "t": 13.2,
+   "lon": -98,
+   "lat": 32,
+   "ancho": 56
+  },
+  {
+   "t": 16.5,
+   "lon": -98,
+   "lat": 31,
+   "ancho": 54,
+   "suave": false
+  },
+  {
+   "t": 18.6,
+   "lon": -99,
+   "lat": 25,
+   "ancho": 40
+  },
+  {
+   "t": 21.5,
+   "lon": -99,
+   "lat": 25,
+   "ancho": 38,
+   "suave": false
+  },
+  {
+   "t": 22.6,
+   "lon": -96,
+   "lat": 30,
+   "ancho": 52
+  },
+  {
+   "t": 27.4,
+   "lon": -98,
+   "lat": 31,
+   "ancho": 50,
+   "suave": false
+  },
+  {
+   "t": 28.8,
+   "lon": -120.7,
+   "lat": 38.4,
+   "ancho": 14
+  },
+  {
+   "t": 34,
+   "lon": -120.8,
+   "lat": 38.5,
+   "ancho": 12.5,
+   "suave": false
+  }
+ ],
+ "regiones": [
+  {
+   "id": "mexico",
+   "partes": [
+    "MEX"
+   ],
+   "color": "#5a9a4f"
+  },
+  {
+   "id": "texas",
+   "partes": [
+    "USA:TX"
+   ],
+   "colores": [
+    [
+     0,
+     "#5a9a4f"
+    ],
+    [
+     7.6,
+     "#c9a14a"
+    ],
+    [
+     11.0,
+     "#3e9aa3"
+    ]
+   ],
+   "destellos": [
+    7.0,
+    10.4
+   ]
+  },
+  {
+   "id": "cesion",
+   "partes": [
+    "USA:CA",
+    "USA:NV",
+    "USA:UT",
+    "USA:AZ",
+    "USA:NM"
+   ],
+   "colores": [
+    [
+     0,
+     "#5a9a4f"
+    ],
+    [
+     25.0,
+     "#3e9aa3"
+    ]
+   ],
+   "destellos": [
+    2.8,
+    24.4
+   ]
+  },
+  {
+   "id": "usa",
+   "partes": [
+    "USA:AL",
+    "USA:AR",
+    "USA:CO",
+    "USA:CT",
+    "USA:DE",
+    "USA:FL",
+    "USA:GA",
+    "USA:IA",
+    "USA:ID",
+    "USA:IL",
+    "USA:IN",
+    "USA:KS",
+    "USA:KY",
+    "USA:LA",
+    "USA:MA",
+    "USA:MD",
+    "USA:ME",
+    "USA:MI",
+    "USA:MN",
+    "USA:MO",
+    "USA:MS",
+    "USA:MT",
+    "USA:NC",
+    "USA:ND",
+    "USA:NE",
+    "USA:NH",
+    "USA:NJ",
+    "USA:NY",
+    "USA:OH",
+    "USA:OK",
+    "USA:OR",
+    "USA:PA",
+    "USA:RI",
+    "USA:SC",
+    "USA:SD",
+    "USA:TN",
+    "USA:VA",
+    "USA:VT",
+    "USA:WA",
+    "USA:WI",
+    "USA:WV",
+    "USA:WY",
+    "USA:DC"
+   ],
+   "color": "#3e9aa3"
+  },
+  {
+   "id": "britanico",
+   "partes": [
+    "CAN"
+   ],
+   "color": "#c8453c"
+  }
+ ],
+ "narracion": [
+  {
+   "desde": 0.3,
+   "hasta": 3.2,
+   "texto": "En 1835, México llegaba hasta aquí."
+  },
+  {
+   "desde": 3.3,
+   "hasta": 6.4,
+   "texto": "Texas, California, Nuevo México… todo era mexicano."
+  },
+  {
+   "desde": 6.6,
+   "hasta": 9.4,
+   "texto": "Pero en 1836, Texas se independizó…"
+  },
+  {
+   "desde": 9.6,
+   "hasta": 12.6,
+   "texto": "y en 1845, Estados Unidos se la anexó."
+  },
+  {
+   "desde": 12.8,
+   "hasta": 16.4,
+   "texto": "El presidente Polk quería más: California."
+  },
+  {
+   "desde": 16.6,
+   "hasta": 18.6,
+   "texto": "En 1846 estalló la guerra."
+  },
+  {
+   "desde": 18.7,
+   "hasta": 21.4,
+   "texto": "El ejército estadounidense llegó hasta la Ciudad de México."
+  },
+  {
+   "desde": 21.6,
+   "hasta": 24.6,
+   "texto": "En 1848, México firmó la paz… por 15 millones de dólares."
+  },
+  {
+   "desde": 24.7,
+   "hasta": 27.4,
+   "texto": "Y perdió más de la mitad de su territorio."
+  },
+  {
+   "desde": 27.6,
+   "hasta": 31.4,
+   "texto": "Lo peor: 9 días antes, alguien había encontrado oro en California."
+  }
+ ],
+ "subY": 1440,
+ "subTam": 54,
+ "eventos": [
+  {
+   "tipo": "anio",
+   "texto": "1835",
+   "desde": 0.4,
+   "hasta": 2.6,
+   "y": 300
+  },
+  {
+   "tipo": "rotulo",
+   "texto": "México",
+   "lon": -108,
+   "lat": 29.5,
+   "tam": 70,
+   "desde": 1.2,
+   "hasta": 24.5
+  },
+  {
+   "tipo": "muneco",
+   "desde": 1.6,
+   "hasta": 34,
+   "lon": -102,
+   "lat": 20.5,
+   "tam": 380,
+   "caras": [
+    [
+     0,
+     "feliz"
+    ],
+    [
+     7.0,
+     "sorpresa"
+    ],
+    [
+     8.2,
+     "triste"
+    ],
+    [
+     13.4,
+     "normal"
+    ],
+    [
+     16.9,
+     "sorpresa"
+    ],
+    [
+     18.3,
+     "enojado"
+    ],
+    [
+     23.0,
+     "grito"
+    ],
+    [
+     26.0,
+     "triste"
+    ]
+   ],
+   "habla": [
+    [
+     3.4,
+     6.2
+    ]
+   ],
+   "ropa": "#2f6b3a",
+   "banda": "#d6453d",
+   "sombrero": "chaco",
+   "pluma": "#d6453d",
+   "pelo": "negro",
+   "bigote": true,
+   "piel": "#e9bf98",
+   "dx": 90
+  },
+  {
+   "tipo": "rotulo",
+   "texto": "Texas",
+   "lon": -99,
+   "lat": 31,
+   "tam": 40,
+   "italica": true,
+   "desde": 3.6,
+   "hasta": 7.4
+  },
+  {
+   "tipo": "rotulo",
+   "texto": "California",
+   "lon": -119.6,
+   "lat": 37.2,
+   "tam": 40,
+   "italica": true,
+   "rot": -55,
+   "desde": 4.3,
+   "hasta": 27.0
+  },
+  {
+   "tipo": "rotulo",
+   "texto": "Nuevo México",
+   "lon": -106.5,
+   "lat": 36.5,
+   "tam": 36,
+   "italica": true,
+   "desde": 5.0,
+   "hasta": 16.0
+  },
+  {
+   "tipo": "anio",
+   "texto": "1836",
+   "desde": 6.7,
+   "hasta": 8.8,
+   "y": 300
+  },
+  {
+   "tipo": "rotulo",
+   "texto": "República de Texas",
+   "lon": -99,
+   "lat": 31.5,
+   "tam": 38,
+   "italica": true,
+   "desde": 7.6,
+   "hasta": 11.8
+  },
+  {
+   "tipo": "anio",
+   "texto": "1845",
+   "desde": 9.7,
+   "hasta": 11.8,
+   "y": 300
+  },
+  {
+   "tipo": "muneco",
+   "desde": 9.8,
+   "hasta": 34,
+   "lon": -86,
+   "lat": 36.0,
+   "tam": 380,
+   "caras": [
+    [
+     0,
+     "feliz"
+    ],
+    [
+     13.0,
+     "normal"
+    ],
+    [
+     16.8,
+     "enojado"
+    ],
+    [
+     22.0,
+     "feliz"
+    ]
+   ],
+   "habla": [
+    [
+     13.0,
+     16.2
+    ]
+   ],
+   "ropa": "#1f1f24",
+   "pelo": "canoso",
+   "botones": false
+  },
+  {
+   "tipo": "piensa",
+   "region": "cesion",
+   "color": "#5a9a4f",
+   "texto": "¡La quiero!",
+   "lon": -86,
+   "lat": 38.5,
+   "dx": -250,
+   "dy": -520,
+   "w": 380,
+   "h": 280,
+   "desde": 13.4,
+   "hasta": 16.4
+  },
+  {
+   "tipo": "anio",
+   "texto": "1846",
+   "desde": 16.6,
+   "hasta": 18.6,
+   "y": 300
+  },
+  {
+   "tipo": "tropa",
+   "de": [
+    -96.5,
+    31
+   ],
+   "a": [
+    -99.1,
+    20.2
+   ],
+   "n": 12,
+   "ropa": "#2f4f8a",
+   "sombrero": "kepi",
+   "colorSombrero": "#2f4f8a",
+   "desde": 16.9,
+   "dur": 4.2,
+   "hasta": 21.6,
+   "tam": 95
+  },
+  {
+   "tipo": "flecha",
+   "de": {
+    "lon": -96,
+    "lat": 29.5
+   },
+   "a": {
+    "lon": -99.1,
+    "lat": 19.6
+   },
+   "curva": -80,
+   "desde": 17.2,
+   "dur": 0.8,
+   "hasta": 21.4
+  },
+  {
+   "tipo": "rotulo",
+   "texto": "Ciudad de México",
+   "lon": -99.1,
+   "lat": 18.9,
+   "tam": 32,
+   "italica": true,
+   "desde": 18.8,
+   "hasta": 21.6
+  },
+  {
+   "tipo": "anio",
+   "texto": "1848",
+   "desde": 21.7,
+   "hasta": 23.8,
+   "y": 300
+  },
+  {
+   "tipo": "bolsa",
+   "lon": -88,
+   "lat": 36,
+   "texto": "$15 M",
+   "tam": 190,
+   "desde": 22.0,
+   "hasta": 26.0,
+   "hacia": {
+    "lon": -100,
+    "lat": 24,
+    "desde": 22.6,
+    "dur": 1.1
+   }
+  },
+  {
+   "tipo": "rotulo",
+   "texto": "Tratado de Guadalupe Hidalgo",
+   "x": 540,
+   "y": 560,
+   "tam": 44,
+   "italica": true,
+   "desde": 22.2,
+   "hasta": 27.2
+  },
+  {
+   "tipo": "cifra",
+   "texto": "MÁS DE LA MITAD",
+   "sub": "del territorio de México (1836-1848)",
+   "tam": 96,
+   "y": 1150,
+   "desde": 24.9,
+   "hasta": 27.5
+  },
+  {
+   "tipo": "rotulo",
+   "texto": "México",
+   "lon": -102,
+   "lat": 23.5,
+   "tam": 62,
+   "desde": 24.8,
+   "hasta": 34
+  },
+  {
+   "tipo": "rotulo",
+   "texto": "Estados Unidos",
+   "lon": -97,
+   "lat": 40.5,
+   "tam": 58,
+   "desde": 24.8,
+   "hasta": 27.6
+  },
+  {
+   "tipo": "rotulo",
+   "texto": "Sutter’s Mill · enero de 1848",
+   "lon": -120.89,
+   "lat": 38.55,
+   "tam": 30,
+   "italica": true,
+   "desde": 28.8,
+   "hasta": 34,
+   "dy": 110
+  },
+  {
+   "tipo": "oro",
+   "lon": -120.89,
+   "lat": 38.8,
+   "n": 10,
+   "desde": 28.6,
+   "hasta": 34
+  },
+  {
+   "tipo": "pregunta",
+   "texto": "¿MALA SUERTE O PLAN?",
+   "y": 1250,
+   "desde": 31.4,
+   "hasta": 34
+  },
+  {
+   "tipo": "muneco",
+   "desde": 28.9,
+   "hasta": 34,
+   "lon": -120.89,
+   "lat": 38.8,
+   "dx": -150,
+   "dy": 40,
+   "tam": 300,
+   "ropa": "#7a5230",
+   "sombrero": "sombrero",
+   "colorSombrero": "#a37a45",
+   "pelo": "castano",
+   "botones": false,
+   "solapa": false,
+   "caras": [
+    [
+     0,
+     "sorpresa"
+    ],
+    [
+     30.5,
+     "feliz"
+    ]
+   ]
+  }
+ ]
+}

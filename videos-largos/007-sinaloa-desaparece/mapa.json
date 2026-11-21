@@ -1,0 +1,10635 @@
+{
+ "estilo": "documental",
+ "estadosDe": [
+  "MEX"
+ ],
+ "salida": "que-pasaria-si-desaparece-sinaloa",
+ "duracion": 577.86,
+ "camara": [
+  {
+   "t": 0,
+   "lon": -102.5,
+   "lat": 23.8,
+   "ancho": 30
+  },
+  {
+   "t": 6.33,
+   "lon": -102.5,
+   "lat": 23.8,
+   "ancho": 30,
+   "suave": false
+  },
+  {
+   "t": 7.73,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 18.65,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9,
+   "suave": false
+  },
+  {
+   "t": 19.85,
+   "lon": -104,
+   "lat": 30,
+   "ancho": 34
+  },
+  {
+   "t": 38.03,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 65.32,
+   "lon": -106.5,
+   "lat": 26.5,
+   "ancho": 15
+  },
+  {
+   "t": 102.17,
+   "lon": -106.5,
+   "lat": 26.5,
+   "ancho": 15
+  },
+  {
+   "t": 132.45,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 144.43,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 169.24,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9,
+   "suave": false
+  },
+  {
+   "t": 170.44,
+   "lon": -100,
+   "lat": 27,
+   "ancho": 30
+  },
+  {
+   "t": 186.66,
+   "lon": -100,
+   "lat": 27,
+   "ancho": 30,
+   "suave": false
+  },
+  {
+   "t": 187.46,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 198.9,
+   "lon": -104,
+   "lat": 30,
+   "ancho": 30
+  },
+  {
+   "t": 210.62,
+   "lon": -104,
+   "lat": 30,
+   "ancho": 30,
+   "suave": false
+  },
+  {
+   "t": 211.42,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 216.06,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9,
+   "suave": false
+  },
+  {
+   "t": 217.06,
+   "lon": -100,
+   "lat": 21.5,
+   "ancho": 26
+  },
+  {
+   "t": 233.56,
+   "lon": -107.4,
+   "lat": 23.6,
+   "ancho": 9
+  },
+  {
+   "t": 261.99,
+   "lon": -106.5,
+   "lat": 23.3,
+   "ancho": 4.5
+  },
+  {
+   "t": 305.01,
+   "lon": -106.8,
+   "lat": 24.3,
+   "ancho": 6
+  },
+  {
+   "t": 384.81,
+   "lon": -110,
+   "lat": 29,
+   "ancho": 22
+  },
+  {
+   "t": 402.27,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 410.11,
+   "lon": -107.4,
+   "lat": 24.8,
+   "ancho": 3.5
+  },
+  {
+   "t": 438.57,
+   "lon": -107.4,
+   "lat": 24.8,
+   "ancho": 3.5,
+   "suave": false
+  },
+  {
+   "t": 439.57,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 446.11,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9,
+   "suave": false
+  },
+  {
+   "t": 447.31,
+   "lon": -100,
+   "lat": 26,
+   "ancho": 34
+  },
+  {
+   "t": 454.94,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 483.28,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 491.47,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  },
+  {
+   "t": 505.19,
+   "lon": -103,
+   "lat": 28,
+   "ancho": 26
+  },
+  {
+   "t": 529.54,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 12
+  },
+  {
+   "t": 530.04,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 12,
+   "suave": false
+  },
+  {
+   "t": 535.04,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 8
+  },
+  {
+   "t": 536.55,
+   "lon": -107.2,
+   "lat": 24.6,
+   "ancho": 9
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "ambiente",
+   "desde": 0,
+   "hasta": 577.86
+  },
+  {
+   "tipo": "hud",
+   "desde": 0,
+   "hasta": 577.86,
+   "lugares": [
+    {
+     "t": 0,
+     "texto": "México"
+    },
+    {
+     "t": 6.33,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 18.65,
+     "texto": "Norteamérica"
+    },
+    {
+     "t": 38.03,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 65.32,
+     "texto": "Noroeste de México"
+    },
+    {
+     "t": 102.17,
+     "texto": "Noroeste de México"
+    },
+    {
+     "t": 132.45,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 144.43,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 169.24,
+     "texto": "México"
+    },
+    {
+     "t": 186.66,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 198.9,
+     "texto": "Norteamérica"
+    },
+    {
+     "t": 210.62,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 216.06,
+     "texto": "México"
+    },
+    {
+     "t": 233.56,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 261.99,
+     "texto": "Mazatlán, Sinaloa"
+    },
+    {
+     "t": 305.01,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 384.81,
+     "texto": "México"
+    },
+    {
+     "t": 402.27,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 410.11,
+     "texto": "Culiacán, Sinaloa"
+    },
+    {
+     "t": 438.57,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 446.11,
+     "texto": "México"
+    },
+    {
+     "t": 454.94,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 483.28,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 491.47,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 505.19,
+     "texto": "Norteamérica"
+    },
+    {
+     "t": 529.54,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 530.04,
+     "texto": "Sinaloa, México"
+    },
+    {
+     "t": 536.55,
+     "texto": "Sinaloa, México"
+    }
+   ]
+  },
+  {
+   "tipo": "ficha",
+   "desde": 0.4,
+   "hasta": 3.67,
+   "kicker": "Goods Uncovered · México",
+   "texto": "¿Y si Sinaloa desaparece?",
+   "sub": "Lo que el país perdería en 24 horas",
+   "tam": 74
+  },
+  {
+   "tipo": "barrido",
+   "desde": 3.37,
+   "hasta": 4.17,
+   "dur": 0.8
+  },
+  {
+   "tipo": "fronteras",
+   "desde": 3.77,
+   "hasta": 60.02
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 3.77,
+   "hasta": 8.83,
+   "pais": "MEX:SI",
+   "relleno": "rgba(255,210,63,.14)"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 3.77,
+   "hasta": 5.14,
+   "forma": "alerta",
+   "en": [
+    -100.5,
+    26.5
+   ],
+   "texto": "SIN GUERRA"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 5.14,
+   "hasta": 9.63,
+   "forma": "olas",
+   "en": [
+    -100.5,
+    26.5
+   ],
+   "texto": "SIN TERREMOTO",
+   "ty": 60
+  },
+  {
+   "tipo": "hueco",
+   "desde": 8.23,
+   "hasta": 64.57,
+   "pais": "MEX:SI",
+   "t": 8.83,
+   "dur": 1.6
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 10.19,
+   "hasta": 15.36,
+   "lon": -108.6,
+   "lat": 25.9,
+   "dx": -150,
+   "dy": -110,
+   "texto": "3,026,943 PERSONAS",
+   "sub": "INEGI · CENSO 2020"
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 12.41,
+   "hasta": 15.08,
+   "en": [
+    -107.39,
+    24.8
+   ],
+   "texto": "CULIACÁN",
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 12.91,
+   "hasta": 15.08,
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "texto": "MAZATLÁN",
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 13.61,
+   "hasta": 15.08,
+   "en": [
+    -108.99,
+    25.79
+   ],
+   "texto": "LOS MOCHIS",
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 17.82,
+   "hasta": 20.27,
+   "forma": "precio",
+   "en": {
+    "x": 1500,
+    "y": 420
+   },
+   "tam": 1.4,
+   "texto": "EL PRECIO"
+  },
+  {
+   "tipo": "tarjetaClip",
+   "desde": 20.32,
+   "hasta": 24.18,
+   "codigo": "S02",
+   "en": [
+    -95.37,
+    29.76
+   ],
+   "x": 1420,
+   "y": 360,
+   "w": 520,
+   "texto": "Supermercado en Texas"
+  },
+  {
+   "tipo": "camino",
+   "desde": 20.32,
+   "hasta": 24.18,
+   "puntos": [
+    [
+     -107.39,
+     24.8
+    ],
+    [
+     -110.94,
+     31.31
+    ],
+    [
+     -104,
+     31.5
+    ],
+    [
+     -95.37,
+     29.76
+    ]
+   ],
+   "vehiculo": "camion",
+   "dur": 2.6,
+   "color": "#ff5a4a",
+   "tam": 110
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 24.18,
+   "hasta": 28.06,
+   "img": "clips/fotos-ia/S03.jpg",
+   "en": [
+    -103.35,
+    20.67
+   ],
+   "x": 1400,
+   "y": 560,
+   "w": 500,
+   "texto": "Tortillería en Guadalajara",
+   "credito": "Imagen ilustrativa con IA",
+   "rot": 2
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 24.18,
+   "hasta": 28.06,
+   "en": [
+    -103.35,
+    20.67
+   ],
+   "texto": "GUADALAJARA"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 28.06,
+   "hasta": 35.6,
+   "img": "clips/fotos-ia/S04.jpg",
+   "en": [
+    -118.24,
+    34.05
+   ],
+   "x": 1380,
+   "y": 420,
+   "w": 500,
+   "texto": "Restaurante en Los Ángeles",
+   "credito": "Imagen ilustrativa con IA",
+   "rot": -2
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 28.06,
+   "hasta": 32.6,
+   "en": [
+    -118.24,
+    34.05
+   ],
+   "texto": "LOS ÁNGELES"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 32.9,
+   "hasta": 37.93,
+   "kicker": "Lo que todos conocen",
+   "texto": "Las noticias",
+   "sub": "Pero Sinaloa es mucho más que eso",
+   "tam": 60
+  },
+  {
+   "tipo": "barrido",
+   "desde": 37.63,
+   "hasta": 38.43,
+   "dur": 0.8
+  },
+  {
+   "tipo": "fila",
+   "desde": 38.33,
+   "hasta": 41.19,
+   "icono": "tomate",
+   "en": {
+    "x": 1450,
+    "y": 520
+   },
+   "n": 5,
+   "resalta": 0,
+   "r": 34,
+   "texto": "LO QUE MÉXICO PERDERÍA DE VERDAD"
+  },
+  {
+   "tipo": "fila",
+   "desde": 41.19,
+   "hasta": 42.98,
+   "icono": "maiz",
+   "en": {
+    "x": 1450,
+    "y": 520
+   },
+   "n": 5,
+   "resalta": 5,
+   "r": 34,
+   "texto": "TU MESA"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 42.98,
+   "hasta": 43.73,
+   "forma": "notas",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "tam": 1.3,
+   "texto": "TU MÚSICA",
+   "ty": 60
+  },
+  {
+   "tipo": "fila",
+   "desde": 43.73,
+   "hasta": 45.05,
+   "icono": "lata",
+   "en": {
+    "x": 1450,
+    "y": 520
+   },
+   "n": 5,
+   "resalta": 5,
+   "r": 34,
+   "texto": "TU ALACENA"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 45.05,
+   "hasta": 50.6,
+   "forma": "reloj",
+   "en": {
+    "x": 1500,
+    "y": 420
+   },
+   "tam": 1.4,
+   "texto": "YA ESTÁ PASANDO",
+   "ty": 80
+  },
+  {
+   "tipo": "dato",
+   "desde": 50.6,
+   "hasta": 52.18,
+   "kicker": "El dato del final",
+   "sub": "Y no es por lo que crees",
+   "fuente": "",
+   "suf": "",
+   "texto": "?"
+  },
+  {
+   "tipo": "gente",
+   "desde": 52.18,
+   "hasta": 63.02,
+   "modo": "grupo",
+   "en": {
+    "x": 1450,
+    "y": 560
+   },
+   "n": 6,
+   "columnas": 6,
+   "tam": 46,
+   "texto": "EL EXPERIMENTO"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 56.71,
+   "hasta": 60.02,
+   "de": {
+    "x": 1250,
+    "y": 300
+   },
+   "a": [
+    -107.39,
+    24.8
+   ],
+   "texto": "PIEZA POR PIEZA",
+   "curva": 0.25
+  },
+  {
+   "tipo": "ficha",
+   "desde": 60.02,
+   "hasta": 64.87,
+   "kicker": "No te lo pierdas",
+   "texto": "El capítulo 5 lo cambia todo",
+   "sub": "",
+   "tam": 58
+  },
+  {
+   "tipo": "capitulo",
+   "desde": 65.17,
+   "hasta": 67.42,
+   "n": 1,
+   "texto": "El hueco"
+  },
+  {
+   "tipo": "fronteras",
+   "desde": 65.32,
+   "hasta": 143.68
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 67.32,
+   "hasta": 86.44,
+   "pais": "MEX:SI",
+   "relleno": "rgba(255,210,63,.12)"
+  },
+  {
+   "tipo": "dato",
+   "desde": 72.19,
+   "hasta": 75.34,
+   "kicker": "Superficie",
+   "sub": "Una franja larga y delgada pegada al Pacífico",
+   "fuente": "INEGI",
+   "suf": "km²",
+   "num": [
+    0,
+    57365
+   ]
+  },
+  {
+   "tipo": "dato",
+   "desde": 75.39,
+   "hasta": 80.51,
+   "kicker": "Más grande que",
+   "sub": "Costa Rica: 51,100 km² · Sinaloa: 57,365 km²",
+   "fuente": "",
+   "suf": "",
+   "tam": 150,
+   "texto": "COSTA RICA"
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 77.51,
+   "hasta": 86.44,
+   "lon": -110.8,
+   "lat": 29.3,
+   "dx": 120,
+   "dy": -70,
+   "texto": "SONORA",
+   "tam": 28
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 79.03,
+   "hasta": 86.44,
+   "lon": -106.2,
+   "lat": 28.4,
+   "dx": 120,
+   "dy": -70,
+   "texto": "CHIHUAHUA",
+   "tam": 28
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 80.21,
+   "hasta": 86.44,
+   "lon": -104.66,
+   "lat": 24.02,
+   "dx": 130,
+   "dy": -70,
+   "texto": "DURANGO",
+   "tam": 28
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 80.79,
+   "hasta": 88.36,
+   "img": "fotos-reales/barrancas-2.jpg",
+   "en": [
+    -106.2,
+    26.0
+   ],
+   "x": 1450,
+   "y": 640,
+   "w": 440,
+   "texto": "Sierra Madre Occidental",
+   "credito": "Foto: No machine-readable author provide · Public domain"
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 85.36,
+   "hasta": 86.44,
+   "lon": -104.9,
+   "lat": 21.8,
+   "dx": 140,
+   "dy": -70,
+   "texto": "NAYARIT",
+   "tam": 28
+  },
+  {
+   "tipo": "hueco",
+   "desde": 86.14,
+   "hasta": 143.68,
+   "pais": "MEX:SI",
+   "t": 86.84,
+   "dur": 1.4
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 89.98,
+   "hasta": 93.75,
+   "de": [
+    -104.66,
+    24.02
+   ],
+   "a": [
+    -106.42,
+    23.22
+   ],
+   "texto": "SIN SALIDA AL MAR",
+   "color": "#ff5a4a",
+   "curva": -0.25
+  },
+  {
+   "tipo": "barrido",
+   "desde": 93.35,
+   "hasta": 94.15,
+   "dur": 0.8
+  },
+  {
+   "tipo": "foto",
+   "desde": 93.75,
+   "hasta": 102.17,
+   "img": "fotos-reales/baluarte-1.jpg",
+   "z0": 1.02,
+   "z1": 1.14,
+   "credito": "Foto: Fotrogafo Especial · CC0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 94.05,
+   "hasta": 102.07,
+   "kicker": "Frontera Durango–Sinaloa",
+   "texto": "Puente Baluarte",
+   "sub": "402 m de altura · En 2012, el puente atirantado más alto del mundo (Guinness)",
+   "tam": 60
+  },
+  {
+   "tipo": "barrido",
+   "desde": 101.77,
+   "hasta": 102.57,
+   "dur": 0.8
+  },
+  {
+   "tipo": "camino",
+   "desde": 102.17,
+   "hasta": 104.43,
+   "puntos": [
+    [
+     -104.66,
+     24.02
+    ],
+    [
+     -105.78,
+     23.85
+    ],
+    [
+     -106.42,
+     23.22
+    ]
+   ],
+   "vehiculo": "camion",
+   "dur": 2.2,
+   "color": "#ffffff",
+   "tam": 100
+  },
+  {
+   "tipo": "circuloPro",
+   "desde": 103.17,
+   "hasta": 104.43,
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "r": 36,
+   "texto": "MAZATLÁN"
+  },
+  {
+   "tipo": "camino",
+   "desde": 104.43,
+   "hasta": 111.56,
+   "puntos": [
+    [
+     -106.09,
+     28.63
+    ],
+    [
+     -107.6,
+     27.6
+    ],
+    [
+     -107.85,
+     27.45
+    ],
+    [
+     -108.99,
+     25.79
+    ]
+   ],
+   "vehiculo": "tren",
+   "dur": 4.5,
+   "color": "#ffd23f",
+   "tam": 110,
+   "fin": true
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 106.88,
+   "hasta": 109.72,
+   "img": "fotos-reales/chepe-1.jpg",
+   "en": [
+    -107.85,
+    27.45
+   ],
+   "x": 1450,
+   "y": 380,
+   "w": 500,
+   "texto": "El Chepe · Estación Creel",
+   "credito": "Foto: Norcasa · CC0"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 107.41,
+   "hasta": 111.56,
+   "img": "fotos-reales/barrancas-2.jpg",
+   "en": [
+    -107.85,
+    27.45
+   ],
+   "x": 1450,
+   "y": 380,
+   "w": 500,
+   "texto": "Barrancas del Cobre",
+   "credito": "Foto: No machine-readable author provide · Public domain",
+   "rot": 2
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 109.72,
+   "hasta": 115.17,
+   "en": [
+    -108.99,
+    25.79
+   ],
+   "texto": "LOS MOCHIS"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 111.56,
+   "hasta": 117.91,
+   "forma": "alerta",
+   "en": [
+    -105.78,
+    23.85
+   ],
+   "texto": "LLEVA A UN HUECO"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 115.17,
+   "hasta": 117.96,
+   "de": [
+    -106.09,
+    28.63
+   ],
+   "a": [
+    -109.6,
+    25.2
+   ],
+   "texto": "¿AL PACÍFICO?",
+   "punteada": true,
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 117.96,
+   "hasta": 122.3,
+   "forma": "gotas",
+   "en": [
+    -106.6,
+    25.6
+   ],
+   "tam": 1.6,
+   "texto": "MÁS DE 10 RÍOS",
+   "ty": 70
+  },
+  {
+   "tipo": "dato",
+   "desde": 122.3,
+   "hasta": 132.2,
+   "kicker": "Presas",
+   "sub": "y una red de canales que riega más de 800,000 hectáreas",
+   "fuente": "Gobierno de Sinaloa",
+   "suf": "",
+   "num": [
+    0,
+    11
+   ]
+  },
+  {
+   "tipo": "ficha",
+   "desde": 129.5,
+   "hasta": 132.35,
+   "kicker": "Uno de los más grandes de México",
+   "texto": "Distritos de riego",
+   "sub": "Más de 800,000 hectáreas regadas",
+   "tam": 60
+  },
+  {
+   "tipo": "barrido",
+   "desde": 132.05,
+   "hasta": 132.85,
+   "dur": 0.8
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 132.45,
+   "hasta": 140.65,
+   "forma": "gotas",
+   "en": [
+    -107.3,
+    24.9
+   ],
+   "tam": 1.5,
+   "texto": "YA NO RIEGA NADA",
+   "ty": 70
+  },
+  {
+   "tipo": "fila",
+   "desde": 142.29,
+   "hasta": 147.18,
+   "icono": "tomate",
+   "en": {
+    "x": 1450,
+    "y": 540
+   },
+   "n": 5,
+   "resalta": 5,
+   "r": 34,
+   "texto": "LA COMIDA DE MÉXICO"
+  },
+  {
+   "tipo": "capitulo",
+   "desde": 144.28,
+   "hasta": 146.53,
+   "n": 2,
+   "texto": "La mesa"
+  },
+  {
+   "tipo": "fronteras",
+   "desde": 144.43,
+   "hasta": 232.81
+  },
+  {
+   "tipo": "ficha",
+   "desde": 146.16,
+   "hasta": 151.71,
+   "kicker": "Su apodo",
+   "texto": "El granero de México",
+   "sub": "Y no es un apodo bonito: es una cifra",
+   "tam": 60
+  },
+  {
+   "tipo": "resaltar",
+   "desde": 146.43,
+   "hasta": 232.81,
+   "pais": "MEX:SI",
+   "relleno": "rgba(120,200,90,.16)",
+   "color": "#9be36b"
+  },
+  {
+   "tipo": "gente",
+   "desde": 151.71,
+   "hasta": 159.74,
+   "modo": "cosechar",
+   "en": [
+    -107.8,
+    25.3
+   ],
+   "n": 5,
+   "columnas": 5,
+   "tam": 34,
+   "texto": "COSECHA"
+  },
+  {
+   "tipo": "dato",
+   "desde": 151.71,
+   "hasta": 157.19,
+   "kicker": "Maíz · temporada 2022-23",
+   "sub": "La mejor temporada reciente de Sinaloa",
+   "fuente": "Imagen Agropecuaria",
+   "suf": "millones de t",
+   "dec": 2,
+   "num": [
+    0,
+    6.48
+   ]
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 157.19,
+   "hasta": 159.74,
+   "img": "fotos-reales/tortillas-1.jpg",
+   "en": [
+    -107.39,
+    24.8
+   ],
+   "x": 1400,
+   "y": 420,
+   "w": 500,
+   "texto": "Maíz blanco: el de la tortilla",
+   "credito": "Foto: Marifer Veloz · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "fila",
+   "desde": 159.74,
+   "hasta": 172.54,
+   "icono": "maiz",
+   "en": {
+    "x": 1420,
+    "y": 520
+   },
+   "n": 7,
+   "resalta": 1,
+   "r": 30,
+   "texto": "CASI 1 DE CADA 7 TONELADAS (2024)"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 171.52,
+   "hasta": 177.47,
+   "de": [
+    -93,
+    37
+   ],
+   "a": [
+    -99.13,
+    19.43
+   ],
+   "texto": "MAÍZ DE AFUERA",
+   "curva": 0.2
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 175.84,
+   "hasta": 184.44,
+   "forma": "precio",
+   "en": {
+    "x": 1600,
+    "y": 330
+   },
+   "tam": 1.3,
+   "texto": "LA TORTILLA SUBE"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 177.47,
+   "hasta": 186.91,
+   "img": "clips/fotos-ia/S03.jpg",
+   "en": [
+    -99.13,
+    19.43
+   ],
+   "x": 1380,
+   "y": 640,
+   "w": 500,
+   "texto": "La base de cada comida",
+   "credito": "Imagen ilustrativa con IA"
+  },
+  {
+   "tipo": "dato",
+   "desde": 186.96,
+   "hasta": 194.67,
+   "kicker": "Garbanzo",
+   "sub": "de todo el garbanzo de México sale de un solo estado",
+   "fuente": "SIAP / SADER vía CODESIN",
+   "suf": "%",
+   "num": [
+    0,
+    62
+   ]
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 187.36,
+   "hasta": 194.82,
+   "img": "fotos-reales/garbanzo-1.jpg",
+   "en": [
+    -107.39,
+    24.8
+   ],
+   "x": 1450,
+   "y": 480,
+   "w": 500,
+   "texto": "Garbanzo",
+   "credito": "Foto: PJeganathan · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "dato",
+   "desde": 194.87,
+   "hasta": 198.9,
+   "kicker": "Tomate",
+   "sub": "en una sola temporada",
+   "fuente": "CAADES",
+   "suf": "t",
+   "num": [
+    0,
+    800000
+   ]
+  },
+  {
+   "tipo": "barrido",
+   "desde": 198.5,
+   "hasta": 199.3,
+   "dur": 0.8
+  },
+  {
+   "tipo": "fila",
+   "desde": 198.9,
+   "hasta": 207.53,
+   "icono": "tomate",
+   "en": {
+    "x": 1420,
+    "y": 800
+   },
+   "n": 5,
+   "resalta": 1,
+   "r": 36,
+   "texto": "1 DE CADA 5 TOMATES DE MÉXICO"
+  },
+  {
+   "tipo": "camino",
+   "desde": 202.3,
+   "hasta": 210.92,
+   "puntos": [
+    [
+     -107.39,
+     24.8
+    ],
+    [
+     -110.94,
+     31.31
+    ],
+    [
+     -100,
+     37
+    ],
+    [
+     -87.63,
+     41.88
+    ]
+   ],
+   "vehiculo": "camion",
+   "dur": 4,
+   "color": "#ff5a4a",
+   "tam": 110
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 208.08,
+   "hasta": 213.92,
+   "img": "fotos-reales/tomate-2.jpg",
+   "en": [
+    -87.63,
+    41.88
+   ],
+   "x": 1350,
+   "y": 640,
+   "w": 500,
+   "texto": "Una ensalada en Chicago",
+   "credito": "Foto: cogdogblog · CC BY 2.0"
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 210.92,
+   "hasta": 216.06,
+   "en": [
+    -108.99,
+    25.79
+   ],
+   "texto": "PAPA",
+   "color": "#9be36b"
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 211.37,
+   "hasta": 216.06,
+   "en": [
+    -107.9,
+    25.4
+   ],
+   "texto": "CHILE",
+   "color": "#9be36b"
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 211.82,
+   "hasta": 216.06,
+   "en": [
+    -106.2,
+    23.6
+   ],
+   "texto": "MANGO",
+   "color": "#9be36b"
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 212.27,
+   "hasta": 216.06,
+   "en": [
+    -108.3,
+    25.9
+   ],
+   "texto": "FRIJOL",
+   "color": "#9be36b"
+  },
+  {
+   "tipo": "gente",
+   "desde": 218.7,
+   "hasta": 235.14,
+   "modo": "caminar",
+   "de": [
+    -96.72,
+    17.06
+   ],
+   "a": [
+    -107.39,
+    24.8
+   ],
+   "dur": 6,
+   "n": 7,
+   "tam": 34,
+   "en": [
+    -97,
+    15.6
+   ],
+   "texto": "JORNALEROS DEL SUR"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 221.29,
+   "hasta": 232.81,
+   "de": [
+    -96.72,
+    17.06
+   ],
+   "a": [
+    -107,
+    24.6
+   ],
+   "curva": 0.15,
+   "punteada": true,
+   "grosor": 4
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 221.29,
+   "hasta": 232.81,
+   "de": [
+    -99.5,
+    17.55
+   ],
+   "a": [
+    -107,
+    24.6
+   ],
+   "curva": 0.15,
+   "punteada": true,
+   "grosor": 4
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 221.29,
+   "hasta": 232.81,
+   "de": [
+    -93.1,
+    16.75
+   ],
+   "a": [
+    -107,
+    24.6
+   ],
+   "curva": 0.15,
+   "punteada": true,
+   "grosor": 4
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 229.55,
+   "hasta": 233.21,
+   "lon": -99,
+   "lat": 20.5,
+   "dx": 150,
+   "dy": -90,
+   "texto": "~2,000 KM",
+   "sub": "DE SU CASA"
+  },
+  {
+   "tipo": "capitulo",
+   "desde": 233.41,
+   "hasta": 235.66,
+   "n": 3,
+   "texto": "El mar"
+  },
+  {
+   "tipo": "fronteras",
+   "desde": 233.56,
+   "hasta": 304.26
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 235.19,
+   "hasta": 240.75,
+   "forma": "olas",
+   "en": [
+    -108.4,
+    23.2
+   ],
+   "tam": 1.4
+  },
+  {
+   "tipo": "circuloPro",
+   "desde": 235.19,
+   "hasta": 240.6,
+   "en": [
+    -107.2,
+    24.2
+   ],
+   "r": 120,
+   "texto": "LA COSTA DE SINALOA"
+  },
+  {
+   "tipo": "dato",
+   "desde": 240.8,
+   "hasta": 255.46,
+   "kicker": "Camarón · 2023",
+   "sub": "45 % del valor de todo el camarón de México",
+   "fuente": "CONAPESCA",
+   "suf": "t",
+   "num": [
+    0,
+    115132
+   ]
+  },
+  {
+   "tipo": "barrido",
+   "desde": 252.06,
+   "hasta": 252.86,
+   "dur": 0.8
+  },
+  {
+   "tipo": "foto",
+   "desde": 252.46,
+   "hasta": 261.99,
+   "img": "fotos-reales/aguachile-1.jpg",
+   "z0": 1.04,
+   "z1": 1.14,
+   "credito": "Foto: Pequeño mar · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 252.76,
+   "hasta": 255.4,
+   "kicker": "Hecho con camarón de Sinaloa",
+   "texto": "Aguachile",
+   "sub": "",
+   "tam": 60
+  },
+  {
+   "tipo": "ficha",
+   "desde": 255.45,
+   "hasta": 261.89,
+   "kicker": "También nacieron en Sinaloa",
+   "texto": "Tacos gobernador",
+   "sub": "",
+   "tam": 60
+  },
+  {
+   "tipo": "barrido",
+   "desde": 261.59,
+   "hasta": 262.39,
+   "dur": 0.8
+  },
+  {
+   "tipo": "circuloPro",
+   "desde": 261.99,
+   "hasta": 277.62,
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "r": 40,
+   "texto": "MAZATLÁN"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 262.29,
+   "hasta": 266.82,
+   "img": "fotos-reales/mazatlan-vista-1.jpg",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "x": 1400,
+   "y": 420,
+   "w": 500,
+   "texto": "Mazatlán desde la Estación Espacial",
+   "credito": "Foto: NASA · Dominio público"
+  },
+  {
+   "tipo": "fila",
+   "desde": 266.82,
+   "hasta": 272.64,
+   "icono": "lata",
+   "en": {
+    "x": 1420,
+    "y": 520
+   },
+   "n": 10,
+   "resalta": 7,
+   "r": 26,
+   "texto": "70 DE CADA 100 KILOS DE ATÚN (2015)"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 272.64,
+   "hasta": 277.62,
+   "img": "fotos-reales/faro-1.jpg",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "x": 1400,
+   "y": 420,
+   "w": 500,
+   "texto": "Puerto de Mazatlán",
+   "credito": "Foto: Eli Duke · CC BY-SA 2.0",
+   "rot": 2
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 277.62,
+   "hasta": 285.18,
+   "forma": "precio",
+   "en": {
+    "x": 1500,
+    "y": 360
+   },
+   "tam": 1.3,
+   "texto": "ATÚN Y CAMARÓN"
+  },
+  {
+   "tipo": "camino",
+   "desde": 282.18,
+   "hasta": 286.69,
+   "puntos": [
+    [
+     -106.42,
+     23.22
+    ],
+    [
+     -106.9,
+     22.7
+    ],
+    [
+     -107.8,
+     22.5
+    ]
+   ],
+   "vehiculo": "barco",
+   "dur": 3.5,
+   "color": "#7fd6ff",
+   "tam": 150,
+   "curva": 0.25
+  },
+  {
+   "tipo": "barrido",
+   "desde": 286.31,
+   "hasta": 287.11,
+   "dur": 0.8
+  },
+  {
+   "tipo": "foto",
+   "desde": 286.71,
+   "hasta": 297.21,
+   "img": "clips/fotos-ia/S22b.jpg",
+   "z0": 1.03,
+   "z1": 1.12,
+   "credito": "Imagen ilustrativa con IA"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 287.01,
+   "hasta": 297.21,
+   "kicker": "Cada año, al terminar la veda",
+   "texto": "La despedida de los barcos",
+   "sub": "",
+   "tam": 60
+  },
+  {
+   "tipo": "foto",
+   "desde": 297.21,
+   "hasta": 304.56,
+   "img": "fotos-reales/malecon-2.jpg",
+   "z0": 1.03,
+   "z1": 1.12,
+   "credito": "Foto: El Nuevo Doge · CC0"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 299.11,
+   "hasta": 307.56,
+   "forma": "notas",
+   "en": {
+    "x": 960,
+    "y": 600
+   },
+   "tam": 1.6
+  },
+  {
+   "tipo": "capitulo",
+   "desde": 304.86,
+   "hasta": 307.11,
+   "n": 4,
+   "texto": "El sonido de México"
+  },
+  {
+   "tipo": "fronteras",
+   "desde": 305.01,
+   "hasta": 409.36
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 311.24,
+   "hasta": 314.74,
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "texto": "MAZATLÁN · 18-NOV-1917"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 312.28,
+   "hasta": 317.53,
+   "img": "fotos-reales/pedro-infante-1.jpg",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "x": 1450,
+   "y": 440,
+   "w": 420,
+   "texto": "Pedro Infante (archivo, 1948)",
+   "credito": "Foto: se desconoce el autor es del domin · Public domain"
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 314.74,
+   "hasta": 321.23,
+   "en": [
+    -108.08,
+    25.46
+   ],
+   "texto": "GUAMÚCHIL"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 317.58,
+   "hasta": 321.23,
+   "img": "fotos-reales/pedro-estatua-1.jpg",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "x": 1400,
+   "y": 420,
+   "w": 500,
+   "texto": "Monumento a Pedro Infante, Mazatlán",
+   "credito": "Foto: El Nuevo Doge · CC0",
+   "rot": -2
+  },
+  {
+   "tipo": "dato",
+   "desde": 321.23,
+   "hasta": 333.79,
+   "kicker": "Cada 15 de abril",
+   "sub": "Miles de personas lo siguen recordando",
+   "fuente": "",
+   "suf": "",
+   "texto": "1957"
+  },
+  {
+   "tipo": "hueco",
+   "desde": 330.79,
+   "hasta": 334.91,
+   "pais": "MEX:SI",
+   "t": 331.09000000000003,
+   "dur": 1.2
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 336.47,
+   "hasta": 343.83,
+   "en": [
+    -105.86,
+    22.99
+   ],
+   "texto": "EL ROSARIO"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 337.85,
+   "hasta": 343.83,
+   "img": "fotos-reales/lola-beltran-1.jpg",
+   "en": [
+    -105.86,
+    22.99
+   ],
+   "x": 1400,
+   "y": 420,
+   "w": 500,
+   "texto": "Museo Lola Beltrán, El Rosario",
+   "credito": "Foto: David Stanley · CC BY 2.0"
+  },
+  {
+   "tipo": "pinPro",
+   "desde": 343.83,
+   "hasta": 359.66,
+   "en": [
+    -108.08,
+    25.46
+   ],
+   "texto": "GUAMÚCHIL"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 343.83,
+   "hasta": 346.4,
+   "img": "fotos-reales/ana-gabriel-1.jpg",
+   "en": [
+    -108.08,
+    25.46
+   ],
+   "x": 1480,
+   "y": 420,
+   "w": 360,
+   "texto": "Ana Gabriel",
+   "credito": "Foto: Juan José carranza · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 346.4,
+   "hasta": 353.68,
+   "img": "fotos-reales/recodo-1.jpg",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "x": 1400,
+   "y": 420,
+   "w": 500,
+   "texto": "Cruz Lizárraga · Banda El Recodo, 1938",
+   "credito": "Foto: Gabriel Saldana · CC BY-SA 2.0"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 346.4,
+   "hasta": 359.66,
+   "forma": "notas",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "tam": 1.2
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 353.68,
+   "hasta": 362.66,
+   "img": "fotos-reales/recodo-2.jpg",
+   "en": [
+    -106.42,
+    23.22
+   ],
+   "x": 1400,
+   "y": 420,
+   "w": 500,
+   "texto": "Banda El Recodo en concierto",
+   "credito": "Foto: Christian Frausto Bernal · CC BY-SA 2.0",
+   "rot": 2
+  },
+  {
+   "tipo": "ficha",
+   "desde": 360.06,
+   "hasta": 366.42,
+   "kicker": "Tambora, clarinetes y trompetas",
+   "texto": "La banda sinaloense",
+   "sub": "",
+   "tam": 60
+  },
+  {
+   "tipo": "foto",
+   "desde": 366.52,
+   "hasta": 378.4,
+   "img": "fotos-reales/tambora-2.jpg",
+   "z0": 1.02,
+   "z1": 1.1,
+   "credito": "Foto: Unknown authorUnknown author · Public domain"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 366.82,
+   "hasta": 378.3,
+   "kicker": "Siglo XIX",
+   "texto": "Las bandas de viento",
+   "sub": "Llegaron al puerto de Mazatlán",
+   "tam": 60
+  },
+  {
+   "tipo": "barrido",
+   "desde": 378.0,
+   "hasta": 378.8,
+   "dur": 0.8
+  },
+  {
+   "tipo": "foto",
+   "desde": 378.4,
+   "hasta": 384.81,
+   "img": "fotos-reales/tambora-3.jpg",
+   "z0": 1.03,
+   "z1": 1.12,
+   "credito": "Foto: Monica Guadalupe Delgado Del Real · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "barrido",
+   "desde": 384.41,
+   "hasta": 385.21,
+   "dur": 0.8
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 385.01,
+   "hasta": 389.28,
+   "de": [
+    -107.4,
+    24.8
+   ],
+   "a": [
+    -117.04,
+    32.51
+   ],
+   "curva": 0.15,
+   "grosor": 4
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 385.01,
+   "hasta": 389.28,
+   "de": [
+    -107.4,
+    24.8
+   ],
+   "a": [
+    -118.24,
+    34.05
+   ],
+   "curva": 0.15,
+   "grosor": 4
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 385.01,
+   "hasta": 389.28,
+   "de": [
+    -107.4,
+    24.8
+   ],
+   "a": [
+    -112,
+    33.4
+   ],
+   "curva": 0.15,
+   "grosor": 4
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 385.01,
+   "hasta": 389.28,
+   "de": [
+    -107.4,
+    24.8
+   ],
+   "a": [
+    -106.5,
+    31.7
+   ],
+   "curva": 0.15,
+   "grosor": 4
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 385.41,
+   "hasta": 389.53,
+   "forma": "notas",
+   "en": [
+    -118.24,
+    34.05
+   ],
+   "tam": 1.2,
+   "texto": "FIESTAS EN SILENCIO",
+   "ty": 60
+  },
+  {
+   "tipo": "dato",
+   "desde": 389.58,
+   "hasta": 401.03,
+   "kicker": "Carnaval de Mazatlán",
+   "sub": "La tradición de carnaval moderno más antigua de México",
+   "fuente": "Carnaval Internacional de Mazatlán",
+   "suf": "",
+   "texto": "1898"
+  },
+  {
+   "tipo": "foto",
+   "desde": 398.03,
+   "hasta": 402.27,
+   "img": "fotos-reales/carnaval-3.jpg",
+   "z0": 1.03,
+   "z1": 1.12,
+   "credito": "Foto: The New Foxy · CC0"
+  },
+  {
+   "tipo": "barrido",
+   "desde": 401.87,
+   "hasta": 402.67,
+   "dur": 0.8
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 402.57,
+   "hasta": 412.86,
+   "forma": "alerta",
+   "en": [
+    -107.39,
+    24.8
+   ],
+   "texto": "¿Y LAS NOTICIAS?",
+   "ty": 70
+  },
+  {
+   "tipo": "capitulo",
+   "desde": 409.96,
+   "hasta": 412.21,
+   "n": 5,
+   "texto": "La parte incómoda"
+  },
+  {
+   "tipo": "fronteras",
+   "desde": 410.11,
+   "hasta": 482.53
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 417.32,
+   "hasta": 425.74,
+   "img": "fotos-reales/catedral-culiacan-3.jpg",
+   "en": [
+    -107.39,
+    24.8
+   ],
+   "x": 1400,
+   "y": 420,
+   "w": 400,
+   "texto": "Culiacán",
+   "credito": "Foto: Mmiletrm · CC BY-SA 3.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 418.79,
+   "hasta": 425.74,
+   "kicker": "Desde el 9 de septiembre de 2024",
+   "texto": "Guerra entre facciones",
+   "sub": "Culiacán, Sinaloa",
+   "tam": 60
+  },
+  {
+   "tipo": "dato",
+   "desde": 425.74,
+   "hasta": 432.23,
+   "kicker": "Primeros 12 meses",
+   "sub": "al menos, según la Fiscalía de Sinaloa",
+   "fuente": "Fiscalía de Sinaloa vía La Opinión",
+   "suf": "homicidios",
+   "tam": 170,
+   "num": [
+    0,
+    1632
+   ]
+  },
+  {
+   "tipo": "gente",
+   "desde": 432.23,
+   "hasta": 438.87,
+   "modo": "fila",
+   "en": {
+    "x": 1450,
+    "y": 520
+   },
+   "n": 6,
+   "columnas": 6,
+   "tam": 44,
+   "resalta": 0,
+   "color": "rgba(255,255,255,.45)",
+   "texto": "ESCUELAS · NEGOCIOS · FAMILIAS"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 433.9,
+   "hasta": 441.87,
+   "forma": "reloj",
+   "en": {
+    "x": 1450,
+    "y": 300
+   },
+   "tam": 1.1,
+   "texto": "DE NOCHE, NADIE SALE",
+   "ty": 70
+  },
+  {
+   "tipo": "hueco",
+   "desde": 438.87,
+   "hasta": 445.06,
+   "pais": "MEX:SI",
+   "t": 441.13,
+   "dur": 1.2
+  },
+  {
+   "tipo": "dato",
+   "desde": 444.27,
+   "hasta": 448.06,
+   "kicker": "La respuesta",
+   "sub": "El problema no desaparece",
+   "fuente": "",
+   "suf": "",
+   "tam": 220,
+   "texto": "NO"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 448.11,
+   "hasta": 454.94,
+   "de": [
+    -107.39,
+    24.8
+   ],
+   "a": [
+    -99.13,
+    19.43
+   ],
+   "curva": 0.12,
+   "punteada": true,
+   "grosor": 3,
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 448.11,
+   "hasta": 454.94,
+   "de": [
+    -107.39,
+    24.8
+   ],
+   "a": [
+    -99.2,
+    29.5
+   ],
+   "curva": 0.12,
+   "punteada": true,
+   "grosor": 3,
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 448.11,
+   "hasta": 454.94,
+   "de": [
+    -107.39,
+    24.8
+   ],
+   "a": [
+    -117,
+    32.5
+   ],
+   "curva": 0.12,
+   "punteada": true,
+   "grosor": 3,
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 448.11,
+   "hasta": 454.94,
+   "de": [
+    -107.39,
+    24.8
+   ],
+   "a": [
+    -90,
+    21
+   ],
+   "curva": 0.12,
+   "punteada": true,
+   "grosor": 3,
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 448.11,
+   "hasta": 454.94,
+   "de": [
+    -107.39,
+    24.8
+   ],
+   "a": [
+    -95.37,
+    29.76
+   ],
+   "curva": 0.12,
+   "punteada": true,
+   "grosor": 3,
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 448.11,
+   "hasta": 454.94,
+   "de": [
+    -107.39,
+    24.8
+   ],
+   "a": [
+    -75,
+    5
+   ],
+   "curva": 0.12,
+   "punteada": true,
+   "grosor": 3,
+   "color": "#ff5a4a"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 451.72,
+   "hasta": 454.94,
+   "forma": "alerta",
+   "en": [
+    -107.39,
+    24.8
+   ],
+   "texto": "LA RED SE MUEVE",
+   "ty": 70
+  },
+  {
+   "tipo": "gente",
+   "desde": 454.94,
+   "hasta": 461.44,
+   "modo": "grupo",
+   "en": {
+    "x": 1430,
+    "y": 470
+   },
+   "n": 18,
+   "columnas": 6,
+   "tam": 40,
+   "paso": 0.06,
+   "texto": "3 MILLONES DE PERSONAS"
+  },
+  {
+   "tipo": "gente",
+   "desde": 461.44,
+   "hasta": 470.79,
+   "modo": "fila",
+   "en": {
+    "x": 1430,
+    "y": 520
+   },
+   "n": 5,
+   "columnas": 5,
+   "tam": 50,
+   "resalta": 5
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 461.44,
+   "hasta": 467.79,
+   "lon": -109.4,
+   "lat": 27.2,
+   "dx": -60,
+   "dy": 0,
+   "largo": 60,
+   "texto": "AGRICULTORES",
+   "tam": 24
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 462.86,
+   "hasta": 467.79,
+   "lon": -109.4,
+   "lat": 26.45,
+   "dx": -60,
+   "dy": 0,
+   "largo": 60,
+   "texto": "PESCADORES",
+   "tam": 24
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 464.25,
+   "hasta": 467.79,
+   "lon": -109.4,
+   "lat": 25.7,
+   "dx": -60,
+   "dy": 0,
+   "largo": 60,
+   "texto": "MAESTROS",
+   "tam": 24
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 465.48,
+   "hasta": 467.79,
+   "lon": -109.4,
+   "lat": 24.95,
+   "dx": -60,
+   "dy": 0,
+   "largo": 60,
+   "texto": "MÉDICOS",
+   "tam": 24
+  },
+  {
+   "tipo": "rotulo2",
+   "desde": 466.62,
+   "hasta": 467.79,
+   "lon": -109.4,
+   "lat": 24.2,
+   "dx": -60,
+   "dy": 0,
+   "largo": 60,
+   "texto": "MÚSICOS",
+   "tam": 24
+  },
+  {
+   "tipo": "ficha",
+   "desde": 467.79,
+   "hasta": 473.95,
+   "kicker": "La verdad que casi nunca se dice",
+   "texto": "La primera víctima",
+   "sub": "Sinaloa sufre aquello por lo que la conocen",
+   "tam": 60
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 473.95,
+   "hasta": 486.03,
+   "forma": "reloj",
+   "en": {
+    "x": 1450,
+    "y": 400
+   },
+   "tam": 1.4,
+   "texto": "YA ESTÁ PASANDO",
+   "ty": 80
+  },
+  {
+   "tipo": "capitulo",
+   "desde": 483.13,
+   "hasta": 485.38,
+   "n": 6,
+   "texto": "Ya está desapareciendo"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 486.79,
+   "hasta": 489.51,
+   "kicker": "Sequía",
+   "texto": "Presas en niveles muy bajos",
+   "sub": "",
+   "tam": 60
+  },
+  {
+   "tipo": "ficha",
+   "desde": 489.56,
+   "hasta": 491.37,
+   "kicker": "Sequía",
+   "texto": "Sin agua no hay siembra",
+   "sub": "",
+   "tam": 60
+  },
+  {
+   "tipo": "barrido",
+   "desde": 491.07,
+   "hasta": 491.87,
+   "dur": 0.8
+  },
+  {
+   "tipo": "fronteras",
+   "desde": 491.47,
+   "hasta": 536.23
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 491.47,
+   "hasta": 502.58,
+   "forma": "sol",
+   "en": {
+    "x": 1560,
+    "y": 260
+   },
+   "tam": 1.2
+  },
+  {
+   "tipo": "dato",
+   "desde": 491.47,
+   "hasta": 505.58,
+   "kicker": "Maíz de Sinaloa · 2025",
+   "sub": "menos que su máximo histórico: 1.5 a 1.6 millones de t",
+   "fuente": "Imagen Agropecuaria",
+   "suf": "%",
+   "pre": "-",
+   "num": [
+    0,
+    75
+   ]
+  },
+  {
+   "tipo": "foto",
+   "desde": 502.58,
+   "hasta": 505.19,
+   "img": "clips/fotos-ia/S41b.jpg",
+   "z0": 1.03,
+   "z1": 1.12,
+   "credito": "Imagen ilustrativa con IA"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 502.78,
+   "hasta": 505.09,
+   "kicker": "El granero de México",
+   "texto": "Medio vacío",
+   "sub": "",
+   "tam": 60
+  },
+  {
+   "tipo": "barrido",
+   "desde": 504.79,
+   "hasta": 505.59,
+   "dur": 0.8
+  },
+  {
+   "tipo": "flechaPro",
+   "desde": 509.05,
+   "hasta": 515.96,
+   "de": [
+    -97,
+    36
+   ],
+   "a": [
+    -106,
+    26
+   ],
+   "texto": "ARANCEL 17 %",
+   "color": "#ff5a4a",
+   "curva": -0.2
+  },
+  {
+   "tipo": "dato",
+   "desde": 509.05,
+   "hasta": 515.96,
+   "kicker": "Desde julio de 2025",
+   "sub": "de arancel de EE. UU. al tomate mexicano",
+   "fuente": "Departamento de Comercio de EE. UU.",
+   "suf": "",
+   "texto": "17 %"
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 515.96,
+   "hasta": 518.39,
+   "forma": "sol",
+   "en": {
+    "x": 1500,
+    "y": 300
+   },
+   "tam": 1.0,
+   "texto": "SEQUÍA",
+   "ty": 90
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 517.0,
+   "hasta": 518.39,
+   "forma": "alerta",
+   "en": {
+    "x": 1700,
+    "y": 520
+   },
+   "texto": "INSEGURIDAD"
+  },
+  {
+   "tipo": "dato",
+   "desde": 518.39,
+   "hasta": 528.9,
+   "kicker": "Tomate · temporada 2025-26",
+   "sub": "de superficie: unas 8,000 hectáreas",
+   "fuente": "CAADES",
+   "suf": "%",
+   "pre": "-",
+   "num": [
+    0,
+    30
+   ]
+  },
+  {
+   "tipo": "foto",
+   "desde": 525.9,
+   "hasta": 529.54,
+   "img": "clips/fotos-ia/S16b.jpg",
+   "z0": 1.03,
+   "z1": 1.12,
+   "credito": "Imagen ilustrativa con IA"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 525.9,
+   "hasta": 527.04,
+   "kicker": "Sinaloa hoy",
+   "texto": "Menos campo",
+   "sub": "",
+   "tam": 60
+  },
+  {
+   "tipo": "ficha",
+   "desde": 527.09,
+   "hasta": 528.26,
+   "kicker": "Sinaloa hoy",
+   "texto": "Menos trabajo",
+   "sub": "",
+   "tam": 60
+  },
+  {
+   "tipo": "ficha",
+   "desde": 528.31,
+   "hasta": 529.49,
+   "kicker": "Sinaloa hoy",
+   "texto": "Menos comida",
+   "sub": "",
+   "tam": 60
+  },
+  {
+   "tipo": "barrido",
+   "desde": 529.14,
+   "hasta": 529.94,
+   "dur": 0.8
+  },
+  {
+   "tipo": "fronteras",
+   "desde": 529.54,
+   "hasta": 536.63
+  },
+  {
+   "tipo": "hueco",
+   "desde": 529.54,
+   "hasta": 536.63,
+   "pais": "MEX:SI",
+   "t": 532.08,
+   "dur": 4.5
+  },
+  {
+   "tipo": "fronteras",
+   "desde": 536.55,
+   "hasta": 555.96
+  },
+  {
+   "tipo": "hueco",
+   "desde": 536.55,
+   "hasta": 555.96,
+   "pais": "MEX:SI",
+   "t": 536.75,
+   "dur": 0.6
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 540.56,
+   "hasta": 549.26,
+   "img": "fotos-reales/tortillas-1.jpg",
+   "en": null,
+   "x": 520,
+   "y": 440,
+   "w": 380,
+   "texto": "Tortilla",
+   "credito": "Foto: Marifer Veloz · CC BY-SA 4.0",
+   "rot": -3
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 541.54,
+   "hasta": 549.26,
+   "img": "fotos-reales/aguachile-1.jpg",
+   "en": null,
+   "x": 740,
+   "y": 440,
+   "w": 380,
+   "texto": "Camarón",
+   "credito": "Foto: Pequeño mar · CC BY-SA 4.0",
+   "rot": 2
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 543.37,
+   "hasta": 549.26,
+   "img": "fotos-reales/garbanzo-1.jpg",
+   "en": null,
+   "x": 960,
+   "y": 440,
+   "w": 380,
+   "texto": "Garbanzo",
+   "credito": "Foto: PJeganathan · CC BY-SA 4.0",
+   "rot": -2
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 545.42,
+   "hasta": 549.26,
+   "img": "fotos-reales/carnaval-2.jpg",
+   "en": null,
+   "x": 1180,
+   "y": 440,
+   "w": 380,
+   "texto": "Carnaval de Mazatlán",
+   "credito": "Foto: DogeGamer2015MZT · CC BY-SA 4.0",
+   "rot": 3
+  },
+  {
+   "tipo": "tarjetaFoto",
+   "desde": 547.14,
+   "hasta": 549.26,
+   "img": "fotos-reales/pedro-estatua-1.jpg",
+   "en": null,
+   "x": 1400,
+   "y": 440,
+   "w": 380,
+   "texto": "Pedro Infante",
+   "credito": "Foto: El Nuevo Doge · CC0",
+   "rot": -2
+  },
+  {
+   "tipo": "simbolo",
+   "desde": 549.26,
+   "hasta": 553.0,
+   "forma": "alerta",
+   "en": [
+    -107.39,
+    24.8
+   ],
+   "texto": "SEGUIRÍA AHÍ",
+   "ty": 70
+  },
+  {
+   "tipo": "ficha",
+   "desde": 553.0,
+   "hasta": 555.96,
+   "kicker": "",
+   "texto": "No es lo que sale en las noticias",
+   "sub": "",
+   "tam": 58
+  },
+  {
+   "tipo": "ficha",
+   "desde": 556.26,
+   "hasta": 558.61,
+   "kicker": "Sinaloa",
+   "texto": "Es lo que está en tu mesa",
+   "sub": "",
+   "tam": 70
+  },
+  {
+   "tipo": "foto",
+   "desde": 558.71,
+   "hasta": 577.86,
+   "img": "clips/fotos-ia/S46.jpg",
+   "z0": 1.0,
+   "z1": 1.12,
+   "credito": "Imagen ilustrativa con IA"
+  },
+  {
+   "tipo": "pregunta",
+   "desde": 560.78,
+   "hasta": 569.01,
+   "texto": "¿QUÉ EXTRAÑARÍAS PRIMERO? 👇",
+   "y": 300
+  },
+  {
+   "tipo": "ficha",
+   "desde": 563.36,
+   "hasta": 565.77,
+   "kicker": "",
+   "texto": "AGUACHILE",
+   "sub": "",
+   "tam": 50,
+   "x": 150,
+   "y": 520
+  },
+  {
+   "tipo": "ficha",
+   "desde": 563.91,
+   "hasta": 565.77,
+   "kicker": "",
+   "texto": "BANDA",
+   "sub": "",
+   "tam": 50,
+   "x": 710,
+   "y": 520
+  },
+  {
+   "tipo": "ficha",
+   "desde": 564.46,
+   "hasta": 565.77,
+   "kicker": "",
+   "texto": "CARNAVAL",
+   "sub": "",
+   "tam": 50,
+   "x": 1270,
+   "y": 520
+  },
+  {
+   "tipo": "ficha",
+   "desde": 569.01,
+   "hasta": 577.86,
+   "kicker": "Suscríbete",
+   "texto": "¿Qué estado sigue?",
+   "sub": "Escríbelo en los comentarios",
+   "tam": 70
+  }
+ ],
+ "clips": [
+  {
+   "codigo": "S01",
+   "desde": 0,
+   "hasta": 3.77,
+   "z0": 1.0,
+   "z1": 1.08,
+   "vel": 1,
+   "etiqueta": "IMAGEN ILUSTRATIVA CON IA"
+  },
+  {
+   "codigo": "S05",
+   "desde": 32.6,
+   "hasta": 38.03,
+   "z0": 1.0,
+   "z1": 1.1,
+   "vel": 1,
+   "etiqueta": "IMAGEN ILUSTRATIVA CON IA"
+  },
+  {
+   "codigo": "S10",
+   "desde": 129.2,
+   "hasta": 132.45,
+   "vel": 1,
+   "etiqueta": "IMAGEN ILUSTRATIVA CON IA"
+  },
+  {
+   "codigo": "S16",
+   "desde": 194.67,
+   "hasta": 198.9,
+   "vel": 1,
+   "etiqueta": "IMAGEN ILUSTRATIVA CON IA"
+  },
+  {
+   "codigo": "S22",
+   "desde": 240.6,
+   "hasta": 252.46,
+   "vel": 0.641,
+   "etiqueta": "IMAGEN ILUSTRATIVA CON IA"
+  },
+  {
+   "codigo": "S31",
+   "desde": 359.76,
+   "hasta": 366.52,
+   "vel": 1,
+   "etiqueta": "IMAGEN ILUSTRATIVA CON IA"
+  },
+  {
+   "codigo": "S35",
+   "desde": 389.28,
+   "hasta": 398.03,
+   "vel": 0.869,
+   "etiqueta": "IMAGEN ILUSTRATIVA CON IA"
+  },
+  {
+   "codigo": "S41",
+   "desde": 486.49,
+   "hasta": 491.47,
+   "vel": 1,
+   "etiqueta": "IMAGEN ILUSTRATIVA CON IA"
+  },
+  {
+   "codigo": "S45",
+   "desde": 555.96,
+   "hasta": 558.71,
+   "vel": 1,
+   "etiqueta": "IMAGEN ILUSTRATIVA CON IA"
+  }
+ ],
+ "palabras": [
+  {
+   "t0": 0.3,
+   "t1": 0.718,
+   "w": "Imagina"
+  },
+  {
+   "t0": 0.718,
+   "t1": 0.927,
+   "w": "que"
+  },
+  {
+   "t0": 0.927,
+   "t1": 1.292,
+   "w": "mañana"
+  },
+  {
+   "t0": 1.292,
+   "t1": 1.919,
+   "w": "despiertas"
+  },
+  {
+   "t0": 1.919,
+   "t1": 2.268,
+   "w": "y"
+  },
+  {
+   "t0": 2.268,
+   "t1": 2.686,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 2.686,
+   "t1": 2.843,
+   "w": "ya"
+  },
+  {
+   "t0": 2.843,
+   "t1": 2.999,
+   "w": "no"
+  },
+  {
+   "t0": 2.999,
+   "t1": 3.772,
+   "w": "está"
+  },
+  {
+   "t0": 3.772,
+   "t1": 3.955,
+   "w": "No"
+  },
+  {
+   "t0": 3.955,
+   "t1": 4.259,
+   "w": "hubo"
+  },
+  {
+   "t0": 4.259,
+   "t1": 5.136,
+   "w": "guerra"
+  },
+  {
+   "t0": 5.136,
+   "t1": 5.315,
+   "w": "No"
+  },
+  {
+   "t0": 5.315,
+   "t1": 5.614,
+   "w": "hubo"
+  },
+  {
+   "t0": 5.614,
+   "t1": 6.633,
+   "w": "terremoto"
+  },
+  {
+   "t0": 6.633,
+   "t1": 7.357,
+   "w": "Simplemente"
+  },
+  {
+   "t0": 7.357,
+   "t1": 7.524,
+   "w": "en"
+  },
+  {
+   "t0": 7.524,
+   "t1": 7.691,
+   "w": "el"
+  },
+  {
+   "t0": 7.691,
+   "t1": 7.969,
+   "w": "mapa"
+  },
+  {
+   "t0": 7.969,
+   "t1": 8.136,
+   "w": "de"
+  },
+  {
+   "t0": 8.136,
+   "t1": 8.581,
+   "w": "México"
+  },
+  {
+   "t0": 8.581,
+   "t1": 9.235,
+   "w": "aparece"
+  },
+  {
+   "t0": 9.235,
+   "t1": 9.401,
+   "w": "un"
+  },
+  {
+   "t0": 9.401,
+   "t1": 10.19,
+   "w": "hueco"
+  },
+  {
+   "t0": 10.19,
+   "t1": 10.506,
+   "w": "Tres"
+  },
+  {
+   "t0": 10.506,
+   "t1": 11.074,
+   "w": "millones"
+  },
+  {
+   "t0": 11.074,
+   "t1": 11.599,
+   "w": "de"
+  },
+  {
+   "t0": 11.599,
+   "t1": 12.415,
+   "w": "personas"
+  },
+  {
+   "t0": 12.415,
+   "t1": 12.897,
+   "w": "Culiacán"
+  },
+  {
+   "t0": 12.897,
+   "t1": 13.583,
+   "w": "Mazatlán"
+  },
+  {
+   "t0": 13.583,
+   "t1": 13.777,
+   "w": "Los"
+  },
+  {
+   "t0": 13.777,
+   "t1": 14.478,
+   "w": "Mochis"
+  },
+  {
+   "t0": 14.478,
+   "t1": 15.362,
+   "w": "Borrados"
+  },
+  {
+   "t0": 15.362,
+   "t1": 15.461,
+   "w": "Y"
+  },
+  {
+   "t0": 15.461,
+   "t1": 15.609,
+   "w": "lo"
+  },
+  {
+   "t0": 15.609,
+   "t1": 16.006,
+   "w": "primero"
+  },
+  {
+   "t0": 16.006,
+   "t1": 16.204,
+   "w": "que"
+  },
+  {
+   "t0": 16.204,
+   "t1": 16.501,
+   "w": "notas"
+  },
+  {
+   "t0": 16.501,
+   "t1": 16.65,
+   "w": "no"
+  },
+  {
+   "t0": 16.65,
+   "t1": 16.798,
+   "w": "es"
+  },
+  {
+   "t0": 16.798,
+   "t1": 16.947,
+   "w": "el"
+  },
+  {
+   "t0": 16.947,
+   "t1": 17.823,
+   "w": "silencio"
+  },
+  {
+   "t0": 17.823,
+   "t1": 17.984,
+   "w": "Es"
+  },
+  {
+   "t0": 17.984,
+   "t1": 18.145,
+   "w": "el"
+  },
+  {
+   "t0": 18.145,
+   "t1": 18.946,
+   "w": "precio"
+  },
+  {
+   "t0": 18.946,
+   "t1": 19.171,
+   "w": "Esa"
+  },
+  {
+   "t0": 19.171,
+   "t1": 19.509,
+   "w": "misma"
+  },
+  {
+   "t0": 19.509,
+   "t1": 20.307,
+   "w": "mañana"
+  },
+  {
+   "t0": 20.307,
+   "t1": 20.476,
+   "w": "en"
+  },
+  {
+   "t0": 20.476,
+   "t1": 20.645,
+   "w": "un"
+  },
+  {
+   "t0": 20.645,
+   "t1": 21.377,
+   "w": "supermercado"
+  },
+  {
+   "t0": 21.377,
+   "t1": 21.546,
+   "w": "de"
+  },
+  {
+   "t0": 21.546,
+   "t1": 22.266,
+   "w": "Texas"
+  },
+  {
+   "t0": 22.266,
+   "t1": 22.435,
+   "w": "el"
+  },
+  {
+   "t0": 22.435,
+   "t1": 22.829,
+   "w": "tomate"
+  },
+  {
+   "t0": 22.829,
+   "t1": 23.279,
+   "w": "empieza"
+  },
+  {
+   "t0": 23.279,
+   "t1": 23.392,
+   "w": "a"
+  },
+  {
+   "t0": 23.392,
+   "t1": 24.175,
+   "w": "subir"
+  },
+  {
+   "t0": 24.175,
+   "t1": 24.347,
+   "w": "En"
+  },
+  {
+   "t0": 24.347,
+   "t1": 24.576,
+   "w": "una"
+  },
+  {
+   "t0": 24.576,
+   "t1": 25.262,
+   "w": "tortillería"
+  },
+  {
+   "t0": 25.262,
+   "t1": 25.434,
+   "w": "de"
+  },
+  {
+   "t0": 25.434,
+   "t1": 26.177,
+   "w": "Guadalajara"
+  },
+  {
+   "t0": 26.177,
+   "t1": 26.349,
+   "w": "el"
+  },
+  {
+   "t0": 26.349,
+   "t1": 26.635,
+   "w": "maíz"
+  },
+  {
+   "t0": 26.635,
+   "t1": 27.092,
+   "w": "empieza"
+  },
+  {
+   "t0": 27.092,
+   "t1": 27.207,
+   "w": "a"
+  },
+  {
+   "t0": 27.207,
+   "t1": 28.059,
+   "w": "faltar"
+  },
+  {
+   "t0": 28.059,
+   "t1": 28.163,
+   "w": "Y"
+  },
+  {
+   "t0": 28.163,
+   "t1": 28.32,
+   "w": "en"
+  },
+  {
+   "t0": 28.32,
+   "t1": 28.477,
+   "w": "un"
+  },
+  {
+   "t0": 28.477,
+   "t1": 29.106,
+   "w": "restaurante"
+  },
+  {
+   "t0": 29.106,
+   "t1": 29.263,
+   "w": "de"
+  },
+  {
+   "t0": 29.263,
+   "t1": 29.472,
+   "w": "Los"
+  },
+  {
+   "t0": 29.472,
+   "t1": 30.117,
+   "w": "Ángeles"
+  },
+  {
+   "t0": 30.117,
+   "t1": 30.536,
+   "w": "alguien"
+  },
+  {
+   "t0": 30.536,
+   "t1": 31.007,
+   "w": "pregunta"
+  },
+  {
+   "t0": 31.007,
+   "t1": 31.217,
+   "w": "por"
+  },
+  {
+   "t0": 31.217,
+   "t1": 31.426,
+   "w": "qué"
+  },
+  {
+   "t0": 31.426,
+   "t1": 31.583,
+   "w": "ya"
+  },
+  {
+   "t0": 31.583,
+   "t1": 31.74,
+   "w": "no"
+  },
+  {
+   "t0": 31.74,
+   "t1": 31.949,
+   "w": "hay"
+  },
+  {
+   "t0": 31.949,
+   "t1": 32.6,
+   "w": "camarón"
+  },
+  {
+   "t0": 32.6,
+   "t1": 32.881,
+   "w": "Casi"
+  },
+  {
+   "t0": 32.881,
+   "t1": 33.163,
+   "w": "todo"
+  },
+  {
+   "t0": 33.163,
+   "t1": 33.332,
+   "w": "el"
+  },
+  {
+   "t0": 33.332,
+   "t1": 33.67,
+   "w": "mundo"
+  },
+  {
+   "t0": 33.67,
+   "t1": 34.064,
+   "w": "conoce"
+  },
+  {
+   "t0": 34.064,
+   "t1": 34.177,
+   "w": "a"
+  },
+  {
+   "t0": 34.177,
+   "t1": 34.627,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 34.627,
+   "t1": 34.852,
+   "w": "por"
+  },
+  {
+   "t0": 34.852,
+   "t1": 35.078,
+   "w": "una"
+  },
+  {
+   "t0": 35.078,
+   "t1": 35.359,
+   "w": "sola"
+  },
+  {
+   "t0": 35.359,
+   "t1": 35.951,
+   "w": "cosa"
+  },
+  {
+   "t0": 35.951,
+   "t1": 36.124,
+   "w": "la"
+  },
+  {
+   "t0": 36.124,
+   "t1": 36.356,
+   "w": "que"
+  },
+  {
+   "t0": 36.356,
+   "t1": 36.646,
+   "w": "sale"
+  },
+  {
+   "t0": 36.646,
+   "t1": 36.819,
+   "w": "en"
+  },
+  {
+   "t0": 36.819,
+   "t1": 37.051,
+   "w": "las"
+  },
+  {
+   "t0": 37.051,
+   "t1": 38.026,
+   "w": "noticias"
+  },
+  {
+   "t0": 38.026,
+   "t1": 38.266,
+   "w": "Pero"
+  },
+  {
+   "t0": 38.266,
+   "t1": 38.459,
+   "w": "hoy"
+  },
+  {
+   "t0": 38.459,
+   "t1": 38.603,
+   "w": "te"
+  },
+  {
+   "t0": 38.603,
+   "t1": 38.795,
+   "w": "voy"
+  },
+  {
+   "t0": 38.795,
+   "t1": 38.891,
+   "w": "a"
+  },
+  {
+   "t0": 38.891,
+   "t1": 39.276,
+   "w": "mostrar"
+  },
+  {
+   "t0": 39.276,
+   "t1": 39.42,
+   "w": "lo"
+  },
+  {
+   "t0": 39.42,
+   "t1": 39.613,
+   "w": "que"
+  },
+  {
+   "t0": 39.613,
+   "t1": 39.949,
+   "w": "México"
+  },
+  {
+   "t0": 39.949,
+   "t1": 40.382,
+   "w": "perdería"
+  },
+  {
+   "t0": 40.382,
+   "t1": 40.526,
+   "w": "de"
+  },
+  {
+   "t0": 40.526,
+   "t1": 41.189,
+   "w": "verdad"
+  },
+  {
+   "t0": 41.189,
+   "t1": 41.36,
+   "w": "Lo"
+  },
+  {
+   "t0": 41.36,
+   "t1": 41.589,
+   "w": "que"
+  },
+  {
+   "t0": 41.589,
+   "t1": 41.874,
+   "w": "está"
+  },
+  {
+   "t0": 41.874,
+   "t1": 42.045,
+   "w": "en"
+  },
+  {
+   "t0": 42.045,
+   "t1": 42.216,
+   "w": "tu"
+  },
+  {
+   "t0": 42.216,
+   "t1": 42.952,
+   "w": "mesa"
+  },
+  {
+   "t0": 42.952,
+   "t1": 43.123,
+   "w": "en"
+  },
+  {
+   "t0": 43.123,
+   "t1": 43.295,
+   "w": "tu"
+  },
+  {
+   "t0": 43.295,
+   "t1": 43.694,
+   "w": "música"
+  },
+  {
+   "t0": 43.694,
+   "t1": 43.808,
+   "w": "y"
+  },
+  {
+   "t0": 43.808,
+   "t1": 43.979,
+   "w": "en"
+  },
+  {
+   "t0": 43.979,
+   "t1": 44.15,
+   "w": "tu"
+  },
+  {
+   "t0": 44.15,
+   "t1": 45.048,
+   "w": "alacena"
+  },
+  {
+   "t0": 45.048,
+   "t1": 45.16,
+   "w": "Y"
+  },
+  {
+   "t0": 45.16,
+   "t1": 45.328,
+   "w": "al"
+  },
+  {
+   "t0": 45.328,
+   "t1": 46.062,
+   "w": "final"
+  },
+  {
+   "t0": 46.062,
+   "t1": 46.23,
+   "w": "un"
+  },
+  {
+   "t0": 46.23,
+   "t1": 46.51,
+   "w": "dato"
+  },
+  {
+   "t0": 46.51,
+   "t1": 46.734,
+   "w": "que"
+  },
+  {
+   "t0": 46.734,
+   "t1": 47.014,
+   "w": "casi"
+  },
+  {
+   "t0": 47.014,
+   "t1": 47.35,
+   "w": "nadie"
+  },
+  {
+   "t0": 47.35,
+   "t1": 47.938,
+   "w": "dice"
+  },
+  {
+   "t0": 47.938,
+   "t1": 48.376,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 48.376,
+   "t1": 48.541,
+   "w": "ya"
+  },
+  {
+   "t0": 48.541,
+   "t1": 48.814,
+   "w": "está"
+  },
+  {
+   "t0": 48.814,
+   "t1": 49.362,
+   "w": "empezando"
+  },
+  {
+   "t0": 49.362,
+   "t1": 49.471,
+   "w": "a"
+  },
+  {
+   "t0": 49.471,
+   "t1": 50.601,
+   "w": "desaparecer"
+  },
+  {
+   "t0": 50.601,
+   "t1": 50.697,
+   "w": "Y"
+  },
+  {
+   "t0": 50.697,
+   "t1": 50.843,
+   "w": "no"
+  },
+  {
+   "t0": 50.843,
+   "t1": 51.037,
+   "w": "por"
+  },
+  {
+   "t0": 51.037,
+   "t1": 51.182,
+   "w": "lo"
+  },
+  {
+   "t0": 51.182,
+   "t1": 51.376,
+   "w": "que"
+  },
+  {
+   "t0": 51.376,
+   "t1": 51.521,
+   "w": "tú"
+  },
+  {
+   "t0": 51.521,
+   "t1": 51.86,
+   "w": "crees"
+  },
+  {
+   "t0": 52.18,
+   "t1": 52.396,
+   "w": "Así"
+  },
+  {
+   "t0": 52.396,
+   "t1": 52.612,
+   "w": "que"
+  },
+  {
+   "t0": 52.612,
+   "t1": 52.828,
+   "w": "hoy"
+  },
+  {
+   "t0": 52.828,
+   "t1": 53.153,
+   "w": "vamos"
+  },
+  {
+   "t0": 53.153,
+   "t1": 53.261,
+   "w": "a"
+  },
+  {
+   "t0": 53.261,
+   "t1": 53.585,
+   "w": "hacer"
+  },
+  {
+   "t0": 53.585,
+   "t1": 53.747,
+   "w": "un"
+  },
+  {
+   "t0": 53.747,
+   "t1": 54.903,
+   "w": "experimento"
+  },
+  {
+   "t0": 54.903,
+   "t1": 55.228,
+   "w": "Vamos"
+  },
+  {
+   "t0": 55.228,
+   "t1": 55.336,
+   "w": "a"
+  },
+  {
+   "t0": 55.336,
+   "t1": 55.714,
+   "w": "borrar"
+  },
+  {
+   "t0": 55.714,
+   "t1": 56.146,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 56.146,
+   "t1": 56.362,
+   "w": "del"
+  },
+  {
+   "t0": 56.362,
+   "t1": 56.686,
+   "w": "mapa"
+  },
+  {
+   "t0": 56.686,
+   "t1": 57.303,
+   "w": "pieza"
+  },
+  {
+   "t0": 57.303,
+   "t1": 57.519,
+   "w": "por"
+  },
+  {
+   "t0": 57.519,
+   "t1": 57.897,
+   "w": "pieza"
+  },
+  {
+   "t0": 57.897,
+   "t1": 58.365,
+   "w": "y"
+  },
+  {
+   "t0": 58.365,
+   "t1": 58.581,
+   "w": "ver"
+  },
+  {
+   "t0": 58.581,
+   "t1": 58.798,
+   "w": "qué"
+  },
+  {
+   "t0": 58.798,
+   "t1": 58.96,
+   "w": "se"
+  },
+  {
+   "t0": 58.96,
+   "t1": 59.176,
+   "w": "cae"
+  },
+  {
+   "t0": 59.176,
+   "t1": 59.392,
+   "w": "con"
+  },
+  {
+   "t0": 59.392,
+   "t1": 60.022,
+   "w": "ella"
+  },
+  {
+   "t0": 60.022,
+   "t1": 60.572,
+   "w": "Quédate"
+  },
+  {
+   "t0": 60.572,
+   "t1": 61.271,
+   "w": "porque"
+  },
+  {
+   "t0": 61.271,
+   "t1": 61.454,
+   "w": "el"
+  },
+  {
+   "t0": 61.454,
+   "t1": 62.004,
+   "w": "capítulo"
+  },
+  {
+   "t0": 62.004,
+   "t1": 62.371,
+   "w": "cinco"
+  },
+  {
+   "t0": 62.371,
+   "t1": 62.554,
+   "w": "lo"
+  },
+  {
+   "t0": 62.554,
+   "t1": 62.982,
+   "w": "cambia"
+  },
+  {
+   "t0": 62.982,
+   "t1": 63.696,
+   "w": "todo"
+  },
+  {
+   "t0": 63.696,
+   "t1": 64.57,
+   "w": "Empezamos"
+  },
+  {
+   "t0": 65.32,
+   "t1": 65.885,
+   "w": "Capítulo"
+  },
+  {
+   "t0": 65.885,
+   "t1": 66.562,
+   "w": "uno"
+  },
+  {
+   "t0": 66.562,
+   "t1": 66.749,
+   "w": "El"
+  },
+  {
+   "t0": 66.749,
+   "t1": 67.185,
+   "w": "hueco"
+  },
+  {
+   "t0": 67.185,
+   "t1": 67.668,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 67.668,
+   "t1": 67.85,
+   "w": "es"
+  },
+  {
+   "t0": 67.85,
+   "t1": 68.323,
+   "w": "una"
+  },
+  {
+   "t0": 68.323,
+   "t1": 68.746,
+   "w": "franja"
+  },
+  {
+   "t0": 68.746,
+   "t1": 69.109,
+   "w": "larga"
+  },
+  {
+   "t0": 69.109,
+   "t1": 69.229,
+   "w": "y"
+  },
+  {
+   "t0": 69.229,
+   "t1": 69.773,
+   "w": "delgada"
+  },
+  {
+   "t0": 69.773,
+   "t1": 70.545,
+   "w": "pegada"
+  },
+  {
+   "t0": 70.545,
+   "t1": 70.726,
+   "w": "al"
+  },
+  {
+   "t0": 70.726,
+   "t1": 71.15,
+   "w": "océano"
+  },
+  {
+   "t0": 71.15,
+   "t1": 72.187,
+   "w": "Pacífico"
+  },
+  {
+   "t0": 72.187,
+   "t1": 72.451,
+   "w": "Mide"
+  },
+  {
+   "t0": 72.451,
+   "t1": 72.715,
+   "w": "unos"
+  },
+  {
+   "t0": 72.715,
+   "t1": 73.243,
+   "w": "cincuenta"
+  },
+  {
+   "t0": 73.243,
+   "t1": 73.349,
+   "w": "y"
+  },
+  {
+   "t0": 73.349,
+   "t1": 73.666,
+   "w": "siete"
+  },
+  {
+   "t0": 73.666,
+   "t1": 73.878,
+   "w": "mil"
+  },
+  {
+   "t0": 73.878,
+   "t1": 74.459,
+   "w": "kilómetros"
+  },
+  {
+   "t0": 74.459,
+   "t1": 75.39,
+   "w": "cuadrados"
+  },
+  {
+   "t0": 75.39,
+   "t1": 75.572,
+   "w": "Es"
+  },
+  {
+   "t0": 75.572,
+   "t1": 75.815,
+   "w": "más"
+  },
+  {
+   "t0": 75.815,
+   "t1": 76.239,
+   "w": "grande"
+  },
+  {
+   "t0": 76.239,
+   "t1": 76.482,
+   "w": "que"
+  },
+  {
+   "t0": 76.482,
+   "t1": 76.785,
+   "w": "todo"
+  },
+  {
+   "t0": 76.785,
+   "t1": 77.149,
+   "w": "Costa"
+  },
+  {
+   "t0": 77.149,
+   "t1": 77.513,
+   "w": "Rica"
+  },
+  {
+   "t0": 77.513,
+   "t1": 77.678,
+   "w": "Al"
+  },
+  {
+   "t0": 77.678,
+   "t1": 78.009,
+   "w": "norte"
+  },
+  {
+   "t0": 78.009,
+   "t1": 78.284,
+   "w": "está"
+  },
+  {
+   "t0": 78.284,
+   "t1": 79.034,
+   "w": "Sonora"
+  },
+  {
+   "t0": 79.034,
+   "t1": 79.189,
+   "w": "Al"
+  },
+  {
+   "t0": 79.189,
+   "t1": 79.499,
+   "w": "este"
+  },
+  {
+   "t0": 79.499,
+   "t1": 80.194,
+   "w": "Chihuahua"
+  },
+  {
+   "t0": 80.194,
+   "t1": 80.297,
+   "w": "y"
+  },
+  {
+   "t0": 80.297,
+   "t1": 80.762,
+   "w": "Durango"
+  },
+  {
+   "t0": 80.762,
+   "t1": 81.379,
+   "w": "detrás"
+  },
+  {
+   "t0": 81.379,
+   "t1": 81.535,
+   "w": "de"
+  },
+  {
+   "t0": 81.535,
+   "t1": 81.741,
+   "w": "una"
+  },
+  {
+   "t0": 81.741,
+   "t1": 82.155,
+   "w": "muralla"
+  },
+  {
+   "t0": 82.155,
+   "t1": 82.31,
+   "w": "de"
+  },
+  {
+   "t0": 82.31,
+   "t1": 83.22,
+   "w": "montañas"
+  },
+  {
+   "t0": 83.22,
+   "t1": 83.405,
+   "w": "la"
+  },
+  {
+   "t0": 83.405,
+   "t1": 83.838,
+   "w": "Sierra"
+  },
+  {
+   "t0": 83.838,
+   "t1": 84.208,
+   "w": "Madre"
+  },
+  {
+   "t0": 84.208,
+   "t1": 85.359,
+   "w": "Occidental"
+  },
+  {
+   "t0": 85.359,
+   "t1": 85.472,
+   "w": "Y"
+  },
+  {
+   "t0": 85.472,
+   "t1": 85.643,
+   "w": "al"
+  },
+  {
+   "t0": 85.643,
+   "t1": 85.927,
+   "w": "sur"
+  },
+  {
+   "t0": 85.927,
+   "t1": 86.438,
+   "w": "Nayarit"
+  },
+  {
+   "t0": 86.438,
+   "t1": 86.75,
+   "w": "Ahora"
+  },
+  {
+   "t0": 86.75,
+   "t1": 87.219,
+   "w": "quitamos"
+  },
+  {
+   "t0": 87.219,
+   "t1": 88.086,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 88.086,
+   "t1": 88.185,
+   "w": "Y"
+  },
+  {
+   "t0": 88.185,
+   "t1": 88.332,
+   "w": "lo"
+  },
+  {
+   "t0": 88.332,
+   "t1": 88.725,
+   "w": "primero"
+  },
+  {
+   "t0": 88.725,
+   "t1": 88.922,
+   "w": "que"
+  },
+  {
+   "t0": 88.922,
+   "t1": 89.168,
+   "w": "pasa"
+  },
+  {
+   "t0": 89.168,
+   "t1": 89.315,
+   "w": "es"
+  },
+  {
+   "t0": 89.315,
+   "t1": 89.979,
+   "w": "raro"
+  },
+  {
+   "t0": 89.979,
+   "t1": 90.398,
+   "w": "Durango"
+  },
+  {
+   "t0": 90.398,
+   "t1": 90.503,
+   "w": "y"
+  },
+  {
+   "t0": 90.503,
+   "t1": 91.342,
+   "w": "Chihuahua"
+  },
+  {
+   "t0": 91.342,
+   "t1": 91.762,
+   "w": "pierden"
+  },
+  {
+   "t0": 91.762,
+   "t1": 91.919,
+   "w": "su"
+  },
+  {
+   "t0": 91.919,
+   "t1": 92.286,
+   "w": "salida"
+  },
+  {
+   "t0": 92.286,
+   "t1": 92.496,
+   "w": "más"
+  },
+  {
+   "t0": 92.496,
+   "t1": 92.915,
+   "w": "cercana"
+  },
+  {
+   "t0": 92.915,
+   "t1": 93.073,
+   "w": "al"
+  },
+  {
+   "t0": 93.073,
+   "t1": 93.75,
+   "w": "mar"
+  },
+  {
+   "t0": 93.75,
+   "t1": 93.908,
+   "w": "La"
+  },
+  {
+   "t0": 93.908,
+   "t1": 94.437,
+   "w": "autopista"
+  },
+  {
+   "t0": 94.437,
+   "t1": 94.649,
+   "w": "que"
+  },
+  {
+   "t0": 94.649,
+   "t1": 94.913,
+   "w": "baja"
+  },
+  {
+   "t0": 94.913,
+   "t1": 95.072,
+   "w": "de"
+  },
+  {
+   "t0": 95.072,
+   "t1": 95.771,
+   "w": "Durango"
+  },
+  {
+   "t0": 95.771,
+   "t1": 96.088,
+   "w": "cruza"
+  },
+  {
+   "t0": 96.088,
+   "t1": 96.247,
+   "w": "el"
+  },
+  {
+   "t0": 96.247,
+   "t1": 96.617,
+   "w": "Puente"
+  },
+  {
+   "t0": 96.617,
+   "t1": 97.554,
+   "w": "Baluarte"
+  },
+  {
+   "t0": 97.554,
+   "t1": 97.766,
+   "w": "que"
+  },
+  {
+   "t0": 97.766,
+   "t1": 97.925,
+   "w": "en"
+  },
+  {
+   "t0": 97.925,
+   "t1": 98.136,
+   "w": "dos"
+  },
+  {
+   "t0": 98.136,
+   "t1": 98.348,
+   "w": "mil"
+  },
+  {
+   "t0": 98.348,
+   "t1": 98.612,
+   "w": "doce"
+  },
+  {
+   "t0": 98.612,
+   "t1": 98.824,
+   "w": "fue"
+  },
+  {
+   "t0": 98.824,
+   "t1": 99.406,
+   "w": "reconocido"
+  },
+  {
+   "t0": 99.406,
+   "t1": 99.67,
+   "w": "como"
+  },
+  {
+   "t0": 99.67,
+   "t1": 99.829,
+   "w": "el"
+  },
+  {
+   "t0": 99.829,
+   "t1": 100.199,
+   "w": "puente"
+  },
+  {
+   "t0": 100.199,
+   "t1": 100.781,
+   "w": "atirantado"
+  },
+  {
+   "t0": 100.781,
+   "t1": 100.992,
+   "w": "más"
+  },
+  {
+   "t0": 100.992,
+   "t1": 101.257,
+   "w": "alto"
+  },
+  {
+   "t0": 101.257,
+   "t1": 101.468,
+   "w": "del"
+  },
+  {
+   "t0": 101.468,
+   "t1": 102.172,
+   "w": "mundo"
+  },
+  {
+   "t0": 102.172,
+   "t1": 102.392,
+   "w": "Esa"
+  },
+  {
+   "t0": 102.392,
+   "t1": 102.945,
+   "w": "autopista"
+  },
+  {
+   "t0": 102.945,
+   "t1": 103.386,
+   "w": "termina"
+  },
+  {
+   "t0": 103.386,
+   "t1": 103.552,
+   "w": "en"
+  },
+  {
+   "t0": 103.552,
+   "t1": 104.429,
+   "w": "Mazatlán"
+  },
+  {
+   "t0": 104.429,
+   "t1": 104.535,
+   "w": "Y"
+  },
+  {
+   "t0": 104.535,
+   "t1": 104.693,
+   "w": "el"
+  },
+  {
+   "t0": 104.693,
+   "t1": 105.063,
+   "w": "famoso"
+  },
+  {
+   "t0": 105.063,
+   "t1": 105.327,
+   "w": "tren"
+  },
+  {
+   "t0": 105.327,
+   "t1": 105.855,
+   "w": "Chihuahua"
+  },
+  {
+   "t0": 105.855,
+   "t1": 106.014,
+   "w": "al"
+  },
+  {
+   "t0": 106.014,
+   "t1": 106.859,
+   "w": "Pacífico"
+  },
+  {
+   "t0": 106.859,
+   "t1": 107.018,
+   "w": "el"
+  },
+  {
+   "t0": 107.018,
+   "t1": 107.387,
+   "w": "Chepe"
+  },
+  {
+   "t0": 107.387,
+   "t1": 107.546,
+   "w": "el"
+  },
+  {
+   "t0": 107.546,
+   "t1": 108.04,
+   "w": "que"
+  },
+  {
+   "t0": 108.04,
+   "t1": 108.357,
+   "w": "cruza"
+  },
+  {
+   "t0": 108.357,
+   "t1": 108.568,
+   "w": "las"
+  },
+  {
+   "t0": 108.568,
+   "t1": 109.096,
+   "w": "Barrancas"
+  },
+  {
+   "t0": 109.096,
+   "t1": 109.307,
+   "w": "del"
+  },
+  {
+   "t0": 109.307,
+   "t1": 109.677,
+   "w": "Cobre"
+  },
+  {
+   "t0": 109.677,
+   "t1": 110.398,
+   "w": "termina"
+  },
+  {
+   "t0": 110.398,
+   "t1": 110.556,
+   "w": "en"
+  },
+  {
+   "t0": 110.556,
+   "t1": 110.768,
+   "w": "Los"
+  },
+  {
+   "t0": 110.768,
+   "t1": 111.557,
+   "w": "Mochis"
+  },
+  {
+   "t0": 111.557,
+   "t1": 111.794,
+   "w": "Sin"
+  },
+  {
+   "t0": 111.794,
+   "t1": 112.328,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 112.328,
+   "t1": 112.72,
+   "w": "el"
+  },
+  {
+   "t0": 112.72,
+   "t1": 113.135,
+   "w": "puente"
+  },
+  {
+   "t0": 113.135,
+   "t1": 113.373,
+   "w": "más"
+  },
+  {
+   "t0": 113.373,
+   "t1": 113.669,
+   "w": "alto"
+  },
+  {
+   "t0": 113.669,
+   "t1": 114.025,
+   "w": "lleva"
+  },
+  {
+   "t0": 114.025,
+   "t1": 114.144,
+   "w": "a"
+  },
+  {
+   "t0": 114.144,
+   "t1": 114.322,
+   "w": "un"
+  },
+  {
+   "t0": 114.322,
+   "t1": 115.167,
+   "w": "hueco"
+  },
+  {
+   "t0": 115.167,
+   "t1": 115.272,
+   "w": "Y"
+  },
+  {
+   "t0": 115.272,
+   "t1": 115.43,
+   "w": "el"
+  },
+  {
+   "t0": 115.43,
+   "t1": 115.693,
+   "w": "tren"
+  },
+  {
+   "t0": 115.693,
+   "t1": 115.851,
+   "w": "al"
+  },
+  {
+   "t0": 115.851,
+   "t1": 116.324,
+   "w": "Pacífico"
+  },
+  {
+   "t0": 116.324,
+   "t1": 116.482,
+   "w": "ya"
+  },
+  {
+   "t0": 116.482,
+   "t1": 116.64,
+   "w": "no"
+  },
+  {
+   "t0": 116.64,
+   "t1": 116.956,
+   "w": "llega"
+  },
+  {
+   "t0": 116.956,
+   "t1": 117.114,
+   "w": "al"
+  },
+  {
+   "t0": 117.114,
+   "t1": 117.64,
+   "w": "Pacífico"
+  },
+  {
+   "t0": 117.96,
+   "t1": 118.295,
+   "w": "Luego"
+  },
+  {
+   "t0": 118.295,
+   "t1": 118.574,
+   "w": "está"
+  },
+  {
+   "t0": 118.574,
+   "t1": 118.742,
+   "w": "el"
+  },
+  {
+   "t0": 118.742,
+   "t1": 119.396,
+   "w": "agua"
+  },
+  {
+   "t0": 119.396,
+   "t1": 119.547,
+   "w": "De"
+  },
+  {
+   "t0": 119.547,
+   "t1": 119.698,
+   "w": "la"
+  },
+  {
+   "t0": 119.698,
+   "t1": 120.051,
+   "w": "sierra"
+  },
+  {
+   "t0": 120.051,
+   "t1": 120.353,
+   "w": "bajan"
+  },
+  {
+   "t0": 120.353,
+   "t1": 120.555,
+   "w": "más"
+  },
+  {
+   "t0": 120.555,
+   "t1": 120.706,
+   "w": "de"
+  },
+  {
+   "t0": 120.706,
+   "t1": 120.958,
+   "w": "diez"
+  },
+  {
+   "t0": 120.958,
+   "t1": 121.21,
+   "w": "ríos"
+  },
+  {
+   "t0": 121.21,
+   "t1": 121.512,
+   "w": "hacia"
+  },
+  {
+   "t0": 121.512,
+   "t1": 121.664,
+   "w": "el"
+  },
+  {
+   "t0": 121.664,
+   "t1": 122.299,
+   "w": "mar"
+  },
+  {
+   "t0": 122.299,
+   "t1": 122.787,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 122.787,
+   "t1": 123.217,
+   "w": "los"
+  },
+  {
+   "t0": 123.217,
+   "t1": 123.644,
+   "w": "detuvo"
+  },
+  {
+   "t0": 123.644,
+   "t1": 123.889,
+   "w": "con"
+  },
+  {
+   "t0": 123.889,
+   "t1": 124.194,
+   "w": "once"
+  },
+  {
+   "t0": 124.194,
+   "t1": 124.621,
+   "w": "presas"
+  },
+  {
+   "t0": 124.621,
+   "t1": 124.744,
+   "w": "y"
+  },
+  {
+   "t0": 124.744,
+   "t1": 124.988,
+   "w": "con"
+  },
+  {
+   "t0": 124.988,
+   "t1": 125.232,
+   "w": "una"
+  },
+  {
+   "t0": 125.232,
+   "t1": 125.476,
+   "w": "red"
+  },
+  {
+   "t0": 125.476,
+   "t1": 125.659,
+   "w": "de"
+  },
+  {
+   "t0": 125.659,
+   "t1": 126.148,
+   "w": "canales"
+  },
+  {
+   "t0": 126.148,
+   "t1": 126.392,
+   "w": "que"
+  },
+  {
+   "t0": 126.392,
+   "t1": 126.759,
+   "w": "riega"
+  },
+  {
+   "t0": 126.759,
+   "t1": 127.003,
+   "w": "más"
+  },
+  {
+   "t0": 127.003,
+   "t1": 127.186,
+   "w": "de"
+  },
+  {
+   "t0": 127.186,
+   "t1": 127.919,
+   "w": "ochocientas"
+  },
+  {
+   "t0": 127.919,
+   "t1": 128.163,
+   "w": "mil"
+  },
+  {
+   "t0": 128.163,
+   "t1": 129.205,
+   "w": "hectáreas"
+  },
+  {
+   "t0": 129.205,
+   "t1": 129.365,
+   "w": "Es"
+  },
+  {
+   "t0": 129.365,
+   "t1": 129.58,
+   "w": "uno"
+  },
+  {
+   "t0": 129.58,
+   "t1": 129.74,
+   "w": "de"
+  },
+  {
+   "t0": 129.74,
+   "t1": 129.955,
+   "w": "los"
+  },
+  {
+   "t0": 129.955,
+   "t1": 130.437,
+   "w": "sistemas"
+  },
+  {
+   "t0": 130.437,
+   "t1": 130.597,
+   "w": "de"
+  },
+  {
+   "t0": 130.597,
+   "t1": 130.919,
+   "w": "riego"
+  },
+  {
+   "t0": 130.919,
+   "t1": 131.133,
+   "w": "más"
+  },
+  {
+   "t0": 131.133,
+   "t1": 131.561,
+   "w": "grandes"
+  },
+  {
+   "t0": 131.561,
+   "t1": 131.722,
+   "w": "de"
+  },
+  {
+   "t0": 131.722,
+   "t1": 132.446,
+   "w": "México"
+  },
+  {
+   "t0": 132.446,
+   "t1": 132.671,
+   "w": "Sin"
+  },
+  {
+   "t0": 132.671,
+   "t1": 133.178,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 133.178,
+   "t1": 133.404,
+   "w": "esa"
+  },
+  {
+   "t0": 133.404,
+   "t1": 133.944,
+   "w": "agua"
+  },
+  {
+   "t0": 133.944,
+   "t1": 134.283,
+   "w": "sigue"
+  },
+  {
+   "t0": 134.283,
+   "t1": 134.734,
+   "w": "bajando"
+  },
+  {
+   "t0": 134.734,
+   "t1": 134.903,
+   "w": "de"
+  },
+  {
+   "t0": 134.903,
+   "t1": 135.072,
+   "w": "la"
+  },
+  {
+   "t0": 135.072,
+   "t1": 135.956,
+   "w": "montaña"
+  },
+  {
+   "t0": 135.956,
+   "t1": 136.238,
+   "w": "pero"
+  },
+  {
+   "t0": 136.238,
+   "t1": 136.407,
+   "w": "ya"
+  },
+  {
+   "t0": 136.407,
+   "t1": 136.576,
+   "w": "no"
+  },
+  {
+   "t0": 136.576,
+   "t1": 136.914,
+   "w": "riega"
+  },
+  {
+   "t0": 136.914,
+   "t1": 137.649,
+   "w": "nada"
+  },
+  {
+   "t0": 137.649,
+   "t1": 137.76,
+   "w": "Y"
+  },
+  {
+   "t0": 137.76,
+   "t1": 138.035,
+   "w": "aquí"
+  },
+  {
+   "t0": 138.035,
+   "t1": 138.476,
+   "w": "empieza"
+  },
+  {
+   "t0": 138.476,
+   "t1": 138.641,
+   "w": "el"
+  },
+  {
+   "t0": 138.641,
+   "t1": 139.193,
+   "w": "verdadero"
+  },
+  {
+   "t0": 139.193,
+   "t1": 140.123,
+   "w": "problema"
+  },
+  {
+   "t0": 140.123,
+   "t1": 140.509,
+   "w": "porque"
+  },
+  {
+   "t0": 140.509,
+   "t1": 140.729,
+   "w": "esa"
+  },
+  {
+   "t0": 140.729,
+   "t1": 141.005,
+   "w": "agua"
+  },
+  {
+   "t0": 141.005,
+   "t1": 141.17,
+   "w": "no"
+  },
+  {
+   "t0": 141.17,
+   "t1": 141.556,
+   "w": "regaba"
+  },
+  {
+   "t0": 141.556,
+   "t1": 142.294,
+   "w": "pasto"
+  },
+  {
+   "t0": 142.294,
+   "t1": 142.64,
+   "w": "Regaba"
+  },
+  {
+   "t0": 142.64,
+   "t1": 142.789,
+   "w": "la"
+  },
+  {
+   "t0": 142.789,
+   "t1": 143.135,
+   "w": "comida"
+  },
+  {
+   "t0": 143.135,
+   "t1": 143.284,
+   "w": "de"
+  },
+  {
+   "t0": 143.284,
+   "t1": 143.68,
+   "w": "México"
+  },
+  {
+   "t0": 144.43,
+   "t1": 144.967,
+   "w": "Capítulo"
+  },
+  {
+   "t0": 144.967,
+   "t1": 145.605,
+   "w": "dos"
+  },
+  {
+   "t0": 145.605,
+   "t1": 145.79,
+   "w": "La"
+  },
+  {
+   "t0": 145.79,
+   "t1": 146.16,
+   "w": "mesa"
+  },
+  {
+   "t0": 146.16,
+   "t1": 146.277,
+   "w": "A"
+  },
+  {
+   "t0": 146.277,
+   "t1": 146.746,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 146.746,
+   "t1": 146.922,
+   "w": "le"
+  },
+  {
+   "t0": 146.922,
+   "t1": 147.274,
+   "w": "dicen"
+  },
+  {
+   "t0": 147.274,
+   "t1": 147.45,
+   "w": "el"
+  },
+  {
+   "t0": 147.45,
+   "t1": 147.919,
+   "w": "granero"
+  },
+  {
+   "t0": 147.919,
+   "t1": 148.095,
+   "w": "de"
+  },
+  {
+   "t0": 148.095,
+   "t1": 148.945,
+   "w": "México"
+  },
+  {
+   "t0": 148.945,
+   "t1": 149.052,
+   "w": "Y"
+  },
+  {
+   "t0": 149.052,
+   "t1": 149.213,
+   "w": "no"
+  },
+  {
+   "t0": 149.213,
+   "t1": 149.374,
+   "w": "es"
+  },
+  {
+   "t0": 149.374,
+   "t1": 149.536,
+   "w": "un"
+  },
+  {
+   "t0": 149.536,
+   "t1": 149.858,
+   "w": "apodo"
+  },
+  {
+   "t0": 149.858,
+   "t1": 150.639,
+   "w": "bonito"
+  },
+  {
+   "t0": 150.639,
+   "t1": 150.806,
+   "w": "Es"
+  },
+  {
+   "t0": 150.806,
+   "t1": 151.029,
+   "w": "una"
+  },
+  {
+   "t0": 151.029,
+   "t1": 151.711,
+   "w": "cifra"
+  },
+  {
+   "t0": 151.711,
+   "t1": 151.873,
+   "w": "En"
+  },
+  {
+   "t0": 151.873,
+   "t1": 152.034,
+   "w": "su"
+  },
+  {
+   "t0": 152.034,
+   "t1": 152.357,
+   "w": "mejor"
+  },
+  {
+   "t0": 152.357,
+   "t1": 152.896,
+   "w": "temporada"
+  },
+  {
+   "t0": 152.896,
+   "t1": 153.672,
+   "w": "reciente"
+  },
+  {
+   "t0": 153.672,
+   "t1": 154.102,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 154.102,
+   "t1": 154.533,
+   "w": "cosechó"
+  },
+  {
+   "t0": 154.533,
+   "t1": 154.748,
+   "w": "más"
+  },
+  {
+   "t0": 154.748,
+   "t1": 154.91,
+   "w": "de"
+  },
+  {
+   "t0": 154.91,
+   "t1": 155.179,
+   "w": "seis"
+  },
+  {
+   "t0": 155.179,
+   "t1": 155.663,
+   "w": "millones"
+  },
+  {
+   "t0": 155.663,
+   "t1": 155.825,
+   "w": "de"
+  },
+  {
+   "t0": 155.825,
+   "t1": 156.363,
+   "w": "toneladas"
+  },
+  {
+   "t0": 156.363,
+   "t1": 156.525,
+   "w": "de"
+  },
+  {
+   "t0": 156.525,
+   "t1": 157.193,
+   "w": "maíz"
+  },
+  {
+   "t0": 157.193,
+   "t1": 157.479,
+   "w": "Maíz"
+  },
+  {
+   "t0": 157.479,
+   "t1": 157.936,
+   "w": "blanco"
+  },
+  {
+   "t0": 157.936,
+   "t1": 158.458,
+   "w": "el"
+  },
+  {
+   "t0": 158.458,
+   "t1": 158.63,
+   "w": "de"
+  },
+  {
+   "t0": 158.63,
+   "t1": 158.801,
+   "w": "la"
+  },
+  {
+   "t0": 158.801,
+   "t1": 159.743,
+   "w": "tortilla"
+  },
+  {
+   "t0": 159.743,
+   "t1": 159.85,
+   "w": "Y"
+  },
+  {
+   "t0": 159.85,
+   "t1": 160.011,
+   "w": "en"
+  },
+  {
+   "t0": 160.011,
+   "t1": 160.225,
+   "w": "dos"
+  },
+  {
+   "t0": 160.225,
+   "t1": 160.44,
+   "w": "mil"
+  },
+  {
+   "t0": 160.44,
+   "t1": 161.347,
+   "w": "veinticuatro"
+  },
+  {
+   "t0": 161.347,
+   "t1": 161.776,
+   "w": "produjo"
+  },
+  {
+   "t0": 161.776,
+   "t1": 162.044,
+   "w": "tres"
+  },
+  {
+   "t0": 162.044,
+   "t1": 162.366,
+   "w": "punto"
+  },
+  {
+   "t0": 162.366,
+   "t1": 162.634,
+   "w": "tres"
+  },
+  {
+   "t0": 162.634,
+   "t1": 163.117,
+   "w": "millones"
+  },
+  {
+   "t0": 163.117,
+   "t1": 163.278,
+   "w": "de"
+  },
+  {
+   "t0": 163.278,
+   "t1": 164.227,
+   "w": "toneladas"
+  },
+  {
+   "t0": 164.227,
+   "t1": 164.51,
+   "w": "casi"
+  },
+  {
+   "t0": 164.51,
+   "t1": 164.963,
+   "w": "catorce"
+  },
+  {
+   "t0": 164.963,
+   "t1": 165.133,
+   "w": "de"
+  },
+  {
+   "t0": 165.133,
+   "t1": 165.416,
+   "w": "cada"
+  },
+  {
+   "t0": 165.416,
+   "t1": 165.699,
+   "w": "cien"
+  },
+  {
+   "t0": 165.699,
+   "t1": 166.265,
+   "w": "toneladas"
+  },
+  {
+   "t0": 166.265,
+   "t1": 166.435,
+   "w": "de"
+  },
+  {
+   "t0": 166.435,
+   "t1": 166.718,
+   "w": "maíz"
+  },
+  {
+   "t0": 166.718,
+   "t1": 166.888,
+   "w": "de"
+  },
+  {
+   "t0": 166.888,
+   "t1": 167.171,
+   "w": "todo"
+  },
+  {
+   "t0": 167.171,
+   "t1": 167.341,
+   "w": "el"
+  },
+  {
+   "t0": 167.341,
+   "t1": 168.093,
+   "w": "país"
+  },
+  {
+   "t0": 168.093,
+   "t1": 168.281,
+   "w": "Un"
+  },
+  {
+   "t0": 168.281,
+   "t1": 168.596,
+   "w": "solo"
+  },
+  {
+   "t0": 168.596,
+   "t1": 169.536,
+   "w": "estado"
+  },
+  {
+   "t0": 169.536,
+   "t1": 169.707,
+   "w": "Si"
+  },
+  {
+   "t0": 169.707,
+   "t1": 170.166,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 170.166,
+   "t1": 171.088,
+   "w": "desaparece"
+  },
+  {
+   "t0": 171.088,
+   "t1": 171.489,
+   "w": "México"
+  },
+  {
+   "t0": 171.489,
+   "t1": 171.832,
+   "w": "tiene"
+  },
+  {
+   "t0": 171.832,
+   "t1": 172.062,
+   "w": "que"
+  },
+  {
+   "t0": 172.062,
+   "t1": 172.463,
+   "w": "buscar"
+  },
+  {
+   "t0": 172.463,
+   "t1": 172.692,
+   "w": "ese"
+  },
+  {
+   "t0": 172.692,
+   "t1": 172.978,
+   "w": "maíz"
+  },
+  {
+   "t0": 172.978,
+   "t1": 173.824,
+   "w": "afuera"
+  },
+  {
+   "t0": 173.824,
+   "t1": 173.923,
+   "w": "Y"
+  },
+  {
+   "t0": 173.923,
+   "t1": 174.269,
+   "w": "cuando"
+  },
+  {
+   "t0": 174.269,
+   "t1": 174.417,
+   "w": "el"
+  },
+  {
+   "t0": 174.417,
+   "t1": 174.664,
+   "w": "maíz"
+  },
+  {
+   "t0": 174.664,
+   "t1": 174.813,
+   "w": "se"
+  },
+  {
+   "t0": 174.813,
+   "t1": 175.159,
+   "w": "compra"
+  },
+  {
+   "t0": 175.159,
+   "t1": 175.811,
+   "w": "afuera"
+  },
+  {
+   "t0": 175.811,
+   "t1": 175.959,
+   "w": "la"
+  },
+  {
+   "t0": 175.959,
+   "t1": 176.404,
+   "w": "tortilla"
+  },
+  {
+   "t0": 176.404,
+   "t1": 176.651,
+   "w": "sube"
+  },
+  {
+   "t0": 176.651,
+   "t1": 177.468,
+   "w": "adentro"
+  },
+  {
+   "t0": 177.468,
+   "t1": 177.627,
+   "w": "La"
+  },
+  {
+   "t0": 177.627,
+   "t1": 178.157,
+   "w": "tortilla"
+  },
+  {
+   "t0": 178.157,
+   "t1": 178.67,
+   "w": "que"
+  },
+  {
+   "t0": 178.67,
+   "t1": 178.935,
+   "w": "para"
+  },
+  {
+   "t0": 178.935,
+   "t1": 179.412,
+   "w": "millones"
+  },
+  {
+   "t0": 179.412,
+   "t1": 179.571,
+   "w": "de"
+  },
+  {
+   "t0": 179.571,
+   "t1": 180.048,
+   "w": "familias"
+  },
+  {
+   "t0": 180.048,
+   "t1": 180.207,
+   "w": "es"
+  },
+  {
+   "t0": 180.207,
+   "t1": 180.366,
+   "w": "la"
+  },
+  {
+   "t0": 180.366,
+   "t1": 180.631,
+   "w": "base"
+  },
+  {
+   "t0": 180.631,
+   "t1": 180.79,
+   "w": "de"
+  },
+  {
+   "t0": 180.79,
+   "t1": 181.055,
+   "w": "cada"
+  },
+  {
+   "t0": 181.055,
+   "t1": 181.929,
+   "w": "comida"
+  },
+  {
+   "t0": 181.929,
+   "t1": 182.387,
+   "w": "Piénsalo"
+  },
+  {
+   "t0": 182.387,
+   "t1": 182.539,
+   "w": "la"
+  },
+  {
+   "t0": 182.539,
+   "t1": 182.946,
+   "w": "próxima"
+  },
+  {
+   "t0": 182.946,
+   "t1": 183.149,
+   "w": "vez"
+  },
+  {
+   "t0": 183.149,
+   "t1": 183.352,
+   "w": "que"
+  },
+  {
+   "t0": 183.352,
+   "t1": 183.657,
+   "w": "pidas"
+  },
+  {
+   "t0": 183.657,
+   "t1": 183.911,
+   "w": "unos"
+  },
+  {
+   "t0": 183.911,
+   "t1": 184.437,
+   "w": "tacos"
+  },
+  {
+   "t0": 184.437,
+   "t1": 184.741,
+   "w": "Pero"
+  },
+  {
+   "t0": 184.741,
+   "t1": 184.924,
+   "w": "el"
+  },
+  {
+   "t0": 184.924,
+   "t1": 185.228,
+   "w": "maíz"
+  },
+  {
+   "t0": 185.228,
+   "t1": 185.41,
+   "w": "es"
+  },
+  {
+   "t0": 185.41,
+   "t1": 185.714,
+   "w": "solo"
+  },
+  {
+   "t0": 185.714,
+   "t1": 185.897,
+   "w": "el"
+  },
+  {
+   "t0": 185.897,
+   "t1": 186.957,
+   "w": "principio"
+  },
+  {
+   "t0": 186.957,
+   "t1": 188.178,
+   "w": "Garbanzo"
+  },
+  {
+   "t0": 188.178,
+   "t1": 188.595,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 188.595,
+   "t1": 189.012,
+   "w": "produce"
+  },
+  {
+   "t0": 189.012,
+   "t1": 189.429,
+   "w": "sesenta"
+  },
+  {
+   "t0": 189.429,
+   "t1": 189.533,
+   "w": "y"
+  },
+  {
+   "t0": 189.533,
+   "t1": 189.741,
+   "w": "dos"
+  },
+  {
+   "t0": 189.741,
+   "t1": 189.898,
+   "w": "de"
+  },
+  {
+   "t0": 189.898,
+   "t1": 190.158,
+   "w": "cada"
+  },
+  {
+   "t0": 190.158,
+   "t1": 190.419,
+   "w": "cien"
+  },
+  {
+   "t0": 190.419,
+   "t1": 190.94,
+   "w": "garbanzos"
+  },
+  {
+   "t0": 190.94,
+   "t1": 191.096,
+   "w": "de"
+  },
+  {
+   "t0": 191.096,
+   "t1": 191.891,
+   "w": "México"
+  },
+  {
+   "t0": 191.891,
+   "t1": 192.094,
+   "w": "Más"
+  },
+  {
+   "t0": 192.094,
+   "t1": 192.246,
+   "w": "de"
+  },
+  {
+   "t0": 192.246,
+   "t1": 192.398,
+   "w": "la"
+  },
+  {
+   "t0": 192.398,
+   "t1": 192.703,
+   "w": "mitad"
+  },
+  {
+   "t0": 192.703,
+   "t1": 192.906,
+   "w": "del"
+  },
+  {
+   "t0": 192.906,
+   "t1": 193.386,
+   "w": "país"
+  },
+  {
+   "t0": 193.386,
+   "t1": 193.538,
+   "w": "en"
+  },
+  {
+   "t0": 193.538,
+   "t1": 193.69,
+   "w": "un"
+  },
+  {
+   "t0": 193.69,
+   "t1": 193.944,
+   "w": "solo"
+  },
+  {
+   "t0": 193.944,
+   "t1": 194.35,
+   "w": "estado"
+  },
+  {
+   "t0": 194.67,
+   "t1": 195.601,
+   "w": "Tomate"
+  },
+  {
+   "t0": 195.601,
+   "t1": 195.812,
+   "w": "Más"
+  },
+  {
+   "t0": 195.812,
+   "t1": 195.97,
+   "w": "de"
+  },
+  {
+   "t0": 195.97,
+   "t1": 196.603,
+   "w": "ochocientas"
+  },
+  {
+   "t0": 196.603,
+   "t1": 196.814,
+   "w": "mil"
+  },
+  {
+   "t0": 196.814,
+   "t1": 197.342,
+   "w": "toneladas"
+  },
+  {
+   "t0": 197.342,
+   "t1": 197.5,
+   "w": "en"
+  },
+  {
+   "t0": 197.5,
+   "t1": 197.711,
+   "w": "una"
+  },
+  {
+   "t0": 197.711,
+   "t1": 197.975,
+   "w": "sola"
+  },
+  {
+   "t0": 197.975,
+   "t1": 198.904,
+   "w": "temporada"
+  },
+  {
+   "t0": 198.904,
+   "t1": 199.124,
+   "w": "Uno"
+  },
+  {
+   "t0": 199.124,
+   "t1": 199.29,
+   "w": "de"
+  },
+  {
+   "t0": 199.29,
+   "t1": 199.565,
+   "w": "cada"
+  },
+  {
+   "t0": 199.565,
+   "t1": 199.896,
+   "w": "cinco"
+  },
+  {
+   "t0": 199.896,
+   "t1": 200.337,
+   "w": "tomates"
+  },
+  {
+   "t0": 200.337,
+   "t1": 200.503,
+   "w": "de"
+  },
+  {
+   "t0": 200.503,
+   "t1": 200.889,
+   "w": "México"
+  },
+  {
+   "t0": 200.889,
+   "t1": 201.164,
+   "w": "sale"
+  },
+  {
+   "t0": 201.164,
+   "t1": 201.33,
+   "w": "de"
+  },
+  {
+   "t0": 201.33,
+   "t1": 201.826,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 201.826,
+   "t1": 202.263,
+   "w": "y"
+  },
+  {
+   "t0": 202.263,
+   "t1": 202.484,
+   "w": "una"
+  },
+  {
+   "t0": 202.484,
+   "t1": 202.759,
+   "w": "gran"
+  },
+  {
+   "t0": 202.759,
+   "t1": 203.09,
+   "w": "parte"
+  },
+  {
+   "t0": 203.09,
+   "t1": 203.421,
+   "w": "cruza"
+  },
+  {
+   "t0": 203.421,
+   "t1": 203.586,
+   "w": "la"
+  },
+  {
+   "t0": 203.586,
+   "t1": 204.528,
+   "w": "frontera"
+  },
+  {
+   "t0": 204.528,
+   "t1": 204.732,
+   "w": "Así"
+  },
+  {
+   "t0": 204.732,
+   "t1": 204.936,
+   "w": "que"
+  },
+  {
+   "t0": 204.936,
+   "t1": 205.089,
+   "w": "si"
+  },
+  {
+   "t0": 205.089,
+   "t1": 205.496,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 205.496,
+   "t1": 206.107,
+   "w": "desaparece"
+  },
+  {
+   "t0": 206.107,
+   "t1": 206.423,
+   "w": "no"
+  },
+  {
+   "t0": 206.423,
+   "t1": 206.678,
+   "w": "solo"
+  },
+  {
+   "t0": 206.678,
+   "t1": 206.83,
+   "w": "se"
+  },
+  {
+   "t0": 206.83,
+   "t1": 207.085,
+   "w": "nota"
+  },
+  {
+   "t0": 207.085,
+   "t1": 207.238,
+   "w": "en"
+  },
+  {
+   "t0": 207.238,
+   "t1": 207.391,
+   "w": "tu"
+  },
+  {
+   "t0": 207.391,
+   "t1": 208.084,
+   "w": "salsa"
+  },
+  {
+   "t0": 208.084,
+   "t1": 208.236,
+   "w": "Se"
+  },
+  {
+   "t0": 208.236,
+   "t1": 208.488,
+   "w": "nota"
+  },
+  {
+   "t0": 208.488,
+   "t1": 208.639,
+   "w": "en"
+  },
+  {
+   "t0": 208.639,
+   "t1": 208.79,
+   "w": "la"
+  },
+  {
+   "t0": 208.79,
+   "t1": 209.396,
+   "w": "hamburguesa"
+  },
+  {
+   "t0": 209.396,
+   "t1": 209.547,
+   "w": "de"
+  },
+  {
+   "t0": 209.547,
+   "t1": 209.951,
+   "w": "alguien"
+  },
+  {
+   "t0": 209.951,
+   "t1": 210.102,
+   "w": "en"
+  },
+  {
+   "t0": 210.102,
+   "t1": 210.919,
+   "w": "Chicago"
+  },
+  {
+   "t0": 210.919,
+   "t1": 211.033,
+   "w": "Y"
+  },
+  {
+   "t0": 211.033,
+   "t1": 211.491,
+   "w": "también"
+  },
+  {
+   "t0": 211.491,
+   "t1": 211.662,
+   "w": "se"
+  },
+  {
+   "t0": 211.662,
+   "t1": 211.891,
+   "w": "van"
+  },
+  {
+   "t0": 211.891,
+   "t1": 212.063,
+   "w": "la"
+  },
+  {
+   "t0": 212.063,
+   "t1": 212.349,
+   "w": "papa"
+  },
+  {
+   "t0": 212.349,
+   "t1": 212.52,
+   "w": "de"
+  },
+  {
+   "t0": 212.52,
+   "t1": 212.749,
+   "w": "Los"
+  },
+  {
+   "t0": 212.749,
+   "t1": 213.476,
+   "w": "Mochis"
+  },
+  {
+   "t0": 213.476,
+   "t1": 213.648,
+   "w": "el"
+  },
+  {
+   "t0": 213.648,
+   "t1": 214.385,
+   "w": "chile"
+  },
+  {
+   "t0": 214.385,
+   "t1": 214.556,
+   "w": "el"
+  },
+  {
+   "t0": 214.556,
+   "t1": 214.899,
+   "w": "mango"
+  },
+  {
+   "t0": 214.899,
+   "t1": 215.014,
+   "w": "y"
+  },
+  {
+   "t0": 215.014,
+   "t1": 215.185,
+   "w": "el"
+  },
+  {
+   "t0": 215.185,
+   "t1": 216.062,
+   "w": "frijol"
+  },
+  {
+   "t0": 216.062,
+   "t1": 216.531,
+   "w": "Detrás"
+  },
+  {
+   "t0": 216.531,
+   "t1": 216.732,
+   "w": "de"
+  },
+  {
+   "t0": 216.732,
+   "t1": 217.067,
+   "w": "todo"
+  },
+  {
+   "t0": 217.067,
+   "t1": 217.537,
+   "w": "eso"
+  },
+  {
+   "t0": 217.537,
+   "t1": 217.805,
+   "w": "hay"
+  },
+  {
+   "t0": 217.805,
+   "t1": 218.703,
+   "w": "gente"
+  },
+  {
+   "t0": 218.703,
+   "t1": 218.978,
+   "w": "Cada"
+  },
+  {
+   "t0": 218.978,
+   "t1": 219.78,
+   "w": "temporada"
+  },
+  {
+   "t0": 219.78,
+   "t1": 220.11,
+   "w": "miles"
+  },
+  {
+   "t0": 220.11,
+   "t1": 220.276,
+   "w": "de"
+  },
+  {
+   "t0": 220.276,
+   "t1": 220.881,
+   "w": "jornaleros"
+  },
+  {
+   "t0": 220.881,
+   "t1": 221.267,
+   "w": "viajan"
+  },
+  {
+   "t0": 221.267,
+   "t1": 221.597,
+   "w": "desde"
+  },
+  {
+   "t0": 221.597,
+   "t1": 222.276,
+   "w": "Oaxaca"
+  },
+  {
+   "t0": 222.276,
+   "t1": 222.772,
+   "w": "Guerrero"
+  },
+  {
+   "t0": 222.772,
+   "t1": 222.882,
+   "w": "y"
+  },
+  {
+   "t0": 222.882,
+   "t1": 223.323,
+   "w": "Chiapas"
+  },
+  {
+   "t0": 223.323,
+   "t1": 223.748,
+   "w": "para"
+  },
+  {
+   "t0": 223.748,
+   "t1": 224.244,
+   "w": "trabajar"
+  },
+  {
+   "t0": 224.244,
+   "t1": 224.409,
+   "w": "en"
+  },
+  {
+   "t0": 224.409,
+   "t1": 224.63,
+   "w": "los"
+  },
+  {
+   "t0": 224.63,
+   "t1": 225.015,
+   "w": "campos"
+  },
+  {
+   "t0": 225.015,
+   "t1": 225.18,
+   "w": "de"
+  },
+  {
+   "t0": 225.18,
+   "t1": 226.083,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 226.083,
+   "t1": 226.256,
+   "w": "Si"
+  },
+  {
+   "t0": 226.256,
+   "t1": 226.716,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 226.716,
+   "t1": 227.407,
+   "w": "desaparece"
+  },
+  {
+   "t0": 227.407,
+   "t1": 227.753,
+   "w": "ellos"
+  },
+  {
+   "t0": 227.753,
+   "t1": 228.213,
+   "w": "también"
+  },
+  {
+   "t0": 228.213,
+   "t1": 228.674,
+   "w": "pierden"
+  },
+  {
+   "t0": 228.674,
+   "t1": 228.846,
+   "w": "su"
+  },
+  {
+   "t0": 228.846,
+   "t1": 229.552,
+   "w": "trabajo"
+  },
+  {
+   "t0": 229.552,
+   "t1": 230.07,
+   "w": "Familias"
+  },
+  {
+   "t0": 230.07,
+   "t1": 230.794,
+   "w": "enteras"
+  },
+  {
+   "t0": 230.794,
+   "t1": 230.91,
+   "w": "a"
+  },
+  {
+   "t0": 230.91,
+   "t1": 231.14,
+   "w": "dos"
+  },
+  {
+   "t0": 231.14,
+   "t1": 231.37,
+   "w": "mil"
+  },
+  {
+   "t0": 231.37,
+   "t1": 232.004,
+   "w": "kilómetros"
+  },
+  {
+   "t0": 232.004,
+   "t1": 232.177,
+   "w": "de"
+  },
+  {
+   "t0": 232.177,
+   "t1": 232.81,
+   "w": "distancia"
+  },
+  {
+   "t0": 233.56,
+   "t1": 234.016,
+   "w": "Capítulo"
+  },
+  {
+   "t0": 234.016,
+   "t1": 234.738,
+   "w": "tres"
+  },
+  {
+   "t0": 234.738,
+   "t1": 234.908,
+   "w": "El"
+  },
+  {
+   "t0": 234.908,
+   "t1": 235.192,
+   "w": "mar"
+  },
+  {
+   "t0": 235.192,
+   "t1": 235.501,
+   "w": "Ahora"
+  },
+  {
+   "t0": 235.501,
+   "t1": 235.758,
+   "w": "mira"
+  },
+  {
+   "t0": 235.758,
+   "t1": 235.912,
+   "w": "la"
+  },
+  {
+   "t0": 235.912,
+   "t1": 236.598,
+   "w": "costa"
+  },
+  {
+   "t0": 236.598,
+   "t1": 237.077,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 237.077,
+   "t1": 237.436,
+   "w": "tiene"
+  },
+  {
+   "t0": 237.436,
+   "t1": 237.676,
+   "w": "uno"
+  },
+  {
+   "t0": 237.676,
+   "t1": 237.855,
+   "w": "de"
+  },
+  {
+   "t0": 237.855,
+   "t1": 238.095,
+   "w": "los"
+  },
+  {
+   "t0": 238.095,
+   "t1": 238.454,
+   "w": "mares"
+  },
+  {
+   "t0": 238.454,
+   "t1": 238.694,
+   "w": "más"
+  },
+  {
+   "t0": 238.694,
+   "t1": 239.412,
+   "w": "productivos"
+  },
+  {
+   "t0": 239.412,
+   "t1": 239.592,
+   "w": "de"
+  },
+  {
+   "t0": 239.592,
+   "t1": 239.891,
+   "w": "todo"
+  },
+  {
+   "t0": 239.891,
+   "t1": 240.601,
+   "w": "México"
+  },
+  {
+   "t0": 240.601,
+   "t1": 240.769,
+   "w": "En"
+  },
+  {
+   "t0": 240.769,
+   "t1": 240.992,
+   "w": "dos"
+  },
+  {
+   "t0": 240.992,
+   "t1": 241.215,
+   "w": "mil"
+  },
+  {
+   "t0": 241.215,
+   "t1": 241.885,
+   "w": "veintitrés"
+  },
+  {
+   "t0": 241.885,
+   "t1": 242.523,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 242.523,
+   "t1": 242.802,
+   "w": "sacó"
+  },
+  {
+   "t0": 242.802,
+   "t1": 243.025,
+   "w": "más"
+  },
+  {
+   "t0": 243.025,
+   "t1": 243.193,
+   "w": "de"
+  },
+  {
+   "t0": 243.193,
+   "t1": 243.584,
+   "w": "ciento"
+  },
+  {
+   "t0": 243.584,
+   "t1": 243.974,
+   "w": "quince"
+  },
+  {
+   "t0": 243.974,
+   "t1": 244.197,
+   "w": "mil"
+  },
+  {
+   "t0": 244.197,
+   "t1": 244.755,
+   "w": "toneladas"
+  },
+  {
+   "t0": 244.755,
+   "t1": 244.923,
+   "w": "de"
+  },
+  {
+   "t0": 244.923,
+   "t1": 245.798,
+   "w": "camarón"
+  },
+  {
+   "t0": 245.798,
+   "t1": 246.013,
+   "w": "Eso"
+  },
+  {
+   "t0": 246.013,
+   "t1": 246.228,
+   "w": "fue"
+  },
+  {
+   "t0": 246.228,
+   "t1": 246.39,
+   "w": "el"
+  },
+  {
+   "t0": 246.39,
+   "t1": 246.874,
+   "w": "cuarenta"
+  },
+  {
+   "t0": 246.874,
+   "t1": 246.982,
+   "w": "y"
+  },
+  {
+   "t0": 246.982,
+   "t1": 247.304,
+   "w": "cinco"
+  },
+  {
+   "t0": 247.304,
+   "t1": 247.52,
+   "w": "por"
+  },
+  {
+   "t0": 247.52,
+   "t1": 247.896,
+   "w": "ciento"
+  },
+  {
+   "t0": 247.896,
+   "t1": 248.112,
+   "w": "del"
+  },
+  {
+   "t0": 248.112,
+   "t1": 248.435,
+   "w": "valor"
+  },
+  {
+   "t0": 248.435,
+   "t1": 248.596,
+   "w": "de"
+  },
+  {
+   "t0": 248.596,
+   "t1": 248.865,
+   "w": "todo"
+  },
+  {
+   "t0": 248.865,
+   "t1": 249.026,
+   "w": "el"
+  },
+  {
+   "t0": 249.026,
+   "t1": 249.457,
+   "w": "camarón"
+  },
+  {
+   "t0": 249.457,
+   "t1": 249.672,
+   "w": "del"
+  },
+  {
+   "t0": 249.672,
+   "t1": 250.385,
+   "w": "país"
+  },
+  {
+   "t0": 250.385,
+   "t1": 250.626,
+   "w": "Casi"
+  },
+  {
+   "t0": 250.626,
+   "t1": 250.77,
+   "w": "la"
+  },
+  {
+   "t0": 250.77,
+   "t1": 251.107,
+   "w": "mitad"
+  },
+  {
+   "t0": 251.107,
+   "t1": 251.46,
+   "w": "de"
+  },
+  {
+   "t0": 251.46,
+   "t1": 251.604,
+   "w": "un"
+  },
+  {
+   "t0": 251.604,
+   "t1": 251.844,
+   "w": "solo"
+  },
+  {
+   "t0": 251.844,
+   "t1": 252.455,
+   "w": "estado"
+  },
+  {
+   "t0": 252.455,
+   "t1": 252.615,
+   "w": "El"
+  },
+  {
+   "t0": 252.615,
+   "t1": 253.04,
+   "w": "camarón"
+  },
+  {
+   "t0": 253.04,
+   "t1": 253.253,
+   "w": "del"
+  },
+  {
+   "t0": 253.253,
+   "t1": 254.305,
+   "w": "aguachile"
+  },
+  {
+   "t0": 254.305,
+   "t1": 254.471,
+   "w": "El"
+  },
+  {
+   "t0": 254.471,
+   "t1": 254.692,
+   "w": "del"
+  },
+  {
+   "t0": 254.692,
+   "t1": 255.455,
+   "w": "coctel"
+  },
+  {
+   "t0": 255.455,
+   "t1": 255.604,
+   "w": "El"
+  },
+  {
+   "t0": 255.604,
+   "t1": 255.754,
+   "w": "de"
+  },
+  {
+   "t0": 255.754,
+   "t1": 255.953,
+   "w": "los"
+  },
+  {
+   "t0": 255.953,
+   "t1": 256.252,
+   "w": "tacos"
+  },
+  {
+   "t0": 256.252,
+   "t1": 256.85,
+   "w": "gobernador"
+  },
+  {
+   "t0": 256.85,
+   "t1": 257.38,
+   "w": "que"
+  },
+  {
+   "t0": 257.38,
+   "t1": 257.58,
+   "w": "por"
+  },
+  {
+   "t0": 257.58,
+   "t1": 257.929,
+   "w": "cierto"
+  },
+  {
+   "t0": 257.929,
+   "t1": 258.327,
+   "w": "también"
+  },
+  {
+   "t0": 258.327,
+   "t1": 258.776,
+   "w": "nacieron"
+  },
+  {
+   "t0": 258.776,
+   "t1": 258.925,
+   "w": "en"
+  },
+  {
+   "t0": 258.925,
+   "t1": 259.69,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 259.69,
+   "t1": 259.987,
+   "w": "Gran"
+  },
+  {
+   "t0": 259.987,
+   "t1": 260.343,
+   "w": "parte"
+  },
+  {
+   "t0": 260.343,
+   "t1": 260.639,
+   "w": "sale"
+  },
+  {
+   "t0": 260.639,
+   "t1": 260.817,
+   "w": "de"
+  },
+  {
+   "t0": 260.817,
+   "t1": 261.173,
+   "w": "estas"
+  },
+  {
+   "t0": 261.173,
+   "t1": 261.991,
+   "w": "aguas"
+  },
+  {
+   "t0": 261.991,
+   "t1": 262.101,
+   "w": "Y"
+  },
+  {
+   "t0": 262.101,
+   "t1": 262.431,
+   "w": "luego"
+  },
+  {
+   "t0": 262.431,
+   "t1": 262.705,
+   "w": "está"
+  },
+  {
+   "t0": 262.705,
+   "t1": 263.255,
+   "w": "Mazatlán"
+  },
+  {
+   "t0": 263.255,
+   "t1": 263.68,
+   "w": "el"
+  },
+  {
+   "t0": 263.68,
+   "t1": 264.064,
+   "w": "puerto"
+  },
+  {
+   "t0": 264.064,
+   "t1": 264.284,
+   "w": "con"
+  },
+  {
+   "t0": 264.284,
+   "t1": 264.449,
+   "w": "la"
+  },
+  {
+   "t0": 264.449,
+   "t1": 264.779,
+   "w": "flota"
+  },
+  {
+   "t0": 264.779,
+   "t1": 265.218,
+   "w": "atunera"
+  },
+  {
+   "t0": 265.218,
+   "t1": 265.438,
+   "w": "más"
+  },
+  {
+   "t0": 265.438,
+   "t1": 265.822,
+   "w": "grande"
+  },
+  {
+   "t0": 265.822,
+   "t1": 265.987,
+   "w": "de"
+  },
+  {
+   "t0": 265.987,
+   "t1": 266.817,
+   "w": "México"
+  },
+  {
+   "t0": 266.817,
+   "t1": 267.149,
+   "w": "Según"
+  },
+  {
+   "t0": 267.149,
+   "t1": 267.48,
+   "w": "datos"
+  },
+  {
+   "t0": 267.48,
+   "t1": 267.646,
+   "w": "de"
+  },
+  {
+   "t0": 267.646,
+   "t1": 267.867,
+   "w": "dos"
+  },
+  {
+   "t0": 267.867,
+   "t1": 268.088,
+   "w": "mil"
+  },
+  {
+   "t0": 268.088,
+   "t1": 268.753,
+   "w": "quince"
+  },
+  {
+   "t0": 268.753,
+   "t1": 269.195,
+   "w": "setenta"
+  },
+  {
+   "t0": 269.195,
+   "t1": 269.36,
+   "w": "de"
+  },
+  {
+   "t0": 269.36,
+   "t1": 269.636,
+   "w": "cada"
+  },
+  {
+   "t0": 269.636,
+   "t1": 269.913,
+   "w": "cien"
+  },
+  {
+   "t0": 269.913,
+   "t1": 270.244,
+   "w": "kilos"
+  },
+  {
+   "t0": 270.244,
+   "t1": 270.41,
+   "w": "de"
+  },
+  {
+   "t0": 270.41,
+   "t1": 270.686,
+   "w": "atún"
+  },
+  {
+   "t0": 270.686,
+   "t1": 270.907,
+   "w": "del"
+  },
+  {
+   "t0": 270.907,
+   "t1": 271.183,
+   "w": "país"
+  },
+  {
+   "t0": 271.183,
+   "t1": 271.348,
+   "w": "se"
+  },
+  {
+   "t0": 271.348,
+   "t1": 271.956,
+   "w": "procesaban"
+  },
+  {
+   "t0": 271.956,
+   "t1": 272.64,
+   "w": "ahí"
+  },
+  {
+   "t0": 272.64,
+   "t1": 272.857,
+   "w": "Esa"
+  },
+  {
+   "t0": 272.857,
+   "t1": 273.128,
+   "w": "lata"
+  },
+  {
+   "t0": 273.128,
+   "t1": 273.29,
+   "w": "de"
+  },
+  {
+   "t0": 273.29,
+   "t1": 273.561,
+   "w": "atún"
+  },
+  {
+   "t0": 273.561,
+   "t1": 273.777,
+   "w": "que"
+  },
+  {
+   "t0": 273.777,
+   "t1": 274.156,
+   "w": "tienes"
+  },
+  {
+   "t0": 274.156,
+   "t1": 274.318,
+   "w": "en"
+  },
+  {
+   "t0": 274.318,
+   "t1": 274.481,
+   "w": "la"
+  },
+  {
+   "t0": 274.481,
+   "t1": 275.204,
+   "w": "alacena"
+  },
+  {
+   "t0": 275.204,
+   "t1": 275.421,
+   "w": "muy"
+  },
+  {
+   "t0": 275.421,
+   "t1": 276.179,
+   "w": "probablemente"
+  },
+  {
+   "t0": 276.179,
+   "t1": 276.449,
+   "w": "pasó"
+  },
+  {
+   "t0": 276.449,
+   "t1": 276.666,
+   "w": "por"
+  },
+  {
+   "t0": 276.666,
+   "t1": 277.617,
+   "w": "Mazatlán"
+  },
+  {
+   "t0": 277.617,
+   "t1": 277.862,
+   "w": "Sin"
+  },
+  {
+   "t0": 277.862,
+   "t1": 278.414,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 278.414,
+   "t1": 278.776,
+   "w": "el"
+  },
+  {
+   "t0": 278.776,
+   "t1": 279.082,
+   "w": "atún"
+  },
+  {
+   "t0": 279.082,
+   "t1": 279.45,
+   "w": "sube"
+  },
+  {
+   "t0": 279.45,
+   "t1": 279.633,
+   "w": "el"
+  },
+  {
+   "t0": 279.633,
+   "t1": 280.583,
+   "w": "camarón"
+  },
+  {
+   "t0": 280.583,
+   "t1": 280.767,
+   "w": "se"
+  },
+  {
+   "t0": 280.767,
+   "t1": 281.196,
+   "w": "vuelve"
+  },
+  {
+   "t0": 281.196,
+   "t1": 281.379,
+   "w": "un"
+  },
+  {
+   "t0": 281.379,
+   "t1": 282.151,
+   "w": "lujo"
+  },
+  {
+   "t0": 282.151,
+   "t1": 282.274,
+   "w": "y"
+  },
+  {
+   "t0": 282.274,
+   "t1": 282.641,
+   "w": "miles"
+  },
+  {
+   "t0": 282.641,
+   "t1": 282.825,
+   "w": "de"
+  },
+  {
+   "t0": 282.825,
+   "t1": 283.499,
+   "w": "pescadores"
+  },
+  {
+   "t0": 283.499,
+   "t1": 283.744,
+   "w": "que"
+  },
+  {
+   "t0": 283.744,
+   "t1": 284.111,
+   "w": "salen"
+  },
+  {
+   "t0": 284.111,
+   "t1": 284.418,
+   "w": "cada"
+  },
+  {
+   "t0": 284.418,
+   "t1": 285.226,
+   "w": "madrugada"
+  },
+  {
+   "t0": 285.226,
+   "t1": 285.41,
+   "w": "se"
+  },
+  {
+   "t0": 285.41,
+   "t1": 285.839,
+   "w": "quedan"
+  },
+  {
+   "t0": 285.839,
+   "t1": 286.084,
+   "w": "sin"
+  },
+  {
+   "t0": 286.084,
+   "t1": 286.39,
+   "w": "mar"
+  },
+  {
+   "t0": 286.71,
+   "t1": 286.837,
+   "w": "Y"
+  },
+  {
+   "t0": 286.837,
+   "t1": 287.091,
+   "w": "hay"
+  },
+  {
+   "t0": 287.091,
+   "t1": 287.409,
+   "w": "algo"
+  },
+  {
+   "t0": 287.409,
+   "t1": 287.664,
+   "w": "que"
+  },
+  {
+   "t0": 287.664,
+   "t1": 287.918,
+   "w": "muy"
+  },
+  {
+   "t0": 287.918,
+   "t1": 288.299,
+   "w": "pocos"
+  },
+  {
+   "t0": 288.299,
+   "t1": 289.244,
+   "w": "saben"
+  },
+  {
+   "t0": 289.244,
+   "t1": 289.535,
+   "w": "Cada"
+  },
+  {
+   "t0": 289.535,
+   "t1": 289.826,
+   "w": "año"
+  },
+  {
+   "t0": 289.826,
+   "t1": 290.555,
+   "w": "cuando"
+  },
+  {
+   "t0": 290.555,
+   "t1": 291.02,
+   "w": "termina"
+  },
+  {
+   "t0": 291.02,
+   "t1": 291.195,
+   "w": "la"
+  },
+  {
+   "t0": 291.195,
+   "t1": 291.793,
+   "w": "veda"
+  },
+  {
+   "t0": 291.793,
+   "t1": 291.909,
+   "w": "y"
+  },
+  {
+   "t0": 291.909,
+   "t1": 292.142,
+   "w": "los"
+  },
+  {
+   "t0": 292.142,
+   "t1": 292.549,
+   "w": "barcos"
+  },
+  {
+   "t0": 292.549,
+   "t1": 293.247,
+   "w": "camaroneros"
+  },
+  {
+   "t0": 293.247,
+   "t1": 293.712,
+   "w": "vuelven"
+  },
+  {
+   "t0": 293.712,
+   "t1": 293.828,
+   "w": "a"
+  },
+  {
+   "t0": 293.828,
+   "t1": 294.563,
+   "w": "salir"
+  },
+  {
+   "t0": 294.563,
+   "t1": 294.737,
+   "w": "en"
+  },
+  {
+   "t0": 294.737,
+   "t1": 295.26,
+   "w": "Mazatlán"
+  },
+  {
+   "t0": 295.26,
+   "t1": 295.493,
+   "w": "los"
+  },
+  {
+   "t0": 295.493,
+   "t1": 296.016,
+   "w": "despiden"
+  },
+  {
+   "t0": 296.016,
+   "t1": 296.191,
+   "w": "en"
+  },
+  {
+   "t0": 296.191,
+   "t1": 296.365,
+   "w": "el"
+  },
+  {
+   "t0": 296.365,
+   "t1": 297.214,
+   "w": "muelle"
+  },
+  {
+   "t0": 297.214,
+   "t1": 297.455,
+   "w": "Con"
+  },
+  {
+   "t0": 297.455,
+   "t1": 298.055,
+   "w": "familias"
+  },
+  {
+   "t0": 298.055,
+   "t1": 298.296,
+   "w": "con"
+  },
+  {
+   "t0": 298.296,
+   "t1": 299.077,
+   "w": "bendiciones"
+  },
+  {
+   "t0": 299.077,
+   "t1": 299.519,
+   "w": "y"
+  },
+  {
+   "t0": 299.519,
+   "t1": 299.759,
+   "w": "con"
+  },
+  {
+   "t0": 299.759,
+   "t1": 300.179,
+   "w": "música"
+  },
+  {
+   "t0": 300.179,
+   "t1": 300.36,
+   "w": "de"
+  },
+  {
+   "t0": 300.36,
+   "t1": 301.163,
+   "w": "banda"
+  },
+  {
+   "t0": 301.163,
+   "t1": 301.298,
+   "w": "Y"
+  },
+  {
+   "t0": 301.298,
+   "t1": 301.569,
+   "w": "esa"
+  },
+  {
+   "t0": 301.569,
+   "t1": 302.043,
+   "w": "música"
+  },
+  {
+   "t0": 302.043,
+   "t1": 302.431,
+   "w": "es"
+  },
+  {
+   "t0": 302.431,
+   "t1": 302.634,
+   "w": "lo"
+  },
+  {
+   "t0": 302.634,
+   "t1": 302.905,
+   "w": "que"
+  },
+  {
+   "t0": 302.905,
+   "t1": 303.176,
+   "w": "más"
+  },
+  {
+   "t0": 303.176,
+   "t1": 303.718,
+   "w": "dolería"
+  },
+  {
+   "t0": 303.718,
+   "t1": 304.26,
+   "w": "perder"
+  },
+  {
+   "t0": 305.01,
+   "t1": 305.525,
+   "w": "Capítulo"
+  },
+  {
+   "t0": 305.525,
+   "t1": 306.409,
+   "w": "cuatro"
+  },
+  {
+   "t0": 306.409,
+   "t1": 306.587,
+   "w": "El"
+  },
+  {
+   "t0": 306.587,
+   "t1": 307.002,
+   "w": "sonido"
+  },
+  {
+   "t0": 307.002,
+   "t1": 307.179,
+   "w": "de"
+  },
+  {
+   "t0": 307.179,
+   "t1": 307.979,
+   "w": "México"
+  },
+  {
+   "t0": 307.979,
+   "t1": 308.149,
+   "w": "El"
+  },
+  {
+   "t0": 308.149,
+   "t1": 308.716,
+   "w": "dieciocho"
+  },
+  {
+   "t0": 308.716,
+   "t1": 308.886,
+   "w": "de"
+  },
+  {
+   "t0": 308.886,
+   "t1": 309.453,
+   "w": "noviembre"
+  },
+  {
+   "t0": 309.453,
+   "t1": 309.623,
+   "w": "de"
+  },
+  {
+   "t0": 309.623,
+   "t1": 309.85,
+   "w": "mil"
+  },
+  {
+   "t0": 309.85,
+   "t1": 310.53,
+   "w": "novecientos"
+  },
+  {
+   "t0": 310.53,
+   "t1": 311.211,
+   "w": "diecisiete"
+  },
+  {
+   "t0": 311.211,
+   "t1": 311.381,
+   "w": "en"
+  },
+  {
+   "t0": 311.381,
+   "t1": 311.948,
+   "w": "Mazatlán"
+  },
+  {
+   "t0": 311.948,
+   "t1": 312.586,
+   "w": "nació"
+  },
+  {
+   "t0": 312.586,
+   "t1": 312.756,
+   "w": "un"
+  },
+  {
+   "t0": 312.756,
+   "t1": 313.04,
+   "w": "niño"
+  },
+  {
+   "t0": 313.04,
+   "t1": 313.494,
+   "w": "llamado"
+  },
+  {
+   "t0": 313.494,
+   "t1": 313.834,
+   "w": "Pedro"
+  },
+  {
+   "t0": 313.834,
+   "t1": 314.745,
+   "w": "Infante"
+  },
+  {
+   "t0": 314.745,
+   "t1": 315.102,
+   "w": "Creció"
+  },
+  {
+   "t0": 315.102,
+   "t1": 315.255,
+   "w": "en"
+  },
+  {
+   "t0": 315.255,
+   "t1": 316.126,
+   "w": "Guamúchil"
+  },
+  {
+   "t0": 316.126,
+   "t1": 316.535,
+   "w": "también"
+  },
+  {
+   "t0": 316.535,
+   "t1": 316.688,
+   "w": "en"
+  },
+  {
+   "t0": 316.688,
+   "t1": 317.561,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 317.561,
+   "t1": 317.663,
+   "w": "y"
+  },
+  {
+   "t0": 317.663,
+   "t1": 317.817,
+   "w": "se"
+  },
+  {
+   "t0": 317.817,
+   "t1": 318.327,
+   "w": "convirtió"
+  },
+  {
+   "t0": 318.327,
+   "t1": 318.48,
+   "w": "en"
+  },
+  {
+   "t0": 318.48,
+   "t1": 318.633,
+   "w": "el"
+  },
+  {
+   "t0": 318.633,
+   "t1": 318.94,
+   "w": "ídolo"
+  },
+  {
+   "t0": 318.94,
+   "t1": 319.144,
+   "w": "más"
+  },
+  {
+   "t0": 319.144,
+   "t1": 319.501,
+   "w": "grande"
+  },
+  {
+   "t0": 319.501,
+   "t1": 319.706,
+   "w": "del"
+  },
+  {
+   "t0": 319.706,
+   "t1": 319.961,
+   "w": "cine"
+  },
+  {
+   "t0": 319.961,
+   "t1": 320.114,
+   "w": "de"
+  },
+  {
+   "t0": 320.114,
+   "t1": 320.318,
+   "w": "oro"
+  },
+  {
+   "t0": 320.318,
+   "t1": 321.23,
+   "w": "mexicano"
+  },
+  {
+   "t0": 321.23,
+   "t1": 321.576,
+   "w": "Murió"
+  },
+  {
+   "t0": 321.576,
+   "t1": 321.75,
+   "w": "en"
+  },
+  {
+   "t0": 321.75,
+   "t1": 321.98,
+   "w": "mil"
+  },
+  {
+   "t0": 321.98,
+   "t1": 322.673,
+   "w": "novecientos"
+  },
+  {
+   "t0": 322.673,
+   "t1": 323.25,
+   "w": "cincuenta"
+  },
+  {
+   "t0": 323.25,
+   "t1": 323.365,
+   "w": "y"
+  },
+  {
+   "t0": 323.365,
+   "t1": 323.769,
+   "w": "siete"
+  },
+  {
+   "t0": 323.769,
+   "t1": 324.272,
+   "w": "en"
+  },
+  {
+   "t0": 324.272,
+   "t1": 324.446,
+   "w": "un"
+  },
+  {
+   "t0": 324.446,
+   "t1": 325.023,
+   "w": "accidente"
+  },
+  {
+   "t0": 325.023,
+   "t1": 325.196,
+   "w": "de"
+  },
+  {
+   "t0": 325.196,
+   "t1": 325.988,
+   "w": "avión"
+  },
+  {
+   "t0": 325.988,
+   "t1": 326.092,
+   "w": "Y"
+  },
+  {
+   "t0": 326.092,
+   "t1": 326.3,
+   "w": "aun"
+  },
+  {
+   "t0": 326.3,
+   "t1": 326.561,
+   "w": "así"
+  },
+  {
+   "t0": 326.561,
+   "t1": 327.103,
+   "w": "cada"
+  },
+  {
+   "t0": 327.103,
+   "t1": 327.468,
+   "w": "quince"
+  },
+  {
+   "t0": 327.468,
+   "t1": 327.624,
+   "w": "de"
+  },
+  {
+   "t0": 327.624,
+   "t1": 328.311,
+   "w": "abril"
+  },
+  {
+   "t0": 328.311,
+   "t1": 328.624,
+   "w": "miles"
+  },
+  {
+   "t0": 328.624,
+   "t1": 328.78,
+   "w": "de"
+  },
+  {
+   "t0": 328.78,
+   "t1": 329.249,
+   "w": "personas"
+  },
+  {
+   "t0": 329.249,
+   "t1": 329.405,
+   "w": "lo"
+  },
+  {
+   "t0": 329.405,
+   "t1": 329.77,
+   "w": "siguen"
+  },
+  {
+   "t0": 329.77,
+   "t1": 330.785,
+   "w": "recordando"
+  },
+  {
+   "t0": 330.785,
+   "t1": 330.954,
+   "w": "Si"
+  },
+  {
+   "t0": 330.954,
+   "t1": 331.403,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 331.403,
+   "t1": 332.077,
+   "w": "desaparece"
+  },
+  {
+   "t0": 332.077,
+   "t1": 333.004,
+   "w": "desaparece"
+  },
+  {
+   "t0": 333.004,
+   "t1": 333.173,
+   "w": "la"
+  },
+  {
+   "t0": 333.173,
+   "t1": 333.566,
+   "w": "tierra"
+  },
+  {
+   "t0": 333.566,
+   "t1": 333.734,
+   "w": "de"
+  },
+  {
+   "t0": 333.734,
+   "t1": 334.071,
+   "w": "Pedro"
+  },
+  {
+   "t0": 334.071,
+   "t1": 334.913,
+   "w": "Infante"
+  },
+  {
+   "t0": 334.913,
+   "t1": 335.051,
+   "w": "Y"
+  },
+  {
+   "t0": 335.051,
+   "t1": 335.258,
+   "w": "no"
+  },
+  {
+   "t0": 335.258,
+   "t1": 335.604,
+   "w": "está"
+  },
+  {
+   "t0": 335.604,
+   "t1": 336.468,
+   "w": "solo"
+  },
+  {
+   "t0": 336.468,
+   "t1": 336.639,
+   "w": "En"
+  },
+  {
+   "t0": 336.639,
+   "t1": 336.81,
+   "w": "El"
+  },
+  {
+   "t0": 336.81,
+   "t1": 337.323,
+   "w": "Rosario"
+  },
+  {
+   "t0": 337.323,
+   "t1": 337.836,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 337.836,
+   "t1": 338.425,
+   "w": "nació"
+  },
+  {
+   "t0": 338.425,
+   "t1": 338.71,
+   "w": "Lola"
+  },
+  {
+   "t0": 338.71,
+   "t1": 339.223,
+   "w": "Beltrán"
+  },
+  {
+   "t0": 339.223,
+   "t1": 339.394,
+   "w": "la"
+  },
+  {
+   "t0": 339.394,
+   "t1": 339.856,
+   "w": "voz"
+  },
+  {
+   "t0": 339.856,
+   "t1": 340.084,
+   "w": "que"
+  },
+  {
+   "t0": 340.084,
+   "t1": 340.426,
+   "w": "llevó"
+  },
+  {
+   "t0": 340.426,
+   "t1": 340.597,
+   "w": "la"
+  },
+  {
+   "t0": 340.597,
+   "t1": 341.054,
+   "w": "canción"
+  },
+  {
+   "t0": 341.054,
+   "t1": 341.567,
+   "w": "ranchera"
+  },
+  {
+   "t0": 341.567,
+   "t1": 341.831,
+   "w": "a"
+  },
+  {
+   "t0": 341.831,
+   "t1": 342.459,
+   "w": "escenarios"
+  },
+  {
+   "t0": 342.459,
+   "t1": 342.63,
+   "w": "de"
+  },
+  {
+   "t0": 342.63,
+   "t1": 342.915,
+   "w": "todo"
+  },
+  {
+   "t0": 342.915,
+   "t1": 343.086,
+   "w": "el"
+  },
+  {
+   "t0": 343.086,
+   "t1": 343.829,
+   "w": "mundo"
+  },
+  {
+   "t0": 343.829,
+   "t1": 343.952,
+   "w": "Y"
+  },
+  {
+   "t0": 343.952,
+   "t1": 344.137,
+   "w": "en"
+  },
+  {
+   "t0": 344.137,
+   "t1": 344.754,
+   "w": "Guamúchil"
+  },
+  {
+   "t0": 344.754,
+   "t1": 345.124,
+   "w": "nació"
+  },
+  {
+   "t0": 345.124,
+   "t1": 345.371,
+   "w": "Ana"
+  },
+  {
+   "t0": 345.371,
+   "t1": 346.398,
+   "w": "Gabriel"
+  },
+  {
+   "t0": 346.398,
+   "t1": 346.567,
+   "w": "En"
+  },
+  {
+   "t0": 346.567,
+   "t1": 346.791,
+   "w": "mil"
+  },
+  {
+   "t0": 346.791,
+   "t1": 347.466,
+   "w": "novecientos"
+  },
+  {
+   "t0": 347.466,
+   "t1": 347.915,
+   "w": "treinta"
+  },
+  {
+   "t0": 347.915,
+   "t1": 348.028,
+   "w": "y"
+  },
+  {
+   "t0": 348.028,
+   "t1": 348.708,
+   "w": "ocho"
+  },
+  {
+   "t0": 348.708,
+   "t1": 348.877,
+   "w": "en"
+  },
+  {
+   "t0": 348.877,
+   "t1": 349.682,
+   "w": "Mazatlán"
+  },
+  {
+   "t0": 349.682,
+   "t1": 349.851,
+   "w": "un"
+  },
+  {
+   "t0": 349.851,
+   "t1": 350.244,
+   "w": "músico"
+  },
+  {
+   "t0": 350.244,
+   "t1": 350.694,
+   "w": "llamado"
+  },
+  {
+   "t0": 350.694,
+   "t1": 350.975,
+   "w": "Cruz"
+  },
+  {
+   "t0": 350.975,
+   "t1": 351.844,
+   "w": "Lizárraga"
+  },
+  {
+   "t0": 351.844,
+   "t1": 352.181,
+   "w": "fundó"
+  },
+  {
+   "t0": 352.181,
+   "t1": 352.35,
+   "w": "la"
+  },
+  {
+   "t0": 352.35,
+   "t1": 352.687,
+   "w": "Banda"
+  },
+  {
+   "t0": 352.687,
+   "t1": 352.856,
+   "w": "El"
+  },
+  {
+   "t0": 352.856,
+   "t1": 353.684,
+   "w": "Recodo"
+  },
+  {
+   "t0": 353.684,
+   "t1": 353.889,
+   "w": "Fue"
+  },
+  {
+   "t0": 353.889,
+   "t1": 354.043,
+   "w": "la"
+  },
+  {
+   "t0": 354.043,
+   "t1": 354.453,
+   "w": "primera"
+  },
+  {
+   "t0": 354.453,
+   "t1": 354.761,
+   "w": "banda"
+  },
+  {
+   "t0": 354.761,
+   "t1": 354.914,
+   "w": "de"
+  },
+  {
+   "t0": 354.914,
+   "t1": 355.324,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 355.324,
+   "t1": 355.478,
+   "w": "en"
+  },
+  {
+   "t0": 355.478,
+   "t1": 355.786,
+   "w": "tocar"
+  },
+  {
+   "t0": 355.786,
+   "t1": 355.94,
+   "w": "en"
+  },
+  {
+   "t0": 355.94,
+   "t1": 356.093,
+   "w": "la"
+  },
+  {
+   "t0": 356.093,
+   "t1": 356.35,
+   "w": "Casa"
+  },
+  {
+   "t0": 356.35,
+   "t1": 357.139,
+   "w": "Blanca"
+  },
+  {
+   "t0": 357.139,
+   "t1": 357.413,
+   "w": "Casi"
+  },
+  {
+   "t0": 357.413,
+   "t1": 357.851,
+   "w": "noventa"
+  },
+  {
+   "t0": 357.851,
+   "t1": 358.125,
+   "w": "años"
+  },
+  {
+   "t0": 358.125,
+   "t1": 358.618,
+   "w": "después"
+  },
+  {
+   "t0": 358.618,
+   "t1": 358.947,
+   "w": "sigue"
+  },
+  {
+   "t0": 358.947,
+   "t1": 359.44,
+   "w": "tocando"
+  },
+  {
+   "t0": 359.76,
+   "t1": 360.164,
+   "w": "Porque"
+  },
+  {
+   "t0": 360.164,
+   "t1": 360.338,
+   "w": "la"
+  },
+  {
+   "t0": 360.338,
+   "t1": 360.742,
+   "w": "música"
+  },
+  {
+   "t0": 360.742,
+   "t1": 360.915,
+   "w": "de"
+  },
+  {
+   "t0": 360.915,
+   "t1": 361.638,
+   "w": "banda"
+  },
+  {
+   "t0": 361.638,
+   "t1": 361.812,
+   "w": "la"
+  },
+  {
+   "t0": 361.812,
+   "t1": 361.985,
+   "w": "de"
+  },
+  {
+   "t0": 361.985,
+   "t1": 362.158,
+   "w": "la"
+  },
+  {
+   "t0": 362.158,
+   "t1": 362.851,
+   "w": "tambora"
+  },
+  {
+   "t0": 362.851,
+   "t1": 363.082,
+   "w": "los"
+  },
+  {
+   "t0": 363.082,
+   "t1": 363.718,
+   "w": "clarinetes"
+  },
+  {
+   "t0": 363.718,
+   "t1": 363.833,
+   "w": "y"
+  },
+  {
+   "t0": 363.833,
+   "t1": 364.064,
+   "w": "las"
+  },
+  {
+   "t0": 364.064,
+   "t1": 365.024,
+   "w": "trompetas"
+  },
+  {
+   "t0": 365.024,
+   "t1": 365.37,
+   "w": "tiene"
+  },
+  {
+   "t0": 365.37,
+   "t1": 365.544,
+   "w": "su"
+  },
+  {
+   "t0": 365.544,
+   "t1": 365.832,
+   "w": "cuna"
+  },
+  {
+   "t0": 365.832,
+   "t1": 366.524,
+   "w": "aquí"
+  },
+  {
+   "t0": 366.524,
+   "t1": 366.696,
+   "w": "La"
+  },
+  {
+   "t0": 366.696,
+   "t1": 367.211,
+   "w": "historia"
+  },
+  {
+   "t0": 367.211,
+   "t1": 367.44,
+   "w": "más"
+  },
+  {
+   "t0": 367.44,
+   "t1": 368.19,
+   "w": "contada"
+  },
+  {
+   "t0": 368.19,
+   "t1": 368.476,
+   "w": "dice"
+  },
+  {
+   "t0": 368.476,
+   "t1": 368.705,
+   "w": "que"
+  },
+  {
+   "t0": 368.705,
+   "t1": 369.105,
+   "w": "empezó"
+  },
+  {
+   "t0": 369.105,
+   "t1": 369.334,
+   "w": "con"
+  },
+  {
+   "t0": 369.334,
+   "t1": 369.563,
+   "w": "las"
+  },
+  {
+   "t0": 369.563,
+   "t1": 369.963,
+   "w": "bandas"
+  },
+  {
+   "t0": 369.963,
+   "t1": 370.135,
+   "w": "de"
+  },
+  {
+   "t0": 370.135,
+   "t1": 370.535,
+   "w": "viento"
+  },
+  {
+   "t0": 370.535,
+   "t1": 370.764,
+   "w": "que"
+  },
+  {
+   "t0": 370.764,
+   "t1": 371.279,
+   "w": "llegaron"
+  },
+  {
+   "t0": 371.279,
+   "t1": 371.45,
+   "w": "al"
+  },
+  {
+   "t0": 371.45,
+   "t1": 372.072,
+   "w": "puerto"
+  },
+  {
+   "t0": 372.072,
+   "t1": 372.244,
+   "w": "de"
+  },
+  {
+   "t0": 372.244,
+   "t1": 372.758,
+   "w": "Mazatlán"
+  },
+  {
+   "t0": 372.758,
+   "t1": 372.93,
+   "w": "en"
+  },
+  {
+   "t0": 372.93,
+   "t1": 373.102,
+   "w": "el"
+  },
+  {
+   "t0": 373.102,
+   "t1": 373.886,
+   "w": "siglo"
+  },
+  {
+   "t0": 373.886,
+   "t1": 374.572,
+   "w": "diecinueve"
+  },
+  {
+   "t0": 374.572,
+   "t1": 374.687,
+   "w": "y"
+  },
+  {
+   "t0": 374.687,
+   "t1": 374.915,
+   "w": "que"
+  },
+  {
+   "t0": 374.915,
+   "t1": 375.144,
+   "w": "los"
+  },
+  {
+   "t0": 375.144,
+   "t1": 375.762,
+   "w": "músicos"
+  },
+  {
+   "t0": 375.762,
+   "t1": 375.934,
+   "w": "de"
+  },
+  {
+   "t0": 375.934,
+   "t1": 376.162,
+   "w": "los"
+  },
+  {
+   "t0": 376.162,
+   "t1": 376.62,
+   "w": "pueblos"
+  },
+  {
+   "t0": 376.62,
+   "t1": 377.179,
+   "w": "la"
+  },
+  {
+   "t0": 377.179,
+   "t1": 377.693,
+   "w": "hicieron"
+  },
+  {
+   "t0": 377.693,
+   "t1": 378.405,
+   "w": "suya"
+  },
+  {
+   "t0": 378.405,
+   "t1": 378.582,
+   "w": "Sin"
+  },
+  {
+   "t0": 378.582,
+   "t1": 378.936,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 378.936,
+   "t1": 379.069,
+   "w": "no"
+  },
+  {
+   "t0": 379.069,
+   "t1": 379.246,
+   "w": "hay"
+  },
+  {
+   "t0": 379.246,
+   "t1": 379.511,
+   "w": "banda"
+  },
+  {
+   "t0": 379.511,
+   "t1": 380.414,
+   "w": "sinaloense"
+  },
+  {
+   "t0": 380.414,
+   "t1": 380.577,
+   "w": "No"
+  },
+  {
+   "t0": 380.577,
+   "t1": 380.795,
+   "w": "hay"
+  },
+  {
+   "t0": 380.795,
+   "t1": 381.23,
+   "w": "tambora"
+  },
+  {
+   "t0": 381.23,
+   "t1": 381.393,
+   "w": "en"
+  },
+  {
+   "t0": 381.393,
+   "t1": 381.61,
+   "w": "las"
+  },
+  {
+   "t0": 381.61,
+   "t1": 382.272,
+   "w": "bodas"
+  },
+  {
+   "t0": 382.272,
+   "t1": 382.435,
+   "w": "en"
+  },
+  {
+   "t0": 382.435,
+   "t1": 382.653,
+   "w": "los"
+  },
+  {
+   "t0": 382.653,
+   "t1": 383.033,
+   "w": "quince"
+  },
+  {
+   "t0": 383.033,
+   "t1": 383.305,
+   "w": "años"
+  },
+  {
+   "t0": 383.305,
+   "t1": 383.468,
+   "w": "ni"
+  },
+  {
+   "t0": 383.468,
+   "t1": 383.631,
+   "w": "en"
+  },
+  {
+   "t0": 383.631,
+   "t1": 383.849,
+   "w": "los"
+  },
+  {
+   "t0": 383.849,
+   "t1": 384.815,
+   "w": "estadios"
+  },
+  {
+   "t0": 384.815,
+   "t1": 385.127,
+   "w": "Desde"
+  },
+  {
+   "t0": 385.127,
+   "t1": 385.543,
+   "w": "Tijuana"
+  },
+  {
+   "t0": 385.543,
+   "t1": 385.854,
+   "w": "hasta"
+  },
+  {
+   "t0": 385.854,
+   "t1": 386.062,
+   "w": "Los"
+  },
+  {
+   "t0": 386.062,
+   "t1": 386.53,
+   "w": "Ángeles"
+  },
+  {
+   "t0": 386.53,
+   "t1": 387.129,
+   "w": "miles"
+  },
+  {
+   "t0": 387.129,
+   "t1": 387.284,
+   "w": "de"
+  },
+  {
+   "t0": 387.284,
+   "t1": 387.7,
+   "w": "fiestas"
+  },
+  {
+   "t0": 387.7,
+   "t1": 387.856,
+   "w": "se"
+  },
+  {
+   "t0": 387.856,
+   "t1": 388.376,
+   "w": "quedarían"
+  },
+  {
+   "t0": 388.376,
+   "t1": 389.277,
+   "w": "calladas"
+  },
+  {
+   "t0": 389.277,
+   "t1": 389.388,
+   "w": "Y"
+  },
+  {
+   "t0": 389.388,
+   "t1": 389.831,
+   "w": "tampoco"
+  },
+  {
+   "t0": 389.831,
+   "t1": 390.219,
+   "w": "habría"
+  },
+  {
+   "t0": 390.219,
+   "t1": 390.717,
+   "w": "Carnaval"
+  },
+  {
+   "t0": 390.717,
+   "t1": 390.883,
+   "w": "de"
+  },
+  {
+   "t0": 390.883,
+   "t1": 391.856,
+   "w": "Mazatlán"
+  },
+  {
+   "t0": 391.856,
+   "t1": 392.221,
+   "w": "Empezó"
+  },
+  {
+   "t0": 392.221,
+   "t1": 392.377,
+   "w": "en"
+  },
+  {
+   "t0": 392.377,
+   "t1": 392.586,
+   "w": "mil"
+  },
+  {
+   "t0": 392.586,
+   "t1": 393.212,
+   "w": "ochocientos"
+  },
+  {
+   "t0": 393.212,
+   "t1": 393.629,
+   "w": "noventa"
+  },
+  {
+   "t0": 393.629,
+   "t1": 393.734,
+   "w": "y"
+  },
+  {
+   "t0": 393.734,
+   "t1": 394.347,
+   "w": "ocho"
+  },
+  {
+   "t0": 394.347,
+   "t1": 394.451,
+   "w": "y"
+  },
+  {
+   "t0": 394.451,
+   "t1": 394.608,
+   "w": "es"
+  },
+  {
+   "t0": 394.608,
+   "t1": 394.764,
+   "w": "la"
+  },
+  {
+   "t0": 394.764,
+   "t1": 395.286,
+   "w": "tradición"
+  },
+  {
+   "t0": 395.286,
+   "t1": 395.442,
+   "w": "de"
+  },
+  {
+   "t0": 395.442,
+   "t1": 395.912,
+   "w": "carnaval"
+  },
+  {
+   "t0": 395.912,
+   "t1": 396.329,
+   "w": "moderno"
+  },
+  {
+   "t0": 396.329,
+   "t1": 396.538,
+   "w": "más"
+  },
+  {
+   "t0": 396.538,
+   "t1": 396.955,
+   "w": "antigua"
+  },
+  {
+   "t0": 396.955,
+   "t1": 397.111,
+   "w": "de"
+  },
+  {
+   "t0": 397.111,
+   "t1": 398.034,
+   "w": "México"
+  },
+  {
+   "t0": 398.034,
+   "t1": 398.245,
+   "w": "Más"
+  },
+  {
+   "t0": 398.245,
+   "t1": 398.403,
+   "w": "de"
+  },
+  {
+   "t0": 398.403,
+   "t1": 398.773,
+   "w": "ciento"
+  },
+  {
+   "t0": 398.773,
+   "t1": 399.143,
+   "w": "veinte"
+  },
+  {
+   "t0": 399.143,
+   "t1": 399.407,
+   "w": "años"
+  },
+  {
+   "t0": 399.407,
+   "t1": 399.565,
+   "w": "de"
+  },
+  {
+   "t0": 399.565,
+   "t1": 400.312,
+   "w": "desfiles"
+  },
+  {
+   "t0": 400.312,
+   "t1": 400.787,
+   "w": "borrados"
+  },
+  {
+   "t0": 400.787,
+   "t1": 400.945,
+   "w": "de"
+  },
+  {
+   "t0": 400.945,
+   "t1": 401.104,
+   "w": "un"
+  },
+  {
+   "t0": 401.104,
+   "t1": 401.315,
+   "w": "día"
+  },
+  {
+   "t0": 401.315,
+   "t1": 401.579,
+   "w": "para"
+  },
+  {
+   "t0": 401.579,
+   "t1": 402.265,
+   "w": "otro"
+  },
+  {
+   "t0": 402.265,
+   "t1": 402.661,
+   "w": "Ahora"
+  },
+  {
+   "t0": 402.661,
+   "t1": 403.287,
+   "w": "seguro"
+  },
+  {
+   "t0": 403.287,
+   "t1": 403.625,
+   "w": "estás"
+  },
+  {
+   "t0": 403.625,
+   "t1": 404.606,
+   "w": "pensando"
+  },
+  {
+   "t0": 404.606,
+   "t1": 404.735,
+   "w": "¿y"
+  },
+  {
+   "t0": 404.735,
+   "t1": 404.863,
+   "w": "lo"
+  },
+  {
+   "t0": 404.863,
+   "t1": 405.034,
+   "w": "que"
+  },
+  {
+   "t0": 405.034,
+   "t1": 405.247,
+   "w": "sale"
+  },
+  {
+   "t0": 405.247,
+   "t1": 405.375,
+   "w": "en"
+  },
+  {
+   "t0": 405.375,
+   "t1": 405.546,
+   "w": "las"
+  },
+  {
+   "t0": 405.546,
+   "t1": 406.384,
+   "w": "noticias?"
+  },
+  {
+   "t0": 406.384,
+   "t1": 406.671,
+   "w": "Vamos"
+  },
+  {
+   "t0": 406.671,
+   "t1": 407.321,
+   "w": "ahí"
+  },
+  {
+   "t0": 407.321,
+   "t1": 407.653,
+   "w": "Porque"
+  },
+  {
+   "t0": 407.653,
+   "t1": 407.89,
+   "w": "esto"
+  },
+  {
+   "t0": 407.89,
+   "t1": 408.032,
+   "w": "es"
+  },
+  {
+   "t0": 408.032,
+   "t1": 408.175,
+   "w": "lo"
+  },
+  {
+   "t0": 408.175,
+   "t1": 408.364,
+   "w": "que"
+  },
+  {
+   "t0": 408.364,
+   "t1": 408.601,
+   "w": "casi"
+  },
+  {
+   "t0": 408.601,
+   "t1": 408.886,
+   "w": "nadie"
+  },
+  {
+   "t0": 408.886,
+   "t1": 409.36,
+   "w": "entiende"
+  },
+  {
+   "t0": 410.11,
+   "t1": 410.638,
+   "w": "Capítulo"
+  },
+  {
+   "t0": 410.638,
+   "t1": 411.399,
+   "w": "cinco"
+  },
+  {
+   "t0": 411.399,
+   "t1": 411.586,
+   "w": "La"
+  },
+  {
+   "t0": 411.586,
+   "t1": 411.961,
+   "w": "parte"
+  },
+  {
+   "t0": 411.961,
+   "t1": 412.964,
+   "w": "incómoda"
+  },
+  {
+   "t0": 412.964,
+   "t1": 413.326,
+   "w": "Cuando"
+  },
+  {
+   "t0": 413.326,
+   "t1": 413.74,
+   "w": "alguien"
+  },
+  {
+   "t0": 413.74,
+   "t1": 414.155,
+   "w": "escucha"
+  },
+  {
+   "t0": 414.155,
+   "t1": 414.31,
+   "w": "la"
+  },
+  {
+   "t0": 414.31,
+   "t1": 414.724,
+   "w": "palabra"
+  },
+  {
+   "t0": 414.724,
+   "t1": 415.19,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 415.19,
+   "t1": 415.85,
+   "w": "piensa"
+  },
+  {
+   "t0": 415.85,
+   "t1": 416.006,
+   "w": "en"
+  },
+  {
+   "t0": 416.006,
+   "t1": 416.161,
+   "w": "el"
+  },
+  {
+   "t0": 416.161,
+   "t1": 417.317,
+   "w": "narcotráfico"
+  },
+  {
+   "t0": 417.317,
+   "t1": 417.431,
+   "w": "Y"
+  },
+  {
+   "t0": 417.431,
+   "t1": 417.602,
+   "w": "no"
+  },
+  {
+   "t0": 417.602,
+   "t1": 417.774,
+   "w": "es"
+  },
+  {
+   "t0": 417.774,
+   "t1": 417.946,
+   "w": "un"
+  },
+  {
+   "t0": 417.946,
+   "t1": 418.792,
+   "w": "invento"
+  },
+  {
+   "t0": 418.792,
+   "t1": 419.1,
+   "w": "Desde"
+  },
+  {
+   "t0": 419.1,
+   "t1": 419.253,
+   "w": "el"
+  },
+  {
+   "t0": 419.253,
+   "t1": 419.561,
+   "w": "nueve"
+  },
+  {
+   "t0": 419.561,
+   "t1": 419.715,
+   "w": "de"
+  },
+  {
+   "t0": 419.715,
+   "t1": 420.279,
+   "w": "septiembre"
+  },
+  {
+   "t0": 420.279,
+   "t1": 420.433,
+   "w": "de"
+  },
+  {
+   "t0": 420.433,
+   "t1": 420.638,
+   "w": "dos"
+  },
+  {
+   "t0": 420.638,
+   "t1": 420.843,
+   "w": "mil"
+  },
+  {
+   "t0": 420.843,
+   "t1": 421.561,
+   "w": "veinticuatro"
+  },
+  {
+   "t0": 421.561,
+   "t1": 422.345,
+   "w": "Culiacán"
+  },
+  {
+   "t0": 422.345,
+   "t1": 422.601,
+   "w": "vive"
+  },
+  {
+   "t0": 422.601,
+   "t1": 422.806,
+   "w": "una"
+  },
+  {
+   "t0": 422.806,
+   "t1": 423.165,
+   "w": "guerra"
+  },
+  {
+   "t0": 423.165,
+   "t1": 423.473,
+   "w": "entre"
+  },
+  {
+   "t0": 423.473,
+   "t1": 423.678,
+   "w": "dos"
+  },
+  {
+   "t0": 423.678,
+   "t1": 424.191,
+   "w": "facciones"
+  },
+  {
+   "t0": 424.191,
+   "t1": 424.396,
+   "w": "del"
+  },
+  {
+   "t0": 424.396,
+   "t1": 424.755,
+   "w": "crimen"
+  },
+  {
+   "t0": 424.755,
+   "t1": 425.744,
+   "w": "organizado"
+  },
+  {
+   "t0": 425.744,
+   "t1": 425.909,
+   "w": "En"
+  },
+  {
+   "t0": 425.909,
+   "t1": 426.128,
+   "w": "los"
+  },
+  {
+   "t0": 426.128,
+   "t1": 426.622,
+   "w": "primeros"
+  },
+  {
+   "t0": 426.622,
+   "t1": 426.897,
+   "w": "doce"
+  },
+  {
+   "t0": 426.897,
+   "t1": 427.465,
+   "w": "meses"
+  },
+  {
+   "t0": 427.465,
+   "t1": 427.63,
+   "w": "la"
+  },
+  {
+   "t0": 427.63,
+   "t1": 428.124,
+   "w": "Fiscalía"
+  },
+  {
+   "t0": 428.124,
+   "t1": 428.289,
+   "w": "de"
+  },
+  {
+   "t0": 428.289,
+   "t1": 428.728,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 428.728,
+   "t1": 429.057,
+   "w": "contó"
+  },
+  {
+   "t0": 429.057,
+   "t1": 429.222,
+   "w": "al"
+  },
+  {
+   "t0": 429.222,
+   "t1": 429.551,
+   "w": "menos"
+  },
+  {
+   "t0": 429.551,
+   "t1": 429.771,
+   "w": "mil"
+  },
+  {
+   "t0": 429.771,
+   "t1": 430.43,
+   "w": "seiscientos"
+  },
+  {
+   "t0": 430.43,
+   "t1": 430.869,
+   "w": "treinta"
+  },
+  {
+   "t0": 430.869,
+   "t1": 430.979,
+   "w": "y"
+  },
+  {
+   "t0": 430.979,
+   "t1": 431.198,
+   "w": "dos"
+  },
+  {
+   "t0": 431.198,
+   "t1": 432.227,
+   "w": "homicidios"
+  },
+  {
+   "t0": 432.227,
+   "t1": 432.733,
+   "w": "Escuelas"
+  },
+  {
+   "t0": 432.733,
+   "t1": 432.958,
+   "w": "que"
+  },
+  {
+   "t0": 432.958,
+   "t1": 433.903,
+   "w": "cerraron"
+  },
+  {
+   "t0": 433.903,
+   "t1": 434.489,
+   "w": "Negocios"
+  },
+  {
+   "t0": 434.489,
+   "t1": 434.749,
+   "w": "que"
+  },
+  {
+   "t0": 434.749,
+   "t1": 435.269,
+   "w": "bajaron"
+  },
+  {
+   "t0": 435.269,
+   "t1": 435.464,
+   "w": "la"
+  },
+  {
+   "t0": 435.464,
+   "t1": 436.389,
+   "w": "cortina"
+  },
+  {
+   "t0": 436.389,
+   "t1": 436.85,
+   "w": "Familias"
+  },
+  {
+   "t0": 436.85,
+   "t1": 437.055,
+   "w": "que"
+  },
+  {
+   "t0": 437.055,
+   "t1": 437.465,
+   "w": "dejaron"
+  },
+  {
+   "t0": 437.465,
+   "t1": 437.619,
+   "w": "de"
+  },
+  {
+   "t0": 437.619,
+   "t1": 437.926,
+   "w": "salir"
+  },
+  {
+   "t0": 437.926,
+   "t1": 438.079,
+   "w": "de"
+  },
+  {
+   "t0": 438.079,
+   "t1": 438.873,
+   "w": "noche"
+  },
+  {
+   "t0": 438.873,
+   "t1": 439.326,
+   "w": "Entonces"
+  },
+  {
+   "t0": 439.326,
+   "t1": 439.477,
+   "w": "la"
+  },
+  {
+   "t0": 439.477,
+   "t1": 439.93,
+   "w": "pregunta"
+  },
+  {
+   "t0": 439.93,
+   "t1": 440.081,
+   "w": "es"
+  },
+  {
+   "t0": 440.081,
+   "t1": 440.828,
+   "w": "obvia"
+  },
+  {
+   "t0": 440.828,
+   "t1": 441.004,
+   "w": "si"
+  },
+  {
+   "t0": 441.004,
+   "t1": 441.471,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 441.471,
+   "t1": 442.171,
+   "w": "desaparece"
+  },
+  {
+   "t0": 442.171,
+   "t1": 443.123,
+   "w": "¿desaparece"
+  },
+  {
+   "t0": 443.123,
+   "t1": 443.298,
+   "w": "el"
+  },
+  {
+   "t0": 443.298,
+   "t1": 444.266,
+   "w": "problema?"
+  },
+  {
+   "t0": 444.266,
+   "t1": 445.056,
+   "w": "No"
+  },
+  {
+   "t0": 445.056,
+   "t1": 445.215,
+   "w": "El"
+  },
+  {
+   "t0": 445.215,
+   "t1": 445.588,
+   "w": "crimen"
+  },
+  {
+   "t0": 445.588,
+   "t1": 446.172,
+   "w": "organizado"
+  },
+  {
+   "t0": 446.172,
+   "t1": 446.332,
+   "w": "no"
+  },
+  {
+   "t0": 446.332,
+   "t1": 446.492,
+   "w": "es"
+  },
+  {
+   "t0": 446.492,
+   "t1": 446.651,
+   "w": "un"
+  },
+  {
+   "t0": 446.651,
+   "t1": 447.023,
+   "w": "pedazo"
+  },
+  {
+   "t0": 447.023,
+   "t1": 447.183,
+   "w": "de"
+  },
+  {
+   "t0": 447.183,
+   "t1": 448.111,
+   "w": "tierra"
+  },
+  {
+   "t0": 448.111,
+   "t1": 448.27,
+   "w": "Es"
+  },
+  {
+   "t0": 448.27,
+   "t1": 448.481,
+   "w": "una"
+  },
+  {
+   "t0": 448.481,
+   "t1": 449.08,
+   "w": "red"
+  },
+  {
+   "t0": 449.08,
+   "t1": 449.416,
+   "w": "Opera"
+  },
+  {
+   "t0": 449.416,
+   "t1": 449.583,
+   "w": "en"
+  },
+  {
+   "t0": 449.583,
+   "t1": 449.918,
+   "w": "otros"
+  },
+  {
+   "t0": 449.918,
+   "t1": 450.365,
+   "w": "estados"
+  },
+  {
+   "t0": 450.365,
+   "t1": 450.476,
+   "w": "y"
+  },
+  {
+   "t0": 450.476,
+   "t1": 450.644,
+   "w": "en"
+  },
+  {
+   "t0": 450.644,
+   "t1": 450.979,
+   "w": "otros"
+  },
+  {
+   "t0": 450.979,
+   "t1": 451.721,
+   "w": "países"
+  },
+  {
+   "t0": 451.721,
+   "t1": 451.891,
+   "w": "Si"
+  },
+  {
+   "t0": 451.891,
+   "t1": 452.288,
+   "w": "borras"
+  },
+  {
+   "t0": 452.288,
+   "t1": 452.458,
+   "w": "el"
+  },
+  {
+   "t0": 452.458,
+   "t1": 452.977,
+   "w": "mapa"
+  },
+  {
+   "t0": 452.977,
+   "t1": 453.147,
+   "w": "la"
+  },
+  {
+   "t0": 453.147,
+   "t1": 453.374,
+   "w": "red"
+  },
+  {
+   "t0": 453.374,
+   "t1": 453.544,
+   "w": "se"
+  },
+  {
+   "t0": 453.544,
+   "t1": 453.884,
+   "w": "mueve"
+  },
+  {
+   "t0": 453.884,
+   "t1": 453.997,
+   "w": "a"
+  },
+  {
+   "t0": 453.997,
+   "t1": 454.28,
+   "w": "otro"
+  },
+  {
+   "t0": 454.28,
+   "t1": 454.62,
+   "w": "lado"
+  },
+  {
+   "t0": 454.94,
+   "t1": 455.16,
+   "w": "Los"
+  },
+  {
+   "t0": 455.16,
+   "t1": 455.379,
+   "w": "que"
+  },
+  {
+   "t0": 455.379,
+   "t1": 455.544,
+   "w": "sí"
+  },
+  {
+   "t0": 455.544,
+   "t1": 456.368,
+   "w": "desaparecerían"
+  },
+  {
+   "t0": 456.368,
+   "t1": 456.788,
+   "w": "son"
+  },
+  {
+   "t0": 456.788,
+   "t1": 457.007,
+   "w": "los"
+  },
+  {
+   "t0": 457.007,
+   "t1": 457.282,
+   "w": "tres"
+  },
+  {
+   "t0": 457.282,
+   "t1": 457.777,
+   "w": "millones"
+  },
+  {
+   "t0": 457.777,
+   "t1": 457.941,
+   "w": "de"
+  },
+  {
+   "t0": 457.941,
+   "t1": 458.436,
+   "w": "personas"
+  },
+  {
+   "t0": 458.436,
+   "t1": 458.656,
+   "w": "que"
+  },
+  {
+   "t0": 458.656,
+   "t1": 458.985,
+   "w": "viven"
+  },
+  {
+   "t0": 458.985,
+   "t1": 459.205,
+   "w": "ahí"
+  },
+  {
+   "t0": 459.205,
+   "t1": 459.529,
+   "w": "y"
+  },
+  {
+   "t0": 459.529,
+   "t1": 459.749,
+   "w": "que"
+  },
+  {
+   "t0": 459.749,
+   "t1": 459.914,
+   "w": "no"
+  },
+  {
+   "t0": 459.914,
+   "t1": 460.298,
+   "w": "tienen"
+  },
+  {
+   "t0": 460.298,
+   "t1": 460.573,
+   "w": "nada"
+  },
+  {
+   "t0": 460.573,
+   "t1": 460.793,
+   "w": "que"
+  },
+  {
+   "t0": 460.793,
+   "t1": 461.435,
+   "w": "ver"
+  },
+  {
+   "t0": 461.435,
+   "t1": 461.646,
+   "w": "Los"
+  },
+  {
+   "t0": 461.646,
+   "t1": 462.856,
+   "w": "agricultores"
+  },
+  {
+   "t0": 462.856,
+   "t1": 463.104,
+   "w": "Los"
+  },
+  {
+   "t0": 463.104,
+   "t1": 464.251,
+   "w": "pescadores"
+  },
+  {
+   "t0": 464.251,
+   "t1": 464.478,
+   "w": "Los"
+  },
+  {
+   "t0": 464.478,
+   "t1": 465.481,
+   "w": "maestros"
+  },
+  {
+   "t0": 465.481,
+   "t1": 465.707,
+   "w": "Los"
+  },
+  {
+   "t0": 465.707,
+   "t1": 466.623,
+   "w": "médicos"
+  },
+  {
+   "t0": 466.623,
+   "t1": 466.879,
+   "w": "Los"
+  },
+  {
+   "t0": 466.879,
+   "t1": 467.793,
+   "w": "músicos"
+  },
+  {
+   "t0": 467.793,
+   "t1": 468.006,
+   "w": "Esa"
+  },
+  {
+   "t0": 468.006,
+   "t1": 468.167,
+   "w": "es"
+  },
+  {
+   "t0": 468.167,
+   "t1": 468.327,
+   "w": "la"
+  },
+  {
+   "t0": 468.327,
+   "t1": 468.701,
+   "w": "verdad"
+  },
+  {
+   "t0": 468.701,
+   "t1": 468.915,
+   "w": "que"
+  },
+  {
+   "t0": 468.915,
+   "t1": 469.182,
+   "w": "casi"
+  },
+  {
+   "t0": 469.182,
+   "t1": 469.503,
+   "w": "nunca"
+  },
+  {
+   "t0": 469.503,
+   "t1": 469.663,
+   "w": "se"
+  },
+  {
+   "t0": 469.663,
+   "t1": 470.398,
+   "w": "dice"
+  },
+  {
+   "t0": 470.398,
+   "t1": 470.802,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 470.802,
+   "t1": 470.953,
+   "w": "es"
+  },
+  {
+   "t0": 470.953,
+   "t1": 471.104,
+   "w": "la"
+  },
+  {
+   "t0": 471.104,
+   "t1": 471.508,
+   "w": "primera"
+  },
+  {
+   "t0": 471.508,
+   "t1": 471.911,
+   "w": "víctima"
+  },
+  {
+   "t0": 471.911,
+   "t1": 472.062,
+   "w": "de"
+  },
+  {
+   "t0": 472.062,
+   "t1": 472.466,
+   "w": "aquello"
+  },
+  {
+   "t0": 472.466,
+   "t1": 472.667,
+   "w": "por"
+  },
+  {
+   "t0": 472.667,
+   "t1": 472.819,
+   "w": "lo"
+  },
+  {
+   "t0": 472.819,
+   "t1": 473.02,
+   "w": "que"
+  },
+  {
+   "t0": 473.02,
+   "t1": 473.172,
+   "w": "la"
+  },
+  {
+   "t0": 473.172,
+   "t1": 473.955,
+   "w": "conocen"
+  },
+  {
+   "t0": 473.955,
+   "t1": 474.211,
+   "w": "Pero"
+  },
+  {
+   "t0": 474.211,
+   "t1": 474.519,
+   "w": "ahora"
+  },
+  {
+   "t0": 474.519,
+   "t1": 474.827,
+   "w": "viene"
+  },
+  {
+   "t0": 474.827,
+   "t1": 474.981,
+   "w": "el"
+  },
+  {
+   "t0": 474.981,
+   "t1": 475.238,
+   "w": "dato"
+  },
+  {
+   "t0": 475.238,
+   "t1": 475.443,
+   "w": "que"
+  },
+  {
+   "t0": 475.443,
+   "t1": 475.597,
+   "w": "te"
+  },
+  {
+   "t0": 475.597,
+   "t1": 476.008,
+   "w": "prometí"
+  },
+  {
+   "t0": 476.008,
+   "t1": 476.162,
+   "w": "al"
+  },
+  {
+   "t0": 476.162,
+   "t1": 476.974,
+   "w": "inicio"
+  },
+  {
+   "t0": 476.974,
+   "t1": 477.329,
+   "w": "Porque"
+  },
+  {
+   "t0": 477.329,
+   "t1": 477.734,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 477.734,
+   "t1": 477.886,
+   "w": "no"
+  },
+  {
+   "t0": 477.886,
+   "t1": 478.19,
+   "w": "tiene"
+  },
+  {
+   "t0": 478.19,
+   "t1": 478.392,
+   "w": "que"
+  },
+  {
+   "t0": 478.392,
+   "t1": 479.0,
+   "w": "desaparecer"
+  },
+  {
+   "t0": 479.0,
+   "t1": 479.152,
+   "w": "de"
+  },
+  {
+   "t0": 479.152,
+   "t1": 479.456,
+   "w": "golpe"
+  },
+  {
+   "t0": 479.456,
+   "t1": 479.954,
+   "w": "para"
+  },
+  {
+   "t0": 479.954,
+   "t1": 480.157,
+   "w": "que"
+  },
+  {
+   "t0": 480.157,
+   "t1": 480.511,
+   "w": "México"
+  },
+  {
+   "t0": 480.511,
+   "t1": 480.663,
+   "w": "lo"
+  },
+  {
+   "t0": 480.663,
+   "t1": 481.494,
+   "w": "sienta"
+  },
+  {
+   "t0": 481.494,
+   "t1": 481.676,
+   "w": "Ya"
+  },
+  {
+   "t0": 481.676,
+   "t1": 481.981,
+   "w": "está"
+  },
+  {
+   "t0": 481.981,
+   "t1": 482.53,
+   "w": "pasando"
+  },
+  {
+   "t0": 483.28,
+   "t1": 483.742,
+   "w": "Capítulo"
+  },
+  {
+   "t0": 483.742,
+   "t1": 484.42,
+   "w": "seis"
+  },
+  {
+   "t0": 484.42,
+   "t1": 484.857,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 484.857,
+   "t1": 485.02,
+   "w": "ya"
+  },
+  {
+   "t0": 485.02,
+   "t1": 485.293,
+   "w": "está"
+  },
+  {
+   "t0": 485.293,
+   "t1": 486.489,
+   "w": "desapareciendo"
+  },
+  {
+   "t0": 486.489,
+   "t1": 486.654,
+   "w": "La"
+  },
+  {
+   "t0": 486.654,
+   "t1": 487.039,
+   "w": "sequía"
+  },
+  {
+   "t0": 487.039,
+   "t1": 487.314,
+   "w": "dejó"
+  },
+  {
+   "t0": 487.314,
+   "t1": 487.534,
+   "w": "las"
+  },
+  {
+   "t0": 487.534,
+   "t1": 487.918,
+   "w": "presas"
+  },
+  {
+   "t0": 487.918,
+   "t1": 488.083,
+   "w": "en"
+  },
+  {
+   "t0": 488.083,
+   "t1": 488.523,
+   "w": "niveles"
+  },
+  {
+   "t0": 488.523,
+   "t1": 488.743,
+   "w": "muy"
+  },
+  {
+   "t0": 488.743,
+   "t1": 489.555,
+   "w": "bajos"
+  },
+  {
+   "t0": 489.555,
+   "t1": 489.648,
+   "w": "Y"
+  },
+  {
+   "t0": 489.648,
+   "t1": 489.833,
+   "w": "sin"
+  },
+  {
+   "t0": 489.833,
+   "t1": 490.111,
+   "w": "agua"
+  },
+  {
+   "t0": 490.111,
+   "t1": 490.453,
+   "w": "no"
+  },
+  {
+   "t0": 490.453,
+   "t1": 490.638,
+   "w": "hay"
+  },
+  {
+   "t0": 490.638,
+   "t1": 491.469,
+   "w": "siembra"
+  },
+  {
+   "t0": 491.469,
+   "t1": 491.628,
+   "w": "En"
+  },
+  {
+   "t0": 491.628,
+   "t1": 491.841,
+   "w": "dos"
+  },
+  {
+   "t0": 491.841,
+   "t1": 492.053,
+   "w": "mil"
+  },
+  {
+   "t0": 492.053,
+   "t1": 492.935,
+   "w": "veinticinco"
+  },
+  {
+   "t0": 492.935,
+   "t1": 493.095,
+   "w": "la"
+  },
+  {
+   "t0": 493.095,
+   "t1": 493.52,
+   "w": "cosecha"
+  },
+  {
+   "t0": 493.52,
+   "t1": 493.679,
+   "w": "de"
+  },
+  {
+   "t0": 493.679,
+   "t1": 493.945,
+   "w": "maíz"
+  },
+  {
+   "t0": 493.945,
+   "t1": 494.105,
+   "w": "de"
+  },
+  {
+   "t0": 494.105,
+   "t1": 494.53,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 494.53,
+   "t1": 495.027,
+   "w": "cayó"
+  },
+  {
+   "t0": 495.027,
+   "t1": 495.134,
+   "w": "a"
+  },
+  {
+   "t0": 495.134,
+   "t1": 495.453,
+   "w": "entre"
+  },
+  {
+   "t0": 495.453,
+   "t1": 495.665,
+   "w": "uno"
+  },
+  {
+   "t0": 495.665,
+   "t1": 495.984,
+   "w": "punto"
+  },
+  {
+   "t0": 495.984,
+   "t1": 496.303,
+   "w": "cinco"
+  },
+  {
+   "t0": 496.303,
+   "t1": 496.409,
+   "w": "y"
+  },
+  {
+   "t0": 496.409,
+   "t1": 496.892,
+   "w": "uno"
+  },
+  {
+   "t0": 496.892,
+   "t1": 497.211,
+   "w": "punto"
+  },
+  {
+   "t0": 497.211,
+   "t1": 497.477,
+   "w": "seis"
+  },
+  {
+   "t0": 497.477,
+   "t1": 497.955,
+   "w": "millones"
+  },
+  {
+   "t0": 497.955,
+   "t1": 498.115,
+   "w": "de"
+  },
+  {
+   "t0": 498.115,
+   "t1": 499.153,
+   "w": "toneladas"
+  },
+  {
+   "t0": 499.153,
+   "t1": 499.296,
+   "w": "Un"
+  },
+  {
+   "t0": 499.296,
+   "t1": 499.678,
+   "w": "setenta"
+  },
+  {
+   "t0": 499.678,
+   "t1": 499.773,
+   "w": "y"
+  },
+  {
+   "t0": 499.773,
+   "t1": 500.06,
+   "w": "cinco"
+  },
+  {
+   "t0": 500.06,
+   "t1": 500.25,
+   "w": "por"
+  },
+  {
+   "t0": 500.25,
+   "t1": 500.584,
+   "w": "ciento"
+  },
+  {
+   "t0": 500.584,
+   "t1": 501.051,
+   "w": "menos"
+  },
+  {
+   "t0": 501.051,
+   "t1": 501.242,
+   "w": "que"
+  },
+  {
+   "t0": 501.242,
+   "t1": 501.385,
+   "w": "su"
+  },
+  {
+   "t0": 501.385,
+   "t1": 501.719,
+   "w": "máximo"
+  },
+  {
+   "t0": 501.719,
+   "t1": 502.578,
+   "w": "histórico"
+  },
+  {
+   "t0": 502.578,
+   "t1": 502.746,
+   "w": "El"
+  },
+  {
+   "t0": 502.746,
+   "t1": 503.194,
+   "w": "granero"
+  },
+  {
+   "t0": 503.194,
+   "t1": 503.362,
+   "w": "de"
+  },
+  {
+   "t0": 503.362,
+   "t1": 503.754,
+   "w": "México"
+  },
+  {
+   "t0": 503.754,
+   "t1": 504.034,
+   "w": "está"
+  },
+  {
+   "t0": 504.034,
+   "t1": 504.37,
+   "w": "medio"
+  },
+  {
+   "t0": 504.37,
+   "t1": 505.185,
+   "w": "vacío"
+  },
+  {
+   "t0": 505.185,
+   "t1": 505.309,
+   "w": "Y"
+  },
+  {
+   "t0": 505.309,
+   "t1": 505.495,
+   "w": "no"
+  },
+  {
+   "t0": 505.495,
+   "t1": 505.681,
+   "w": "es"
+  },
+  {
+   "t0": 505.681,
+   "t1": 505.991,
+   "w": "solo"
+  },
+  {
+   "t0": 505.991,
+   "t1": 506.177,
+   "w": "el"
+  },
+  {
+   "t0": 506.177,
+   "t1": 506.988,
+   "w": "maíz"
+  },
+  {
+   "t0": 506.988,
+   "t1": 507.192,
+   "w": "Con"
+  },
+  {
+   "t0": 507.192,
+   "t1": 507.345,
+   "w": "el"
+  },
+  {
+   "t0": 507.345,
+   "t1": 507.702,
+   "w": "tomate"
+  },
+  {
+   "t0": 507.702,
+   "t1": 507.956,
+   "w": "pasó"
+  },
+  {
+   "t0": 507.956,
+   "t1": 508.211,
+   "w": "algo"
+  },
+  {
+   "t0": 508.211,
+   "t1": 509.047,
+   "w": "parecido"
+  },
+  {
+   "t0": 509.047,
+   "t1": 509.207,
+   "w": "En"
+  },
+  {
+   "t0": 509.207,
+   "t1": 509.527,
+   "w": "julio"
+  },
+  {
+   "t0": 509.527,
+   "t1": 509.686,
+   "w": "de"
+  },
+  {
+   "t0": 509.686,
+   "t1": 509.899,
+   "w": "dos"
+  },
+  {
+   "t0": 509.899,
+   "t1": 510.112,
+   "w": "mil"
+  },
+  {
+   "t0": 510.112,
+   "t1": 510.804,
+   "w": "veinticinco"
+  },
+  {
+   "t0": 510.804,
+   "t1": 511.472,
+   "w": "Estados"
+  },
+  {
+   "t0": 511.472,
+   "t1": 511.845,
+   "w": "Unidos"
+  },
+  {
+   "t0": 511.845,
+   "t1": 512.005,
+   "w": "le"
+  },
+  {
+   "t0": 512.005,
+   "t1": 512.271,
+   "w": "puso"
+  },
+  {
+   "t0": 512.271,
+   "t1": 512.431,
+   "w": "un"
+  },
+  {
+   "t0": 512.431,
+   "t1": 512.857,
+   "w": "arancel"
+  },
+  {
+   "t0": 512.857,
+   "t1": 513.016,
+   "w": "de"
+  },
+  {
+   "t0": 513.016,
+   "t1": 513.282,
+   "w": "casi"
+  },
+  {
+   "t0": 513.282,
+   "t1": 513.868,
+   "w": "diecisiete"
+  },
+  {
+   "t0": 513.868,
+   "t1": 514.081,
+   "w": "por"
+  },
+  {
+   "t0": 514.081,
+   "t1": 514.454,
+   "w": "ciento"
+  },
+  {
+   "t0": 514.454,
+   "t1": 514.613,
+   "w": "al"
+  },
+  {
+   "t0": 514.613,
+   "t1": 514.986,
+   "w": "tomate"
+  },
+  {
+   "t0": 514.986,
+   "t1": 515.957,
+   "w": "mexicano"
+  },
+  {
+   "t0": 515.957,
+   "t1": 516.374,
+   "w": "Súmale"
+  },
+  {
+   "t0": 516.374,
+   "t1": 516.552,
+   "w": "la"
+  },
+  {
+   "t0": 516.552,
+   "t1": 516.969,
+   "w": "sequía"
+  },
+  {
+   "t0": 516.969,
+   "t1": 517.088,
+   "w": "y"
+  },
+  {
+   "t0": 517.088,
+   "t1": 517.266,
+   "w": "la"
+  },
+  {
+   "t0": 517.266,
+   "t1": 518.389,
+   "w": "inseguridad"
+  },
+  {
+   "t0": 518.389,
+   "t1": 518.665,
+   "w": "para"
+  },
+  {
+   "t0": 518.665,
+   "t1": 518.831,
+   "w": "la"
+  },
+  {
+   "t0": 518.831,
+   "t1": 519.383,
+   "w": "temporada"
+  },
+  {
+   "t0": 519.383,
+   "t1": 519.604,
+   "w": "que"
+  },
+  {
+   "t0": 519.604,
+   "t1": 520.191,
+   "w": "viene"
+  },
+  {
+   "t0": 520.191,
+   "t1": 520.412,
+   "w": "los"
+  },
+  {
+   "t0": 520.412,
+   "t1": 521.075,
+   "w": "productores"
+  },
+  {
+   "t0": 521.075,
+   "t1": 521.628,
+   "w": "sembraron"
+  },
+  {
+   "t0": 521.628,
+   "t1": 521.904,
+   "w": "unas"
+  },
+  {
+   "t0": 521.904,
+   "t1": 522.18,
+   "w": "ocho"
+  },
+  {
+   "t0": 522.18,
+   "t1": 522.401,
+   "w": "mil"
+  },
+  {
+   "t0": 522.401,
+   "t1": 523.445,
+   "w": "hectáreas"
+  },
+  {
+   "t0": 523.445,
+   "t1": 523.827,
+   "w": "Treinta"
+  },
+  {
+   "t0": 523.827,
+   "t1": 524.018,
+   "w": "por"
+  },
+  {
+   "t0": 524.018,
+   "t1": 524.352,
+   "w": "ciento"
+  },
+  {
+   "t0": 524.352,
+   "t1": 524.638,
+   "w": "menos"
+  },
+  {
+   "t0": 524.638,
+   "t1": 524.829,
+   "w": "que"
+  },
+  {
+   "t0": 524.829,
+   "t1": 524.972,
+   "w": "el"
+  },
+  {
+   "t0": 524.972,
+   "t1": 525.163,
+   "w": "año"
+  },
+  {
+   "t0": 525.163,
+   "t1": 525.9,
+   "w": "anterior"
+  },
+  {
+   "t0": 525.9,
+   "t1": 526.258,
+   "w": "Menos"
+  },
+  {
+   "t0": 526.258,
+   "t1": 527.094,
+   "w": "campo"
+  },
+  {
+   "t0": 527.094,
+   "t1": 527.418,
+   "w": "Menos"
+  },
+  {
+   "t0": 527.418,
+   "t1": 528.311,
+   "w": "trabajo"
+  },
+  {
+   "t0": 528.311,
+   "t1": 528.648,
+   "w": "Menos"
+  },
+  {
+   "t0": 528.648,
+   "t1": 529.541,
+   "w": "comida"
+  },
+  {
+   "t0": 529.541,
+   "t1": 529.673,
+   "w": "No"
+  },
+  {
+   "t0": 529.673,
+   "t1": 529.805,
+   "w": "es"
+  },
+  {
+   "t0": 529.805,
+   "t1": 529.936,
+   "w": "un"
+  },
+  {
+   "t0": 529.936,
+   "t1": 530.2,
+   "w": "hueco"
+  },
+  {
+   "t0": 530.2,
+   "t1": 530.375,
+   "w": "que"
+  },
+  {
+   "t0": 530.375,
+   "t1": 530.727,
+   "w": "aparece"
+  },
+  {
+   "t0": 530.727,
+   "t1": 530.858,
+   "w": "de"
+  },
+  {
+   "t0": 530.858,
+   "t1": 531.122,
+   "w": "golpe"
+  },
+  {
+   "t0": 531.122,
+   "t1": 531.254,
+   "w": "en"
+  },
+  {
+   "t0": 531.254,
+   "t1": 531.385,
+   "w": "el"
+  },
+  {
+   "t0": 531.385,
+   "t1": 532.082,
+   "w": "mapa"
+  },
+  {
+   "t0": 532.082,
+   "t1": 532.252,
+   "w": "Es"
+  },
+  {
+   "t0": 532.252,
+   "t1": 532.423,
+   "w": "un"
+  },
+  {
+   "t0": 532.423,
+   "t1": 532.764,
+   "w": "hueco"
+  },
+  {
+   "t0": 532.764,
+   "t1": 532.991,
+   "w": "que"
+  },
+  {
+   "t0": 532.991,
+   "t1": 533.161,
+   "w": "se"
+  },
+  {
+   "t0": 533.161,
+   "t1": 533.446,
+   "w": "abre"
+  },
+  {
+   "t0": 533.446,
+   "t1": 533.73,
+   "w": "poco"
+  },
+  {
+   "t0": 533.73,
+   "t1": 533.843,
+   "w": "a"
+  },
+  {
+   "t0": 533.843,
+   "t1": 534.526,
+   "w": "poco"
+  },
+  {
+   "t0": 534.526,
+   "t1": 534.639,
+   "w": "y"
+  },
+  {
+   "t0": 534.639,
+   "t1": 534.923,
+   "w": "casi"
+  },
+  {
+   "t0": 534.923,
+   "t1": 535.264,
+   "w": "nadie"
+  },
+  {
+   "t0": 535.264,
+   "t1": 535.435,
+   "w": "lo"
+  },
+  {
+   "t0": 535.435,
+   "t1": 535.719,
+   "w": "está"
+  },
+  {
+   "t0": 535.719,
+   "t1": 536.23,
+   "w": "mirando"
+  },
+  {
+   "t0": 536.55,
+   "t1": 537.05,
+   "w": "Entonces"
+  },
+  {
+   "t0": 537.05,
+   "t1": 537.299,
+   "w": "¿qué"
+  },
+  {
+   "t0": 537.299,
+   "t1": 537.699,
+   "w": "pasaría"
+  },
+  {
+   "t0": 537.699,
+   "t1": 537.849,
+   "w": "si"
+  },
+  {
+   "t0": 537.849,
+   "t1": 538.249,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 538.249,
+   "t1": 539.16,
+   "w": "desaparece?"
+  },
+  {
+   "t0": 539.16,
+   "t1": 539.49,
+   "w": "México"
+  },
+  {
+   "t0": 539.49,
+   "t1": 539.914,
+   "w": "perdería"
+  },
+  {
+   "t0": 539.914,
+   "t1": 540.102,
+   "w": "una"
+  },
+  {
+   "t0": 540.102,
+   "t1": 540.385,
+   "w": "parte"
+  },
+  {
+   "t0": 540.385,
+   "t1": 540.526,
+   "w": "de"
+  },
+  {
+   "t0": 540.526,
+   "t1": 540.667,
+   "w": "su"
+  },
+  {
+   "t0": 540.667,
+   "t1": 541.535,
+   "w": "tortilla"
+  },
+  {
+   "t0": 541.535,
+   "t1": 541.792,
+   "w": "Casi"
+  },
+  {
+   "t0": 541.792,
+   "t1": 541.947,
+   "w": "la"
+  },
+  {
+   "t0": 541.947,
+   "t1": 542.256,
+   "w": "mitad"
+  },
+  {
+   "t0": 542.256,
+   "t1": 542.41,
+   "w": "de"
+  },
+  {
+   "t0": 542.41,
+   "t1": 542.564,
+   "w": "su"
+  },
+  {
+   "t0": 542.564,
+   "t1": 543.367,
+   "w": "camarón"
+  },
+  {
+   "t0": 543.367,
+   "t1": 543.563,
+   "w": "Más"
+  },
+  {
+   "t0": 543.563,
+   "t1": 543.71,
+   "w": "de"
+  },
+  {
+   "t0": 543.71,
+   "t1": 543.858,
+   "w": "la"
+  },
+  {
+   "t0": 543.858,
+   "t1": 544.152,
+   "w": "mitad"
+  },
+  {
+   "t0": 544.152,
+   "t1": 544.3,
+   "w": "de"
+  },
+  {
+   "t0": 544.3,
+   "t1": 544.447,
+   "w": "su"
+  },
+  {
+   "t0": 544.447,
+   "t1": 545.418,
+   "w": "garbanzo"
+  },
+  {
+   "t0": 545.418,
+   "t1": 545.582,
+   "w": "Su"
+  },
+  {
+   "t0": 545.582,
+   "t1": 546.077,
+   "w": "carnaval"
+  },
+  {
+   "t0": 546.077,
+   "t1": 546.296,
+   "w": "más"
+  },
+  {
+   "t0": 546.296,
+   "t1": 547.141,
+   "w": "antiguo"
+  },
+  {
+   "t0": 547.141,
+   "t1": 547.26,
+   "w": "Y"
+  },
+  {
+   "t0": 547.26,
+   "t1": 547.438,
+   "w": "la"
+  },
+  {
+   "t0": 547.438,
+   "t1": 547.854,
+   "w": "tierra"
+  },
+  {
+   "t0": 547.854,
+   "t1": 548.032,
+   "w": "de"
+  },
+  {
+   "t0": 548.032,
+   "t1": 548.389,
+   "w": "Pedro"
+  },
+  {
+   "t0": 548.389,
+   "t1": 549.26,
+   "w": "Infante"
+  },
+  {
+   "t0": 549.26,
+   "t1": 549.374,
+   "w": "Y"
+  },
+  {
+   "t0": 549.374,
+   "t1": 549.546,
+   "w": "el"
+  },
+  {
+   "t0": 549.546,
+   "t1": 550.059,
+   "w": "problema"
+  },
+  {
+   "t0": 550.059,
+   "t1": 550.287,
+   "w": "por"
+  },
+  {
+   "t0": 550.287,
+   "t1": 550.458,
+   "w": "el"
+  },
+  {
+   "t0": 550.458,
+   "t1": 550.686,
+   "w": "que"
+  },
+  {
+   "t0": 550.686,
+   "t1": 551.028,
+   "w": "todos"
+  },
+  {
+   "t0": 551.028,
+   "t1": 551.199,
+   "w": "la"
+  },
+  {
+   "t0": 551.199,
+   "t1": 551.816,
+   "w": "conocen"
+  },
+  {
+   "t0": 551.816,
+   "t1": 552.33,
+   "w": "seguiría"
+  },
+  {
+   "t0": 552.33,
+   "t1": 553.001,
+   "w": "ahí"
+  },
+  {
+   "t0": 553.001,
+   "t1": 553.482,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 553.482,
+   "t1": 553.662,
+   "w": "no"
+  },
+  {
+   "t0": 553.662,
+   "t1": 553.842,
+   "w": "es"
+  },
+  {
+   "t0": 553.842,
+   "t1": 554.023,
+   "w": "lo"
+  },
+  {
+   "t0": 554.023,
+   "t1": 554.263,
+   "w": "que"
+  },
+  {
+   "t0": 554.263,
+   "t1": 554.563,
+   "w": "sale"
+  },
+  {
+   "t0": 554.563,
+   "t1": 554.743,
+   "w": "en"
+  },
+  {
+   "t0": 554.743,
+   "t1": 554.984,
+   "w": "las"
+  },
+  {
+   "t0": 554.984,
+   "t1": 555.962,
+   "w": "noticias"
+  },
+  {
+   "t0": 555.962,
+   "t1": 556.448,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 556.448,
+   "t1": 556.63,
+   "w": "es"
+  },
+  {
+   "t0": 556.63,
+   "t1": 557.068,
+   "w": "lo"
+  },
+  {
+   "t0": 557.068,
+   "t1": 557.311,
+   "w": "que"
+  },
+  {
+   "t0": 557.311,
+   "t1": 557.614,
+   "w": "está"
+  },
+  {
+   "t0": 557.614,
+   "t1": 557.797,
+   "w": "en"
+  },
+  {
+   "t0": 557.797,
+   "t1": 557.979,
+   "w": "tu"
+  },
+  {
+   "t0": 557.979,
+   "t1": 558.712,
+   "w": "mesa"
+  },
+  {
+   "t0": 558.712,
+   "t1": 559.012,
+   "w": "Ahora"
+  },
+  {
+   "t0": 559.012,
+   "t1": 559.262,
+   "w": "dime"
+  },
+  {
+   "t0": 559.262,
+   "t1": 559.413,
+   "w": "tú"
+  },
+  {
+   "t0": 559.413,
+   "t1": 559.563,
+   "w": "en"
+  },
+  {
+   "t0": 559.563,
+   "t1": 559.763,
+   "w": "los"
+  },
+  {
+   "t0": 559.763,
+   "t1": 560.777,
+   "w": "comentarios"
+  },
+  {
+   "t0": 560.777,
+   "t1": 561.06,
+   "w": "¿qué"
+  },
+  {
+   "t0": 561.06,
+   "t1": 561.742,
+   "w": "extrañarías"
+  },
+  {
+   "t0": 561.742,
+   "t1": 562.196,
+   "w": "primero"
+  },
+  {
+   "t0": 562.196,
+   "t1": 562.366,
+   "w": "de"
+  },
+  {
+   "t0": 562.366,
+   "t1": 563.356,
+   "w": "Sinaloa?"
+  },
+  {
+   "t0": 563.356,
+   "t1": 563.546,
+   "w": "¿El"
+  },
+  {
+   "t0": 563.546,
+   "t1": 564.244,
+   "w": "aguachile"
+  },
+  {
+   "t0": 564.244,
+   "t1": 564.387,
+   "w": "la"
+  },
+  {
+   "t0": 564.387,
+   "t1": 564.672,
+   "w": "banda"
+  },
+  {
+   "t0": 564.672,
+   "t1": 564.766,
+   "w": "o"
+  },
+  {
+   "t0": 564.766,
+   "t1": 564.909,
+   "w": "el"
+  },
+  {
+   "t0": 564.909,
+   "t1": 565.774,
+   "w": "carnaval?"
+  },
+  {
+   "t0": 565.774,
+   "t1": 565.877,
+   "w": "Y"
+  },
+  {
+   "t0": 565.877,
+   "t1": 566.031,
+   "w": "si"
+  },
+  {
+   "t0": 566.031,
+   "t1": 566.287,
+   "w": "eres"
+  },
+  {
+   "t0": 566.287,
+   "t1": 566.441,
+   "w": "de"
+  },
+  {
+   "t0": 566.441,
+   "t1": 566.903,
+   "w": "Sinaloa"
+  },
+  {
+   "t0": 566.903,
+   "t1": 567.677,
+   "w": "cuéntame"
+  },
+  {
+   "t0": 567.677,
+   "t1": 567.831,
+   "w": "de"
+  },
+  {
+   "t0": 567.831,
+   "t1": 568.036,
+   "w": "qué"
+  },
+  {
+   "t0": 568.036,
+   "t1": 568.343,
+   "w": "parte"
+  },
+  {
+   "t0": 568.343,
+   "t1": 569.012,
+   "w": "eres"
+  },
+  {
+   "t0": 569.012,
+   "t1": 569.181,
+   "w": "Si"
+  },
+  {
+   "t0": 569.181,
+   "t1": 569.633,
+   "w": "quieres"
+  },
+  {
+   "t0": 569.633,
+   "t1": 569.86,
+   "w": "que"
+  },
+  {
+   "t0": 569.86,
+   "t1": 570.029,
+   "w": "el"
+  },
+  {
+   "t0": 570.029,
+   "t1": 570.481,
+   "w": "próximo"
+  },
+  {
+   "t0": 570.481,
+   "t1": 570.82,
+   "w": "video"
+  },
+  {
+   "t0": 570.82,
+   "t1": 571.046,
+   "w": "sea"
+  },
+  {
+   "t0": 571.046,
+   "t1": 571.216,
+   "w": "de"
+  },
+  {
+   "t0": 571.216,
+   "t1": 571.499,
+   "w": "otro"
+  },
+  {
+   "t0": 571.499,
+   "t1": 571.894,
+   "w": "estado"
+  },
+  {
+   "t0": 571.894,
+   "t1": 572.064,
+   "w": "de"
+  },
+  {
+   "t0": 572.064,
+   "t1": 572.826,
+   "w": "México"
+  },
+  {
+   "t0": 572.826,
+   "t1": 573.87,
+   "w": "suscríbete"
+  },
+  {
+   "t0": 573.87,
+   "t1": 573.983,
+   "w": "y"
+  },
+  {
+   "t0": 573.983,
+   "t1": 574.548,
+   "w": "escríbeme"
+  },
+  {
+   "t0": 574.548,
+   "t1": 575.293,
+   "w": "cuál"
+  },
+  {
+   "t0": 575.293,
+   "t1": 575.478,
+   "w": "Nos"
+  },
+  {
+   "t0": 575.478,
+   "t1": 575.755,
+   "w": "vemos"
+  },
+  {
+   "t0": 575.755,
+   "t1": 575.893,
+   "w": "en"
+  },
+  {
+   "t0": 575.893,
+   "t1": 576.032,
+   "w": "el"
+  },
+  {
+   "t0": 576.032,
+   "t1": 576.54,
+   "w": "siguiente"
+  }
+ ],
+ "resaltar": [
+  "SINALOA",
+  "MÉXICO",
+  "MAÍZ",
+  "TORTILLA",
+  "TOMATE",
+  "GARBANZO",
+  "CAMARÓN",
+  "MAZATLÁN",
+  "CULIACÁN",
+  "PEDRO",
+  "INFANTE",
+  "BANDA",
+  "CARNAVAL",
+  "HUECO",
+  "SEQUÍA",
+  "NO",
+  "MILLONES"
+ ],
+ "capY": 1000,
+ "capTam": 46,
+ "capEstilo": "caja",
+ "tipografia": "cine",
+ "capColor": "#ffd23f",
+ "capTextoClave": "#0b0f14",
+ "fundido_inicio": 0,
+ "barra": true,
+ "audio": ".tmp/voz.wav"
+}

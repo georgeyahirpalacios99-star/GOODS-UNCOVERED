@@ -1,0 +1,1 @@
+{"estilo": "pergamino", "formato": "vertical", "duracion": 4, "ocultar": ["barra", "marcador", "lista", "region"], "camara": [{"t": 0, "lon": -78.3, "lat": -1.6, "ancho": 8.6}], "eventos": [{"tipo": "resaltar", "pais": "ECU", "desde": -1, "color": "#7a1f12", "relleno": "rgba(70,140,60,.55)"}]}
