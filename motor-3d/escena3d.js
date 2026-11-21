@@ -115,6 +115,7 @@ function camara(t) {
   const k = SC.camara; let a = k[0], b = k[0]; for (let i = 0; i < k.length; i++) { if (k[i].t <= t) { a = k[i]; b = k[i + 1] || k[i]; } }
   const u = b === a ? 0 : eio(cl((t - a.t) / (b.t - a.t))), q = x => lerp(a[x], b[x], u), [x, z] = W3(q('lon'), q('lat')), d = q('dist'), inc = q('inclin') * Math.PI / 180;
   CAM.position.set(x, d * Math.cos(inc), z + d * Math.sin(inc)); CAM.lookAt(x, 0, z);
+  if (ESC.fog) { ESC.fog.near = d * 1.1; ESC.fog.far = d * 2.6; }
 }
 function particulas(t, o, t0) {
   if (!o.part) { o.part = []; for (let i = 0; i < 70; i++) { const m = new THREE.Mesh(new THREE.BoxGeometry(1.6, .5, 1.1), new THREE.MeshStandardMaterial({ color: ['#1c9b3f', '#f2d21b', '#22409a', '#ffffff'][i % 4] })); m.castShadow = true; ESC.add(m);
@@ -167,7 +168,7 @@ function capas2d(t) {
       OX.fillStyle = ACC; OX.fillRect(-w / 2, h / 2 + 18, 6, 52); OX.letterSpacing = '3px'; txt((e.texto || '').toUpperCase(), -w / 2 + 22, h / 2 + 34, '700 34px Barlow', '#fff'); OX.letterSpacing = '2px'; txt((e.credito || '').toUpperCase(), -w / 2 + 22, h / 2 + 64, '700 19px Barlow', 'rgba(255,255,255,.6)'); }
     else if (e.tipo === 'marcador') { const y = e.y ?? 330, w = W - 120; OX.translate(W / 2, y + (1 - p) * -60); OX.shadowColor = 'rgba(0,0,0,.6)'; OX.shadowBlur = 30; rr(-w / 2, -120, w, 240, 28, 'rgba(8,14,20,.92)'); OX.shadowBlur = 0;
       OX.letterSpacing = '10px'; txt((e.titulo || '').toUpperCase(), 0, -86, '700 30px Barlow', ACC, 'center'); OX.letterSpacing = '0px';
-      const q = eo(pr(t, e.desde + .3, 1.1)); for (const [lado, iso, val, nom] of [[-1, e.isoIzq, e.izq, e.nomIzq], [1, e.isoDer, e.der, e.nomDer]]) { const fx = lado * (w / 2 - 110), fl = FLAGIM[iso]; OX.save(); OX.beginPath(); OX.arc(fx, 10, 62, 0, 7); OX.clip(); if (fl) OX.drawImage(fl, fx - 83, 10 - 62, 166, 124); OX.restore(); OX.lineWidth = 6; OX.strokeStyle = '#fff'; OX.beginPath(); OX.arc(fx, 10, 62, 0, 7); OX.stroke();
+      const q = eo(pr(t, e.desde + .2, SC.ritmo === 'rapido' ? .55 : 1.1)); for (const [lado, iso, val, nom] of [[-1, e.isoIzq, e.izq, e.nomIzq], [1, e.isoDer, e.der, e.nomDer]]) { const fx = lado * (w / 2 - 110), fl = FLAGIM[iso]; OX.save(); OX.beginPath(); OX.arc(fx, 10, 62, 0, 7); OX.clip(); if (fl) OX.drawImage(fl, fx - 83, 10 - 62, 166, 124); OX.restore(); OX.lineWidth = 6; OX.strokeStyle = '#fff'; OX.beginPath(); OX.arc(fx, 10, 62, 0, 7); OX.stroke();
         txt((nom || '').toUpperCase(), fx, 96, '700 26px Barlow', '#fff', 'center'); const gana = e.gana ? (e.gana === 'izq') === (lado < 0) : (e.izq !== e.der && ((lado < 0) === (e.izq > e.der))); const v = typeof val === 'number' ? Math.round(val * q).toLocaleString('en-US') : val;
         OX.save(); if (gana && q > .98) { OX.shadowColor = ACC; OX.shadowBlur = 30; } txt(v + (e.suf || ''), lado * (w / 2 - (typeof val === 'number' ? 300 : 420)), 14, `${e.tam || 130}px Anton`, gana && q > .98 ? ACC : '#fff', 'center'); OX.restore(); }
       txt('VS', 0, 14, '60px Anton', 'rgba(255,255,255,.35)', 'center'); }

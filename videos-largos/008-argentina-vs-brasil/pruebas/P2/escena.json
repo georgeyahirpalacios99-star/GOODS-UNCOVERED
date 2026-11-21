@@ -1,0 +1,431 @@
+{
+ "salida": "P2-prueba-rapida",
+ "duracion": 16.1,
+ "ancho": 1920,
+ "alto": 1080,
+ "centro": [
+  -58,
+  -20
+ ],
+ "mar": "#0d2a4f",
+ "mar2": "#081c38",
+ "cielo": "#061630",
+ "paises": [
+  {
+   "adm": "BRA",
+   "iso": "br",
+   "alto": 3.4
+  },
+  {
+   "adm": "ARG",
+   "iso": "ar",
+   "alto": 3.4
+  },
+  {
+   "adm": "BOL",
+   "iso": "bo",
+   "alto": 2.2
+  },
+  {
+   "adm": "PRY",
+   "iso": "py",
+   "alto": 2.2
+  },
+  {
+   "adm": "URY",
+   "iso": "uy",
+   "alto": 2.2
+  },
+  {
+   "adm": "PER",
+   "iso": "pe",
+   "alto": 2.2
+  },
+  {
+   "adm": "COL",
+   "iso": "co",
+   "alto": 2.2
+  },
+  {
+   "adm": "VEN",
+   "iso": "ve",
+   "alto": 2.2
+  },
+  {
+   "adm": "GUY",
+   "iso": "gy",
+   "alto": 2.2
+  },
+  {
+   "adm": "SUR",
+   "iso": "sr",
+   "alto": 2.2
+  },
+  {
+   "adm": "ECU",
+   "iso": "ec",
+   "alto": 2.2
+  },
+  {
+   "adm": "CHL",
+   "iso": "cl",
+   "alto": 2.2
+  }
+ ],
+ "camara": [
+  {
+   "t": 0,
+   "lon": -58,
+   "lat": -22,
+   "dist": 700,
+   "inclin": 4
+  },
+  {
+   "t": 2.9,
+   "lon": -58,
+   "lat": -22,
+   "dist": 700,
+   "inclin": 4
+  },
+  {
+   "t": 4.66,
+   "lon": -47,
+   "lat": -22,
+   "dist": 260,
+   "inclin": 38
+  },
+  {
+   "t": 7.63,
+   "lon": -47,
+   "lat": -23,
+   "dist": 248,
+   "inclin": 40
+  },
+  {
+   "t": 8.4,
+   "lon": -36,
+   "lat": -21,
+   "dist": 105,
+   "inclin": 46
+  },
+  {
+   "t": 10.05,
+   "lon": -36,
+   "lat": -21.5,
+   "dist": 99,
+   "inclin": 48
+  },
+  {
+   "t": 10.33,
+   "lon": -49,
+   "lat": -31,
+   "dist": 124,
+   "inclin": 46
+  },
+  {
+   "t": 12.36,
+   "lon": -49,
+   "lat": -31,
+   "dist": 118,
+   "inclin": 46
+  },
+  {
+   "t": 12.91,
+   "lon": -49,
+   "lat": -26,
+   "dist": 236,
+   "inclin": 38
+  },
+  {
+   "t": 16.1,
+   "lon": -48,
+   "lat": -24,
+   "dist": 260,
+   "inclin": 36
+  }
+ ],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ]
+  ],
+  "ARG": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    5.38,
+    "feliz"
+   ],
+   [
+    5.98,
+    "duda"
+   ],
+   [
+    13.08,
+    "feliz"
+   ],
+   [
+    14.56,
+    "shock"
+   ]
+  ],
+  "BRA": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    5.38,
+    "duda"
+   ],
+   [
+    5.98,
+    "feliz"
+   ],
+   [
+    13.08,
+    "shock"
+   ],
+   [
+    14.56,
+    "feliz"
+   ]
+  ]
+ },
+ "atenuar": [
+  {
+   "desde": 3.89,
+   "hasta": 30,
+   "paises": [
+    "ARG",
+    "BRA"
+   ]
+  }
+ ],
+ "elevar": [
+  {
+   "pais": "ARG",
+   "desde": 4.33,
+   "altura": 7
+  },
+  {
+   "pais": "BRA",
+   "desde": 4.44,
+   "altura": 7
+  }
+ ],
+ "columnas": [
+  {
+   "pais": "ARG",
+   "desde": 5.65,
+   "hasta": 7.85,
+   "alto": 14.399999999999999,
+   "radio": 6,
+   "dz": 0,
+   "dur": 0.6
+  },
+  {
+   "pais": "BRA",
+   "desde": 5.76,
+   "hasta": 7.85,
+   "alto": 24.0,
+   "radio": 6,
+   "dur": 0.6
+  }
+ ],
+ "capas": [
+  {
+   "tipo": "foto",
+   "desde": 0.0,
+   "hasta": 0.5,
+   "img": "../../fotos-reales/pele-1.jpg",
+   "z0": 1.12,
+   "z1": 1.02,
+   "px": 1,
+   "credito": "Foto: AFP/SCANPIX · Public domain"
+  },
+  {
+   "tipo": "foto",
+   "desde": 0.48,
+   "hasta": 0.99,
+   "img": "../../fotos-reales/maradona-1.jpg",
+   "z0": 1.12,
+   "z1": 1.02,
+   "px": -1,
+   "credito": "Foto: Unknown authorUnknown author · Public domain"
+  },
+  {
+   "tipo": "foto",
+   "desde": 0.97,
+   "hasta": 1.47,
+   "img": "../../fotos-reales/messi-1.jpg",
+   "z0": 1.12,
+   "z1": 1.02,
+   "px": 1,
+   "credito": "Foto: Voltmetro · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "foto",
+   "desde": 1.45,
+   "hasta": 1.95,
+   "img": "../../fotos-reales/vinicius-1.jpg",
+   "z0": 1.12,
+   "z1": 1.02,
+   "px": -1,
+   "credito": "Foto: Bryan Berlin · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "foto",
+   "desde": 1.93,
+   "hasta": 2.44,
+   "img": "../../fotos-reales/maracana-1.jpg",
+   "z0": 1.12,
+   "z1": 1.02,
+   "px": 1,
+   "credito": "Foto: Rodrigo Soldon from Rio de Jan · CC BY 2.0"
+  },
+  {
+   "tipo": "foto",
+   "desde": 2.42,
+   "hasta": 2.92,
+   "img": "../../fotos-reales/hinchas-arg-1.jpg",
+   "z0": 1.12,
+   "z1": 1.02,
+   "px": -1,
+   "credito": "Foto: Adriel Rivera · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 0.05,
+   "hasta": 2.9,
+   "kicker": "Goods Uncovered · Sudamérica",
+   "texto": "Argentina vs Brasil",
+   "sub": "10 rondas. Un solo ganador.",
+   "y": 800,
+   "tam": 96
+  },
+  {
+   "tipo": "barrido",
+   "desde": 2.6,
+   "hasta": 3.15
+  },
+  {
+   "tipo": "marcador",
+   "desde": 5.32,
+   "hasta": 7.74,
+   "titulo": "Copas del Mundo",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 3,
+   "der": 5,
+   "y": 170,
+   "tam": 120
+  },
+  {
+   "tipo": "columnaTexto",
+   "desde": 5.87,
+   "hasta": 7.74,
+   "col": 0,
+   "valor": 3,
+   "texto": "Mundiales"
+  },
+  {
+   "tipo": "columnaTexto",
+   "desde": 5.98,
+   "hasta": 7.74,
+   "col": 1,
+   "valor": 5,
+   "texto": "Mundiales"
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 8.29,
+   "hasta": 10.11,
+   "img": "../../fotos-reales/maracana-1.jpg",
+   "lon": -43.21,
+   "lat": -22.91,
+   "x": 1450,
+   "y": 380,
+   "w": 620,
+   "texto": "Maracanã · Río de Janeiro",
+   "credito": "Foto: Rodrigo Soldon from Rio de Jan · CC BY 2.0"
+  },
+  {
+   "tipo": "barrido",
+   "desde": 10.0,
+   "hasta": 10.44
+  },
+  {
+   "tipo": "foto",
+   "desde": 10.22,
+   "hasta": 12.42,
+   "img": "../../fotos-reales/pele-1.jpg",
+   "z0": 1.04,
+   "z1": 1.16,
+   "credito": "Foto: AFP/SCANPIX · Public domain"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 10.38,
+   "hasta": 12.36,
+   "kicker": "Brasil · 1958, 1962, 1970",
+   "texto": "Pelé",
+   "sub": "El único jugador con 3 Copas del Mundo",
+   "y": 800
+  },
+  {
+   "tipo": "barrido",
+   "desde": 12.25,
+   "hasta": 12.69
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 12.58,
+   "hasta": 14.45,
+   "img": "../../fotos-reales/hinchas-arg-1.jpg",
+   "lon": -58.38,
+   "lat": -34.6,
+   "x": 1450,
+   "y": 380,
+   "w": 560,
+   "texto": "Buenos Aires · Campeones 2022",
+   "credito": "Foto: Adriel Rivera · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "marcador",
+   "desde": 13.02,
+   "hasta": 14.45,
+   "titulo": "Copa América",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 16,
+   "der": 9,
+   "y": 170,
+   "tam": 120
+  },
+  {
+   "tipo": "marcador",
+   "desde": 14.51,
+   "hasta": 16.1,
+   "titulo": "Mundial 2026",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": "FINAL",
+   "der": "OCTAVOS",
+   "y": 170,
+   "tam": 90,
+   "gana": "izq"
+  }
+ ],
+ "ritmo": "rapido"
+}
