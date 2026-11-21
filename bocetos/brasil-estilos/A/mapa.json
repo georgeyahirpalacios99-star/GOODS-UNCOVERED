@@ -1,0 +1,218 @@
+{
+ "formato": "vertical",
+ "duracion": 8,
+ "camara": [
+  {
+   "t": 0,
+   "lon": -60,
+   "lat": -17,
+   "ancho": 62
+  },
+  {
+   "t": 2,
+   "lon": -56,
+   "lat": -13,
+   "ancho": 48
+  },
+  {
+   "t": 4.5,
+   "lon": -56,
+   "lat": -13,
+   "ancho": 48,
+   "suave": false
+  },
+  {
+   "t": 5.6,
+   "lon": -60,
+   "lat": -18,
+   "ancho": 62
+  }
+ ],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ]
+  ],
+  "BRA": [
+   [
+    0,
+    "feliz"
+   ],
+   [
+    2.6,
+    "duda"
+   ],
+   [
+    3.4,
+    "shock"
+   ]
+  ],
+  "ARG": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "BOL": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "PRY": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "URY": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "PER": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "COL": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "VEN": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "GUY": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "SUR": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "ECU": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ],
+  "CHL": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.7,
+    "shock"
+   ]
+  ]
+ },
+ "tipografia": "cine",
+ "tituloClave": "texto",
+ "fundido_inicio": 0,
+ "estilo": "caricatura",
+ "salida": "A-original",
+ "desaparece": [
+  {
+   "iso": "BRA",
+   "t": 4.2
+  }
+ ],
+ "sacudidas": [
+  {
+   "t": 4.2,
+   "dur": 0.9,
+   "fuerza": 22
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "titulo",
+   "desde": 0.1,
+   "hasta": 2.4,
+   "texto": "¿Y SI *BRASIL*\nDESAPARECE?",
+   "tam": 96,
+   "y": 330,
+   "capa": "C"
+  },
+  {
+   "tipo": "cifra",
+   "desde": 2.5,
+   "hasta": 4.1000000000000005,
+   "texto": "8,515,767 km²",
+   "num": [
+    0,
+    8515767
+   ],
+   "suf": " km²",
+   "tam": 120,
+   "sub": "el 47 % de Sudamérica",
+   "y": 360,
+   "capa": "C"
+  },
+  {
+   "tipo": "pregunta",
+   "desde": 6.4,
+   "hasta": 8,
+   "texto": "¿QUIÉN GANA MÁS? 👇",
+   "y": 1500,
+   "capa": "C"
+  }
+ ],
+ "destellos": [
+  4.2
+ ]
+}

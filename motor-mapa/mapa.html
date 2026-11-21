@@ -102,8 +102,8 @@ async function init(geo, spec, flags, imgs) {
     FLC[iso] = c; const s = document.createElement('canvas'); s.width = s.height = 1; const sx = s.getContext('2d'); sx.drawImage(c, 0, 0, 1, 1); const d = sx.getImageData(0, 0, 1, 1).data; FLCOL[iso] = `rgb(${d[0]},${d[1]},${d[2]})`;
     const pc = []; for (const [u, v] of [[.15, .2], [.5, .5], [.85, .8], [.5, .15], [.2, .8]]) pc.push(`rgb(${x.getImageData(u * 639, v * 479, 1, 1).data.slice(0, 3).join(',')})`); FLC[iso].colores = pc; }));
   await Promise.all(Object.entries(imgs).map(async ([k, url]) => { const im = new Image(); im.src = url; await im.decode(); IM[k] = im; }));
-  if (SP.estilo === 'documental') { for (const t of ['tierra', 'monte', 'desierto', 'mar']) TIL[t] = textura(t); }
-  else TIL.olas = olas();
+  if (SP.estilo === 'documental' || SP.premium) { for (const t of ['tierra', 'monte', 'desierto', 'mar']) TIL[t] = textura(t); }
+  if (SP.estilo !== 'documental') TIL.olas = olas();
   GRANO = ctx.createPattern(grano(), 'repeat');
   OFF = document.createElement('canvas'); OFF.width = W; OFF.height = H; octx = OFF.getContext('2d');
   if (SP.estilo === 'fantasia') prepFant();
@@ -204,6 +204,7 @@ function mapaCarto(t) {
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   const g = ctx.createRadialGradient(W / 2, H / 2, 150, W / 2, H / 2, 1200); g.addColorStop(0, '#3a95d6'); g.addColorStop(1, '#1f6aa8'); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
   setCam(); const vv = vista(.3), todo = new Path2D(); todo.rect(vv[0], vv[1], vv[2] - vv[0], vv[3] - vv[1]);
+  if (SP.premium) { ctx.setTransform(1, 0, 0, 1, 0, 0); const gp = ctx.createRadialGradient(W / 2, H / 2, 100, W / 2, H / 2, 1300); gp.addColorStop(0, SP.marClaro ? '#2a8fd0' : '#12506e'); gp.addColorStop(1, SP.marClaro ? '#0b3f6e' : '#06202f'); ctx.fillStyle = gp; ctx.fillRect(0, 0, W, H); setCam(); rellenar(ctx, todo, 'mar', .5); } else
   { const L = Math.log2(CAM.z * S / N), k = Math.floor(L), s = S * Math.pow(2, -k); const p = PAT.olas || (PAT.olas = ctx.createPattern(TIL.olas, 'repeat')); p.setTransform(new DOMMatrix([s / N, 0, 0, s / N, (t * .002 * s) % s, 0])); ctx.fillStyle = p; ctx.fill(todo); }
   const v = vista(); FACE = {};
   const lista = G.paises.filter(c => cruza(c.bb, v));
@@ -215,7 +216,9 @@ function mapaCarto(t) {
       if (dt < .45) { const a = 5 / CAM.z; ctx.translate(Math.sin(t * 90) * a, Math.cos(t * 77) * a); }
       else { const q = eio(pr(dt, .45, .8)); ctx.translate(cx, cy); ctx.scale(1 - q * .9, 1 - q * .9); ctx.translate(-cx, -cy); ctx.globalAlpha = 1 - q; }
     }
+    if (SP.premium) { const z = CAM.z; ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.55)'; ctx.shadowBlur = 26; ctx.shadowOffsetY = 14; const g3 = SP.grosor3D || 9; ctx.translate(0, g3 / z); ctx.fillStyle = SP.marClaro ? '#7a5a2e' : '#0d2233'; ctx.fill(c.path, 'evenodd'); ctx.restore(); ctx.save(); ctx.translate(0, g3 / 2 / z); ctx.fillStyle = SP.marClaro ? '#a07a42' : '#1d3a4d'; ctx.fill(c.path, 'evenodd'); ctx.restore(); }
     paisBandera(c);
+    if (SP.premium) { const g = ctx.createLinearGradient(c.bb[0], c.bb[1], c.bb[2], c.bb[3]); g.addColorStop(0, 'rgba(255,255,255,.22)'); g.addColorStop(.5, 'rgba(255,255,255,0)'); g.addColorStop(1, 'rgba(0,0,0,.25)'); ctx.fillStyle = g; ctx.fill(c.path, 'evenodd'); }
     { const m = marcado(c.adm, t); if (m > 0) { ctx.fillStyle = `rgba(214,40,40,${m * (.55 + .2 * Math.sin(t * 7))})`; ctx.fill(c.path, 'evenodd'); } }
     if (dt !== null && dt > 0 && dt < .6) { ctx.fillStyle = `rgba(255,255,255,${Math.sin(pr(dt, 0, .6) * Math.PI) * .8})`; ctx.fill(c.path, 'evenodd'); }
     ctx.restore(); setCam();
@@ -413,6 +416,14 @@ const D = {
       if (e.nota) texto(e.nota, x + 24, ym + 70, F(600, 20), 'rgba(255,255,255,.8)', 'left', 'middle', 'rgba(0,0,0,.7)', 5); ctx.restore(); } },
   sello(e, t) { const p = pr(t, e.desde, .32), a = fade(t, e, .01, .3); if (p <= 0) return; const s = 1 + (1 - eo(p)) * 1.8; ctx.save(); ctx.globalAlpha = a * Math.min(1, p * 3); ctx.translate(X(e.x) * (W < 1500 && e.x !== 960 ? W / 1920 : 1), Y(e.y)); ctx.rotate(-.12); ctx.scale(s * (e.tam || 1), s * (e.tam || 1));
     ctx.font = F(900, 46); const w = ctx.measureText(e.texto).width; if (e.fondo !== false) { ctx.fillStyle = 'rgba(255,255,255,.88)'; ctx.fillRect(-w / 2 - 24, -42, w + 48, 84); } ctx.strokeStyle = RED; ctx.lineWidth = 6; ctx.strokeRect(-w / 2 - 24, -42, w + 48, 84); texto(e.texto, 0, 2, F(900, 46), RED); ctx.restore(); },
+  // personaje: país con bandera, relieve y cara sobre el mapa satelital (estilo híbrido)
+  personaje(e, t) { const c = G.idx[e.pais]; if (!c || !c.pp) return; const a = fade(t, e, .3, .3); if (a <= 0) return; setCam(); const z = CAM.z, dt = e.desaparece !== undefined ? t - e.desaparece : -1; ctx.save(); ctx.globalAlpha = a;
+    if (dt > 0) { const [cx, cy] = proj(c.lx, c.ly); if (dt < .45) ctx.translate(Math.sin(t * 90) * 4 / z, 0); else { const q = eio(pr(dt, .45, .8)); ctx.translate(cx, cy); ctx.scale(1 - q * .9, 1 - q * .9); ctx.translate(-cx, -cy); ctx.globalAlpha = a * (1 - q); } }
+    const lift = (e.alto ?? 10) / z; ctx.save(); ctx.shadowColor = 'rgba(0,0,0,.6)'; ctx.shadowBlur = 30; ctx.shadowOffsetY = 16; ctx.translate(0, lift); ctx.fillStyle = '#0d2233'; ctx.fill(c.path, 'evenodd'); ctx.restore();
+    ctx.save(); ctx.translate(0, -lift * .3); paisBandera(c); const g = ctx.createLinearGradient(c.bb[0], c.bb[1], c.bb[2], c.bb[3]); g.addColorStop(0, 'rgba(255,255,255,.25)'); g.addColorStop(.5, 'rgba(255,255,255,0)'); g.addColorStop(1, 'rgba(0,0,0,.28)'); ctx.fillStyle = g; ctx.fill(c.path, 'evenodd');
+    ctx.strokeStyle = 'rgba(255,255,255,.95)'; ctx.lineWidth = 2.4 / z; ctx.lineJoin = 'round'; ctx.stroke(c.path); ctx.restore(); ctx.restore(); ctx.setTransform(1, 0, 0, 1, 0, 0);
+    if (dt > .45) return; const sz = Math.min(c.mb[2] - c.mb[0], c.mb[3] - c.mb[1]) * z, ee = Math.min(sz * .16, 70) * (e.tam || 1); if (ee < 9) return; const off = e.off || [0, 0]; let [x, y] = ws(c.lx + off[0], c.ly + off[1]); y -= lift * z * .3;
+    ctx.save(); ctx.globalAlpha = a; FACE[c.adm] = [x, y, ee]; cara(c.adm, x, y, ee, t); ctx.restore(); },
   // ---- acompañantes del mapa: siempre hay algo encima ----
   // HUD: lugar y coordenadas en vivo según la cámara + barra de escala (movimiento constante y aspecto profesional)
   hud(e, t) { const a = fade(t, e, .4, .3); if (a <= 0) return; const lon = CAM.x / S * 360 - 180, lat = Math.atan(Math.sinh(Math.PI * (1 - 2 * CAM.y / S))) * 180 / Math.PI; ctx.save(); ctx.globalAlpha = a * .9;
