@@ -14,15 +14,15 @@ async function iniciar(sc, paises, flags, imgs) {
   R = new THREE.WebGLRenderer({ canvas: document.getElementById('gl'), antialias: true, preserveDrawingBuffer: true });
   R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap; R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.05;
   ESC = new THREE.Scene(); ESC.background = new THREE.Color(sc.cielo || '#0b3150'); ESC.fog = new THREE.Fog(sc.cielo || '#0b3150', 260, 700);
-  CAM = new THREE.PerspectiveCamera(34, R.domElement.width / R.domElement.height, 1, 3000);
+  CAM = new THREE.PerspectiveCamera(34, R.domElement.width / R.domElement.height, 8, 2600);
   ESC.add(new THREE.HemisphereLight('#cfe9ff', '#123247', 1.1));
   const sol = new THREE.DirectionalLight('#fff1d6', 2.4); sol.position.set(-160, 320, 120); sol.castShadow = true; sol.shadow.mapSize.set(2048, 2048);
-  Object.assign(sol.shadow.camera, { left: -220, right: 220, top: 220, bottom: -220, near: 10, far: 900 }); sol.shadow.bias = -.0008; ESC.add(sol); ESC.add(sol.target);
+  Object.assign(sol.shadow.camera, { left: -220, right: 220, top: 220, bottom: -220, near: 10, far: 900 }); sol.shadow.bias = -.0004; sol.shadow.normalBias = .6; ESC.add(sol); ESC.add(sol.target);
   // mar con ondas suaves (textura dibujada)
   const mc = document.createElement('canvas'); mc.width = mc.height = 512; const m = mc.getContext('2d'); m.fillStyle = sc.mar || '#1f7fc0'; m.fillRect(0, 0, 512, 512);
   m.strokeStyle = 'rgba(255,255,255,.045)'; m.lineWidth = 2; for (let i = 0; i < 40; i++) { const x = hs('x' + i) * 512, y = hs('y' + i) * 512; m.beginPath(); m.arc(x, y, 14, Math.PI * 1.1, Math.PI * 1.9); m.stroke(); m.beginPath(); m.arc(x + 26, y, 14, Math.PI * 1.1, Math.PI * 1.9); m.stroke(); }
   const mt = new THREE.CanvasTexture(mc); mt.wrapS = mt.wrapT = THREE.RepeatWrapping; mt.repeat.set(70, 70); mt.colorSpace = THREE.SRGBColorSpace;
-  const mar = new THREE.Mesh(new THREE.PlaneGeometry(3000, 3000), new THREE.MeshStandardMaterial({ map: mt, roughness: .55, metalness: .05 })); mar.rotation.x = -Math.PI / 2; mar.receiveShadow = true; ESC.add(mar); P._mar = mt;
+  const mar = new THREE.Mesh(new THREE.PlaneGeometry(3000, 3000), new THREE.MeshStandardMaterial({ map: mt, roughness: .55, metalness: .05 })); mar.rotation.x = -Math.PI / 2; mar.receiveShadow = true; ESC.add(mar); P._mar = mt; P._marMesh = mar;
   for (const p of paises) {
     const im = flags[p.iso] ? await imagen(flags[p.iso]) : null, fc = document.createElement('canvas'); fc.width = 640; fc.height = 480; const f = fc.getContext('2d');
     if (im) f.drawImage(im, 0, 0, 640, 480); else { f.fillStyle = p.neutro ? (SC.tierra || '#4a5d4a') : '#e3ddce'; f.fillRect(0, 0, 640, 480); if (p.neutro) for (let i = 0; i < 2600; i++) { f.fillStyle = `rgba(${hs('r' + i) > .5 ? '255,240,210' : '20,30,20'},${.05 + hs('a' + i) * .08})`; f.fillRect(hs('x' + i) * 640, hs('y' + i) * 480, 3 + hs('s' + i) * 9, 3 + hs('t' + i) * 9); } }
@@ -211,7 +211,7 @@ function entorno(paises) {
     for (const [lo, la, n] of SC.oceanos || [[-100, -18, 'OCÉANO PACÍFICO'], [-22, -18, 'OCÉANO ATLÁNTICO'], [-75, 14.5, 'MAR CARIBE']]) { const [x, z] = W3(lo, la); g.fillText(n, X(x), Z(z)); }
   }
   const tx = new THREE.CanvasTexture(cv); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
-  const pl = new THREE.Mesh(new THREE.PlaneGeometry(2 * R0, 2 * R0), new THREE.MeshStandardMaterial({ map: tx, roughness: E === 'cancha' ? .95 : .5, metalness: .05 })); pl.rotation.x = -Math.PI / 2; pl.position.y = .05; pl.receiveShadow = true; ESC.add(pl);
+  const pl = new THREE.Mesh(new THREE.PlaneGeometry(2 * R0, 2 * R0), new THREE.MeshStandardMaterial({ map: tx, roughness: E === 'cancha' ? .95 : .5, metalness: .05 })); pl.rotation.x = -Math.PI / 2; pl.position.y = .3; pl.receiveShadow = true; pl.material.polygonOffset = true; pl.material.polygonOffsetFactor = 1; pl.material.polygonOffsetUnits = 1; ESC.add(pl); P._fondo = pl;
   if (E === 'cancha') { // estadio alrededor: gradas con público y reflectores
     const gc = document.createElement('canvas'); gc.width = 4096; gc.height = 512; const q = gc.getContext('2d'); q.fillStyle = '#10151c'; q.fillRect(0, 0, 4096, 512);
     for (let i = 0; i < 26000; i++) { const y = hs('cy' + i) * 470 + 30; q.fillStyle = ['#d9d9d9', '#74acdf', '#f7e35c', '#2a8f3c', '#c0392b', '#ffffff', '#1f2a36'][Math.floor(hs('cc' + i) * 7)]; q.globalAlpha = .55 + hs('ca' + i) * .45; q.fillRect(hs('cx' + i) * 4096, y, 4, 5); }
@@ -251,7 +251,7 @@ function canchaCanvas() {
 function estadio() {
   const R0 = 1400, u = 2 * R0 / 4096, L = 1150 * u, A = 740 * u; EST = { L, A, conf: [], humo: [], tarj: [] };
   const tx = new THREE.CanvasTexture(canchaCanvas()); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
-  EST.pl = new THREE.Mesh(new THREE.PlaneGeometry(2 * R0, 2 * R0), new THREE.MeshStandardMaterial({ map: tx, roughness: .95, transparent: true, opacity: 0 })); EST.pl.rotation.x = -Math.PI / 2; EST.pl.position.y = .09; EST.pl.receiveShadow = true; ESC.add(EST.pl);
+  EST.pl = new THREE.Mesh(new THREE.PlaneGeometry(2 * R0, 2 * R0), new THREE.MeshStandardMaterial({ map: tx, roughness: .95, transparent: true, opacity: 0 })); EST.pl.rotation.x = -Math.PI / 2; EST.pl.position.y = .7; EST.pl.receiveShadow = true; EST.pl.renderOrder = 2; ESC.add(EST.pl);
   // gradas
   const gc = document.createElement('canvas'); gc.width = 4096; gc.height = 512; const q = gc.getContext('2d'); q.fillStyle = '#0c1118'; q.fillRect(0, 0, 4096, 512);
   for (let i = 0; i < 30000; i++) { const y = hs('cy' + i) * 460 + 40, x = hs('cx' + i) * 4096, lado = x < 2048; q.fillStyle = (lado ? ['#74acdf', '#ffffff', '#74acdf', '#d9d9d9'] : ['#f7e35c', '#2a8f3c', '#f7e35c', '#1f5aa6'])[Math.floor(hs('cc' + i) * 4)]; q.globalAlpha = .5 + hs('ca' + i) * .5; q.fillRect(x, y, 4, 5); }
@@ -282,6 +282,10 @@ function estadio() {
 function marcadorEn(t) { const s = { izq: 0, der: 0 }; for (const g of SC.goles || []) if (t >= g.t + 1.0) s[g.lado === 1 ? 'izq' : 'der']++; return s; }
 function animaEstadio(t) {
   const E = SC.estadio, q = eio(pr(t, E.t, E.dur || 1.6)); EST.pl.material.opacity = q; EST.ring.material.opacity = q;
+  // al terminar la transformación la cancha queda opaca y sola: se apagan el océano y el mapa del mundo (así no hay nada debajo que parpadee)
+  const lista = q >= .999; EST.pl.material.transparent = !lista; EST.pl.material.depthWrite = lista || q > .5; EST.pl.material.needsUpdate = true;
+  if (P._marMesh) P._marMesh.visible = !lista; if (P._fondo) { P._fondo.visible = !lista; P._fondo.material.transparent = q > 0; P._fondo.material.opacity = 1 - q * .6; }
+  EST.ring.material.transparent = !lista; EST.ring.material.depthWrite = lista;
   for (const k of Object.keys(P)) if (!k.startsWith('_') && P[k].p.neutro) { P[k].grp.position.y = -q * 8; P[k].grp.visible = q < .55; }
   for (const n of NUBES) { n.m.visible = n.sh.visible = q < .5; } for (const b of BARCOS) b.b.visible = q < .3; for (const a of AVIONES) a.a.visible = q < .5;
   if (q > .3 && !ESC.userData.estadioNiebla) { ESC.userData.estadioNiebla = true; ESC.userData.fijaNiebla = true; ESC.fog = new THREE.Fog('#0b1220', 700, 1900); ESC.background = new THREE.Color('#070b12'); }
