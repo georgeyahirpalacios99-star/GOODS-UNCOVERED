@@ -7,7 +7,9 @@ const projM = (lon, lat) => [(lon + 180) / 360 * 1000, (1 - Math.log(Math.tan(Ma
 const W3 = (lon, lat) => { const [x, y] = projM(lon, lat); return [x - CTR[0], y - CTR[1]]; };
 
 async function imagen(src) { const im = new Image(); im.src = src; await im.decode(); return im; }
-async function iniciar(sc, paises, flags) {
+let IMGS = {}, FLAGIM = {};
+async function iniciar(sc, paises, flags, imgs) {
+  for (const [k, v] of Object.entries(imgs || {})) IMGS[k] = await imagen(v); for (const [k, v] of Object.entries(flags)) FLAGIM[k] = await imagen(v);
   SC = sc; CTR = projM(...sc.centro);
   R = new THREE.WebGLRenderer({ canvas: document.getElementById('gl'), antialias: true, preserveDrawingBuffer: true });
   R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap; R.outputColorSpace = THREE.SRGBColorSpace; R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = 1.05;
@@ -17,9 +19,9 @@ async function iniciar(sc, paises, flags) {
   const sol = new THREE.DirectionalLight('#fff1d6', 2.4); sol.position.set(-160, 320, 120); sol.castShadow = true; sol.shadow.mapSize.set(2048, 2048);
   Object.assign(sol.shadow.camera, { left: -220, right: 220, top: 220, bottom: -220, near: 10, far: 900 }); sol.shadow.bias = -.0008; ESC.add(sol); ESC.add(sol.target);
   // mar con ondas suaves (textura dibujada)
-  const mc = document.createElement('canvas'); mc.width = mc.height = 512; const m = mc.getContext('2d'); const g = m.createLinearGradient(0, 0, 0, 512); g.addColorStop(0, sc.mar || '#1f7fc0'); g.addColorStop(1, sc.mar2 || '#1a6aa6'); m.fillStyle = g; m.fillRect(0, 0, 512, 512);
-  m.strokeStyle = 'rgba(255,255,255,.10)'; m.lineWidth = 3; for (let i = 0; i < 40; i++) { const x = (i * 97) % 512, y = (i * 53) % 512; m.beginPath(); m.arc(x, y, 14, Math.PI * 1.1, Math.PI * 1.9); m.stroke(); m.beginPath(); m.arc(x + 26, y, 14, Math.PI * 1.1, Math.PI * 1.9); m.stroke(); }
-  const mt = new THREE.CanvasTexture(mc); mt.wrapS = mt.wrapT = THREE.RepeatWrapping; mt.repeat.set(40, 40); mt.colorSpace = THREE.SRGBColorSpace;
+  const mc = document.createElement('canvas'); mc.width = mc.height = 512; const m = mc.getContext('2d'); m.fillStyle = sc.mar || '#1f7fc0'; m.fillRect(0, 0, 512, 512);
+  m.strokeStyle = 'rgba(255,255,255,.045)'; m.lineWidth = 2; for (let i = 0; i < 40; i++) { const x = hs('x' + i) * 512, y = hs('y' + i) * 512; m.beginPath(); m.arc(x, y, 14, Math.PI * 1.1, Math.PI * 1.9); m.stroke(); m.beginPath(); m.arc(x + 26, y, 14, Math.PI * 1.1, Math.PI * 1.9); m.stroke(); }
+  const mt = new THREE.CanvasTexture(mc); mt.wrapS = mt.wrapT = THREE.RepeatWrapping; mt.repeat.set(70, 70); mt.colorSpace = THREE.SRGBColorSpace;
   const mar = new THREE.Mesh(new THREE.PlaneGeometry(3000, 3000), new THREE.MeshStandardMaterial({ map: mt, roughness: .55, metalness: .05 })); mar.rotation.x = -Math.PI / 2; mar.receiveShadow = true; ESC.add(mar); P._mar = mt;
   for (const p of paises) {
     const im = flags[p.iso] ? await imagen(flags[p.iso]) : null, fc = document.createElement('canvas'); fc.width = 640; fc.height = 480; const f = fc.getContext('2d');
@@ -46,6 +48,7 @@ async function iniciar(sc, paises, flags) {
     P[p.adm] = { grp, mesh, cara, alto, p, haz, caraY: cara ? cara.position.y : 0, ring: p.polys.reduce((a, b) => (b[0].length > a[0].length ? b : a))[0], colores: [lado, new THREE.Color('#ffffff')], fc };
   }
   if (SC.estiloCara === 'ojos3d') for (const k of Object.keys(P)) { const o = P[k]; if (k.startsWith('_') || o.p.cara === false) continue; const m = new THREE.Box3().setFromObject(o.mesh), tam = o.p.tamCara || Math.min(26, Math.sqrt((m.max.x - m.min.x) * (m.max.z - m.min.z)) * .32); crearOjos3d(o, tam); }
+  for (const c of SC.columnas || []) { const o = P[c.pais]; if (!o) continue; const m = new THREE.Mesh(new THREE.CylinderGeometry(c.radio || 5, c.radio || 5, 1, 40), new THREE.MeshStandardMaterial({ color: c.color || '#ffd23f', metalness: .55, roughness: .25, emissive: c.color || '#ffd23f', emissiveIntensity: .12 })); m.castShadow = true; ESC.add(m); c._m = m; }
   OV = document.getElementById('ov'); OX = OV.getContext('2d');
 }
 function ojos3d(k, t) {
@@ -142,5 +145,37 @@ function cuadro(t) {
     particulas(t, o, prot.t + 1.6);
     if (!FANT) { const pts = o.ring.map(([x, y]) => new THREE.Vector3(x - CTR[0], .35, y - CTR[1])); const g = new THREE.BufferGeometry().setFromPoints(pts); FANT = new THREE.Line(g, new THREE.LineDashedMaterial({ color: '#ffffff', dashSize: 2, gapSize: 1.5, transparent: true })); FANT.computeLineDistances(); ESC.add(FANT); }
     FANT.material.opacity = cl((dt - 1.7) / .5) * .9; FANT.visible = dt > 1.7; }
-  R.render(ESC, CAM); texto(t);
+  for (const e of SC.elevar || []) { const o = P[e.pais]; if (!o || t < e.desde) continue; const q = eo(pr(t, e.desde, .8)) * (1 - eio(pr(t, e.hasta ?? 1e9, .8))); o.grp.position.y += q * (e.altura || 8); o.grp.rotation.z += Math.sin(t * 1.6 + hs(e.pais)) * .02 * q; }
+  for (const k of Object.keys(P)) { if (k.startsWith('_')) continue; let f = 1; for (const a of SC.atenuar || []) { if (a.paises.includes(k)) continue; const q = pr(t, a.desde, .6) * (1 - pr(t, a.hasta, .6)); f = Math.min(f, 1 - .6 * q); } P[k].mesh.material[0].color.setScalar(f); P[k].mesh.material[1].color.multiplyScalar(1); }
+  for (const c of SC.columnas || []) { if (!c._m) continue; const o = P[c.pais], q = eo(pr(t, c.desde, c.dur || 1.2)) * (1 - pr(t, c.hasta ?? 1e9, .4)), h = Math.max(.01, q * (c.alto || 40)); c._m.visible = t >= c.desde && q > .01; c._m.scale.y = h; c._m.position.set(o.grp.position.x + (c.dx || 0), o.alto * 1.3 + h / 2, o.grp.position.z + (c.dz || 0)); c._top = new THREE.Vector3(c._m.position.x, o.alto * 1.3 + h + 3, c._m.position.z); c._q = q; }
+  R.render(ESC, CAM); texto(t); capas2d(t);
+}
+
+// ---------- capas 2D encima del 3D (mismo lenguaje visual del video de Sinaloa) ----------
+const ACC = '#ffd23f';
+function aPantalla(v) { const p = v.clone().project(CAM); return [(p.x + 1) / 2 * OV.width, (1 - p.y) / 2 * OV.height]; }
+function puntoGeo(lon, lat, y = 4) { const [x, z] = W3(lon, lat); return new THREE.Vector3(x, y, z); }
+function rr(x, y, w, h, r, fill) { OX.beginPath(); OX.roundRect(x, y, w, h, r); OX.fillStyle = fill; OX.fill(); }
+function txt(s, x, y, f, col, al = 'left', borde) { OX.font = f; OX.textAlign = al; OX.textBaseline = 'middle'; if (borde) { OX.lineJoin = 'round'; OX.strokeStyle = borde; OX.lineWidth = 7; OX.strokeText(s, x, y); } OX.fillStyle = col; OX.fillText(s, x, y); }
+function capas2d(t) {
+  const W = OV.width, H = OV.height;
+  for (const e of SC.capas || []) { if (t < e.desde - .01 || t > e.hasta + .01) continue; const a = cl(Math.min((t - e.desde) / .3, (e.hasta - t) / .3)), p = eo(pr(t, e.desde, .55)); OX.save(); OX.globalAlpha = a;
+    if (e.tipo === 'tarjeta') { const im = IMGS[e.img]; const w = e.w || 560, h = e.h || Math.round(w * .62), cx = e.x ?? W / 2, cy = e.y ?? H * .3;
+      if (e.lon !== undefined) { const [px, py] = aPantalla(puntoGeo(e.lon, e.lat)); OX.strokeStyle = 'rgba(255,255,255,.9)'; OX.lineWidth = 3; OX.setLineDash([9, 8]); OX.beginPath(); OX.moveTo(px, py); OX.lineTo(lerp(px, cx, p), lerp(py, cy + h / 2, p)); OX.stroke(); OX.setLineDash([]); OX.fillStyle = ACC; OX.beginPath(); OX.arc(px, py, 9, 0, 7); OX.fill(); OX.globalAlpha = a * (.5 + .5 * Math.sin(t * 5)); OX.beginPath(); OX.arc(px, py, 18, 0, 7); OX.strokeStyle = ACC; OX.stroke(); OX.globalAlpha = a; }
+      OX.translate(cx, cy + (1 - p) * 50); OX.rotate((e.rot || 0) * Math.PI / 180); OX.shadowColor = 'rgba(0,0,0,.6)'; OX.shadowBlur = 40; OX.shadowOffsetY = 16; rr(-w / 2 - 8, -h / 2 - 8, w + 16, h + 86, 14, 'rgba(9,16,22,.94)'); OX.shadowColor = 'transparent';
+      if (im) { OX.save(); OX.beginPath(); OX.roundRect(-w / 2, -h / 2, w, h, 8); OX.clip(); const q = pr(t, e.desde, e.hasta - e.desde), z = 1.05 + .1 * q, s = Math.max(w / im.width, h / im.height) * z; OX.drawImage(im, -im.width * s / 2 + (q - .5) * 40 * (e.px ?? 1), -im.height * s / 2, im.width * s, im.height * s); OX.restore(); }
+      OX.fillStyle = ACC; OX.fillRect(-w / 2, h / 2 + 18, 6, 52); OX.letterSpacing = '3px'; txt((e.texto || '').toUpperCase(), -w / 2 + 22, h / 2 + 34, '700 34px Barlow', '#fff'); OX.letterSpacing = '2px'; txt((e.credito || '').toUpperCase(), -w / 2 + 22, h / 2 + 64, '700 19px Barlow', 'rgba(255,255,255,.6)'); }
+    else if (e.tipo === 'marcador') { const y = e.y ?? 330, w = W - 120; OX.translate(W / 2, y + (1 - p) * -60); OX.shadowColor = 'rgba(0,0,0,.6)'; OX.shadowBlur = 30; rr(-w / 2, -120, w, 240, 28, 'rgba(8,14,20,.92)'); OX.shadowBlur = 0;
+      OX.letterSpacing = '10px'; txt((e.titulo || '').toUpperCase(), 0, -86, '700 30px Barlow', ACC, 'center'); OX.letterSpacing = '0px';
+      const q = eo(pr(t, e.desde + .3, 1.1)); for (const [lado, iso, val, nom] of [[-1, e.isoIzq, e.izq, e.nomIzq], [1, e.isoDer, e.der, e.nomDer]]) { const fx = lado * (w / 2 - 110), fl = FLAGIM[iso]; OX.save(); OX.beginPath(); OX.arc(fx, 10, 62, 0, 7); OX.clip(); if (fl) OX.drawImage(fl, fx - 83, 10 - 62, 166, 124); OX.restore(); OX.lineWidth = 6; OX.strokeStyle = '#fff'; OX.beginPath(); OX.arc(fx, 10, 62, 0, 7); OX.stroke();
+        txt((nom || '').toUpperCase(), fx, 96, '700 26px Barlow', '#fff', 'center'); const gana = e.gana ? (e.gana === 'izq') === (lado < 0) : (e.izq !== e.der && ((lado < 0) === (e.izq > e.der))); const v = typeof val === 'number' ? Math.round(val * q).toLocaleString('en-US') : val;
+        OX.save(); if (gana && q > .98) { OX.shadowColor = ACC; OX.shadowBlur = 30; } txt(v + (e.suf || ''), lado * (w / 2 - (typeof val === 'number' ? 300 : 420)), 14, `${e.tam || 130}px Anton`, gana && q > .98 ? ACC : '#fff', 'center'); OX.restore(); }
+      txt('VS', 0, 14, '60px Anton', 'rgba(255,255,255,.35)', 'center'); }
+    else if (e.tipo === 'ficha') { const x = 70, y = e.y ?? H - 420, g = OX.createLinearGradient(0, y - 120, 0, H); g.addColorStop(0, 'rgba(3,9,14,0)'); g.addColorStop(1, 'rgba(3,9,14,.75)'); OX.fillStyle = g; OX.fillRect(0, y - 120, W, H - y + 120);
+      OX.fillStyle = ACC; OX.fillRect(x, y, 8, 150 * p); OX.letterSpacing = '8px'; txt((e.kicker || '').toUpperCase(), x + 32 - (1 - p) * 60, y + 22, '700 28px Barlow', ACC); OX.letterSpacing = '2px'; txt((e.texto || '').toUpperCase(), x + 30 - (1 - p) * 60, y + 84, `${e.tam || 78}px Anton`, '#fff'); if (e.sub) { OX.letterSpacing = '1px'; txt(e.sub, x + 32 - (1 - p) * 60, y + 144, '700 32px Barlow', 'rgba(235,240,242,.9)'); } }
+    else if (e.tipo === 'foto') { const im = IMGS[e.img]; if (im) { const q = pr(t, e.desde, e.hasta - e.desde), z = (e.z0 || 1.03) + ((e.z1 || 1.14) - (e.z0 || 1.03)) * q, s = Math.max(W / im.width, H / im.height) * z; OX.drawImage(im, (W - im.width * s) / 2 + (q - .5) * 60 * (e.px ?? 0), (H - im.height * s) / 2, im.width * s, im.height * s);
+        const vg = OX.createRadialGradient(W / 2, H / 2, 300, W / 2, H / 2, 1300); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,.6)'); OX.fillStyle = vg; OX.fillRect(0, 0, W, H); OX.letterSpacing = '3px'; txt((e.credito || '').toUpperCase(), W - 40, H - 40, '700 20px Barlow', 'rgba(255,255,255,.7)', 'right'); } }
+    else if (e.tipo === 'barrido') { const u = eio(pr(t, e.desde, e.hasta - e.desde)), x = lerp(-W * .6, W * 1.6, u), sk = 420; OX.globalAlpha = 1; OX.fillStyle = '#0a1218'; OX.beginPath(); OX.moveTo(x - W, 0); OX.lineTo(x + sk, 0); OX.lineTo(x, H); OX.lineTo(x - W - sk, H); OX.closePath(); OX.fill(); OX.fillStyle = ACC; OX.beginPath(); OX.moveTo(x + sk, 0); OX.lineTo(x + sk + 34, 0); OX.lineTo(x + 34, H); OX.lineTo(x, H); OX.closePath(); OX.fill(); }
+    else if (e.tipo === 'columnaTexto') { const c = (SC.columnas || [])[e.col]; if (c && c._top && c._q > .05) { const [sx, sy] = aPantalla(c._top); txt(Math.round((e.valor || 0) * c._q) + (e.suf || ''), sx, sy - 30, '90px Anton', '#fff', 'center', '#0b0f14'); txt((e.texto || '').toUpperCase(), sx, sy + 26, '700 30px Barlow', ACC, 'center', '#0b0f14'); } }
+    OX.restore(); }
 }

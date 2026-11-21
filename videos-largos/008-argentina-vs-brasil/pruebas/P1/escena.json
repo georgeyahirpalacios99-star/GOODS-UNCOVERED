@@ -1,0 +1,355 @@
+{
+ "salida": "P1-prueba-duelo",
+ "duracion": 24,
+ "ancho": 1920,
+ "alto": 1080,
+ "centro": [
+  -58,
+  -20
+ ],
+ "mar": "#0d2a4f",
+ "mar2": "#081c38",
+ "cielo": "#061630",
+ "paises": [
+  {
+   "adm": "BRA",
+   "iso": "br",
+   "alto": 3.4
+  },
+  {
+   "adm": "ARG",
+   "iso": "ar",
+   "alto": 3.4
+  },
+  {
+   "adm": "BOL",
+   "iso": "bo",
+   "alto": 2.2
+  },
+  {
+   "adm": "PRY",
+   "iso": "py",
+   "alto": 2.2
+  },
+  {
+   "adm": "URY",
+   "iso": "uy",
+   "alto": 2.2
+  },
+  {
+   "adm": "PER",
+   "iso": "pe",
+   "alto": 2.2
+  },
+  {
+   "adm": "COL",
+   "iso": "co",
+   "alto": 2.2
+  },
+  {
+   "adm": "VEN",
+   "iso": "ve",
+   "alto": 2.2
+  },
+  {
+   "adm": "GUY",
+   "iso": "gy",
+   "alto": 2.2
+  },
+  {
+   "adm": "SUR",
+   "iso": "sr",
+   "alto": 2.2
+  },
+  {
+   "adm": "ECU",
+   "iso": "ec",
+   "alto": 2.2
+  },
+  {
+   "adm": "CHL",
+   "iso": "cl",
+   "alto": 2.2
+  }
+ ],
+ "camara": [
+  {
+   "t": 0,
+   "lon": -58,
+   "lat": -22,
+   "dist": 1100,
+   "inclin": 4
+  },
+  {
+   "t": 3.2,
+   "lon": -47,
+   "lat": -22,
+   "dist": 420,
+   "inclin": 38
+  },
+  {
+   "t": 8.6,
+   "lon": -47,
+   "lat": -23,
+   "dist": 400,
+   "inclin": 40
+  },
+  {
+   "t": 10,
+   "lon": -36,
+   "lat": -21,
+   "dist": 170,
+   "inclin": 46
+  },
+  {
+   "t": 13,
+   "lon": -36,
+   "lat": -21.5,
+   "dist": 160,
+   "inclin": 48
+  },
+  {
+   "t": 13.5,
+   "lon": -49,
+   "lat": -31,
+   "dist": 200,
+   "inclin": 46
+  },
+  {
+   "t": 17.2,
+   "lon": -49,
+   "lat": -31,
+   "dist": 190,
+   "inclin": 46
+  },
+  {
+   "t": 18.2,
+   "lon": -49,
+   "lat": -26,
+   "dist": 380,
+   "inclin": 38
+  },
+  {
+   "t": 24,
+   "lon": -48,
+   "lat": -24,
+   "dist": 420,
+   "inclin": 36
+  }
+ ],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ]
+  ],
+  "ARG": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.5,
+    "feliz"
+   ],
+   [
+    5.6,
+    "duda"
+   ],
+   [
+    18.5,
+    "feliz"
+   ],
+   [
+    21.2,
+    "shock"
+   ]
+  ],
+  "BRA": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.5,
+    "duda"
+   ],
+   [
+    5.6,
+    "feliz"
+   ],
+   [
+    18.5,
+    "shock"
+   ],
+   [
+    21.2,
+    "feliz"
+   ]
+  ]
+ },
+ "atenuar": [
+  {
+   "desde": 1.8,
+   "hasta": 30,
+   "paises": [
+    "ARG",
+    "BRA"
+   ]
+  }
+ ],
+ "elevar": [
+  {
+   "pais": "ARG",
+   "desde": 2.6,
+   "altura": 7
+  },
+  {
+   "pais": "BRA",
+   "desde": 2.8,
+   "altura": 7
+  }
+ ],
+ "columnas": [
+  {
+   "pais": "ARG",
+   "desde": 5,
+   "hasta": 9,
+   "alto": 14.399999999999999,
+   "radio": 6,
+   "dz": 0
+  },
+  {
+   "pais": "BRA",
+   "desde": 5.2,
+   "hasta": 9,
+   "alto": 24.0,
+   "radio": 6
+  }
+ ],
+ "capas": [
+  {
+   "tipo": "ficha",
+   "desde": 0.3,
+   "hasta": 4.2,
+   "kicker": "Goods Uncovered · Sudamérica",
+   "texto": "Argentina vs Brasil",
+   "sub": "¿Quién gana en todo?",
+   "y": 800
+  },
+  {
+   "tipo": "marcador",
+   "desde": 4.4,
+   "hasta": 8.8,
+   "titulo": "Copas del Mundo",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 3,
+   "der": 5,
+   "y": 170,
+   "tam": 120
+  },
+  {
+   "tipo": "columnaTexto",
+   "desde": 5.4,
+   "hasta": 8.8,
+   "col": 0,
+   "valor": 3,
+   "texto": "Mundiales"
+  },
+  {
+   "tipo": "columnaTexto",
+   "desde": 5.6,
+   "hasta": 8.8,
+   "col": 1,
+   "valor": 5,
+   "texto": "Mundiales"
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 9.8,
+   "hasta": 13.1,
+   "img": "../../fotos-reales/maracana-1.jpg",
+   "lon": -43.21,
+   "lat": -22.91,
+   "x": 1450,
+   "y": 380,
+   "w": 620,
+   "texto": "Maracanã · Río de Janeiro",
+   "credito": "Foto: Rodrigo Soldon from Rio de Jan · CC BY 2.0"
+  },
+  {
+   "tipo": "barrido",
+   "desde": 12.9,
+   "hasta": 13.7
+  },
+  {
+   "tipo": "foto",
+   "desde": 13.3,
+   "hasta": 17.3,
+   "img": "../../fotos-reales/pele-1.jpg",
+   "z0": 1.04,
+   "z1": 1.16,
+   "credito": "Foto: AFP/SCANPIX · Public domain"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 13.6,
+   "hasta": 17.2,
+   "kicker": "Brasil · 1958, 1962, 1970",
+   "texto": "Pelé",
+   "sub": "El único jugador con 3 Copas del Mundo",
+   "y": 800
+  },
+  {
+   "tipo": "barrido",
+   "desde": 17,
+   "hasta": 17.8
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 17.6,
+   "hasta": 21,
+   "img": "../../fotos-reales/hinchas-arg-1.jpg",
+   "lon": -58.38,
+   "lat": -34.6,
+   "x": 1450,
+   "y": 380,
+   "w": 560,
+   "texto": "Buenos Aires · Campeones 2022",
+   "credito": "Foto: Adriel Rivera · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "marcador",
+   "desde": 18.4,
+   "hasta": 21,
+   "titulo": "Copa América",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 16,
+   "der": 9,
+   "y": 170,
+   "tam": 120
+  },
+  {
+   "tipo": "marcador",
+   "desde": 21.1,
+   "hasta": 24,
+   "titulo": "Mundial 2026",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": "FINAL",
+   "der": "OCTAVOS",
+   "y": 170,
+   "tam": 90,
+   "gana": "izq"
+  }
+ ]
+}

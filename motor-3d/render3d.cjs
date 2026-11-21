@@ -14,6 +14,8 @@ for (const f of geo.features) { const p = f.properties; if (!quiero.has(p.ADM0_A
   const polys = (f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates).map(pg => pg.map(r => { const step = Math.max(1, Math.floor(r.length / 600)); return r.filter((_, i) => i % step === 0).map(([lo, la]) => proj(lo, la)); }));
   const conf = sc.paises.find(q => q.adm === p.ADM0_A3); paises.push({ adm: p.ADM0_A3, iso: conf.iso, lx: p.LABEL_X, ly: p.LABEL_Y, polys, ...conf }); }
 const flags = {}; for (const p of sc.paises) { const f = path.join(DAT, 'banderas', p.iso + '.svg'); if (fs.existsSync(f)) flags[p.iso] = 'data:image/svg+xml;base64,' + fs.readFileSync(f).toString('base64'); }
+const imgs = {}; for (const c of sc.capas || []) for (const k of ['img']) if (c[k] && !imgs[c[k]]) { const f = path.join(dir, c[k]); if (fs.existsSync(f)) imgs[c[k]] = 'data:image/jpeg;base64,' + fs.readFileSync(f).toString('base64'); else console.warn('falta', c[k]); }
+for (const c of sc.capas || []) for (const iso of [c.isoIzq, c.isoDer]) if (iso && !flags[iso]) { const f = path.join(DAT, 'banderas', iso + '.svg'); if (fs.existsSync(f)) flags[iso] = 'data:image/svg+xml;base64,' + fs.readFileSync(f).toString('base64'); }
 const fuente = n => 'data:font/woff2;base64,' + fs.readFileSync(path.join(DAT, 'fuentes', n)).toString('base64');
 const three = fs.readFileSync(path.join(__dirname, 'node_modules', 'three', 'build', 'three.min.js'), 'utf8');
 const W = sc.ancho || 1080, H = sc.alto || 1920, FPS = 30;
@@ -26,7 +28,7 @@ fs.writeFileSync(path.join(__dirname, '.pagina.html'), html);
   const page = await browser.newPage({ viewport: { width: W, height: H } });
   page.on('console', m => { if (m.type() === 'error') console.log('PAGINA:', m.text()); }); page.on('pageerror', e => console.log('ERROR:', e.message));
   await page.goto('file://' + path.join(__dirname, '.pagina.html'));
-  await page.evaluate(async ([sc, paises, flags]) => { await document.fonts.load('80px Anton'); await document.fonts.load('700 40px Barlow'); await iniciar(sc, paises, flags); }, [sc, paises, flags]);
+  await page.evaluate(async ([sc, paises, flags, imgs]) => { await document.fonts.load('80px Anton'); await document.fonts.load('700 40px Barlow'); await iniciar(sc, paises, flags, imgs); }, [sc, paises, flags, imgs]);
   const shot = async t => { await page.evaluate(t => cuadro(t), t); return page.screenshot({ type: 'jpeg', quality: 90 }); };
   if (prev) { const pd = path.join(dir, 'preview'); fs.mkdirSync(pd, { recursive: true }); for (const t of prev) fs.writeFileSync(path.join(pd, `t${t}.jpg`), await shot(t)); console.log('preview en', pd); }
   else {
