@@ -1,0 +1,387 @@
+{
+ "salida": "P3-prueba-estadio",
+ "duracion": 27,
+ "ancho": 1920,
+ "alto": 1080,
+ "centro": [
+  -58,
+  -20
+ ],
+ "mar": "#0d2a4f",
+ "cielo": "#061630",
+ "entorno": "mundo",
+ "contexto": [
+  -130,
+  -60,
+  25,
+  40
+ ],
+ "paises": [
+  {
+   "adm": "BRA",
+   "iso": "br",
+   "alto": 3.4
+  },
+  {
+   "adm": "ARG",
+   "iso": "ar",
+   "alto": 3.4
+  },
+  {
+   "adm": "BOL",
+   "iso": "bo",
+   "alto": 2.2
+  },
+  {
+   "adm": "PRY",
+   "iso": "py",
+   "alto": 2.2
+  },
+  {
+   "adm": "URY",
+   "iso": "uy",
+   "alto": 2.2
+  },
+  {
+   "adm": "PER",
+   "iso": "pe",
+   "alto": 2.2
+  },
+  {
+   "adm": "COL",
+   "iso": "co",
+   "alto": 2.2
+  },
+  {
+   "adm": "VEN",
+   "iso": "ve",
+   "alto": 2.2
+  },
+  {
+   "adm": "GUY",
+   "iso": "gy",
+   "alto": 2.2
+  },
+  {
+   "adm": "SUR",
+   "iso": "sr",
+   "alto": 2.2
+  },
+  {
+   "adm": "ECU",
+   "iso": "ec",
+   "alto": 2.2
+  },
+  {
+   "adm": "CHL",
+   "iso": "cl",
+   "alto": 2.2
+  }
+ ],
+ "estadio": {
+  "t": 6.2,
+  "dur": 1.6
+ },
+ "camara": [
+  {
+   "t": 0,
+   "lon": -58,
+   "lat": -20,
+   "dist": 430,
+   "inclin": 30
+  },
+  {
+   "t": 3.0,
+   "lon": -58,
+   "lat": -20,
+   "dist": 430,
+   "inclin": 30
+  },
+  {
+   "t": 5.6,
+   "lon": -55,
+   "lat": -21,
+   "dist": 260,
+   "inclin": 40
+  },
+  {
+   "t": 8.0,
+   "lon": -58,
+   "lat": -22,
+   "dist": 700,
+   "inclin": 46
+  },
+  {
+   "t": 9.4,
+   "lon": -62,
+   "lat": -20,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 11.4,
+   "lon": -62,
+   "lat": -20,
+   "dist": 880,
+   "inclin": 52
+  },
+  {
+   "t": 12.6,
+   "lon": -58,
+   "lat": -4,
+   "dist": 560,
+   "inclin": 30
+  },
+  {
+   "t": 15.6,
+   "lon": -58,
+   "lat": -4,
+   "dist": 560,
+   "inclin": 30
+  },
+  {
+   "t": 16.6,
+   "lon": -54,
+   "lat": -20,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 19.0,
+   "lon": -54,
+   "lat": -20,
+   "dist": 880,
+   "inclin": 52
+  },
+  {
+   "t": 20.4,
+   "lon": -50,
+   "lat": -14,
+   "dist": 250,
+   "inclin": 46
+  },
+  {
+   "t": 23.6,
+   "lon": -50,
+   "lat": -14,
+   "dist": 260,
+   "inclin": 48
+  },
+  {
+   "t": 27,
+   "lon": -58,
+   "lat": -22,
+   "dist": 480,
+   "inclin": 36
+  }
+ ],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ]
+  ],
+  "ARG": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    9,
+    "duda"
+   ],
+   [
+    15.8,
+    "feliz"
+   ],
+   [
+    20.6,
+    "feliz"
+   ]
+  ],
+  "BRA": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    8.6,
+    "feliz"
+   ],
+   [
+    15.8,
+    "duda"
+   ],
+   [
+    20.6,
+    "shock"
+   ]
+  ]
+ },
+ "atenuar": [
+  {
+   "desde": 3.6,
+   "hasta": 99,
+   "paises": [
+    "ARG",
+    "BRA"
+   ]
+  }
+ ],
+ "elevar": [
+  {
+   "pais": "ARG",
+   "desde": 4.0,
+   "altura": 6
+  },
+  {
+   "pais": "BRA",
+   "desde": 4.2,
+   "altura": 6
+  }
+ ],
+ "goles": [
+  {
+   "t": 9.2,
+   "pais": "BRA",
+   "lado": -1,
+   "texto": "Brasil · 5 Mundiales"
+  },
+  {
+   "t": 16.4,
+   "pais": "ARG",
+   "lado": 1,
+   "texto": "Argentina · 16 Copas América"
+  }
+ ],
+ "tarjetas3d": [
+  {
+   "pais": "BRA",
+   "t": 21.0,
+   "color": "roja",
+   "hasta": 27
+  }
+ ],
+ "reloj": {
+  "desde": 7.6,
+  "hasta": 27,
+  "isoIzq": "ar",
+  "isoDer": "br",
+  "escala": 0.3
+ },
+ "pantalla": [
+  {
+   "desde": 12.4,
+   "hasta": 15.8,
+   "img": "../../fotos-reales/pele-1.jpg",
+   "texto": "Pelé · 3 Copas del Mundo"
+  }
+ ],
+ "capas": [
+  {
+   "tipo": "foto",
+   "desde": 0,
+   "hasta": 3.15,
+   "img": "../../fotos-reales/maradona-1.jpg",
+   "z0": 1.0,
+   "z1": 1.12,
+   "px": 0,
+   "credito": "Foto: Unknown authorUnknown author · Public domain",
+   "sinFundido": true
+  },
+  {
+   "tipo": "ficha",
+   "desde": 0.2,
+   "hasta": 3.0,
+   "kicker": "Goods Uncovered · Sudamérica",
+   "texto": "Argentina vs Brasil",
+   "sub": "10 rondas. Un solo ganador.",
+   "y": 800,
+   "tam": 96
+  },
+  {
+   "tipo": "barrido",
+   "desde": 2.8,
+   "hasta": 3.4
+  },
+  {
+   "tipo": "ficha",
+   "desde": 6.3,
+   "hasta": 8.3,
+   "kicker": "Empieza",
+   "texto": "El partido",
+   "sub": "Ronda 1 · Copas del Mundo",
+   "y": 800,
+   "tam": 90
+  },
+  {
+   "tipo": "marcador",
+   "desde": 8.4,
+   "hasta": 12.2,
+   "titulo": "Ronda 1 · Copas del Mundo",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 3,
+   "der": 5,
+   "y": 930,
+   "tam": 110
+  },
+  {
+   "tipo": "ficha",
+   "desde": 12.6,
+   "hasta": 15.6,
+   "kicker": "En la pantalla",
+   "texto": "Pelé",
+   "sub": "El único con 3 Copas del Mundo",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "marcador",
+   "desde": 15.7,
+   "hasta": 19.4,
+   "titulo": "Ronda 2 · Copa América",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 16,
+   "der": 9,
+   "y": 930,
+   "tam": 110
+  },
+  {
+   "tipo": "var",
+   "desde": 19.4,
+   "hasta": 21.0,
+   "texto": "Mundial 2026",
+   "veredicto": "Brasil: fuera en octavos",
+   "ok": false
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 21.2,
+   "hasta": 23.8,
+   "img": "../../fotos-reales/vinicius-1.jpg",
+   "lon": -47.9,
+   "lat": -15.8,
+   "x": 1450,
+   "y": 360,
+   "w": 520,
+   "texto": "Brasil cayó 2-1 con Noruega",
+   "credito": "Foto: Bryan Berlin · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "adelanto",
+   "desde": 23.9,
+   "hasta": 27,
+   "minuto": "45'",
+   "kicker": "En el entretiempo",
+   "texto": "El dato que nadie conoce",
+   "y": 900
+  }
+ ]
+}

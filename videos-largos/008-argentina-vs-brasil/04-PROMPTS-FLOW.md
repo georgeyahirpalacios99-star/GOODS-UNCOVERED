@@ -28,3 +28,16 @@ Smooth slow realistic camera movement, keep everything exactly as in the image, 
 | AB14 | RECUADRO | Cultura | Samba dancers with feathers in a night parade, out of focus, colorful lights. | Slow tracking shot along the parade. |
 | AB15 ⭐ | PRINCIPAL | Penales | A football on the penalty spot, a goalkeeper far away and out of focus, stadium lights, tension. | Very slow push-in to the ball. |
 | AB16 ⭐ | PRINCIPAL | Final | Iguazú-like giant waterfalls at sunrise with rainbow mist (border of both countries). | Drone rise revealing the falls. |
+
+## Tomas nuevas para los efectos del estadio (añadidas)
+| ID | Uso | Momento | Imagen | Movimiento |
+|---|---|---|---|---|
+| AB17 ⭐ | PANTALLA GIGANTE | Cada gol | A stadium stand seen from the pitch at night, thousands of fans in light blue and white jumping with arms up, smoke from flares, floodlights, faces too far to recognize. | Handheld camera shakes slightly, fans jump, smoke drifts. |
+| AB18 ⭐ | PANTALLA GIGANTE | Cada gol | A stadium stand at night with thousands of fans in yellow and green jumping, green and yellow flare smoke, confetti, faces too far to recognize. | Handheld camera shakes slightly, fans jump, confetti falls. |
+| AB19 | RECUADRO | VAR | Close-up of a pitch-side VAR monitor in a dark tunnel, the screen glowing with a blurred replay, a referee's hand from behind pointing at it. | Slow push-in to the glowing screen. |
+| AB20 | PRINCIPAL | Transición | Slow motion of a white and black football hitting the back of a goal net at night, the net stretching, raindrops flying. | Extreme slow motion, net ripples. |
+| AB21 | RECUADRO | Gol | Thousands of light blue and white paper confetti falling over a dark stadium under floodlights. | Confetti falls slowly toward the camera. |
+| AB22 | RECUADRO | Gol | Thousands of yellow and green paper confetti falling over a dark stadium under floodlights. | Confetti falls slowly toward the camera. |
+| AB23 | RECUADRO | Tarjeta | A referee's hand from behind raising a red card high under stadium lights, background blurred crowd. | The card rises into frame, slight slow motion. |
+| AB24 ⭐ | PRINCIPAL | Entretiempo | The tunnel of a stadium seen from inside, light at the end, sound of crowd implied, two rows of empty steps. | Slow dolly forward toward the light. |
+| AB25 | RECUADRO | Reloj | Close-up of a vintage stadium scoreboard clock with mechanical numbers at night, no brand. | The minute digit flips. |

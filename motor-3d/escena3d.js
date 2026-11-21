@@ -48,7 +48,7 @@ async function iniciar(sc, paises, flags, imgs) {
     P[p.adm] = { grp, mesh, cara, alto, p, haz, caraY: cara ? cara.position.y : 0, ring: p.polys.reduce((a, b) => (b[0].length > a[0].length ? b : a))[0], colores: [lado, new THREE.Color('#ffffff')], fc };
   }
   if (SC.estiloCara === 'ojos3d') for (const k of Object.keys(P)) { const o = P[k]; if (k.startsWith('_') || o.p.cara === false) continue; const m = new THREE.Box3().setFromObject(o.mesh), tam = o.p.tamCara || Math.min(26, Math.sqrt((m.max.x - m.min.x) * (m.max.z - m.min.z)) * .32); crearOjos3d(o, tam); }
-  entorno(paises);
+  entorno(paises); if (SC.estadio) estadio();
   for (const c of SC.columnas || []) { const o = P[c.pais]; if (!o) continue; const m = new THREE.Mesh(new THREE.CylinderGeometry(c.radio || 5, c.radio || 5, 1, 40), new THREE.MeshStandardMaterial({ color: c.color || '#ffd23f', metalness: .55, roughness: .25, emissive: c.color || '#ffd23f', emissiveIntensity: .12 })); m.castShadow = true; ESC.add(m); c._m = m; }
   OV = document.getElementById('ov'); OX = OV.getContext('2d');
 }
@@ -150,7 +150,9 @@ function cuadro(t) {
   for (const e of SC.elevar || []) { const o = P[e.pais]; if (!o || t < e.desde) continue; const q = eo(pr(t, e.desde, .8)) * (1 - eio(pr(t, e.hasta ?? 1e9, .8))); o.grp.position.y += q * (e.altura || 8); o.grp.rotation.z += Math.sin(t * 1.6 + hs(e.pais)) * .02 * q; }
   for (const k of Object.keys(P)) { if (k.startsWith('_')) continue; let f = 1; for (const a of SC.atenuar || []) { if (a.paises.includes(k)) continue; const q = pr(t, a.desde, .6) * (1 - pr(t, a.hasta, .6)); f = Math.min(f, 1 - .6 * q); } P[k].mesh.material[0].color.setScalar(f); P[k].mesh.material[1].color.multiplyScalar(1); }
   for (const c of SC.columnas || []) { if (!c._m) continue; const o = P[c.pais], q = eo(pr(t, c.desde, c.dur || 1.2)) * (1 - pr(t, c.hasta ?? 1e9, .4)), h = Math.max(.01, q * (c.alto || 40)); c._m.visible = t >= c.desde && q > .01; c._m.scale.y = h; c._m.position.set(o.grp.position.x + (c.dx || 0), o.alto * 1.3 + h / 2, o.grp.position.z + (c.dz || 0)); c._top = new THREE.Vector3(c._m.position.x, o.alto * 1.3 + h + 3, c._m.position.z); c._q = q; }
-  R.render(ESC, CAM); texto(t); capas2d(t);
+  if (SC.estadio) animaEstadio(t);
+  const varOn = (SC.capas || []).some(e => e.tipo === 'var' && t >= e.desde && t <= e.hasta); R.domElement.style.filter = varOn ? 'grayscale(1) contrast(1.15)' : 'none';
+  R.render(ESC, CAM); texto(t); capas2d(t); reloj(t);
 }
 
 // ---------- capas 2D encima del 3D (mismo lenguaje visual del video de Sinaloa) ----------
@@ -178,6 +180,10 @@ function capas2d(t) {
     else if (e.tipo === 'foto') { const im = IMGS[e.img]; if (im) { const q = pr(t, e.desde, e.hasta - e.desde), z = (e.z0 || 1.03) + ((e.z1 || 1.14) - (e.z0 || 1.03)) * q, s = Math.max(W / im.width, H / im.height) * z; OX.drawImage(im, (W - im.width * s) / 2 + (q - .5) * 60 * (e.px ?? 0), (H - im.height * s) / 2, im.width * s, im.height * s);
         const vg = OX.createRadialGradient(W / 2, H / 2, 300, W / 2, H / 2, 1300); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,.6)'); OX.fillStyle = vg; OX.fillRect(0, 0, W, H); OX.letterSpacing = '3px'; txt((e.credito || '').toUpperCase(), W - 40, H - 40, '700 20px Barlow', 'rgba(255,255,255,.7)', 'right'); } }
     else if (e.tipo === 'barrido') { const u = eio(pr(t, e.desde, e.hasta - e.desde)), x = lerp(-W * .6, W * 1.6, u), sk = 420; OX.globalAlpha = 1; OX.fillStyle = '#0a1218'; OX.beginPath(); OX.moveTo(x - W, 0); OX.lineTo(x + sk, 0); OX.lineTo(x, H); OX.lineTo(x - W - sk, H); OX.closePath(); OX.fill(); OX.fillStyle = ACC; OX.beginPath(); OX.moveTo(x + sk, 0); OX.lineTo(x + sk + 34, 0); OX.lineTo(x + 34, H); OX.lineTo(x, H); OX.closePath(); OX.fill(); }
+    else if (e.tipo === 'var') { OX.strokeStyle = 'rgba(255,255,255,.85)'; OX.lineWidth = 6; OX.strokeRect(60, 60, W - 120, H - 120); OX.fillStyle = 'rgba(255,255,255,.04)'; for (let y = 0; y < H; y += 6) OX.fillRect(0, y, W, 2);
+      rr(W / 2 - 230, 90, 460, 90, 10, '#0b0f14'); txt('VAR · ' + (e.texto || 'REVISIÓN').toUpperCase(), W / 2, 136, '52px Anton', '#fff', 'center'); OX.globalAlpha = a * (.5 + .5 * Math.sin(t * 8)); OX.fillStyle = '#e0262b'; OX.beginPath(); OX.arc(W / 2 - 200, 136, 12, 0, 7); OX.fill(); OX.globalAlpha = a;
+      if (e.veredicto && t > e.desde + (e.hasta - e.desde) * .55) { const k = eob(pr(t, e.desde + (e.hasta - e.desde) * .55, .4)); OX.save(); OX.translate(W / 2, H / 2 + 260); OX.scale(k, k); OX.font = '72px Anton'; const vw = OX.measureText(e.veredicto.toUpperCase()).width + 80; rr(-vw / 2, -60, vw, 120, 16, e.ok ? '#2a8f3c' : '#e0262b'); txt(e.veredicto.toUpperCase(), 0, 4, '72px Anton', '#fff', 'center'); OX.restore(); } }
+    else if (e.tipo === 'adelanto') { const k = eob(pr(t, e.desde, .5)); OX.translate(W / 2, e.y ?? 880); OX.scale(k, k); rr(-470, -70, 940, 140, 20, 'rgba(8,12,18,.93)'); rr(-470, -70, 160, 140, 20, '#ffd23f'); txt(e.minuto || "45'", -390, 4, '64px Anton', '#0b0f14', 'center'); OX.letterSpacing = '4px'; txt((e.kicker || 'MÁS ADELANTE').toUpperCase(), -280, -26, '700 26px Barlow', '#ffd23f'); OX.letterSpacing = '1px'; txt(e.texto || '', -280, 22, '46px Anton', '#fff'); }
     else if (e.tipo === 'columnaTexto') { const c = (SC.columnas || [])[e.col]; if (c && c._top && c._q > .05) { const [sx, sy] = aPantalla(c._top); txt(Math.round((e.valor || 0) * c._q) + (e.suf || ''), sx, sy - 30, '90px Anton', '#fff', 'center', '#0b0f14'); txt((e.texto || '').toUpperCase(), sx, sy + 26, '700 30px Barlow', ACC, 'center', '#0b0f14'); } }
     OX.restore(); }
 }
@@ -229,4 +235,81 @@ function animaEntorno(t) {
   for (const n of NUBES) { const x = n.x + t * n.v * 3, z = n.z; n.m.position.set(x, 55, z); n.sh.position.set(x + 20, .4, z + 12); }
   for (const b of BARCOS) { const d = t * b.v; b.b.position.set(b.x0 + Math.cos(b.ang) * d, .7 + Math.sin(t * 2 + b.ang) * .15, b.z0 + Math.sin(b.ang) * d); b.b.rotation.y = -b.ang; }
   for (const a of AVIONES) { a.a.position.set(a.x0 + t * a.v, a.y, a.z); }
+}
+
+// ---------- ESTADIO: el mar se vuelve cancha, gradas que reaccionan, arcos con red, balón, papelitos, humo y pantalla gigante ----------
+let EST = null;
+function canchaCanvas() {
+  const cv = document.createElement('canvas'); cv.width = cv.height = 4096; const g = cv.getContext('2d');
+  for (let i = 0; i < 40; i++) { g.fillStyle = i % 2 ? '#2f7a34' : '#378a3b'; g.fillRect(i * 4096 / 40, 0, 4096 / 40 + 1, 4096); }
+  for (let i = 0; i < 30000; i++) { g.fillStyle = `rgba(${hs('g' + i) > .5 ? '20,60,20' : '120,180,90'},.12)`; g.fillRect(hs('x' + i) * 4096, hs('y' + i) * 4096, 2, 7); }
+  const v = g.createRadialGradient(2048, 2048, 400, 2048, 2048, 2300); v.addColorStop(0, 'rgba(255,255,220,.10)'); v.addColorStop(1, 'rgba(0,0,0,.55)'); g.fillStyle = v; g.fillRect(0, 0, 4096, 4096);
+  g.strokeStyle = 'rgba(255,255,255,.9)'; g.lineWidth = 7; const cx = 2048, cy = 2048, L = 1150, A = 740; g.strokeRect(cx - L / 2, cy - A / 2, L, A); g.beginPath(); g.moveTo(cx, cy - A / 2); g.lineTo(cx, cy + A / 2); g.stroke(); g.beginPath(); g.arc(cx, cy, 130, 0, 7); g.stroke();
+  for (const s of [-1, 1]) { g.strokeRect(cx + s * L / 2 - (s > 0 ? 190 : 0), cy - 240, 190, 480); g.strokeRect(cx + s * L / 2 - (s > 0 ? 70 : 0), cy - 110, 70, 220); }
+  return cv;
+}
+function estadio() {
+  const R0 = 1400, u = 2 * R0 / 4096, L = 1150 * u, A = 740 * u; EST = { L, A, conf: [], humo: [], tarj: [] };
+  const tx = new THREE.CanvasTexture(canchaCanvas()); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+  EST.pl = new THREE.Mesh(new THREE.PlaneGeometry(2 * R0, 2 * R0), new THREE.MeshStandardMaterial({ map: tx, roughness: .95, transparent: true, opacity: 0 })); EST.pl.rotation.x = -Math.PI / 2; EST.pl.position.y = .09; EST.pl.receiveShadow = true; ESC.add(EST.pl);
+  // gradas
+  const gc = document.createElement('canvas'); gc.width = 4096; gc.height = 512; const q = gc.getContext('2d'); q.fillStyle = '#0c1118'; q.fillRect(0, 0, 4096, 512);
+  for (let i = 0; i < 30000; i++) { const y = hs('cy' + i) * 460 + 40, x = hs('cx' + i) * 4096, lado = x < 2048; q.fillStyle = (lado ? ['#74acdf', '#ffffff', '#74acdf', '#d9d9d9'] : ['#f7e35c', '#2a8f3c', '#f7e35c', '#1f5aa6'])[Math.floor(hs('cc' + i) * 4)]; q.globalAlpha = .5 + hs('ca' + i) * .5; q.fillRect(x, y, 4, 5); }
+  q.globalAlpha = 1; for (let i = 0; i < 24; i++) { const x = i * 4096 / 24 + 80; q.fillStyle = 'rgba(255,255,230,.95)'; q.shadowColor = '#fff'; q.shadowBlur = 30; q.fillRect(x, 6, 70, 18); q.shadowBlur = 0; }
+  const tg = new THREE.CanvasTexture(gc); tg.colorSpace = THREE.SRGBColorSpace; tg.wrapS = THREE.RepeatWrapping; tg.repeat.set(2, 1);
+  EST.ring = new THREE.Mesh(new THREE.CylinderGeometry(560, 470, 170, 90, 1, true), new THREE.MeshBasicMaterial({ map: tg, side: THREE.BackSide, transparent: true, opacity: 0 })); EST.ring.position.y = 70; ESC.add(EST.ring); EST.tg = tg;
+  // arcos con red
+  EST.arcos = {}; for (const lado of [-1, 1]) { const g = new THREE.Group(), blanco = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: .3 }), an = 96, al = 32, pr = 22;
+    for (const z of [-an / 2, an / 2]) { const p = new THREE.Mesh(new THREE.CylinderGeometry(1.6, 1.6, al, 10), blanco); p.position.set(0, al / 2, z); p.castShadow = true; g.add(p); }
+    const tra = new THREE.Mesh(new THREE.CylinderGeometry(1.6, 1.6, an, 10), blanco); tra.rotation.x = Math.PI / 2; tra.position.set(0, al, 0); g.add(tra);
+    const nc = document.createElement('canvas'); nc.width = nc.height = 256; const n = nc.getContext('2d'); n.strokeStyle = 'rgba(255,255,255,.8)'; n.lineWidth = 2; for (let i = 0; i <= 256; i += 16) { n.beginPath(); n.moveTo(i, 0); n.lineTo(i, 256); n.stroke(); n.beginPath(); n.moveTo(0, i); n.lineTo(256, i); n.stroke(); }
+    const nt = new THREE.CanvasTexture(nc); nt.wrapS = nt.wrapT = THREE.RepeatWrapping; nt.repeat.set(4, 2); const red = new THREE.Mesh(new THREE.PlaneGeometry(an, al), new THREE.MeshBasicMaterial({ map: nt, transparent: true, side: THREE.DoubleSide, depthWrite: false }));
+    red.rotation.y = Math.PI / 2; red.position.set(lado * pr, al / 2, 0); g.add(red); const top = new THREE.Mesh(new THREE.PlaneGeometry(pr, an), new THREE.MeshBasicMaterial({ map: nt, transparent: true, side: THREE.DoubleSide, depthWrite: false })); top.rotation.x = -Math.PI / 2; top.position.set(lado * pr / 2, al, 0); g.add(top);
+    g.position.set(lado * L / 2, 0, 0); g.visible = false; ESC.add(g); EST.arcos[lado] = { g, red }; }
+  // balón
+  const bc = document.createElement('canvas'); bc.width = 256; bc.height = 128; const b = bc.getContext('2d'); b.fillStyle = '#fff'; b.fillRect(0, 0, 256, 128); b.fillStyle = '#111'; for (let i = 0; i < 12; i++) { b.beginPath(); b.arc((i % 6) * 46 + 18 + (i > 5 ? 23 : 0), i > 5 ? 92 : 36, 13, 0, 7); b.fill(); }
+  const bt = new THREE.CanvasTexture(bc); bt.colorSpace = THREE.SRGBColorSpace; EST.balon = new THREE.Mesh(new THREE.SphereGeometry(7, 28, 18), new THREE.MeshStandardMaterial({ map: bt, roughness: .4 })); EST.balon.castShadow = true; EST.balon.visible = false; ESC.add(EST.balon);
+  // papelitos
+  for (let i = 0; i < 420; i++) { const m = new THREE.Mesh(new THREE.PlaneGeometry(3, 1.9), new THREE.MeshBasicMaterial({ color: '#ffffff', side: THREE.DoubleSide })); m.visible = false; ESC.add(m); EST.conf.push(m); }
+  // humo de bengalas
+  for (let i = 0; i < 26; i++) { const sc2 = document.createElement('canvas'); sc2.width = sc2.height = 128; const h = sc2.getContext('2d'), gr = h.createRadialGradient(64, 64, 0, 64, 64, 64); gr.addColorStop(0, 'rgba(255,255,255,.8)'); gr.addColorStop(1, 'rgba(255,255,255,0)'); h.fillStyle = gr; h.fillRect(0, 0, 128, 128);
+    const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(sc2), transparent: true, opacity: 0, depthWrite: false })); sp.scale.set(60, 60, 1); ESC.add(sp); EST.humo.push(sp); }
+  // pantalla gigante
+  const pc = document.createElement('canvas'); pc.width = 960; pc.height = 540; EST.pc = pc; EST.pt = new THREE.CanvasTexture(pc); EST.pt.colorSpace = THREE.SRGBColorSpace; const marco = new THREE.Mesh(new THREE.BoxGeometry(200, 117, 4), new THREE.MeshStandardMaterial({ color: '#111820' }));
+  EST.pant = new THREE.Group(); EST.pant.add(marco); const scr = new THREE.Mesh(new THREE.PlaneGeometry(188, 106), new THREE.MeshBasicMaterial({ map: EST.pt })); scr.position.z = 2.2; EST.pant.add(scr); EST.pant.position.set(0, 52, -150); EST.pant.lookAt(0, 30, 300); EST.pant.visible = false; ESC.add(EST.pant); EST.ultImg = null;
+  for (const c of SC.tarjetas3d || []) { const m = new THREE.Mesh(new THREE.BoxGeometry(18, .8, 26), new THREE.MeshStandardMaterial({ color: c.color === 'roja' ? '#e0262b' : '#ffd23f', roughness: .4 })); m.castShadow = true; m.visible = false; ESC.add(m); EST.tarj.push({ m, c }); }
+}
+function marcadorEn(t) { const s = { izq: 0, der: 0 }; for (const g of SC.goles || []) if (t >= g.t + 1.0) s[g.lado === 1 ? 'izq' : 'der']++; return s; }
+function animaEstadio(t) {
+  const E = SC.estadio, q = eio(pr(t, E.t, E.dur || 1.6)); EST.pl.material.opacity = q; EST.ring.material.opacity = q;
+  for (const k of Object.keys(P)) if (!k.startsWith('_') && P[k].p.neutro) { P[k].grp.position.y = -q * 8; P[k].grp.visible = q < .55; }
+  for (const n of NUBES) { n.m.visible = n.sh.visible = q < .5; } for (const b of BARCOS) b.b.visible = q < .3; for (const a of AVIONES) a.a.visible = q < .5;
+  if (q > .3 && !ESC.userData.estadioNiebla) { ESC.userData.estadioNiebla = true; ESC.userData.fijaNiebla = true; ESC.fog = new THREE.Fog('#0b1220', 700, 1900); ESC.background = new THREE.Color('#070b12'); }
+  for (const l of [-1, 1]) EST.arcos[l].g.visible = q > .6;
+  // gradas que saltan y hacen la ola
+  let fiesta = 0; for (const g of SC.goles || []) fiesta = Math.max(fiesta, cl(1 - (t - g.t - 1) / 3) * (t > g.t + 1 ? 1 : 0)); EST.ring.position.y = 70 + Math.abs(Math.sin(t * 11)) * 3 * fiesta + Math.sin(t * 2) * .4; EST.tg.offset.x = Math.sin(t * .3) * .01 + fiesta * Math.sin(t * 20) * .002;
+  // goles: el balón sale del país, vuela al arco y mueve la red
+  EST.balon.visible = false; for (const l of [-1, 1]) EST.arcos[l].red.scale.set(1, 1, 1);
+  for (const g of SC.goles || []) { const dt = t - g.t, o = P[g.pais]; if (!o) continue;
+    if (dt >= 0 && dt < 1.0) { const a = o.grp.position.clone().setY(o.alto * 1.5 + 4), b = new THREE.Vector3(-g.lado * EST.L / 2 - g.lado * 8, 8, 0), u = eio(dt / 1.0); EST.balon.visible = true; EST.balon.position.set(lerp(a.x, b.x, u), lerp(a.y, b.y, u) + Math.sin(u * Math.PI) * 60, lerp(a.z, b.z, u)); EST.balon.rotation.set(t * 14, t * 9, 0); o.grp.position.y += Math.max(0, Math.sin(dt * 8)) * 3; }
+    if (dt >= 1.0 && dt < 2.2) { const k = Math.exp(-(dt - 1) * 3) * Math.sin((dt - 1) * 18); EST.arcos[-g.lado].red.scale.set(1 + Math.abs(k) * .6, 1, 1); EST.balon.visible = dt < 1.6; EST.balon.position.set(-g.lado * (EST.L / 2 + 6), 4, 0); }
+    if (dt >= 1.0 && dt < 4.5) { const cols = g.lado === 1 ? ['#74acdf', '#ffffff', '#74acdf'] : ['#f7e35c', '#2a8f3c', '#1f5aa6']; EST.conf.forEach((m, i) => { const ex = dt - 1, x0 = (hs('cfx' + i) - .5) * 520, z0 = (hs('cfz' + i) - .5) * 360; m.visible = true; m.material.color.set(cols[i % 3]); m.position.set(x0 + Math.sin(ex * 3 + i) * 5, 95 - ex * (26 + hs('cv' + i) * 16), z0); m.rotation.set(ex * 5 + i, ex * 4, ex * 3); if (m.position.y < .5) m.position.y = .5; });
+      EST.humo.forEach((sp, i) => { const lado = i % 2 ? 1 : -1, ang = hs('ha' + i) * Math.PI * 2; sp.material.opacity = cl((dt - 1) / .5) * cl(1 - (dt - 3.2) / 1.3) * .5; sp.material.color.set(g.lado === 1 ? (i % 2 ? '#74acdf' : '#ffffff') : (i % 2 ? '#f7e35c' : '#2a8f3c')); sp.position.set(Math.cos(ang) * 470, 40 + (dt - 1) * 18 + i % 3 * 10, Math.sin(ang) * 400); sp.scale.setScalar(50 + (dt - 1) * 25); }); } }
+  if (!(SC.goles || []).some(g => t >= g.t + 1 && t < g.t + 4.5)) { EST.conf.forEach(m => m.visible = false); EST.humo.forEach(sp => sp.material.opacity = 0); }
+  // pantalla gigante
+  const pa = (SC.pantalla || []).find(e => t >= e.desde && t <= e.hasta); EST.pant.visible = !!pa && q > .9;
+  if (pa) { const im = IMGS[pa.img], c = EST.pc.getContext('2d'), k = pr(t, pa.desde, pa.hasta - pa.desde), z = 1.05 + .1 * k; if (im) { const s2 = Math.max(960 / im.width, 540 / im.height) * z; c.drawImage(im, (960 - im.width * s2) / 2, (540 - im.height * s2) / 2, im.width * s2, im.height * s2); }
+    c.fillStyle = 'rgba(0,0,0,.55)'; c.fillRect(0, 470, 960, 70); c.fillStyle = '#ffd23f'; c.font = '44px Anton'; c.textAlign = 'left'; c.fillText((pa.texto || '').toUpperCase(), 24, 522); for (let y = 0; y < 540; y += 4) { c.fillStyle = 'rgba(0,0,0,.08)'; c.fillRect(0, y, 960, 1); } EST.pt.needsUpdate = true; }
+  // tarjetas que caen
+  for (const { m, c } of EST.tarj) { const o = P[c.pais], dt = t - c.t; m.visible = !!o && dt > 0 && t < (c.hasta ?? 1e9); if (!m.visible) continue; const u = cl(dt / .9), top = o.grp.position.y + o.alto * 1.4 + .3; m.position.set(o.grp.position.x + 6, lerp(120, top, eob(u)), o.grp.position.z - 4); m.rotation.set(0, (1 - u) * 8, (1 - u) * 1.2 + .15); }
+}
+function reloj(t) { // marcador de TV con reloj de partido (00:00 → 90:00)
+  const r = SC.reloj; if (!r || t < r.desde) return; const a = cl((t - r.desde) / .4), min = (t - r.desde) / ((r.hasta || SC.duracion) - r.desde) * 90 * (r.escala || 1), mm = Math.floor(min), ss = Math.floor((min - mm) * 60), s = marcadorEn(t);
+  OX.save(); OX.globalAlpha = a; const x = 46, y = 40; rr(x, y, 430, 74, 12, 'rgba(8,12,18,.92)'); rr(x + 300, y, 130, 74, 12, '#ffd23f');
+  for (const [i, iso] of [[0, r.isoIzq], [1, r.isoDer]]) { const fl = FLAGIM[iso], fx = x + 22 + i * 150; if (fl) { OX.save(); OX.beginPath(); OX.roundRect(fx, y + 18, 52, 38, 6); OX.clip(); OX.drawImage(fl, fx, y + 18, 52, 38); OX.restore(); } }
+  const gol = (SC.goles || []).find(g => t >= g.t + 1 && t < g.t + 2.4), pulso = gol ? 1 + .25 * Math.abs(Math.sin((t - gol.t) * 12)) : 1;
+  OX.save(); OX.translate(x + 112, y + 39); OX.scale(pulso, pulso); txt(String(s.izq), 0, 0, '52px Anton', '#fff', 'center'); OX.restore(); txt('-', x + 150, y + 37, '40px Anton', 'rgba(255,255,255,.5)', 'center'); OX.save(); OX.translate(x + 248, y + 39); OX.scale(pulso, pulso); txt(String(s.der), 0, 0, '52px Anton', '#fff', 'center'); OX.restore();
+  txt(`${String(mm).padStart(2, '0')}:${String(ss).padStart(2, '0')}`, x + 365, y + 39, '40px Anton', '#0b0f14', 'center');
+  if (gol) { const k = pr(t, gol.t + 1, .3); OX.globalAlpha = a * cl(1 - pr(t, gol.t + 2.1, .3)); rr(x, y + 84, 430, 58, 10, gol.lado === 1 ? '#74acdf' : '#2a8f3c'); txt('¡GOL! ' + (gol.texto || '').toUpperCase(), x + 22 + (1 - k) * -40, y + 113, '700 30px Barlow', '#fff'); }
+  OX.restore();
 }
