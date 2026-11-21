@@ -40,13 +40,64 @@ async function iniciar(sc, paises, flags) {
     const [lx, lz] = W3(p.lx + (p.off ? p.off[0] : 0), p.ly + (p.off ? p.off[1] : 0)), grp = new THREE.Group(); grp.position.set(lx, 0, lz); mesh.position.set(-lx, 0, -lz); grp.add(mesh); ESC.add(grp);
     let cara = null; if (p.cara !== false) { const cc = document.createElement('canvas'); cc.width = cc.height = 256; const ct = new THREE.CanvasTexture(cc); ct.colorSpace = THREE.SRGBColorSpace;
       cara = new THREE.Sprite(new THREE.SpriteMaterial({ map: ct, depthTest: false })); const t = p.tamCara || Math.min(26, Math.sqrt(w * h) * .32); cara.scale.set(t, t, 1); cara.position.set(0, alto * 1.3 + t * .18, 0); cara.renderOrder = 5; grp.add(cara); cara.userData = { cc, ct }; }
-    P[p.adm] = { grp, mesh, cara, alto, p, ring: p.polys.reduce((a, b) => (b[0].length > a[0].length ? b : a))[0], colores: [lado, new THREE.Color('#ffffff')], fc };
+    if (cara && SC.estiloCara === 'ojos3d') { grp.remove(cara); cara = null; }
+    if (cara && SC.estiloCara === 'marca') { cara.scale.multiplyScalar(1.45); cara.position.y *= 1.2; }
+    let haz = null; if (cara && SC.estiloCara === 'holo') { const tt = cara.scale.x; cara.position.y += tt * .35; haz = new THREE.Mesh(new THREE.ConeGeometry(tt * .32, cara.position.y, 24, 1, true), new THREE.MeshBasicMaterial({ color: '#5ef2ff', transparent: true, opacity: .2, blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide })); haz.position.y = cara.position.y / 2; grp.add(haz); }
+    P[p.adm] = { grp, mesh, cara, alto, p, haz, caraY: cara ? cara.position.y : 0, ring: p.polys.reduce((a, b) => (b[0].length > a[0].length ? b : a))[0], colores: [lado, new THREE.Color('#ffffff')], fc };
   }
+  if (SC.estiloCara === 'ojos3d') for (const k of Object.keys(P)) { const o = P[k]; if (k.startsWith('_') || o.p.cara === false) continue; const m = new THREE.Box3().setFromObject(o.mesh), tam = o.p.tamCara || Math.min(26, Math.sqrt((m.max.x - m.min.x) * (m.max.z - m.min.z)) * .32); crearOjos3d(o, tam); }
   OV = document.getElementById('ov'); OX = OV.getContext('2d');
 }
+function ojos3d(k, t) {
+  const o = P[k], ex = expr(k, t), blink = ((t + hs(k) * 9) % (3.3 + hs(k + 'b') * 2)) < .12 && ex === 'normal', { ojos, boca, r } = o.ojos;
+  const prot = SC.desaparece && P[SC.desaparece.pais]; const objetivo = (prot && k !== SC.desaparece.pais) ? prot.grp.position.clone() : CAM.position.clone();
+  for (const e of ojos) { const wp = new THREE.Vector3(); e.globo.getWorldPosition(wp); const hacia = CAM.position.clone().sub(wp).normalize().multiplyScalar(.7).add(objetivo.clone().sub(wp).setY(0).normalize().multiplyScalar(.45)).normalize();
+    e.pupila.position.copy(hacia.multiplyScalar(r * .82)); const sy = blink ? .12 : ex === 'shock' ? 1.25 : ex === 'duda' ? .55 : 1; e.grupo.scale.set(ex === 'shock' ? 1.2 : 1, sy, ex === 'shock' ? 1.2 : 1);
+    e.parpado.visible = ex === 'duda'; }
+  boca.scale.set(ex === 'shock' ? 1 : 1.6, ex === 'shock' ? 1.5 : ex === 'feliz' ? .9 : .35, 1); boca.position.y = o.ojos.by + (ex === 'feliz' ? -.2 : 0);
+}
+function crearOjos3d(o, tam) {
+  const r = tam * .16, blanco = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: .15, metalness: 0 }), negro = new THREE.MeshStandardMaterial({ color: '#0b0f14', roughness: .3 }), piel = new THREE.MeshStandardMaterial({ color: '#0b0f14', roughness: .5 });
+  const raiz = new THREE.Group(); raiz.position.set(0, o.alto * 1.25 + r * .9, 0); o.grp.add(raiz); const ojos = [];
+  for (const sx of [-1, 1]) { const grupo = new THREE.Group(); grupo.position.set(sx * r * 1.15, 0, 0); const globo = new THREE.Mesh(new THREE.SphereGeometry(r, 32, 20), blanco); globo.castShadow = true;
+    const pupila = new THREE.Mesh(new THREE.SphereGeometry(r * .42, 20, 14), negro); globo.add(pupila); const parpado = new THREE.Mesh(new THREE.SphereGeometry(r * 1.03, 24, 12, 0, Math.PI * 2, 0, Math.PI / 2), piel); parpado.visible = false; grupo.add(globo); grupo.add(parpado); raiz.add(grupo); ojos.push({ grupo, globo, pupila, parpado }); }
+  const boca = new THREE.Mesh(new THREE.SphereGeometry(r * .35, 20, 12), negro); boca.position.set(0, -r * 1.25, r * .4); raiz.add(boca);
+  o.ojos = { ojos, boca, r, by: -r * 1.25 };
+}
 function expr(adm, t) { const l = (SC.caras || {})[adm] || (SC.caras || {})['*'] || [[0, 'normal']]; let e = 'normal'; for (const [a, x] of l) if (t >= a) e = x; return e; }
+function caraHolo(c, ex, t, k, mira) {
+  const blink = ((t + hs(k) * 9) % (3.3 + hs(k + 'b') * 2)) < .12 && ex === 'normal', C = '#5ef2ff', px = 13;
+  c.save(); c.shadowColor = 'rgba(94,242,255,.9)'; c.shadowBlur = 18; c.fillStyle = 'rgba(6,14,24,.92)'; c.strokeStyle = C; c.lineWidth = 6; c.beginPath(); c.roundRect(18, 52, 220, 150, 26); c.fill(); c.stroke(); c.restore();
+  const cel = (x, y) => { c.fillRect(x * px, y * px, px - 2, px - 2); }; c.fillStyle = C; c.shadowColor = C; c.shadowBlur = 10; const ox = Math.round(mira[0] * 1.4), oy = Math.round(mira[1] * 1.2);
+  const ojo = (cx) => { const X = cx + ox, Y = 8 + oy;
+    if (blink) { for (let i = -1; i <= 1; i++) cel(X + i, Y + 1); return; }
+    if (ex === 'feliz') { cel(X - 1, Y + 1); cel(X, Y); cel(X + 1, Y + 1); return; }
+    if (ex === 'shock') { for (const [i, j] of [[-1, -1], [0, -1], [1, -1], [-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1], [-1, 2], [0, 2], [1, 2]]) cel(X + i, Y + j - 1); return; }
+    if (ex === 'duda' && cx > 9) { for (let i = -1; i <= 1; i++) cel(X + i, Y); return; }
+    for (const [i, j] of [[0, 0], [0, 1], [-1, 0], [-1, 1]]) cel(X + i, Y + j); };
+  ojo(7); ojo(12);
+  if (ex === 'shock') { for (const [i, j] of [[0, 0], [1, 0], [0, 1], [1, 1]]) cel(9 + i, 12 + j); } else if (ex === 'feliz') { for (let i = 0; i < 5; i++) cel(7 + i + .5, 12 + (i === 0 || i === 4 ? 0 : 1)); } else { for (let i = 0; i < 4; i++) cel(8 + i, 13); }
+  c.shadowBlur = 0; c.fillStyle = 'rgba(94,242,255,.08)'; for (let y = 56; y < 200; y += 6) c.fillRect(22, y, 212, 2);
+}
+function caraMarca(c, ex, t, k, mira) {
+  const blink = ((t + hs(k) * 9) % (3.3 + hs(k + 'b') * 2)) < .12 && ex === 'normal', Y = '#ffd23f', INK = '#0b0f14', mx = mira[0] * 12, my = mira[1] * 10;
+  c.lineJoin = 'round'; c.lineCap = 'round';
+  const capsula = (x) => { c.save(); c.translate(x + mx, 112 + my); c.shadowColor = 'rgba(0,0,0,.45)'; c.shadowBlur = 12; c.fillStyle = Y; c.strokeStyle = INK; c.lineWidth = 10;
+    if (blink) { c.beginPath(); c.moveTo(-26, 0); c.lineTo(26, 0); c.lineWidth = 16; c.strokeStyle = INK; c.stroke(); c.lineWidth = 9; c.strokeStyle = Y; c.stroke(); }
+    else if (ex === 'feliz') { c.beginPath(); c.arc(0, 14, 28, 1.05 * Math.PI, 1.95 * Math.PI); c.lineWidth = 26; c.strokeStyle = INK; c.stroke(); c.lineWidth = 15; c.strokeStyle = Y; c.stroke(); }
+    else if (ex === 'shock') { c.beginPath(); c.arc(0, -6, 38, 0, 7); c.fill(); c.stroke(); c.fillStyle = INK; c.beginPath(); c.arc(0, -6, 9, 0, 7); c.fill(); }
+    else if (ex === 'duda' && x > 128) { c.beginPath(); c.roundRect(-30, -9, 60, 18, 9); c.fill(); c.stroke(); }
+    else { c.beginPath(); c.roundRect(-22, -42, 44, 84, 22); c.fill(); c.stroke(); }
+    c.restore(); };
+  capsula(84); capsula(172); c.strokeStyle = INK; c.lineWidth = 10; c.fillStyle = INK;
+  if (ex === 'shock') { c.beginPath(); c.ellipse(128 + mx * .5, 200, 16, 20, 0, 0, 7); c.fill(); }
+  else if (ex === 'feliz') { c.beginPath(); c.arc(128 + mx * .5, 182, 22, .15 * Math.PI, .85 * Math.PI); c.stroke(); }
+  else { c.beginPath(); c.moveTo(112 + mx * .5, 196); c.lineTo(144 + mx * .5, 196); c.stroke(); }
+}
 function dibujaCara(k, t, mira) {
-  const o = P[k]; if (!o.cara) return; const { cc, ct } = o.cara.userData, c = cc.getContext('2d'), ex = expr(k, t); c.clearRect(0, 0, 256, 256);
+  const o = P[k]; if (o.ojos) return ojos3d(k, t); if (!o.cara) return;
+  if (SC.estiloCara === 'holo' || SC.estiloCara === 'marca') { const { cc, ct } = o.cara.userData, c = cc.getContext('2d'); c.clearRect(0, 0, 256, 256); (SC.estiloCara === 'holo' ? caraHolo : caraMarca)(c, expr(k, t), t, k, mira); ct.needsUpdate = true;
+    if (o.haz) { o.haz.material.opacity = .18 + .06 * Math.sin(t * 6 + hs(k) * 9); } o.cara.position.y = o.caraY + Math.sin(t * 2.4 + hs(k) * 7) * .6; return; } const { cc, ct } = o.cara.userData, c = cc.getContext('2d'), ex = expr(k, t); c.clearRect(0, 0, 256, 256);
   const parp = ((t + hs(k) * 9) % (3.3 + hs(k + 'b') * 2)) < .12 && ex === 'normal', ojo = (x) => { c.fillStyle = '#fff'; c.strokeStyle = '#15191e'; c.lineWidth = 9; c.beginPath(); c.ellipse(x, 104, ex === 'shock' ? 40 : 34, parp ? 5 : (ex === 'shock' ? 50 : 42), 0, 0, 7); c.fill(); c.stroke();
     if (!parp) { c.fillStyle = '#15191e'; c.beginPath(); c.arc(x + mira[0] * 14, 108 + mira[1] * 14, ex === 'shock' ? 12 : 17, 0, 7); c.fill(); c.fillStyle = '#fff'; c.beginPath(); c.arc(x + mira[0] * 14 - 6, 100 + mira[1] * 14, 5, 0, 7); c.fill(); } };
   c.shadowColor = 'rgba(0,0,0,.35)'; c.shadowBlur = 10; ojo(86); ojo(170); c.shadowBlur = 0; c.strokeStyle = '#15191e'; c.lineWidth = 9; c.lineCap = 'round';
