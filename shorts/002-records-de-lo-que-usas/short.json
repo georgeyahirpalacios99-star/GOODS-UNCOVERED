@@ -1,0 +1,24 @@
+{
+  "salida": "002-records-de-lo-que-usas",
+  "volumen_musica": 0.12,
+  "items": [
+    { "imagen": "01", "etiqueta": "La droga más consumida del mundo", "respuesta": "la cafeína",
+      "narracion": "La droga más consumida del mundo es la cafeína." },
+    { "imagen": "02", "etiqueta": "La tela más usada del mundo", "respuesta": "el poliéster",
+      "narracion": "La tela más usada del mundo no es el algodón, es el poliéster." },
+    { "imagen": "03", "etiqueta": "La segunda especia más cara del mundo", "respuesta": "la vainilla",
+      "narracion": "La segunda especia más cara del mundo es la vainilla." },
+    { "imagen": "04", "etiqueta": "El cereal que más se produce", "respuesta": "el maíz",
+      "narracion": "El cereal que más se produce en el mundo es el maíz." },
+    { "imagen": "05", "etiqueta": "El país que más cacao produce", "respuesta": "Costa de Marfil",
+      "narracion": "El país que más cacao produce es Costa de Marfil." },
+    { "imagen": "06", "etiqueta": "El metal que más se produce", "respuesta": "el hierro",
+      "narracion": "El metal que más se produce en el mundo es el hierro." },
+    { "imagen": "07", "etiqueta": "El país que más café produce", "respuesta": "Brasil",
+      "narracion": "El país que más café produce es Brasil." },
+    { "imagen": "08", "etiqueta": "Lo que más usamos después del agua", "respuesta": "el concreto",
+      "narracion": "El material que más usamos después del agua es el concreto." }
+  ],
+  "cierre": { "imagen": "09", "etiqueta": "Síguenos",
+    "narracion": "Síguenos para saber lo que nadie te cuenta de lo que compras." }
+}

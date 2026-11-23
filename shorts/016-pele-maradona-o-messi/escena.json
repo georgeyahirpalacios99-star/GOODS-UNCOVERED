@@ -1,0 +1,460 @@
+{
+ "salida": "pele-maradona-o-messi",
+ "duracion": 42.9,
+ "ancho": 1080,
+ "alto": 1920,
+ "centro": [
+  -58,
+  -20
+ ],
+ "mar": "#0d2a4f",
+ "cielo": "#061630",
+ "entorno": "mundo",
+ "contexto": [
+  -130,
+  -60,
+  25,
+  40
+ ],
+ "calidad3d": 0.9,
+ "sombra": 1536,
+ "paises": [
+  {
+   "adm": "BRA",
+   "iso": "br",
+   "alto": 3.4
+  },
+  {
+   "adm": "ARG",
+   "iso": "ar",
+   "alto": 3.4
+  },
+  {
+   "adm": "BOL",
+   "iso": "bo",
+   "alto": 2.2
+  },
+  {
+   "adm": "PRY",
+   "iso": "py",
+   "alto": 2.2
+  },
+  {
+   "adm": "URY",
+   "iso": "uy",
+   "alto": 2.2
+  },
+  {
+   "adm": "PER",
+   "iso": "pe",
+   "alto": 2.2
+  },
+  {
+   "adm": "COL",
+   "iso": "co",
+   "alto": 2.2
+  },
+  {
+   "adm": "VEN",
+   "iso": "ve",
+   "alto": 2.2
+  },
+  {
+   "adm": "GUY",
+   "iso": "gy",
+   "alto": 2.2
+  },
+  {
+   "adm": "SUR",
+   "iso": "sr",
+   "alto": 2.2
+  },
+  {
+   "adm": "ECU",
+   "iso": "ec",
+   "alto": 2.2
+  },
+  {
+   "adm": "CHL",
+   "iso": "cl",
+   "alto": 2.2
+  }
+ ],
+ "estadio": {
+  "t": -169.29,
+  "dur": 1.6
+ },
+ "camara": [
+  {
+   "t": -27.35,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": -26.35,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": -8.47,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": -7.47,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": -5.16,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": -4.66,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": -1.68,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": -0.68,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 33.02,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 34.02,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 50.16,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 51.16,
+   "lon": -58,
+   "lat": -5,
+   "dist": 560,
+   "inclin": 30
+  }
+ ],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ]
+  ],
+  "ARG": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    98.39,
+    "duda"
+   ],
+   [
+    133.35,
+    "feliz"
+   ],
+   [
+    174.19,
+    "feliz"
+   ],
+   [
+    218.49,
+    "feliz"
+   ],
+   [
+    304.24,
+    "feliz"
+   ],
+   [
+    351.98,
+    "duda"
+   ],
+   [
+    374.59,
+    "duda"
+   ],
+   [
+    407.83,
+    "duda"
+   ],
+   [
+    448.08,
+    "duda"
+   ],
+   [
+    480.1,
+    "feliz"
+   ]
+  ],
+  "BRA": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    98.39,
+    "feliz"
+   ],
+   [
+    133.35,
+    "duda"
+   ],
+   [
+    174.19,
+    "duda"
+   ],
+   [
+    218.49,
+    "duda"
+   ],
+   [
+    304.24,
+    "duda"
+   ],
+   [
+    351.98,
+    "feliz"
+   ],
+   [
+    374.59,
+    "feliz"
+   ],
+   [
+    407.83,
+    "feliz"
+   ],
+   [
+    448.08,
+    "feliz"
+   ],
+   [
+    480.1,
+    "duda"
+   ]
+  ]
+ },
+ "atenuar": [
+  {
+   "desde": -218.75,
+   "hasta": 9999,
+   "paises": [
+    "ARG",
+    "BRA"
+   ]
+  }
+ ],
+ "elevar": [
+  {
+   "pais": "ARG",
+   "desde": -218.25,
+   "altura": 6
+  },
+  {
+   "pais": "BRA",
+   "desde": -218.05,
+   "altura": 6
+  }
+ ],
+ "goles": [
+  {
+   "t": -124.86,
+   "pais": "BRA",
+   "lado": -1,
+   "texto": "Brasil · 5 Mundiales"
+  },
+  {
+   "t": -89.9,
+   "pais": "ARG",
+   "lado": 1,
+   "texto": "Argentina · 16 Copas América"
+  },
+  {
+   "t": -49.06,
+   "pais": "ARG",
+   "lado": 1,
+   "texto": "Argentina · 43 a 42"
+  },
+  {
+   "t": -4.76,
+   "pais": "ARG",
+   "lado": 1,
+   "texto": "Argentina · finalista 2026"
+  }
+ ],
+ "tarjetas3d": [],
+ "pantalla": [],
+ "reloj": {
+  "desde": -168.89,
+  "hasta": 261.25,
+  "isoIzq": "ar",
+  "isoDer": "br"
+ },
+ "capas": [
+  {
+   "tipo": "titular",
+   "desde": 0,
+   "hasta": 5.9,
+   "texto": "¿Quién es el mejor\nde la historia?",
+   "y": 560,
+   "tam": 118
+  },
+  {
+   "tipo": "var",
+   "desde": 0,
+   "hasta": 5.65,
+   "texto": "El mejor de la historia",
+   "yEt": 200
+  },
+  {
+   "tipo": "foto",
+   "desde": 5.9,
+   "hasta": 13.7,
+   "img": "../../videos-largos/008-argentina-vs-brasil/fotos-reales/pele-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: AFP · Public domain",
+   "fy": 0
+  },
+  {
+   "tipo": "ficha",
+   "desde": 6.1,
+   "hasta": 13.6,
+   "kicker": "Brasil",
+   "texto": "Pelé · El Rey",
+   "sub": "3 Copas del Mundo · más de mil goles",
+   "y": 1380,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 13.7,
+   "hasta": 23.29,
+   "img": "../../videos-largos/008-argentina-vs-brasil/fotos-reales/maradona-inglaterra-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Dani Yako · Public domain"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 13.9,
+   "hasta": 23.19,
+   "kicker": "México 1986 · contra Inglaterra",
+   "texto": "Maradona",
+   "sub": "La mano de Dios",
+   "y": 1380,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 23.29,
+   "hasta": 26.05,
+   "img": "../../videos-largos/008-argentina-vs-brasil/fotos-reales/maradona-inglaterra-2.jpg",
+   "z0": 1.0,
+   "z1": 1.08,
+   "px": 0,
+   "credito": "Foto: Dani Yako · Public domain"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 23.49,
+   "hasta": 25.95,
+   "kicker": "El mismo partido",
+   "texto": "El gol del siglo",
+   "sub": "",
+   "y": 1380,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 26.05,
+   "hasta": 33.22,
+   "img": "../../videos-largos/008-argentina-vs-brasil/fotos-reales/messi-2026-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 1,
+   "credito": "Foto: Bryan Berlin · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 26.25,
+   "hasta": 33.12,
+   "kicker": "Argentina",
+   "texto": "Messi",
+   "sub": "8 Balones de Oro · mejor jugador de Catar 2022",
+   "y": 1380,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 32.87,
+   "hasta": 33.52
+  },
+  {
+   "tipo": "var",
+   "desde": 33.22,
+   "hasta": 42.9,
+   "texto": "Pelé, Maradona o Messi",
+   "veredicto": "Comenta: ¿cuál?",
+   "ok": true,
+   "yEt": 200
+  },
+  {
+   "tipo": "ficha",
+   "desde": 42.22,
+   "hasta": 42.9,
+   "kicker": "Minuto 45'",
+   "texto": "Entretiempo",
+   "sub": "Argentina 3 - 1 Brasil",
+   "y": 1380,
+   "tam": 96
+  },
+  {
+   "tipo": "titular",
+   "desde": 36.7,
+   "hasta": 42.9,
+   "texto": "Pelé · Maradona\no Messi",
+   "y": 560,
+   "tam": 112
+  }
+ ],
+ "audio": ".tmp/voz.wav"
+}

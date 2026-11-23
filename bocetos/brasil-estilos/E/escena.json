@@ -1,0 +1,196 @@
+{
+ "salida": "E-3D-real",
+ "duracion": 8,
+ "centro": [
+  -60,
+  -17
+ ],
+ "paises": [
+  {
+   "adm": "BRA",
+   "iso": "br",
+   "alto": 3.2,
+   "cara": true
+  },
+  {
+   "adm": "ARG",
+   "iso": "ar",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "BOL",
+   "iso": "bo",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "PRY",
+   "iso": "py",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "URY",
+   "iso": "uy",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "PER",
+   "iso": "pe",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "COL",
+   "iso": "co",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "VEN",
+   "iso": "ve",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "GUY",
+   "iso": "gy",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "SUR",
+   "iso": "sr",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "ECU",
+   "iso": "ec",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "CHL",
+   "iso": "cl",
+   "alto": 2.4,
+   "cara": true
+  },
+  {
+   "adm": "PAN",
+   "iso": "pa",
+   "alto": 2.4,
+   "cara": false
+  },
+  {
+   "adm": "CRI",
+   "iso": "cr",
+   "alto": 2.4,
+   "cara": false
+  },
+  {
+   "adm": "NIC",
+   "iso": "ni",
+   "alto": 2.4,
+   "cara": false
+  },
+  {
+   "adm": "HND",
+   "iso": "hn",
+   "alto": 2.4,
+   "cara": false
+  }
+ ],
+ "camara": [
+  {
+   "t": 0,
+   "lon": -60,
+   "lat": -18,
+   "dist": 520,
+   "inclin": 8
+  },
+  {
+   "t": 2.2,
+   "lon": -57,
+   "lat": -17,
+   "dist": 330,
+   "inclin": 34
+  },
+  {
+   "t": 5.2,
+   "lon": -58,
+   "lat": -17,
+   "dist": 300,
+   "inclin": 40
+  },
+  {
+   "t": 8,
+   "lon": -60,
+   "lat": -20,
+   "dist": 360,
+   "inclin": 36
+  }
+ ],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    4.8,
+    "shock"
+   ]
+  ],
+  "BRA": [
+   [
+    0,
+    "feliz"
+   ],
+   [
+    2.6,
+    "duda"
+   ],
+   [
+    3.4,
+    "shock"
+   ]
+  ]
+ },
+ "desaparece": {
+  "pais": "BRA",
+  "t": 4.2
+ },
+ "textos": [
+  {
+   "tipo": "titulo",
+   "desde": 0.1,
+   "hasta": 2.4,
+   "texto": "¿Y SI *BRASIL*\nDESAPARECE?",
+   "y": 300,
+   "tam": 120
+  },
+  {
+   "tipo": "cifra",
+   "desde": 2.5,
+   "hasta": 4.1000000000000005,
+   "num": [
+    0,
+    8515767
+   ],
+   "suf": " km²",
+   "y": 300,
+   "tam": 120,
+   "sub": "el 47 % de Sudamérica"
+  },
+  {
+   "tipo": "pregunta",
+   "desde": 6.4,
+   "hasta": 8,
+   "texto": "¿QUIÉN GANA MÁS? 👇",
+   "y": 1600
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+Clips de George (Flow / Veo), zip "nov 16 - 21_52.zip", 4 s cada uno
+M01 Camera_descends_over_cargo_ships
+M02 Ship_descending_in_canal_lock
+M03 Camera_descending_over_cracked_mud
+M04 Camera_pushing_toward_gauge_post
+M07 Crane_lowers_container_onto_train (se ve la pared de contenedores desde un bote: sirve como M07)
+M08 Trains_moving_on_parallel_tracks
+Faltan: M05 (tren cruzando el istmo), M06, C01 y C02, y la voz.

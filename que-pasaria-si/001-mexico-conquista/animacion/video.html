@@ -1,0 +1,296 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Mexico what-if</title>
+<style>html,body{margin:0;background:#000}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+const W = 1080, H = 1920, FPS = 30;
+const C = document.getElementById('c'), M = C.getContext('2d');
+const L = document.createElement('canvas'); L.width = W; L.height = H;
+const ctx = L.getContext('2d');
+
+const RED = '#d0142c', BLUE = '#1f5fbf', BROWN = '#5a3420';
+const SANS = 'Inter', SERIF = '"Liberation Serif"';
+
+const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const eo = x => 1 - Math.pow(1 - clamp(x), 3);
+const eio = x => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+const back = x => { x = clamp(x); const c1 = 1.7, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const pr = (t, a, d) => clamp((t - a) / d);
+function rng(seed) { return () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+
+// ---------- grain ----------
+const grains = [0, 1, 2, 3].map(i => {
+  const g = document.createElement('canvas'); g.width = 360; g.height = 640;
+  const gx = g.getContext('2d'), im = gx.createImageData(360, 640), r = rng(i + 7);
+  for (let p = 0; p < im.data.length; p += 4) { const v = r() * 255; im.data[p] = im.data[p + 1] = im.data[p + 2] = v; im.data[p + 3] = 255; }
+  gx.putImageData(im, 0, 0); return g;
+});
+
+// ---------- text ----------
+// seg(text, family, weight, size, color, italic)
+const S = (text, size, o = {}) => ({ text, size, fam: o.fam || SANS, w: o.w || 700, color: o.color || null, it: o.it || false });
+const fontOf = s => `${s.it ? 'italic ' : ''}${s.w} ${s.size}px ${s.fam}`;
+
+function line(t, segs, y, at, o = {}) {
+  const stagger = o.stagger ?? 0.09, dur = o.dur ?? 0.5, anim = o.anim || 'up';
+  const base = o.color || '#fff', shadow = o.shadow || false;
+  const words = [];
+  segs.forEach(s => s.text.split(' ').filter(Boolean).forEach(w => words.push({ w, s })));
+  let total = 0;
+  words.forEach((wd, i) => {
+    ctx.font = fontOf(wd.s); wd.width = ctx.measureText(wd.w).width;
+    wd.gap = i < words.length - 1 ? ctx.measureText(' ').width : 0; total += wd.width + wd.gap;
+  });
+  let x = (o.x ?? W / 2) - total / 2;
+  words.forEach((wd, i) => {
+    const p = eo(pr(t, at + i * stagger, dur));
+    if (p > 0) {
+      ctx.save();
+      ctx.font = fontOf(wd.s); ctx.fillStyle = wd.s.color || base; ctx.textBaseline = 'alphabetic';
+      ctx.globalAlpha = p * (o.alpha ?? 1);
+      const blur = (1 - p) * (anim === 'scale' ? 18 : 10);
+      if (blur > .3) ctx.filter = `blur(${blur}px)`;
+      if (shadow) { ctx.shadowColor = 'rgba(0,0,0,.28)'; ctx.shadowBlur = 40; ctx.shadowOffsetY = 22; }
+      if (anim === 'scale') {
+        const sc = 1 + (1 - p) * .45, cx = x + wd.width / 2;
+        ctx.translate(cx, y); ctx.scale(sc, sc); ctx.fillText(wd.w, -wd.width / 2, 0);
+      } else ctx.fillText(wd.w, x, y + (1 - p) * 46);
+      ctx.restore();
+    }
+    x += wd.width + wd.gap;
+  });
+  return total;
+}
+
+function underline(t, y, w, at, color = RED, thick = 14, cx = W / 2) {
+  const p = eio(pr(t, at, .45)); if (p <= 0) return;
+  ctx.save(); ctx.strokeStyle = color; ctx.lineWidth = thick; ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.moveTo(cx - w / 2, y); ctx.quadraticCurveTo(cx, y + 10, cx - w / 2 + w * p, y - 4); ctx.stroke(); ctx.restore();
+}
+
+// ---------- paths ----------
+function drawPolys(polys, p, style) {
+  const lens = polys.map(pl => { let l = 0; for (let i = 1; i < pl.length; i++) l += Math.hypot(pl[i][0] - pl[i - 1][0], pl[i][1] - pl[i - 1][1]); return l; });
+  let left = p * lens.reduce((a, b) => a + b, 0);
+  ctx.save(); Object.assign(ctx, { lineCap: 'round', lineJoin: 'round' }, style);
+  polys.forEach(pl => {
+    if (left <= 0) return; ctx.beginPath(); ctx.moveTo(...pl[0]);
+    for (let i = 1; i < pl.length && left > 0; i++) {
+      const [ax, ay] = pl[i - 1], [bx, by] = pl[i], sl = Math.hypot(bx - ax, by - ay);
+      if (sl <= left) { ctx.lineTo(bx, by); left -= sl; } else { const f = left / sl; ctx.lineTo(ax + (bx - ax) * f, ay + (by - ay) * f); left = 0; }
+    }
+    ctx.stroke();
+  });
+  ctx.restore();
+}
+
+function templo(cx, by, s) {
+  const P = (x, y) => [cx + x * s, by + y * s];
+  const steps = [P(-300, 0)]; let x = -300, y = 0;
+  for (let i = 0; i < 4; i++) { y -= 70; steps.push(P(x, y)); x += 45; steps.push(P(x, y)); }
+  steps.push(P(-x, y)); x = -x;
+  for (let i = 0; i < 4; i++) { x += 45; steps.push(P(x, y)); y += 70; steps.push(P(x, y)); }
+  steps.push(P(-300, 0));
+  const top = -280;
+  const temple = (l, r) => [P(l, top), P(l, top - 95), P(l - 12, top - 95), P((l + r) / 2, top - 150), P(r + 12, top - 95), P(r, top - 95), P(r, top)];
+  const door = (l, r) => [P(l + 30, top), P(l + 30, top - 55), P(r - 30, top - 55), P(r - 30, top)];
+  return [steps, temple(-110, -15), temple(15, 110), door(-110, -15), door(15, 110),
+    [P(-90, top), P(-120, 0)], [P(-30, top), P(-10, 0)], [P(30, top), P(10, 0)], [P(90, top), P(120, 0)]];
+}
+
+function sunStone(t, cx, cy, r, alpha, color = '#fff') {
+  ctx.save(); ctx.globalAlpha = alpha; ctx.strokeStyle = color; ctx.translate(cx, cy); ctx.rotate(t * .06);
+  [1, .86, .7, .42].forEach((k, i) => { ctx.lineWidth = i === 0 ? 5 : 3; ctx.beginPath(); ctx.arc(0, 0, r * k, 0, Math.PI * 2); ctx.stroke(); });
+  for (let i = 0; i < 52; i++) { const a = i / 52 * Math.PI * 2; ctx.beginPath(); ctx.moveTo(Math.cos(a) * r * .86, Math.sin(a) * r * .86); ctx.lineTo(Math.cos(a) * r, Math.sin(a) * r); ctx.lineWidth = 3; ctx.stroke(); }
+  for (let i = 0; i < 8; i++) { const a = i / 8 * Math.PI * 2; ctx.beginPath(); ctx.moveTo(Math.cos(a) * r * .42, Math.sin(a) * r * .42); ctx.lineTo(Math.cos(a + .2) * r * .7, Math.sin(a + .2) * r * .7); ctx.lineTo(Math.cos(a - .2) * r * .7, Math.sin(a - .2) * r * .7); ctx.closePath(); ctx.stroke(); }
+  ctx.restore();
+}
+
+// people dots grid
+const DOTS = (() => { const r = rng(42), a = []; for (let j = 0; j < 9; j++) for (let i = 0; i < 13; i++) a.push({ x: 120 + i * 70 + (j % 2) * 35, y: 0 + j * 52, d: r(), sick: r() < .45, k: r() }); return a; })();
+function dots(t, y0, at, color, sickAt = null) {
+  DOTS.forEach(d => {
+    let p = back(pr(t, at + d.d * 1.1, .35)); if (p <= 0) return;
+    let col = color, a = 1;
+    if (sickAt !== null && d.sick) {
+      const s = pr(t, sickAt + d.k * .5, .3); if (s > 0) col = RED;
+      const f = pr(t, sickAt + .8 + d.k * .9, .5); a = 1 - f; p *= 1 - f * .6;
+    }
+    if (a <= 0) return;
+    ctx.save(); ctx.globalAlpha = a; ctx.fillStyle = col; ctx.beginPath(); ctx.arc(d.x, y0 + d.y, 13 * p, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+  });
+}
+
+function circle(cx, cy, r, fill, shadow = true) {
+  if (r <= 0) return; ctx.save(); if (shadow) { ctx.shadowColor = 'rgba(0,0,0,.3)'; ctx.shadowBlur = 60; ctx.shadowOffsetY = 30; }
+  ctx.fillStyle = fill; ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+}
+
+function counter(t, a, d, from, to, y, size, color, fmt = n => n.toString(), o = {}) {
+  const p = eio(pr(t, a, d)); const vis = eo(pr(t, a - .15, .3)); if (vis <= 0) return;
+  const v = Math.round(from + (to - from) * p);
+  ctx.save(); ctx.globalAlpha = vis; ctx.font = `900 ${size}px ${SANS}`; ctx.fillStyle = color; ctx.textAlign = 'center';
+  const moving = p > 0 && p < 1; if (moving) ctx.filter = `blur(${2 + 4 * Math.sin(p * Math.PI)}px)`;
+  if (o.shadow) { ctx.shadowColor = 'rgba(0,0,0,.28)'; ctx.shadowBlur = 40; ctx.shadowOffsetY = 22; }
+  ctx.fillText(fmt(v), W / 2, y); ctx.restore();
+}
+const miles = n => n.toLocaleString('en-US');
+
+// ---------- scenes ----------
+const scenes = [
+  { s: 0, e: 3.6, bg: 'dark', d: t => {
+    sunStone(t, W / 2, 960, 470, .1);
+    line(t, [S('¿Y si', 72, { w: 600 })], 720, .1);
+    line(t, [S('MÉXICO', 196, { w: 900 })], 930, .45, { anim: 'scale' });
+    underline(t, 985, 640, 1.0);
+    line(t, [S('nunca hubiera sido', 64, { w: 500 })], 1140, 1.2);
+    line(t, [S('conquistado?', 128, { fam: SERIF, it: true, color: RED })], 1280, 1.75, { anim: 'scale' });
+  }},
+  { s: 3.6, e: 8.4, bg: 'dark', d: t => {
+    line(t, [S('En', 60, { w: 500 })], 520, .05);
+    counter(t, .2, 1.1, 2026, 1519, 760, 300, '#fff');
+    line(t, [S('Tenochtitlan', 118, { fam: SERIF, it: true })], 930, 1.4, { anim: 'scale' });
+    line(t, [S('tenía más de', 52, { w: 500 })], 1030, 1.9);
+    counter(t, 2.2, 1.3, 0, 200000, 1170, 140, RED, miles);
+    line(t, [S('habitantes', 52, { w: 500, color: '#bbb' })], 1245, 2.9);
+    drawPolys(templo(W / 2, 1720, .95), eio(pr(t, .9, 2.4)), { strokeStyle: 'rgba(255,255,255,.75)', lineWidth: 4 });
+  }},
+  { s: 8.4, e: 11.4, bg: 'light', d: t => {
+    line(t, [S('Más grande que', 66, { w: 600 })], 420, .05, { color: '#111' });
+    line(t, [S('cualquier ciudad de', 56, { w: 500 })], 505, .3, { color: '#444' });
+    line(t, [S('ESPAÑA', 160, { fam: SERIF, it: true })], 670, .6, { anim: 'scale', color: '#111', shadow: true });
+    const r1 = 290 * back(pr(t, .8, .7)); circle(430, 1130, r1, '#111');
+    if (r1 > 0) line(t, [S('Tenochtitlan', 58, { fam: SERIF, it: true })], 1150, 1.1, { x: 430 });
+    const r2 = 120 * back(pr(t, 1.4, .6)); circle(830, 1500, r2, '#c9c6bf');
+    if (r2 > 0) line(t, [S('Sevilla', 44, { w: 600 })], 1680, 1.6, { x: 830, color: '#555' });
+  }},
+  { s: 11.4, e: 18.2, bg: 'light', d: t => {
+    line(t, [S('Acueductos', 130, { fam: SERIF, it: true })], 420, .1, { anim: 'scale', color: '#111', shadow: true });
+    line(t, [S('con agua potable', 60, { w: 600 })], 520, .55, { color: '#333' });
+    // aqueduct
+    const fade = 1 - pr(t, 3.0, .35);
+    if (fade > 0) {
+      ctx.save(); ctx.globalAlpha = fade;
+      const polys = [[[90, 760], [990, 760]], [[90, 800], [990, 800]]];
+      for (let i = 0; i < 6; i++) {
+        const l = 90 + i * 150, r = l + 150, top = 800, cx = (l + r) / 2, ar = 50, pl = [[l + 25, 1180], [l + 25, top + 120]];
+        for (let k = 0; k <= 16; k++) { const a = Math.PI + k / 16 * Math.PI; pl.push([cx + Math.cos(a) * ar, top + 120 + Math.sin(a) * ar]); }
+        pl.push([r - 25, 1180]); polys.push(pl);
+      }
+      drawPolys(polys, eio(pr(t, .4, 1.6)), { strokeStyle: '#111', lineWidth: 6 });
+      const w = eo(pr(t, 1.7, .5));
+      if (w > 0) { ctx.save(); ctx.strokeStyle = BLUE; ctx.lineWidth = 16; ctx.setLineDash([46, 26]); ctx.lineDashOffset = -t * 160; ctx.globalAlpha = w * fade; ctx.beginPath(); ctx.moveTo(100, 780); ctx.lineTo(100 + 880 * w, 780); ctx.stroke(); ctx.restore(); }
+      ctx.restore();
+    }
+    dots(t, 690, 3.2, '#111');
+    line(t, [S('un mercado de', 58, { w: 600 })], 1260, 3.1, { color: '#333' });
+    counter(t, 3.4, 1.2, 0, 60000, 1460, 210, RED, miles, { shadow: true });
+    line(t, [S('personas al día', 76, { fam: SERIF, it: true })], 1570, 4.0, { color: '#111' });
+    line(t, [S('— Hernán Cortés, 1520', 34, { w: 400, it: true })], 1680, 4.8, { color: '#888' });
+  }},
+  { s: 18.2, e: 22.8, bg: 'dark', d: t => {
+    line(t, [S('Pero tarde o temprano,', 60, { w: 500 })], 500, .1);
+    line(t, [S('Europa iba a llegar.', 104, { fam: SERIF, it: true })], 630, .55, { anim: 'scale' });
+    dots(t, 800, .5, '#eee', 2.2);
+    line(t, [S('Y con ella…', 58, { w: 500, color: '#bbb' })], 1400, 2.1);
+    line(t, [S('LA VIRUELA', 150, { w: 900, color: RED })], 1570, 2.5, { anim: 'scale', stagger: .12 });
+  }},
+  { s: 22.8, e: 30, bg: 'light', d: t => {
+    line(t, [S('Si hubieran resistido…', 64, { w: 600 })], 400, .1, { color: '#111' });
+    line(t, [S('México podría ser como', 56, { w: 500 })], 500, .9, { color: '#444' });
+    line(t, [S('JAPÓN', 190, { w: 900 })], 690, 1.4, { anim: 'scale', color: '#111', shadow: true });
+    const cr = 210 * back(pr(t, 1.3, .7)); circle(W / 2, 1060, cr, RED);
+    // closing ring = closed to the world
+    const ring = eio(pr(t, 3.1, .9));
+    if (ring > 0) { ctx.save(); ctx.strokeStyle = '#111'; ctx.lineWidth = 14; ctx.beginPath(); ctx.arc(W / 2, 1060, 262, -Math.PI / 2, -Math.PI / 2 + ring * Math.PI * 2); ctx.stroke(); ctx.restore(); }
+    // rising chart = power
+    const up = eio(pr(t, 4.9, 1.0));
+    if (up > 0) {
+      const pts = [[150, 1330], [330, 1250], [470, 1290], [640, 1110], [760, 1150], [930, 900]];
+      drawPolys([pts], up, { strokeStyle: '#111', lineWidth: 12 });
+      if (up >= 1) drawPolys([[[870, 905], [930, 900], [925, 960]]], 1, { strokeStyle: '#111', lineWidth: 12 });
+    }
+    line(t, [S('un imperio que se cerró al mundo', 48, { w: 500 })], 1470, 3.2, { color: '#333', stagger: .07 });
+    line(t, [S('…y después se volvió', 48, { w: 500 })], 1545, 4.5, { color: '#333' });
+    line(t, [S('POTENCIA', 132, { fam: SERIF, it: true })], 1680, 5.1, { anim: 'scale', color: '#111', shadow: true });
+  }},
+  { s: 30, e: 34.6, bg: 'dark', d: t => {
+    line(t, [S('Hablarías', 66, { w: 600 })], 520, .1);
+    line(t, [S('NÁHUATL', 176, { w: 900 })], 720, .4, { anim: 'scale' });
+    underline(t, 775, 700, .9);
+    line(t, [S('…aunque ya lo hablas:', 54, { w: 500, color: '#bbb' })], 930, 1.5);
+    [['chocolate', 'xocolatl'], ['aguacate', 'ahuacatl'], ['tomate', 'tomatl']].forEach(([es, nah], i) => {
+      const y = 1130 + i * 190, a = 2.1 + i * .4;
+      line(t, [S(es, 96, { fam: SERIF, it: true })], y, a, { anim: 'scale' });
+      line(t, [S(nah, 38, { w: 500, color: RED })], y + 56, a + .25);
+    });
+  }},
+  { s: 34.6, e: 37, bg: 'light', d: t => {
+    line(t, [S('Pagarías con', 66, { w: 600 })], 560, .05, { color: '#111' });
+    line(t, [S('CACAO', 220, { w: 900, color: BROWN })], 780, .3, { anim: 'scale', shadow: true });
+    const r = rng(9);
+    for (let i = 0; i < 14; i++) {
+      const x = 200 + r() * 680, ty = 1150 + r() * 380, rot = r() * Math.PI, a = .45 + i * .08;
+      const p = pr(t, a, .55); if (p <= 0) continue;
+      const y = -100 + (ty + 100) * (p < 1 ? p * p : 1) - (p >= 1 ? 0 : 0);
+      const b = p >= 1 ? 0 : 0;
+      ctx.save(); ctx.translate(x, y + b); ctx.rotate(rot + p * 2);
+      ctx.shadowColor = 'rgba(0,0,0,.25)'; ctx.shadowBlur = 20; ctx.shadowOffsetY = 10;
+      ctx.fillStyle = BROWN; ctx.beginPath(); ctx.ellipse(0, 0, 58, 36, 0, 0, Math.PI * 2); ctx.fill();
+      ctx.shadowColor = 'transparent'; ctx.strokeStyle = '#8a5a3c'; ctx.lineWidth = 5; ctx.beginPath(); ctx.moveTo(-40, 0); ctx.quadraticCurveTo(0, 8, 40, 0); ctx.stroke();
+      ctx.restore();
+    }
+  }},
+  { s: 37, e: 39.8, bg: 'light', d: t => {
+    line(t, [S('Y la capital seguiría', 60, { w: 600 })], 470, .05, { color: '#111' });
+    line(t, [S('flotando sobre un', 56, { w: 500 })], 560, .45, { color: '#444' });
+    line(t, [S('LAGO', 230, { fam: SERIF, it: true, color: BLUE })], 790, .8, { anim: 'scale', shadow: true });
+    drawPolys(templo(W / 2, 1180, .55), eio(pr(t, .3, 1.2)), { strokeStyle: '#111', lineWidth: 5 });
+    for (let k = 0; k < 6; k++) {
+      const y = 1230 + k * 70, w = eio(pr(t, .2 + k * .1, .9)); if (w <= 0) continue;
+      const pts = []; for (let x = 60; x <= 60 + 960 * w; x += 12) pts.push([x, y + Math.sin(x / 55 + t * 3 + k) * 12]);
+      ctx.save(); ctx.globalAlpha = 1 - k * .12; drawPolys([pts], 1, { strokeStyle: BLUE, lineWidth: 6 }); ctx.restore();
+    }
+  }},
+  { s: 39.8, e: 44, bg: 'dark', d: t => {
+    sunStone(t, W / 2, 960, 470, .1);
+    line(t, [S('¿Tú crees que', 72, { w: 600 })], 760, .1);
+    line(t, [S('habrían resistido?', 108, { fam: SERIF, it: true, color: RED })], 900, .5, { anim: 'scale' });
+    line(t, [S('Te leo en los comentarios', 52, { w: 500, color: '#ccc' })], 1160, 1.7);
+    const a = eo(pr(t, 2.2, .4));
+    if (a > 0) { const y = 1290 + Math.sin(t * 6) * 14; ctx.save(); ctx.globalAlpha = a; ctx.strokeStyle = '#fff'; ctx.lineWidth = 8; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(W / 2, y - 50); ctx.lineTo(W / 2, y + 40); ctx.moveTo(W / 2 - 34, y + 8); ctx.lineTo(W / 2, y + 42); ctx.lineTo(W / 2 + 34, y + 8); ctx.stroke(); ctx.restore(); }
+  }},
+];
+const DURATION = scenes[scenes.length - 1].e;
+
+function bg(kind, frame) {
+  if (kind === 'dark') {
+    const g = M.createRadialGradient(W / 2, H * .45, 100, W / 2, H / 2, H * .75);
+    g.addColorStop(0, '#26211c'); g.addColorStop(1, '#060505'); M.fillStyle = g; M.fillRect(0, 0, W, H);
+  } else {
+    M.fillStyle = '#f3f1ec'; M.fillRect(0, 0, W, H);
+    M.strokeStyle = 'rgba(0,0,0,.045)'; M.lineWidth = 2;
+    for (let x = 0; x <= W; x += 90) { M.beginPath(); M.moveTo(x, 0); M.lineTo(x, H); M.stroke(); }
+    for (let y = 0; y <= H; y += 90) { M.beginPath(); M.moveTo(0, y); M.lineTo(W, y); M.stroke(); }
+    const v = M.createRadialGradient(W / 2, H / 2, H * .3, W / 2, H / 2, H * .8);
+    v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,.12)'); M.fillStyle = v; M.fillRect(0, 0, W, H);
+  }
+}
+
+function render(t) {
+  const frame = Math.round(t * FPS);
+  const sc = scenes.find(s => t >= s.s && t < s.e) || scenes[scenes.length - 1];
+  const lt = t - sc.s, dur = sc.e - sc.s;
+  bg(sc.bg, frame);
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, W, H); ctx.filter = 'none'; ctx.globalAlpha = 1;
+  sc.d(lt);
+  // camera: slow push + quick zoom-blur entry
+  const inP = eo(pr(lt, 0, .3)), zoom = 1 + .035 * (lt / dur) + (1 - inP) * .08;
+  M.save(); M.translate(W / 2, H / 2); M.scale(zoom, zoom); M.translate(-W / 2, -H / 2);
+  if (inP < 1) M.filter = `blur(${(1 - inP) * 14}px)`;
+  M.drawImage(L, 0, 0); M.restore(); M.filter = 'none';
+  M.save(); M.globalAlpha = sc.bg === 'dark' ? .07 : .035; M.globalCompositeOperation = sc.bg === 'dark' ? 'screen' : 'multiply';
+  M.drawImage(grains[frame % 4], 0, 0, W, H); M.restore();
+}
+window.render = render; window.DURATION = DURATION;
+</script></body></html>

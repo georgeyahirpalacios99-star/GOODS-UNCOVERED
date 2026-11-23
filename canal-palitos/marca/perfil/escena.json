@@ -1,0 +1,1 @@
+{"duracion": 10, "cielo": false, "fondoColor": "#d6453d", "temblor": 0, "camara": [{"t": 0, "x": 960, "y": 560, "z": 1}], "fondo": [{"tipo": "circulo", "x": 960, "y": 540, "r": 470, "color": "#f3ead6", "lw": 18}], "personajes": [{"id": "kk", "x": 960, "y": 1420, "esc": 4.2, "acc": ["casco"], "claves": [{"t": 0, "pose": "parado", "cara": "feliz"}]}]}

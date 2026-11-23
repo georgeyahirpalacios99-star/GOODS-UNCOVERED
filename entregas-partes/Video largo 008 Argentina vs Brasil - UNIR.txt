@@ -1,0 +1,2 @@
+Para unir las partes del video 008:
+  cat "Video largo 008 Argentina vs Brasil - FINAL.mp4.parte-"* > "Video largo 008 Argentina vs Brasil - FINAL.mp4"

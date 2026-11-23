@@ -1,0 +1,381 @@
+{
+ "estilo": "documental",
+ "salida": "demo-A-documental",
+ "duracion": 37.5,
+ "camara": [
+  {
+   "t": 0,
+   "lon": -25,
+   "lat": 33,
+   "ancho": 150
+  },
+  {
+   "t": 5.5,
+   "lon": -21,
+   "lat": 35,
+   "ancho": 136,
+   "suave": false
+  },
+  {
+   "t": 7.2,
+   "lon": 1,
+   "lat": 49.5,
+   "ancho": 26
+  },
+  {
+   "t": 11.0,
+   "lon": 0,
+   "lat": 48,
+   "ancho": 24,
+   "suave": false
+  },
+  {
+   "t": 15.4,
+   "lon": -72,
+   "lat": 14,
+   "ancho": 42,
+   "arco": 0.7
+  },
+  {
+   "t": 19.8,
+   "lon": -79.6,
+   "lat": 1.0,
+   "ancho": 16
+  },
+  {
+   "t": 22.4,
+   "lon": -78.6,
+   "lat": -0.4,
+   "ancho": 7
+  },
+  {
+   "t": 28.0,
+   "lon": -78.5,
+   "lat": -0.3,
+   "ancho": 6.2,
+   "suave": false
+  },
+  {
+   "t": 31.0,
+   "lon": -78.4558,
+   "lat": -0.0011,
+   "ancho": 0.034
+  },
+  {
+   "t": 37.5,
+   "lon": -78.4558,
+   "lat": -0.0011,
+   "ancho": 0.029,
+   "suave": false
+  }
+ ],
+ "narracion": [
+  {
+   "desde": 0.5,
+   "hasta": 5.3,
+   "texto": "En 1735 nadie sabía qué forma tenía la Tierra."
+  },
+  {
+   "desde": 5.6,
+   "hasta": 10.9,
+   "texto": "Newton decía que estaba achatada en los polos. Los Cassini, en París, que era alargada."
+  },
+  {
+   "desde": 11.2,
+   "hasta": 15.4,
+   "texto": "Francia mandó una expedición a medir el planeta justo en la línea ecuatorial."
+  },
+  {
+   "desde": 15.6,
+   "hasta": 21.0,
+   "texto": "Cruzaron por Panamá y desembarcaron en Manta en marzo de 1736."
+  },
+  {
+   "desde": 21.5,
+   "hasta": 24.8,
+   "texto": "Pasaron ocho años midiendo entre volcanes."
+  },
+  {
+   "desde": 24.9,
+   "hasta": 28.0,
+   "texto": "Y demostraron que Newton tenía razón."
+  },
+  {
+   "desde": 30.6,
+   "hasta": 33.8,
+   "texto": "Pero el monumento de la Mitad del Mundo"
+  },
+  {
+   "desde": 33.9,
+   "hasta": 37.2,
+   "texto": "está unos 240 metros al sur de la línea."
+  }
+ ],
+ "eventos": [
+  {
+   "tipo": "fecha",
+   "texto": "1735",
+   "desde": 0.4,
+   "hasta": 10.9
+  },
+  {
+   "tipo": "titulo",
+   "texto": "¿QUÉ FORMA TIENE\nLA TIERRA?",
+   "desde": 0.8,
+   "hasta": 5.3,
+   "y": 300
+  },
+  {
+   "tipo": "pin",
+   "lon": -0.13,
+   "lat": 51.5,
+   "texto": "LONDRES",
+   "desde": 6.6,
+   "hasta": 10.9,
+   "abajo": false
+  },
+  {
+   "tipo": "pin",
+   "lon": 2.35,
+   "lat": 48.86,
+   "texto": "PARÍS",
+   "desde": 6.9,
+   "hasta": 10.9
+  },
+  {
+   "tipo": "versus",
+   "desde": 7.4,
+   "hasta": 10.9,
+   "y": 470,
+   "izq": {
+    "iso": "gb",
+    "titulo": "NEWTON",
+    "texto": "ACHATADA EN LOS POLOS"
+   },
+   "der": {
+    "iso": "fr",
+    "titulo": "CASSINI",
+    "texto": "ALARGADA EN LOS POLOS"
+   }
+  },
+  {
+   "tipo": "fecha",
+   "texto": "MAYO DE 1735",
+   "desde": 11.0,
+   "hasta": 15.3
+  },
+  {
+   "tipo": "pin",
+   "lon": -1.15,
+   "lat": 46.16,
+   "texto": "LA ROCHELLE",
+   "desde": 11.0,
+   "hasta": 14.0
+  },
+  {
+   "tipo": "ruta",
+   "puntos": [
+    [
+     -1.15,
+     46.16
+    ],
+    [
+     -75.51,
+     10.39
+    ]
+   ],
+   "curva": 0.12,
+   "desde": 11.2,
+   "dur": 4.2,
+   "hasta": 21.5
+  },
+  {
+   "tipo": "documento",
+   "titulo": "MISIÓN GEODÉSICA",
+   "texto": "Godin, Bouguer y La Condamine. En Cartagena se suman los españoles Jorge Juan y Antonio de Ulloa.",
+   "x": 430,
+   "y": 640,
+   "w": 440,
+   "desde": 12.2,
+   "hasta": 15.3
+  },
+  {
+   "tipo": "fecha",
+   "texto": "NOVIEMBRE DE 1735",
+   "desde": 15.4,
+   "hasta": 17.6
+  },
+  {
+   "tipo": "pin",
+   "lon": -75.51,
+   "lat": 10.39,
+   "texto": "CARTAGENA DE INDIAS",
+   "desde": 15.1,
+   "hasta": 19.0
+  },
+  {
+   "tipo": "ruta",
+   "puntos": [
+    [
+     -75.51,
+     10.39
+    ],
+    [
+     -79.65,
+     9.55
+    ],
+    [
+     -79.52,
+     8.98
+    ],
+    [
+     -79.3,
+     6.0
+    ],
+    [
+     -80.72,
+     -0.95
+    ]
+   ],
+   "curva": 0.08,
+   "desde": 15.6,
+   "dur": 4.0,
+   "hasta": 21.5
+  },
+  {
+   "tipo": "pin",
+   "lon": -79.52,
+   "lat": 8.98,
+   "texto": "PANAMÁ",
+   "desde": 16.6,
+   "hasta": 20.6
+  },
+  {
+   "tipo": "fecha",
+   "texto": "MARZO DE 1736",
+   "desde": 17.7,
+   "hasta": 21.4
+  },
+  {
+   "tipo": "pin",
+   "lon": -80.72,
+   "lat": -0.95,
+   "texto": "MANTA",
+   "desde": 19.3,
+   "hasta": 28.0
+  },
+  {
+   "tipo": "bandera",
+   "iso": "fr",
+   "lon": -80.72,
+   "lat": -0.95,
+   "dx": -150,
+   "dy": -70,
+   "r": 40,
+   "desde": 19.6,
+   "hasta": 22.0
+  },
+  {
+   "tipo": "ecuador",
+   "texto": "LATITUD 0° · LÍNEA ECUATORIAL",
+   "desde": 21.8,
+   "hasta": 37.5,
+   "x": 70
+  },
+  {
+   "tipo": "etiqueta",
+   "texto": "ECUADOR",
+   "lon": -77.6,
+   "lat": -1.55,
+   "desde": 22.0,
+   "hasta": 28.6,
+   "tam": 34,
+   "espacio": 14
+  },
+  {
+   "tipo": "etiqueta",
+   "texto": "COLOMBIA",
+   "lon": -76.8,
+   "lat": 1.25,
+   "desde": 22.2,
+   "hasta": 28.6,
+   "tam": 26,
+   "espacio": 10,
+   "alpha": 0.6
+  },
+  {
+   "tipo": "pin",
+   "lon": -78.47,
+   "lat": -0.18,
+   "texto": "QUITO",
+   "desde": 22.4,
+   "hasta": 28.6
+  },
+  {
+   "tipo": "polaroid",
+   "img": "quito-noche-nasa.jpg",
+   "texto": "Quito de noche desde la Estación Espacial (NASA, 2024)",
+   "x": 1500,
+   "y": 580,
+   "w": 380,
+   "rot": 4,
+   "desde": 22.9,
+   "hasta": 28.4
+  },
+  {
+   "tipo": "titulo",
+   "texto": "8 AÑOS MIDIENDO\nENTRE VOLCANES",
+   "desde": 23.4,
+   "hasta": 28.0,
+   "y": 210,
+   "tam": 70
+  },
+  {
+   "tipo": "sello",
+   "texto": "NEWTON TENÍA RAZÓN",
+   "x": 760,
+   "y": 470,
+   "desde": 25.4,
+   "hasta": 28.4
+  },
+  {
+   "tipo": "fecha",
+   "texto": "HOY",
+   "desde": 30.4,
+   "hasta": 37.5
+  },
+  {
+   "tipo": "pin",
+   "lon": -78.4558,
+   "lat": -0.0022,
+   "texto": "MONUMENTO MITAD DEL MUNDO",
+   "desde": 30.8,
+   "hasta": 37.5,
+   "color": "#d6453d"
+  },
+  {
+   "tipo": "medida",
+   "a": [
+    -78.4558,
+    0
+   ],
+   "b": [
+    -78.4558,
+    -0.0022
+   ],
+   "texto": "≈ 240 m",
+   "nota": "medido con GPS",
+   "dx": 90,
+   "desde": 32.0,
+   "hasta": 37.5
+  },
+  {
+   "tipo": "titulo",
+   "texto": "EL MONUMENTO NO ESTÁ\nSOBRE LA LÍNEA",
+   "desde": 33.6,
+   "hasta": 37.5,
+   "y": 210,
+   "tam": 66
+  }
+ ]
+}
