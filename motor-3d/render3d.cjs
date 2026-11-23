@@ -34,6 +34,7 @@ fs.writeFileSync(path.join(__dirname, '.pagina.html'), html);
   page.on('console', m => { if (m.type() === 'error') console.log('PAGINA:', m.text()); }); page.on('pageerror', e => console.log('ERROR:', e.message));
   await page.goto('file://' + path.join(__dirname, '.pagina.html'));
   await page.evaluate(async ([sc, paises, flags, imgs]) => { await document.fonts.load('80px Anton'); await document.fonts.load('700 40px Barlow'); await iniciar(sc, paises, flags, imgs); }, [sc, paises, flags, imgs]);
+  for (let k = 0; k < 4; k++) { await page.evaluate(() => cuadro(0)); await page.waitForTimeout(150); }  // calentamiento: el primer render sale negro mientras suben las texturas
   const shot = async t => { await page.evaluate(t => cuadro(t), t); return page.screenshot({ type: 'jpeg', quality: 90 }); };
   if (prev) { const pd = path.join(dir, 'preview'); fs.mkdirSync(pd, { recursive: true }); for (const t of prev) fs.writeFileSync(path.join(pd, `t${t}.jpg`), await shot(t)); console.log('preview en', pd); }
   else {
