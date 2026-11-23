@@ -95,7 +95,7 @@ C('var', T('05', 'El VAR revisa'), T('05', 'Minuto cuarenta'), texto='Pelé, Mar
 ficha(T('05', 'Minuto cuarenta'), T('05', 'Y aquí viene'), "Minuto 45'", 'Entretiempo', 'Argentina 3 - 1 Brasil', tam=96)
 C('adelanto', T('05', 'Y aquí viene'), T('05', 'Premios Nobel'), minuto="45'", kicker='Lo prometido', texto='El dato que nadie conoce', y=900)
 CAM(T('05', 'Premios Nobel', d=-.4), 'norte')
-nob = [('Carlos Saavedra', 'saavedra-lamas-1.jpg', 'Saavedra Lamas · Paz 1936'), ('Bernardo Houssay', 'houssay-2.jpg', 'Houssay · Medicina 1947'), ('Luis Federico', 'leloir-1.jpg', 'Leloir · Química 1970'), ('Adolfo Pérez', 'perez-esquivel-1.jpg', 'Pérez Esquivel · Paz 1980'), ('Y César Milstein', 'houssay-1.jpg', 'Milstein · Medicina 1984')]
+nob = [('Carlos Saavedra', 'saavedra-lamas-1.jpg', 'Saavedra Lamas · Paz 1936'), ('Bernardo Houssay', 'houssay-2.jpg', 'Houssay · Medicina 1947'), ('Luis Federico', 'leloir-1.jpg', 'Leloir · Química 1970'), ('Adolfo Pérez', 'perez-esquivel-1.jpg', 'Pérez Esquivel · Paz 1980'), ('Y César Milstein', 'milstein-anticuerpo.jpg', 'Milstein · Medicina 1984 · anticuerpos monoclonales')]
 for i, (fr, img, tx) in enumerate(nob):
     a = T('05', fr); b = T('05', nob[i + 1][0]) if i + 1 < len(nob) else T('05', 'Brasil, el país')
     pant.append(dict(desde=round(a, 2), hasta=round(b, 2), img=F(img), texto=tx))
