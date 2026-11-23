@@ -9,7 +9,7 @@ Se generan **una sola vez** y las uso en todos los videos:
 ````
 Usa tus reglas de director de Flow (director-flow) si las tienes. Si no, sigue estas: fotografía ultra realista, sin texto, sin logos, sin banderas, sin caras reconocibles, sin armas, sin deformaciones; elige la mejor de 2 variantes y regenera una vez si falla.
 
-TRABAJO: crear la BIBLIOTECA DE PLANTILLAS de mi canal Lo que nadie sabe del mapa. Se van a reutilizar en todos mis videos.
+TRABAJO: crear la BIBLIOTECA DE PLANTILLAS de mi canal Lo Que el Mapa No Dice. Se van a reutilizar en todos mis videos.
 Proyecto en Flow: GU-PLANTILLAS. Carpeta de descargas: GU-PLANTILLAS.
 
 REGLAS DE ESTA BIBLIOTECA:

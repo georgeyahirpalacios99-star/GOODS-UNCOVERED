@@ -1,4 +1,4 @@
-# Biblia de estilo · Lo que nadie sabe del mapa 3D (borrador para que George lo apruebe)
+# Biblia de estilo · Lo Que el Mapa No Dice 3D (borrador para que George lo apruebe)
 
 ## La idea
 Un mapa 3D de verdad, como un tablero de juego bajo luz de estudio. Los países son piezas sólidas con su bandera y ojos con volumen, y reaccionan a lo que pasa. Encima del mapa entran fotos y videos reales. Nada se ve "hecho con IA": todo tiene luz, sombra y física.

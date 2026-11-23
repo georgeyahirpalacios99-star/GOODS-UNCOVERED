@@ -34,7 +34,7 @@ def gol(frase_t, pais, texto, hinchas):  # el balón sale 1 s antes y entra just
 
 # ===================== voz-01 · gancho =====================
 foto('maradona-1.jpg', 0, T('01', 'Hoy los vamos'), z0=1.0, z1=1.12, sinFundido=True)
-ficha(.3, T('01', 'Hoy los vamos') - .1, 'Lo que nadie sabe del mapa', 'Argentina vs Brasil', 'El clásico más grande de América', tam=96)
+ficha(.3, T('01', 'Hoy los vamos') - .1, 'Lo Que el Mapa No Dice', 'Argentina vs Brasil', 'El clásico más grande de América', tam=96)
 t = T('01', 'Hoy los vamos'); barrido(t); cam.append(dict(t=0, lon=-58, lat=-20, dist=430, inclin=30)); ult[0] = PRE['cielo']
 ficha(t + .2, T('01', 'Diez rondas'), 'Hoy los enfrentamos', 'En todo', 'Fútbol, tamaño, dinero, ciencia, carreras, cine y comida')
 C('marcador', T('01', 'Diez rondas'), T('01', 'Porque uno'), titulo='10 rondas · cada una vale un gol', isoIzq='ar', isoDer='br', nomIzq='Argentina', nomDer='Brasil', izq='?', der='?', y=930, tam=110)

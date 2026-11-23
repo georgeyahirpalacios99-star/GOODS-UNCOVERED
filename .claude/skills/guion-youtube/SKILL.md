@@ -1,11 +1,11 @@
 ---
 name: guion-youtube
-description: Prepara un video completo de Lo que nadie sabe del mapa a partir de un tema: investigación con fuentes, guion con gancho, voz para ElevenLabs en bloques, prompts de imágenes para Google Flow, línea de tiempo para el editor y datos de publicación. Úsalo cuando George diga "/guion-youtube", "hazme un video de…", "siguiente Short", "siguiente video largo" o dé un tema nuevo.
+description: Prepara un video completo de Lo Que el Mapa No Dice a partir de un tema: investigación con fuentes, guion con gancho, voz para ElevenLabs en bloques, prompts de imágenes para Google Flow, línea de tiempo para el editor y datos de publicación. Úsalo cuando George diga "/guion-youtube", "hazme un video de…", "siguiente Short", "siguiente video largo" o dé un tema nuevo.
 ---
 
 # /guion-youtube "tema" [short | largo] [duración]
 
-Canal: **Lo que nadie sabe del mapa**. Las historias ocultas detrás de los objetos que usas, los lugares que conoces y los misterios que nadie te explicó. **Español neutro, para todo el público hispano** (Latinoamérica, España, hispanos en EE. UU.). Si no dice formato: **largo** = 13 min; **short** = ~30 s.
+Canal: **Lo Que el Mapa No Dice**. Las historias ocultas detrás de los objetos que usas, los lugares que conoces y los misterios que nadie te explicó. **Español neutro, para todo el público hispano** (Latinoamérica, España, hispanos en EE. UU.). Si no dice formato: **largo** = 13 min; **short** = ~30 s.
 
 Escribe siempre en español latino, directo, con datos concretos y sin lenguaje de anuncio. Si hay que elegir algo, da **una sola recomendación**.
 

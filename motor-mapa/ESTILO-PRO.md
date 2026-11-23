@@ -1,4 +1,4 @@
-# Estilo PRO de Lo que nadie sabe del mapa (configuración fija desde nov-2026)
+# Estilo PRO de Lo Que el Mapa No Dice (configuración fija desde nov-2026)
 
 George lo pidió así: **realista y de diseñador, nada infantil**. Esta es la configuración por defecto de **todos** los videos, largos y Shorts.
 
