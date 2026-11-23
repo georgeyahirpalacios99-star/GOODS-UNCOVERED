@@ -972,14 +972,14 @@
    "z0": 1.0,
    "z1": 1.12,
    "px": 0,
-   "credito": "Foto: Unknown authorUnknown author · Public domain",
+   "credito": "Foto: Autor desconocido · Public domain",
    "sinFundido": true
   },
   {
    "tipo": "ficha",
    "desde": 0.3,
    "hasta": 7.86,
-   "kicker": "Goods Uncovered · Sudamérica",
+   "kicker": "Lo que nadie sabe del mapa",
    "texto": "Argentina vs Brasil",
    "sub": "El clásico más grande de América",
    "y": 800,
@@ -1025,7 +1025,7 @@
    "y": 360,
    "w": 540,
    "texto": "Brasil · 5 Copas del Mundo",
-   "credito": "Foto: Unknown - Distributed by the · Public domain",
+   "credito": "Foto: Autor desconocido · Public domain",
    "rot": 0
   },
   {
@@ -1122,7 +1122,7 @@
    "y": 360,
    "w": 540,
    "texto": "Argentina · 1978 · 1986 · 2022",
-   "credito": "Foto: Unknown authorUnknown author · Public domain",
+   "credito": "Foto: Autor desconocido · Public domain",
    "rot": 0
   },
   {
@@ -2181,7 +2181,7 @@
    "z0": 1.03,
    "z1": 1.13,
    "px": 0,
-   "credito": "Foto: Unknown - Distributed by the · Public domain"
+   "credito": "Foto: Autor desconocido · Public domain"
   },
   {
    "tipo": "ficha",

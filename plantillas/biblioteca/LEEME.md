@@ -1,4 +1,4 @@
-# Biblioteca de plantillas Goods Uncovered (generadas en Flow, lotes 1 y 2)
+# Biblioteca de plantillas Lo que nadie sabe del mapa (generadas en Flow, lotes 1 y 2)
 
 El motor 3D (`motor-3d/render3d.cjs`) carga solas las texturas T01–T06 en todos los videos. Para no usarlas en una escena, pon `"texturas": false`.
 

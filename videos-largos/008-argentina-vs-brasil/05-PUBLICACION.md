@@ -35,7 +35,7 @@ Capítulos medidos sobre el video final (9:35). Créditos completos de fotos en 
 
 ## Etiquetas
 ```
-argentina vs brasil, argentina brasil, quien gana argentina o brasil, clasico sudamericano, messi pele maradona, mundial 2026, copa america, argentina vs brasil comparacion, brasil vs argentina, futbol sudamericano, goods uncovered
+argentina vs brasil, argentina brasil, quien gana argentina o brasil, clasico sudamericano, messi pele maradona, mundial 2026, copa america, argentina vs brasil comparacion, brasil vs argentina, futbol sudamericano
 ```
 
 ## Ajustes
