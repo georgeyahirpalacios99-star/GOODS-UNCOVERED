@@ -2,8 +2,11 @@
 
 ## Título
 ```
-ARGENTINA vs BRASIL: ¿quién gana en TODO? (el resultado te va a sorprender)
+ARGENTINA vs BRASIL, pero cada gol es un DATO REAL
 ```
+Alternativas para "Probar y comparar":
+- Puse a ARGENTINA y BRASIL a jugar 90 minutos… en TODO
+- ARGENTINA vs BRASIL: el clásico que NO se juega con el balón
 
 ## Descripción
 ```
