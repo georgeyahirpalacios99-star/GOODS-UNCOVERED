@@ -1,0 +1,2236 @@
+{
+ "salida": "argentina-vs-brasil",
+ "duracion": 575.55,
+ "ancho": 1920,
+ "alto": 1080,
+ "centro": [
+  -58,
+  -20
+ ],
+ "mar": "#0d2a4f",
+ "cielo": "#061630",
+ "entorno": "mundo",
+ "contexto": [
+  -130,
+  -60,
+  25,
+  40
+ ],
+ "calidad3d": 0.85,
+ "sombra": 1536,
+ "paises": [
+  {
+   "adm": "BRA",
+   "iso": "br",
+   "alto": 3.4
+  },
+  {
+   "adm": "ARG",
+   "iso": "ar",
+   "alto": 3.4
+  },
+  {
+   "adm": "BOL",
+   "iso": "bo",
+   "alto": 2.2
+  },
+  {
+   "adm": "PRY",
+   "iso": "py",
+   "alto": 2.2
+  },
+  {
+   "adm": "URY",
+   "iso": "uy",
+   "alto": 2.2
+  },
+  {
+   "adm": "PER",
+   "iso": "pe",
+   "alto": 2.2
+  },
+  {
+   "adm": "COL",
+   "iso": "co",
+   "alto": 2.2
+  },
+  {
+   "adm": "VEN",
+   "iso": "ve",
+   "alto": 2.2
+  },
+  {
+   "adm": "GUY",
+   "iso": "gy",
+   "alto": 2.2
+  },
+  {
+   "adm": "SUR",
+   "iso": "sr",
+   "alto": 2.2
+  },
+  {
+   "adm": "ECU",
+   "iso": "ec",
+   "alto": 2.2
+  },
+  {
+   "adm": "CHL",
+   "iso": "cl",
+   "alto": 2.2
+  }
+ ],
+ "estadio": {
+  "t": 52.96,
+  "dur": 1.6
+ },
+ "camara": [
+  {
+   "t": 0,
+   "lon": -58,
+   "lat": -20,
+   "dist": 430,
+   "inclin": 30
+  },
+  {
+   "t": 20.9,
+   "lon": -58,
+   "lat": -20,
+   "dist": 430,
+   "inclin": 30
+  },
+  {
+   "t": 21.9,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": 27.54,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": 28.54,
+   "lon": -45.5,
+   "lat": -22.5,
+   "dist": 210,
+   "inclin": 46
+  },
+  {
+   "t": 33.49,
+   "lon": -45.5,
+   "lat": -22.5,
+   "dist": 210,
+   "inclin": 46
+  },
+  {
+   "t": 34.49,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 52.76,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 54.16,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 59.83,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 60.83,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": 70.17,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": 71.17,
+   "lon": -63,
+   "lat": -32,
+   "dist": 300,
+   "inclin": 42
+  },
+  {
+   "t": 78.45,
+   "lon": -63,
+   "lat": -32,
+   "dist": 300,
+   "inclin": 42
+  },
+  {
+   "t": 79.45,
+   "lon": -45.5,
+   "lat": -22.5,
+   "dist": 210,
+   "inclin": 46
+  },
+  {
+   "t": 94.41,
+   "lon": -45.5,
+   "lat": -22.5,
+   "dist": 210,
+   "inclin": 46
+  },
+  {
+   "t": 95.41,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 96.99,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 97.49,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 105.57,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 106.57,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 114.85,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 115.85,
+   "lon": -45.5,
+   "lat": -22.5,
+   "dist": 210,
+   "inclin": 46
+  },
+  {
+   "t": 131.26,
+   "lon": -45.5,
+   "lat": -22.5,
+   "dist": 210,
+   "inclin": 46
+  },
+  {
+   "t": 131.95,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 132.26,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 132.45,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 135.99,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 136.99,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 172.79,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 173.29,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 194.9,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 195.9,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": 213.78,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": 214.78,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 217.09,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 217.59,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 220.57,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 221.57,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 255.27,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 256.27,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 272.41,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 273.41,
+   "lon": -58,
+   "lat": -5,
+   "dist": 560,
+   "inclin": 30
+  },
+  {
+   "t": 295.87,
+   "lon": -58,
+   "lat": -5,
+   "dist": 560,
+   "inclin": 30
+  },
+  {
+   "t": 296.87,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 302.84,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 303.34,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 310.85,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 311.85,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 330.97,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 331.97,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": 350.58,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": 351.08,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 354.38,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 355.38,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 373.19,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 373.69,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 377.08,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 378.08,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 394.22,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 395.22,
+   "lon": -48,
+   "lat": -23,
+   "dist": 230,
+   "inclin": 46
+  },
+  {
+   "t": 401.05,
+   "lon": -48,
+   "lat": -23,
+   "dist": 230,
+   "inclin": 46
+  },
+  {
+   "t": 402.05,
+   "lon": -68,
+   "lat": -32,
+   "dist": 230,
+   "inclin": 44
+  },
+  {
+   "t": 406.03,
+   "lon": -68,
+   "lat": -32,
+   "dist": 230,
+   "inclin": 44
+  },
+  {
+   "t": 406.43,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 406.93,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 407.03,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 446.43,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 446.68,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 447.18,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 447.43,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 471.14,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 472.14,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 478.7,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  },
+  {
+   "t": 479.2,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 517.87,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 518.87,
+   "lon": -63,
+   "lat": -32,
+   "dist": 300,
+   "inclin": 42
+  },
+  {
+   "t": 522.83,
+   "lon": -63,
+   "lat": -32,
+   "dist": 300,
+   "inclin": 42
+  },
+  {
+   "t": 523.83,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": 553.17,
+   "lon": -51,
+   "lat": -13,
+   "dist": 320,
+   "inclin": 42
+  },
+  {
+   "t": 554.57,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 564.97,
+   "lon": -58,
+   "lat": -21,
+   "dist": 900,
+   "inclin": 52
+  },
+  {
+   "t": 566.57,
+   "lon": -58,
+   "lat": -21,
+   "dist": 480,
+   "inclin": 38
+  }
+ ],
+ "caras": {
+  "*": [
+   [
+    0,
+    "normal"
+   ]
+  ],
+  "ARG": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    98.39,
+    "duda"
+   ],
+   [
+    133.35,
+    "feliz"
+   ],
+   [
+    174.19,
+    "feliz"
+   ],
+   [
+    218.49,
+    "feliz"
+   ],
+   [
+    304.24,
+    "feliz"
+   ],
+   [
+    351.98,
+    "duda"
+   ],
+   [
+    374.59,
+    "duda"
+   ],
+   [
+    407.83,
+    "duda"
+   ],
+   [
+    448.08,
+    "duda"
+   ],
+   [
+    480.1,
+    "feliz"
+   ]
+  ],
+  "BRA": [
+   [
+    0,
+    "normal"
+   ],
+   [
+    98.39,
+    "feliz"
+   ],
+   [
+    133.35,
+    "duda"
+   ],
+   [
+    174.19,
+    "duda"
+   ],
+   [
+    218.49,
+    "duda"
+   ],
+   [
+    304.24,
+    "duda"
+   ],
+   [
+    351.98,
+    "feliz"
+   ],
+   [
+    374.59,
+    "feliz"
+   ],
+   [
+    407.83,
+    "feliz"
+   ],
+   [
+    448.08,
+    "feliz"
+   ],
+   [
+    480.1,
+    "duda"
+   ]
+  ]
+ },
+ "atenuar": [
+  {
+   "desde": 3.5,
+   "hasta": 9999,
+   "paises": [
+    "ARG",
+    "BRA"
+   ]
+  }
+ ],
+ "elevar": [
+  {
+   "pais": "ARG",
+   "desde": 4.0,
+   "altura": 6
+  },
+  {
+   "pais": "BRA",
+   "desde": 4.2,
+   "altura": 6
+  }
+ ],
+ "goles": [
+  {
+   "t": 97.39,
+   "pais": "BRA",
+   "lado": -1,
+   "texto": "Brasil · 5 Mundiales"
+  },
+  {
+   "t": 132.35,
+   "pais": "ARG",
+   "lado": 1,
+   "texto": "Argentina · 16 Copas América"
+  },
+  {
+   "t": 173.19,
+   "pais": "ARG",
+   "lado": 1,
+   "texto": "Argentina · 43 a 42"
+  },
+  {
+   "t": 217.49,
+   "pais": "ARG",
+   "lado": 1,
+   "texto": "Argentina · finalista 2026"
+  },
+  {
+   "t": 303.24,
+   "pais": "ARG",
+   "lado": 1,
+   "texto": "Argentina · 5 Nobel"
+  },
+  {
+   "t": 350.98,
+   "pais": "BRA",
+   "lado": -1,
+   "texto": "Brasil · 3 veces más grande"
+  },
+  {
+   "t": 373.59,
+   "pais": "BRA",
+   "lado": -1,
+   "texto": "Brasil · 203 millones"
+  },
+  {
+   "t": 406.83,
+   "pais": "BRA",
+   "lado": -1,
+   "texto": "Brasil · economía 3 veces mayor"
+  },
+  {
+   "t": 447.08,
+   "pais": "BRA",
+   "lado": -1,
+   "texto": "Brasil · 8 títulos de F1"
+  },
+  {
+   "t": 479.1,
+   "pais": "ARG",
+   "lado": 1,
+   "texto": "Argentina · 2 Óscar"
+  }
+ ],
+ "tarjetas3d": [
+  {
+   "pais": "BRA",
+   "t": 215.63,
+   "color": "roja",
+   "hasta": 220.77
+  }
+ ],
+ "pantalla": [
+  {
+   "desde": 98.39,
+   "hasta": 101.99,
+   "img": "fotos-reales/torcida-bra-1.jpg",
+   "texto": "Brasil · 5 Mundiales"
+  },
+  {
+   "desde": 133.35,
+   "hasta": 136.95,
+   "img": "fotos-reales/argentina-2022-1.jpg",
+   "texto": "Argentina · 16 Copas América"
+  },
+  {
+   "desde": 174.19,
+   "hasta": 177.79,
+   "img": "fotos-reales/hinchas-arg-1.jpg",
+   "texto": "Argentina · 43 a 42"
+  },
+  {
+   "desde": 218.49,
+   "hasta": 222.09,
+   "img": "fotos-reales/argentina-2022-1.jpg",
+   "texto": "Argentina · finalista 2026"
+  },
+  {
+   "desde": 276.16,
+   "hasta": 280.56,
+   "img": "fotos-reales/saavedra-lamas-1.jpg",
+   "texto": "Saavedra Lamas · Paz 1936"
+  },
+  {
+   "desde": 280.56,
+   "hasta": 284.53,
+   "img": "fotos-reales/houssay-2.jpg",
+   "texto": "Houssay · Medicina 1947"
+  },
+  {
+   "desde": 284.53,
+   "hasta": 288.43,
+   "img": "fotos-reales/leloir-1.jpg",
+   "texto": "Leloir · Química 1970"
+  },
+  {
+   "desde": 288.43,
+   "hasta": 292.24,
+   "img": "fotos-reales/perez-esquivel-1.jpg",
+   "texto": "Pérez Esquivel · Paz 1980"
+  },
+  {
+   "desde": 292.24,
+   "hasta": 296.17,
+   "img": "fotos-reales/houssay-1.jpg",
+   "texto": "Milstein · Medicina 1984"
+  },
+  {
+   "desde": 304.24,
+   "hasta": 307.84,
+   "img": "fotos-reales/hinchas-arg-1.jpg",
+   "texto": "Argentina · 5 Nobel"
+  },
+  {
+   "desde": 351.98,
+   "hasta": 355.58,
+   "img": "fotos-reales/torcida-bra-2.jpg",
+   "texto": "Brasil · 3 veces más grande"
+  },
+  {
+   "desde": 374.59,
+   "hasta": 378.19,
+   "img": "fotos-reales/torcida-bra-1.jpg",
+   "texto": "Brasil · 203 millones"
+  },
+  {
+   "desde": 407.83,
+   "hasta": 411.43,
+   "img": "fotos-reales/torcida-bra-2.jpg",
+   "texto": "Brasil · economía 3 veces mayor"
+  },
+  {
+   "desde": 448.08,
+   "hasta": 451.68,
+   "img": "fotos-reales/torcida-bra-1.jpg",
+   "texto": "Brasil · 8 títulos de F1"
+  },
+  {
+   "desde": 480.1,
+   "hasta": 483.7,
+   "img": "fotos-reales/argentina-2022-1.jpg",
+   "texto": "Argentina · 2 Óscar"
+  },
+  {
+   "desde": 557.52,
+   "hasta": 565.17,
+   "img": "fotos-reales/hinchas-arg-1.jpg",
+   "texto": "Comenta: ARGENTINA o BRASIL"
+  }
+ ],
+ "reloj": {
+  "desde": 53.36,
+  "hasta": 483.5,
+  "isoIzq": "ar",
+  "isoDer": "br"
+ },
+ "capas": [
+  {
+   "tipo": "foto",
+   "desde": 0,
+   "hasta": 7.96,
+   "img": "fotos-reales/maradona-1.jpg",
+   "z0": 1.0,
+   "z1": 1.12,
+   "px": 0,
+   "credito": "Foto: Unknown authorUnknown author · Public domain",
+   "sinFundido": true
+  },
+  {
+   "tipo": "ficha",
+   "desde": 0.3,
+   "hasta": 7.86,
+   "kicker": "Goods Uncovered · Sudamérica",
+   "texto": "Argentina vs Brasil",
+   "sub": "El clásico más grande de América",
+   "y": 800,
+   "tam": 96
+  },
+  {
+   "tipo": "barrido",
+   "desde": 7.61,
+   "hasta": 8.26
+  },
+  {
+   "tipo": "ficha",
+   "desde": 8.16,
+   "hasta": 10.52,
+   "kicker": "Hoy los enfrentamos",
+   "texto": "En todo",
+   "sub": "Fútbol, tamaño, dinero, ciencia, carreras, cine y comida",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "marcador",
+   "desde": 10.52,
+   "hasta": 21.2,
+   "titulo": "10 rondas · cada una vale un gol",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": "?",
+   "der": "?",
+   "y": 930,
+   "tam": 110
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 22.8,
+   "hasta": 27.84,
+   "img": "fotos-reales/pele-1970-1.jpg",
+   "lon": -47.88,
+   "lat": -15.79,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "Brasil · 5 Copas del Mundo",
+   "credito": "Foto: Unknown - Distributed by the · Public domain",
+   "rot": 0
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 27.84,
+   "hasta": 33.79,
+   "img": "fotos-reales/maracana-1.jpg",
+   "lon": -43.21,
+   "lat": -22.91,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "Maracaná · Río de Janeiro",
+   "credito": "Foto: Rodrigo Soldon from Rio de J · CC BY 2.0",
+   "rot": 2
+  },
+  {
+   "tipo": "ficha",
+   "desde": 33.79,
+   "hasta": 37.54,
+   "kicker": "Regla del partido",
+   "texto": "Solo datos",
+   "sub": "Nada de opiniones",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "var",
+   "desde": 37.54,
+   "hasta": 39.63,
+   "texto": "Revisión"
+  },
+  {
+   "tipo": "adelanto",
+   "desde": 39.63,
+   "hasta": 46.94,
+   "minuto": "45'",
+   "kicker": "En el entretiempo",
+   "texto": "El dato que nadie conoce",
+   "y": 900
+  },
+  {
+   "tipo": "ficha",
+   "desde": 46.94,
+   "hasta": 53.51,
+   "kicker": "Arriba, siempre",
+   "texto": "Marcador y reloj",
+   "sub": "Nunca se detienen",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "ficha",
+   "desde": 53.56,
+   "hasta": 55.56,
+   "kicker": "Empieza",
+   "texto": "El partido",
+   "sub": "Argentina vs Brasil",
+   "y": 800,
+   "tam": 96
+  },
+  {
+   "tipo": "ficha",
+   "desde": 55.77,
+   "hasta": 60.13,
+   "kicker": "Ronda 1",
+   "texto": "Copas del Mundo",
+   "sub": "La que todos quieren ver",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 60.13,
+   "hasta": 70.47,
+   "img": "fotos-reales/pele-1970-2.jpg",
+   "lon": -47.88,
+   "lat": -15.79,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "Brasil · 1958 · 62 · 70 · 94 · 2002",
+   "credito": "Foto: Panini · Public domain",
+   "rot": 0
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 70.47,
+   "hasta": 76.31,
+   "img": "fotos-reales/maradona-1.jpg",
+   "lon": -58.38,
+   "lat": -34.6,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "Argentina · 1978 · 1986 · 2022",
+   "credito": "Foto: Unknown authorUnknown author · Public domain",
+   "rot": 0
+  },
+  {
+   "tipo": "foto",
+   "desde": 76.31,
+   "hasta": 78.75,
+   "img": "fotos-reales/messi-2022-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 1,
+   "credito": "Foto: Hossein Zohrevand · CC BY 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 76.51,
+   "hasta": 78.65,
+   "kicker": "Catar 2022",
+   "texto": "Messi, campeón del mundo",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 78.4,
+   "hasta": 79.05
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 83.22,
+   "hasta": 89.64,
+   "img": "fotos-reales/maracana-2.jpg",
+   "lon": -43.21,
+   "lat": -22.91,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "1950 · Final perdida en el Maracaná",
+   "credito": "Foto: Rodrigo Soldon from Rio de J · CC BY 2.0",
+   "rot": 0
+  },
+  {
+   "tipo": "foto",
+   "desde": 89.64,
+   "hasta": 94.61,
+   "img": "fotos-reales/copa-mundial-trofeo-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Danilo Borges · CC BY 3.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 89.84,
+   "hasta": 94.51,
+   "kicker": "Brasil 2014 · Semifinal",
+   "texto": "1 - 7 con Alemania",
+   "sub": "Alemania terminó campeona",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 94.26,
+   "hasta": 94.91
+  },
+  {
+   "tipo": "marcador",
+   "desde": 94.61,
+   "hasta": 100.65,
+   "titulo": "Ronda 1 · Copas del Mundo",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 3,
+   "der": 5,
+   "y": 930,
+   "tam": 110,
+   "suf": ""
+  },
+  {
+   "tipo": "ficha",
+   "desde": 100.75,
+   "hasta": 105.87,
+   "kicker": "Ronda 2",
+   "texto": "Copa América",
+   "sub": "El torneo de selecciones más antiguo",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "marcador",
+   "desde": 108.02,
+   "hasta": 115.15,
+   "titulo": "Ronda 2 · Copa América",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 16,
+   "der": 9,
+   "y": 930,
+   "tam": 110,
+   "suf": ""
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 115.15,
+   "hasta": 124.53,
+   "img": "fotos-reales/maracana-1.jpg",
+   "lon": -43.21,
+   "lat": -22.91,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "2021 · Final en el Maracaná",
+   "credito": "Foto: Rodrigo Soldon from Rio de J · CC BY 2.0",
+   "rot": 0
+  },
+  {
+   "tipo": "foto",
+   "desde": 124.53,
+   "hasta": 126.75,
+   "img": "fotos-reales/dimaria-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 1,
+   "credito": "Foto: Fanny Schertzer · CC BY 3.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 124.73,
+   "hasta": 126.65,
+   "kicker": "Final Copa América 2021",
+   "texto": "Di María · 1 - 0",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 126.75,
+   "hasta": 131.46,
+   "img": "fotos-reales/hinchas-arg-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Adriel Rivera · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 126.95,
+   "hasta": 131.36,
+   "kicker": "2021",
+   "texto": "Primer título de Messi",
+   "sub": "En la casa del rival",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 131.11,
+   "hasta": 131.76
+  },
+  {
+   "tipo": "ficha",
+   "desde": 135.99,
+   "hasta": 142.87,
+   "kicker": "Ronda 3",
+   "texto": "Cara a cara",
+   "sub": "¿Quién gana más cuando se enfrentan?",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "marcador",
+   "desde": 142.87,
+   "hasta": 151.93,
+   "titulo": "Ronda 3 · Historial (111 partidos)",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 43,
+   "der": 42,
+   "y": 930,
+   "tam": 110,
+   "suf": ""
+  },
+  {
+   "tipo": "ficha",
+   "desde": 151.93,
+   "hasta": 156.29,
+   "kicker": "26 empates",
+   "texto": "Un solo partido de diferencia",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 156.29,
+   "hasta": 164.09,
+   "img": "fotos-reales/monumental-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Stefano Vigorelli · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 156.49,
+   "hasta": 163.99,
+   "kicker": "Desde 1914",
+   "texto": "Copa Roca",
+   "sub": "Un trofeo creado solo para este clásico",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 163.74,
+   "hasta": 164.39
+  },
+  {
+   "tipo": "var",
+   "desde": 166.3,
+   "hasta": 174.19,
+   "texto": "Historial",
+   "veredicto": "Confirmado: 43 - 42",
+   "ok": true
+  },
+  {
+   "tipo": "ficha",
+   "desde": 178.05,
+   "hasta": 185.34,
+   "kicker": "Ronda 4",
+   "texto": "Mundial 2026",
+   "sub": "Estados Unidos, México y Canadá",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 185.34,
+   "hasta": 195.1,
+   "img": "fotos-reales/espana-2026-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Bryan Berlin · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 185.54,
+   "hasta": 195.0,
+   "kicker": "19 de julio de 2026",
+   "texto": "Subcampeona",
+   "sub": "Perdió 1 - 0 con España en el tiempo extra",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 194.75,
+   "hasta": 195.4
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 195.1,
+   "hasta": 204.42,
+   "img": "fotos-reales/haaland-2.jpg",
+   "lon": -47.88,
+   "lat": -15.79,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "Octavos · Noruega 2 - 1 Brasil",
+   "credito": "Foto: Bryan Berlin · CC BY-SA 4.0",
+   "rot": 0
+  },
+  {
+   "tipo": "foto",
+   "desde": 204.42,
+   "hasta": 213.98,
+   "img": "fotos-reales/argentina-2022-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: MinervaAustral · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 204.62,
+   "hasta": 213.88,
+   "kicker": "Catar 2022",
+   "texto": "Campeona del mundo",
+   "sub": "Ganó la final a Francia en penales",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 213.63,
+   "hasta": 214.28
+  },
+  {
+   "tipo": "marcador",
+   "desde": 213.98,
+   "hasta": 217.89,
+   "titulo": "Ronda 4 · Mundial 2026",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": "FINAL",
+   "der": "OCTAVOS",
+   "y": 930,
+   "tam": 90,
+   "suf": "",
+   "gana": "izq"
+  },
+  {
+   "tipo": "var",
+   "desde": 220.77,
+   "hasta": 227.9,
+   "texto": "El mejor de la historia"
+  },
+  {
+   "tipo": "foto",
+   "desde": 228.15,
+   "hasta": 235.95,
+   "img": "fotos-reales/pele-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: AFP · Public domain"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 228.35,
+   "hasta": 235.85,
+   "kicker": "Brasil",
+   "texto": "Pelé · El Rey",
+   "sub": "3 Copas del Mundo · más de mil goles",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 235.95,
+   "hasta": 245.54,
+   "img": "fotos-reales/maradona-inglaterra-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Dani Yako · Public domain"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 236.15,
+   "hasta": 245.44,
+   "kicker": "México 1986 · contra Inglaterra",
+   "texto": "Maradona",
+   "sub": "La mano de Dios",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 245.54,
+   "hasta": 248.3,
+   "img": "fotos-reales/maradona-inglaterra-2.jpg",
+   "z0": 1.0,
+   "z1": 1.08,
+   "px": 0,
+   "credito": "Foto: Dani Yako · Public domain"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 245.74,
+   "hasta": 248.2,
+   "kicker": "El mismo partido",
+   "texto": "El gol del siglo",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 248.3,
+   "hasta": 255.47,
+   "img": "fotos-reales/messi-2026-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 1,
+   "credito": "Foto: Bryan Berlin · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 248.5,
+   "hasta": 255.37,
+   "kicker": "Argentina",
+   "texto": "Messi",
+   "sub": "8 Balones de Oro · mejor jugador de Catar 2022",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 255.12,
+   "hasta": 255.77
+  },
+  {
+   "tipo": "var",
+   "desde": 255.47,
+   "hasta": 264.47,
+   "texto": "Pelé, Maradona o Messi",
+   "veredicto": "Deciden los comentarios",
+   "ok": true
+  },
+  {
+   "tipo": "ficha",
+   "desde": 264.47,
+   "hasta": 268.66,
+   "kicker": "Minuto 45'",
+   "texto": "Entretiempo",
+   "sub": "Argentina 3 - 1 Brasil",
+   "y": 800,
+   "tam": 96
+  },
+  {
+   "tipo": "adelanto",
+   "desde": 268.66,
+   "hasta": 272.81,
+   "minuto": "45'",
+   "kicker": "Lo prometido",
+   "texto": "El dato que nadie conoce",
+   "y": 900
+  },
+  {
+   "tipo": "ficha",
+   "desde": 272.81,
+   "hasta": 276.06,
+   "kicker": "Entretiempo",
+   "texto": "Premios Nobel",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "marcador",
+   "desde": 296.17,
+   "hasta": 304.04,
+   "titulo": "Premios Nobel",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 5,
+   "der": 0,
+   "y": 930,
+   "tam": 110,
+   "suf": ""
+  },
+  {
+   "tipo": "ficha",
+   "desde": 307.53,
+   "hasta": 310.6,
+   "kicker": "Ojo",
+   "texto": "El segundo tiempo es de Brasil",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "ficha",
+   "desde": 310.85,
+   "hasta": 315.25,
+   "kicker": "Segundo tiempo · Ronda 6",
+   "texto": "El tamaño",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "marcador",
+   "desde": 315.25,
+   "hasta": 325.43,
+   "titulo": "Ronda 6 · Superficie (km²)",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 2780400,
+   "der": 8515767,
+   "y": 930,
+   "tam": 110,
+   "suf": ""
+  },
+  {
+   "tipo": "ficha",
+   "desde": 325.43,
+   "hasta": 331.22,
+   "kicker": "Ranking mundial",
+   "texto": "Brasil 5.º · Argentina 8.º",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "ficha",
+   "desde": 331.27,
+   "hasta": 342.19,
+   "kicker": "Cabe 3 veces",
+   "texto": "Frontera con todos",
+   "sub": "Menos con Chile y Ecuador",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 342.19,
+   "hasta": 351.98,
+   "img": "fotos-reales/aconcagua-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Mariordo Mario Roberto Duran · CC BY 3.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 342.39,
+   "hasta": 351.88,
+   "kicker": "Mendoza · 6,961 m",
+   "texto": "Aconcagua",
+   "sub": "La montaña más alta fuera de Asia",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 350.23,
+   "hasta": 350.88
+  },
+  {
+   "tipo": "ficha",
+   "desde": 354.38,
+   "hasta": 363.58,
+   "kicker": "Ronda 7",
+   "texto": "La gente",
+   "sub": "Censos 2022",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "marcador",
+   "desde": 361.08,
+   "hasta": 366.81,
+   "titulo": "Ronda 7 · Habitantes (millones)",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 46,
+   "der": 203,
+   "y": 930,
+   "tam": 110,
+   "suf": ""
+  },
+  {
+   "tipo": "foto",
+   "desde": 366.81,
+   "hasta": 373.29,
+   "img": "fotos-reales/sao-paulo-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Wilfredor · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 367.01,
+   "hasta": 373.19,
+   "kicker": "Más de 11 millones",
+   "texto": "São Paulo",
+   "sub": "Casi un cuarto de Argentina en una ciudad",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 372.94,
+   "hasta": 373.59
+  },
+  {
+   "tipo": "ficha",
+   "desde": 377.08,
+   "hasta": 383.85,
+   "kicker": "Ronda 8",
+   "texto": "El dinero",
+   "sub": "Tamaño de la economía",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "marcador",
+   "desde": 379.48,
+   "hasta": 387.01,
+   "titulo": "Ronda 8 · Economía total",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": "1x",
+   "der": "3x",
+   "y": 930,
+   "tam": 110,
+   "suf": "",
+   "gana": "der"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 387.01,
+   "hasta": 394.52,
+   "kicker": "Pero por habitante",
+   "texto": "Gana Argentina",
+   "sub": "El argentino promedio queda por encima",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 396.44,
+   "hasta": 401.35,
+   "img": "fotos-reales/cafe-brasil-2.jpg",
+   "lon": -46.63,
+   "lat": -23.55,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "Brasil · Café y soya",
+   "credito": "Foto: Vladimir Benincasa · CC BY-SA 4.0",
+   "rot": 0
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 401.35,
+   "hasta": 406.23,
+   "img": "fotos-reales/vinedo-2.jpg",
+   "lon": -69.99,
+   "lat": -32.65,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "Argentina · Carne y vino",
+   "credito": "Foto: Beatrice Murch · CC BY-SA 2.0",
+   "rot": 2
+  },
+  {
+   "tipo": "var",
+   "desde": 406.23,
+   "hasta": 406.63,
+   "texto": "Economía",
+   "veredicto": "Cuenta el total",
+   "ok": true
+  },
+  {
+   "tipo": "ficha",
+   "desde": 410.15,
+   "hasta": 411.24,
+   "kicker": "Segundo tiempo",
+   "texto": "Cuatro a cuatro",
+   "sub": "Empate",
+   "y": 800,
+   "tam": 90
+  },
+  {
+   "tipo": "ficha",
+   "desde": 411.39,
+   "hasta": 415.61,
+   "kicker": "Ronda 9",
+   "texto": "Fórmula 1",
+   "sub": "La velocidad",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 415.61,
+   "hasta": 421.82,
+   "img": "fotos-reales/fangio-1.jpg",
+   "z0": 1.0,
+   "z1": 1.08,
+   "px": 0,
+   "credito": "Foto: El Gráfico · Public domain"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 415.81,
+   "hasta": 421.72,
+   "kicker": "Argentina · años 50",
+   "texto": "Fangio",
+   "sub": "5 campeonatos del mundo",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 424.15,
+   "hasta": 426.51,
+   "img": "fotos-reales/fittipaldi-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Markku Lepola · CC BY 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 424.35,
+   "hasta": 426.41,
+   "kicker": "Brasil · 2 títulos",
+   "texto": "Emerson Fittipaldi",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 426.51,
+   "hasta": 428.31,
+   "img": "fotos-reales/piquet-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 1,
+   "credito": "Foto: Jake Archibald · CC BY 2.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 426.71,
+   "hasta": 428.21,
+   "kicker": "Brasil · 3 títulos",
+   "texto": "Nelson Piquet",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 428.31,
+   "hasta": 431.74,
+   "img": "fotos-reales/senna-mclaren-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": -1,
+   "credito": "Foto: https: · CC BY 2.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 428.51,
+   "hasta": 431.64,
+   "kicker": "Brasil · 3 títulos",
+   "texto": "Ayrton Senna",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 431.74,
+   "hasta": 442.56,
+   "img": "fotos-reales/senna-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Rjcastillo · CC BY 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 431.94,
+   "hasta": 442.46,
+   "kicker": "1960 - 1994",
+   "texto": "Una leyenda",
+   "sub": "Más allá del deporte",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 442.56,
+   "hasta": 446.63,
+   "img": "fotos-reales/fangio-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Joop van Bilsen for Anefo · CC0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 442.76,
+   "hasta": 446.53,
+   "kicker": "Fangio",
+   "texto": "Su récord duró casi medio siglo",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 446.28,
+   "hasta": 446.93
+  },
+  {
+   "tipo": "marcador",
+   "desde": 446.63,
+   "hasta": 447.88,
+   "titulo": "Ronda 9 · Títulos de F1",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 5,
+   "der": 8,
+   "y": 930,
+   "tam": 110,
+   "suf": ""
+  },
+  {
+   "tipo": "ficha",
+   "desde": 454.05,
+   "hasta": 459.98,
+   "kicker": "Ronda 10 · la última",
+   "texto": "El cine",
+   "sub": "Óscar a mejor película internacional",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 459.98,
+   "hasta": 464.07,
+   "img": "fotos-reales/fernanda-torres-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Adam Chitayat · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 460.18,
+   "hasta": 463.97,
+   "kicker": "Brasil · 2025",
+   "texto": "Ainda Estou Aqui",
+   "sub": "Fernanda Torres · dirige Walter Salles",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 464.07,
+   "hasta": 471.34,
+   "img": "fotos-reales/campanella-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Secretaría de Cultura de la  · CC BY-SA 2.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 464.27,
+   "hasta": 471.24,
+   "kicker": "Argentina · 1986 y 2010",
+   "texto": "La historia oficial",
+   "sub": "El secreto de sus ojos · Juan José Campanella",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 470.99,
+   "hasta": 471.64
+  },
+  {
+   "tipo": "marcador",
+   "desde": 471.34,
+   "hasta": 479.9,
+   "titulo": "Ronda 10 · Óscar",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 2,
+   "der": 1,
+   "y": 930,
+   "tam": 110,
+   "suf": ""
+  },
+  {
+   "tipo": "marcador",
+   "desde": 484.05,
+   "hasta": 495.01,
+   "titulo": "Final · 90 minutos",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": 5,
+   "der": 5,
+   "y": 930,
+   "tam": 130
+  },
+  {
+   "tipo": "ficha",
+   "desde": 495.01,
+   "hasta": 502.14,
+   "kicker": "Brasil ganó en",
+   "texto": "Mundiales · tamaño · gente · economía · F1",
+   "sub": "",
+   "y": 800,
+   "tam": 60
+  },
+  {
+   "tipo": "ficha",
+   "desde": 502.19,
+   "hasta": 511.01,
+   "kicker": "Argentina ganó en",
+   "texto": "Copa América · historial · 2026 · Nobel · Óscar",
+   "sub": "",
+   "y": 800,
+   "tam": 60
+  },
+  {
+   "tipo": "ficha",
+   "desde": 511.06,
+   "hasta": 518.17,
+   "kicker": "Empate",
+   "texto": "Penales",
+   "sub": "Los patean ustedes",
+   "y": 800,
+   "tam": 96
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 518.17,
+   "hasta": 523.13,
+   "img": "fotos-reales/asado-1.jpg",
+   "lon": -58.38,
+   "lat": -34.6,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "Penal 1 · El asado argentino",
+   "credito": "Foto: Horacio Cambeiro · CC BY-SA 3.0",
+   "rot": 0
+  },
+  {
+   "tipo": "tarjeta",
+   "desde": 523.13,
+   "hasta": 527.77,
+   "img": "fotos-reales/picanha-1.jpg",
+   "lon": -47.88,
+   "lat": -15.79,
+   "x": 1450,
+   "y": 360,
+   "w": 540,
+   "texto": "Penal 1 · El churrasco brasileño",
+   "credito": "Foto: Emerson Pardo · CC BY 2.0",
+   "rot": 2
+  },
+  {
+   "tipo": "foto",
+   "desde": 527.77,
+   "hasta": 535.02,
+   "img": "fotos-reales/tango-baile-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Manticora87 · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 527.97,
+   "hasta": 534.92,
+   "kicker": "Penal 2 · la música",
+   "texto": "El tango",
+   "sub": "Patrimonio de la humanidad (UNESCO)",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 535.02,
+   "hasta": 539.81,
+   "img": "fotos-reales/samba-rio-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Ian Gampon from NYC, USA · CC BY 2.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 535.22,
+   "hasta": 539.71,
+   "kicker": "Penal 2 · la música",
+   "texto": "La samba",
+   "sub": "También patrimonio de la UNESCO",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 539.81,
+   "hasta": 545.58,
+   "img": "fotos-reales/argentina-2022-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Iro Bosero · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 540.01,
+   "hasta": 545.48,
+   "kicker": "Penal 3 · la fiesta",
+   "texto": "La hinchada argentina",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 545.58,
+   "hasta": 548.73,
+   "img": "fotos-reales/carnaval-rio-2.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Viniciusmarvin · CC BY-SA 4.0"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 545.78,
+   "hasta": 548.63,
+   "kicker": "Penal 3 · la fiesta",
+   "texto": "El carnaval de Río",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "foto",
+   "desde": 548.73,
+   "hasta": 553.37,
+   "img": "fotos-reales/pele-1970-1.jpg",
+   "z0": 1.03,
+   "z1": 1.13,
+   "px": 0,
+   "credito": "Foto: Unknown - Distributed by the · Public domain"
+  },
+  {
+   "tipo": "ficha",
+   "desde": 548.93,
+   "hasta": 553.27,
+   "kicker": "Penal 4 · la leyenda",
+   "texto": "¿Pelé, Maradona o Messi?",
+   "sub": "",
+   "y": 800,
+   "tam": 80
+  },
+  {
+   "tipo": "barrido",
+   "desde": 553.02,
+   "hasta": 553.67
+  },
+  {
+   "tipo": "marcador",
+   "desde": 553.37,
+   "hasta": 565.17,
+   "titulo": "Penal 5 · ¿Quién gana para ti?",
+   "isoIzq": "ar",
+   "isoDer": "br",
+   "nomIzq": "Argentina",
+   "nomDer": "Brasil",
+   "izq": "?",
+   "der": "?",
+   "y": 930,
+   "tam": 130
+  },
+  {
+   "tipo": "adelanto",
+   "desde": 557.52,
+   "hasta": 565.17,
+   "minuto": "👇",
+   "kicker": "Los penales los patean ustedes",
+   "texto": "Comenta: ARGENTINA o BRASIL",
+   "y": 780
+  },
+  {
+   "tipo": "ficha",
+   "desde": 565.17,
+   "hasta": 575.55,
+   "kicker": "Próximo clásico",
+   "texto": "México vs Colombia",
+   "sub": "¿O Perú vs Chile? Suscríbete y comenta",
+   "y": 800,
+   "tam": 90
+  }
+ ],
+ "audio": ".tmp/voz.wav"
+}

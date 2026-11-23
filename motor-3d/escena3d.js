@@ -16,7 +16,7 @@ async function iniciar(sc, paises, flags, imgs) {
   ESC = new THREE.Scene(); ESC.background = new THREE.Color(sc.cielo || '#0b3150'); ESC.fog = new THREE.Fog(sc.cielo || '#0b3150', 260, 700);
   CAM = new THREE.PerspectiveCamera(34, R.domElement.width / R.domElement.height, 8, 2600);
   ESC.add(new THREE.HemisphereLight('#cfe9ff', '#123247', 1.1));
-  const sol = new THREE.DirectionalLight('#fff1d6', 2.4); sol.position.set(-160, 320, 120); sol.castShadow = true; sol.shadow.mapSize.set(2048, 2048);
+  const sol = new THREE.DirectionalLight('#fff1d6', 2.4); sol.position.set(-160, 320, 120); sol.castShadow = true; sol.shadow.mapSize.set(SC.sombra || 2048, SC.sombra || 2048);
   Object.assign(sol.shadow.camera, { left: -220, right: 220, top: 220, bottom: -220, near: 10, far: 900 }); sol.shadow.bias = -.0004; sol.shadow.normalBias = .6; ESC.add(sol); ESC.add(sol.target);
   // mar con ondas suaves (textura dibujada)
   const mc = document.createElement('canvas'); mc.width = mc.height = 512; const m = mc.getContext('2d'); m.fillStyle = sc.mar || '#1f7fc0'; m.fillRect(0, 0, 512, 512);
@@ -152,7 +152,8 @@ function cuadro(t) {
   for (const c of SC.columnas || []) { if (!c._m) continue; const o = P[c.pais], q = eo(pr(t, c.desde, c.dur || 1.2)) * (1 - pr(t, c.hasta ?? 1e9, .4)), h = Math.max(.01, q * (c.alto || 40)); c._m.visible = t >= c.desde && q > .01; c._m.scale.y = h; c._m.position.set(o.grp.position.x + (c.dx || 0), o.alto * 1.3 + h / 2, o.grp.position.z + (c.dz || 0)); c._top = new THREE.Vector3(c._m.position.x, o.alto * 1.3 + h + 3, c._m.position.z); c._q = q; }
   if (SC.estadio) animaEstadio(t);
   const varOn = (SC.capas || []).some(e => e.tipo === 'var' && t >= e.desde && t <= e.hasta); R.domElement.style.filter = varOn ? 'grayscale(1) contrast(1.15)' : 'none';
-  R.render(ESC, CAM); texto(t); capas2d(t); reloj(t);
+  const tapado = (SC.capas || []).some(e => e.tipo === 'foto' && t > e.desde + .35 && t < e.hasta - .35);
+  if (!tapado) R.render(ESC, CAM); texto(t); capas2d(t); reloj(t);
 }
 
 // ---------- capas 2D encima del 3D (mismo lenguaje visual del video de Sinaloa) ----------
@@ -310,7 +311,7 @@ function animaEstadio(t) {
   for (const { m, c } of EST.tarj) { const o = P[c.pais], dt = t - c.t; m.visible = !!o && dt > 0 && t < (c.hasta ?? 1e9); if (!m.visible) continue; const u = cl(dt / .9), top = o.grp.position.y + o.alto * 1.4 + .3; m.position.set(o.grp.position.x + 6, lerp(120, top, eob(u)), o.grp.position.z - 4); m.rotation.set(0, (1 - u) * 8, (1 - u) * 1.2 + .15); }
 }
 function reloj(t) { // marcador de TV con reloj de partido (00:00 → 90:00)
-  const r = SC.reloj; if (!r || t < r.desde) return; const a = cl((t - r.desde) / .4), min = (t - r.desde) / ((r.hasta || SC.duracion) - r.desde) * 90 * (r.escala || 1), mm = Math.floor(min), ss = Math.floor((min - mm) * 60), s = marcadorEn(t);
+  const r = SC.reloj; if (!r || t < r.desde) return; const a = cl((t - r.desde) / .4), min = Math.min(90, (t - r.desde) / ((r.hasta || SC.duracion) - r.desde) * 90 * (r.escala || 1)), mm = Math.floor(min), ss = min >= 90 ? 0 : Math.floor((min - mm) * 60), s = marcadorEn(t);
   OX.save(); OX.globalAlpha = a; const x = 46, y = 40; rr(x, y, 430, 74, 12, 'rgba(8,12,18,.92)'); rr(x + 300, y, 130, 74, 12, '#ffd23f');
   for (const [i, iso] of [[0, r.isoIzq], [1, r.isoDer]]) { const fl = FLAGIM[iso], fx = x + 22 + i * 150; if (fl) { OX.save(); OX.beginPath(); OX.roundRect(fx, y + 18, 52, 38, 6); OX.clip(); OX.drawImage(fl, fx, y + 18, 52, 38); OX.restore(); } }
   const gol = (SC.goles || []).find(g => t >= g.t + 1 && t < g.t + 2.4), pulso = gol ? 1 + .25 * Math.abs(Math.sin((t - gol.t) * 12)) : 1;

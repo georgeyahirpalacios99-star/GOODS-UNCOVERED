@@ -51,9 +51,16 @@ for c in sc.get('capas', []):
 for tj in sc.get('tarjetas3d', []): put(tj['t'], silbato(.6), .35); put(tj['t'] + .8, boom(.8), .4)
 for c in sc.get('capas', []):
     if c['tipo'] == 'ficha' and 'partido' in (c.get('texto', '')).lower(): put(c['desde'], silbato(1.1), .45)
-mix = np.stack([L, R])[:, :int(dur * SR)]; mix /= max(1e-9, np.abs(mix).max()) / .9
+mix = np.stack([L, R])[:, :int(dur * SR)]
+fv = D / sc['audio'] if sc.get('audio') else None
+if fv and fv.exists():  # voz al frente: el estadio y los efectos bajan cuando habla
+    raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', str(fv), '-ac', '1', '-ar', str(SR), '-f', 's16le', '-'], capture_output=True).stdout
+    voz = np.frombuffer(raw, np.int16).astype(np.float32) / 32768; voz = np.pad(voz, (0, max(0, mix.shape[1] - len(voz))))[:mix.shape[1]]
+    env = filt(np.abs(voz), 'low', 6); duck = 1 - .6 * np.clip(env / (np.percentile(env, 95) * .5 + 1e-9), 0, 1)
+    mix = mix / (np.abs(mix).max() + 1e-9) * .5 * duck + voz[None, :] * 1.0
+mix /= max(1e-9, np.abs(mix).max()) / .9
 tmp = D / '.tmp'; tmp.mkdir(exist_ok=True)
 with wave.open(str(tmp / 'estadio.wav'), 'w') as w: w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((mix.T * 32767).astype(np.int16).tobytes())
-video = D / (sc['salida'] + '.mp4'); out = D / (sc['salida'] + '-con-sonido.mp4')
+video = D / (sc['salida'] + '.mp4'); out = D / (sc['salida'] + ('-final.mp4' if fv and fv.exists() else '-con-sonido.mp4'))
 subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', str(video), '-i', str(tmp / 'estadio.wav'), '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-af', 'loudnorm=I=-14:TP=-1.5', '-ar', '48000', '-c:a', 'aac', '-b:a', '192k', '-shortest', str(out)], check=True)
 print('listo:', out)

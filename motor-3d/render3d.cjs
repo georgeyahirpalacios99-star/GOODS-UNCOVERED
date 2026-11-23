@@ -25,7 +25,7 @@ const fuente = n => 'data:font/woff2;base64,' + fs.readFileSync(path.join(DAT, '
 const three = fs.readFileSync(path.join(__dirname, 'node_modules', 'three', 'build', 'three.min.js'), 'utf8');
 const W = sc.ancho || 1080, H = sc.alto || 1920, FPS = 30;
 const html = `<!doctype html><html><head><meta charset="utf-8"><style>@font-face{font-family:Anton;src:url(${fuente('Anton.woff2')})}@font-face{font-family:Barlow;font-weight:700;src:url(${fuente('BarlowCondensed-700.woff2')})}
-body{margin:0;background:#000}canvas{position:absolute;left:0;top:0}</style></head><body><canvas id="gl" width="${W}" height="${H}"></canvas><canvas id="ov" width="${W}" height="${H}"></canvas><script>${three}</script>
+body{margin:0;background:#000}canvas{position:absolute;left:0;top:0}</style></head><body><canvas id="gl" width="${Math.round(W * (sc.calidad3d || 1))}" height="${Math.round(H * (sc.calidad3d || 1))}" style="width:${W}px;height:${H}px"></canvas><canvas id="ov" width="${W}" height="${H}"></canvas><script>${three}</script>
 <script src="escena3d.js"></script></body></html>`;
 fs.writeFileSync(path.join(__dirname, '.pagina.html'), html);
 (async () => {
@@ -37,8 +37,10 @@ fs.writeFileSync(path.join(__dirname, '.pagina.html'), html);
   const shot = async t => { await page.evaluate(t => cuadro(t), t); return page.screenshot({ type: 'jpeg', quality: 90 }); };
   if (prev) { const pd = path.join(dir, 'preview'); fs.mkdirSync(pd, { recursive: true }); for (const t of prev) fs.writeFileSync(path.join(pd, `t${t}.jpg`), await shot(t)); console.log('preview en', pd); }
   else {
-    const fd = path.join(dir, '.cuadros'); fs.rmSync(fd, { recursive: true, force: true }); fs.mkdirSync(fd, { recursive: true }); const n = Math.round(sc.duracion * FPS);
-    for (let i = 0; i < n; i++) { fs.writeFileSync(path.join(fd, String(i + 1).padStart(5, '0') + '.jpg'), await shot(i / FPS)); if (i % 60 === 0) console.log(`${(i / FPS).toFixed(0)} / ${sc.duracion} s`); }
+    const fd = path.join(dir, '.cuadros'), n = Math.round(sc.duracion * FPS), opt = k => args.includes(k) ? Number(args[args.indexOf(k) + 1]) : null, i0 = opt('--desde') ?? 0, i1 = Math.min(n, opt('--hasta') ?? n), parte = args.includes('--desde') || args.includes('--hasta');
+    if (!parte) fs.rmSync(fd, { recursive: true, force: true }); fs.mkdirSync(fd, { recursive: true });
+    for (let i = i0; i < i1; i++) { fs.writeFileSync(path.join(fd, String(i + 1).padStart(5, '0') + '.jpg'), await shot(i / FPS)); if (i % 60 === 0) console.log(`${(i / FPS).toFixed(0)} / ${sc.duracion} s`); }
+    if (parte) { console.log('parte lista', i0, i1); await browser.close(); return; }
     const out = path.join(dir, (sc.salida || 'escena3d') + '.mp4');
     spawnSync('ffmpeg', ['-y', '-v', 'error', '-framerate', String(FPS), '-i', path.join(fd, '%05d.jpg'), '-c:v', 'libx264', '-crf', '18', '-pix_fmt', 'yuv420p', out], { stdio: 'inherit' }); console.log('listo:', out);
   }
