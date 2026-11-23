@@ -16,3 +16,6 @@
 | Vistas válidas de Shorts (90 días) | 162 mil | 10 M | no es realista |
 Nivel de fondos de fans: 500 suscriptores (cumple al pasar 500) + 3 subidas en 90 días (cumple) + horas (ver Studio).
 **Cuello de botella: las horas de videos largos, no los suscriptores.** Cada vista de un video de 10 min aporta ~0,065 h → faltan ~55.000 vistas de videos largos.
+
+## Miniaturas
+Formato único obligatorio: `plantillas/miniatura-mapa/LEEME.md` (mapa 3D con cara + 2 líneas blanca/amarilla + 1 foto real con etiqueta + 1 acento rojo + pin del canal).

@@ -54,3 +54,6 @@ Escribe siempre en español latino, directo, con datos concretos y sin lenguaje 
 - Nada de metraje de otros canales ni documentales.
 - Cada video con tema nuevo, datos reales y guion propio (YouTube no paga contenido repetitivo hecho en masa).
 - ElevenLabs: el plan gratis **no permite uso comercial**; para monetizar hace falta un plan de pago.
+
+## Miniatura (formato único del canal)
+Toda miniatura se hace con `plantillas/miniatura-mapa/` siguiendo `plantillas/miniatura-mapa/LEEME.md`: mapa 3D con cara, 2 líneas de texto (blanca + amarilla), 1 foto real con etiqueta, 1 acento rojo y el pin del canal. No se usan otros estilos.
