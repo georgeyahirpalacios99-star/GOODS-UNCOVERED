@@ -2216,10 +2216,10 @@
    "tipo": "adelanto",
    "desde": 557.52,
    "hasta": 565.17,
-   "minuto": "👇",
+   "minuto": "VOTA",
    "kicker": "Los penales los patean ustedes",
    "texto": "Comenta: ARGENTINA o BRASIL",
-   "y": 780
+   "y": 650
   },
   {
    "tipo": "ficha",

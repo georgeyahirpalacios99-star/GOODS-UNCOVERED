@@ -155,7 +155,7 @@ foto('pele-1970-1.jpg', T('08', 'Cuarto penal'), T('08', 'Y el quinto')); ficha(
 barrido(T('08', 'Y el quinto')); CAM(T('08', 'Y el quinto', d=-.2), 'ancho', 1.4)
 C('marcador', T('08', 'Y el quinto'), T('08', 'Y si quieres'), titulo='Penal 5 · ¿Quién gana para ti?', isoIzq='ar', isoDer='br', nomIzq='Argentina', nomDer='Brasil', izq='?', der='?', y=930, tam=130)
 pant.append(dict(desde=round(T('08', 'Escríbelo'), 2), hasta=round(T('08', 'Y si quieres'), 2), img=F('hinchas-arg-1.jpg'), texto='Comenta: ARGENTINA o BRASIL'))
-C('adelanto', T('08', 'Escríbelo'), T('08', 'Y si quieres'), minuto='👇', kicker='Los penales los patean ustedes', texto='Comenta: ARGENTINA o BRASIL', y=780)
+C('adelanto', T('08', 'Escríbelo'), T('08', 'Y si quieres'), minuto='VOTA', kicker='Los penales los patean ustedes', texto='Comenta: ARGENTINA o BRASIL', y=650)
 CAM(T('08', 'Y si quieres', d=-.2), 'medio', 1.6); ficha(T('08', 'Y si quieres'), DUR, 'Próximo clásico', 'México vs Colombia', '¿O Perú vs Chile? Suscríbete y comenta', tam=90)
 
 # ===================== ensamblado =====================
