@@ -80,3 +80,15 @@ marcador(c, W // 2 - 10, 40, 5, 5, '90:00', 1.35); dr = ImageDraw.Draw(c)
 texto(dr, '¿EMPATE?', (W // 2, 330), anton(150), borde=12)
 c.convert('RGB').save(D / 'boceto-C-marcador.jpg', quality=94)
 print('listo')
+
+# D · Fondo de Flow (estadio dividido): Messi vs Pelé, marcador 5-5 y pregunta
+FLOW = D / 'fondo-flow.jpg'
+if FLOW.exists():
+    d_ = cubrir(Image.open(FLOW).convert('RGB'), W, H, .5, .35).convert('RGBA')
+    d_ = Image.alpha_composite(d_, Image.new('RGBA', (W, H), (0, 0, 0, 0))); vineta(d_, .5)
+    tarjeta(d_, 'messi-2022-2.jpg', 320, 420, (12, 168), 5, .5, .15, 'MESSI')
+    tarjeta(d_, 'pele-1970-2.jpg', 320, 420, (W - 360, 168), -5, .5, .25, 'PELÉ')
+    marcador(d_, W // 2, 24, 5, 5, '90:00'); dr = ImageDraw.Draw(d_)
+    texto(dr, '¿QUIÉN', (W // 2, 330), anton(120), borde=10); texto(dr, 'GANA?', (W // 2, 470), anton(150), borde=11)
+    d_.convert('RGB').save(D / 'boceto-D-flow.jpg', quality=94)
+    print('D listo')
