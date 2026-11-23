@@ -21,11 +21,11 @@ async function iniciar(sc, paises, flags, imgs) {
   // mar con ondas suaves (textura dibujada)
   const mc = document.createElement('canvas'); mc.width = mc.height = 512; const m = mc.getContext('2d'); m.fillStyle = sc.mar || '#1f7fc0'; m.fillRect(0, 0, 512, 512);
   m.strokeStyle = 'rgba(255,255,255,.045)'; m.lineWidth = 2; for (let i = 0; i < 40; i++) { const x = hs('x' + i) * 512, y = hs('y' + i) * 512; m.beginPath(); m.arc(x, y, 14, Math.PI * 1.1, Math.PI * 1.9); m.stroke(); m.beginPath(); m.arc(x + 26, y, 14, Math.PI * 1.1, Math.PI * 1.9); m.stroke(); }
-  const mt = new THREE.CanvasTexture(mc); mt.wrapS = mt.wrapT = THREE.RepeatWrapping; mt.repeat.set(70, 70); mt.colorSpace = THREE.SRGBColorSpace;
+  const mt = IMGS['tex:T01'] ? new THREE.Texture(IMGS['tex:T01']) : new THREE.CanvasTexture(mc); mt.needsUpdate = true; mt.wrapS = mt.wrapT = THREE.RepeatWrapping; mt.repeat.set(IMGS['tex:T01'] ? 26 : 70, IMGS['tex:T01'] ? 26 : 70); mt.colorSpace = THREE.SRGBColorSpace;
   const mar = new THREE.Mesh(new THREE.PlaneGeometry(3000, 3000), new THREE.MeshStandardMaterial({ map: mt, roughness: .55, metalness: .05 })); mar.rotation.x = -Math.PI / 2; mar.receiveShadow = true; ESC.add(mar); P._mar = mt; P._marMesh = mar;
   for (const p of paises) {
     const im = flags[p.iso] ? await imagen(flags[p.iso]) : null, fc = document.createElement('canvas'); fc.width = 640; fc.height = 480; const f = fc.getContext('2d');
-    if (im) f.drawImage(im, 0, 0, 640, 480); else { f.fillStyle = p.neutro ? (SC.tierra || '#4a5d4a') : '#e3ddce'; f.fillRect(0, 0, 640, 480); if (p.neutro) for (let i = 0; i < 2600; i++) { f.fillStyle = `rgba(${hs('r' + i) > .5 ? '255,240,210' : '20,30,20'},${.05 + hs('a' + i) * .08})`; f.fillRect(hs('x' + i) * 640, hs('y' + i) * 480, 3 + hs('s' + i) * 9, 3 + hs('t' + i) * 9); } }
+    if (im) f.drawImage(im, 0, 0, 640, 480); else { f.fillStyle = p.neutro ? (SC.tierra || '#4a5d4a') : '#e3ddce'; f.fillRect(0, 0, 640, 480); if (p.neutro && IMGS['tex:T04']) { const pt = f.createPattern(IMGS['tex:T04'], 'repeat'); f.fillStyle = pt; f.fillRect(0, 0, 640, 480); f.fillStyle = 'rgba(10,20,12,.25)'; f.fillRect(0, 0, 640, 480); } else if (p.neutro) for (let i = 0; i < 2600; i++) { f.fillStyle = `rgba(${hs('r' + i) > .5 ? '255,240,210' : '20,30,20'},${.05 + hs('a' + i) * .08})`; f.fillRect(hs('x' + i) * 640, hs('y' + i) * 480, 3 + hs('s' + i) * 9, 3 + hs('t' + i) * 9); } }
     const px = f.getImageData(0, 0, 640, 480).data; let r = 0, gg = 0, b = 0, n = 0; for (let i = 0; i < px.length; i += 4 * 97) { r += px[i]; gg += px[i + 1]; b += px[i + 2]; n++; }
     const lado = new THREE.Color(`rgb(${Math.round(r / n * .55)},${Math.round(gg / n * .55)},${Math.round(b / n * .55)})`);
     const shapes = []; let main = null, amax = 0;
@@ -200,7 +200,7 @@ function entorno(paises) {
     for (const s of [-1, 1]) { g.strokeRect(cx + s * L / 2 - (s > 0 ? 190 : 0), cy - 240, 190, 480); g.strokeRect(cx + s * L / 2 - (s > 0 ? 70 : 0), cy - 110, 70, 220); g.beginPath(); g.arc(cx + s * (L / 2 - 135), cy, 7, 0, 7); g.fillStyle = '#fff'; g.fill(); }
     g.beginPath(); g.arc(cx, cy, 8, 0, 7); g.fill();
   } else {
-    g.fillStyle = SC.mar || '#0d2a4f'; g.fillRect(0, 0, 4096, 4096);
+    g.fillStyle = SC.mar || '#0d2a4f'; g.fillRect(0, 0, 4096, 4096); if (IMGS['tex:T01']) { const pt = g.createPattern(IMGS['tex:T01'], 'repeat'); g.save(); g.scale(.35, .35); g.fillStyle = pt; g.globalAlpha = .9; g.fillRect(0, 0, 4096 / .35, 4096 / .35); g.restore(); }
     const prof = g.createRadialGradient(2048, 2048, 200, 2048, 2048, 2600); prof.addColorStop(0, 'rgba(30,80,130,.35)'); prof.addColorStop(1, 'rgba(0,0,0,.35)'); g.fillStyle = prof; g.fillRect(0, 0, 4096, 4096);
     g.strokeStyle = 'rgba(140,200,255,.13)'; g.lineWidth = 3; for (let lo = -180; lo <= 180; lo += 10) { const [x] = W3(lo, 0); g.beginPath(); g.moveTo(X(x), 0); g.lineTo(X(x), 4096); g.stroke(); }
     for (let la = -70; la <= 70; la += 10) { const [, z] = W3(0, la); g.beginPath(); g.moveTo(0, Z(z)); g.lineTo(4096, Z(z)); g.stroke(); }
@@ -221,7 +221,8 @@ function entorno(paises) {
   }
   if (E === 'orbita') { const bc = document.createElement('canvas'); bc.width = 4; bc.height = 512; const q = bc.getContext('2d'), gr = q.createLinearGradient(0, 0, 0, 512); gr.addColorStop(0, '#000208'); gr.addColorStop(.55, '#04122a'); gr.addColorStop(.8, '#1d6fb0'); gr.addColorStop(1, '#8fd6ff'); q.fillStyle = gr; q.fillRect(0, 0, 4, 512); const bt = new THREE.CanvasTexture(bc); bt.colorSpace = THREE.SRGBColorSpace; ESC.background = bt; ESC.userData.fijaNiebla = true; ESC.fog = new THREE.Fog('#4f93c8', 380, 1100); }
   // nubes con sombra
-  for (let i = 0; i < (SC.nubes ?? 14); i++) { const nc = document.createElement('canvas'); nc.width = nc.height = 256; const q = nc.getContext('2d'); for (let j = 0; j < 9; j++) { const gx = 128 + (hs('nx' + i + j) - .5) * 120, gy = 128 + (hs('ny' + i + j) - .5) * 60, rr = 40 + hs('nr' + i + j) * 50, gg = q.createRadialGradient(gx, gy, 0, gx, gy, rr); gg.addColorStop(0, 'rgba(255,255,255,.75)'); gg.addColorStop(1, 'rgba(255,255,255,0)'); q.fillStyle = gg; q.beginPath(); q.arc(gx, gy, rr, 0, 7); q.fill(); }
+  let nubeAlfa = null; if (IMGS['tex:T06']) { const c0 = document.createElement('canvas'); c0.width = c0.height = 1024; const q0 = c0.getContext('2d'); q0.drawImage(IMGS['tex:T06'], 0, 0, 1024, 1024); const d0 = q0.getImageData(0, 0, 1024, 1024); for (let k = 0; k < d0.data.length; k += 4) { const l = (d0.data[k] + d0.data[k + 1] + d0.data[k + 2]) / 3; d0.data[k + 3] = Math.min(255, Math.max(0, (l - 25) * 1.6)); } q0.putImageData(d0, 0, 0); nubeAlfa = c0; }
+  for (let i = 0; i < (SC.nubes ?? 14); i++) { const nc = document.createElement('canvas'); nc.width = nc.height = 256; const q = nc.getContext('2d'); if (nubeAlfa) { const sx = Math.floor(hs('nqx' + i) * 3) * 341, sy = Math.floor(hs('nqy' + i) * 3) * 341; q.drawImage(nubeAlfa, sx, sy, 341, 341, 0, 0, 256, 256); q.globalCompositeOperation = 'destination-in'; const mk = q.createRadialGradient(128, 128, 60, 128, 128, 128); mk.addColorStop(0, 'rgba(0,0,0,1)'); mk.addColorStop(1, 'rgba(0,0,0,0)'); q.fillStyle = mk; q.fillRect(0, 0, 256, 256); q.globalCompositeOperation = 'source-over'; } else for (let j = 0; j < 9; j++) { const gx = 128 + (hs('nx' + i + j) - .5) * 120, gy = 128 + (hs('ny' + i + j) - .5) * 60, rr = 40 + hs('nr' + i + j) * 50, gg = q.createRadialGradient(gx, gy, 0, gx, gy, rr); gg.addColorStop(0, 'rgba(255,255,255,.75)'); gg.addColorStop(1, 'rgba(255,255,255,0)'); q.fillStyle = gg; q.beginPath(); q.arc(gx, gy, rr, 0, 7); q.fill(); }
     const tx2 = new THREE.CanvasTexture(nc), m = new THREE.Mesh(new THREE.PlaneGeometry(70, 70), new THREE.MeshBasicMaterial({ map: tx2, transparent: true, opacity: E === 'cancha' ? 0 : .55, depthWrite: false })); m.rotation.x = -Math.PI / 2; const sh = new THREE.Mesh(new THREE.PlaneGeometry(70, 70), new THREE.MeshBasicMaterial({ map: tx2, transparent: true, opacity: .07, color: '#000000', depthWrite: false })); sh.rotation.x = -Math.PI / 2;
     ESC.add(m); ESC.add(sh); NUBES.push({ m, sh, x: (hs('nx' + i) - .5) * 900, z: (hs('nz' + i) - .5) * 700, v: 3 + hs('nv' + i) * 4 }); if (E === 'cancha') { m.visible = sh.visible = false; } }
   // barcos con estela
@@ -242,7 +243,8 @@ let EST = null;
 function canchaCanvas() {
   const cv = document.createElement('canvas'); cv.width = cv.height = 4096; const g = cv.getContext('2d');
   for (let i = 0; i < 40; i++) { g.fillStyle = i % 2 ? '#2f7a34' : '#378a3b'; g.fillRect(i * 4096 / 40, 0, 4096 / 40 + 1, 4096); }
-  for (let i = 0; i < 30000; i++) { g.fillStyle = `rgba(${hs('g' + i) > .5 ? '20,60,20' : '120,180,90'},.12)`; g.fillRect(hs('x' + i) * 4096, hs('y' + i) * 4096, 2, 7); }
+  if (IMGS['tex:T02']) { g.save(); g.translate(2048, 2048); g.rotate(Math.PI / 2); g.translate(-2048, -2048); for (let x = -1024; x < 5120; x += 512) for (let y = -1024; y < 5120; y += 512) g.drawImage(IMGS['tex:T02'], x, y, 512, 512); g.restore(); }
+  for (let i = 0; i < (IMGS['tex:T02'] ? 0 : 30000); i++) { g.fillStyle = `rgba(${hs('g' + i) > .5 ? '20,60,20' : '120,180,90'},.12)`; g.fillRect(hs('x' + i) * 4096, hs('y' + i) * 4096, 2, 7); }
   const v = g.createRadialGradient(2048, 2048, 400, 2048, 2048, 2300); v.addColorStop(0, 'rgba(255,255,220,.10)'); v.addColorStop(1, 'rgba(0,0,0,.55)'); g.fillStyle = v; g.fillRect(0, 0, 4096, 4096);
   g.strokeStyle = 'rgba(255,255,255,.9)'; g.lineWidth = 7; const cx = 2048, cy = 2048, L = 1150, A = 740; g.strokeRect(cx - L / 2, cy - A / 2, L, A); g.beginPath(); g.moveTo(cx, cy - A / 2); g.lineTo(cx, cy + A / 2); g.stroke(); g.beginPath(); g.arc(cx, cy, 130, 0, 7); g.stroke();
   for (const s of [-1, 1]) { g.strokeRect(cx + s * L / 2 - (s > 0 ? 190 : 0), cy - 240, 190, 480); g.strokeRect(cx + s * L / 2 - (s > 0 ? 70 : 0), cy - 110, 70, 220); }
@@ -256,7 +258,7 @@ function estadio() {
   const gc = document.createElement('canvas'); gc.width = 4096; gc.height = 512; const q = gc.getContext('2d'); q.fillStyle = '#0c1118'; q.fillRect(0, 0, 4096, 512);
   for (let i = 0; i < 30000; i++) { const y = hs('cy' + i) * 460 + 40, x = hs('cx' + i) * 4096, lado = x < 2048; q.fillStyle = (lado ? ['#74acdf', '#ffffff', '#74acdf', '#d9d9d9'] : ['#f7e35c', '#2a8f3c', '#f7e35c', '#1f5aa6'])[Math.floor(hs('cc' + i) * 4)]; q.globalAlpha = .5 + hs('ca' + i) * .5; q.fillRect(x, y, 4, 5); }
   q.globalAlpha = 1; for (let i = 0; i < 24; i++) { const x = i * 4096 / 24 + 80; q.fillStyle = 'rgba(255,255,230,.95)'; q.shadowColor = '#fff'; q.shadowBlur = 30; q.fillRect(x, 6, 70, 18); q.shadowBlur = 0; }
-  const tg = new THREE.CanvasTexture(gc); tg.colorSpace = THREE.SRGBColorSpace; tg.wrapS = THREE.RepeatWrapping; tg.repeat.set(2, 1);
+  const tg = IMGS['tex:T03'] ? new THREE.Texture(IMGS['tex:T03']) : new THREE.CanvasTexture(gc); tg.needsUpdate = true; tg.colorSpace = THREE.SRGBColorSpace; tg.wrapS = THREE.RepeatWrapping; tg.repeat.set(IMGS['tex:T03'] ? 6 : 2, 1);
   EST.ring = new THREE.Mesh(new THREE.CylinderGeometry(560, 470, 170, 90, 1, true), new THREE.MeshBasicMaterial({ map: tg, side: THREE.BackSide, transparent: true, opacity: 0 })); EST.ring.position.y = 70; ESC.add(EST.ring); EST.tg = tg;
   // arcos con red
   EST.arcos = {}; for (const lado of [-1, 1]) { const g = new THREE.Group(), blanco = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: .3 }), an = 96, al = 32, pr = 22;

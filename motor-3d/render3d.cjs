@@ -19,6 +19,7 @@ if (sc.contexto) { const [a, b, c, d] = sc.contexto; for (const f of geo.feature
   if (polys.length) paises.push({ adm: p.ADM0_A3, iso: '', lx: p.LABEL_X, ly: p.LABEL_Y, polys, neutro: true, cara: false, alto: 1.2, minArea: 2 }); } }
 const flags = {}; for (const p of sc.paises) { const f = path.join(DAT, 'banderas', p.iso + '.svg'); if (fs.existsSync(f)) flags[p.iso] = 'data:image/svg+xml;base64,' + fs.readFileSync(f).toString('base64'); }
 const todas = [...(sc.capas || []), ...(sc.pantalla || []), ...(sc.reloj ? [sc.reloj] : [])]; const imgs = {}; for (const c of todas) for (const k of ['img']) if (c[k] && !imgs[c[k]]) { const f = path.join(dir, c[k]); if (fs.existsSync(f)) imgs[c[k]] = 'data:image/jpeg;base64,' + fs.readFileSync(f).toString('base64'); else console.warn('falta', c[k]); }
+const BIB = path.join(__dirname, '..', 'plantillas', 'biblioteca'); if (fs.existsSync(BIB) && sc.texturas !== false) for (const f of fs.readdirSync(BIB)) if (/^T0\d.*\.jpg$/.test(f)) imgs['tex:' + f.slice(0, 3)] = 'data:image/jpeg;base64,' + fs.readFileSync(path.join(BIB, f)).toString('base64');
 for (const c of todas) for (const iso of [c.isoIzq, c.isoDer]) if (iso && !flags[iso]) { const f = path.join(DAT, 'banderas', iso + '.svg'); if (fs.existsSync(f)) flags[iso] = 'data:image/svg+xml;base64,' + fs.readFileSync(f).toString('base64'); }
 const fuente = n => 'data:font/woff2;base64,' + fs.readFileSync(path.join(DAT, 'fuentes', n)).toString('base64');
 const three = fs.readFileSync(path.join(__dirname, 'node_modules', 'three', 'build', 'three.min.js'), 'utf8');
